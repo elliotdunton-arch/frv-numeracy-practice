@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
 function isCorrect(q, userAnswer) {
+  if (q.type === 'true_false_matrix') {
+    if (!userAnswer) return false
+    const ua = userAnswer.split(',').map(p => p.trim().toLowerCase())
+    const ca = q.answer.split(',').map(p => p.trim().toLowerCase())
+    return ua.length === ca.length && ua.every((v, i) => v === ca[i])
+  }
   if (!userAnswer && userAnswer !== 0) return false
   const clean = String(userAnswer).replace(/[$,\s]/g, '')
   const ua = parseFloat(clean)
@@ -95,7 +101,28 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                     </span>
                   </div>
                   <p className="review-question">{q.question}</p>
-                  {!correct && (
+                  {q.type === 'true_false_matrix' ? (
+                    <div className="tfm-review">
+                      {(q.options || []).map((stmt, i) => {
+                        const userParts = userAns ? userAns.split(',') : []
+                        const correctParts = q.answer.split(',')
+                        const userVal = userParts[i] || null
+                        const correctVal = correctParts[i]
+                        const stmtOk = userVal && userVal.toLowerCase() === correctVal.toLowerCase()
+                        return (
+                          <div key={i} className={`tfm-review-row ${stmtOk ? 'tfmr-correct' : 'tfmr-wrong'}`}>
+                            <span className="tfmr-icon">{stmtOk ? '✓' : '✗'}</span>
+                            <span className="tfmr-stmt">{stmt}</span>
+                            <span className="tfmr-ans">
+                              {stmtOk
+                                ? correctVal
+                                : `You: ${userVal || 'not answered'} — Correct: ${correctVal}`}
+                            </span>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  ) : !correct && (
                     <div className="review-answers">
                       <span className="ans-wrong">
                         {userAns ? `Your answer: ${userAns}` : 'Not answered'}

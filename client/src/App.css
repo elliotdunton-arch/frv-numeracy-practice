@@ -1530,6 +1530,118 @@ body {
 }
 
 /* ══════════════════════════════════════
+   TRUE / FALSE MATRIX (quiz)
+══════════════════════════════════════ */
+.tfm-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tfm-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+}
+
+.tfm-stmt {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.tfm-btns {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tfm-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.13s, border-color 0.13s, color 0.13s;
+}
+
+.tfm-btn:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+
+.tfm-btn.tfm-true {
+  background: rgba(34,197,94,0.14);
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.tfm-btn.tfm-false {
+  background: rgba(249,115,22,0.13);
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* TRUE / FALSE MATRIX (results review) */
+.tfm-review {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tfm-review-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.tfmr-correct {
+  background: rgba(34,197,94,0.08);
+}
+
+.tfmr-wrong {
+  background: rgba(239,68,68,0.08);
+}
+
+.tfmr-icon {
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.tfmr-correct .tfmr-icon { color: #22c55e; }
+.tfmr-wrong  .tfmr-icon { color: #ef4444; }
+
+.tfmr-stmt {
+  flex: 1;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.tfmr-ans {
+  flex-shrink: 0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tfmr-correct .tfmr-ans { color: #22c55e; }
+.tfmr-wrong  .tfmr-ans { color: #ef4444; }
+
+/* ══════════════════════════════════════
    MULTIPLE CHOICE
 ══════════════════════════════════════ */
 .mc-options {

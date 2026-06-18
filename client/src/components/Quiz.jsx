@@ -42,7 +42,18 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
 
   const isAnswered = (q) => {
     const v = answers[q.id]
+    if (q.type === 'true_false_matrix') {
+      if (!v) return false
+      const parts = v.split(',')
+      return parts.length === 3 && parts.every(p => p === 'True' || p === 'False')
+    }
     return v !== undefined && v !== null && v !== ''
+  }
+
+  const handleMatrixToggle = (questionId, stmtIndex, value) => {
+    const current = (answersRef.current[questionId] || ',,').split(',')
+    current[stmtIndex] = value
+    handleAnswer(questionId, current.join(','))
   }
 
   const answeredCount = questions.filter(isAnswered).length
@@ -156,6 +167,28 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
                   {opt}
                 </button>
               ))}
+            </div>
+          ) : current.type === 'true_false_matrix' ? (
+            <div className="tfm-rows">
+              {(current.options || []).map((stmt, i) => {
+                const parts = (answers[current.id] || ',,').split(',')
+                const sel = parts[i]
+                return (
+                  <div key={i} className="tfm-row">
+                    <span className="tfm-stmt">{stmt}</span>
+                    <div className="tfm-btns">
+                      <button
+                        className={`tfm-btn${sel === 'True' ? ' tfm-true' : ''}`}
+                        onClick={() => handleMatrixToggle(current.id, i, 'True')}
+                      >True</button>
+                      <button
+                        className={`tfm-btn${sel === 'False' ? ' tfm-false' : ''}`}
+                        onClick={() => handleMatrixToggle(current.id, i, 'False')}
+                      >False</button>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           ) : (
             <div className="number-input-area">

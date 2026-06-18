@@ -737,6 +737,89 @@ const ctxGPG9 = {
   ]
 }
 
+// ── Retail comparison contexts (ctxR1–ctxR10) ────────────────────────────────
+
+const ctxR1 = {
+  title: 'Retail Price Comparison — Protein Bars (Box of 12)',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$28.00 per box',    '$28.00 per box'],
+    ['Shelf price',   '$24.00 per box',    '$22.00 per box (Save $6.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 3 or more: 15% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR2 = {
+  title: 'Retail Price Comparison — Scented Soy Candles',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$35.00 per candle', '$35.00 per candle'],
+    ['Shelf price',   '$29.00 per candle', '$27.00 per candle (Save $8.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 2 or more: 20% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR3 = {
+  title: 'Retail Price Comparison — Non-Slip Yoga Mats',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$65.00 per mat',    '$65.00 per mat'],
+    ['Shelf price',   '$48.00 per mat',    '$50.00 per mat (Save $15.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 2 or more: 25% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR4 = {
+  title: 'Retail Price Comparison — Resistance Band Sets',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$32.00 per set',    '$32.00 per set'],
+    ['Shelf price',   '$27.50 per set',    '$22.00 per set (Save $10.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 4 or more: 30% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR5 = {
+  title: 'Retail Price Comparison — Insulated Thermal Travel Mugs',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$42.00 per mug',    '$42.00 per mug'],
+    ['Shelf price',   '$36.00 per mug',    '$33.00 per mug (Save $9.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 2 or more: 18% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR6 = {
+  title: 'Retail Price Comparison — Premium Smartphone Cases',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$25.00 per case',   '$25.00 per case'],
+    ['Shelf price',   '$21.00 per case',   '$18.00 per case (Save $7.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 3 or more: 22% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR7 = {
+  title: 'Retail Price Comparison — Vitamin C Supplements (60 Capsules)',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$48.00 per bottle', '$48.00 per bottle'],
+    ['Shelf price',   '$41.00 per bottle', '$37.00 per bottle (Save $11.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 2 or more: 16% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR8 = {
+  title: 'Retail Price Comparison — Stainless Steel Water Bottles',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$38.00 per bottle', '$38.00 per bottle'],
+    ['Shelf price',   '$32.00 per bottle', '$28.00 per bottle (Save $10.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 4 or more: 25% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR9 = {
+  title: 'Retail Price Comparison — Adjustable LED Desk Lamps',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$75.00 per lamp',   '$75.00 per lamp'],
+    ['Shelf price',   '$56.00 per lamp',   '$57.00 per lamp (Save $18.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 2 or more: 20% off total order', 'No multi-buy discount'],
+  ]}]
+}
+const ctxR10 = {
+  title: 'Retail Price Comparison — Premium Gym Training Gloves',
+  tables: [{ headers: ['', 'Store X', 'Store Y'], rows: [
+    ['RRP',           '$44.00 per pair',   '$44.00 per pair'],
+    ['Shelf price',   '$38.00 per pair',   '$32.00 per pair (Save $12.00 from RRP)'],
+    ['Multi-buy offer', 'Buy 3 or more: 24% off total order', 'No multi-buy discount'],
+  ]}]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -1345,6 +1428,198 @@ const questions = [
     answer: '66000'
   },
 
+  // ── Retail Comparison Sets (AO–AX) ───────────────────────────────────────
+
+  // Set AO: Protein Bars — buy 3+ get 15% off | Store Y save $6 from $28 RRP
+  {
+    group: 'AO', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR1,
+    question: 'What is the total cost of purchasing 3 boxes of protein bars from Store X?',
+    answer: '61.20'
+  },
+  {
+    group: 'AO', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR1,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one box at Store X.',
+      'It would be cheaper to buy three boxes at Store Y.',
+      'Buying four boxes at Store X saves exactly $6.40 compared to buying four boxes at Store Y.',
+    ],
+    answer: 'False,False,True'
+  },
+
+  // Set AP: Scented Candles — buy 2+ get 20% off | Store Y save $8 from $35 RRP
+  {
+    group: 'AP', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR2,
+    question: 'What is the total cost of purchasing 2 scented candles from Store X?',
+    answer: '46.40'
+  },
+  {
+    group: 'AP', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR2,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one candle at Store X.',
+      'It would be cheaper to buy three candles at Store Y.',
+      'Buying four candles at Store X saves exactly $15.20 compared to buying four candles at Store Y.',
+    ],
+    answer: 'False,False,True'
+  },
+
+  // Set AQ: Yoga Mats — buy 2+ get 25% off | Store Y save $15 from $65 RRP
+  {
+    group: 'AQ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR3,
+    question: 'What is the total cost of purchasing 2 yoga mats from Store X?',
+    answer: '72.00'
+  },
+  {
+    group: 'AQ', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR3,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one yoga mat at Store X.',
+      'It would be cheaper to buy three yoga mats at Store Y.',
+      'Buying two yoga mats at Store X saves exactly $30.00 compared to buying two yoga mats at Store Y.',
+    ],
+    answer: 'True,False,False'
+  },
+
+  // Set AR: Resistance Bands — buy 4+ get 30% off | Store Y save $10 from $32 RRP
+  {
+    group: 'AR', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR4,
+    question: 'What is the total cost of purchasing 4 resistance band sets from Store X?',
+    answer: '77.00'
+  },
+  {
+    group: 'AR', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR4,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one resistance band set at Store X.',
+      'It would be cheaper to buy three resistance band sets at Store Y.',
+      'Buying four resistance band sets at Store X saves exactly $11.00 compared to buying four sets at Store Y.',
+    ],
+    answer: 'False,True,True'
+  },
+
+  // Set AS: Thermal Coffee Mugs — buy 2+ get 18% off | Store Y save $9 from $42 RRP
+  {
+    group: 'AS', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR5,
+    question: 'What is the total cost of purchasing 3 thermal mugs from Store X?',
+    answer: '88.56'
+  },
+  {
+    group: 'AS', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR5,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one mug at Store X.',
+      'It would be cheaper to buy three mugs at Store Y.',
+      'Buying two mugs at Store X saves exactly $6.96 compared to buying two mugs at Store Y.',
+    ],
+    answer: 'False,False,True'
+  },
+
+  // Set AT: Smartphone Cases — buy 3+ get 22% off | Store Y save $7 from $25 RRP
+  {
+    group: 'AT', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR6,
+    question: 'What is the total cost of purchasing 3 smartphone cases from Store X?',
+    answer: '49.14'
+  },
+  {
+    group: 'AT', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR6,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one smartphone case at Store X.',
+      'It would be cheaper to buy three smartphone cases at Store Y.',
+      'Buying four smartphone cases at Store X saves exactly $8.00 compared to buying four cases at Store Y.',
+    ],
+    answer: 'False,False,False'
+  },
+
+  // Set AU: Vitamin C — buy 2+ get 16% off | Store Y save $11 from $48 RRP
+  {
+    group: 'AU', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR7,
+    question: 'What is the total cost of purchasing 2 bottles of vitamin C supplements from Store X?',
+    answer: '68.88'
+  },
+  {
+    group: 'AU', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR7,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one bottle at Store X.',
+      'It would be cheaper to buy three bottles at Store Y.',
+      'Buying four bottles at Store X saves exactly $12.00 compared to buying four bottles at Store Y.',
+    ],
+    answer: 'False,False,False'
+  },
+
+  // Set AV: Water Bottles — buy 4+ get 25% off | Store Y save $10 from $38 RRP
+  {
+    group: 'AV', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR8,
+    question: 'What is the total cost of purchasing 4 stainless steel water bottles from Store X?',
+    answer: '96.00'
+  },
+  {
+    group: 'AV', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR8,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one water bottle at Store X.',
+      'It would be cheaper to buy three water bottles at Store Y.',
+      'Buying four water bottles at Store X saves exactly $16.00 compared to buying four bottles at Store Y.',
+    ],
+    answer: 'False,True,True'
+  },
+
+  // Set AW: LED Desk Lamps — buy 2+ get 20% off | Store Y save $18 from $75 RRP
+  {
+    group: 'AW', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR9,
+    question: 'What is the total cost of purchasing 2 LED desk lamps from Store X?',
+    answer: '89.60'
+  },
+  {
+    group: 'AW', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR9,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one LED desk lamp at Store X.',
+      'It would be cheaper to buy three LED desk lamps at Store Y.',
+      'Buying four LED desk lamps at Store X saves exactly $48.80 compared to buying four lamps at Store Y.',
+    ],
+    answer: 'True,False,True'
+  },
+
+  // Set AX: Training Gloves — buy 3+ get 24% off | Store Y save $12 from $44 RRP
+  {
+    group: 'AX', type: 'number_input', category: 'Retail and Finance',
+    context: ctxR10,
+    question: 'What is the total cost of purchasing 3 pairs of training gloves from Store X?',
+    answer: '86.64'
+  },
+  {
+    group: 'AX', type: 'true_false_matrix', category: 'Retail and Finance',
+    context: ctxR10,
+    question: 'Consider each of the following statements about the two offers. Select True or False for each statement.',
+    options: [
+      'It would be cheaper to buy one pair of training gloves at Store X.',
+      'It would be cheaper to buy three pairs of training gloves at Store Y.',
+      'Buying four pairs of training gloves at Store X saves exactly $15.00 compared to buying four pairs at Store Y.',
+    ],
+    answer: 'False,False,False'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -1359,6 +1634,8 @@ const units = {
   AC: ['mm³', 'mL'], AD: ['mm³', 'mL'],
   AE: [null, '$'], AF: ['$', '$'], AG: ['$', '$'], AH: ['$', '$'], AI: ['$', '$'],
   AJ: ['$', '$'], AK: [null, '$'], AL: ['$', '$'], AM: [null, '$'], AN: ['$', '$'],
+  AO: ['$', null], AP: ['$', null], AQ: ['$', null], AR: ['$', null], AS: ['$', null],
+  AT: ['$', null], AU: ['$', null], AV: ['$', null], AW: ['$', null], AX: ['$', null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -1522,6 +1799,46 @@ const methods = {
   AN: [
     `${GPG_FORMULA}\n\n  Electricity, gas, water & waste services: GPG = 16%\n  Men earn: $95,000/year\n\n  0.16 = (95,000 − women) ÷ 95,000\n  95,000 × 0.16 = 95,000 − women\n  15,200 = 95,000 − women\n  Women = 95,000 − 15,200 = $79,800`,
     `${GPG_FORMULA}\n\n  Transport, postal & warehousing: GPG = 12%\n  Men earn: $75,000/year\n\n  0.12 = (75,000 − women) ÷ 75,000\n  75,000 × 0.12 = 75,000 − women\n  9,000 = 75,000 − women\n  Women = 75,000 − 9,000 = $66,000`,
+  ],
+  AO: [
+    `3 × $24.00 = $72.00\n15% off: $72.00 × 0.85 = $61.20`,
+    `Statement 1 — 1 box at Store X vs Store Y:\n  Store X: $24.00  |  Store Y: $22.00\n  $24.00 > $22.00 → Store Y is cheaper → False\n\nStatement 2 — 3 boxes at Store Y vs Store X:\n  Store X: 3 × $24.00 = $72.00 × 0.85 = $61.20\n  Store Y: 3 × $22.00 = $66.00\n  $66.00 > $61.20 → Store X is cheaper → False\n\nStatement 3 — saving on 4 boxes at Store X vs Store Y:\n  Store X: 4 × $24.00 = $96.00 × 0.85 = $81.60\n  Store Y: 4 × $22.00 = $88.00\n  Saving: $88.00 − $81.60 = $6.40 → True`,
+  ],
+  AP: [
+    `2 × $29.00 = $58.00\n20% off: $58.00 × 0.80 = $46.40`,
+    `Statement 1 — 1 candle at Store X vs Store Y:\n  Store X: $29.00  |  Store Y: $27.00\n  $29.00 > $27.00 → Store Y is cheaper → False\n\nStatement 2 — 3 candles at Store Y vs Store X:\n  Store X: 3 × $29.00 = $87.00 × 0.80 = $69.60\n  Store Y: 3 × $27.00 = $81.00\n  $81.00 > $69.60 → Store X is cheaper → False\n\nStatement 3 — saving on 4 candles at Store X vs Store Y:\n  Store X: 4 × $29.00 = $116.00 × 0.80 = $92.80\n  Store Y: 4 × $27.00 = $108.00\n  Saving: $108.00 − $92.80 = $15.20 → True`,
+  ],
+  AQ: [
+    `2 × $48.00 = $96.00\n25% off: $96.00 × 0.75 = $72.00`,
+    `Statement 1 — 1 mat at Store X vs Store Y:\n  Store X: $48.00  |  Store Y: $50.00\n  $48.00 < $50.00 → Store X is cheaper → True\n\nStatement 2 — 3 mats at Store Y vs Store X:\n  Store X: 3 × $48.00 = $144.00 × 0.75 = $108.00\n  Store Y: 3 × $50.00 = $150.00\n  $150.00 > $108.00 → Store X is cheaper → False\n\nStatement 3 — saving on 2 mats at Store X vs Store Y:\n  Store X: $72.00  |  Store Y: 2 × $50.00 = $100.00\n  Saving: $100.00 − $72.00 = $28.00, not $30.00 → False`,
+  ],
+  AR: [
+    `4 × $27.50 = $110.00\n30% off: $110.00 × 0.70 = $77.00`,
+    `Statement 1 — 1 set at Store X vs Store Y:\n  Store X: $27.50  |  Store Y: $22.00\n  $27.50 > $22.00 → Store Y is cheaper → False\n\nStatement 2 — 3 sets at Store Y vs Store X:\n  Store X: 3 × $27.50 = $82.50 (discount requires 4+, not applied)\n  Store Y: 3 × $22.00 = $66.00\n  $66.00 < $82.50 → Store Y is cheaper → True\n\nStatement 3 — saving on 4 sets at Store X vs Store Y:\n  Store X: $77.00  |  Store Y: 4 × $22.00 = $88.00\n  Saving: $88.00 − $77.00 = $11.00 → True`,
+  ],
+  AS: [
+    `3 × $36.00 = $108.00\n18% off: $108.00 × 0.82 = $88.56`,
+    `Statement 1 — 1 mug at Store X vs Store Y:\n  Store X: $36.00  |  Store Y: $33.00\n  $36.00 > $33.00 → Store Y is cheaper → False\n\nStatement 2 — 3 mugs at Store Y vs Store X:\n  Store X: 3 × $36.00 = $108.00 × 0.82 = $88.56\n  Store Y: 3 × $33.00 = $99.00\n  $99.00 > $88.56 → Store X is cheaper → False\n\nStatement 3 — saving on 2 mugs at Store X vs Store Y:\n  Store X: 2 × $36.00 = $72.00 × 0.82 = $59.04\n  Store Y: 2 × $33.00 = $66.00\n  Saving: $66.00 − $59.04 = $6.96 → True`,
+  ],
+  AT: [
+    `3 × $21.00 = $63.00\n22% off: $63.00 × 0.78 = $49.14`,
+    `Statement 1 — 1 case at Store X vs Store Y:\n  Store X: $21.00  |  Store Y: $18.00\n  $21.00 > $18.00 → Store Y is cheaper → False\n\nStatement 2 — 3 cases at Store Y vs Store X:\n  Store X: 3 × $21.00 = $63.00 × 0.78 = $49.14\n  Store Y: 3 × $18.00 = $54.00\n  $54.00 > $49.14 → Store X is cheaper → False\n\nStatement 3 — saving on 4 cases at Store X vs Store Y:\n  Store X: 4 × $21.00 = $84.00 × 0.78 = $65.52\n  Store Y: 4 × $18.00 = $72.00\n  Saving: $72.00 − $65.52 = $6.48, not $8.00 → False`,
+  ],
+  AU: [
+    `2 × $41.00 = $82.00\n16% off: $82.00 × 0.84 = $68.88`,
+    `Statement 1 — 1 bottle at Store X vs Store Y:\n  Store X: $41.00  |  Store Y: $37.00\n  $41.00 > $37.00 → Store Y is cheaper → False\n\nStatement 2 — 3 bottles at Store Y vs Store X:\n  Store X: 3 × $41.00 = $123.00 × 0.84 = $103.32\n  Store Y: 3 × $37.00 = $111.00\n  $111.00 > $103.32 → Store X is cheaper → False\n\nStatement 3 — saving on 4 bottles at Store X vs Store Y:\n  Store X: 4 × $41.00 = $164.00 × 0.84 = $137.76\n  Store Y: 4 × $37.00 = $148.00\n  Saving: $148.00 − $137.76 = $10.24, not $12.00 → False`,
+  ],
+  AV: [
+    `4 × $32.00 = $128.00\n25% off: $128.00 × 0.75 = $96.00`,
+    `Statement 1 — 1 bottle at Store X vs Store Y:\n  Store X: $32.00  |  Store Y: $28.00\n  $32.00 > $28.00 → Store Y is cheaper → False\n\nStatement 2 — 3 bottles at Store Y vs Store X:\n  Store X: 3 × $32.00 = $96.00 (discount requires 4+, not applied)\n  Store Y: 3 × $28.00 = $84.00\n  $84.00 < $96.00 → Store Y is cheaper → True\n\nStatement 3 — saving on 4 bottles at Store X vs Store Y:\n  Store X: $96.00  |  Store Y: 4 × $28.00 = $112.00\n  Saving: $112.00 − $96.00 = $16.00 → True`,
+  ],
+  AW: [
+    `2 × $56.00 = $112.00\n20% off: $112.00 × 0.80 = $89.60`,
+    `Statement 1 — 1 lamp at Store X vs Store Y:\n  Store X: $56.00  |  Store Y: $57.00\n  $56.00 < $57.00 → Store X is cheaper → True\n\nStatement 2 — 3 lamps at Store Y vs Store X:\n  Store X: 3 × $56.00 = $168.00 × 0.80 = $134.40\n  Store Y: 3 × $57.00 = $171.00\n  $171.00 > $134.40 → Store X is cheaper → False\n\nStatement 3 — saving on 4 lamps at Store X vs Store Y:\n  Store X: 4 × $56.00 = $224.00 × 0.80 = $179.20\n  Store Y: 4 × $57.00 = $228.00\n  Saving: $228.00 − $179.20 = $48.80 → True`,
+  ],
+  AX: [
+    `3 × $38.00 = $114.00\n24% off: $114.00 × 0.76 = $86.64`,
+    `Statement 1 — 1 pair at Store X vs Store Y:\n  Store X: $38.00  |  Store Y: $32.00\n  $38.00 > $32.00 → Store Y is cheaper → False\n\nStatement 2 — 3 pairs at Store Y vs Store X:\n  Store X: 3 × $38.00 = $114.00 × 0.76 = $86.64\n  Store Y: 3 × $32.00 = $96.00\n  $96.00 > $86.64 → Store X is cheaper → False\n\nStatement 3 — saving on 4 pairs at Store X vs Store Y:\n  Store X: 4 × $38.00 = $152.00 × 0.76 = $115.52\n  Store Y: 4 × $32.00 = $128.00\n  Saving: $128.00 − $115.52 = $12.48, not $15.00 → False`,
   ],
 }
 
