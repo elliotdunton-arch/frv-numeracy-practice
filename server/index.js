@@ -820,6 +820,163 @@ const ctxR10 = {
   ]}]
 }
 
+// ── Transit / speed contexts (ctxT1a–ctxT10a: commute tables; ctxT1b–ctxT10b: speed scenarios) ──
+
+const ctxT1a = {
+  title: 'Employee Commute Tracking — Headquarters',
+  tables: [{ headers: ['Employee', 'Mode of Transport', 'Commute Duration', 'Weekly Days at HQ'], rows: [
+    ['Employee 1', 'Bus',     '45 min',      '4'],
+    ['Employee 2', 'Train',   '1 hr 15 min', '3'],
+    ['Employee 3', 'Walk',    '20 min',      '5'],
+    ['Employee 4', 'Bicycle', '35 min',      '4'],
+    ['Employee 5', 'Car',     '55 min',      '2'],
+  ]}]
+}
+const ctxT1b = {
+  title: 'Scooter Commute — Detour via Road Closures',
+  subtitle: 'Sarah usually rides her scooter 15 km each way to the train station at an average speed of 30 km/h. Due to city road closures, she must take a detour that reduces her average speed to 20 km/h.',
+}
+
+const ctxT2a = {
+  title: 'University Student Transit Study',
+  tables: [{ headers: ['Student', 'Mode of Transport', 'Length of Time', 'Campus Days per Week'], rows: [
+    ['Participant 1', 'Regional Train', '1 hr 40 min', '3'],
+    ['Participant 2', 'Bus',            '50 min',      '4'],
+    ['Participant 3', 'Carpool',        '1 hr 10 min', '2'],
+    ['Participant 4', 'Bicycle',        '30 min',      '5'],
+    ['Participant 5', 'Metro',          '45 min',      '4'],
+    ['Participant 6', 'Walking',        '15 min',      '5'],
+  ]}]
+}
+const ctxT2b = {
+  title: 'Highway Drive — Speed Reduction in Heavy Rain',
+  subtitle: 'James drives 60 km down the highway to work each morning at an average speed of 100 km/h. During heavy rain, his safe driving speed drops to an average of 75 km/h.',
+}
+
+const ctxT3a = {
+  title: 'Warehouse Delivery Courier Arrivals',
+  tables: [{ headers: ['Courier', 'Transport Vehicle', 'Journey Time', 'Deliveries per Week'], rows: [
+    ['Courier A', 'Van',          '1 hr 25 min', '5'],
+    ['Courier B', 'Motorbike',    '40 min',      '6'],
+    ['Courier C', 'Electric Van', '1 hr 05 min', '4'],
+    ['Courier D', 'Small Truck',  '1 hr 50 min', '3'],
+    ['Courier E', 'Moped',        '30 min',      '5'],
+  ]}]
+}
+const ctxT3b = {
+  title: 'Bicycle to Office — Electric Bike Speed Upgrade',
+  subtitle: 'Elena travels 12 km to her office by bicycle. She typically rides at an average speed of 18 km/h. Today, she upgrades to an electric bike that increases her average speed to 24 km/h.',
+}
+
+const ctxT4a = {
+  title: 'Medical Centre — Visiting Practitioners Travel Log',
+  tables: [{ headers: ['Practitioner', 'Transport Mode', 'One-Way Time', 'Days Active'], rows: [
+    ['Doctor 1', 'Subway',       '38 min',      '4'],
+    ['Doctor 2', 'Tram',         '52 min',      '3'],
+    ['Doctor 3', 'Electric Car', '1 hr 14 min', '3'],
+    ['Doctor 4', 'Bicycle',      '46 min',      '5'],
+    ['Doctor 5', 'Bus',          '1 hr 02 min', '2'],
+    ['Doctor 6', 'Walking',      '22 min',      '4'],
+  ]}]
+}
+const ctxT4b = {
+  title: 'Regional Hub Delivery — Return Leg Speed Limiter',
+  subtitle: 'An express courier delivery route covers a distance of 180 km between regional hubs. The driver usually hits an average speed of 90 km/h, but vehicle speed limiters reduce the allowed average speed on the return leg to 80 km/h.',
+}
+
+const ctxT5a = {
+  title: 'Civil Engineers — Suburban Railway Link Commutes',
+  tables: [{ headers: ['Engineer', 'Transport Mode', 'Commute Duration', 'Shifts per Week'], rows: [
+    ['Resident 1', 'Train',       '2 hr 05 min', '4'],
+    ['Resident 2', 'Shuttle Bus', '1 hr 15 min', '5'],
+    ['Resident 3', 'Driving',     '1 hr 40 min', '3'],
+    ['Resident 4', 'Carpool',     '55 min',      '4'],
+    ['Resident 5', 'Motorcycle',  '45 min',      '5'],
+  ]}]
+}
+const ctxT5b = {
+  title: 'Construction Site Commute — Highway Accident Delay',
+  subtitle: 'Liam commutes 30 km each way to a construction site. On clear mornings, he averages a speed of 60 km/h. When a highway accident causes bumper-to-bumper delays, his average speed falls to 20 km/h.',
+}
+
+const ctxT6a = {
+  title: 'Harbour Terminal — Shift Supervisor Commutes',
+  tables: [{ headers: ['Supervisor', 'Transport Mode', 'One-Way Duration', 'Weekly Shifts'], rows: [
+    ['Officer A', 'Ferry',   '55 min',      '4'],
+    ['Officer B', 'Train',   '1 hr 25 min', '4'],
+    ['Officer C', 'Car',     '1 hr 10 min', '5'],
+    ['Officer D', 'Bicycle', '40 min',      '3'],
+    ['Officer E', 'Bus',     '50 min',      '5'],
+    ['Officer F', 'Tram',    '36 min',      '4'],
+  ]}]
+}
+const ctxT6b = {
+  title: 'Urban Emergency Response — Return via School Traffic',
+  subtitle: 'A maintenance van travels 8 km through an urban zone to respond to an emergency call. Due to light traffic, the driver maintains an average speed of 32 km/h. On the return trip, heavy school traffic slows the average speed down to 16 km/h.',
+}
+
+const ctxT7a = {
+  title: 'Part-Time Retail Employees — Weekly Commute Audit',
+  tables: [{ headers: ['Employee', 'Transport Mode', 'One-Way Journey Time', 'Days Commuting'], rows: [
+    ['Associate 1', 'Bus',     '42 min',      '3'],
+    ['Associate 2', 'Walking', '18 min',      '4'],
+    ['Associate 3', 'Train',   '1 hr 24 min', '2'],
+    ['Associate 4', 'Scooter', '31 min',      '5'],
+    ['Associate 5', 'Car',     '50 min',      '3'],
+  ]}]
+}
+const ctxT7b = {
+  title: 'Regional Office to Airport — Off-Peak vs Rush Hour',
+  subtitle: 'A company executive travels 105 km from the regional office to the airport. By driving outside of peak hours, they can travel at an average speed of 90 km/h. If they leave during the afternoon rush hour, gridlock decreases the average speed to 45 km/h.',
+}
+
+const ctxT8a = {
+  title: 'Airline Flight Crew — Airport Ground Transit Times',
+  tables: [{ headers: ['Crew Member', 'Transport Mode', 'Ground Transit Time', 'Weekly Rosters'], rows: [
+    ['Pilot 1',      'Express Rail',     '1 hr 12 min', '3'],
+    ['Pilot 2',      'Taxi',             '1 hr 55 min', '2'],
+    ['Attendant 1',  'Staff Shuttle',    '48 min',      '4'],
+    ['Attendant 2',  'Bus Line',         '1 hr 22 min', '4'],
+    ['Attendant 3',  'Personal Vehicle', '1 hr 37 min', '3'],
+    ['Attendant 4',  'Co-ride',          '56 min',      '4'],
+  ]}]
+}
+const ctxT8b = {
+  title: 'Distribution Run — Loaded vs Empty Vehicle Speed',
+  subtitle: 'A distribution truck drives a delivery run of 40 km each way. On the outbound run, the truck is fully loaded and can only manage an average speed of 50 km/h. On the return run, the truck is empty and averages a speed of 80 km/h.',
+}
+
+const ctxT9a = {
+  title: 'Research Hub — Offshore Observatory Transit Times',
+  tables: [{ headers: ['Scientist', 'Transport Mode', 'Transit Duration', 'Weekly Trips'], rows: [
+    ['Researcher A', 'Staff Boat',    '1 hr 18 min', '2'],
+    ['Researcher B', 'Coastal Tram',  '44 min',      '5'],
+    ['Researcher C', 'Electric Car',  '1 hr 32 min', '3'],
+    ['Researcher D', 'Cable Car',     '26 min',      '5'],
+    ['Researcher E', 'Hybrid Bus',    '1 hr 05 min', '4'],
+  ]}]
+}
+const ctxT9b = {
+  title: 'Remote Campus Commute — Maintenance Speed Restriction',
+  subtitle: 'Claire drives 75 km each way to a remote corporate campus. Her vehicle normally travels at an average speed of 100 km/h. Due to an extended gravel sector under maintenance, her speed is restricted to an average of 60 km/h over the entire trip.',
+}
+
+const ctxT10a = {
+  title: 'Municipal Community Workers — Council Facility Travel',
+  tables: [{ headers: ['Worker', 'Primary Transport', 'One-Way Time', 'Days Active'], rows: [
+    ['Worker 1', 'Council Van', '1 hr 16 min', '4'],
+    ['Worker 2', 'Bicycle',     '39 min',      '5'],
+    ['Worker 3', 'Light Rail',  '1 hr 04 min', '3'],
+    ['Worker 4', 'Carpool',     '48 min',      '4'],
+    ['Worker 5', 'Walk/Bus',    '53 min',      '3'],
+    ['Worker 6', 'Motorcycle',  '32 min',      '5'],
+  ]}]
+}
+const ctxT10b = {
+  title: 'Medical Package Delivery — Peak vs Overnight Speed',
+  subtitle: 'A high-speed courier vehicle must travel 20 km to deliver an urgent medical package. Under clear overnight conditions, the vehicle travels at an average speed of 80 km/h. During standard peak operations, congestion reduces the speed to 30 km/h.',
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -1620,6 +1777,148 @@ const questions = [
     answer: 'False,False,False'
   },
 
+  // ── Transit and Speed Sets (AY–BH) ───────────────────────────────────────
+
+  // AY — Set 1: HQ employees average | Sarah scooter detour
+  {
+    group: 'AY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT1a,
+    question: 'What is the average travel time for a single one-way commute among these 5 employees? Give your answer in minutes.',
+    answer: '46'
+  },
+  {
+    group: 'AY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT1b,
+    question: 'How many minutes earlier does Sarah need to leave home to ensure she arrives at the station at her usual time?',
+    answer: '15'
+  },
+
+  // AZ — Set 2: University students average | James highway rain
+  {
+    group: 'AZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT2a,
+    question: 'What is the average one-way travel time taken across these 6 students? Give your answer in minutes.',
+    answer: '51'
+  },
+  {
+    group: 'AZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT2b,
+    question: 'How many minutes longer will his morning drive take compared to his regular highway commute?',
+    answer: '12'
+  },
+
+  // BA — Set 3: Warehouse couriers average | Elena electric bike
+  {
+    group: 'BA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT3a,
+    question: 'What is the average one-way journey time across these 5 couriers? Give your answer in minutes.',
+    answer: '66'
+  },
+  {
+    group: 'BA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT3b,
+    question: 'How many minutes of travel time does Elena save on her trip to work by using the electric bike?',
+    answer: '10'
+  },
+
+  // BB — Set 4: Medical practitioners average | Courier hub return limiter
+  {
+    group: 'BB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT4a,
+    question: 'What is the average travel time across the 6 practitioners? Give your answer in minutes.',
+    answer: '49'
+  },
+  {
+    group: 'BB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT4b,
+    question: 'How many minutes longer does the return leg take compared to the outward leg?',
+    answer: '15'
+  },
+
+  // BC — Set 5: Civil engineers average | Liam accident delay
+  {
+    group: 'BC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT5a,
+    question: 'What is the average one-way travel time for the 5 engineers? Give your answer in minutes.',
+    answer: '80'
+  },
+  {
+    group: 'BC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT5b,
+    question: 'How many minutes earlier must Liam leave his home to arrive at the site at his standard time during the delay?',
+    answer: '60'
+  },
+
+  // BD — Set 6: Harbour supervisors average | Emergency van school traffic
+  {
+    group: 'BD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT6a,
+    question: 'What is the average commute duration among these 6 shift supervisors? Give your answer in minutes.',
+    answer: '56'
+  },
+  {
+    group: 'BD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT6b,
+    question: 'How many minutes longer does the return trip take than the outward emergency run?',
+    answer: '15'
+  },
+
+  // BE — Set 7: Retail employees average | Executive peak vs off-peak
+  {
+    group: 'BE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT7a,
+    question: 'What is the average one-way travel time among these 5 individual profiles? Give your answer in minutes.',
+    answer: '45'
+  },
+  {
+    group: 'BE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT7b,
+    question: 'How many minutes of travel time does the executive save by choosing to drive outside of peak hours?',
+    answer: '70'
+  },
+
+  // BF — Set 8: Airline crew average | Distribution truck loaded vs empty
+  {
+    group: 'BF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT8a,
+    question: 'What is the average one-way ground transit duration across these 6 crew members? Give your answer in minutes.',
+    answer: '78'
+  },
+  {
+    group: 'BF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT8b,
+    question: 'How many minutes faster is the return leg compared to the outbound delivery leg?',
+    answer: '18'
+  },
+
+  // BG — Set 9: Research hub scientists average | Claire maintenance restriction
+  {
+    group: 'BG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT9a,
+    question: 'What is the average travel time for a single journey across these 5 scientists? Give your answer in minutes.',
+    answer: '61'
+  },
+  {
+    group: 'BG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT9b,
+    question: 'How many additional minutes does Claire spend on her commute because of the maintenance speed restriction?',
+    answer: '30'
+  },
+
+  // BH — Set 10: Council workers average | Medical courier peak vs overnight
+  {
+    group: 'BH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT10a,
+    question: 'What is the average travel time for a single leg across these 6 community workers? Give your answer in minutes.',
+    answer: '52'
+  },
+  {
+    group: 'BH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxT10b,
+    question: 'How many minutes longer does the daytime delivery run take compared to the overnight run?',
+    answer: '25'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -1636,6 +1935,8 @@ const units = {
   AJ: ['$', '$'], AK: [null, '$'], AL: ['$', '$'], AM: [null, '$'], AN: ['$', '$'],
   AO: ['$', null], AP: ['$', null], AQ: ['$', null], AR: ['$', null], AS: ['$', null],
   AT: ['$', null], AU: ['$', null], AV: ['$', null], AW: ['$', null], AX: ['$', null],
+  AY: ['min', 'min'], AZ: ['min', 'min'], BA: ['min', 'min'], BB: ['min', 'min'], BC: ['min', 'min'],
+  BD: ['min', 'min'], BE: ['min', 'min'], BF: ['min', 'min'], BG: ['min', 'min'], BH: ['min', 'min'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -1839,6 +2140,46 @@ const methods = {
   AX: [
     `3 × $38.00 = $114.00\n24% off: $114.00 × 0.76 = $86.64`,
     `Statement 1 — 1 pair at Store X vs Store Y:\n  Store X: $38.00  |  Store Y: $32.00\n  $38.00 > $32.00 → Store Y is cheaper → False\n\nStatement 2 — 3 pairs at Store Y vs Store X:\n  Store X: 3 × $38.00 = $114.00 × 0.76 = $86.64\n  Store Y: 3 × $32.00 = $96.00\n  $96.00 > $86.64 → Store X is cheaper → False\n\nStatement 3 — saving on 4 pairs at Store X vs Store Y:\n  Store X: 4 × $38.00 = $152.00 × 0.76 = $115.52\n  Store Y: 4 × $32.00 = $128.00\n  Saving: $128.00 − $115.52 = $12.48, not $15.00 → False`,
+  ],
+  AY: [
+    `Convert all durations to minutes, then find the mean:\n  Employee 1 (Bus):     45 min\n  Employee 2 (Train):   1 hr 15 min = 75 min\n  Employee 3 (Walk):    20 min\n  Employee 4 (Bicycle): 35 min\n  Employee 5 (Car):     55 min\nTotal: 45 + 75 + 20 + 35 + 55 = 230 min\nAverage: 230 ÷ 5 = 46 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal route:  15 km ÷ 30 km/h = 0.5 h = 30 min\n  Detour route:  15 km ÷ 20 km/h = 0.75 h = 45 min\n  Extra time needed: 45 − 30 = 15 min earlier`,
+  ],
+  AZ: [
+    `Convert all durations to minutes, then find the mean:\n  Participant 1 (Regional Train): 1 hr 40 min = 100 min\n  Participant 2 (Bus):            50 min\n  Participant 3 (Carpool):        1 hr 10 min = 70 min\n  Participant 4 (Bicycle):        30 min\n  Participant 5 (Metro):          45 min\n  Participant 6 (Walking):        15 min\nTotal: 100 + 50 + 70 + 30 + 45 + 15 = 310 min\nAverage: 310 ÷ 6 = 51.67 → 51 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal (100 km/h):     60 km ÷ 100 km/h = 0.6 h = 36 min\n  Heavy rain (75 km/h):  60 km ÷ 75 km/h = 0.8 h = 48 min\n  Extra time: 48 − 36 = 12 min`,
+  ],
+  BA: [
+    `Convert all durations to minutes, then find the mean:\n  Courier A (Van):          1 hr 25 min = 85 min\n  Courier B (Motorbike):    40 min\n  Courier C (Electric Van): 1 hr 05 min = 65 min\n  Courier D (Small Truck):  1 hr 50 min = 110 min\n  Courier E (Moped):        30 min\nTotal: 85 + 40 + 65 + 110 + 30 = 330 min\nAverage: 330 ÷ 5 = 66 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal bicycle (18 km/h): 12 km ÷ 18 km/h = 0.667 h = 40 min\n  Electric bike (24 km/h):  12 km ÷ 24 km/h = 0.5 h = 30 min\n  Time saved: 40 − 30 = 10 min`,
+  ],
+  BB: [
+    `Convert all durations to minutes, then find the mean:\n  Doctor 1 (Subway):       38 min\n  Doctor 2 (Tram):         52 min\n  Doctor 3 (Electric Car): 1 hr 14 min = 74 min\n  Doctor 4 (Bicycle):      46 min\n  Doctor 5 (Bus):          1 hr 02 min = 62 min\n  Doctor 6 (Walking):      22 min\nTotal: 38 + 52 + 74 + 46 + 62 + 22 = 294 min\nAverage: 294 ÷ 6 = 49 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Outward (90 km/h): 180 km ÷ 90 km/h = 2.0 h = 120 min\n  Return (80 km/h):  180 km ÷ 80 km/h = 2.25 h = 135 min\n  Extra time: 135 − 120 = 15 min`,
+  ],
+  BC: [
+    `Convert all durations to minutes, then find the mean:\n  Resident 1 (Train):       2 hr 05 min = 125 min\n  Resident 2 (Shuttle Bus): 1 hr 15 min = 75 min\n  Resident 3 (Driving):     1 hr 40 min = 100 min\n  Resident 4 (Carpool):     55 min\n  Resident 5 (Motorcycle):  45 min\nTotal: 125 + 75 + 100 + 55 + 45 = 400 min\nAverage: 400 ÷ 5 = 80 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal (60 km/h):  30 km ÷ 60 km/h = 0.5 h = 30 min\n  Delayed (20 km/h): 30 km ÷ 20 km/h = 1.5 h = 90 min\n  Extra time needed: 90 − 30 = 60 min earlier`,
+  ],
+  BD: [
+    `Convert all durations to minutes, then find the mean:\n  Officer A (Ferry):   55 min\n  Officer B (Train):   1 hr 25 min = 85 min\n  Officer C (Car):     1 hr 10 min = 70 min\n  Officer D (Bicycle): 40 min\n  Officer E (Bus):     50 min\n  Officer F (Tram):    36 min\nTotal: 55 + 85 + 70 + 40 + 50 + 36 = 336 min\nAverage: 336 ÷ 6 = 56 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Outward / light traffic (32 km/h): 8 km ÷ 32 km/h = 0.25 h = 15 min\n  Return / school traffic (16 km/h): 8 km ÷ 16 km/h = 0.5 h = 30 min\n  Extra time: 30 − 15 = 15 min`,
+  ],
+  BE: [
+    `Convert all durations to minutes, then find the mean:\n  Associate 1 (Bus):     42 min\n  Associate 2 (Walking): 18 min\n  Associate 3 (Train):   1 hr 24 min = 84 min\n  Associate 4 (Scooter): 31 min\n  Associate 5 (Car):     50 min\nTotal: 42 + 18 + 84 + 31 + 50 = 225 min\nAverage: 225 ÷ 5 = 45 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Off-peak (90 km/h):  105 km ÷ 90 km/h = 1.167 h = 70 min\n  Rush hour (45 km/h): 105 km ÷ 45 km/h = 2.333 h = 140 min\n  Time saved: 140 − 70 = 70 min`,
+  ],
+  BF: [
+    `Convert all durations to minutes, then find the mean:\n  Pilot 1 (Express Rail):      1 hr 12 min = 72 min\n  Pilot 2 (Taxi):              1 hr 55 min = 115 min\n  Attendant 1 (Staff Shuttle): 48 min\n  Attendant 2 (Bus Line):      1 hr 22 min = 82 min\n  Attendant 3 (Personal Vehicle): 1 hr 37 min = 97 min\n  Attendant 4 (Co-ride):       56 min\nTotal: 72 + 115 + 48 + 82 + 97 + 56 = 470 min\nAverage: 470 ÷ 6 = 78.3 → 78 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Outbound / loaded (50 km/h): 40 km ÷ 50 km/h = 0.8 h = 48 min\n  Return / empty (80 km/h):    40 km ÷ 80 km/h = 0.5 h = 30 min\n  Time saved on return: 48 − 30 = 18 min`,
+  ],
+  BG: [
+    `Convert all durations to minutes, then find the mean:\n  Researcher A (Staff Boat):   1 hr 18 min = 78 min\n  Researcher B (Coastal Tram): 44 min\n  Researcher C (Electric Car): 1 hr 32 min = 92 min\n  Researcher D (Cable Car):    26 min\n  Researcher E (Hybrid Bus):   1 hr 05 min = 65 min\nTotal: 78 + 44 + 92 + 26 + 65 = 305 min\nAverage: 305 ÷ 5 = 61 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal (100 km/h):      75 km ÷ 100 km/h = 0.75 h = 45 min\n  Restricted (60 km/h):   75 km ÷ 60 km/h = 1.25 h = 75 min\n  Extra time: 75 − 45 = 30 min`,
+  ],
+  BH: [
+    `Convert all durations to minutes, then find the mean:\n  Worker 1 (Council Van): 1 hr 16 min = 76 min\n  Worker 2 (Bicycle):     39 min\n  Worker 3 (Light Rail):  1 hr 04 min = 64 min\n  Worker 4 (Carpool):     48 min\n  Worker 5 (Walk/Bus):    53 min\n  Worker 6 (Motorcycle):  32 min\nTotal: 76 + 39 + 64 + 48 + 53 + 32 = 312 min\nAverage: 312 ÷ 6 = 52 min`,
+    `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Overnight (80 km/h): 20 km ÷ 80 km/h = 0.25 h = 15 min\n  Peak (30 km/h):      20 km ÷ 30 km/h = 0.667 h = 40 min\n  Extra time: 40 − 15 = 25 min`,
   ],
 }
 
