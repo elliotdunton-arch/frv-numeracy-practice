@@ -66,13 +66,13 @@ export default function Home({ onStart, loading, error }) {
 
         <div className="info-row">
           <div className="info-box">
-            <span className="info-num">{mode === 'full' ? 40 : customCount}</span>
+            <span className="info-num">{mode === 'full' ? 30 : customCount}</span>
             <span className="info-label">Questions</span>
           </div>
           <div className="info-divider" />
           <div className="info-box">
             <span className={`info-num ${mode === 'custom' ? 'info-num-time' : ''}`}>
-              {mode === 'full' ? '46' : customTimeDisplay}
+              {mode === 'full' ? '35' : customTimeDisplay}
             </span>
             <span className="info-label">{mode === 'full' ? 'Minutes' : 'Min : Sec'}</span>
           </div>

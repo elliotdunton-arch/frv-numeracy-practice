@@ -12,7 +12,7 @@ export default function App() {
   const [timeExpired, setTimeExpired] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const [totalTime, setTotalTime] = useState(40 * 70)
+  const [totalTime, setTotalTime] = useState(35 * 60)
 
   const startTest = async (customCount = null) => {
     setLoading(true)
@@ -21,9 +21,9 @@ export default function App() {
       const res = await fetch('/api/questions')
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
-      const selected = data.slice(0, customCount ?? 40)
+      const selected = data.slice(0, customCount ?? 30)
       setQuestions(selected)
-      setTotalTime(customCount ? customCount * 70 : 40 * 70)
+      setTotalTime(customCount ? customCount * 70 : 35 * 60)
       setAnswers({})
       setStartTime(Date.now())
       setEndTime(null)
