@@ -112,10 +112,21 @@ export default function Calculator({ onClose }) {
     return parts.join('.')
   }
 
+  // Format each number token in an expression string with thousands commas
+  const formatExprCommas = (s) =>
+    s.replace(/\d+(\.\d+)?/g, (m) => {
+      const [int, dec] = m.split('.')
+      const formatted = int.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      return dec !== undefined ? formatted + '.' + dec : formatted
+    })
+
   // Determine what to show in the large display slot
   const rawMain      = result !== null ? result  : (expr || '0')
-  const displayMain  = result !== null ? formatCommas(result) : (expr || '0')
+  const displayMain  = result !== null ? formatCommas(result) : formatExprCommas(expr || '0')
   const displaySmall = result !== null ? expr    : ''
+
+  // Dynamic font size: shrink as display grows
+  const mainFontSize = Math.max(1.0, 2.2 - Math.max(0, displayMain.length - 9) * 0.08) + 'rem'
 
   // ----- button definitions -----
   const rows = [
@@ -174,7 +185,10 @@ export default function Calculator({ onClose }) {
         <div className="calc-small-row">
           {displaySmall || ' '}
         </div>
-        <div className={`calc-main-val ${error ? 'calc-error' : ''}`}>
+        <div
+          className={`calc-main-val ${error ? 'calc-error' : ''}`}
+          style={error ? undefined : { fontSize: mainFontSize }}
+        >
           {error ? 'Error' : displayMain}
         </div>
       </div>

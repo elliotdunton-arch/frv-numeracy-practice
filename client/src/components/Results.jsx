@@ -8,11 +8,11 @@ function isCorrect(q, userAnswer) {
     return ua.length === ca.length && ua.every((v, i) => v === ca[i])
   }
   if (!userAnswer && userAnswer !== 0) return false
-  const clean = String(userAnswer).replace(/[$,\s]/g, '')
-  const ua = parseFloat(clean)
-  const ca = parseFloat(q.answer)
+  const clean = s => String(s).replace(/[$,%\s]/g, '')
+  const ua = parseFloat(clean(userAnswer))
+  const ca = parseFloat(clean(q.answer))
   if (!isNaN(ua) && !isNaN(ca)) return Math.abs(ua - ca) < 0.01
-  return clean.toLowerCase() === String(q.answer).trim().toLowerCase()
+  return clean(userAnswer).toLowerCase() === clean(q.answer).toLowerCase()
 }
 
 export default function Results({ questions, answers, startTime, endTime, timeExpired, onRestart }) {
