@@ -1065,6 +1065,69 @@ const ctxB3 = {
   ]}]
 }
 
+const ctxB4 = {
+  title: 'Architectural Cladding Flyer Promotions',
+  tables: [{ headers: ['Decking Brand Outlet', 'Material Core', 'Promotional Sale Rate', 'Standard Retail Price'], rows: [
+    ['DuraPlank Express', 'Premium Composite', 'Buy 3 linear metres get the 4th free', '$36.00 per metre'],
+    ['EcoDeck Warehouse', 'Premium Composite', 'SALE $28.50 per linear metre',          'Save $7.50 from RRP'],
+  ]}]
+}
+
+const ctxB5 = {
+  title: 'Acoustic Ceiling Upgrade System',
+  tables: [{ headers: ['Core Insulation Layer', 'Upfront Sheet Cost', 'Noise Reduction Coefficient (NRC)', 'Pack Surface Coverage Area'], rows: [
+    ['Glasswool Partition',   '$65',  '0.70', '15 m²'],
+    ['High-Density Rockwool', '$115', '0.90', '10 m²'],
+    ['Recycled Polyester',    '$85',  '0.75', '12 m²'],
+    ['SoundLag Foam Sheet',   '$160', '0.85', '8 m²'],
+  ]}]
+}
+
+const ctxB6 = {
+  title: 'Heavy-Duty Landscape Block Inventory',
+  tables: [{ headers: ['Masonry Block Variety', 'Unit Weight per Block', 'Volume Capacity per Block', 'Standard Palette Quantity'], rows: [
+    ['Interlocking Capping',  '14 kg', '0.015 m³', '60 blocks'],
+    ['Standard Besser Block', '16 kg', '0.024 m³', '75 blocks'],
+    ['Split-Face Retaining',  '22 kg', '0.032 m³', '45 blocks'],
+    ['Jumbo Engineered',      '34 kg', '0.050 m³', '30 blocks'],
+  ]}]
+}
+
+const ctxB7 = {
+  title: 'High-Performance Joinery Catalog Deals',
+  tables: [{ headers: ['Window Supply Center', 'Glass Spec', 'Volume Trade Campaign', 'List Unit Price'], rows: [
+    ['Apex Fenestration',    'Argon Gas Low-E', 'Buy 4 frames get a 5th frame half-price', '$600 each'],
+    ['Matrix Glazing Systems','Argon Gas Low-E', 'SALE $510 per window frame',              'Save $90 from List Price'],
+  ]}]
+}
+
+const ctxB8 = {
+  title: 'Pedestrian Plaza Hardscape Logistics',
+  tables: [{ headers: ['Granite Paving Finish', 'Procurement Cost per m²', 'Daily Laying Target Speed'], rows: [
+    ['Exfoliated Stone',     '$120', '24 m² per day'],
+    ['Honed Smooth Slab',    '$165', '15 m² per day'],
+    ['Sandblasted Textured', '$140', '20 m² per day'],
+    ['Bush-Hammered Grip',   '$110', '22 m² per day'],
+  ]}]
+}
+
+const ctxB9 = {
+  title: 'Engineered Timber Sheet Inventory',
+  tables: [{ headers: ['Plywood Product Grade', 'Individual Sheet Price', 'Single Sheet Surface Area', 'Dynamic Deflection Limit'], rows: [
+    ['CD Formply Structural', '$72.00', '2.88 m²', '4.0 mm'],
+    ['DD Tongue & Groove',    '$51.84', '2.16 m²', '4.5 mm'],
+  ]}]
+}
+
+const ctxB10 = {
+  title: 'Heavy-Duty Structural Anchor Procurement',
+  tables: [{ headers: ['Carbon Steel Anchor Class', 'Box Purchase Price', 'Anchor Quantity per Box', 'Tested Safe Tensile Capacity'], rows: [
+    ['Anchor Class M10', '$96',  '24 anchors', '3,600 kg'],
+    ['Anchor Class M12', '$140', '28 anchors', '4,900 kg'],
+    ['Anchor Class M16', '$180', '20 anchors', '6,200 kg'],
+  ]}]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -2135,6 +2198,133 @@ const questions = [
     answer: 'SL62 Mesh'
   },
 
+  // BQ — Cladding promo cost for 4 m | which statement is false
+  {
+    group: 'BQ', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB4,
+    question: 'How much will a landscaper pay if they purchase exactly 4 linear metres of Premium Composite decking at DuraPlank Express?',
+    options: ['$108.00', '$114.00', '$126.00', '$144.00'],
+    answer: '$108.00'
+  },
+  {
+    group: 'BQ', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB4,
+    question: 'Consider each of the following statements about the two composite decking offers. Which statement is false?',
+    options: [
+      'Purchasing 1 single metre of decking is cheaper at EcoDeck Warehouse than at DuraPlank Express',
+      'Purchasing exactly 8 metres of decking costs identical amounts at both suppliers',
+      'The standard baseline retail price per metre before any discount is identical at both stores',
+      'Buying 12 metres of decking at DuraPlank Express costs a total of $324.00',
+    ],
+    answer: 'Purchasing exactly 8 metres of decking costs identical amounts at both suppliers'
+  },
+
+  // BR — Acoustic insulation coverage cost difference | best NRC per dollar
+  {
+    group: 'BR', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB5,
+    question: 'An installer requires enough material to cover a 120 m² office partition zone. What is the exact difference in total material cost between buying the necessary packs of Glasswool Partition versus High-Density Rockwool?',
+    options: ['$640', '$710', '$860', '$900'],
+    answer: '$860'
+  },
+  {
+    group: 'BR', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB5,
+    question: 'Which acoustic insulation layer provides the highest proportion of sound performance efficiency relative to its raw material cost per square metre (highest NRC value achieved per dollar spent on 1 m²)?',
+    options: ['Glasswool Partition', 'High-Density Rockwool', 'Recycled Polyester', 'SoundLag Foam Sheet'],
+    answer: 'Glasswool Partition'
+  },
+
+  // BS — Combined palette weight | best volume per kg
+  {
+    group: 'BS', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB6,
+    question: 'A builder loads a trailer with exactly one full standard palette of Standard Besser Blocks and one full standard palette of Jumbo Engineered blocks. What is the total combined material weight?',
+    options: ['1,920 kg', '2,220 kg', '2,450 kg', '2,680 kg'],
+    answer: '2,220 kg'
+  },
+  {
+    group: 'BS', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB6,
+    question: 'Which block variety exhibits the highest structural volume capacity relative to its individual unit dead-weight mass (highest cubic metres of volume per kilogram of block weight)?',
+    options: ['Interlocking Capping', 'Standard Besser Block', 'Split-Face Retaining', 'Jumbo Engineered'],
+    answer: 'Standard Besser Block'
+  },
+
+  // BT — 5-window cost at Apex | which statement is true
+  {
+    group: 'BT', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB7,
+    question: 'How much must a developer pay during this trade campaign to secure exactly 5 window frames from Apex Fenestration?',
+    options: ['$2,400', '$2,550', '$2,700', '$3,000'],
+    answer: '$2,700'
+  },
+  {
+    group: 'BT', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB7,
+    question: 'Evaluate the total cost profiles of the window packages. Which of the following statements is true?',
+    options: [
+      'Buying 3 windows is cheaper at Apex Fenestration than at Matrix Glazing Systems',
+      'Buying 5 windows is cheaper at Apex Fenestration than at Matrix Glazing Systems',
+      'The standard baseline list unit price is identical across both joinery manufacturers',
+      'Matrix Glazing Systems offers a flat 20% discount off their standard list price',
+    ],
+    answer: 'The standard baseline list unit price is identical across both joinery manufacturers'
+  },
+
+  // BU — 5-day sandblasted paving value | best speed efficiency per dollar
+  {
+    group: 'BU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB8,
+    question: 'A municipal paving crew completes 5 consecutive working days using the Sandblasted Textured finish at their standard daily laying target speed. What is the total material value of the pavers laid over this timeframe?',
+    options: ['$11,500', '$14,000', '$16,200', '$18,500'],
+    answer: '$14,000'
+  },
+  {
+    group: 'BU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB8,
+    question: 'Which granite paving finish achieves the highest proportion of speed efficiency relative to its material cost (highest square metres laid per day per dollar of procurement cost for 1 m²)?',
+    options: ['Exfoliated Stone', 'Honed Smooth Slab', 'Sandblasted Textured', 'Bush-Hammered Grip'],
+    answer: 'Exfoliated Stone'
+  },
+
+  // BV — DD T&G sheet count and cost | unit cost per m² comparison
+  {
+    group: 'BV', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB9,
+    question: 'A framing team must cover a residential upper floor structure measuring exactly 108 square metres using the DD Tongue & Groove sheets. What is the total material cost of the sheets required?',
+    options: ['$2,160.00', '$2,420.50', '$2,592.00', '$2,850.00'],
+    answer: '$2,592.00'
+  },
+  {
+    group: 'BV', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB9,
+    question: 'When breaking down the sheet pricing to a standardised unit value per square metre ($/m²), how do the two plywood selections compare?',
+    options: [
+      'CD Formply is cheaper by $1.00 per square metre',
+      'DD Tongue & Groove is cheaper by $1.00 per square metre',
+      'Both items have a completely identical unit cost of $25.00 per square metre',
+      'Both items have a completely identical unit cost of $24.00 per square metre',
+    ],
+    answer: 'DD Tongue & Groove is cheaper by $1.00 per square metre'
+  },
+
+  // BW — Total anchor count | best tensile kg per dollar
+  {
+    group: 'BW', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB10,
+    question: 'A hardware procurement agent buys a bundle consisting of exactly 3 boxes of Anchor Class M10 and 2 boxes of Anchor Class M16. What is the combined total number of individual structural anchors purchased?',
+    options: ['94 anchors', '102 anchors', '112 anchors', '124 anchors'],
+    answer: '94 anchors'
+  },
+  {
+    group: 'BW', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB10,
+    question: 'Which anchor product class gives you the highest total safe mechanical performance capacity relative to your upfront investment (highest individual anchor tensile kilograms per single dollar spent on that anchor)?',
+    options: ['Anchor Class M10', 'Anchor Class M12', 'Anchor Class M16', 'Class M10 and Class M12 are completely tied'],
+    answer: 'Anchor Class M12'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2155,6 +2345,8 @@ const units = {
   BD: ['min', 'min'], BE: ['min', 'min'], BF: ['min', 'min'], BG: ['min', 'min'], BH: ['min', 'min'],
   BI: ['mL', null], BJ: ['L', 'barrels'], BK: ['L', 'min'], BL: ['mL', 'mL'], BM: ['L', 'min'],
   BN: [null, null], BO: [null, null], BP: [null, null],
+  BQ: [null, null], BR: [null, null], BS: [null, null], BT: [null, null], BU: [null, null],
+  BV: [null, null], BW: [null, null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -2430,6 +2622,34 @@ const methods = {
   BP: [
     `4 sheets SL72 × $110 = $440\n2 sheets SL92 × $190 = $380\nTotal: $440 + $380 = $820`,
     `Calculate strength (MPa) per dollar for each grade:\n\n  SL62: 500 MPa ÷ $80  = 6.25 MPa/$  ← highest\n  SL72: 500 MPa ÷ $110 = 4.55 MPa/$\n  SL82: 550 MPa ÷ $145 = 3.79 MPa/$\n  SL92: 600 MPa ÷ $190 = 3.16 MPa/$\n\nSL62 delivers the most MPa per dollar spent.`,
+  ],
+  BQ: [
+    `'Buy 3 get the 4th free' means 4 metres costs the same as 3 metres:\n  3 × $36.00 = $108.00`,
+    `DuraPlank 8 m ('buy 3 get 4th free' applies twice → pay for 6 m):\n  6 × $36.00 = $216.00\n\nEcoDeck 8 m:\n  8 × $28.50 = $228.00\n\n$216.00 ≠ $228.00 → the costs are NOT identical → Statement B is false.\n\nChecking the others:\n  A: 1 m at EcoDeck ($28.50) < 1 m at DuraPlank ($36.00) → True\n  C: EcoDeck RRP = $28.50 + $7.50 = $36.00 = DuraPlank → True\n  D: DuraPlank 12 m → pay for 9 m: 9 × $36.00 = $324.00 → True`,
+  ],
+  BR: [
+    `Glasswool packs needed: 120 m² ÷ 15 m²/pack = 8 packs\n  Cost: 8 × $65 = $520\n\nRockwool packs needed: 120 m² ÷ 10 m²/pack = 12 packs\n  Cost: 12 × $115 = $1,380\n\nDifference: $1,380 − $520 = $860`,
+    `Cost per m² for each option:\n  Glasswool:   $65 ÷ 15 m² = $4.33/m²  →  NRC per $ = 0.70 ÷ 4.33 = 0.161  ← highest\n  Rockwool:    $115 ÷ 10 m² = $11.50/m² →  NRC per $ = 0.90 ÷ 11.50 = 0.078\n  Polyester:   $85 ÷ 12 m² = $7.08/m²  →  NRC per $ = 0.75 ÷ 7.08 = 0.106\n  Foam Sheet:  $160 ÷ 8 m² = $20.00/m² →  NRC per $ = 0.85 ÷ 20.00 = 0.042\n\nGlasswool Partition has the highest NRC per dollar.`,
+  ],
+  BS: [
+    `Standard Besser Block: 75 blocks × 16 kg = 1,200 kg\nJumbo Engineered:      30 blocks × 34 kg = 1,020 kg\n\nTotal combined weight: 1,200 + 1,020 = 2,220 kg`,
+    `Volume (m³) per kg for each block type:\n  Interlocking Capping:  0.015 ÷ 14 = 0.001071 m³/kg\n  Standard Besser Block: 0.024 ÷ 16 = 0.001500 m³/kg  ← highest\n  Split-Face Retaining:  0.032 ÷ 22 = 0.001455 m³/kg\n  Jumbo Engineered:      0.050 ÷ 34 = 0.001471 m³/kg`,
+  ],
+  BT: [
+    `4 full-price frames: 4 × $600 = $2,400\n5th frame at half price: $600 ÷ 2 = $300\nTotal for 5 frames: $2,400 + $300 = $2,700`,
+    `Matrix Glazing Systems: SALE $510 per frame, saving $90 from list price.\n  Original list price = $510 + $90 = $600\n  Apex Fenestration list price = $600\n\nBoth suppliers share the identical list unit price of $600.\n\nChecking the others:\n  A: 3 frames — Apex: 3 × $600 = $1,800; Matrix: 3 × $510 = $1,530 → Matrix cheaper → False\n  B: 5 frames — Apex: $2,700; Matrix: 5 × $510 = $2,550 → Matrix cheaper → False\n  D: Matrix discount = $90 ÷ $600 = 15%, not 20% → False`,
+  ],
+  BU: [
+    `Total area laid: 5 days × 20 m²/day = 100 m²\nTotal material value: 100 m² × $140/m² = $14,000`,
+    `Speed efficiency = Daily laying rate ÷ Procurement cost per m²:\n  Exfoliated Stone:     24 ÷ 120 = 0.200 m²/day/$  ← tied highest\n  Honed Smooth Slab:    15 ÷ 165 = 0.091 m²/day/$\n  Sandblasted Textured: 20 ÷ 140 = 0.143 m²/day/$\n  Bush-Hammered Grip:   22 ÷ 110 = 0.200 m²/day/$  ← tied highest\n\nExfoliated Stone and Bush-Hammered Grip tie on the ratio.\nTie-break on absolute output: Exfoliated covers 24 m²/day vs 22 m²/day.`,
+  ],
+  BV: [
+    `Sheets needed: 108 m² ÷ 2.16 m²/sheet = 50 sheets\nTotal cost: 50 × $51.84 = $2,592.00`,
+    `Unit cost per m²:\n  CD Formply Structural: $72.00 ÷ 2.88 m² = $25.00/m²\n  DD Tongue & Groove:    $51.84 ÷ 2.16 m² = $24.00/m²\n\nDD Tongue & Groove is cheaper by $1.00 per square metre.`,
+  ],
+  BW: [
+    `Anchor Class M10: 3 boxes × 24 anchors = 72 anchors\nAnchor Class M16: 2 boxes × 20 anchors = 40 anchors\n\nTotal: 72 + 40 = 94 anchors`,
+    `Cost per single anchor:\n  M10: $96 ÷ 24 = $4.00 per anchor\n  M12: $140 ÷ 28 = $5.00 per anchor\n  M16: $180 ÷ 20 = $9.00 per anchor\n\nTensile kg per dollar:\n  M10: 3,600 ÷ 4.00 = 900 kg/$\n  M12: 4,900 ÷ 5.00 = 980 kg/$  ← highest\n  M16: 6,200 ÷ 9.00 = 688.9 kg/$`,
   ],
 }
 
