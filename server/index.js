@@ -1128,6 +1128,119 @@ const ctxB10 = {
   ]}]
 }
 
+// ── Vehicle finance contexts (scenario + depreciation table pairs) ─────────────
+
+const ctxVF1s = {
+  title: 'Vehicle Finance — Motorcycle',
+  subtitle: 'Ben buys a motorcycle for $12,000. Using the dealership\'s finance plan, his monthly repayments will be $260 and he will repay the loan fully after 5 years.',
+}
+const ctxVF1d = {
+  title: 'Depreciation Table — Motorcycle ($12,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '20%'], ['2', '12%'], ['3', '12%'],
+  ]}]
+}
+
+const ctxVF2s = {
+  title: 'Vehicle Finance — Jet Ski',
+  subtitle: 'Chloe buys a jet ski for $15,500. Under her finance agreement, her monthly payments are $380, and the loan is entirely paid off after 4 years.',
+}
+const ctxVF2d = {
+  title: 'Depreciation Table — Jet Ski ($15,500)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '30%'], ['2', '15%'], ['3', '15%'], ['4', '15%'],
+  ]}]
+}
+
+const ctxVF3s = {
+  title: 'Vehicle Finance — Used Car',
+  subtitle: 'David purchases a used car for $8,400. The finance package sets his monthly repayments at $210 for a total duration of 4 years.',
+}
+const ctxVF3d = {
+  title: 'Depreciation Table — Car ($8,400)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '10%'], ['2', '8%'], ['3', '8%'],
+  ]}]
+}
+
+const ctxVF4s = {
+  title: 'Vehicle Finance — Car (Deposit)',
+  subtitle: 'Fiona buys a car for $24,000. She pays a $4,000 cash deposit upfront and finances the remaining balance. Her monthly repayments are $420 for 5 years to fully clear the loan.',
+}
+const ctxVF4d = {
+  title: 'Depreciation Table — Car ($24,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '22%'], ['2', '14%'], ['3', '14%'], ['4', '14%'],
+  ]}]
+}
+
+const ctxVF5s = {
+  title: 'Vehicle Finance — Commercial Van',
+  subtitle: 'Henry buys a commercial delivery van for $32,000. His finance contract requires a monthly repayment of $680 over a 5-year term.',
+}
+const ctxVF5d = {
+  title: 'Depreciation Table — Delivery Van ($32,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '35%'], ['2', '18%'], ['3', '18%'], ['4', '18%'],
+  ]}]
+}
+
+const ctxVF6s = {
+  title: 'Vehicle Finance — Electric Scooter (Fortnightly)',
+  subtitle: 'Julia buys an electric scooter for $3,500. She finances it through a store plan with fortnightly (every 2 weeks) repayments of $45 over 4 years.',
+  note: 'Assume exactly 26 fortnights in a year.',
+}
+const ctxVF6d = {
+  title: 'Depreciation Table — Electric Scooter ($3,500)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '15%'], ['2', '10%'], ['3', '10%'],
+  ]}]
+}
+
+const ctxVF7s = {
+  title: 'Vehicle Finance — SUV (Balloon Payment)',
+  subtitle: 'Liam buys an SUV for $45,000. His finance deal consists of monthly repayments of $790 for 5 years, plus a final lump-sum \'balloon payment\' of $5,000 at the very end to fully clear the loan.',
+}
+const ctxVF7d = {
+  title: 'Depreciation Table — SUV ($45,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '28%'], ['2', '16.5%'], ['3', '12%'], ['4', '12%'],
+  ]}]
+}
+
+const ctxVF8s = {
+  title: 'Vehicle Finance — Luxury Sedan',
+  subtitle: 'Noah buys a luxury sedan for $62,000. His finance option sets his monthly repayments at $1,150 over 5 years.',
+}
+const ctxVF8d = {
+  title: 'Depreciation Table — Luxury Sedan ($62,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '40%'], ['2', '20%'], ['3', '15%'], ['4', '15%'],
+  ]}]
+}
+
+const ctxVF9s = {
+  title: 'Vehicle Finance — Compact Car',
+  subtitle: 'Paige buys a compact car for $18,000. Her finance plan demands $395 a month for 5 years.',
+}
+const ctxVF9d = {
+  title: 'Depreciation Table — Compact Car ($18,000)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '18%'], ['2', '11.5%'], ['3', '11.5%'], ['4', '11.5%'], ['5', '11.5%'],
+  ]}]
+}
+
+const ctxVF10s = {
+  title: 'Vehicle Finance — Utility Truck (Trade-in)',
+  subtitle: 'Ryan buys a utility truck for $38,500. He receives a $5,500 trade-in credit upfront for his old vehicle. His remaining balance is financed with monthly payments of $690 for 5 years.',
+}
+const ctxVF10d = {
+  title: 'Depreciation Table — Utility Truck ($38,500)',
+  tables: [{ headers: ['Vehicle Age (years)', 'Depreciation Rate (per year)'], rows: [
+    ['1', '24%'], ['2', '15.2%'], ['3', '12%'], ['4', '10%'],
+  ]}]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -2325,6 +2438,206 @@ const questions = [
     answer: 'Anchor Class M12'
   },
 
+  // BX — Motorcycle: total interest | reducing balance 2 months | depreciation 3 years
+  {
+    group: 'BX', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF1s,
+    question: 'How much interest will he have paid in total?',
+    answer: '3600'
+  },
+  {
+    group: 'BX', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Sarah buys the same motorcycle for $12,000 with a loan at an interest rate of 12% per year. The interest is calculated monthly on the amount owed on the loan. If Sarah pays $300 a month on her loan, how much will she still owe after 2 months?\n(Note: Interest is calculated at the end of each month)',
+    answer: '11638.20'
+  },
+  {
+    group: 'BX', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF1d,
+    question: 'If the price of the new motorcycle was $12,000, how much would the motorcycle be worth after 3 years?',
+    answer: '7434.24'
+  },
+
+  // BY — Jet ski: total interest | reducing balance 2 months | depreciation 4 years
+  {
+    group: 'BY', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF2s,
+    question: 'How much interest will she have paid in total?',
+    answer: '2740'
+  },
+  {
+    group: 'BY', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Marcus buys the same jet ski for $15,500 using a loan at a rate of 6% per year. The interest is calculated monthly on the amount owed on the loan. If Marcus pays $500 a month on his loan, how much will he still owe after 2 months?',
+    answer: '14652.89'
+  },
+  {
+    group: 'BY', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF2d,
+    question: 'If the price of the new jet ski was $15,500, how much would it be worth after 4 years?',
+    answer: '6663.26'
+  },
+
+  // BZ — Used car: total interest | reducing balance 3 months | depreciation 3 years
+  {
+    group: 'BZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF3s,
+    question: 'How much total interest will David pay?',
+    answer: '1680'
+  },
+  {
+    group: 'BZ', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Elena buys the exact same car for $8,400 with a loan at a rate of 9% per year. The interest is calculated monthly on the amount owed on the loan. If she pays $250 a month on her loan, how much will she still owe after 3 months?',
+    answer: '7834.78'
+  },
+  {
+    group: 'BZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF3d,
+    question: 'If the initial price of the car was $8,400, how much would the car be worth after 3 years?',
+    answer: '6398.78'
+  },
+
+  // CA — Car with deposit: total interest | reducing balance 3 months | depreciation 4 years
+  {
+    group: 'CA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF4s,
+    question: 'How much total interest will Fiona have paid over the 5 years?',
+    answer: '5200'
+  },
+  {
+    group: 'CA', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'George buys the same car for $24,000. He also pays a $4,000 deposit upfront, but loans the remaining balance at a rate of 4.8% per year. The interest is calculated monthly on the amount owed. If George repays $450 a month, how much will he owe after 3 months?',
+    answer: '18885.55'
+  },
+  {
+    group: 'CA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF4d,
+    question: 'If the original price of the new car was $24,000, how much would the car be worth after 4 years?',
+    answer: '11906.97'
+  },
+
+  // CB — Delivery van: total interest | reducing balance 3 months | depreciation 4 years
+  {
+    group: 'CB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF5s,
+    question: 'What is the total interest Henry pays on this finance option?',
+    answer: '8800'
+  },
+  {
+    group: 'CB', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Ian buys the same van for $32,000 with a loan at a rate of 6% per year. The interest is calculated monthly on the amount owed on the loan. If Ian makes monthly payments of $800, how much does he still owe at the end of 3 months?',
+    answer: '30070.38'
+  },
+  {
+    group: 'CB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF5d,
+    question: 'If the price of the new van was $32,000, how much would it be worth after 4 years?',
+    answer: '11468.45'
+  },
+
+  // CC — Electric scooter (fortnightly): total interest | reducing balance 2 months | depreciation 3 years
+  {
+    group: 'CC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF6s,
+    question: 'How much interest will Julia pay over the 4 years?',
+    answer: '1180'
+  },
+  {
+    group: 'CC', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Kevin buys the same scooter for $3,500 with a loan at a rate of 12% per year. The interest is calculated monthly on the amount owed on the loan. If Kevin repays $150 at the end of each month, what is his remaining balance after 2 months?',
+    answer: '3268.85'
+  },
+  {
+    group: 'CC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF6d,
+    question: 'If the price of the new scooter was $3,500, how much would it be worth after 3 years?',
+    answer: '2409.75'
+  },
+
+  // CD — SUV with balloon payment: total interest | reducing balance 3 months | depreciation 4 years
+  {
+    group: 'CD', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF7s,
+    question: 'What is the total interest Liam will have paid by the end of the 5 years?',
+    answer: '7400'
+  },
+  {
+    group: 'CD', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Mia buys the same SUV for $45,000 with a loan at a rate of 7.2% per year. The interest is calculated monthly on the amount owed. If she pays $1,200 a month on her loan, how much will she still owe after 3 months?',
+    answer: '42193.23'
+  },
+  {
+    group: 'CD', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF7d,
+    question: 'If the price of the new SUV was $45,000, how much would it be worth after 4 years?',
+    answer: '20950.62'
+  },
+
+  // CE — Luxury sedan: total interest | reducing balance 3 months | depreciation 4 years
+  {
+    group: 'CE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF8s,
+    question: 'Calculate the total interest paid by Noah over the life of the loan.',
+    answer: '7000'
+  },
+  {
+    group: 'CE', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Olivia buys the same luxury sedan for $62,000 with a loan at a rate of 9.6% per year. The interest is calculated monthly on the amount owed. If she makes a monthly payment of $2,500, what is the remaining amount owed after 3 months?',
+    answer: '55939.78'
+  },
+  {
+    group: 'CE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF8d,
+    question: 'If the price of the new sedan was $62,000, how much would it be worth after 4 years?',
+    answer: '21501.60'
+  },
+
+  // CF — Compact car (variable rate): total interest | reducing balance 3 months | depreciation 5 years
+  {
+    group: 'CF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF9s,
+    question: 'What is the total interest paid by Paige?',
+    answer: '5700'
+  },
+  {
+    group: 'CF', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Quentin buys the same car for $18,000. His loan tracks a variable interest rate calculated monthly on the balance owed. For the first 2 months, the rate is 6% per year, but at the start of the 3rd month, the rate increases to 9% per year. If Quentin pays $500 a month on his loan, how much will he still owe after 3 months?',
+    answer: '16806.78'
+  },
+  {
+    group: 'CF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF9d,
+    question: 'If the price of the new car was $18,000, how much would the car be worth after 5 years?',
+    answer: '9054.40'
+  },
+
+  // CG — Utility truck with trade-in: total interest | reducing balance 3 months | depreciation 4 years
+  {
+    group: 'CG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF10s,
+    question: 'How much interest will Ryan pay in total?',
+    answer: '8400'
+  },
+  {
+    group: 'CG', type: 'number_input', category: 'Retail and Finance',
+    context: null,
+    question: 'Sophia buys the same truck for $38,500 and also uses a $5,500 trade-in credit. She secures a loan for the remainder at a rate of 8.4% per year. The interest is calculated monthly on the amount owed on the loan. If Sophia pays $1,000 a month on her loan, how much does she still owe after 3 months?',
+    answer: '30676.81'
+  },
+  {
+    group: 'CG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxVF10d,
+    question: 'If the price of the new truck was $38,500, how much would the truck be worth after 4 years?',
+    answer: '19651.48'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2347,6 +2660,9 @@ const units = {
   BN: [null, null], BO: [null, null], BP: [null, null],
   BQ: [null, null], BR: [null, null], BS: [null, null], BT: [null, null], BU: [null, null],
   BV: [null, null], BW: [null, null],
+  BX: ['$', '$', '$'], BY: ['$', '$', '$'], BZ: ['$', '$', '$'],
+  CA: ['$', '$', '$'], CB: ['$', '$', '$'], CC: ['$', '$', '$'],
+  CD: ['$', '$', '$'], CE: ['$', '$', '$'], CF: ['$', '$', '$'], CG: ['$', '$', '$'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -2650,6 +2966,56 @@ const methods = {
   BW: [
     `Anchor Class M10: 3 boxes × 24 anchors = 72 anchors\nAnchor Class M16: 2 boxes × 20 anchors = 40 anchors\n\nTotal: 72 + 40 = 94 anchors`,
     `Cost per single anchor:\n  M10: $96 ÷ 24 = $4.00 per anchor\n  M12: $140 ÷ 28 = $5.00 per anchor\n  M16: $180 ÷ 20 = $9.00 per anchor\n\nTensile kg per dollar:\n  M10: 3,600 ÷ 4.00 = 900 kg/$\n  M12: 4,900 ÷ 5.00 = 980 kg/$  ← highest\n  M16: 6,200 ÷ 9.00 = 688.9 kg/$`,
+  ],
+  BX: [
+    `Total repaid = $260/month × 60 months = $15,600\nTotal interest = $15,600 − $12,000 = $3,600`,
+    `Monthly interest rate = 12% ÷ 12 = 1% = 0.01\n\nMonth 1:\n  Interest = $12,000.00 × 0.01 = $120.00\n  Balance  = $12,000.00 + $120.00 − $300.00 = $11,820.00\n\nMonth 2:\n  Interest = $11,820.00 × 0.01 = $118.20\n  Balance  = $11,820.00 + $118.20 − $300.00 = $11,638.20`,
+    `Year 1: $12,000.00 × (1 − 20%) = $12,000.00 × 0.80 = $9,600.00\nYear 2: $9,600.00  × (1 − 12%) = $9,600.00 × 0.88  = $8,448.00\nYear 3: $8,448.00  × (1 − 12%) = $8,448.00 × 0.88  = $7,434.24`,
+  ],
+  BY: [
+    `Total repaid = $380/month × 48 months = $18,240\nTotal interest = $18,240 − $15,500 = $2,740`,
+    `Monthly interest rate = 6% ÷ 12 = 0.5% = 0.005\n\nMonth 1:\n  Interest = $15,500.00 × 0.005 = $77.50\n  Balance  = $15,500.00 + $77.50 − $500.00 = $15,077.50\n\nMonth 2:\n  Interest = $15,077.50 × 0.005 = $75.39\n  Balance  = $15,077.50 + $75.39 − $500.00 = $14,652.89`,
+    `Year 1: $15,500.00 × (1 − 30%) = $15,500.00 × 0.70 = $10,850.00\nYear 2: $10,850.00 × (1 − 15%) = $10,850.00 × 0.85 = $9,222.50\nYear 3: $9,222.50  × (1 − 15%) = $9,222.50 × 0.85  = $7,839.13\nYear 4: $7,839.13  × (1 − 15%) = $7,839.13 × 0.85  = $6,663.26`,
+  ],
+  BZ: [
+    `Total repaid = $210/month × 48 months = $10,080\nTotal interest = $10,080 − $8,400 = $1,680`,
+    `Monthly interest rate = 9% ÷ 12 = 0.75% = 0.0075\n\nMonth 1:\n  Interest = $8,400.00 × 0.0075 = $63.00\n  Balance  = $8,400.00 + $63.00 − $250.00 = $8,213.00\n\nMonth 2:\n  Interest = $8,213.00 × 0.0075 = $61.60\n  Balance  = $8,213.00 + $61.60 − $250.00 = $8,024.60\n\nMonth 3:\n  Interest = $8,024.60 × 0.0075 = $60.18\n  Balance  = $8,024.60 + $60.18 − $250.00 = $7,834.78`,
+    `Year 1: $8,400.00 × (1 − 10%) = $8,400.00 × 0.90 = $7,560.00\nYear 2: $7,560.00 × (1 − 8%)  = $7,560.00 × 0.92 = $6,955.20\nYear 3: $6,955.20 × (1 − 8%)  = $6,955.20 × 0.92 = $6,398.78`,
+  ],
+  CA: [
+    `Financed amount = $24,000 − $4,000 deposit = $20,000\nTotal repaid = $420/month × 60 months = $25,200\nTotal interest = $25,200 − $20,000 = $5,200`,
+    `Loan = $24,000 − $4,000 deposit = $20,000\nMonthly interest rate = 4.8% ÷ 12 = 0.4% = 0.004\n\nMonth 1:\n  Interest = $20,000.00 × 0.004 = $80.00\n  Balance  = $20,000.00 + $80.00 − $450.00 = $19,630.00\n\nMonth 2:\n  Interest = $19,630.00 × 0.004 = $78.52\n  Balance  = $19,630.00 + $78.52 − $450.00 = $19,258.52\n\nMonth 3:\n  Interest = $19,258.52 × 0.004 = $77.03\n  Balance  = $19,258.52 + $77.03 − $450.00 = $18,885.55`,
+    `Year 1: $24,000.00 × (1 − 22%) = $24,000.00 × 0.78 = $18,720.00\nYear 2: $18,720.00 × (1 − 14%) = $18,720.00 × 0.86 = $16,099.20\nYear 3: $16,099.20 × (1 − 14%) = $16,099.20 × 0.86 = $13,845.31\nYear 4: $13,845.31 × (1 − 14%) = $13,845.31 × 0.86 = $11,906.97`,
+  ],
+  CB: [
+    `Total repaid = $680/month × 60 months = $40,800\nTotal interest = $40,800 − $32,000 = $8,800`,
+    `Monthly interest rate = 6% ÷ 12 = 0.5% = 0.005\n\nMonth 1:\n  Interest = $32,000.00 × 0.005 = $160.00\n  Balance  = $32,000.00 + $160.00 − $800.00 = $31,360.00\n\nMonth 2:\n  Interest = $31,360.00 × 0.005 = $156.80\n  Balance  = $31,360.00 + $156.80 − $800.00 = $30,716.80\n\nMonth 3:\n  Interest = $30,716.80 × 0.005 = $153.58\n  Balance  = $30,716.80 + $153.58 − $800.00 = $30,070.38`,
+    `Year 1: $32,000.00 × (1 − 35%) = $32,000.00 × 0.65 = $20,800.00\nYear 2: $20,800.00 × (1 − 18%) = $20,800.00 × 0.82 = $17,056.00\nYear 3: $17,056.00 × (1 − 18%) = $17,056.00 × 0.82 = $13,985.92\nYear 4: $13,985.92 × (1 − 18%) = $13,985.92 × 0.82 = $11,468.45`,
+  ],
+  CC: [
+    `Total fortnights = 26 per year × 4 years = 104 fortnights\nTotal repaid = $45 × 104 = $4,680\nTotal interest = $4,680 − $3,500 = $1,180`,
+    `Monthly interest rate = 12% ÷ 12 = 1% = 0.01\n\nMonth 1:\n  Interest = $3,500.00 × 0.01 = $35.00\n  Balance  = $3,500.00 + $35.00 − $150.00 = $3,385.00\n\nMonth 2:\n  Interest = $3,385.00 × 0.01 = $33.85\n  Balance  = $3,385.00 + $33.85 − $150.00 = $3,268.85`,
+    `Year 1: $3,500.00 × (1 − 15%) = $3,500.00 × 0.85 = $2,975.00\nYear 2: $2,975.00 × (1 − 10%) = $2,975.00 × 0.90 = $2,677.50\nYear 3: $2,677.50 × (1 − 10%) = $2,677.50 × 0.90 = $2,409.75`,
+  ],
+  CD: [
+    `Total monthly repayments = $790 × 60 months = $47,400\nPlus balloon payment = + $5,000\nTotal repaid = $52,400\nTotal interest = $52,400 − $45,000 = $7,400`,
+    `Monthly interest rate = 7.2% ÷ 12 = 0.6% = 0.006\n\nMonth 1:\n  Interest = $45,000.00 × 0.006 = $270.00\n  Balance  = $45,000.00 + $270.00 − $1,200.00 = $44,070.00\n\nMonth 2:\n  Interest = $44,070.00 × 0.006 = $264.42\n  Balance  = $44,070.00 + $264.42 − $1,200.00 = $43,134.42\n\nMonth 3:\n  Interest = $43,134.42 × 0.006 = $258.81\n  Balance  = $43,134.42 + $258.81 − $1,200.00 = $42,193.23`,
+    `Year 1: $45,000.00 × (1 − 28.0%) = $45,000.00 × 0.720 = $32,400.00\nYear 2: $32,400.00 × (1 − 16.5%) = $32,400.00 × 0.835 = $27,054.00\nYear 3: $27,054.00 × (1 − 12.0%) = $27,054.00 × 0.880 = $23,807.52\nYear 4: $23,807.52 × (1 − 12.0%) = $23,807.52 × 0.880 = $20,950.62`,
+  ],
+  CE: [
+    `Total repaid = $1,150/month × 60 months = $69,000\nTotal interest = $69,000 − $62,000 = $7,000`,
+    `Monthly interest rate = 9.6% ÷ 12 = 0.8% = 0.008\n\nMonth 1:\n  Interest = $62,000.00 × 0.008 = $496.00\n  Balance  = $62,000.00 + $496.00 − $2,500.00 = $59,996.00\n\nMonth 2:\n  Interest = $59,996.00 × 0.008 = $479.97\n  Balance  = $59,996.00 + $479.97 − $2,500.00 = $57,975.97\n\nMonth 3:\n  Interest = $57,975.97 × 0.008 = $463.81\n  Balance  = $57,975.97 + $463.81 − $2,500.00 = $55,939.78`,
+    `Year 1: $62,000.00 × (1 − 40%) = $62,000.00 × 0.60 = $37,200.00\nYear 2: $37,200.00 × (1 − 20%) = $37,200.00 × 0.80 = $29,760.00\nYear 3: $29,760.00 × (1 − 15%) = $29,760.00 × 0.85 = $25,296.00\nYear 4: $25,296.00 × (1 − 15%) = $25,296.00 × 0.85 = $21,501.60`,
+  ],
+  CF: [
+    `Total repaid = $395/month × 60 months = $23,700\nTotal interest = $23,700 − $18,000 = $5,700`,
+    `Months 1–2: rate = 6% ÷ 12 = 0.5% = 0.005\nMonth 3+:   rate = 9% ÷ 12 = 0.75% = 0.0075\n\nMonth 1 (0.5%):\n  Interest = $18,000.00 × 0.005 = $90.00\n  Balance  = $18,000.00 + $90.00 − $500.00 = $17,590.00\n\nMonth 2 (0.5%):\n  Interest = $17,590.00 × 0.005 = $87.95\n  Balance  = $17,590.00 + $87.95 − $500.00 = $17,177.95\n\nMonth 3 (0.75% — new rate):\n  Interest = $17,177.95 × 0.0075 = $128.83\n  Balance  = $17,177.95 + $128.83 − $500.00 = $16,806.78`,
+    `Year 1: $18,000.00 × (1 − 18.0%) = $18,000.00 × 0.820 = $14,760.00\nYear 2: $14,760.00 × (1 − 11.5%) = $14,760.00 × 0.885 = $13,062.60\nYear 3: $13,062.60 × (1 − 11.5%) = $13,062.60 × 0.885 = $11,560.40\nYear 4: $11,560.40 × (1 − 11.5%) = $11,560.40 × 0.885 = $10,230.95\nYear 5: $10,230.95 × (1 − 11.5%) = $10,230.95 × 0.885 = $9,054.40`,
+  ],
+  CG: [
+    `Financed amount = $38,500 − $5,500 trade-in = $33,000\nTotal repaid = $690/month × 60 months = $41,400\nTotal interest = $41,400 − $33,000 = $8,400`,
+    `Loan = $38,500 − $5,500 trade-in = $33,000\nMonthly interest rate = 8.4% ÷ 12 = 0.7% = 0.007\n\nMonth 1:\n  Interest = $33,000.00 × 0.007 = $231.00\n  Balance  = $33,000.00 + $231.00 − $1,000.00 = $32,231.00\n\nMonth 2:\n  Interest = $32,231.00 × 0.007 = $225.62\n  Balance  = $32,231.00 + $225.62 − $1,000.00 = $31,456.62\n\nMonth 3:\n  Interest = $31,456.62 × 0.007 = $220.20\n  Balance  = $31,456.62 + $220.20 − $1,000.00 = $30,676.82\n\n(Exact unrounded answer: $30,676.81)`,
+    `Year 1: $38,500.00 × (1 − 24.0%) = $38,500.00 × 0.760 = $29,260.00\nYear 2: $29,260.00 × (1 − 15.2%) = $29,260.00 × 0.848 = $24,812.48\nYear 3: $24,812.48 × (1 − 12.0%) = $24,812.48 × 0.880 = $21,834.98\nYear 4: $21,834.98 × (1 − 10.0%) = $21,834.98 × 0.900 = $19,651.48`,
   ],
 }
 
