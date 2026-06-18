@@ -604,7 +604,7 @@ const questions = [
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
-    question: 'Calculate the total number of paid weekday hours Sarah worked.\n(Enter the number only — e.g. 40.25)',
+    question: 'Calculate the total number of paid weekday hours Sarah worked.',
     answer: '40.25'
   },
   {
@@ -619,7 +619,7 @@ const questions = [
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
-    question: 'Calculate the total number of paid hours Marcus worked across the full week.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Marcus worked across the full week.',
     answer: '43.25'
   },
   {
@@ -634,7 +634,7 @@ const questions = [
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
-    question: 'Calculate the total number of paid hours Anika worked across all her shifts this week.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Anika worked across all her shifts this week.',
     answer: '31'
   },
   {
@@ -649,7 +649,7 @@ const questions = [
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
-    question: 'Calculate the total number of paid hours Daniel worked across the full week, including weekend shifts.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Daniel worked across the full week, including weekend shifts.',
     answer: '40.25'
   },
   {
@@ -664,7 +664,7 @@ const questions = [
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
-    question: 'Calculate the total number of paid hours Lena worked across all her weekday shifts.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Lena worked across all her weekday shifts.',
     answer: '34.75'
   },
   {
@@ -679,7 +679,7 @@ const questions = [
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
-    question: 'Calculate the total number of paid hours Omar worked across the full week.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Omar worked across the full week.',
     answer: '43.75'
   },
   {
@@ -694,7 +694,7 @@ const questions = [
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
-    question: 'Calculate the total number of paid weekday hours Claire worked.\n(Enter the number only)',
+    question: 'Calculate the total number of paid weekday hours Claire worked.',
     answer: '32.25'
   },
   {
@@ -709,7 +709,7 @@ const questions = [
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
-    question: 'Calculate the total number of paid weekday hours Ben worked.\n(Enter the number only)',
+    question: 'Calculate the total number of paid weekday hours Ben worked.',
     answer: '40.25'
   },
   {
@@ -724,7 +724,7 @@ const questions = [
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
-    question: 'Calculate the total number of paid hours Nina worked across the full week.\n(Enter the number only)',
+    question: 'Calculate the total number of paid hours Nina worked across the full week.',
     answer: '40.25'
   },
   {
@@ -739,7 +739,7 @@ const questions = [
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
-    question: 'Calculate the total number of paid weekday hours Adrian worked.\n(Enter the number only)',
+    question: 'Calculate the total number of paid weekday hours Adrian worked.',
     answer: '33.25'
   },
   {
@@ -760,7 +760,7 @@ const questions = [
   {
     group: 'K', type: 'number_input', category: 'Number and Algebra',
     context: ctxK1,
-    question: 'After how many complete years would the Ford Ranger\'s annual fuel savings cover its full purchase price?\n(Enter the number of years only)',
+    question: 'After how many complete years would the Ford Ranger\'s annual fuel savings cover its full purchase price?',
     answer: '17'
   },
 
@@ -775,7 +775,7 @@ const questions = [
   {
     group: 'L', type: 'number_input', category: 'Number and Algebra',
     context: ctxK2,
-    question: 'After how many complete years would the Mazda BT-50\'s annual fuel savings cover its full purchase price?\n(Enter the number of years only)',
+    question: 'After how many complete years would the Mazda BT-50\'s annual fuel savings cover its full purchase price?',
     answer: '21'
   },
 
@@ -805,7 +805,7 @@ const questions = [
   {
     group: 'N', type: 'number_input', category: 'Number and Algebra',
     context: ctxK4,
-    question: 'After how many complete years would the Ford Ranger Raptor\'s annual fuel savings cover its full purchase price?\n(Enter the number of years only)',
+    question: 'After how many complete years would the Ford Ranger Raptor\'s annual fuel savings cover its full purchase price?',
     answer: '16'
   },
 
@@ -835,7 +835,7 @@ const questions = [
   {
     group: 'P', type: 'number_input', category: 'Number and Algebra',
     context: ctxK6,
-    question: 'After how many complete years would the Iveco Daily\'s annual fuel savings cover its full purchase price?\n(Enter the number of years only)',
+    question: 'After how many complete years would the Iveco Daily\'s annual fuel savings cover its full purchase price?',
     answer: '14'
   },
 
@@ -865,7 +865,7 @@ const questions = [
   {
     group: 'R', type: 'number_input', category: 'Number and Algebra',
     context: ctxK8,
-    question: 'After how many complete years would the Kia Sorento\'s annual fuel savings cover its full purchase price?\n(Enter the number of years only)',
+    question: 'After how many complete years would the Kia Sorento\'s annual fuel savings cover its full purchase price?',
     answer: '17'
   },
 
@@ -904,13 +904,13 @@ const questions = [
   {
     group: 'U', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxU,
-    question: 'Calculate the total internal volume of the tank in m³.\n(Enter the number only — e.g. 36)',
+    question: 'Calculate the total internal volume of the tank in m³.',
     answer: '36'
   },
   {
     group: 'U', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxU,
-    question: 'Using your answer to Question A as the total tank volume, how many liters does the tank hold when filled to 3/4 of its total capacity?\n(Enter the number only)',
+    question: 'Using your answer to Question A as the total tank volume, how many liters does the tank hold when filled to 3/4 of its total capacity?',
     answer: '27000'
   },
 
@@ -919,13 +919,13 @@ const questions = [
   {
     group: 'V', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxV,
-    question: 'What is the total combined internal volume of both chambers in m³?\n(Enter the number only)',
+    question: 'What is the total combined internal volume of both chambers in m³?',
     answer: '90'
   },
   {
     group: 'V', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxV,
-    question: 'Using the combined volume from Question A, how many liters does the basin hold when operating at 4/5 of its full capacity?\n(Enter the number only)',
+    question: 'Using the combined volume from Question A, how many liters does the basin hold when operating at 4/5 of its full capacity?',
     answer: '72000'
   },
 
@@ -934,13 +934,13 @@ const questions = [
   {
     group: 'W', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxW,
-    question: 'After deducting the 0.5m wall and floor/ceiling thickness from all six faces, what is the total usable internal volume of the vault in m³?\n(Enter the number only)',
+    question: 'After deducting the 0.5m wall and floor/ceiling thickness from all six faces, what is the total usable internal volume of the vault in m³?',
     answer: '22.5'
   },
   {
     group: 'W', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxW,
-    question: 'Using the internal volume from Question A, how many liters does the vault hold when filled to 3/5 of its operational capacity?\n(Enter the number only)',
+    question: 'Using the internal volume from Question A, how many liters does the vault hold when filled to 3/5 of its operational capacity?',
     answer: '13500'
   },
 
@@ -949,13 +949,13 @@ const questions = [
   {
     group: 'X', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxX,
-    question: 'Calculate the total floor area of the courtyard in m².\n(Enter the number only)',
+    question: 'Calculate the total floor area of the courtyard in m².',
     answer: '180'
   },
   {
     group: 'X', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxX,
-    question: 'Using the floor area from Question A, what is the minimum number of 600mm x 600mm tiles required to cover the entire surface?\n(Enter the number only)',
+    question: 'Using the floor area from Question A, what is the minimum number of 600mm x 600mm tiles required to cover the entire surface?',
     answer: '500'
   },
 
@@ -964,13 +964,13 @@ const questions = [
   {
     group: 'Y', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxY,
-    question: 'What is the total combined surface area of the L-shaped terrace in m²?\n(Enter the number only)',
+    question: 'What is the total combined surface area of the L-shaped terrace in m²?',
     answer: '62'
   },
   {
     group: 'Y', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxY,
-    question: 'Using the total area from Question A, what is the minimum number of 1.2m x 0.4m decking boards required to cover the entire terrace?\n(Enter the number only)',
+    question: 'Using the total area from Question A, what is the minimum number of 1.2m x 0.4m decking boards required to cover the entire terrace?',
     answer: '130'
   },
 
@@ -979,13 +979,13 @@ const questions = [
   {
     group: 'Z', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxZ,
-    question: 'What is the total combined base area of both garden sections in m²?\n(Enter the number only)',
+    question: 'What is the total combined base area of both garden sections in m²?',
     answer: '108.8'
   },
   {
     group: 'Z', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxZ,
-    question: 'Using the total base area from Question A, what is the minimum number of 400mm x 400mm rubber pavers required to cover both sections completely?\n(Enter the number only)',
+    question: 'Using the total base area from Question A, what is the minimum number of 400mm x 400mm rubber pavers required to cover both sections completely?',
     answer: '680'
   },
 
@@ -994,13 +994,13 @@ const questions = [
   {
     group: 'AA', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAA,
-    question: 'What is the total outer perimeter of the rectangular garden bed in meters?\n(Enter the number only)',
+    question: 'What is the total outer perimeter of the rectangular garden bed in meters?',
     answer: '46'
   },
   {
     group: 'AA', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAA,
-    question: 'Using the perimeter from Question A, what is the minimum number of 2.4m timber sleepers required to frame the entire boundary?\n(Enter the number only)',
+    question: 'Using the perimeter from Question A, what is the minimum number of 2.4m timber sleepers required to frame the entire boundary?',
     answer: '20'
   },
 
@@ -1009,13 +1009,13 @@ const questions = [
   {
     group: 'AB', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAB,
-    question: 'The plaza forms an L-shape by removing a rectangular notch from the top-right corner of its bounding box. Tracing all six outer edges, what is the total outer perimeter in meters?\n(Enter the number only)',
+    question: 'The plaza forms an L-shape by removing a rectangular notch from the top-right corner of its bounding box. Tracing all six outer edges, what is the total outer perimeter in meters?',
     answer: '70'
   },
   {
     group: 'AB', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAB,
-    question: 'Using the perimeter from Question A, what is the minimum number of 3.5m steel edging strips required to border the entire plaza?\n(Enter the number only)',
+    question: 'Using the perimeter from Question A, what is the minimum number of 3.5m steel edging strips required to border the entire plaza?',
     answer: '20'
   },
 
@@ -1024,13 +1024,13 @@ const questions = [
   {
     group: 'AC', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAC,
-    question: 'What is the total volume of the precast concrete block in mm³?\n(Enter the number only — e.g. 10800000)',
+    question: 'What is the total volume of the precast concrete block in mm³?',
     answer: '10800000'
   },
   {
     group: 'AC', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAC,
-    question: 'Convert the block volume from Question A into mL (1 mL = 1,000 mm³), then calculate the total volume of plasticiser admixture required at the stated dose rate.\n(Enter the number in mL only)',
+    question: 'Convert the block volume from Question A into mL (1 mL = 1,000 mm³), then calculate the total volume of plasticiser admixture required at the stated dose rate.',
     answer: '27'
   },
 
@@ -1039,17 +1039,29 @@ const questions = [
   {
     group: 'AD', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAD,
-    question: 'What is the total volume of the concrete test slab in mm³?\n(Enter the number only — e.g. 18000000)',
+    question: 'What is the total volume of the concrete test slab in mm³?',
     answer: '18000000'
   },
   {
     group: 'AD', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAD,
-    question: 'Convert the slab volume from Question A into mL (1 mL = 1,000 mm³), then calculate the exact volume of curing compound required at the stated dose rate.\n(Enter the number in mL only)',
+    question: 'Convert the slab volume from Question A into mL (1 mL = 1,000 mm³), then calculate the exact volume of curing compound required at the stated dose rate.',
     answer: '81'
   },
 
 ]
+
+// ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
+const units = {
+  A: ['h', '$'],   B: ['h', '$'],   C: ['h', '$'],   D: ['h', '$'],   E: ['h', '$'],
+  F: ['h', '$'],   G: ['h', '$'],   H: ['h', '$'],   I: ['h', '$'],   J: ['h', '$'],
+  K: ['$', 'years'], L: ['$', 'years'], M: ['$', '$'],   N: ['$', 'years'], O: ['$', '$'],
+  P: ['$', 'years'], Q: ['$', '$'],   R: ['$', 'years'], S: ['$', '$'],   T: ['$', '$'],
+  U: ['m³', 'L'],  V: ['m³', 'L'],  W: ['m³', 'L'],
+  X: ['m²', 'tiles'], Y: ['m²', 'boards'], Z: ['m²', 'pavers'],
+  AA: ['m', 'sleepers'], AB: ['m', 'strips'],
+  AC: ['mm³', 'mL'], AD: ['mm³', 'mL'],
+}
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
 const methods = {
@@ -1209,6 +1221,7 @@ app.get('/api/questions', (req, res) => {
     if (groupPos[q.group] === undefined) groupPos[q.group] = 0
     const pos = groupPos[q.group]++
     const method = (methods[q.group] || [])[pos] || null
+    const unit   = (units[q.group]   || [])[pos] || null
     return {
       id: i + 1,
       type: q.type,
@@ -1218,7 +1231,8 @@ app.get('/api/questions', (req, res) => {
       question: q.question,
       options: null,
       answer: q.answer,
-      method
+      method,
+      unit
     }
   })
 

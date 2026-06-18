@@ -63,7 +63,7 @@ export default function Calculator({ onClose }) {
     if (result !== null) {
       // After a result, digits start fresh; operators continue from result
       const startsExpr = /^[0-9.(√π]/.test(val)
-      setExpr(startsExpr ? val : result + ' ' + val + ' ')
+      setExpr(startsExpr ? val : rawMain + ' ' + val + ' ')
       setResult(null)
     } else {
       setExpr(prev => prev + val)
@@ -73,7 +73,7 @@ export default function Calculator({ onClose }) {
 
   const appendOp = (op) => {
     if (result !== null) {
-      setExpr(result + ' ' + op + ' ')
+      setExpr(rawMain + ' ' + op + ' ')
       setResult(null)
     } else {
       // Replace trailing operator if present
@@ -105,8 +105,16 @@ export default function Calculator({ onClose }) {
     setError(false)
   }
 
+  // Format a numeric string with thousands separators, preserving decimals
+  const formatCommas = (val) => {
+    const parts = String(val).split('.')
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    return parts.join('.')
+  }
+
   // Determine what to show in the large display slot
-  const displayMain  = result !== null ? result  : (expr || '0')
+  const rawMain      = result !== null ? result  : (expr || '0')
+  const displayMain  = result !== null ? formatCommas(result) : (expr || '0')
   const displaySmall = result !== null ? expr    : ''
 
   // ----- button definitions -----

@@ -1428,6 +1428,54 @@ body {
 }
 
 /* ══════════════════════════════════════
+   ANSWER INPUT WITH UNIT LABEL
+══════════════════════════════════════ */
+.answer-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.input-unit {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  height: 52px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.input-unit-prefix {
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.input-unit-suffix {
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.answer-input-wrap .number-input {
+  border-radius: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.answer-input-wrap:has(.input-unit-prefix) .number-input {
+  border-radius: 0 10px 10px 0;
+}
+
+.answer-input-wrap:has(.input-unit-suffix) .number-input {
+  border-radius: 10px 0 0 10px;
+}
+
+/* ══════════════════════════════════════
    WORKING / METHOD EXPAND
 ══════════════════════════════════════ */
 .working-section {

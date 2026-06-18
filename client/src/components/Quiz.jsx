@@ -146,15 +146,21 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
           <p className="question-text">{current.question}</p>
 
           <div className="number-input-area">
-            <input
-              type="text"
-              inputMode="decimal"
-              className="number-input"
-              placeholder="Enter your answer…"
-              value={answers[current.id] || ''}
-              onChange={e => handleAnswer(current.id, e.target.value)}
-              autoComplete="off"
-            />
+            <div className="answer-input-wrap">
+              {current.unit === '$' && <span className="input-unit input-unit-prefix">$</span>}
+              <input
+                type="text"
+                inputMode="decimal"
+                className="number-input"
+                placeholder="Enter your answer…"
+                value={answers[current.id] || ''}
+                onChange={e => handleAnswer(current.id, e.target.value)}
+                autoComplete="off"
+              />
+              {current.unit && current.unit !== '$' && (
+                <span className="input-unit input-unit-suffix">{current.unit}</span>
+              )}
+            </div>
           </div>
         </div>
 
