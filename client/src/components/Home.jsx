@@ -4,11 +4,11 @@ export default function Home({ onStart, loading, error }) {
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
 
-  const presets = [5, 10, 15, 20, 25]
+  const presets = [5, 10, 20, 30, 40]
 
   const handleCountInput = (val) => {
     const n = parseInt(val)
-    if (!isNaN(n)) setCustomCount(Math.min(30, Math.max(1, n)))
+    if (!isNaN(n)) setCustomCount(Math.min(40, Math.max(1, n)))
   }
 
   const customTotalSecs = customCount * 70
@@ -66,13 +66,13 @@ export default function Home({ onStart, loading, error }) {
 
         <div className="info-row">
           <div className="info-box">
-            <span className="info-num">{mode === 'full' ? 30 : customCount}</span>
+            <span className="info-num">{mode === 'full' ? 40 : customCount}</span>
             <span className="info-label">Questions</span>
           </div>
           <div className="info-divider" />
           <div className="info-box">
             <span className={`info-num ${mode === 'custom' ? 'info-num-time' : ''}`}>
-              {mode === 'full' ? '35' : customTimeDisplay}
+              {mode === 'full' ? '46' : customTimeDisplay}
             </span>
             <span className="info-label">{mode === 'full' ? 'Minutes' : 'Min : Sec'}</span>
           </div>
@@ -101,12 +101,12 @@ export default function Home({ onStart, loading, error }) {
               <input
                 type="number"
                 min="1"
-                max="30"
+                max="40"
                 value={customCount}
                 onChange={e => handleCountInput(e.target.value)}
                 className="count-input"
               />
-              <span className="count-input-hint">questions (1–30) — or pick a preset above</span>
+              <span className="count-input-hint">questions (1–40) — or pick a preset above</span>
             </div>
           </div>
         )}

@@ -145,23 +145,37 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
 
           <p className="question-text">{current.question}</p>
 
-          <div className="number-input-area">
-            <div className="answer-input-wrap">
-              {current.unit === '$' && <span className="input-unit input-unit-prefix">$</span>}
-              <input
-                type="text"
-                inputMode="decimal"
-                className="number-input"
-                placeholder="Enter your answer…"
-                value={answers[current.id] || ''}
-                onChange={e => handleAnswer(current.id, e.target.value)}
-                autoComplete="off"
-              />
-              {current.unit && current.unit !== '$' && (
-                <span className="input-unit input-unit-suffix">{current.unit}</span>
-              )}
+          {current.type === 'multiple_choice' ? (
+            <div className="mc-options">
+              {(current.options || []).map(opt => (
+                <button
+                  key={opt}
+                  className={`mc-option${answers[current.id] === opt ? ' mc-selected' : ''}`}
+                  onClick={() => handleAnswer(current.id, opt)}
+                >
+                  {opt}
+                </button>
+              ))}
             </div>
-          </div>
+          ) : (
+            <div className="number-input-area">
+              <div className="answer-input-wrap">
+                {current.unit === '$' && <span className="input-unit input-unit-prefix">$</span>}
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  className="number-input"
+                  placeholder="Enter your answer…"
+                  value={answers[current.id] || ''}
+                  onChange={e => handleAnswer(current.id, e.target.value)}
+                  autoComplete="off"
+                />
+                {current.unit && current.unit !== '$' && (
+                  <span className="input-unit input-unit-suffix">{current.unit}</span>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="q-nav-controls">

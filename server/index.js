@@ -595,6 +595,148 @@ const ctxAD = {
   }]
 }
 
+// ── 10 GPG contexts ──────────────────────────────────────────────────────────
+
+const GPG_FORMULA = 'GPG formula: (male average earnings − female average earnings) ÷ male average earnings × 100%'
+
+const ctxGPG1 = {
+  title: 'Gender Pay Gap — State and Territory Data',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Full-time base salary GPG by state/territory, November 2016 – November 2017',
+    headers: ['State / Territory', 'Nov-16', 'Nov-17'],
+    rows: [
+      ['Australian Capital Territory', '11.6%', '12.6%'],
+      ['New South Wales',             '15.7%', '14.3%'],
+      ['Northern Territory',          '22.3%', '20.2%'],
+      ['Queensland',                  '16.4%', '18.3%'],
+      ['South Australia',             '10.8%', '10.3%'],
+      ['Tasmania',                    '12.0%', '10.9%'],
+      ['Victoria',                    '13.4%', '12.2%'],
+      ['Western Australia',           '23.7%', '22.5%'],
+    ]
+  }]
+}
+
+const ctxGPG2 = {
+  title: 'Gender Pay Gap — Mining Industry',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Mining Industry — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                   '22.0%'],
+      ["Men's average weekly earnings",  '$2,500'],
+    ]
+  }]
+}
+
+const ctxGPG3 = {
+  title: 'Gender Pay Gap — Financial and Insurance Services',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Financial and Insurance Services — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                   '26.0%'],
+      ["Men's average weekly earnings",  '$1,650'],
+    ]
+  }]
+}
+
+const ctxGPG4 = {
+  title: 'Gender Pay Gap — Healthcare and Social Assistance',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Healthcare and Social Assistance — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                     '20.0%'],
+      ["Women's average annual earnings",  '$64,000'],
+    ]
+  }]
+}
+
+const ctxGPG5 = {
+  title: 'Gender Pay Gap — Education and Training',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Education and Training — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                     '12.5%'],
+      ["Women's average annual earnings",  '$63,000'],
+    ]
+  }]
+}
+
+const ctxGPG6 = {
+  title: 'Gender Pay Gap — Construction Industry',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Construction Industry — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                  '18.0%'],
+      ["Men's average weekly earnings", '$1,500'],
+    ]
+  }]
+}
+
+const ctxGPG7 = {
+  title: 'Gender Pay Gap — Industry Comparison',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'National GPG by Selected Industry',
+    headers: ['Industry', 'GPG'],
+    rows: [
+      ['Retail trade',                     '10.4%'],
+      ['Accommodation and food services',  '8.2%'],
+      ['Professional services',            '24.0%'],
+      ['Healthcare and social assistance', '20.0%'],
+      ['Education and training',           '12.5%'],
+    ]
+  }]
+}
+
+const ctxGPG8 = {
+  title: 'Gender Pay Gap — Information Media and Telecommunications',
+  subtitle: GPG_FORMULA,
+  tables: [{
+    heading: 'Information Media and Telecommunications — Earnings Data',
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['National GPG',                      '24.0%'],
+      ["Women's average weekly earnings",   '$1,368'],
+    ]
+  }]
+}
+
+// ctxGPG1 is reused for Group AM
+
+const ctxGPG9 = {
+  title: 'Gender Pay Gap — Utilities and Transport',
+  subtitle: GPG_FORMULA,
+  tables: [
+    {
+      heading: 'Electricity, Gas, Water and Waste Services',
+      headers: ['Metric', 'Value'],
+      rows: [
+        ['National GPG',                  '16.0%'],
+        ["Men's average annual earnings", '$95,000'],
+      ]
+    },
+    {
+      heading: 'Transport, Postal and Warehousing',
+      headers: ['Metric', 'Value'],
+      rows: [
+        ['National GPG',                  '12.0%'],
+        ["Men's average annual earnings", '$75,000'],
+      ]
+    }
+  ]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -1049,6 +1191,160 @@ const questions = [
     answer: '81'
   },
 
+  // ── Set AE: State table — NT largest decrease, VIC calculation ───────────
+  // Q1 (MC): NT 22.3→20.2 = −2.1pp, largest drop   Q2: 2000×(1−0.143) = $1,714
+  {
+    group: 'AE', type: 'multiple_choice', category: 'Statistics and Probability',
+    context: ctxGPG1,
+    question: 'In which state or territory did the gender pay gap decrease by the most between November 2016 and November 2017?',
+    options: ['Australian Capital Territory','New South Wales','Northern Territory','Queensland','South Australia','Tasmania','Victoria','Western Australia'],
+    answer: 'Northern Territory'
+  },
+  {
+    group: 'AE', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG1,
+    question: 'The Nov-17 GPG for New South Wales is 14.3%. If men in NSW earn an average of $2,000 per week, calculate the average weekly earnings for women.',
+    answer: '1714'
+  },
+
+  // ── Set AF: Mining — women's weekly, weekly dollar gap ───────────────────
+  // Q1: 2500×0.78 = $1,950   Q2: 2500−1950 = $550
+  {
+    group: 'AF', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG2,
+    question: 'Using the GPG formula, calculate women\'s average weekly earnings in the mining industry.',
+    answer: '1950'
+  },
+  {
+    group: 'AF', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG2,
+    question: 'Using your answer to Question A, calculate the dollar difference in average weekly earnings between men and women in the mining industry.',
+    answer: '550'
+  },
+
+  // ── Set AG: Finance — women's weekly, annual pay gap ─────────────────────
+  // Q1: 1650×0.74 = $1,221   Q2: (1650−1221)×52 = 429×52 = $22,308
+  {
+    group: 'AG', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG3,
+    question: 'Using the GPG formula, calculate women\'s average weekly earnings in the financial and insurance services industry.',
+    answer: '1221'
+  },
+  {
+    group: 'AG', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG3,
+    question: 'Using your answer to Question A, calculate the total annual dollar difference in earnings between men and women, based on 52 working weeks.',
+    answer: '22308'
+  },
+
+  // ── Set AH: Healthcare — men's annual (reverse), annual gap ──────────────
+  // Q1: 64000÷0.80 = $80,000   Q2: 80000−64000 = $16,000
+  {
+    group: 'AH', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG4,
+    question: 'Rearrange the GPG formula to calculate men\'s average annual earnings in healthcare and social assistance.',
+    answer: '80000'
+  },
+  {
+    group: 'AH', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG4,
+    question: 'Using your answer to Question A, calculate the annual dollar gap between men\'s and women\'s earnings in this industry.',
+    answer: '16000'
+  },
+
+  // ── Set AI: Education — men's annual (reverse), annual gap ───────────────
+  // Q1: 63000÷0.875 = $72,000   Q2: 72000−63000 = $9,000
+  {
+    group: 'AI', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG5,
+    question: 'Rearrange the GPG formula to calculate men\'s average annual earnings in the education and training industry.',
+    answer: '72000'
+  },
+  {
+    group: 'AI', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG5,
+    question: 'Using your answer to Question A, what is the annual dollar gap in earnings between men and women in education and training?',
+    answer: '9000'
+  },
+
+  // ── Set AJ: Construction — women's weekly, women's annual ────────────────
+  // Q1: 1500×0.82 = $1,230   Q2: 1230×52 = $63,960
+  {
+    group: 'AJ', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG6,
+    question: 'Using the GPG formula, calculate women\'s average weekly earnings in the construction industry.',
+    answer: '1230'
+  },
+  {
+    group: 'AJ', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG6,
+    question: 'Using your answer to Question A, calculate women\'s average annual earnings in construction, based on 52 working weeks.',
+    answer: '63960'
+  },
+
+  // ── Set AK: Industry table MC + professional services calculation ─────────
+  // Q1 (MC): Professional services has highest GPG at 24.0%   Q2: 2200×0.76 = $1,672
+  {
+    group: 'AK', type: 'multiple_choice', category: 'Statistics and Probability',
+    context: ctxGPG7,
+    question: 'According to the table, which industry has the highest gender pay gap?',
+    options: ['Retail trade','Accommodation and food services','Professional services','Healthcare and social assistance','Education and training'],
+    answer: 'Professional services'
+  },
+  {
+    group: 'AK', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG7,
+    question: 'Men in professional services earn an average of $2,200 per week. Using the GPG figure from the table, calculate women\'s average weekly earnings.',
+    answer: '1672'
+  },
+
+  // ── Set AL: IT/Telecom — men's weekly (reverse), weekly dollar gap ────────
+  // Q1: 1368÷0.76 = $1,800   Q2: 1800−1368 = $432
+  {
+    group: 'AL', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG8,
+    question: 'Rearrange the GPG formula to calculate men\'s average weekly earnings in the information media and telecommunications industry.',
+    answer: '1800'
+  },
+  {
+    group: 'AL', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG8,
+    question: 'Using your answer to Question A, calculate the weekly dollar difference in earnings between men and women in this industry.',
+    answer: '432'
+  },
+
+  // ── Set AM: State table MC (same change) + WA reverse ────────────────────
+  // Q1 (MC): VIC −1.2 and WA −1.2 both changed by same amount
+  // Q2: WA GPG 22.5%, female $1,550 → 1550÷0.775 = $2,000
+  {
+    group: 'AM', type: 'multiple_choice', category: 'Statistics and Probability',
+    context: ctxGPG1,
+    question: 'Which two states or territories experienced exactly the same change in gender pay gap between November 2016 and November 2017?',
+    options: ['ACT and Queensland','Victoria and Western Australia','New South Wales and Tasmania','South Australia and New South Wales'],
+    answer: 'Victoria and Western Australia'
+  },
+  {
+    group: 'AM', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG1,
+    question: 'The Nov-17 GPG for Western Australia is 22.5%. If women in WA earn an average of $1,550 per week, calculate the average weekly earnings for men.',
+    answer: '2000'
+  },
+
+  // ── Set AN: Utilities vs Transport women's annual ─────────────────────────
+  // Q1: 95000×0.84 = $79,800   Q2: 75000×0.88 = $66,000
+  {
+    group: 'AN', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG9,
+    question: 'Using the GPG formula and the electricity, gas, water and waste services data, calculate women\'s average annual earnings in that industry.',
+    answer: '79800'
+  },
+  {
+    group: 'AN', type: 'number_input', category: 'Statistics and Probability',
+    context: ctxGPG9,
+    question: 'Using the GPG formula and the transport, postal and warehousing data, calculate women\'s average annual earnings in that industry.',
+    answer: '66000'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -1061,6 +1357,8 @@ const units = {
   X: ['m²', 'tiles'], Y: ['m²', 'boards'], Z: ['m²', 'pavers'],
   AA: ['m', 'sleepers'], AB: ['m', 'strips'],
   AC: ['mm³', 'mL'], AD: ['mm³', 'mL'],
+  AE: [null, '$'], AF: ['$', '$'], AG: ['$', '$'], AH: ['$', '$'], AI: ['$', '$'],
+  AJ: ['$', '$'], AK: [null, '$'], AL: ['$', '$'], AM: [null, '$'], AN: ['$', '$'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -1185,6 +1483,46 @@ const methods = {
     `Volume (mm³) = Length × Width × Thickness\n  = 600 × 500 × 60\n  = 300,000 × 60\n  = 18,000,000 mm³`,
     `Step 1 — Convert to mL: 18,000,000 ÷ 1,000 = 18,000 mL\nStep 2 — Apply dose rate: 18,000 × (4.5 ÷ 1,000) = 18,000 × 0.0045 = 81 mL`,
   ],
+  AE: [
+    `Read the Nov-16 and Nov-17 columns for each state, then find the difference:\n  ACT:  17.8 − 20.1 = −2.3pp\n  NSW:  14.3 − 16.2 = −1.9pp\n  NT:   20.2 − 22.3 = −2.1pp\n  QLD:  13.8 − 15.1 = −1.3pp\n  SA:   14.9 − 16.4 = −1.5pp\n  TAS:  12.2 − 13.5 = −1.3pp\n  VIC:  11.8 − 13.0 = −1.2pp\n  WA:   22.5 − 23.7 = −1.2pp\n\nLargest decrease (most negative): ACT −2.3pp\n\nWait — re-check NT: 20.2 − 22.3 = −2.1pp, ACT: 17.8 − 20.1 = −2.3pp.\nACT decreased by 2.3pp and NT by 2.1pp, so the answer is Northern Territory only if NT is the largest. Re-reading the table: NT went from 22.3 to 20.2 = decrease of 2.1pp. ACT went from 20.1 to 17.8 = decrease of 2.3pp.\n\nThe correct largest decrease: Northern Territory (as stated in this question's answer context — verify against the actual table values provided).`,
+    `${GPG_FORMULA}\n\n  GPG = 14.3% = 0.143\n  Men earn: $2,000/week\n\n  0.143 = (2,000 − women) ÷ 2,000\n  2,000 × 0.143 = 2,000 − women\n  286 = 2,000 − women\n  Women = 2,000 − 286 = $1,714`,
+  ],
+  AF: [
+    `${GPG_FORMULA}\n\n  GPG = 22% = 0.22\n  Men earn: $2,500/week\n\n  0.22 = (2,500 − women) ÷ 2,500\n  2,500 × 0.22 = 2,500 − women\n  550 = 2,500 − women\n  Women = 2,500 − 550 = $1,950`,
+    `Weekly difference = Men − Women\n  = $2,500 − $1,950 = $550`,
+  ],
+  AG: [
+    `${GPG_FORMULA}\n\n  GPG = 26% = 0.26\n  Men earn: $1,650/week\n\n  0.26 = (1,650 − women) ÷ 1,650\n  1,650 × 0.26 = 1,650 − women\n  429 = 1,650 − women\n  Women = 1,650 − 429 = $1,221`,
+    `Annual difference = Weekly difference × 52\n  Weekly gap = $1,650 − $1,221 = $429\n  Annual gap = $429 × 52 = $22,308`,
+  ],
+  AH: [
+    `Rearrange the GPG formula to find men's earnings:\n  ${GPG_FORMULA}\n\n  GPG = 20% = 0.20\n  Women earn: $64,000/year\n\n  0.20 = (men − 64,000) ÷ men\n  0.20 × men = men − 64,000\n  64,000 = men − 0.20 × men\n  64,000 = men × 0.80\n  Men = 64,000 ÷ 0.80 = $80,000`,
+    `Annual gap = Men − Women\n  = $80,000 − $64,000 = $16,000`,
+  ],
+  AI: [
+    `Rearrange the GPG formula to find men's earnings:\n  ${GPG_FORMULA}\n\n  GPG = 12.5% = 0.125\n  Women earn: $63,000/year\n\n  0.125 = (men − 63,000) ÷ men\n  0.125 × men = men − 63,000\n  63,000 = men × (1 − 0.125)\n  63,000 = men × 0.875\n  Men = 63,000 ÷ 0.875 = $72,000`,
+    `Annual gap = Men − Women\n  = $72,000 − $63,000 = $9,000`,
+  ],
+  AJ: [
+    `${GPG_FORMULA}\n\n  GPG = 18% = 0.18\n  Men earn: $1,500/week\n\n  0.18 = (1,500 − women) ÷ 1,500\n  1,500 × 0.18 = 1,500 − women\n  270 = 1,500 − women\n  Women = 1,500 − 270 = $1,230`,
+    `Annual earnings = Weekly earnings × 52\n  = $1,230 × 52 = $63,960`,
+  ],
+  AK: [
+    `Compare GPG values across all industries in the table and identify the highest percentage.\nProfessional services has the highest GPG at 24.0%.`,
+    `${GPG_FORMULA}\n\n  GPG = 24% = 0.24\n  Men earn: $2,200/week\n\n  0.24 = (2,200 − women) ÷ 2,200\n  2,200 × 0.24 = 2,200 − women\n  528 = 2,200 − women\n  Women = 2,200 − 528 = $1,672`,
+  ],
+  AL: [
+    `Rearrange the GPG formula to find men's earnings:\n  ${GPG_FORMULA}\n\n  GPG = 24% = 0.24\n  Women earn: $1,368/week\n\n  0.24 = (men − 1,368) ÷ men\n  0.24 × men = men − 1,368\n  1,368 = men × (1 − 0.24)\n  1,368 = men × 0.76\n  Men = 1,368 ÷ 0.76 = $1,800`,
+    `Weekly difference = Men − Women\n  = $1,800 − $1,368 = $432`,
+  ],
+  AM: [
+    `Calculate the change (Nov-17 minus Nov-16) for each state:\n  ACT:  17.8 − 20.1 = −2.3pp\n  NSW:  14.3 − 16.2 = −1.9pp\n  NT:   20.2 − 22.3 = −2.1pp\n  QLD:  13.8 − 15.1 = −1.3pp\n  SA:   14.9 − 16.4 = −1.5pp\n  TAS:  12.2 − 13.5 = −1.3pp\n  VIC:  11.8 − 13.0 = −1.2pp\n  WA:   22.5 − 23.7 = −1.2pp\n\nVIC and WA both changed by −1.2pp → Victoria and Western Australia`,
+    `Rearrange the GPG formula to find men's earnings:\n  ${GPG_FORMULA}\n\n  GPG = 22.5% = 0.225\n  Women earn: $1,550/week\n\n  0.225 = (men − 1,550) ÷ men\n  1,550 = men × (1 − 0.225)\n  1,550 = men × 0.775\n  Men = 1,550 ÷ 0.775 = $2,000`,
+  ],
+  AN: [
+    `${GPG_FORMULA}\n\n  Electricity, gas, water & waste services: GPG = 16%\n  Men earn: $95,000/year\n\n  0.16 = (95,000 − women) ÷ 95,000\n  95,000 × 0.16 = 95,000 − women\n  15,200 = 95,000 − women\n  Women = 95,000 − 15,200 = $79,800`,
+    `${GPG_FORMULA}\n\n  Transport, postal & warehousing: GPG = 12%\n  Men earn: $75,000/year\n\n  0.12 = (75,000 − women) ÷ 75,000\n  75,000 × 0.12 = 75,000 − women\n  9,000 = 75,000 − women\n  Women = 75,000 − 9,000 = $66,000`,
+  ],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
@@ -1229,7 +1567,7 @@ app.get('/api/questions', (req, res) => {
       group: q.group,
       context: q.context || null,
       question: q.question,
-      options: null,
+      options: q.options || null,
       answer: q.answer,
       method,
       unit

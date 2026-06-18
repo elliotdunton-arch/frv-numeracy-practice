@@ -1530,6 +1530,42 @@ body {
 }
 
 /* ══════════════════════════════════════
+   MULTIPLE CHOICE
+══════════════════════════════════════ */
+.mc-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mc-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 18px;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.mc-option:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--orange);
+}
+
+.mc-option.mc-selected {
+  background: rgba(249,115,22,0.12);
+  border-color: var(--orange);
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
 @media (max-width: 768px) {
