@@ -977,6 +977,64 @@ const ctxT10b = {
   subtitle: 'A high-speed courier vehicle must travel 20 km to deliver an urgent medical package. Under clear overnight conditions, the vehicle travels at an average speed of 80 km/h. During standard peak operations, congestion reduces the speed to 30 km/h.',
 }
 
+// ── Fluid / dosing contexts (ctxF1, ctxF2a–ctxF5b) ───────────────────────────
+
+const ctxF1 = {
+  title: 'Chemical Application Parameters',
+  tables: [{ headers: ['Target Plant Type', 'Dilution Application Rate per 5 L of Water'], rows: [
+    ['Delicate Orchids',       '15 mL'],
+    ['Native Shrubs',          '40 mL'],
+    ['Standard Turf/Lawn',     '65 mL'],
+    ['Established Fruit Trees','120 mL'],
+  ]}]
+}
+
+const ctxF2a = {
+  title: 'Commercial Irrigation Blueprint Data',
+  tables: [{ headers: ['Zone', 'Delivery Output', 'Minimum Active Duration'], rows: [
+    ['Zone 1: Orchards',  '2.4 L per minute', '1.5 hours (90 minutes)'],
+    ['Zone 4: Turf Lawns','1.8 L per minute', '120 minutes'],
+  ]}]
+}
+const ctxF2b = {
+  title: 'Barrel Filling — Irrigation Redirect',
+  subtitle: 'The combined output from Zone 1 and Zone 4 (432 L total) is redirected entirely to fill a series of small individual holding barrels. Each barrel has a maximum capacity of exactly 0.024 m³. (1 m³ = 1000 L)',
+}
+
+const ctxF3a = {
+  title: 'Low-Flow Greenhouse Irrigation',
+  tables: [{ headers: ['Zone', 'Delivery Output', 'Target Standard Runtime'], rows: [
+    ['Zone 2: Greenhouses', '850 mL per minute', '45 minutes'],
+  ]}]
+}
+const ctxF3b = {
+  title: 'Zone 2 — Industrial Drainage Tank Fill',
+  subtitle: 'The delivery output of Zone 2 (850 mL per minute) is redirected into an empty industrial drainage tank with an internal capacity of exactly 0.51 m³. (1 m³ = 1000 L)',
+}
+
+const ctxF4a = {
+  title: 'Hydroponic Nutrient Dosing Matrix',
+  tables: [{ headers: ['Solution Grade', 'Concentration Requirement', 'Sub-Tank System Volume'], rows: [
+    ['Grade A Nitro',   '4.5 mL per 1 L of water', '180 L'],
+    ['Grade B Phospho', '6.0 mL per 1 L of water', '140 L'],
+  ]}]
+}
+const ctxF4b = {
+  title: 'Hydroponic Dosing — Combined Concentrate Volume',
+  subtitle: 'A technician mixes one full sub-tank of Grade A Nitro (180 L system, 4.5 mL/L) and one full sub-tank of Grade B Phospho (140 L system, 6.0 mL/L).',
+}
+
+const ctxF5a = {
+  title: 'High-Volume Fluid Storage Log',
+  tables: [{ headers: ['Tank ID', 'Current Liquid Depth', 'Floor Base Footprint Area'], rows: [
+    ['Reservoir Tank 3', '0.85 m', '4.0 m²'],
+  ]}]
+}
+const ctxF5b = {
+  title: 'Reservoir Tank 3 — Drainage Pump',
+  subtitle: 'Reservoir Tank 3 holds 3,400 L of liquid (0.85 m depth × 4.0 m² base area × 1,000 L/m³). A drainage pump removes water at a constant rate of 12.5 L per minute.',
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -1919,6 +1977,79 @@ const questions = [
     answer: '25'
   },
 
+  // ── Fluid / Dosing Sets (BI–BM) ──────────────────────────────────────────
+
+  // BI — Chemical application: scale up turf dose | identify orchid mix
+  {
+    group: 'BI', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF1,
+    question: 'A gardener has a 20-litre watering container filled with water to mix treatment for a Standard Turf/Lawn. How many millilitres (mL) of the chemical concentrate do they need to add?',
+    answer: '260'
+  },
+  {
+    group: 'BI', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxF1,
+    question: 'A large commercial spray tank contains 12 litres of water and has already had 36 mL of chemical added to it. Based on the concentration ratio (mL per litre of water), which target plant type from the table does this mix correspond to?',
+    options: ['Delicate Orchids', 'Native Shrubs', 'Standard Turf/Lawn', 'Established Fruit Trees'],
+    answer: 'Delicate Orchids'
+  },
+
+  // BJ — Irrigation zones total volume | fill holding barrels
+  {
+    group: 'BJ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF2a,
+    question: 'What is the total combined volume of water delivered across Zone 1 and Zone 4 if both complete their minimum required running durations? Give your answer in Litres (L).',
+    answer: '432'
+  },
+  {
+    group: 'BJ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF2b,
+    question: 'How many separate holding barrels can be filled to the brim?',
+    answer: '18'
+  },
+
+  // BK — Greenhouse zone baseline volume | minutes to overflow tank
+  {
+    group: 'BK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF3a,
+    question: 'What is the total baseline volume of water delivered by Zone 2 during its standard runtime? Give your answer in Litres (L).',
+    answer: '38.25'
+  },
+  {
+    group: 'BK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF3b,
+    question: 'How many total minutes can the irrigation line run continuously into this drainage tank before it overflows?',
+    answer: '600'
+  },
+
+  // BL — Grade A Nitro concentrate needed | combined concentrate total
+  {
+    group: 'BL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF4a,
+    question: 'What is the total volume of Grade A Nitro concentrate required to treat a single full sub-tank system? Give your answer in millilitres (mL).',
+    answer: '810'
+  },
+  {
+    group: 'BL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF4b,
+    question: 'What is the total combined volume of chemical concentrates (Grade A Nitro and Grade B Phospho) used across both systems? Give your answer in millilitres (mL).',
+    answer: '1650'
+  },
+
+  // BM — Reservoir Tank 3 volume | minutes to pump empty
+  {
+    group: 'BM', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF5a,
+    question: 'What is the total volume of liquid currently stored inside Reservoir Tank 3? Give your answer in Litres (L). (1 m³ = 1000 L)',
+    answer: '3400'
+  },
+  {
+    group: 'BM', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxF5b,
+    question: 'How many minutes will it take to pump Reservoir Tank 3 completely empty?',
+    answer: '272'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -1937,6 +2068,7 @@ const units = {
   AT: ['$', null], AU: ['$', null], AV: ['$', null], AW: ['$', null], AX: ['$', null],
   AY: ['min', 'min'], AZ: ['min', 'min'], BA: ['min', 'min'], BB: ['min', 'min'], BC: ['min', 'min'],
   BD: ['min', 'min'], BE: ['min', 'min'], BF: ['min', 'min'], BG: ['min', 'min'], BH: ['min', 'min'],
+  BI: ['mL', null], BJ: ['L', 'barrels'], BK: ['L', 'min'], BL: ['mL', 'mL'], BM: ['L', 'min'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -2180,6 +2312,26 @@ const methods = {
   BH: [
     `Convert all durations to minutes, then find the mean:\n  Worker 1 (Council Van): 1 hr 16 min = 76 min\n  Worker 2 (Bicycle):     39 min\n  Worker 3 (Light Rail):  1 hr 04 min = 64 min\n  Worker 4 (Carpool):     48 min\n  Worker 5 (Walk/Bus):    53 min\n  Worker 6 (Motorcycle):  32 min\nTotal: 76 + 39 + 64 + 48 + 53 + 32 = 312 min\nAverage: 312 ÷ 6 = 52 min`,
     `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Overnight (80 km/h): 20 km ÷ 80 km/h = 0.25 h = 15 min\n  Peak (30 km/h):      20 km ÷ 30 km/h = 0.667 h = 40 min\n  Extra time: 40 − 15 = 25 min`,
+  ],
+  BI: [
+    `Rate for Standard Turf/Lawn: 65 mL per 5 L of water\n\nScale up to a 20 L container:\n  20 L ÷ 5 L = 4  (number of 5 L units)\n  4 × 65 mL = 260 mL`,
+    `Step 1 — Find the concentration of the mystery mix:\n  36 mL ÷ 12 L = 3 mL per litre\n\nStep 2 — Convert to the per-5-litre rate used in the table:\n  3 mL/L × 5 = 15 mL per 5 L\n\nStep 3 — Match against the table:\n  Delicate Orchids:       15 mL per 5 L  ✓\n  Native Shrubs:          40 mL per 5 L\n  Standard Turf/Lawn:     65 mL per 5 L\n  Established Fruit Trees:120 mL per 5 L\n\nAnswer: Delicate Orchids`,
+  ],
+  BJ: [
+    `Zone 1 (Orchards):  2.4 L/min × 90 min  = 216 L\nZone 4 (Turf Lawns): 1.8 L/min × 120 min = 216 L\n\nTotal: 216 + 216 = 432 L`,
+    `Convert barrel capacity to litres:\n  0.024 m³ × 1,000 L/m³ = 24 L per barrel\n\nNumber of barrels = Total volume ÷ Barrel capacity\n  = 432 L ÷ 24 L = 18 barrels`,
+  ],
+  BK: [
+    `Volume = Flow rate × Time\n  = 850 mL/min × 45 min = 38,250 mL\n\nConvert to litres:\n  38,250 mL ÷ 1,000 = 38.25 L`,
+    `Convert tank capacity to litres:\n  0.51 m³ × 1,000 L/m³ = 510 L\n\nConvert flow rate to L/min:\n  850 mL/min ÷ 1,000 = 0.85 L/min\n\nTime = Capacity ÷ Flow rate\n  = 510 L ÷ 0.85 L/min = 600 minutes`,
+  ],
+  BL: [
+    `Grade A Nitro concentration: 4.5 mL per litre\nSub-tank volume: 180 L\n\nConcentrate needed: 4.5 mL/L × 180 L = 810 mL`,
+    `Grade A Nitro:   4.5 mL/L × 180 L = 810 mL\nGrade B Phospho: 6.0 mL/L × 140 L = 840 mL\n\nTotal combined: 810 + 840 = 1,650 mL`,
+  ],
+  BM: [
+    `Volume = Floor area × Liquid depth\n  = 4.0 m² × 0.85 m = 3.4 m³\n\nConvert to litres:\n  3.4 m³ × 1,000 L/m³ = 3,400 L`,
+    `Time = Volume ÷ Pump rate\n  = 3,400 L ÷ 12.5 L/min = 272 minutes`,
   ],
 }
 
