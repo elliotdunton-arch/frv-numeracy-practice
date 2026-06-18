@@ -1241,6 +1241,105 @@ const ctxVF10d = {
   ]}]
 }
 
+// ── Property & home loan contexts (ctxPR1–ctxPR10) ───────────────────────────
+
+const ctxPR1 = {
+  title: 'Median Home Values & Bank Interest Rates',
+  tables: [{ headers: ['Capital City', 'Median Home Value', 'Bank #1 Rate', 'Bank #2 Rate', 'Bank #3 Rate'], rows: [
+    ['Sydney',    '$770,000', '3.50%', '3.95%', '3.75%'],
+    ['Hobart',    '$440,000', '3.50%', '3.95%', '3.75%'],
+    ['Brisbane',  '$480,000', '3.50%', '3.95%', '3.75%'],
+    ['Melbourne', '$620,000', '3.50%', '3.95%', '3.75%'],
+    ['Adelaide',  '$430,000', '3.50%', '3.95%', '3.75%'],
+  ]}]
+}
+
+const ctxPR2 = {
+  title: 'Regional Apartment Prices & Fixed Home Loan Rates',
+  tables: [{ headers: ['Region', 'Median Unit Value', 'Alpha Bank', 'Beta Bank', 'Gamma Bank'], rows: [
+    ['Newcastle',      '$520,000', '4.10%', '4.50%', '4.25%'],
+    ['Wollongong',     '$580,000', '4.10%', '4.50%', '4.25%'],
+    ['Geelong',        '$490,000', '4.10%', '4.50%', '4.25%'],
+    ['Gold Coast',     '$610,000', '4.10%', '4.50%', '4.25%'],
+    ['Sunshine Coast', '$640,000', '4.10%', '4.50%', '4.25%'],
+  ]}]
+}
+
+const ctxPR3 = {
+  title: 'Capital City Property Indexes & Package Rates',
+  tables: [{ headers: ['City', 'Median House Price', 'Pacific Bank', 'Atlantic Bank', 'Continental Bank'], rows: [
+    ['Perth',    '$540,000', '3.80%', '3.65%', '3.90%'],
+    ['Canberra', '$790,000', '3.80%', '3.65%', '3.90%'],
+    ['Darwin',   '$410,000', '3.80%', '3.65%', '3.90%'],
+    ['Adelaide', '$460,000', '3.80%', '3.65%', '3.90%'],
+  ]}]
+}
+
+const ctxPR4 = {
+  title: 'Metro Commercial Real Estate Pricing',
+  tables: [{ headers: ['Zone', 'Median Warehouse Price', 'Lender A', 'Lender B', 'Lender C'], rows: [
+    ['Zone 1 (Inner)',  '$920,000', '5.20%', '4.95%', '5.10%'],
+    ['Zone 2 (Middle)', '$740,000', '5.20%', '4.95%', '5.10%'],
+    ['Zone 3 (Outer)',  '$580,000', '5.20%', '4.95%', '5.10%'],
+  ]}]
+}
+
+const ctxPR5 = {
+  title: 'Rural & Agricultural Land Listings',
+  tables: [{ headers: ['District', 'Median Farm Price', 'AgriBank', 'RuralCredit', 'National'], rows: [
+    ['Riverina',  '$680,000', '4.40%', '4.15%', '4.60%'],
+    ['Mallee',    '$390,000', '4.40%', '4.15%', '4.60%'],
+    ['Gippsland', '$720,000', '4.40%', '4.15%', '4.60%'],
+    ['Hunter',    '$810,000', '4.40%', '4.15%', '4.60%'],
+  ]}]
+}
+
+const ctxPR6 = {
+  title: 'Coastal Holiday Home Markets',
+  tables: [{ headers: ['Town', 'Median Property Value', 'Bank North', 'Bank South', 'Bank West'], rows: [
+    ['Byron Bay',    '$980,000', '4.75%', '4.30%', '4.65%'],
+    ['Noosa Heads',  '$910,000', '4.75%', '4.30%', '4.65%'],
+    ['Lorne',        '$840,000', '4.75%', '4.30%', '4.65%'],
+    ['Port Douglas', '$630,000', '4.75%', '4.30%', '4.65%'],
+  ]}]
+}
+
+const ctxPR7 = {
+  title: 'High-Density Residential Developments',
+  tables: [{ headers: ['Suburb', 'Median Townhouse Price', 'Apex Finance', 'Summit Loans', 'Vertex Mutual'], rows: [
+    ['Parramatta',       '$710,000', '5.50%', '5.25%', '5.60%'],
+    ['Richmond',         '$780,000', '5.50%', '5.25%', '5.60%'],
+    ['Fortitude Valley', '$590,000', '5.50%', '5.25%', '5.60%'],
+  ]}]
+}
+
+const ctxPR8 = {
+  title: 'Mining Town Infrastructure & Investment Real Estate',
+  tables: [{ headers: ['Location', 'Median House Value', 'Mutual A', 'Mutual B', 'Mutual C'], rows: [
+    ['Karratha',     '$640,000', '6.10%', '5.85%', '5.95%'],
+    ['Port Hedland', '$690,000', '6.10%', '5.85%', '5.95%'],
+    ['Moranbah',     '$420,000', '6.10%', '5.85%', '5.95%'],
+  ]}]
+}
+
+const ctxPR9 = {
+  title: 'Capital Territory Residential Sectors',
+  tables: [{ headers: ['District Sector', 'Median Dwelling Price', 'Trust Bank', 'Sterling Home', 'Federal Credit'], rows: [
+    ['Belconnen',   '$560,000', '3.90%', '4.20%', '4.05%'],
+    ['Gungahlin',   '$630,000', '3.90%', '4.20%', '4.05%'],
+    ['Tuggeranong', '$580,000', '3.90%', '4.20%', '4.05%'],
+  ]}]
+}
+
+const ctxPR10 = {
+  title: 'Metropolitan Premium Blue-Chip Suburbs',
+  tables: [{ headers: ['Suburb', 'Median Price', 'Tier 1 Bank', 'Tier 2 Bank', 'Private Lender'], rows: [
+    ['Toorak',    '$1,850,000', '4.80%', '5.15%', '4.90%'],
+    ['Mosman',    '$2,100,000', '4.80%', '5.15%', '4.90%'],
+    ['Cottesloe', '$1,650,000', '4.80%', '5.15%', '4.90%'],
+  ]}]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -2638,6 +2737,158 @@ const questions = [
     answer: '19651.48'
   },
 
+  // CH — Capital city home values: highest-lowest diff | 1-year interest with deposit
+  {
+    group: 'CH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR1,
+    question: 'What is the difference between the median home value in the highest-priced city and the lowest-priced city listed in the data?',
+    answer: '340000'
+  },
+  {
+    group: 'CH', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR1,
+    question: 'Ricky decides to buy a house at the median value in Hobart and has saved a 20% deposit. How much interest would he pay for the first year if he borrows from Bank #3?',
+    answer: '13200'
+  },
+
+  // CI — Regional apartments: second highest city | 1-year interest with deposit
+  {
+    group: 'CI', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxPR2,
+    question: 'Which region has the second highest median unit value, and what is its value?',
+    options: [
+      'Gold Coast, $610,000',
+      'Wollongong, $580,000',
+      'Sunshine Coast, $640,000',
+      'Newcastle, $520,000',
+    ],
+    answer: 'Gold Coast, $610,000'
+  },
+  {
+    group: 'CI', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR2,
+    question: 'An investor purchases a unit at the median value on the Gold Coast. If they provide a 15% deposit upfront, calculate the total dollar interest owed during the first year using Alpha Bank.',
+    answer: '21258.50'
+  },
+
+  // CJ — Capital city comparison: Perth vs Darwin cost diff | 1-year interest with deposit
+  {
+    group: 'CJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR3,
+    question: 'If you buy a median house in Perth instead of Darwin, how much more money does the property cost?',
+    answer: '130000'
+  },
+  {
+    group: 'CJ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR3,
+    question: 'Chloe buys a property at the median price in Canberra. She puts down a 25% deposit. How much interest does she pay in Year 1 if she uses Atlantic Bank?',
+    answer: '21626.25'
+  },
+
+  // CK — Commercial warehouses: mean price | 1-year interest with deposit
+  {
+    group: 'CK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR4,
+    question: 'Calculate the average (mean) median warehouse price across all three zones combined.',
+    answer: '746666.67'
+  },
+  {
+    group: 'CK', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR4,
+    question: 'A business buys a warehouse in Zone 2. The bank requires a strict 30% deposit. Find the total interest paid in the first year under Lender B.',
+    answer: '25641'
+  },
+
+  // CL — Agricultural land: count above threshold | 1-year interest with deposit
+  {
+    group: 'CL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR5,
+    question: 'How many of the listed districts have a median farm price that is strictly greater than $650,000?',
+    answer: '3'
+  },
+  {
+    group: 'CL', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR5,
+    question: 'A primary producer purchases a farm in the Mallee region. They secure the property using a 10% cash deposit. How much interest do they owe at the end of Year 1 using RuralCredit?',
+    answer: '14566.50'
+  },
+
+  // CM — Coastal holiday homes: percentage comparison | interest difference between lenders
+  {
+    group: 'CM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR6,
+    question: 'What percentage of the Byron Bay median value is the Port Douglas median value? (Round your answer to two decimal places)',
+    answer: '64.29'
+  },
+  {
+    group: 'CM', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR6,
+    question: 'A buyer chooses a property in Lorne and pays a 20% deposit. What is the difference in first-year interest payments if they choose Bank South instead of Bank North?',
+    answer: '3024'
+  },
+
+  // CN — High-density residential: percentage price increase | fixed cash deposit interest
+  {
+    group: 'CN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR7,
+    question: 'If property prices in Parramatta increase by 12% next year, what will its new median townhouse price be?',
+    answer: '795200'
+  },
+  {
+    group: 'CN', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR7,
+    question: 'Elena purchases a townhouse in Richmond. Instead of a flat percentage, she pays a fixed cash deposit of exactly $150,000 upfront. Calculate the amount of interest she will pay in her first year with Summit Loans.',
+    answer: '33075'
+  },
+
+  // CO — Mining towns: percentage of another city | loan establishment fee + interest
+  {
+    group: 'CO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR8,
+    question: "Moranbah's median house value is what percentage of Port Hedland's median house value? (Round your answer to the nearest whole percentage)",
+    answer: '61'
+  },
+  {
+    group: 'CO', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR8,
+    question: 'A buyer purchases a home in Karratha with a 20% deposit. The bank adds a one-off 2% loan establishment fee to the initial loan balance before interest is calculated. What is the total interest paid in Year 1 using Mutual B?',
+    answer: '30551.04'
+  },
+
+  // CP — Capital territory: budget shortfall | interest-only 2-year total
+  {
+    group: 'CP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxPR9,
+    question: 'If a buyer has a budget exactly equal to the median dwelling price of Belconnen, how much more money do they need to purchase a property at the median price in Gungahlin?',
+    answer: '70000'
+  },
+  {
+    group: 'CP', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR9,
+    question: 'Marcus buys a home in Tuggeranong. He saves a 15% deposit. His loan is interest-only, meaning interest is calculated on the unchanged principal balance each year. How much total interest will he pay over the first 2 years combined with Federal Credit?',
+    answer: '39933'
+  },
+
+  // CQ — Premium suburbs: dual price change comparison | stamp duty bundled loan + interest
+  {
+    group: 'CQ', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxPR10,
+    question: "If Mosman's property values decline by 5% while Cottesloe's property values simultaneously gain 8%, which suburb will have the higher value and by how much?",
+    options: [
+      'Mosman is higher, by $213,000',
+      'Cottesloe is higher, by $213,000',
+      'Mosman is higher, by $345,000',
+      'Both suburbs will have the same value',
+    ],
+    answer: 'Mosman is higher, by $213,000'
+  },
+  {
+    group: 'CQ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxPR10,
+    question: "An investor buys a luxury home in Toorak and pays a 20% deposit. Government stamp duty equal to 5% of the full purchase price is bundled directly into the total loan balance. What is the total interest charged in the first year by Tier 1 Bank?",
+    answer: '75480'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2663,6 +2914,16 @@ const units = {
   BX: ['$', '$', '$'], BY: ['$', '$', '$'], BZ: ['$', '$', '$'],
   CA: ['$', '$', '$'], CB: ['$', '$', '$'], CC: ['$', '$', '$'],
   CD: ['$', '$', '$'], CE: ['$', '$', '$'], CF: ['$', '$', '$'], CG: ['$', '$', '$'],
+  CH: ['$', '$'],
+  CI: [null, '$'],
+  CJ: ['$', '$'],
+  CK: ['$', '$'],
+  CL: [null, '$'],
+  CM: ['%', '$'],
+  CN: ['$', '$'],
+  CO: ['%', '$'],
+  CP: ['$', '$'],
+  CQ: [null, '$'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3016,6 +3277,46 @@ const methods = {
     `Financed amount = $38,500 − $5,500 trade-in = $33,000\nTotal repaid = $690/month × 60 months = $41,400\nTotal interest = $41,400 − $33,000 = $8,400`,
     `Loan = $38,500 − $5,500 trade-in = $33,000\nMonthly interest rate = 8.4% ÷ 12 = 0.7% = 0.007\n\nMonth 1:\n  Interest = $33,000.00 × 0.007 = $231.00\n  Balance  = $33,000.00 + $231.00 − $1,000.00 = $32,231.00\n\nMonth 2:\n  Interest = $32,231.00 × 0.007 = $225.62\n  Balance  = $32,231.00 + $225.62 − $1,000.00 = $31,456.62\n\nMonth 3:\n  Interest = $31,456.62 × 0.007 = $220.20\n  Balance  = $31,456.62 + $220.20 − $1,000.00 = $30,676.82\n\n(Exact unrounded answer: $30,676.81)`,
     `Year 1: $38,500.00 × (1 − 24.0%) = $38,500.00 × 0.760 = $29,260.00\nYear 2: $29,260.00 × (1 − 15.2%) = $29,260.00 × 0.848 = $24,812.48\nYear 3: $24,812.48 × (1 − 12.0%) = $24,812.48 × 0.880 = $21,834.98\nYear 4: $21,834.98 × (1 − 10.0%) = $21,834.98 × 0.900 = $19,651.48`,
+  ],
+  CH: [
+    `Identify highest and lowest median values:\n  Highest: Sydney    = $770,000\n  Lowest:  Adelaide  = $430,000\n\nDifference = $770,000 − $430,000 = $340,000`,
+    `Hobart median: $440,000\n20% deposit = $440,000 × 0.20 = $88,000\nLoan amount = $440,000 − $88,000 = $352,000\n\nBank #3 rate = 3.75%\nYear 1 interest = $352,000 × 0.0375 = $13,200`,
+  ],
+  CI: [
+    `Sort regions from highest to lowest median unit value:\n  1st: Sunshine Coast  $640,000\n  2nd: Gold Coast      $610,000  ← second highest\n  3rd: Wollongong      $580,000\n  4th: Newcastle       $520,000\n  5th: Geelong         $490,000`,
+    `Gold Coast median: $610,000\n15% deposit = $610,000 × 0.15 = $91,500\nLoan amount = $610,000 − $91,500 = $518,500\n\nAlpha Bank rate = 4.10%\nYear 1 interest = $518,500 × 0.041 = $21,258.50`,
+  ],
+  CJ: [
+    `Perth median:  $540,000\nDarwin median: $410,000\n\nDifference = $540,000 − $410,000 = $130,000`,
+    `Canberra median: $790,000\n25% deposit = $790,000 × 0.25 = $197,500\nLoan amount = $790,000 − $197,500 = $592,500\n\nAtlantic Bank rate = 3.65%\nYear 1 interest = $592,500 × 0.0365 = $21,626.25`,
+  ],
+  CK: [
+    `Sum all three zones:\n  Zone 1 (Inner):  $920,000\n  Zone 2 (Middle): $740,000\n  Zone 3 (Outer):  $580,000\n  Total = $2,240,000\n\nMean = $2,240,000 ÷ 3 = $746,666.67`,
+    `Zone 2 median: $740,000\n30% deposit = $740,000 × 0.30 = $222,000\nLoan amount = $740,000 − $222,000 = $518,000\n\nLender B rate = 4.95%\nYear 1 interest = $518,000 × 0.0495 = $25,641`,
+  ],
+  CL: [
+    `Check each district against $650,000:\n  Riverina:  $680,000 > $650,000  ✓\n  Mallee:    $390,000             ✗\n  Gippsland: $720,000 > $650,000  ✓\n  Hunter:    $810,000 > $650,000  ✓\n\n3 districts exceed $650,000`,
+    `Mallee median: $390,000\n10% deposit = $390,000 × 0.10 = $39,000\nLoan amount = $390,000 − $39,000 = $351,000\n\nRuralCredit rate = 4.15%\nYear 1 interest = $351,000 × 0.0415 = $14,566.50`,
+  ],
+  CM: [
+    `Percentage = (Port Douglas ÷ Byron Bay) × 100\n= ($630,000 ÷ $980,000) × 100\n= 0.64285... × 100\n= 64.29% (rounded to 2 decimal places)`,
+    `Lorne median: $840,000\n20% deposit = $840,000 × 0.20 = $168,000\nLoan = $840,000 − $168,000 = $672,000\n\nBank North (4.75%): $672,000 × 0.0475 = $31,920\nBank South (4.30%): $672,000 × 0.043  = $28,896\n\nSaving by choosing Bank South: $31,920 − $28,896 = $3,024`,
+  ],
+  CN: [
+    `Current Parramatta median: $710,000\n12% increase: $710,000 × 1.12 = $795,200`,
+    `Richmond median: $780,000\nFixed cash deposit: $150,000\nLoan amount = $780,000 − $150,000 = $630,000\n\nSummit Loans rate = 5.25%\nYear 1 interest = $630,000 × 0.0525 = $33,075`,
+  ],
+  CO: [
+    `Moranbah: $420,000\nPort Hedland: $690,000\n\nPercentage = ($420,000 ÷ $690,000) × 100\n= 0.60869... × 100\n= 60.87%\n≈ 61% (rounded to nearest whole %)`,
+    `Karratha median: $640,000\n20% deposit = $640,000 × 0.20 = $128,000\nInitial loan = $640,000 − $128,000 = $512,000\n\nEstablishment fee (2% of loan) = $512,000 × 0.02 = $10,240\nAdjusted loan balance = $512,000 + $10,240 = $522,240\n\nMutual B rate = 5.85%\nYear 1 interest = $522,240 × 0.0585 = $30,551.04`,
+  ],
+  CP: [
+    `Gungahlin median:  $630,000\nBelconnen budget:  $560,000\n\nShortfall = $630,000 − $560,000 = $70,000`,
+    `Tuggeranong median: $580,000\n15% deposit = $580,000 × 0.15 = $87,000\nLoan amount = $580,000 − $87,000 = $493,000\n\nFederal Credit rate = 4.05%\nYear 1 interest = $493,000 × 0.0405 = $19,966.50\n\nInterest-only: principal stays at $493,000\nYear 2 interest = $493,000 × 0.0405 = $19,966.50\n\nTotal 2-year interest = $19,966.50 × 2 = $39,933`,
+  ],
+  CQ: [
+    `Mosman (−5%):    $2,100,000 × 0.95 = $1,995,000\nCottesloe (+8%): $1,650,000 × 1.08 = $1,782,000\n\nMosman ($1,995,000) > Cottesloe ($1,782,000)\nDifference = $1,995,000 − $1,782,000 = $213,000`,
+    `Toorak median: $1,850,000\n20% deposit = $1,850,000 × 0.20 = $370,000\nBase loan = $1,850,000 − $370,000 = $1,480,000\n\nStamp duty (5% of purchase price) = $1,850,000 × 0.05 = $92,500\nBundled loan total = $1,480,000 + $92,500 = $1,572,500\n\nTier 1 Bank rate = 4.80%\nYear 1 interest = $1,572,500 × 0.048 = $75,480`,
   ],
 }
 
