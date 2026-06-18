@@ -1035,6 +1035,36 @@ const ctxF5b = {
   subtitle: 'Reservoir Tank 3 holds 3,400 L of liquid (0.85 m depth × 4.0 m² base area × 1,000 L/m³). A drainage pump removes water at a constant rate of 12.5 L per minute.',
 }
 
+// ── Building / construction contexts (ctxB1–ctxB3) ───────────────────────────
+
+const ctxB1 = {
+  title: 'Timber Slabs — Post-Production Milling',
+  tables: [{ headers: ['Timber Supply Co.', 'Product', 'Advertised Special', 'RRP Standard Price'], rows: [
+    ['EcoTimber Hub', 'Tasmanian Oak Slab', 'Buy 2 get 25% off total timber cost', '$200.00 each'],
+    ['The Wood Yard', 'Tasmanian Oak Slab', 'SALE $145.50 each',                   'Save $54.50 from RRP'],
+  ]}]
+}
+
+const ctxB2 = {
+  title: 'Energy Efficiency Upgrade Ledger',
+  tables: [{ headers: ['Renovation Framework', 'Initial Procurement Cost', 'Projected Energy Savings per Year'], rows: [
+    ['Cavity Wall Insulation',  '$2,200', '$440'],
+    ['Double Glazing Retrofit', '$5,600', '$510'],
+    ['Draft Proofing Seals',    '$1,250', '$250'],
+    ['Roof Space Batts',        '$1,800', '$360'],
+  ]}]
+}
+
+const ctxB3 = {
+  title: 'Foundation Reinforcement Matrix',
+  tables: [{ headers: ['Mesh Grade', 'List Price per Sheet', 'Sheet Area Coverage', 'Steel Yield Strength'], rows: [
+    ['SL62 Mesh', '$80',  '12.0 m²', '500 MPa'],
+    ['SL72 Mesh', '$110', '12.0 m²', '500 MPa'],
+    ['SL82 Mesh', '$145', '10.5 m²', '550 MPa'],
+    ['SL92 Mesh', '$190', '10.5 m²', '600 MPa'],
+  ]}]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -2050,6 +2080,61 @@ const questions = [
     answer: '272'
   },
 
+  // ── Building / Construction Sets (BN–BP) ─────────────────────────────────
+
+  // BN — Timber slab price comparison
+  {
+    group: 'BN', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB1,
+    question: 'How much would a builder need to pay during the sale for two Tasmanian Oak slabs at EcoTimber Hub?',
+    options: ['$300.00', '$350.00', '$375.00', '$400.00'],
+    answer: '$300.00'
+  },
+  {
+    group: 'BN', type: 'multiple_choice', category: 'Retail and Finance',
+    context: ctxB1,
+    question: 'Consider the statements about the two offers. Which of the following is true?',
+    options: [
+      'It is cheaper to buy one individual slab at EcoTimber Hub than at The Wood Yard',
+      'It is cheaper to buy three slabs at EcoTimber Hub than at The Wood Yard',
+      'The standard un-discounted RRP at The Wood Yard is exactly $200.00',
+      'The Wood Yard sale saves you exactly 30% off their original RRP',
+    ],
+    answer: 'The standard un-discounted RRP at The Wood Yard is exactly $200.00'
+  },
+
+  // BO — Energy efficiency upgrade package savings | payback period
+  {
+    group: 'BO', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB2,
+    question: 'A contractor offers a package deal of $9,500 to complete all four renovations simultaneously. How much money is saved by agreeing to this package deal compared to paying the individual initial costs separately?',
+    options: ['$1,150', '$1,350', '$1,550', '$1,750'],
+    answer: '$1,350'
+  },
+  {
+    group: 'BO', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB2,
+    question: 'If a client installs only the Cavity Wall Insulation, approximately how many years will it take for the cumulative annual energy savings to completely equal the initial installation cost?',
+    options: ['3 years', '5 years', '7 years', '9 years'],
+    answer: '5 years'
+  },
+
+  // BP — Mesh order cost | best MPa-per-dollar grade
+  {
+    group: 'BP', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB3,
+    question: 'A concrete finishing team orders exactly 4 sheets of SL72 Mesh and 2 sheets of SL92 Mesh. What is the total material cost of this order before delivery fees?',
+    options: ['$720', '$820', '$890', '$940'],
+    answer: '$820'
+  },
+  {
+    group: 'BP', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxB3,
+    question: 'Which mesh grade offers the highest proportion of strength performance relative to its unit sheet cost (MPa per dollar spent on a single sheet)?',
+    options: ['SL62 Mesh', 'SL72 Mesh', 'SL82 Mesh', 'SL92 Mesh'],
+    answer: 'SL62 Mesh'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2069,6 +2154,7 @@ const units = {
   AY: ['min', 'min'], AZ: ['min', 'min'], BA: ['min', 'min'], BB: ['min', 'min'], BC: ['min', 'min'],
   BD: ['min', 'min'], BE: ['min', 'min'], BF: ['min', 'min'], BG: ['min', 'min'], BH: ['min', 'min'],
   BI: ['mL', null], BJ: ['L', 'barrels'], BK: ['L', 'min'], BL: ['mL', 'mL'], BM: ['L', 'min'],
+  BN: [null, null], BO: [null, null], BP: [null, null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -2332,6 +2418,18 @@ const methods = {
   BM: [
     `Volume = Floor area × Liquid depth\n  = 4.0 m² × 0.85 m = 3.4 m³\n\nConvert to litres:\n  3.4 m³ × 1,000 L/m³ = 3,400 L`,
     `Time = Volume ÷ Pump rate\n  = 3,400 L ÷ 12.5 L/min = 272 minutes`,
+  ],
+  BN: [
+    `EcoTimber Hub: "Buy 2 get 25% off total timber cost"\n  Standard price: $200.00 each\n  2 slabs = 2 × $200 = $400.00\n  25% discount: $400.00 × 0.75 = $300.00`,
+    `Check each statement against the tables:\n\n  A: 1 slab at EcoTimber = $200.00  |  1 slab at Wood Yard = $145.50\n     EcoTimber is MORE expensive → False\n\n  B: 3 slabs at EcoTimber = 3 × $200 × 0.75 = $450.00\n     3 slabs at Wood Yard  = 3 × $145.50 = $436.50\n     EcoTimber is MORE expensive → False\n\n  C: Wood Yard sale $145.50 + saving $54.50 = $200.00 ✓  → True\n\n  D: Discount % = $54.50 ÷ $200.00 × 100 = 27.25%, not 30% → False`,
+  ],
+  BO: [
+    `Sum the individual costs:\n  Cavity Wall Insulation:  $2,200\n  Double Glazing Retrofit:  $5,600\n  Draft Proofing Seals:     $1,250\n  Roof Space Batts:         $1,800\n  Total individual cost:   $10,850\n\nPackage deal: $9,500\nSavings: $10,850 − $9,500 = $1,350`,
+    `Payback period = Initial cost ÷ Annual savings\n  = $2,200 ÷ $440 per year\n  = 5 years exactly`,
+  ],
+  BP: [
+    `4 sheets SL72 × $110 = $440\n2 sheets SL92 × $190 = $380\nTotal: $440 + $380 = $820`,
+    `Calculate strength (MPa) per dollar for each grade:\n\n  SL62: 500 MPa ÷ $80  = 6.25 MPa/$  ← highest\n  SL72: 500 MPa ÷ $110 = 4.55 MPa/$\n  SL82: 550 MPa ÷ $145 = 3.79 MPa/$\n  SL92: 600 MPa ÷ $190 = 3.16 MPa/$\n\nSL62 delivers the most MPa per dollar spent.`,
   ],
 }
 
