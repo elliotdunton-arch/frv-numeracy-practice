@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import { getUsername, setUsername, getResultsForUser, getKnownUsers, deleteResult } from '../utils/resultStorage'
 
 const NUMERACY_CATEGORIES = [
@@ -297,11 +297,30 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [activeTab, setActiveTab] = useState(section) // 'numeracy' | 'literacy' | 'abstract' | 'progress'
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
+  const [topicsOpen, setTopicsOpen] = useState(false)
+  const [topicList, setTopicList] = useState([])
+  const [selectedTopics, setSelectedTopics] = useState(new Set())
+
+  useEffect(() => {
+    fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
+  }, [])
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
     if (tab !== 'progress') onSectionChange(tab)
   }
+
+  const toggleTopic = (name) => {
+    setSelectedTopics(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
+
+  const totalSelectedQs = topicList
+    .filter(t => selectedTopics.has(t.name))
+    .reduce((s, t) => s + t.questionCount, 0)
 
   const presets = [5, 10, 20, 30]
 
@@ -422,6 +441,60 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               />
               <span className="count-input-hint">questions (1–30) — or pick a preset above</span>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'numeracy' && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${topicsOpen ? ' tft-open' : ''}`}
+              onClick={() => { setTopicsOpen(o => !o); setSelectedTopics(new Set()) }}
+            >
+              <span className="tft-icon">{topicsOpen ? '▾' : '▸'}</span>
+              Practice by Topic
+            </button>
+
+            {topicsOpen && topicList.length > 0 && (
+              <div className="topic-panel">
+                <div className="topic-panel-actions">
+                  <button className="topic-action-btn" onClick={() => setSelectedTopics(new Set(topicList.map(t => t.name)))}>
+                    Select all
+                  </button>
+                  <button className="topic-action-btn" onClick={() => setSelectedTopics(new Set())}>
+                    Clear all
+                  </button>
+                </div>
+
+                <div className="topic-list">
+                  {topicList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedTopics.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedTopics.has(name)}
+                        onChange={() => toggleTopic(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedTopics.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedTopics.size} topic{selectedTopics.size !== 1 ? 's' : ''} · {totalSelectedQs} questions available
+                    </span>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedTopics])}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 

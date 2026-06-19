@@ -4137,8 +4137,44 @@ function shuffleByGroup(qs) {
   return result
 }
 
+// ── Topic buckets for focused practice ───────────────────────────────────────
+
+const TOPIC_GROUPS = {
+  'Crew Timesheets':          ['A','B','C','D','E','F','G','H','I','J'],
+  'Fleet Vehicle Costs':      ['K','L','M','N','O','P','Q','R','S','T'],
+  'Volume & Storage':         ['U','V','W','BI','BJ','BK','BL','BM'],
+  'Area & Measurement':       ['X','Y','Z','AA','AB','AC','AD'],
+  'Pay Gap & Wage Data':      ['AE','AF','AG','AH','AI','AJ','AK','AL','AM','AN'],
+  'Retail Price Comparisons': ['AO','AP','AQ','AR','AS','AT','AU','AV','AW','AX'],
+  'Travel & Commute Times':   ['AY','AZ','BA','BB','BC','BD','BE','BF','BG','BH'],
+  'Construction & Materials': ['BN','BO','BP','BQ','BR','BS','BT','BU','BV','BW'],
+  'Vehicle Finance':          ['BX','BY','BZ','CA','CB','CC','CD','CE','CF','CG'],
+  'Property & Real Estate':   ['CH','CI','CJ','CK','CL','CM','CN','CO','CP','CQ'],
+  'Cylinder Geometry':        ['CR','CS'],
+  'Energy & Nutrition':       ['CT','CU','CV','CW','CX'],
+  'Standard Drinks':          ['CY','CZ','DA','DB','DC','DD','DE','DF','DG','DH'],
+  'Shower Water Savings':     ['DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR'],
+  'Business Scenarios':       ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB'],
+}
+
+app.get('/api/topics', (req, res) => {
+  const result = Object.entries(TOPIC_GROUPS).map(([name, groups]) => {
+    const groupSet = new Set(groups)
+    const questionCount = questions.filter(q => groupSet.has(q.group)).length
+    return { name, questionCount }
+  })
+  res.json(result)
+})
+
 app.get('/api/questions', (req, res) => {
-  const shuffled = shuffleByGroup(questions)
+  const { topics } = req.query
+  let pool = questions
+  if (topics) {
+    const names = topics.split(',').map(t => t.trim())
+    const allowed = new Set(names.flatMap(n => TOPIC_GROUPS[n] || []))
+    pool = questions.filter(q => allowed.has(q.group))
+  }
+  const shuffled = shuffleByGroup(pool)
 
   const groupPos = {}
   const final = shuffled.map((q, i) => {

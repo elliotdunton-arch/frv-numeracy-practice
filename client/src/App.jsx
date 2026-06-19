@@ -15,18 +15,20 @@ export default function App() {
   const [error, setError] = useState(null)
   const [totalTime, setTotalTime] = useState(35 * 60)
 
-  const startTest = async (customCount = null) => {
+  const startTest = async (customCount = null, selectedTopics = null) => {
     setLoading(true)
     setError(null)
     try {
-      const endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : '/api/questions'
+      let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : '/api/questions'
+      if (selectedTopics && selectedTopics.length > 0) {
+        endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
+      }
       const res = await fetch(endpoint)
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
-      const defaultCount = section === 'literacy' ? 30 : 30
-      const selected = data.slice(0, customCount ?? defaultCount)
+      const selected = data.slice(0, customCount ?? 30)
       setQuestions(selected)
-      setTotalTime(customCount ? customCount * 70 : 35 * 60)
+      setTotalTime(selected.length * 70)
       setAnswers({})
       setStartTime(Date.now())
       setEndTime(null)
