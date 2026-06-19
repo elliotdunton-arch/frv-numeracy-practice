@@ -1836,6 +1836,1056 @@ const ctxFZ = {
   ]}]
 }
 
+// ── Fleet Vehicle Costs Level 2 contexts (GA–GJ) ──────────────────────────────
+
+const ctxGA = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Granite Ridge',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['FRV Alpha Ranger (A)', '$52,000', '$6,800', '$1,800'],
+    ['Stockman Lite (B)',    '$40,000', '$4,500', '$1,200'],
+  ]}]
+}
+const ctxGB = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Mulga Creek',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Pioneer HD-300 (A)', '$45,000', '$5,400', '$1,400'],
+    ['Bush Runner (B)',     '$35,000', '$3,800',   '$900'],
+  ]}]
+}
+const ctxGC = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Ironbark',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Terrain Master (A)', '$60,000', '$7,200', '$2,000'],
+    ['Ridge Runner (B)',   '$48,500', '$5,200', '$1,500'],
+  ]}]
+}
+const ctxGD = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Blue Hills',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Summit Pro 4WD (A)',    '$55,000', '$6,600', '$1,800'],
+    ['Flatlands Cruiser (B)', '$42,000', '$4,400', '$1,200'],
+  ]}]
+}
+const ctxGE = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Sandy Flats',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Desert Scout Elite (A)', '$49,000', '$6,600', '$2,000'],
+    ['Dunes Runner (B)',        '$37,000', '$4,700', '$1,700'],
+  ]}]
+}
+const ctxGF = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Red Ridge',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['FRV Titan 500 (A)',  '$72,000', '$8,500', '$2,000'],
+    ['Scout Pro 4WD (B)', '$58,000', '$6,200', '$1,400'],
+  ]}]
+}
+const ctxGG = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Saltbush',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Mountain Rover Elite (A)', '$65,000', '$7,800', '$2,000'],
+    ['Plateau Drifter (B)',      '$52,000', '$5,800', '$1,600'],
+  ]}]
+}
+const ctxGH = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Coolabah',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Creek Hopper XT (A)',  '$38,000', '$4,800', '$1,200'],
+    ['Ridge Rover Lite (B)', '$30,000', '$3,200',   '$800'],
+  ]}]
+}
+const ctxGI = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Spinifex',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['Outpost Commander (A)',  '$85,000', '$9,800', '$2,000'],
+    ['Ranch Drifter Pro (B)', '$68,000', '$7,300', '$1,800'],
+  ]}]
+}
+const ctxGJ = {
+  title: 'Fleet Vehicle Costs Level 2 — Station Mallee',
+  tables: [{ heading: 'Vehicle Comparison', headers: ['Vehicle', 'Purchase Price', 'Annual Fuel Saving', 'Annual Maintenance'], rows: [
+    ['FRV Heavy Hauler (A)',  '$78,000', '$9,200', '$2,200'],
+    ['Grassland Cruiser (B)', '$62,000', '$7,000', '$2,100'],
+  ]}]
+}
+
+// ── Volume & Storage Level 2 contexts (GK–GR) ─────────────────────────────────
+
+const ctxGK = {
+  title: 'Volume & Storage Level 2 — Dual Tank System',
+  tables: [{ heading: 'Tank Parameters', headers: ['Tank', 'Length', 'Width', 'Depth'], rows: [
+    ['Tank 1', '4 m', '2.5 m', '1.8 m'],
+    ['Tank 2', '3 m', '2 m',   '2 m'],
+  ]}],
+  note: '1 m³ = 1,000 L  |  Both tanks are currently 65% full'
+}
+const ctxGL = {
+  title: 'Volume & Storage Level 2 — Chemical Storage Container',
+  tables: [{ heading: 'Container Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Internal length',   '2.5 m'],
+    ['Internal width',    '1.6 m'],
+    ['Internal depth',    '1.2 m'],
+    ['Current fill level','80%'],
+    ['Pump drain rate',   '2,400 L/h'],
+    ['Conversion factor', '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGM = {
+  title: 'Volume & Storage Level 2 — Irrigation Reservoir',
+  tables: [{ heading: 'Reservoir Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Length',              '10 m'],
+    ['Width',               '8 m'],
+    ['Depth',               '2.5 m'],
+    ['Initial fill level',  '15%'],
+    ['Target fill level',   '90%'],
+    ['Fill rate',           '25,000 L/h'],
+    ['Conversion factor',   '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGN = {
+  title: 'Volume & Storage Level 2 — Station Holding Pond',
+  tables: [{ heading: 'Pond Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Length',            '6 m'],
+    ['Width',             '4 m'],
+    ['Depth',             '1.5 m'],
+    ['Initial fill level','90%'],
+    ['Final fill level',  '10%'],
+    ['Drain rate',        '18,000 L/h'],
+    ['Conversion factor', '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGO = {
+  title: 'Volume & Storage Level 2 — Collection Sump',
+  tables: [{ heading: 'Sump Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Length',              '4 m'],
+    ['Width',               '3 m'],
+    ['Depth',               '2 m'],
+    ['Starting fill level', '0% (empty)'],
+    ['Target fill level',   '55%'],
+    ['Fill rate',           '6,000 L/h'],
+    ['Conversion factor',   '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGP = {
+  title: 'Volume & Storage Level 2 — Station Holding Tank',
+  tables: [{ heading: 'Tank Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Internal length',    '5 m'],
+    ['Internal width',     '4 m'],
+    ['Internal depth',     '1.5 m'],
+    ['Target fill level',  '75% of total capacity'],
+    ['Conversion factor',  '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGQ = {
+  title: 'Volume & Storage Level 2 — Fire Suppression Reservoir',
+  tables: [{ heading: 'Reservoir Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Length',             '12 m'],
+    ['Width',              '8 m'],
+    ['Depth',              '3 m'],
+    ['Initial fill level', '25%'],
+    ['Target fill level',  '85%'],
+    ['Fill rate',          '48,000 L/h'],
+    ['Conversion factor',  '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxGR = {
+  title: 'Volume & Storage Level 2 — Chemical Dosing Tank',
+  tables: [{ heading: 'Tank Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Internal length',     '1.5 m'],
+    ['Internal width',      '1.2 m'],
+    ['Internal depth',      '0.8 m'],
+    ['Starting fill level', '100% (full)'],
+    ['Final fill level',    '15% remaining'],
+    ['Drain rate',          '480 L/h'],
+    ['Conversion factor',   '1 m³ = 1,000 L'],
+  ]}]
+}
+
+// ── Area & Measurement Level 2 contexts (GS–GY) ───────────────────────────────
+
+const ctxGS = {
+  title: 'Area & Measurement Level 2 — L-Shaped Garden Bed',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Outer rectangle',    '12 m × 8 m'],
+    ['Corner to remove',   '4 m × 3 m'],
+    ['Turf roll size',     '1.2 m × 1.0 m (covers 1.2 m²)'],
+    ['Waste allowance',    '5% extra for trimming'],
+    ['Cutting rule',       'Round up to whole rolls'],
+  ]}]
+}
+const ctxGT = {
+  title: 'Area & Measurement Level 2 — Composite Timber Deck',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Main deck',          '8 m × 4 m'],
+    ['Step extension',     '4 m × 2 m'],
+    ['Decking timber price','$45 per m²'],
+    ['Waste allowance',    '12% extra for cuts'],
+  ]}]
+}
+const ctxGU = {
+  title: 'Area & Measurement Level 2 — T-Shaped Grass Area',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Main rectangle',   '12 m × 6 m'],
+    ['Arm extension',    '4 m × 3 m'],
+    ['Seed bag coverage','6 m² per bag'],
+    ['Spread allowance', '15% extra for even coverage'],
+    ['Cutting rule',     'Round up to whole bags'],
+  ]}]
+}
+const ctxGV = {
+  title: 'Area & Measurement Level 2 — U-Shaped Courtyard Paving',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Outer rectangle',       '10 m × 8 m'],
+    ['Inner open area',       '6 m × 4 m'],
+    ['Paving stone coverage', '0.36 m² per stone'],
+    ['Waste allowance',       '10% extra for cuts'],
+    ['Cutting rule',          'Round up to whole stones'],
+  ]}]
+}
+const ctxGW = {
+  title: 'Area & Measurement Level 2 — L-Shaped Commercial Floor',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Main rectangle',      '15 m × 8 m'],
+    ['Side extension',      '5 m × 4 m'],
+    ['Carpet tile coverage','0.25 m² per tile'],
+    ['Waste allowance',     '8% extra for cuts'],
+    ['Cutting rule',        'Round up to whole tiles'],
+  ]}]
+}
+const ctxGX = {
+  title: 'Area & Measurement Level 2 — Rooftop Terrace with Planter',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Total terrace area',  '12 m × 9 m'],
+    ['Central planter box', '3 m × 4 m (subtract from total)'],
+    ['Decking board price', '$40 per m²'],
+    ['Waste allowance',     '15% extra for cuts'],
+  ]}]
+}
+const ctxGY = {
+  title: 'Area & Measurement Level 2 — Two-Zone Sports Ground',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Zone A',          '10 m × 8 m'],
+    ['Zone B',          '6 m × 5 m'],
+    ['Turf price',      '$38 per m²'],
+    ['Waste allowance', '10% extra for edging'],
+  ]}]
+}
+
+// ── Retail Price Comparisons Level 2 contexts (GZ, HA–HI) ────────────────────
+
+const ctxGZ = {
+  title: 'Retail Price Comparisons Level 2 — Eco Water Bottles',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['AquaStore', '$24 each', '12 units', '25% off'],
+    ['GreenFlow', '$22 each', '15 units', '20% off'],
+  ]}]
+}
+const ctxHA = {
+  title: 'Retail Price Comparisons Level 2 — Resistance Band Sets',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['StrengthCo', '$40 per set', '8 sets',  '15% off'],
+    ['PowerFlex',  '$35 per set', '10 sets', '20% off'],
+  ]}]
+}
+const ctxHB = {
+  title: 'Retail Price Comparisons Level 2 — Thermal Coffee Mugs',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['ThermoMax', '$32 each', '6 units', '20% off'],
+    ['CafeKeep',  '$29 each', '8 units', '15% off'],
+  ]}]
+}
+const ctxHC = {
+  title: 'Retail Price Comparisons Level 2 — Yoga Mats',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['FlexZone', '$85 each', '5 units', '18% off'],
+    ['OmShop',   '$80 each', '7 units', '10% off'],
+  ]}]
+}
+const ctxHD = {
+  title: 'Retail Price Comparisons Level 2 — Nutrition Bar Boxes',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['NutriPack',   '$52 per box', '4 boxes', '25% off'],
+    ['BarceloPro',  '$45 per box', '6 boxes', '20% off'],
+  ]}]
+}
+const ctxHE = {
+  title: 'Retail Price Comparisons Level 2 — Smartphone Cases',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['TechCover', '$18 each', '20 units', '30% off'],
+    ['SafeCase',  '$16 each', '25 units', '25% off'],
+  ]}]
+}
+const ctxHF = {
+  title: 'Retail Price Comparisons Level 2 — Scented Candles',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['ArōmaHome',  '$14 each', '12 units', '20% off'],
+    ['ScentWorks', '$13 each', '15 units', '15% off'],
+  ]}]
+}
+const ctxHG = {
+  title: 'Retail Price Comparisons Level 2 — Vitamin Supplements',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['VitaLife',    '$35 per bottle', '6 bottles',  '15% off'],
+    ['HealthFirst', '$32 per bottle', '8 bottles',  '10% off'],
+  ]}]
+}
+const ctxHH = {
+  title: 'Retail Price Comparisons Level 2 — Office Stationery Packs',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['OfficeMax',  '$30 per pack', '10 packs', '20% off'],
+    ['StationPro', '$28 per pack', '12 packs', '25% off'],
+  ]}]
+}
+const ctxHI = {
+  title: 'Retail Price Comparisons Level 2 — Safety Gloves',
+  tables: [{ heading: 'Supplier Pricing', headers: ['Supplier', 'Unit Price', 'Minimum for Bulk Deal', 'Discount'], rows: [
+    ['SafetyFirst', '$12 per pair', '24 pairs', '30% off'],
+    ['ProProtect',  '$11 per pair', '30 pairs', '25% off'],
+  ]}]
+}
+
+// ── Construction & Materials Level 2 contexts (HJ–HS) ─────────────────────────
+
+const ctxHJ = {
+  title: 'Construction & Materials Level 2 — Plasterboard Supply',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Total area to cover', '45 m²'],
+    ['Sheet size',          '1.2 m × 2.4 m (2.88 m² per sheet)'],
+    ['Sheet price',         '$24 per sheet'],
+    ['Waste allowance',     '10% extra for cuts and joins'],
+    ['Cutting rule',        'Round up to whole sheets'],
+  ]}]
+}
+const ctxHK = {
+  title: 'Construction & Materials Level 2 — Concrete Supply',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Slab length',       '12 m'],
+    ['Slab width',        '4 m'],
+    ['Slab thickness',    '0.15 m'],
+    ['Concrete price',    '$280 per m³'],
+    ['Waste allowance',   '5% extra'],
+    ['Conversion factor', '1 m³ = 1,000 L'],
+  ]}]
+}
+const ctxHL = {
+  title: 'Construction & Materials Level 2 — Brick Supply',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Wall length',      '8 m'],
+    ['Wall height',      '1.2 m'],
+    ['Brick coverage',   '35 bricks per m²'],
+    ['Brick price',      '$1.80 per brick'],
+    ['Waste allowance',  '8% extra for cuts'],
+    ['Cutting rule',     'Round up to whole bricks'],
+  ]}]
+}
+const ctxHM = {
+  title: 'Construction & Materials Level 2 — Steel Reinforcing Mesh',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Slab length',      '17 m'],
+    ['Slab width',       '9 m'],
+    ['Sheet size',       '3 m × 2 m (covers 6 m² per sheet)'],
+    ['Sheet price',      '$92 per sheet'],
+    ['Overlap allowance','15% extra for lap joins'],
+    ['Cutting rule',     'Round up to whole sheets'],
+  ]}]
+}
+const ctxHN = {
+  title: 'Construction & Materials Level 2 — Roof Tiles',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Roof area',        '55 m²'],
+    ['Tile coverage',    '0.32 m² per tile'],
+    ['Tile price',       '$4.50 per tile'],
+    ['Waste allowance',  '10% extra for cuts and breakage'],
+    ['Cutting rule',     'Round up to whole tiles'],
+  ]}]
+}
+const ctxHO = {
+  title: 'Construction & Materials Level 2 — Insulation Batts',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Ceiling area',     '64 m²'],
+    ['Batt coverage',    '0.72 m² per batt (1200 mm × 600 mm)'],
+    ['Batt price',       '$8.50 per batt'],
+    ['Waste allowance',  '5% extra for cuts around joists'],
+    ['Cutting rule',     'Round up to whole batts'],
+  ]}]
+}
+const ctxHP = {
+  title: 'Construction & Materials Level 2 — Timber Decking Boards',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Deck area',        '30 m²'],
+    ['Board coverage',   '0.378 m² per board (4.2 m × 0.09 m)'],
+    ['Board price',      '$28 per board'],
+    ['Waste allowance',  '12% extra for cuts'],
+    ['Cutting rule',     'Round up to whole boards'],
+  ]}]
+}
+const ctxHQ = {
+  title: 'Construction & Materials Level 2 — Concrete Block Supply',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Wall length',      '8.5 m'],
+    ['Wall height',      '0.6 m'],
+    ['Block face area',  '0.09 m² per block (450 mm × 200 mm)'],
+    ['Block price',      '$12 per block'],
+    ['Waste allowance',  '5% extra for cuts'],
+    ['Cutting rule',     'Round up to whole blocks'],
+  ]}]
+}
+const ctxHR = {
+  title: 'Construction & Materials Level 2 — Clay Paver Supply',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Courtyard area',   '36 m²'],
+    ['Paver coverage',   '0.08 m² per paver (400 mm × 200 mm)'],
+    ['Paver price',      '$3.60 per paver'],
+    ['Waste allowance',  '10% extra for cuts and edging'],
+    ['Cutting rule',     'Round up to whole pavers'],
+  ]}]
+}
+const ctxHS = {
+  title: 'Construction & Materials Level 2 — Ceiling Plasterboard',
+  tables: [{ heading: 'Project Parameters', headers: ['Parameter', 'Value'], rows: [
+    ['Ceiling area',     '55 m²'],
+    ['Sheet coverage',   '1.62 m² per sheet (1.8 m × 0.9 m)'],
+    ['Sheet price',      '$22 per sheet'],
+    ['Waste allowance',  '8% extra for cuts'],
+    ['Cutting rule',     'Round up to whole sheets'],
+  ]}]
+}
+
+// ── Vehicle Finance Level 2 contexts (HT–IC) ──────────────────────────────────
+
+const ctxHT = {
+  title: 'Vehicle Finance Level 2 — Toyota Corolla ($32,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$6,400 (20%)',  '$3,200 (10%)'],
+    ['Loan amount',       '$25,600',       '$28,800'],
+    ['Monthly repayment', '$586',          '$525'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHU = {
+  title: 'Vehicle Finance Level 2 — Hyundai i30 ($28,500)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$4,275 (15%)',  '$1,425 (5%)'],
+    ['Loan amount',       '$24,225',       '$27,075'],
+    ['Monthly repayment', '$580',          '$490'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHV = {
+  title: 'Vehicle Finance Level 2 — Mazda CX-5 ($38,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$9,500 (25%)',  '$5,700 (15%)'],
+    ['Loan amount',       '$28,500',       '$32,300'],
+    ['Monthly repayment', '$680',          '$612'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHW = {
+  title: 'Vehicle Finance Level 2 — Honda Civic ($27,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$5,400 (20%)',  '$2,700 (10%)'],
+    ['Loan amount',       '$21,600',       '$24,300'],
+    ['Monthly repayment', '$510',          '$468'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHX = {
+  title: 'Vehicle Finance Level 2 — Ford Ranger ($45,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$9,000 (20%)',  '$4,500 (10%)'],
+    ['Loan amount',       '$36,000',       '$40,500'],
+    ['Monthly repayment', '$850',          '$770'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHY = {
+  title: 'Vehicle Finance Level 2 — Subaru Outback ($39,500)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$9,875 (25%)',  '$5,925 (15%)'],
+    ['Loan amount',       '$29,625',       '$33,575'],
+    ['Monthly repayment', '$720',          '$636'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxHZ = {
+  title: 'Vehicle Finance Level 2 — Mitsubishi Outlander ($42,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$8,400 (20%)',  '$4,200 (10%)'],
+    ['Loan amount',       '$33,600',       '$37,800'],
+    ['Monthly repayment', '$790',          '$720'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxIA = {
+  title: 'Vehicle Finance Level 2 — Volkswagen Passat ($36,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$7,200 (20%)',  '$5,400 (15%)'],
+    ['Loan amount',       '$28,800',       '$30,600'],
+    ['Monthly repayment', '$680',          '$590'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxIB = {
+  title: 'Vehicle Finance Level 2 — Kia Sportage ($33,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$8,250 (25%)',  '$3,300 (10%)'],
+    ['Loan amount',       '$24,750',       '$29,700'],
+    ['Monthly repayment', '$598',          '$568'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+const ctxIC = {
+  title: 'Vehicle Finance Level 2 — Nissan X-Trail ($41,000)',
+  tables: [{ heading: 'Financing Options', headers: ['', 'Option A (4-year)', 'Option B (5-year)'], rows: [
+    ['Deposit',           '$8,200 (20%)',  '$6,150 (15%)'],
+    ['Loan amount',       '$32,800',       '$34,850'],
+    ['Monthly repayment', '$775',          '$665'],
+    ['Loan term',         '48 months',     '60 months'],
+  ]}]
+}
+
+// ── Property & Real Estate Level 2 contexts (ID–IM) ───────────────────────────
+
+const ctxID = {
+  title: 'Property & Real Estate Level 2 — Residential Purchase',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$520,000'],
+    ['Deposit (20%)',       '$104,000'],
+    ['Loan amount',         '$416,000'],
+    ['Initial interest rate','5.5% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','7.2% per annum'],
+  ]}]
+}
+const ctxIE = {
+  title: 'Property & Real Estate Level 2 — Inner-City Apartment',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$680,000'],
+    ['Deposit (15%)',       '$102,000'],
+    ['Loan amount',         '$578,000'],
+    ['Initial interest rate','4.8% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','6.6% per annum'],
+  ]}]
+}
+const ctxIF = {
+  title: 'Property & Real Estate Level 2 — Regional Home',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$450,000'],
+    ['Deposit (20%)',       '$90,000'],
+    ['Loan amount',         '$360,000'],
+    ['Initial interest rate','5.0% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','7.5% per annum'],
+  ]}]
+}
+const ctxIG = {
+  title: 'Property & Real Estate Level 2 — Prestige Suburb',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$820,000'],
+    ['Deposit (25%)',       '$205,000'],
+    ['Loan amount',         '$615,000'],
+    ['Initial interest rate','4.2% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','5.4% per annum'],
+  ]}]
+}
+const ctxIH = {
+  title: 'Property & Real Estate Level 2 — First Home Buyer',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$350,000'],
+    ['Deposit (10%)',       '$35,000'],
+    ['Loan amount',         '$315,000'],
+    ['Initial interest rate','5.8% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','8.4% per annum'],
+  ]}]
+}
+const ctxII = {
+  title: 'Property & Real Estate Level 2 — Coastal Property',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$590,000'],
+    ['Deposit (20%)',       '$118,000'],
+    ['Loan amount',         '$472,000'],
+    ['Initial interest rate','4.5% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','6.0% per annum'],
+  ]}]
+}
+const ctxIJ = {
+  title: 'Property & Real Estate Level 2 — Investment Property',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$720,000'],
+    ['Deposit (25%)',       '$180,000'],
+    ['Loan amount',         '$540,000'],
+    ['Initial interest rate','4.8% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','6.6% per annum'],
+  ]}]
+}
+const ctxIK = {
+  title: 'Property & Real Estate Level 2 — Townhouse Purchase',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$490,000'],
+    ['Deposit (15%)',       '$73,500'],
+    ['Loan amount',         '$416,500'],
+    ['Initial interest rate','5.2% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','7.2% per annum'],
+  ]}]
+}
+const ctxIL = {
+  title: 'Property & Real Estate Level 2 — Commercial Tenancy',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$640,000'],
+    ['Deposit (20%)',       '$128,000'],
+    ['Loan amount',         '$512,000'],
+    ['Initial interest rate','4.5% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','5.7% per annum'],
+  ]}]
+}
+const ctxIM = {
+  title: 'Property & Real Estate Level 2 — Suburban Family Home',
+  tables: [{ heading: 'Loan Details', headers: ['Parameter', 'Value'], rows: [
+    ['Property price',      '$560,000'],
+    ['Deposit (20%)',       '$112,000'],
+    ['Loan amount',         '$448,000'],
+    ['Initial interest rate','5.0% per annum (interest-only Year 1)'],
+    ['Rate after fixed term','7.5% per annum'],
+  ]}]
+}
+
+// ── Cylinder Geometry Level 2 contexts ───────────────────────────────────────
+
+const ctxIN = {
+  title: 'Cylinder Geometry Level 2 — Water Storage Tank',
+  subtitle: 'A cylindrical water storage tank has a radius (r) of 2 m and a height (h) of 5 m.',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Total surface area', '2πr² + 2πrh'],
+      ['Volume of cylinder', 'πr²h'],
+      ['π (pi)',             '3.14'],
+    ]
+  }]
+}
+
+const ctxIO = {
+  title: 'Cylinder Geometry Level 2 — Grain Silo',
+  subtitle: 'A cylindrical grain silo has a radius (r) of 3 m and a height (h) of 8 m.',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Total surface area', '2πr² + 2πrh'],
+      ['Volume of cylinder', 'πr²h'],
+      ['π (pi)',             '3.14'],
+    ]
+  }]
+}
+
+// ── Energy & Nutrition Level 2 contexts ──────────────────────────────────────
+
+const ctxIP = {
+  title: 'Energy & Nutrition Level 2 — Breakfast Snack',
+  tables: [
+    { heading: 'Food Items', headers: ['Food Item', 'Energy per 100g/mL', 'Serving Size'], rows: [
+      ['Muesli bar', '400 kJ', '50 g'],
+      ['Whole milk', '280 kJ', '200 mL'],
+    ]},
+    { heading: 'Exercise Burn Rate', headers: ['Activity', 'kJ per hour'], rows: [
+      ['Swimming', '1,900 kJ'],
+    ]},
+  ]
+}
+
+const ctxIQ = {
+  title: 'Energy & Nutrition Level 2 — Dessert',
+  tables: [
+    { heading: 'Food Items', headers: ['Food Item', 'Energy per 100g', 'Serving Size'], rows: [
+      ['Chocolate cake',    '1,850 kJ', '80 g'],
+      ['Vanilla ice cream', '900 kJ',   '60 g'],
+    ]},
+    { heading: 'Exercise Burn Rate', headers: ['Activity', 'kJ per hour'], rows: [
+      ['Cycling', '2,400 kJ'],
+    ]},
+  ]
+}
+
+const ctxIR = {
+  title: 'Energy & Nutrition Level 2 — Café Breakfast',
+  tables: [
+    { heading: 'Food Items', headers: ['Food Item', 'Energy per Serving', 'Servings'], rows: [
+      ['Avocado toast', '600 kJ per slice', '2 slices'],
+      ['Flat white',    '320 kJ',           '1'],
+    ]},
+    { heading: 'Exercise Burn Rate', headers: ['Activity', 'kJ per hour'], rows: [
+      ['Walking', '1,200 kJ'],
+    ]},
+  ]
+}
+
+const ctxIS = {
+  title: 'Energy & Nutrition Level 2 — Fast Food Meal',
+  tables: [
+    { heading: 'Food Items', headers: ['Food Item', 'Energy per Serving'], rows: [
+      ['Beef burger', '2,100 kJ'],
+      ['Large fries', '1,800 kJ'],
+    ]},
+    { heading: 'Exercise Burn Rate', headers: ['Activity', 'kJ per hour'], rows: [
+      ['Running', '3,120 kJ'],
+    ]},
+  ]
+}
+
+const ctxIT = {
+  title: 'Energy & Nutrition Level 2 — Dinner',
+  tables: [
+    { heading: 'Food Items', headers: ['Food Item', 'Energy per 100g', 'Serving Size'], rows: [
+      ['Chicken breast', '840 kJ', '200 g'],
+      ['Pasta (cooked)', '600 kJ', '150 g'],
+    ]},
+    { heading: 'Exercise Burn Rate', headers: ['Activity', 'kJ per hour'], rows: [
+      ['Cycling', '2,400 kJ'],
+    ]},
+  ]
+}
+
+// ── Shower Water Savings Level 2 contexts ─────────────────────────────────────
+
+const ctxIU = {
+  title: 'Shower Water Savings Level 2 — Household A',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '7.5 L/min'],
+    ['Standard shower head flow rate', '11 L/min'],
+    ['Shower duration',                '8 minutes'],
+    ['Showers per day (household)',    '2'],
+    ['Water cost',                     '$3.50 per kL'],
+  ]}]
+}
+
+const ctxIV = {
+  title: 'Shower Water Savings Level 2 — Household B',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '6 L/min'],
+    ['Standard shower head flow rate', '10 L/min'],
+    ['Shower duration',                '6 minutes'],
+    ['Showers per day (household)',    '1'],
+    ['Water cost',                     '$3.00 per kL'],
+  ]}]
+}
+
+const ctxIW = {
+  title: 'Shower Water Savings Level 2 — Household C',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '8 L/min'],
+    ['Standard shower head flow rate', '13 L/min'],
+    ['Shower duration',                '10 minutes'],
+    ['Showers per day (household)',    '1'],
+    ['Water cost',                     '$4.00 per kL'],
+  ]}]
+}
+
+const ctxIX = {
+  title: 'Shower Water Savings Level 2 — Household D',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '7 L/min'],
+    ['Standard shower head flow rate', '12 L/min'],
+    ['Shower duration',                '7 minutes'],
+    ['Showers per day (household)',    '3'],
+    ['Water cost',                     '$3.20 per kL'],
+  ]}]
+}
+
+const ctxIY = {
+  title: 'Shower Water Savings Level 2 — Household E',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '6.5 L/min'],
+    ['Standard shower head flow rate', '10 L/min'],
+    ['Shower duration',                '9 minutes'],
+    ['Showers per day (household)',    '2'],
+    ['Water cost',                     '$4.00 per kL'],
+  ]}]
+}
+
+const ctxIZ = {
+  title: 'Shower Water Savings Level 2 — Household F',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '5.5 L/min'],
+    ['Standard shower head flow rate', '9 L/min'],
+    ['Shower duration',                '5 minutes'],
+    ['Showers per day (household)',    '4'],
+    ['Water cost',                     '$3.00 per kL'],
+  ]}]
+}
+
+const ctxJA = {
+  title: 'Shower Water Savings Level 2 — Household G',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '8.5 L/min'],
+    ['Standard shower head flow rate', '14 L/min'],
+    ['Shower duration',                '12 minutes'],
+    ['Showers per day (household)',    '1'],
+    ['Water cost',                     '$5.00 per kL'],
+  ]}]
+}
+
+const ctxJB = {
+  title: 'Shower Water Savings Level 2 — Household H',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '7 L/min'],
+    ['Standard shower head flow rate', '11 L/min'],
+    ['Shower duration',                '8 minutes'],
+    ['Showers per day (household)',    '2'],
+    ['Water cost',                     '$2.50 per kL'],
+  ]}]
+}
+
+const ctxJC = {
+  title: 'Shower Water Savings Level 2 — Household I',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '9 L/min'],
+    ['Standard shower head flow rate', '15 L/min'],
+    ['Shower duration',                '15 minutes'],
+    ['Showers per day (household)',    '1'],
+    ['Water cost',                     '$4.00 per kL'],
+  ]}]
+}
+
+const ctxJD = {
+  title: 'Shower Water Savings Level 2 — Household J',
+  tables: [{ heading: 'Usage Details', headers: ['Parameter', 'Value'], rows: [
+    ['Eco shower head flow rate',      '6 L/min'],
+    ['Standard shower head flow rate', '9 L/min'],
+    ['Shower duration',                '10 minutes'],
+    ['Showers per day (household)',    '5'],
+    ['Water cost',                     '$2.80 per kL'],
+  ]}]
+}
+
+// ── Business Scenarios Level 2 contexts ──────────────────────────────────────
+
+const ctxJE = {
+  title: 'Business Scenarios Level 2 — E-Commerce Revenue',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Monthly website visits',   '25,000'],
+    ['Conversion rate',          '4%'],
+    ['Average order value',      '$85'],
+    ['COGS (% of revenue)',      '65%'],
+    ['Monthly fixed costs',      '$3,500'],
+  ]}]
+}
+
+const ctxJF = {
+  title: 'Business Scenarios Level 2 — Subscription Churn',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Current subscribers',      '8,000'],
+    ['Monthly subscription fee', '$25'],
+    ['Monthly churn rate',       '5%'],
+    ['New subscribers per month','600'],
+  ]}]
+}
+
+const ctxJG = {
+  title: 'Business Scenarios Level 2 — Manufacturing Throughput',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Production rate',          '200 units/hour'],
+    ['Shift length',             '8 hours'],
+    ['Defect rate',              '5%'],
+    ['Sale price (good units)',  '$45 per unit'],
+    ['Production cost',          '$22 per unit (all units produced)'],
+  ]}]
+}
+
+const ctxJH = {
+  title: 'Business Scenarios Level 2 — Fleet Fuel Management',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Fleet size',               '8 vehicles'],
+    ['Monthly distance',         '2,000 km per vehicle'],
+    ['Fuel consumption',         '12 L/100 km'],
+    ['Fuel price',               '$1.75 per litre'],
+  ]}]
+}
+
+const ctxJI = {
+  title: 'Business Scenarios Level 2 — Sales Commission',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Base salary',              '$48,000'],
+    ['Commission threshold',     '$150,000 in sales'],
+    ['Commission rate',          '6% on sales above threshold'],
+    ['Annual sales',             '$800,000'],
+  ]}]
+}
+
+const ctxJJ = {
+  title: 'Business Scenarios Level 2 — Rental Investment',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Purchase price',           '$780,000'],
+    ['Weekly rent',              '$750'],
+    ['Annual costs',             '$12,000'],
+  ]}]
+}
+
+const ctxJK = {
+  title: 'Business Scenarios Level 2 — Payroll Tax',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Number of employees',      '20'],
+    ['Average annual salary',    '$75,000'],
+    ['Total payroll',            '$1,500,000'],
+    ['Tax-free threshold',       '$600,000'],
+    ['Payroll tax rate',         '4.85%'],
+  ]}]
+}
+
+const ctxJL = {
+  title: 'Business Scenarios Level 2 — Warehouse Profitability',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Storage area',             '400 m²'],
+    ['Annual cost',              '$300 per m²'],
+    ['Annual revenue',           '$1,800 per m²'],
+    ['Expansion plan',           '+25% floor space (costs increase proportionally)'],
+  ]}]
+}
+
+const ctxJM = {
+  title: 'Business Scenarios Level 2 — Discount Pricing',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Normal price',             '$120 per unit'],
+    ['Discounted price',         '$102 per unit (15% off)'],
+    ['Normal monthly sales',     '800 units'],
+    ['Projected sales at discount','1,100 units'],
+    ['COGS',                     '$70 per unit'],
+  ]}]
+}
+
+const ctxJN = {
+  title: 'Business Scenarios Level 2 — Overtime Payroll',
+  tables: [{ heading: 'Metrics', headers: ['Metric', 'Value'], rows: [
+    ['Number of staff',          '12'],
+    ['Regular hours per employee','40 h/week'],
+    ['Regular hourly rate',      '$38'],
+    ['Overtime rate',            '1.5× regular rate'],
+    ['Overtime hours per employee','8 h this week'],
+  ]}]
+}
+
+// ── Unit Conversions Level 2 contexts ────────────────────────────────────────
+
+const ctxJO = {
+  title: 'Unit Conversions Level 2 — Large Water Cistern',
+  subtitle: 'A rectangular water cistern measures 4 m × 3 m × 2.5 m.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 m³', '1,000 L  =  1 kL'],
+      ['1 kL', '1,000 L'],
+      ['1 L',  '1,000 mL'],
+      ['1 m³', '1,000,000 mL'],
+    ]
+  }]
+}
+
+const ctxJP = {
+  title: 'Unit Conversions Level 2 — Irrigation Channel',
+  subtitle: 'An irrigation channel is 200 m long, 0.8 m wide, and 0.6 m deep. Water costs $1.50 per kL.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 m³', '1,000 L  =  1 kL'],
+      ['1 kL', '1,000 L'],
+    ]
+  }]
+}
+
+const ctxJQ = {
+  title: 'Unit Conversions Level 2 — Chemical Mixing Tank',
+  subtitle: 'A mixing tank measures 240 cm × 150 cm × 100 cm.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 L',   '1,000 cm³'],
+      ['1 m³',  '1,000 L  =  1,000,000 cm³'],
+      ['1 cm³', '0.000001 m³'],
+    ]
+  }]
+}
+
+const ctxJR = {
+  title: 'Unit Conversions Level 2 — Beverage Production',
+  subtitle: 'A production run fills 450,000 mL of juice into 375 mL bottles.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 L',  '1,000 mL'],
+      ['1 kL', '1,000 L  =  1,000,000 mL'],
+    ]
+  }]
+}
+
+const ctxJS = {
+  title: 'Unit Conversions Level 2 — Petrol Station Storage',
+  subtitle: 'A petrol station has a fuel storage capacity of 48 kL. Each vehicle fuel tank holds 60 L.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 kL', '1,000 L'],
+      ['1 m³', '1,000 L'],
+    ]
+  }]
+}
+
+const ctxJT = {
+  title: 'Unit Conversions Level 2 — Concrete Slab',
+  subtitle: 'A building foundation slab measures 8 m × 6 m × 0.25 m. Concrete costs $420 per m³.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 m³', '1,000 L  =  1 kL'],
+    ]
+  }]
+}
+
+const ctxJU = {
+  title: 'Unit Conversions Level 2 — Ornamental Fish Pond',
+  subtitle: 'An ornamental fish pond measures 350 cm × 280 cm × 120 cm.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 L',  '1,000 cm³'],
+      ['1 kL', '1,000 L  =  1,000,000 cm³'],
+      ['1 m³', '1 kL'],
+    ]
+  }]
+}
+
+const ctxJV = {
+  title: 'Unit Conversions Level 2 — Water Filter Output',
+  subtitle: 'A commercial water filter produces 750 mL of purified water per minute.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 L',  '1,000 mL'],
+      ['1 m³', '1,000 L  =  1 kL'],
+    ]
+  }]
+}
+
+const ctxJW = {
+  title: 'Unit Conversions Level 2 — Storage Container',
+  subtitle: 'A rectangular storage container measures 1.5 m × 1.2 m × 0.8 m.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 m³', '1,000 L'],
+      ['1 L',  '1,000 mL'],
+      ['1 m³', '1,000,000 mL'],
+    ]
+  }]
+}
+
+const ctxJX = {
+  title: 'Unit Conversions Level 2 — Laboratory Beakers',
+  subtitle: 'A laboratory experiment uses 2,500 mL beakers. The total volume required is 0.5 m³.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 L',  '1,000 mL'],
+      ['1 m³', '1,000 L  =  1,000,000 mL'],
+    ]
+  }]
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -4406,6 +5456,1254 @@ const questions = [
     answer: '76'
   },
 
+  // ── Sets GA–GJ: Fleet Vehicle Costs Level 2 ───────────────────────────────────
+  {
+    group: 'GA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGA,
+    question: 'What is the total 5-year cost of ownership for the FRV Alpha Ranger (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '27000'
+  },
+  {
+    group: 'GA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGA,
+    question: 'After how many complete years will the FRV Alpha Ranger (A) be cheaper to own in total than the Stockman Lite (B)?',
+    answer: '8'
+  },
+  {
+    group: 'GB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGB,
+    question: 'What is the total 5-year cost of ownership for the Pioneer HD-300 (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '25000'
+  },
+  {
+    group: 'GB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGB,
+    question: 'After how many complete years will the Pioneer HD-300 (A) be cheaper to own in total than the Bush Runner (B)?',
+    answer: '10'
+  },
+  {
+    group: 'GC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGC,
+    question: 'What is the total 5-year cost of ownership for the Terrain Master (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '34000'
+  },
+  {
+    group: 'GC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGC,
+    question: 'After how many complete years will the Terrain Master (A) be cheaper to own in total than the Ridge Runner (B)?',
+    answer: '8'
+  },
+  {
+    group: 'GD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGD,
+    question: 'What is the total 5-year cost of ownership for the Summit Pro 4WD (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '31000'
+  },
+  {
+    group: 'GD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGD,
+    question: 'After how many complete years will the Summit Pro 4WD (A) be cheaper to own in total than the Flatlands Cruiser (B)?',
+    answer: '9'
+  },
+  {
+    group: 'GE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGE,
+    question: 'What is the total 5-year cost of ownership for the Desert Scout Elite (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '26000'
+  },
+  {
+    group: 'GE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGE,
+    question: 'After how many complete years will the Desert Scout Elite (A) be cheaper to own in total than the Dunes Runner (B)?',
+    answer: '8'
+  },
+  {
+    group: 'GF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGF,
+    question: 'What is the total 5-year cost of ownership for the FRV Titan 500 (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '39500'
+  },
+  {
+    group: 'GF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGF,
+    question: 'After how many complete years will the FRV Titan 500 (A) be cheaper to own in total than the Scout Pro 4WD (B)?',
+    answer: '9'
+  },
+  {
+    group: 'GG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGG,
+    question: 'What is the total 5-year cost of ownership for the Mountain Rover Elite (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '36000'
+  },
+  {
+    group: 'GG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGG,
+    question: 'After how many complete years will the Mountain Rover Elite (A) be cheaper to own in total than the Plateau Drifter (B)?',
+    answer: '9'
+  },
+  {
+    group: 'GH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGH,
+    question: 'What is the total 5-year cost of ownership for the Creek Hopper XT (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '20000'
+  },
+  {
+    group: 'GH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGH,
+    question: 'After how many complete years will the Creek Hopper XT (A) be cheaper to own in total than the Ridge Rover Lite (B)?',
+    answer: '7'
+  },
+  {
+    group: 'GI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGI,
+    question: 'What is the total 5-year cost of ownership for the Outpost Commander (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '46000'
+  },
+  {
+    group: 'GI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGI,
+    question: 'After how many complete years will the Outpost Commander (A) be cheaper to own in total than the Ranch Drifter Pro (B)?',
+    answer: '8'
+  },
+  {
+    group: 'GJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGJ,
+    question: 'What is the total 5-year cost of ownership for the FRV Heavy Hauler (A)?\n(Purchase price + 5 years of maintenance − 5 years of fuel savings)',
+    answer: '43000'
+  },
+  {
+    group: 'GJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGJ,
+    question: 'After how many complete years will the FRV Heavy Hauler (A) be cheaper to own in total than the Grassland Cruiser (B)?',
+    answer: '8'
+  },
+
+  // ── Sets GK–GR: Volume & Storage Level 2 ──────────────────────────────────────
+  {
+    group: 'GK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGK,
+    question: 'What is the combined volume of both tanks in m³?',
+    answer: '30'
+  },
+  {
+    group: 'GK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGK,
+    question: 'If both tanks are 65% full, how many litres of water do they hold in total?',
+    answer: '19500'
+  },
+  {
+    group: 'GL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGL,
+    question: 'What is the volume of the chemical storage container in m³?',
+    answer: '4.8'
+  },
+  {
+    group: 'GL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGL,
+    question: 'How many hours does it take to drain the container from 80% full to empty at the stated drain rate?',
+    answer: '1.6'
+  },
+  {
+    group: 'GM', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGM,
+    question: 'What is the total volume of the irrigation reservoir in m³?',
+    answer: '200'
+  },
+  {
+    group: 'GM', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGM,
+    question: 'How many hours does it take to fill the reservoir from 15% to 90% at the stated fill rate?',
+    answer: '6'
+  },
+  {
+    group: 'GN', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGN,
+    question: 'What is the total volume of the holding pond in m³?',
+    answer: '36'
+  },
+  {
+    group: 'GN', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGN,
+    question: 'How many hours does it take to drain the pond from 90% to 10% full at the stated drain rate?',
+    answer: '1.6'
+  },
+  {
+    group: 'GO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGO,
+    question: 'What is the total volume of the collection sump in m³?',
+    answer: '24'
+  },
+  {
+    group: 'GO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGO,
+    question: 'How many minutes does it take to fill the sump from empty to 55% capacity at the stated fill rate?',
+    answer: '132'
+  },
+  {
+    group: 'GP', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGP,
+    question: 'What is the total volume of the holding tank in m³?',
+    answer: '30'
+  },
+  {
+    group: 'GP', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGP,
+    question: 'How many litres does the tank hold at 75% capacity?',
+    answer: '22500'
+  },
+  {
+    group: 'GQ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGQ,
+    question: 'What is the total volume of the fire suppression reservoir in m³?',
+    answer: '288'
+  },
+  {
+    group: 'GQ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGQ,
+    question: 'How many hours does it take to fill the reservoir from 25% to 85% at the stated fill rate?',
+    answer: '3.6'
+  },
+  {
+    group: 'GR', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGR,
+    question: 'What is the total volume of the chemical dosing tank in m³?',
+    answer: '1.44'
+  },
+  {
+    group: 'GR', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGR,
+    question: 'How many hours does it take to drain the tank from 100% full to 15% remaining at the stated drain rate?',
+    answer: '2.55'
+  },
+
+  // ── Sets GS–GY: Area & Measurement Level 2 ────────────────────────────────────
+  {
+    group: 'GS', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGS,
+    question: 'What is the area of the L-shaped garden bed in m²?',
+    answer: '84'
+  },
+  {
+    group: 'GS', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGS,
+    question: 'How many turf rolls are needed, including 5% extra for trimming? (Round up to whole rolls.)',
+    answer: '74'
+  },
+  {
+    group: 'GT', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGT,
+    question: 'What is the total area of the composite deck (main deck plus step extension) in m²?',
+    answer: '40'
+  },
+  {
+    group: 'GT', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGT,
+    question: 'What is the total cost of decking timber, including 12% waste?',
+    answer: '2016'
+  },
+  {
+    group: 'GU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGU,
+    question: 'What is the total area of the T-shaped grass area in m²?',
+    answer: '84'
+  },
+  {
+    group: 'GU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGU,
+    question: 'How many seed bags are needed, including 15% extra for even coverage? (Round up to whole bags.)',
+    answer: '17'
+  },
+  {
+    group: 'GV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGV,
+    question: 'What is the paved area of the U-shaped courtyard in m²?',
+    answer: '56'
+  },
+  {
+    group: 'GV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGV,
+    question: 'How many paving stones are needed, including 10% extra for cuts? (Round up to whole stones.)',
+    answer: '172'
+  },
+  {
+    group: 'GW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGW,
+    question: 'What is the total area of the L-shaped commercial floor in m²?',
+    answer: '140'
+  },
+  {
+    group: 'GW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGW,
+    question: 'How many carpet tiles are needed, including 8% extra for cuts? (Round up to whole tiles.)',
+    answer: '605'
+  },
+  {
+    group: 'GX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGX,
+    question: 'What is the usable deck area after subtracting the central planter box in m²?',
+    answer: '96'
+  },
+  {
+    group: 'GX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGX,
+    question: 'What is the total cost of decking boards for the usable area, including 15% waste?',
+    answer: '4416'
+  },
+  {
+    group: 'GY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGY,
+    question: 'What is the combined area of both zones in m²?',
+    answer: '110'
+  },
+  {
+    group: 'GY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxGY,
+    question: 'What is the total cost of turf for both zones, including 10% extra for edging?',
+    answer: '4598'
+  },
+
+  // ── Sets GZ, HA–HI: Retail Price Comparisons Level 2 ─────────────────────────
+  {
+    group: 'GZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxGZ,
+    question: 'What is the total cost of an order of 15 eco water bottles from AquaStore?',
+    answer: '270'
+  },
+  {
+    group: 'GZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxGZ,
+    question: 'What is the total cost of an order of 20 eco water bottles from GreenFlow?',
+    answer: '352'
+  },
+  {
+    group: 'HA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHA,
+    question: 'What is the total cost of an order of 10 resistance band sets from StrengthCo?',
+    answer: '340'
+  },
+  {
+    group: 'HA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHA,
+    question: 'What is the total cost of an order of 12 resistance band sets from PowerFlex?',
+    answer: '336'
+  },
+  {
+    group: 'HB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHB,
+    question: 'What is the total cost of an order of 9 thermal mugs from ThermoMax?',
+    answer: '230.40'
+  },
+  {
+    group: 'HB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHB,
+    question: 'What is the total cost of an order of 10 thermal mugs from CafeKeep?',
+    answer: '246.50'
+  },
+  {
+    group: 'HC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHC,
+    question: 'What is the total cost of an order of 6 yoga mats from FlexZone?',
+    answer: '418.20'
+  },
+  {
+    group: 'HC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHC,
+    question: 'What is the total cost of an order of 8 yoga mats from OmShop?',
+    answer: '576'
+  },
+  {
+    group: 'HD', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHD,
+    question: 'What is the total cost of an order of 5 boxes from NutriPack?',
+    answer: '195'
+  },
+  {
+    group: 'HD', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHD,
+    question: 'What is the total cost of an order of 7 boxes from BarceloPro?',
+    answer: '252'
+  },
+  {
+    group: 'HE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHE,
+    question: 'What is the total cost of an order of 25 smartphone cases from TechCover?',
+    answer: '315'
+  },
+  {
+    group: 'HE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHE,
+    question: 'What is the total cost of an order of 30 smartphone cases from SafeCase?',
+    answer: '360'
+  },
+  {
+    group: 'HF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHF,
+    question: 'What is the total cost of an order of 15 candles from ArōmaHome?',
+    answer: '168'
+  },
+  {
+    group: 'HF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHF,
+    question: 'What is the total cost of an order of 20 candles from ScentWorks?',
+    answer: '221'
+  },
+  {
+    group: 'HG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHG,
+    question: 'What is the total cost of an order of 8 vitamin bottles from VitaLife?',
+    answer: '238'
+  },
+  {
+    group: 'HG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHG,
+    question: 'What is the total cost of an order of 10 vitamin bottles from HealthFirst?',
+    answer: '288'
+  },
+  {
+    group: 'HH', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHH,
+    question: 'What is the total cost of an order of 12 stationery packs from OfficeMax?',
+    answer: '288'
+  },
+  {
+    group: 'HH', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHH,
+    question: 'What is the total cost of an order of 15 stationery packs from StationPro?',
+    answer: '315'
+  },
+  {
+    group: 'HI', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHI,
+    question: 'What is the total cost of an order of 30 pairs of safety gloves from SafetyFirst?',
+    answer: '252'
+  },
+  {
+    group: 'HI', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHI,
+    question: 'What is the total cost of an order of 36 pairs of safety gloves from ProProtect?',
+    answer: '297'
+  },
+
+  // ── Sets HJ–HS: Construction & Materials Level 2 ──────────────────────────────
+  {
+    group: 'HJ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHJ,
+    question: 'How many plasterboard sheets are needed to cover the room area (no waste)? (Round up to whole sheets.)',
+    answer: '16'
+  },
+  {
+    group: 'HJ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHJ,
+    question: 'What is the total cost of plasterboard, including 10% extra for cuts and joins?',
+    answer: '432'
+  },
+  {
+    group: 'HK', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHK,
+    question: 'What is the volume of concrete required for the slab in m³?',
+    answer: '7.2'
+  },
+  {
+    group: 'HK', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHK,
+    question: 'What is the total cost of concrete, including 5% extra for waste?',
+    answer: '2116.80'
+  },
+  {
+    group: 'HL', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHL,
+    question: 'How many bricks are needed to build the wall (no waste)?',
+    answer: '336'
+  },
+  {
+    group: 'HL', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHL,
+    question: 'What is the total cost of bricks, including 8% extra for cuts? (Round up to whole bricks.)',
+    answer: '653.40'
+  },
+  {
+    group: 'HM', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHM,
+    question: 'How many mesh sheets are needed to cover the slab area (no overlap)? (Round up to whole sheets.)',
+    answer: '26'
+  },
+  {
+    group: 'HM', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHM,
+    question: 'What is the total cost of mesh sheets, including 15% extra for lap joins?',
+    answer: '2760'
+  },
+  {
+    group: 'HN', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHN,
+    question: 'How many roof tiles are needed to cover the roof area (no waste)? (Round up to whole tiles.)',
+    answer: '172'
+  },
+  {
+    group: 'HN', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHN,
+    question: 'What is the total cost of tiles, including 10% extra for cuts and breakage?',
+    answer: '855'
+  },
+  {
+    group: 'HO', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHO,
+    question: 'How many insulation batts are needed to cover the ceiling area (no waste)? (Round up to whole batts.)',
+    answer: '89'
+  },
+  {
+    group: 'HO', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHO,
+    question: 'What is the total cost of batts, including 5% extra for cuts around joists?',
+    answer: '799'
+  },
+  {
+    group: 'HP', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHP,
+    question: 'How many decking boards are needed to cover the deck area (no waste)? (Round up to whole boards.)',
+    answer: '80'
+  },
+  {
+    group: 'HP', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHP,
+    question: 'What is the total cost of decking boards, including 12% extra for cuts?',
+    answer: '2492'
+  },
+  {
+    group: 'HQ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHQ,
+    question: 'How many concrete blocks are needed to build the wall (no waste)? (Round up to whole blocks.)',
+    answer: '57'
+  },
+  {
+    group: 'HQ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHQ,
+    question: 'What is the total cost of blocks, including 5% extra for cuts?',
+    answer: '720'
+  },
+  {
+    group: 'HR', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHR,
+    question: 'How many clay pavers are needed to cover the courtyard area (no waste)?',
+    answer: '450'
+  },
+  {
+    group: 'HR', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHR,
+    question: 'What is the total cost of pavers, including 10% extra for cuts and edging?',
+    answer: '1782'
+  },
+  {
+    group: 'HS', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHS,
+    question: 'How many plasterboard sheets are needed to cover the ceiling area (no waste)? (Round up to whole sheets.)',
+    answer: '34'
+  },
+  {
+    group: 'HS', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHS,
+    question: 'What is the total cost of ceiling sheets, including 8% extra for cuts?',
+    answer: '814'
+  },
+
+  // ── Sets HT–IC: Vehicle Finance Level 2 ───────────────────────────────────────
+  {
+    group: 'HT', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHT,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '34528'
+  },
+  {
+    group: 'HT', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHT,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '172'
+  },
+  {
+    group: 'HU', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHU,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '32115'
+  },
+  {
+    group: 'HU', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHU,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '1290'
+  },
+  {
+    group: 'HV', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHV,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '42140'
+  },
+  {
+    group: 'HV', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHV,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '280'
+  },
+  {
+    group: 'HW', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHW,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '29880'
+  },
+  {
+    group: 'HW', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHW,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '900'
+  },
+  {
+    group: 'HX', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHX,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '49800'
+  },
+  {
+    group: 'HX', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHX,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '900'
+  },
+  {
+    group: 'HY', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHY,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '44435'
+  },
+  {
+    group: 'HY', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHY,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '350'
+  },
+  {
+    group: 'HZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHZ,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '46320'
+  },
+  {
+    group: 'HZ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxHZ,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '1080'
+  },
+  {
+    group: 'IA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIA,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '39840'
+  },
+  {
+    group: 'IA', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIA,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '960'
+  },
+  {
+    group: 'IB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIB,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '36954'
+  },
+  {
+    group: 'IB', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIB,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '426'
+  },
+  {
+    group: 'IC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIC,
+    question: 'What is the total amount paid under Option A? (Deposit plus all monthly repayments)',
+    answer: '45400'
+  },
+  {
+    group: 'IC', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIC,
+    question: 'What is the dollar difference in total cost between Option A and Option B?',
+    answer: '650'
+  },
+
+  // ── Sets ID–IM: Property & Real Estate Level 2 ────────────────────────────────
+  {
+    group: 'ID', type: 'number_input', category: 'Retail and Finance',
+    context: ctxID,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '22880'
+  },
+  {
+    group: 'ID', type: 'number_input', category: 'Retail and Finance',
+    context: ctxID,
+    question: 'After the fixed period, the rate rises to 7.2%. What is the new monthly interest payment on the loan?',
+    answer: '2496'
+  },
+  {
+    group: 'IE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIE,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '27744'
+  },
+  {
+    group: 'IE', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIE,
+    question: 'After the fixed period, the rate rises to 6.6%. What is the new monthly interest payment on the loan?',
+    answer: '3179'
+  },
+  {
+    group: 'IF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIF,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '18000'
+  },
+  {
+    group: 'IF', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIF,
+    question: 'After the fixed period, the rate rises to 7.5%. What is the new monthly interest payment on the loan?',
+    answer: '2250'
+  },
+  {
+    group: 'IG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIG,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '25830'
+  },
+  {
+    group: 'IG', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIG,
+    question: 'After the fixed period, the rate rises to 5.4%. What is the new monthly interest payment on the loan?',
+    answer: '2767.50'
+  },
+  {
+    group: 'IH', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIH,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '18270'
+  },
+  {
+    group: 'IH', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIH,
+    question: 'After the fixed period, the rate rises to 8.4%. What is the new monthly interest payment on the loan?',
+    answer: '2205'
+  },
+  {
+    group: 'II', type: 'number_input', category: 'Retail and Finance',
+    context: ctxII,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '21240'
+  },
+  {
+    group: 'II', type: 'number_input', category: 'Retail and Finance',
+    context: ctxII,
+    question: 'After the fixed period, the rate rises to 6.0%. What is the new monthly interest payment on the loan?',
+    answer: '2360'
+  },
+  {
+    group: 'IJ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIJ,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '25920'
+  },
+  {
+    group: 'IJ', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIJ,
+    question: 'After the fixed period, the rate rises to 6.6%. What is the new monthly interest payment on the loan?',
+    answer: '2970'
+  },
+  {
+    group: 'IK', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIK,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '21658'
+  },
+  {
+    group: 'IK', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIK,
+    question: 'After the fixed period, the rate rises to 7.2%. What is the new monthly interest payment on the loan?',
+    answer: '2499'
+  },
+  {
+    group: 'IL', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIL,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '23040'
+  },
+  {
+    group: 'IL', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIL,
+    question: 'After the fixed period, the rate rises to 5.7%. What is the new monthly interest payment on the loan?',
+    answer: '2432'
+  },
+  {
+    group: 'IM', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIM,
+    question: 'What is the total interest charged in the first year of the loan? (Loan amount × initial interest rate)',
+    answer: '22400'
+  },
+  {
+    group: 'IM', type: 'number_input', category: 'Retail and Finance',
+    context: ctxIM,
+    question: 'After the fixed period, the rate rises to 7.5%. What is the new monthly interest payment on the loan?',
+    answer: '2800'
+  },
+
+  // ── Sets JE–JN: Business Scenarios Level 2 ───────────────────────────────────
+  {
+    group: 'JE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJE,
+    question: 'What is the total monthly revenue? (Monthly visits × conversion rate × average order value)',
+    answer: '85000'
+  },
+  {
+    group: 'JE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJE,
+    question: 'What is the monthly net profit? (Revenue × (1 − COGS%) − fixed costs)',
+    answer: '26250'
+  },
+  {
+    group: 'JF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJF,
+    question: 'After one month of 5% churn, how many subscribers remain (before new signups)?',
+    answer: '7600'
+  },
+  {
+    group: 'JF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJF,
+    question: 'What is the total monthly revenue after accounting for churned subscribers plus new signups?',
+    answer: '205000'
+  },
+  {
+    group: 'JG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJG,
+    question: 'How many non-defective units are produced in a single shift? (Rate × hours × (1 − defect rate))',
+    answer: '1520'
+  },
+  {
+    group: 'JG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJG,
+    question: 'What is the net profit for the shift? (Non-defective units × sale price − all units produced × production cost)',
+    answer: '33200'
+  },
+  {
+    group: 'JH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJH,
+    question: 'What is the total monthly fuel consumption in litres for the entire fleet? (Fleet × km × L/100km ÷ 100)',
+    answer: '1920'
+  },
+  {
+    group: 'JH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJH,
+    question: 'What is the total monthly fuel cost for the fleet?',
+    answer: '3360'
+  },
+  {
+    group: 'JI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJI,
+    question: 'What is the total annual commission earned? (Sales above threshold × commission rate)',
+    answer: '39000'
+  },
+  {
+    group: 'JI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJI,
+    question: 'What is the total annual income (base salary + commission)?',
+    answer: '87000'
+  },
+  {
+    group: 'JJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJJ,
+    question: 'What is the annual net rental income? (Weekly rent × 52 weeks − annual costs)',
+    answer: '27000'
+  },
+  {
+    group: 'JJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJJ,
+    question: 'What is the gross rental yield as a percentage of the purchase price? (Annual gross rent ÷ purchase price × 100)',
+    answer: '5'
+  },
+  {
+    group: 'JK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJK,
+    question: 'What is the taxable payroll? (Total payroll − tax-free threshold)',
+    answer: '900000'
+  },
+  {
+    group: 'JK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJK,
+    question: 'What is the total annual payroll tax liability? (Taxable payroll × tax rate)',
+    answer: '43650'
+  },
+  {
+    group: 'JL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJL,
+    question: 'What is the current annual operating profit for the warehouse? ((Revenue − cost) × area)',
+    answer: '600000'
+  },
+  {
+    group: 'JL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJL,
+    question: 'After expanding floor space by 25% (with proportional cost increase), what is the new annual profit?',
+    answer: '750000'
+  },
+  {
+    group: 'JM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJM,
+    question: 'What is the monthly profit at the normal price? ((Normal price − COGS) × normal monthly sales)',
+    answer: '40000'
+  },
+  {
+    group: 'JM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJM,
+    question: 'What is the monthly profit at the discounted price? ((Discounted price − COGS) × projected sales)',
+    answer: '35200'
+  },
+  {
+    group: 'JN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJN,
+    question: 'What is the total regular pay for all staff this week? (Regular hours × number of staff × hourly rate)',
+    answer: '18240'
+  },
+  {
+    group: 'JN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxJN,
+    question: 'What is the total overtime pay for all staff this week? (Overtime hours × number of staff × overtime rate)',
+    answer: '5472'
+  },
+
+  // ── Sets JO–JX: Unit Conversions Level 2 ─────────────────────────────────────
+  {
+    group: 'JO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJO,
+    question: 'What is the volume of the cistern in m³?',
+    answer: '30'
+  },
+  {
+    group: 'JO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJO,
+    question: 'Express this volume in millilitres (mL). (1 m³ = 1,000,000 mL)',
+    answer: '30000000'
+  },
+  {
+    group: 'JP', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJP,
+    question: 'What is the volume of water the irrigation channel can hold in m³?',
+    answer: '96'
+  },
+  {
+    group: 'JP', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJP,
+    question: 'At $1.50 per kL, what is the total cost to fill the channel? (1 m³ = 1 kL)',
+    answer: '144'
+  },
+  {
+    group: 'JQ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJQ,
+    question: 'What is the volume of the mixing tank in cm³?',
+    answer: '3600000'
+  },
+  {
+    group: 'JQ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJQ,
+    question: 'Convert this volume to m³. (1,000,000 cm³ = 1 m³)',
+    answer: '3.6'
+  },
+  {
+    group: 'JR', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJR,
+    question: 'Convert 450,000 mL to Litres.',
+    answer: '450'
+  },
+  {
+    group: 'JR', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJR,
+    question: 'How many 375 mL bottles can be filled from the production run?',
+    answer: '1200'
+  },
+  {
+    group: 'JS', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJS,
+    question: 'Convert 48 kL to Litres.',
+    answer: '48000'
+  },
+  {
+    group: 'JS', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJS,
+    question: 'How many vehicles (60 L tank each) can be fuelled from the 48 kL storage?',
+    answer: '800'
+  },
+  {
+    group: 'JT', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJT,
+    question: 'What is the volume of concrete required for the slab in m³?',
+    answer: '12'
+  },
+  {
+    group: 'JT', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJT,
+    question: 'At $420 per m³, what is the total cost of the concrete?',
+    answer: '5040'
+  },
+  {
+    group: 'JU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJU,
+    question: 'What is the volume of the fish pond in cm³?',
+    answer: '11760000'
+  },
+  {
+    group: 'JU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJU,
+    question: 'Convert this volume to kL. (1,000,000 cm³ = 1 kL)',
+    answer: '11.76'
+  },
+  {
+    group: 'JV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJV,
+    question: 'How many litres of purified water does the filter produce in 4 hours? (750 mL/min × 240 min ÷ 1,000)',
+    answer: '180'
+  },
+  {
+    group: 'JV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJV,
+    question: 'Express this volume in m³. (1,000 L = 1 m³)',
+    answer: '0.18'
+  },
+  {
+    group: 'JW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJW,
+    question: 'What is the volume of the storage container in m³?',
+    answer: '1.44'
+  },
+  {
+    group: 'JW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJW,
+    question: 'Express this volume in millilitres (mL). (1 m³ = 1,000,000 mL)',
+    answer: '1440000'
+  },
+  {
+    group: 'JX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJX,
+    question: 'Convert 0.5 m³ to Litres.',
+    answer: '500'
+  },
+  {
+    group: 'JX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJX,
+    question: 'How many 2,500 mL beakers are needed to hold 0.5 m³ of liquid? (0.5 m³ = 500,000 mL)',
+    answer: '200'
+  },
+
+  // ── Sets IN–IO: Cylinder Geometry Level 2 ────────────────────────────────────
+  {
+    group: 'IN', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIN,
+    question: 'Calculate the total surface area of the tank (both circular ends + curved side wall). Use 2πr² + 2πrh with π = 3.14.',
+    answer: '87.92'
+  },
+  {
+    group: 'IN', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIN,
+    question: 'The tank is filled to 75% of its capacity. How many cubic metres of water does it hold? Use πr²h with π = 3.14.',
+    answer: '47.1'
+  },
+  {
+    group: 'IO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIO,
+    question: 'Calculate the total surface area of the grain silo (both circular ends + curved side wall). Use 2πr² + 2πrh with π = 3.14.',
+    answer: '207.24'
+  },
+  {
+    group: 'IO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIO,
+    question: 'The silo is filled to two-thirds (⅔) of its capacity. What is the volume of grain stored in m³? Use πr²h with π = 3.14.',
+    answer: '150.72'
+  },
+
+  // ── Sets IP–IT: Energy & Nutrition Level 2 ───────────────────────────────────
+  {
+    group: 'IP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIP,
+    question: 'What is the total energy (kJ) in a breakfast of a muesli bar (50g serving) and whole milk (200mL serving)?',
+    answer: '760'
+  },
+  {
+    group: 'IP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIP,
+    question: 'How many minutes of swimming at 1,900 kJ/hr are needed to burn off this breakfast? (Total kJ ÷ burn rate × 60)',
+    answer: '24'
+  },
+  {
+    group: 'IQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIQ,
+    question: 'What is the total energy (kJ) in a dessert of chocolate cake (80g) and vanilla ice cream (60g)?',
+    answer: '2020'
+  },
+  {
+    group: 'IQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIQ,
+    question: 'How many minutes of cycling at 2,400 kJ/hr are needed to burn off this dessert? (Total kJ ÷ burn rate × 60)',
+    answer: '50.5'
+  },
+  {
+    group: 'IR', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIR,
+    question: 'What is the total energy (kJ) consumed from 2 slices of avocado toast and one flat white coffee?',
+    answer: '1520'
+  },
+  {
+    group: 'IR', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIR,
+    question: 'How many minutes of walking at 1,200 kJ/hr are needed to burn off this café breakfast? (Total kJ ÷ burn rate × 60)',
+    answer: '76'
+  },
+  {
+    group: 'IS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIS,
+    question: 'What is the total energy (kJ) in a fast food meal of a beef burger and large fries?',
+    answer: '3900'
+  },
+  {
+    group: 'IS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIS,
+    question: 'How many minutes of running at 3,120 kJ/hr are needed to burn off this meal? (Total kJ ÷ burn rate × 60)',
+    answer: '75'
+  },
+  {
+    group: 'IT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIT,
+    question: 'What is the total energy (kJ) in a dinner of chicken breast (200g) and pasta (150g)?',
+    answer: '2580'
+  },
+  {
+    group: 'IT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIT,
+    question: 'How many minutes of cycling at 2,400 kJ/hr are needed to burn off this dinner? (Total kJ ÷ burn rate × 60)',
+    answer: '64.5'
+  },
+
+  // ── Sets IU–JD: Shower Water Savings Level 2 ─────────────────────────────────
+  {
+    group: 'IU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIU,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '20440'
+  },
+  {
+    group: 'IU', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIU,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '71.54'
+  },
+  {
+    group: 'IV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIV,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '8760'
+  },
+  {
+    group: 'IV', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIV,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '26.28'
+  },
+  {
+    group: 'IW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIW,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '18250'
+  },
+  {
+    group: 'IW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIW,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '73'
+  },
+  {
+    group: 'IX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIX,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '38325'
+  },
+  {
+    group: 'IX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIX,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '122.64'
+  },
+  {
+    group: 'IY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIY,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '22995'
+  },
+  {
+    group: 'IY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIY,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '91.98'
+  },
+  {
+    group: 'IZ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIZ,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '25550'
+  },
+  {
+    group: 'IZ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxIZ,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '76.65'
+  },
+  {
+    group: 'JA', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJA,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '24090'
+  },
+  {
+    group: 'JA', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJA,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '120.45'
+  },
+  {
+    group: 'JB', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJB,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '23360'
+  },
+  {
+    group: 'JB', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJB,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '58.40'
+  },
+  {
+    group: 'JC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJC,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '32850'
+  },
+  {
+    group: 'JC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJC,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '131.40'
+  },
+  {
+    group: 'JD', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJD,
+    question: 'How many litres of water are saved annually by switching to the eco shower head? (Rate difference × minutes × showers per day × 365)',
+    answer: '54750'
+  },
+  {
+    group: 'JD', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxJD,
+    question: 'What is the annual dollar saving on water bills from switching to the eco shower head? (Annual litres ÷ 1,000 × cost per kL)',
+    answer: '153.30'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -4480,6 +6778,40 @@ const units = {
   FQ: ['min', '$'], FR: ['min', '$'], FS: ['min', 'min'], FT: ['$', '$'],
   FU: ['km/h', 'km/h'], FV: ['h', '%'], FW: ['$', '$'], FX: ['L', '$'],
   FY: ['h', 'h'], FZ: ['min', 'min'],
+  // Fleet Vehicle Costs Level 2
+  GA: ['$', 'years'], GB: ['$', 'years'], GC: ['$', 'years'], GD: ['$', 'years'], GE: ['$', 'years'],
+  GF: ['$', 'years'], GG: ['$', 'years'], GH: ['$', 'years'], GI: ['$', 'years'], GJ: ['$', 'years'],
+  // Volume & Storage Level 2
+  GK: ['m³', 'L'], GL: ['m³', 'h'], GM: ['m³', 'h'], GN: ['m³', 'h'],
+  GO: ['m³', 'min'], GP: ['m³', 'L'], GQ: ['m³', 'h'], GR: ['m³', 'h'],
+  // Area & Measurement Level 2
+  GS: ['m²', 'rolls'], GT: ['m²', '$'], GU: ['m²', 'bags'], GV: ['m²', 'stones'],
+  GW: ['m²', 'tiles'], GX: ['m²', '$'], GY: ['m²', '$'],
+  // Retail Price Comparisons Level 2
+  GZ: ['$', '$'], HA: ['$', '$'], HB: ['$', '$'], HC: ['$', '$'], HD: ['$', '$'],
+  HE: ['$', '$'], HF: ['$', '$'], HG: ['$', '$'], HH: ['$', '$'], HI: ['$', '$'],
+  // Construction & Materials Level 2
+  HJ: [null, '$'], HK: ['m³', '$'], HL: [null, '$'], HM: [null, '$'], HN: [null, '$'],
+  HO: [null, '$'], HP: [null, '$'], HQ: [null, '$'], HR: [null, '$'], HS: [null, '$'],
+  // Vehicle Finance Level 2
+  HT: ['$', '$'], HU: ['$', '$'], HV: ['$', '$'], HW: ['$', '$'], HX: ['$', '$'],
+  HY: ['$', '$'], HZ: ['$', '$'], IA: ['$', '$'], IB: ['$', '$'], IC: ['$', '$'],
+  // Property & Real Estate Level 2
+  ID: ['$', '$'], IE: ['$', '$'], IF: ['$', '$'], IG: ['$', '$'], IH: ['$', '$'],
+  II: ['$', '$'], IJ: ['$', '$'], IK: ['$', '$'], IL: ['$', '$'], IM: ['$', '$'],
+  // Business Scenarios Level 2
+  JE: ['$', '$'], JF: [null, '$'], JG: [null, '$'], JH: ['L', '$'], JI: ['$', '$'],
+  JJ: ['$', '%'], JK: ['$', '$'], JL: ['$', '$'], JM: ['$', '$'], JN: ['$', '$'],
+  // Unit Conversions Level 2
+  JO: ['m³', 'mL'], JP: ['m³', '$'], JQ: ['cm³', 'm³'], JR: ['L', null], JS: ['L', null],
+  JT: ['m³', '$'], JU: ['cm³', 'kL'], JV: ['L', 'm³'], JW: ['m³', 'mL'], JX: ['L', null],
+  // Cylinder Geometry Level 2
+  IN: ['m²', 'm³'], IO: ['m²', 'm³'],
+  // Energy & Nutrition Level 2
+  IP: ['kJ', 'min'], IQ: ['kJ', 'min'], IR: ['kJ', 'min'], IS: ['kJ', 'min'], IT: ['kJ', 'min'],
+  // Shower Water Savings Level 2
+  IU: ['L', '$'], IV: ['L', '$'], IW: ['L', '$'], IX: ['L', '$'], IY: ['L', '$'],
+  IZ: ['L', '$'], JA: ['L', '$'], JB: ['L', '$'], JC: ['L', '$'], JD: ['L', '$'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -5190,6 +7522,426 @@ const methods = {
     `Drive days:  22 min × 2 × 3 = 132 min\nPT days:     41 min × 2 × 2 = 164 min\nTotal: 132 + 164 = 296 min`,
     `All driving: 22 × 2 × 5 = 220 min\nExtra: 296 − 220 = 76 min`,
   ],
+  // Fleet Vehicle Costs Level 2
+  GA: [
+    `Purchase price + (5 × maintenance) − (5 × fuel saving)\n$52,000 + (5 × $1,800) − (5 × $6,800) = $52,000 + $9,000 − $34,000 = $27,000`,
+    `Net annual advantage of A: $6,800 − $1,800 = $5,000/yr\nNet annual advantage of B: $4,500 − $1,200 = $3,300/yr\nExtra net advantage of A over B: $5,000 − $3,300 = $1,700/yr\nPrice premium of A: $52,000 − $40,000 = $12,000\nBreak-even: $12,000 ÷ $1,700 = 7.06 → 8 complete years`,
+  ],
+  GB: [
+    `$45,000 + (5 × $1,400) − (5 × $5,400) = $45,000 + $7,000 − $27,000 = $25,000`,
+    `Net A: $5,400 − $1,400 = $4,000/yr  |  Net B: $3,800 − $900 = $2,900/yr\nExtra advantage: $1,100/yr  |  Price premium: $10,000\nBreak-even: $10,000 ÷ $1,100 = 9.09 → 10 complete years`,
+  ],
+  GC: [
+    `$60,000 + (5 × $2,000) − (5 × $7,200) = $60,000 + $10,000 − $36,000 = $34,000`,
+    `Net A: $7,200 − $2,000 = $5,200/yr  |  Net B: $5,200 − $1,500 = $3,700/yr\nExtra advantage: $1,500/yr  |  Price premium: $11,500\nBreak-even: $11,500 ÷ $1,500 = 7.67 → 8 complete years`,
+  ],
+  GD: [
+    `$55,000 + (5 × $1,800) − (5 × $6,600) = $55,000 + $9,000 − $33,000 = $31,000`,
+    `Net A: $6,600 − $1,800 = $4,800/yr  |  Net B: $4,400 − $1,200 = $3,200/yr\nExtra advantage: $1,600/yr  |  Price premium: $13,000\nBreak-even: $13,000 ÷ $1,600 = 8.125 → 9 complete years`,
+  ],
+  GE: [
+    `$49,000 + (5 × $2,000) − (5 × $6,600) = $49,000 + $10,000 − $33,000 = $26,000`,
+    `Net A: $6,600 − $2,000 = $4,600/yr  |  Net B: $4,700 − $1,700 = $3,000/yr\nExtra advantage: $1,600/yr  |  Price premium: $12,000\nBreak-even: $12,000 ÷ $1,600 = 7.5 → 8 complete years`,
+  ],
+  GF: [
+    `$72,000 + (5 × $2,000) − (5 × $8,500) = $72,000 + $10,000 − $42,500 = $39,500`,
+    `Net A: $8,500 − $2,000 = $6,500/yr  |  Net B: $6,200 − $1,400 = $4,800/yr\nExtra advantage: $1,700/yr  |  Price premium: $14,000\nBreak-even: $14,000 ÷ $1,700 = 8.24 → 9 complete years`,
+  ],
+  GG: [
+    `$65,000 + (5 × $2,000) − (5 × $7,800) = $65,000 + $10,000 − $39,000 = $36,000`,
+    `Net A: $7,800 − $2,000 = $5,800/yr  |  Net B: $5,800 − $1,600 = $4,200/yr\nExtra advantage: $1,600/yr  |  Price premium: $13,000\nBreak-even: $13,000 ÷ $1,600 = 8.125 → 9 complete years`,
+  ],
+  GH: [
+    `$38,000 + (5 × $1,200) − (5 × $4,800) = $38,000 + $6,000 − $24,000 = $20,000`,
+    `Net A: $4,800 − $1,200 = $3,600/yr  |  Net B: $3,200 − $800 = $2,400/yr\nExtra advantage: $1,200/yr  |  Price premium: $8,000\nBreak-even: $8,000 ÷ $1,200 = 6.67 → 7 complete years`,
+  ],
+  GI: [
+    `$85,000 + (5 × $2,000) − (5 × $9,800) = $85,000 + $10,000 − $49,000 = $46,000`,
+    `Net A: $9,800 − $2,000 = $7,800/yr  |  Net B: $7,300 − $1,800 = $5,500/yr\nExtra advantage: $2,300/yr  |  Price premium: $17,000\nBreak-even: $17,000 ÷ $2,300 = 7.39 → 8 complete years`,
+  ],
+  GJ: [
+    `$78,000 + (5 × $2,200) − (5 × $9,200) = $78,000 + $11,000 − $46,000 = $43,000`,
+    `Net A: $9,200 − $2,200 = $7,000/yr  |  Net B: $7,000 − $2,100 = $4,900/yr\nExtra advantage: $2,100/yr  |  Price premium: $16,000\nBreak-even: $16,000 ÷ $2,100 = 7.62 → 8 complete years`,
+  ],
+  // Volume & Storage Level 2
+  GK: [
+    `Tank 1: 4 × 2.5 × 1.8 = 18 m³\nTank 2: 3 × 2 × 2 = 12 m³\nCombined: 18 + 12 = 30 m³`,
+    `Total capacity: 30 m³ = 30,000 L\n65% of 30,000 = 0.65 × 30,000 = 19,500 L`,
+  ],
+  GL: [
+    `Volume = 2.5 × 1.6 × 1.2 = 4.8 m³`,
+    `Volume at 80%: 4.8 × 0.80 × 1,000 = 3,840 L\nTime: 3,840 ÷ 2,400 L/h = 1.6 h`,
+  ],
+  GM: [
+    `Volume = 10 × 8 × 2.5 = 200 m³`,
+    `Fill amount: (90% − 15%) × 200,000 L = 75% × 200,000 = 150,000 L\nTime: 150,000 ÷ 25,000 L/h = 6 h`,
+  ],
+  GN: [
+    `Volume = 6 × 4 × 1.5 = 36 m³`,
+    `Drain amount: (90% − 10%) × 36,000 L = 80% × 36,000 = 28,800 L\nTime: 28,800 ÷ 18,000 L/h = 1.6 h`,
+  ],
+  GO: [
+    `Volume = 4 × 3 × 2 = 24 m³`,
+    `Fill to 55%: 55% × 24,000 L = 13,200 L\nTime in hours: 13,200 ÷ 6,000 = 2.2 h\nConvert to minutes: 2.2 × 60 = 132 min`,
+  ],
+  GP: [
+    `Volume = 5 × 4 × 1.5 = 30 m³`,
+    `30 m³ × 0.75 × 1,000 L/m³ = 22,500 L`,
+  ],
+  GQ: [
+    `Volume = 12 × 8 × 3 = 288 m³`,
+    `Fill amount: (85% − 25%) × 288,000 L = 60% × 288,000 = 172,800 L\nTime: 172,800 ÷ 48,000 L/h = 3.6 h`,
+  ],
+  GR: [
+    `Volume = 1.5 × 1.2 × 0.8 = 1.44 m³`,
+    `Drain amount: (100% − 15%) × 1,440 L = 85% × 1,440 = 1,224 L\nTime: 1,224 ÷ 480 L/h = 2.55 h`,
+  ],
+  // Area & Measurement Level 2
+  GS: [
+    `Outer rectangle: 12 × 8 = 96 m²\nRemove corner: 4 × 3 = 12 m²\nL-shaped area: 96 − 12 = 84 m²`,
+    `Include 5% waste: 84 × 1.05 = 88.2 m²\nRolls needed: 88.2 ÷ 1.2 m²/roll = 73.5 → round up to 74 rolls`,
+  ],
+  GT: [
+    `Main deck: 8 × 4 = 32 m²\nStep extension: 4 × 2 = 8 m²\nTotal area: 32 + 8 = 40 m²`,
+    `Include 12% waste: 40 × 1.12 = 44.8 m²\nTotal cost: 44.8 × $45 = $2,016`,
+  ],
+  GU: [
+    `Main rectangle: 12 × 6 = 72 m²\nArm extension: 4 × 3 = 12 m²\nTotal area: 72 + 12 = 84 m²`,
+    `Include 15% extra: 84 × 1.15 = 96.6 m²\nBags needed: 96.6 ÷ 6 m²/bag = 16.1 → round up to 17 bags`,
+  ],
+  GV: [
+    `Outer rectangle: 10 × 8 = 80 m²\nInner open area: 6 × 4 = 24 m²\nPaved area: 80 − 24 = 56 m²`,
+    `Include 10% waste: 56 × 1.10 = 61.6 m²\nStones needed: 61.6 ÷ 0.36 m²/stone = 171.1 → round up to 172 stones`,
+  ],
+  GW: [
+    `Main rectangle: 15 × 8 = 120 m²\nSide extension: 5 × 4 = 20 m²\nTotal area: 120 + 20 = 140 m²`,
+    `Include 8% waste: 140 × 1.08 = 151.2 m²\nTiles needed: 151.2 ÷ 0.25 m²/tile = 604.8 → round up to 605 tiles`,
+  ],
+  GX: [
+    `Total terrace: 12 × 9 = 108 m²\nPlanter box: 3 × 4 = 12 m²\nUsable area: 108 − 12 = 96 m²`,
+    `Include 15% waste: 96 × 1.15 = 110.4 m²\nTotal cost: 110.4 × $40 = $4,416`,
+  ],
+  GY: [
+    `Zone A: 10 × 8 = 80 m²\nZone B: 6 × 5 = 30 m²\nTotal area: 80 + 30 = 110 m²`,
+    `Include 10% extra: 110 × 1.10 = 121 m²\nTotal cost: 121 × $38 = $4,598`,
+  ],
+  // Retail Price Comparisons Level 2
+  GZ: [
+    `15 units ≥ 12 → qualifies for 25% off\n$24 × (1 − 0.25) = $18/bottle\n15 × $18 = $270`,
+    `20 units ≥ 15 → qualifies for 20% off\n$22 × (1 − 0.20) = $17.60/bottle\n20 × $17.60 = $352`,
+  ],
+  HA: [
+    `10 sets ≥ 8 → qualifies for 15% off\n$40 × 0.85 = $34/set\n10 × $34 = $340`,
+    `12 sets ≥ 10 → qualifies for 20% off\n$35 × 0.80 = $28/set\n12 × $28 = $336`,
+  ],
+  HB: [
+    `9 mugs ≥ 6 → qualifies for 20% off\n$32 × 0.80 = $25.60/mug\n9 × $25.60 = $230.40`,
+    `10 mugs ≥ 8 → qualifies for 15% off\n$29 × 0.85 = $24.65/mug\n10 × $24.65 = $246.50`,
+  ],
+  HC: [
+    `6 mats ≥ 5 → qualifies for 18% off\n$85 × 0.82 = $69.70/mat\n6 × $69.70 = $418.20`,
+    `8 mats ≥ 7 → qualifies for 10% off\n$80 × 0.90 = $72/mat\n8 × $72 = $576`,
+  ],
+  HD: [
+    `5 boxes ≥ 4 → qualifies for 25% off\n$52 × 0.75 = $39/box\n5 × $39 = $195`,
+    `7 boxes ≥ 6 → qualifies for 20% off\n$45 × 0.80 = $36/box\n7 × $36 = $252`,
+  ],
+  HE: [
+    `25 cases ≥ 20 → qualifies for 30% off\n$18 × 0.70 = $12.60/case\n25 × $12.60 = $315`,
+    `30 cases ≥ 25 → qualifies for 25% off\n$16 × 0.75 = $12/case\n30 × $12 = $360`,
+  ],
+  HF: [
+    `15 candles ≥ 12 → qualifies for 20% off\n$14 × 0.80 = $11.20/candle\n15 × $11.20 = $168`,
+    `20 candles ≥ 15 → qualifies for 15% off\n$13 × 0.85 = $11.05/candle\n20 × $11.05 = $221`,
+  ],
+  HG: [
+    `8 bottles ≥ 6 → qualifies for 15% off\n$35 × 0.85 = $29.75/bottle\n8 × $29.75 = $238`,
+    `10 bottles ≥ 8 → qualifies for 10% off\n$32 × 0.90 = $28.80/bottle\n10 × $28.80 = $288`,
+  ],
+  HH: [
+    `12 packs ≥ 10 → qualifies for 20% off\n$30 × 0.80 = $24/pack\n12 × $24 = $288`,
+    `15 packs ≥ 12 → qualifies for 25% off\n$28 × 0.75 = $21/pack\n15 × $21 = $315`,
+  ],
+  HI: [
+    `30 pairs ≥ 24 → qualifies for 30% off\n$12 × 0.70 = $8.40/pair\n30 × $8.40 = $252`,
+    `36 pairs ≥ 30 → qualifies for 25% off\n$11 × 0.75 = $8.25/pair\n36 × $8.25 = $297`,
+  ],
+  // Construction & Materials Level 2
+  HJ: [
+    `Area = 45 m²; Sheet = 2.88 m²\n45 ÷ 2.88 = 15.63 → round up to 16 sheets`,
+    `Include 10% waste: 45 × 1.10 = 49.5 m²\n49.5 ÷ 2.88 = 17.19 → round up to 18 sheets\n18 × $24 = $432`,
+  ],
+  HK: [
+    `Volume = 12 × 4 × 0.15 = 7.2 m³`,
+    `Include 5% extra: 7.2 × 1.05 = 7.56 m³\n7.56 × $280 = $2,116.80`,
+  ],
+  HL: [
+    `Wall area: 8 × 1.2 = 9.6 m²\nBricks: 9.6 × 35 = 336`,
+    `Include 8% waste: 336 × 1.08 = 362.88 → round up to 363 bricks\n363 × $1.80 = $653.40`,
+  ],
+  HM: [
+    `Slab area: 17 × 9 = 153 m²; Sheet = 6 m²\n153 ÷ 6 = 25.5 → round up to 26 sheets`,
+    `Include 15% for overlaps: 153 × 1.15 = 175.95 m²\n175.95 ÷ 6 = 29.33 → round up to 30 sheets\n30 × $92 = $2,760`,
+  ],
+  HN: [
+    `55 ÷ 0.32 = 171.875 → round up to 172 tiles`,
+    `Include 10% waste: 55 × 1.10 = 60.5 m²\n60.5 ÷ 0.32 = 189.06 → round up to 190 tiles\n190 × $4.50 = $855`,
+  ],
+  HO: [
+    `64 ÷ 0.72 = 88.89 → round up to 89 batts`,
+    `Include 5% extra: 64 × 1.05 = 67.2 m²\n67.2 ÷ 0.72 = 93.33 → round up to 94 batts\n94 × $8.50 = $799`,
+  ],
+  HP: [
+    `30 ÷ 0.378 = 79.37 → round up to 80 boards`,
+    `Include 12% waste: 30 × 1.12 = 33.6 m²\n33.6 ÷ 0.378 = 88.89 → round up to 89 boards\n89 × $28 = $2,492`,
+  ],
+  HQ: [
+    `Wall area: 8.5 × 0.6 = 5.1 m²; Block face = 0.09 m²\n5.1 ÷ 0.09 = 56.67 → round up to 57 blocks`,
+    `Include 5% waste: 5.1 × 1.05 = 5.355 m²\n5.355 ÷ 0.09 = 59.5 → round up to 60 blocks\n60 × $12 = $720`,
+  ],
+  HR: [
+    `36 ÷ 0.08 = 450 pavers`,
+    `Include 10% extra: 36 × 1.10 = 39.6 m²\n39.6 ÷ 0.08 = 495 pavers\n495 × $3.60 = $1,782`,
+  ],
+  HS: [
+    `55 ÷ 1.62 = 33.95 → round up to 34 sheets`,
+    `Include 8% waste: 55 × 1.08 = 59.4 m²\n59.4 ÷ 1.62 = 36.67 → round up to 37 sheets\n37 × $22 = $814`,
+  ],
+  // Vehicle Finance Level 2
+  HT: [
+    `Total A = deposit + (monthly repayment × months)\n$6,400 + ($586 × 48) = $6,400 + $28,128 = $34,528`,
+    `Total B = $3,200 + ($525 × 60) = $3,200 + $31,500 = $34,700\nDifference: $34,700 − $34,528 = $172 (Option B costs more)`,
+  ],
+  HU: [
+    `$4,275 + ($580 × 48) = $4,275 + $27,840 = $32,115`,
+    `Total B = $1,425 + ($490 × 60) = $1,425 + $29,400 = $30,825\nDifference: $32,115 − $30,825 = $1,290 (Option B costs less)`,
+  ],
+  HV: [
+    `$9,500 + ($680 × 48) = $9,500 + $32,640 = $42,140`,
+    `Total B = $5,700 + ($612 × 60) = $5,700 + $36,720 = $42,420\nDifference: $42,420 − $42,140 = $280 (Option B costs more)`,
+  ],
+  HW: [
+    `$5,400 + ($510 × 48) = $5,400 + $24,480 = $29,880`,
+    `Total B = $2,700 + ($468 × 60) = $2,700 + $28,080 = $30,780\nDifference: $30,780 − $29,880 = $900 (Option B costs more)`,
+  ],
+  HX: [
+    `$9,000 + ($850 × 48) = $9,000 + $40,800 = $49,800`,
+    `Total B = $4,500 + ($770 × 60) = $4,500 + $46,200 = $50,700\nDifference: $50,700 − $49,800 = $900 (Option B costs more)`,
+  ],
+  HY: [
+    `$9,875 + ($720 × 48) = $9,875 + $34,560 = $44,435`,
+    `Total B = $5,925 + ($636 × 60) = $5,925 + $38,160 = $44,085\nDifference: $44,435 − $44,085 = $350 (Option B costs less)`,
+  ],
+  HZ: [
+    `$8,400 + ($790 × 48) = $8,400 + $37,920 = $46,320`,
+    `Total B = $4,200 + ($720 × 60) = $4,200 + $43,200 = $47,400\nDifference: $47,400 − $46,320 = $1,080 (Option B costs more)`,
+  ],
+  IA: [
+    `$7,200 + ($680 × 48) = $7,200 + $32,640 = $39,840`,
+    `Total B = $5,400 + ($590 × 60) = $5,400 + $35,400 = $40,800\nDifference: $40,800 − $39,840 = $960 (Option B costs more)`,
+  ],
+  IB: [
+    `$8,250 + ($598 × 48) = $8,250 + $28,704 = $36,954`,
+    `Total B = $3,300 + ($568 × 60) = $3,300 + $34,080 = $37,380\nDifference: $37,380 − $36,954 = $426 (Option B costs more)`,
+  ],
+  IC: [
+    `$8,200 + ($775 × 48) = $8,200 + $37,200 = $45,400`,
+    `Total B = $6,150 + ($665 × 60) = $6,150 + $39,900 = $46,050\nDifference: $46,050 − $45,400 = $650 (Option B costs more)`,
+  ],
+  // Property & Real Estate Level 2
+  ID: [
+    `Year 1 interest = loan × initial rate\n$416,000 × 5.5% = $416,000 × 0.055 = $22,880`,
+    `Monthly interest = loan × new rate ÷ 12\n$416,000 × 7.2% ÷ 12 = $416,000 × 0.006 = $2,496`,
+  ],
+  IE: [
+    `$578,000 × 4.8% = $578,000 × 0.048 = $27,744`,
+    `$578,000 × 6.6% ÷ 12 = $578,000 × 0.0055 = $3,179`,
+  ],
+  IF: [
+    `$360,000 × 5.0% = $360,000 × 0.050 = $18,000`,
+    `$360,000 × 7.5% ÷ 12 = $360,000 × 0.00625 = $2,250`,
+  ],
+  IG: [
+    `$615,000 × 4.2% = $615,000 × 0.042 = $25,830`,
+    `$615,000 × 5.4% ÷ 12 = $615,000 × 0.0045 = $2,767.50`,
+  ],
+  IH: [
+    `$315,000 × 5.8% = $315,000 × 0.058 = $18,270`,
+    `$315,000 × 8.4% ÷ 12 = $315,000 × 0.007 = $2,205`,
+  ],
+  II: [
+    `$472,000 × 4.5% = $472,000 × 0.045 = $21,240`,
+    `$472,000 × 6.0% ÷ 12 = $472,000 × 0.005 = $2,360`,
+  ],
+  IJ: [
+    `$540,000 × 4.8% = $540,000 × 0.048 = $25,920`,
+    `$540,000 × 6.6% ÷ 12 = $540,000 × 0.0055 = $2,970`,
+  ],
+  IK: [
+    `$416,500 × 5.2% = $416,500 × 0.052 = $21,658`,
+    `$416,500 × 7.2% ÷ 12 = $416,500 × 0.006 = $2,499`,
+  ],
+  IL: [
+    `$512,000 × 4.5% = $512,000 × 0.045 = $23,040`,
+    `$512,000 × 5.7% ÷ 12 = $512,000 × 0.00475 = $2,432`,
+  ],
+  IM: [
+    `$448,000 × 5.0% = $448,000 × 0.050 = $22,400`,
+    `$448,000 × 7.5% ÷ 12 = $448,000 × 0.00625 = $2,800`,
+  ],
+  // Business Scenarios Level 2
+  JE: [
+    `Monthly revenue = 25,000 × 4% × $85\n= 25,000 × 0.04 × 85\n= 1,000 × $85 = $85,000`,
+    `Gross margin = $85,000 × (1 − 65%) = $85,000 × 0.35 = $29,750\nNet profit = $29,750 − $3,500 = $26,250`,
+  ],
+  JF: [
+    `After 5% churn: 8,000 × (1 − 0.05) = 8,000 × 0.95 = 7,600 subscribers`,
+    `Total subscribers: 7,600 + 600 = 8,200\nMonthly revenue: 8,200 × $25 = $205,000`,
+  ],
+  JG: [
+    `Total units: 200 × 8 = 1,600\nNon-defective: 1,600 × (1 − 0.05) = 1,600 × 0.95 = 1,520 units`,
+    `Revenue: 1,520 × $45 = $68,400\nProduction cost: 1,600 × $22 = $35,200\nNet profit: $68,400 − $35,200 = $33,200`,
+  ],
+  JH: [
+    `Total monthly km: 8 × 2,000 = 16,000 km\nFuel: 16,000 × 12 ÷ 100 = 1,920 L`,
+    `Cost: 1,920 × $1.75 = $3,360`,
+  ],
+  JI: [
+    `Sales above threshold: $800,000 − $150,000 = $650,000\nCommission: $650,000 × 6% = $39,000`,
+    `Total income: $48,000 + $39,000 = $87,000`,
+  ],
+  JJ: [
+    `Annual gross rent: $750 × 52 = $39,000\nNet rental income: $39,000 − $12,000 = $27,000`,
+    `Gross yield: $39,000 ÷ $780,000 × 100 = 5%`,
+  ],
+  JK: [
+    `Taxable payroll: $1,500,000 − $600,000 = $900,000`,
+    `Payroll tax: $900,000 × 4.85% = $900,000 × 0.0485 = $43,650`,
+  ],
+  JL: [
+    `Profit per m²: $1,800 − $300 = $1,500\nTotal profit: $1,500 × 400 = $600,000`,
+    `Expanded area: 400 × 1.25 = 500 m²\nNew profit: $1,500 × 500 = $750,000`,
+  ],
+  JM: [
+    `Normal profit per unit: $120 − $70 = $50\nMonthly profit: $50 × 800 = $40,000`,
+    `Discounted profit per unit: $102 − $70 = $32\nMonthly profit: $32 × 1,100 = $35,200`,
+  ],
+  JN: [
+    `Regular pay: 40 h × 12 staff × $38 = $18,240`,
+    `Overtime rate: $38 × 1.5 = $57/h\nOvertime pay: 8 h × 12 staff × $57 = $5,472`,
+  ],
+  // Unit Conversions Level 2
+  JO: [
+    `Volume = 4 × 3 × 2.5 = 30 m³`,
+    `30 m³ × 1,000,000 = 30,000,000 mL`,
+  ],
+  JP: [
+    `Volume = 200 × 0.8 × 0.6 = 96 m³`,
+    `96 m³ = 96 kL; 96 × $1.50 = $144`,
+  ],
+  JQ: [
+    `Volume = 240 × 150 × 100 = 3,600,000 cm³`,
+    `3,600,000 ÷ 1,000,000 = 3.6 m³`,
+  ],
+  JR: [
+    `450,000 mL ÷ 1,000 = 450 L`,
+    `450,000 mL ÷ 375 mL = 1,200 bottles`,
+  ],
+  JS: [
+    `48 kL × 1,000 = 48,000 L`,
+    `48,000 L ÷ 60 L = 800 vehicles`,
+  ],
+  JT: [
+    `Volume = 8 × 6 × 0.25 = 12 m³`,
+    `12 m³ × $420 = $5,040`,
+  ],
+  JU: [
+    `Volume = 350 × 280 × 120 = 11,760,000 cm³`,
+    `11,760,000 ÷ 1,000,000 = 11.76 kL`,
+  ],
+  JV: [
+    `750 mL/min × (4 × 60 min) = 180,000 mL ÷ 1,000 = 180 L`,
+    `180 L ÷ 1,000 = 0.18 m³`,
+  ],
+  JW: [
+    `Volume = 1.5 × 1.2 × 0.8 = 1.44 m³`,
+    `1.44 m³ × 1,000,000 = 1,440,000 mL`,
+  ],
+  JX: [
+    `0.5 m³ × 1,000 L/m³ = 500 L`,
+    `0.5 m³ = 500,000 mL; 500,000 ÷ 2,500 = 200 beakers`,
+  ],
+  // Cylinder Geometry Level 2
+  IN: [
+    `2πr² + 2πrh = 2 × 3.14 × 2² + 2 × 3.14 × 2 × 5\n= 2 × 3.14 × 4 + 2 × 3.14 × 10\n= 25.12 + 62.80 = 87.92 m²`,
+    `πr²h × 75% = 3.14 × 2² × 5 × 0.75\n= 3.14 × 4 × 5 × 0.75\n= 62.80 × 0.75 = 47.1 m³`,
+  ],
+  IO: [
+    `2πr² + 2πrh = 2 × 3.14 × 3² + 2 × 3.14 × 3 × 8\n= 2 × 3.14 × 9 + 2 × 3.14 × 24\n= 56.52 + 150.72 = 207.24 m²`,
+    `πr²h × ⅔ = 3.14 × 3² × 8 × (2 ÷ 3)\n= 3.14 × 9 × 8 × 0.667\n= 226.08 × 0.667 = 150.72 m³`,
+  ],
+  // Energy & Nutrition Level 2
+  IP: [
+    `Muesli bar: 400 kJ/100g × 50g = 200 kJ\nWhole milk: 280 kJ/100mL × 200mL = 560 kJ\nTotal: 200 + 560 = 760 kJ`,
+    `760 kJ ÷ 1,900 kJ/hr × 60 = 0.4 hr × 60 = 24 min`,
+  ],
+  IQ: [
+    `Chocolate cake: 1,850 kJ/100g × 80g = 1,480 kJ\nVanilla ice cream: 900 kJ/100g × 60g = 540 kJ\nTotal: 1,480 + 540 = 2,020 kJ`,
+    `2,020 kJ ÷ 2,400 kJ/hr × 60 = 0.842 hr × 60 = 50.5 min`,
+  ],
+  IR: [
+    `Avocado toast: 600 kJ × 2 slices = 1,200 kJ\nFlat white: 320 kJ × 1 = 320 kJ\nTotal: 1,200 + 320 = 1,520 kJ`,
+    `1,520 kJ ÷ 1,200 kJ/hr × 60 = 1.267 hr × 60 = 76 min`,
+  ],
+  IS: [
+    `Beef burger: 2,100 kJ\nLarge fries: 1,800 kJ\nTotal: 2,100 + 1,800 = 3,900 kJ`,
+    `3,900 kJ ÷ 3,120 kJ/hr × 60 = 1.25 hr × 60 = 75 min`,
+  ],
+  IT: [
+    `Chicken breast: 840 kJ/100g × 200g = 1,680 kJ\nPasta: 600 kJ/100g × 150g = 900 kJ\nTotal: 1,680 + 900 = 2,580 kJ`,
+    `2,580 kJ ÷ 2,400 kJ/hr × 60 = 1.075 hr × 60 = 64.5 min`,
+  ],
+  // Shower Water Savings Level 2
+  IU: [
+    `Flow rate difference: 11 − 7.5 = 3.5 L/min\nAnnual saving: 3.5 × 8 min × 2 showers × 365 days = 20,440 L`,
+    `20,440 L ÷ 1,000 × $3.50/kL = 20.44 × 3.50 = $71.54`,
+  ],
+  IV: [
+    `Flow rate difference: 10 − 6 = 4 L/min\nAnnual saving: 4 × 6 min × 1 shower × 365 days = 8,760 L`,
+    `8,760 L ÷ 1,000 × $3.00/kL = 8.76 × 3.00 = $26.28`,
+  ],
+  IW: [
+    `Flow rate difference: 13 − 8 = 5 L/min\nAnnual saving: 5 × 10 min × 1 shower × 365 days = 18,250 L`,
+    `18,250 L ÷ 1,000 × $4.00/kL = 18.25 × 4.00 = $73.00`,
+  ],
+  IX: [
+    `Flow rate difference: 12 − 7 = 5 L/min\nAnnual saving: 5 × 7 min × 3 showers × 365 days = 38,325 L`,
+    `38,325 L ÷ 1,000 × $3.20/kL = 38.325 × 3.20 = $122.64`,
+  ],
+  IY: [
+    `Flow rate difference: 10 − 6.5 = 3.5 L/min\nAnnual saving: 3.5 × 9 min × 2 showers × 365 days = 22,995 L`,
+    `22,995 L ÷ 1,000 × $4.00/kL = 22.995 × 4.00 = $91.98`,
+  ],
+  IZ: [
+    `Flow rate difference: 9 − 5.5 = 3.5 L/min\nAnnual saving: 3.5 × 5 min × 4 showers × 365 days = 25,550 L`,
+    `25,550 L ÷ 1,000 × $3.00/kL = 25.55 × 3.00 = $76.65`,
+  ],
+  JA: [
+    `Flow rate difference: 14 − 8.5 = 5.5 L/min\nAnnual saving: 5.5 × 12 min × 1 shower × 365 days = 24,090 L`,
+    `24,090 L ÷ 1,000 × $5.00/kL = 24.09 × 5.00 = $120.45`,
+  ],
+  JB: [
+    `Flow rate difference: 11 − 7 = 4 L/min\nAnnual saving: 4 × 8 min × 2 showers × 365 days = 23,360 L`,
+    `23,360 L ÷ 1,000 × $2.50/kL = 23.36 × 2.50 = $58.40`,
+  ],
+  JC: [
+    `Flow rate difference: 15 − 9 = 6 L/min\nAnnual saving: 6 × 15 min × 1 shower × 365 days = 32,850 L`,
+    `32,850 L ÷ 1,000 × $4.00/kL = 32.85 × 4.00 = $131.40`,
+  ],
+  JD: [
+    `Flow rate difference: 9 − 6 = 3 L/min\nAnnual saving: 3 × 10 min × 5 showers × 365 days = 54,750 L`,
+    `54,750 L ÷ 1,000 × $2.80/kL = 54.75 × 2.80 = $153.30`,
+  ],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
@@ -5256,7 +8008,19 @@ const TOPIC_GROUPS = {
   'Timesheets Level 2':       ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
   'Standard Drinks Level 2':  ['EW','EX','EY','EZ','FA','FB','FC','FD','FE','FF'],
   'Pay Gap Level 2':          ['FG','FH','FI','FJ','FK','FL','FM','FN','FO','FP'],
-  'Travel & Commute Level 2': ['FQ','FR','FS','FT','FU','FV','FW','FX','FY','FZ'],
+  'Travel & Commute Level 2':           ['FQ','FR','FS','FT','FU','FV','FW','FX','FY','FZ'],
+  'Fleet Vehicle Costs Level 2':        ['GA','GB','GC','GD','GE','GF','GG','GH','GI','GJ'],
+  'Volume & Storage Level 2':           ['GK','GL','GM','GN','GO','GP','GQ','GR'],
+  'Area & Measurement Level 2':         ['GS','GT','GU','GV','GW','GX','GY'],
+  'Retail Price Comparisons Level 2':   ['GZ','HA','HB','HC','HD','HE','HF','HG','HH','HI'],
+  'Construction & Materials Level 2':   ['HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS'],
+  'Vehicle Finance Level 2':            ['HT','HU','HV','HW','HX','HY','HZ','IA','IB','IC'],
+  'Property & Real Estate Level 2':     ['ID','IE','IF','IG','IH','II','IJ','IK','IL','IM'],
+  'Cylinder Geometry Level 2':          ['IN','IO'],
+  'Energy & Nutrition Level 2':         ['IP','IQ','IR','IS','IT'],
+  'Shower Water Savings Level 2':       ['IU','IV','IW','IX','IY','IZ','JA','JB','JC','JD'],
+  'Business Scenarios Level 2':         ['JE','JF','JG','JH','JI','JJ','JK','JL','JM','JN'],
+  'Unit Conversions Level 2':           ['JO','JP','JQ','JR','JS','JT','JU','JV','JW','JX'],
 }
 
 app.get('/api/topics', (req, res) => {
