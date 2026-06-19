@@ -1460,6 +1460,128 @@ const ctxShower = {
   }]
 }
 
+// ── Business scenario contexts (DS–EB) ───────────────────────────────────────
+
+const ctxDS = {
+  title: 'Portfolio Asset Rebalancing',
+  tables: [{
+    headers: ['Asset', 'Value'],
+    rows: [
+      ['Property', '$2,400,000'],
+      ['Stocks',   '$1,800,000'],
+      ['Bonds',    '$600,000'],
+      ['Total',    '$4,800,000'],
+    ]
+  }]
+}
+const ctxDT = {
+  title: 'E-Commerce Profitability',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Units Sold',      '500'],
+      ['Sale Price',      '$150 per unit'],
+      ['COGS',           '$90 per unit'],
+      ['Fixed Overhead', '$12,000'],
+    ]
+  }]
+}
+const ctxDU = {
+  title: 'Production Efficiency',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Total Production', '4,000 units/hour'],
+      ['Current Defects',  '200 units/hour'],
+      ['Target Defects',   '80 units/hour'],
+    ]
+  }]
+}
+const ctxDV = {
+  title: 'Fleet Management Fuel Costs',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Fleet Size',       '12 vehicles'],
+      ['Monthly Distance', '1,500 km per vehicle'],
+      ['Fuel Consumption', '10 L/100 km'],
+      ['Fuel Price',       '$1.80 per litre'],
+    ]
+  }]
+}
+const ctxDW = {
+  title: 'Subscription Churn and Growth',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Current Subscribers', '10,000'],
+      ['Revenue per Sub',     '$20/month'],
+      ['Monthly Churn Rate',  '8%'],
+      ['Marketing Spend',     '$50,000'],
+      ['New Subscribers',     '1,200 (from marketing)'],
+    ]
+  }]
+}
+const ctxDX = {
+  title: 'Sales Commission Structure',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Base Salary',          '$60,000'],
+      ['Commission Threshold', '$200,000 in sales'],
+      ['Commission Rate',      '5% on sales above threshold'],
+      ['Annual Sales',         '$1,000,000'],
+    ]
+  }]
+}
+const ctxDY = {
+  title: 'Manufacturing Throughput',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Production Rate',    '2,000 units/hour'],
+      ['Shift Length',       '8 hours'],
+      ['Current Defect Rate', '4%'],
+      ['Target Defect Rate', '1%'],
+    ]
+  }]
+}
+const ctxDZ = {
+  title: 'Real Estate Rental Yield',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Purchase Price', '$900,000'],
+      ['Annual Costs',   '$8,000'],
+      ['Weekly Rent',    '$900'],
+    ]
+  }]
+}
+const ctxEA = {
+  title: 'Payroll Tax Liability',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Employees',          '15'],
+      ['Annual Salary Each', '$80,000'],
+      ['Total Payroll',      '$1,200,000'],
+      ['Tax-Free Threshold', '$500,000'],
+      ['Tax Rate',           '5%'],
+    ]
+  }]
+}
+const ctxEB = {
+  title: 'Warehouse Storage Efficiency',
+  tables: [{
+    headers: ['Metric', 'Value'],
+    rows: [
+      ['Storage Area',   '500 m²'],
+      ['Annual Cost',    '$250 per m²'],
+      ['Annual Revenue', '$1,500 per m²'],
+    ]
+  }]
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -3226,6 +3348,138 @@ const questions = [
     answer: '4'
   },
 
+  // ── Sets DS–EB: Business Scenario Pairs ──────────────────────────────────────
+  {
+    group: 'DS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDS,
+    question: 'What percentage of the total portfolio ($4.8M) is held in Property?',
+    answer: '50'
+  },
+  {
+    group: 'DS', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDS,
+    question: 'If the $1,800,000 in Stocks increases by 12.5% and the $600,000 in Bonds decreases by 5%, what is the percentage increase or decrease in the total portfolio value?',
+    options: ['2.94% increase', '4.06% increase', '4.50% increase', '5.21% increase'],
+    answer: '4.06% increase'
+  },
+  {
+    group: 'DT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDT,
+    question: 'What is the net profit as a percentage of total revenue?',
+    answer: '24'
+  },
+  {
+    group: 'DT', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDT,
+    question: 'If unit production costs increase by 10% (keeping sale price at $150), what is the percentage decrease in net profit?',
+    options: ['10% decrease', '15% decrease', '25% decrease', '40% decrease'],
+    answer: '25% decrease'
+  },
+  {
+    group: 'DU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDU,
+    question: 'What is the current percentage defect rate?',
+    answer: '5'
+  },
+  {
+    group: 'DU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDU,
+    question: 'If defects reduce to 80 per hour, what is the percentage increase in non-defective units?',
+    options: ['1.52% increase', '2.05% increase', '3.16% increase', '4.21% increase'],
+    answer: '3.16% increase'
+  },
+  {
+    group: 'DV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDV,
+    question: 'What is the total monthly fuel cost for the entire fleet?',
+    answer: '3240'
+  },
+  {
+    group: 'DV', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDV,
+    question: 'If maintenance improves efficiency by 15% (reducing consumption to 8.5 L/100 km), what is the percentage decrease in total monthly fuel expenditure?',
+    options: ['10% decrease', '12% decrease', '15% decrease', '20% decrease'],
+    answer: '15% decrease'
+  },
+  {
+    group: 'DW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDW,
+    question: 'How many subscribers remain after 1 month of 8% churn?',
+    answer: '9200'
+  },
+  {
+    group: 'DW', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDW,
+    question: 'What is the percentage change in total monthly revenue after the 800 churned subscribers and 1,200 new subscribers are accounted for?',
+    options: ['2% increase', '3% increase', '4% increase', '6% increase'],
+    answer: '4% increase'
+  },
+  {
+    group: 'DX', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDX,
+    question: 'What is the total annual income (Base Salary + Commission)?',
+    answer: '100000'
+  },
+  {
+    group: 'DX', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDX,
+    question: 'If sales increase by 20% next year, what is the percentage increase in total annual income?',
+    options: ['8% increase', '10% increase', '12% increase', '15% increase'],
+    answer: '10% increase'
+  },
+  {
+    group: 'DY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDY,
+    question: 'How many non-defective units are produced in an 8-hour shift at the current 4% defect rate?',
+    answer: '15360'
+  },
+  {
+    group: 'DY', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDY,
+    question: 'If an upgrade reduces the defect rate to 1%, what is the percentage increase in the output of non-defective units?',
+    options: ['2.50% increase', '3.00% increase', '3.125% increase', '3.75% increase'],
+    answer: '3.125% increase'
+  },
+  {
+    group: 'DZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxDZ,
+    question: 'What is the annual Net Rental Income (52 weeks of rent minus annual costs)?',
+    answer: '38800'
+  },
+  {
+    group: 'DZ', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxDZ,
+    question: 'If property value increases to $990,000 and weekly rent increases to $945, what is the percentage change in the Net Rental Yield?',
+    options: ['1.82% decrease', '3.61% decrease', '5.68% decrease', '7.42% decrease'],
+    answer: '3.61% decrease'
+  },
+  {
+    group: 'EA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEA,
+    question: 'What is the total annual payroll tax paid?',
+    answer: '35000'
+  },
+  {
+    group: 'EA', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxEA,
+    question: 'If all salaries increase by 3%, what is the percentage increase in total payroll tax liability?',
+    options: ['3.00% increase', '4.28% increase', '5.14% increase', '12.86% increase'],
+    answer: '5.14% increase'
+  },
+  {
+    group: 'EB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEB,
+    question: 'What is the total annual operating profit?',
+    answer: '625000'
+  },
+  {
+    group: 'EB', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxEB,
+    question: 'If storage space expands by 20% (costs +20%) but revenue per m² drops by 5%, what is the percentage change in total annual profit?',
+    options: ['5% increase', '7.5% increase', '8% increase', '10% increase'],
+    answer: '8% increase'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -3334,6 +3588,9 @@ const units = {
   DD: [null], DE: [null], DF: [null], DG: [null], DH: [null],
   DI: ['L'], DJ: ['L'], DK: ['L'], DL: ['L'], DM: ['L'],
   DN: ['L'], DO: ['L'], DP: ['L'], DQ: ['L'], DR: ['L'],
+  DS: ['%', null], DT: ['%', null], DU: ['%', null], DV: ['$', null],
+  DW: [null, null], DX: ['$', null], DY: [null, null], DZ: ['$', null],
+  EA: ['$', null], EB: ['$', null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3796,6 +4053,46 @@ const methods = {
   DP: [`Saving per minute = 14 − 9 = 5 L/min\nTotal saved = 5 × 4 = 20 L`],
   DQ: [`Saving per minute = 9 − 5 = 4 L/min\nTotal saved = 4 × 30 = 120 L`],
   DR: [`Saving per minute = 13 − 8 = 5 L/min\nTotal saved = 5 × 7 = 35 L`],
+  DS: [
+    `Total = $2,400,000 + $1,800,000 + $600,000 = $4,800,000\nProperty % = $2,400,000 ÷ $4,800,000 × 100 = 50%`,
+    `Stocks gain: $1,800,000 × 12.5% = $225,000\nBonds loss: $600,000 × 5% = $30,000\nNet change: $225,000 − $30,000 = $195,000\n% change: $195,000 ÷ $4,800,000 × 100 = 4.06% increase`,
+  ],
+  DT: [
+    `Revenue: 500 × $150 = $75,000\nCOGS: 500 × $90 = $45,000\nNet profit: $75,000 − $45,000 − $12,000 = $18,000\nProfit % = $18,000 ÷ $75,000 × 100 = 24%`,
+    `New COGS/unit: $90 × 1.10 = $99\nNew total COGS: 500 × $99 = $49,500\nNew net profit: $75,000 − $49,500 − $12,000 = $13,500\n% decrease: ($18,000 − $13,500) ÷ $18,000 × 100 = $4,500 ÷ $18,000 = 25% decrease`,
+  ],
+  DU: [
+    `Defect rate = 200 ÷ 4,000 × 100 = 5%`,
+    `Non-defective (current): 4,000 − 200 = 3,800\nNon-defective (new): 4,000 − 80 = 3,920\n% increase: (3,920 − 3,800) ÷ 3,800 × 100 = 120 ÷ 3,800 = 3.16% increase`,
+  ],
+  DV: [
+    `Fuel per vehicle = 1,500 × (10 ÷ 100) = 150 L\nCost per vehicle = 150 L × $1.80 = $270\nFleet total = 12 × $270 = $3,240`,
+    `New consumption: 10 L/100km → 8.5 L/100km = 15% reduction\nSince cost ∝ fuel used, expenditure also falls by 15% decrease`,
+  ],
+  DW: [
+    `Churned: 10,000 × 8% = 800\nRemaining: 10,000 − 800 = 9,200`,
+    `Final subscribers: 9,200 + 1,200 = 10,400\nOld revenue: 10,000 × $20 = $200,000\nNew revenue: 10,400 × $20 = $208,000\n% change: $8,000 ÷ $200,000 × 100 = 4% increase`,
+  ],
+  DX: [
+    `Commission = ($1,000,000 − $200,000) × 5% = $800,000 × 0.05 = $40,000\nTotal income = $60,000 + $40,000 = $100,000`,
+    `New sales = $1,000,000 × 1.20 = $1,200,000\nNew commission = ($1,200,000 − $200,000) × 5% = $50,000\nNew total = $60,000 + $50,000 = $110,000\n% increase = $10,000 ÷ $100,000 × 100 = 10% increase`,
+  ],
+  DY: [
+    `Total units in shift = 2,000 × 8 = 16,000\nNon-defective = 16,000 × (1 − 0.04) = 16,000 × 0.96 = 15,360`,
+    `New non-defective = 16,000 × (1 − 0.01) = 16,000 × 0.99 = 15,840\n% increase = (15,840 − 15,360) ÷ 15,360 × 100 = 480 ÷ 15,360 = 3.125% increase`,
+  ],
+  DZ: [
+    `Annual rent = $900 × 52 = $46,800\nNet income = $46,800 − $8,000 = $38,800`,
+    `Old yield = $38,800 ÷ $900,000 × 100 = 4.31%\nNew annual rent = $945 × 52 = $49,140\nNew net income = $49,140 − $8,000 = $41,140\nNew yield = $41,140 ÷ $990,000 × 100 = 4.16%\n% change = (4.16% − 4.31%) ÷ 4.31% × 100 = −3.61% (decrease in yield)`,
+  ],
+  EA: [
+    `Total payroll = 15 × $80,000 = $1,200,000\nTaxable = $1,200,000 − $500,000 = $700,000\nPayroll tax = $700,000 × 5% = $35,000`,
+    `New salary = $80,000 × 1.03 = $82,400\nNew payroll = 15 × $82,400 = $1,236,000\nNew taxable = $1,236,000 − $500,000 = $736,000\nNew tax = $736,000 × 5% = $36,800\n% increase = ($36,800 − $35,000) ÷ $35,000 × 100 = $1,800 ÷ $35,000 = 5.14% increase`,
+  ],
+  EB: [
+    `Profit per m² = $1,500 − $250 = $1,250\nTotal profit = $1,250 × 500 = $625,000`,
+    `New area = 500 × 1.20 = 600 m²\nNew cost/m² = $250 × 1.20 = $300\nNew rev/m² = $1,500 × 0.95 = $1,425\nNew profit/m² = $1,425 − $300 = $1,125\nNew total = $1,125 × 600 = $675,000\n% change = ($675,000 − $625,000) ÷ $625,000 × 100 = 8% increase`,
+  ],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
