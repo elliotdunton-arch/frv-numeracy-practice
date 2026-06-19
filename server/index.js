@@ -4097,28 +4097,44 @@ const methods = {
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
 
-function shuffleByGroup(qs) {
-  const groupMap = {}
-  const units = []
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+}
 
+function shuffleByGroup(qs) {
+  // Build one array-of-questions per group, preserving internal order
+  const groupMap = {}
   qs.forEach(q => {
-    if (q.group) {
-      if (!groupMap[q.group]) {
-        groupMap[q.group] = []
-        units.push(groupMap[q.group])
-      }
-      groupMap[q.group].push(q)
-    } else {
-      units.push([q])
-    }
+    if (!groupMap[q.group]) groupMap[q.group] = []
+    groupMap[q.group].push(q)
+  })
+  const groups = Object.values(groupMap)
+
+  // Bucket groups by theme (context title, or group code if no context)
+  const themeMap = {}
+  groups.forEach(grp => {
+    const key = grp[0].context?.title ?? grp[0].group
+    if (!themeMap[key]) themeMap[key] = []
+    themeMap[key].push(grp)
   })
 
-  for (let i = units.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [units[i], units[j]] = [units[j], units[i]]
-  }
+  // Shuffle groups within each theme, then shuffle the theme order
+  const themes = Object.values(themeMap)
+  themes.forEach(t => shuffle(t))
+  shuffle(themes)
 
-  return units.flat()
+  // Round-robin: take one group per theme per round
+  const result = []
+  const maxRounds = Math.max(...themes.map(t => t.length))
+  for (let round = 0; round < maxRounds; round++) {
+    for (const theme of themes) {
+      if (theme[round]) result.push(...theme[round])
+    }
+  }
+  return result
 }
 
 app.get('/api/questions', (req, res) => {
