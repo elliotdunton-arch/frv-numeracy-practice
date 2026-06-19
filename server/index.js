@@ -3581,6 +3581,153 @@ const ctxL20 = {
   ]
 }
 
+const ctxL21 = {
+  title: 'KAP-7: Why Kitchen Appliance Protocol Is No Longer a Luxury — It Is a Necessity',
+  subtitle: 'Opinion Article — Home Safety & Technology',
+  paragraphs: [
+    'The Kitchen Appliance Protocol, version 7 — commonly known as the KAP-7 — represents a critical advancement in residential fire and gas safety. Designed for integration with modern smart home ecosystems, the KAP-7 monitors kitchen environments in real time and intervenes when hazardous conditions are detected. Yet despite its demonstrable life-saving potential, many homeowners continue to view it as an optional luxury rather than what it truly is: a moral and practical imperative.',
+    'The KAP-7 operates across two distinct response tiers. At the Tier 1 level, the system logs an "unattended heating" warning whenever a cooktop surface temperature exceeds 200 degrees Celsius for more than 30 continuous seconds without any manual input being registered. This early-warning function alone prevents thousands of low-level incidents before they escalate. At the critical response level, the system\'s Emergency Cutoff Sequence (ECS) activates under two conditions: when gas concentrations in the kitchen environment exceed 0.5 per cent, or when smoke opacity reaches 15 per cent density. When either threshold is crossed, the KAP-7 terminates both gas and electrical flow to all registered kitchen appliances within five seconds.',
+    'Following an ECS activation, the system enforces a mandatory 24-hour lockout on all remote resets. During this period, the appliances cannot be reactivated via mobile application or remote command. A physical diagnostic inspection of the kitchen environment is required before the system can be unlocked. Critics of the KAP-7 have called this feature excessive, labelling the system "oversensitive" and claiming it intrudes on daily domestic life. These individuals ignore the catastrophic reality of residential gas fires and mischaracterise an intelligent safety protocol as an inconvenience. A system that halts a potentially explosive situation and prevents a hasty, uniformed restart is not an imposition — it is the responsible design of a tool built to protect human life.',
+    'The KAP-7 is no longer a luxury available only to those with premium smart-home budgets. As the technology matures and its integration costs decrease, every homeowner now has both the means and the obligation to install it. The argument that kitchen safety can be managed through attentiveness and common sense has been disproved by fire statistics year after year. The KAP-7 does not replace good judgement — it exists precisely for the moments when good judgement fails.'
+  ]
+}
+
+const ctxL22 = {
+  title: 'Exercise Strategy 40-A: A Framework for Responsible Canine Physical Enrichment',
+  subtitle: 'Animal Welfare Article — Companion Animal Health',
+  paragraphs: [
+    'The physical health of a domestic dog is inseparable from the quality and structure of its daily exercise regime. Exercise Strategy 40-A has been developed to provide dog owners with a clear, evidence-informed framework for managing the intensity, duration, and recovery phases of their companion\'s physical activity. The strategy is not a set of recommendations — it is a structured protocol that, when followed correctly, protects the long-term physiological welfare of domestic canines.',
+    'The strategy divides physical activities into two tiers. Tier A covers high-intensity exercises such as running, agility games, and ball retrieval. These activities are strictly capped at 40 minutes per session. If, at any point following the cessation of Tier A activity, a dog\'s heart rate fails to normalise within a five-minute window, the owner is required to initiate an immediate cooling phase — this may include moving the dog to a shaded environment, providing water, and ceasing all physical stimulation until vital signs stabilise.',
+    'Tier B encompasses lower-intensity enrichment activities, such as scent games and problem-solving exercises. While Tier B enrichment allows for longer sessions, such as 120 minutes of scent games, this is contingent upon the dog\'s engagement. Owners must monitor behavioural cues throughout. A dog that begins to ignore cues, disengage from the activity, or fail to respond to commands is not being willfully disobedient, as is often falsely presumed — it is exhibiting the behavioural markers of physiological exhaustion. At this point, the activity must cease immediately, regardless of the planned duration.',
+    'The protocol also incorporates a hydration monitoring module. A detected drop of 15 per cent or more in a dog\'s movement fluidity — assessed through reduced stride length and lowered tail carriage — triggers an automatic dehydration lockout: all game modules are halted for a mandatory 60-minute recovery period. This enforced rest window ensures that the dog\'s physiological needs are never compromised in the interest of an owner\'s recreational agenda. Exercise Strategy 40-A is not about limiting the joy of physical play. It is about ensuring that every exercise session enhances, rather than diminishes, the health and longevity of the animals in our care.'
+  ]
+}
+
+const ctxL23 = {
+  title: 'Precision Above All: The Uncompromising Standards of Professional Fermentation Baking',
+  subtitle: 'Professional Standards Article — Culinary Arts',
+  paragraphs: [
+    'Professional baking at the artisan and commercial level is not a craft sustained by intuition or improvisation. It is a disciplined technical science in which environmental variables are measured, controlled, and responded to with systematic precision. No stage of the baking process demands this discipline more acutely than fermentation — the biochemical foundation upon which every loaf is built.',
+    'The fermentation chamber must remain anchored at a precise 26 degrees Celsius throughout the proofing cycle. Deviation above this temperature threshold directly endangers the structural integrity of the dough. If internal dough temperature rises above 30 degrees Celsius, the yeast colony over-processes the available sugars at an accelerated rate, producing an excess of carbon dioxide gas that the gluten network cannot contain. The result is an irreversible structural collapse during the bake. Relative humidity within the chamber must be maintained at 75 per cent. If humidity sensors detect a drop below this level, the integrated misting system executes a 10-second spray sequence to restore the ambient moisture balance and protect the dough\'s surface integrity.',
+    'Once a batch has been proofing for 150 minutes, the chamber\'s monitoring system automatically flags the dough as "over-proofed." At this point, the baker is granted a 10-minute salvage window in which to apply a gentle-fold technique — a careful degassing method that can partially restore structure to the dough before baking. This window is not merely a technical checkpoint. It is a test of a baker\'s integrity. A professional who applies the gentle-fold knowing the result will be marginally acceptable is making a commercial decision that compromises their brand. A true professional does not mourn the loss of inferior product; they protect their brand by discarding any batch they cannot stand behind fully.',
+    'Critics of rigidly automated fermentation systems argue that they remove the human element from an inherently creative process. This argument misunderstands both baking and professionalism. The automation does not make the decisions — it creates the conditions within which disciplined bakers can make them. The KAP-7 of the kitchen, and the fermentation protocol of the bakery, share the same underlying philosophy: precision is not an obstacle to quality. It is quality\'s precondition.'
+  ]
+}
+
+const ctxL24 = {
+  title: 'Hydration Is Not Optional: The Case for Treating Water as a Foundational Health Requirement',
+  subtitle: 'Health Advocacy Article — Preventive Wellbeing',
+  paragraphs: [
+    'Water is not a supplement to good health — it is its foundation. Yet the majority of adults in developed nations move through their days in a state of chronic, low-grade dehydration, masked by caffeine, sugar, and the misguided belief that thirst is an early signal rather than a late one. The cultural normalisation of inadequate hydration represents one of the most preventable contributors to systemic health decline in modern society.',
+    'The physiology is unambiguous. The human body requires water to regulate internal temperature, lubricate joints, deliver nutrients to cells, and remove metabolic waste. When the body\'s water levels fall below an optimal threshold, cognitive performance declines, physical endurance diminishes, and organ function is compromised. What is commonly misunderstood is when these effects begin. If you are waiting for the sensation of thirst before reaching for a glass of water, you have already allowed your body to enter a state of mild dehydration. Thirst is not a friendly reminder — it is a physiological distress signal. By the time it registers, the deficit has already begun to impair your body\'s performance.',
+    'The only reliable, objective indicator of adequate hydration is not a feeling — it is a visual observation. A pale, straw-like colour in urine is the only objective indicator one needs that the body\'s water balance is being maintained. Dark urine is evidence of concentrated waste product and should be treated as an immediate signal to increase fluid intake. Yet many people go days without making this basic observation, substituting caffeinated beverages and sugary drinks that provide a temporary sense of refreshment while doing nothing to address the body\'s underlying hydration deficit.',
+    'Treating hydration as the foundational requirement for human vitality is not an extreme position — it is a scientifically supported baseline. The argument that drinking water is inconvenient or that adequate hydration requires excessive effort is a rationalisation, not a reason. The infrastructure to hydrate correctly is universally available. What is required is the discipline to use it consistently, and the recognition that good health begins with water — not with the supplement aisle.'
+  ]
+}
+
+const ctxL25 = {
+  title: 'The Duty of Care: Why Owning a Houseplant Is Not as Simple as It Looks',
+  subtitle: 'Opinion Article — Environmental Wellbeing',
+  paragraphs: [
+    'Houseplants are not decorative objects. They are living entities that respond to their environment, communicate their needs through observable physiological signals, and depend entirely on their owners for survival. Yet the majority of houseplant owners treat them as passive furnishings — placed in an aesthetically appropriate corner and watered on an emotionally convenient schedule. The result is predictable and preventable: dead plants, unnecessary waste, and a missed opportunity to engage meaningfully with the natural world.',
+    'The most pervasive misconception in houseplant care is that neglect is the primary killer. It is not. The biggest killer of indoor plants is not neglect — it is over-love. Specifically, it is overwatering. The instinct to water a plant daily, driven by affection and a desire to nurture, is one of the most reliably destructive behaviours a plant owner can exhibit. When soil is saturated beyond its drainage capacity, it cannot breathe. The root system, deprived of oxygen and surrounded by standing water, begins to rot. This process is usually irreversible by the time visible symptoms appear on the leaves. A daily watering routine is, for most indoor plants, a death sentence delivered with the best of intentions.',
+    'Equally damaging is the common habit of placing indoor plants in direct sunlight. While it is true that most plants require light for photosynthesis, harsh, direct sunlight — particularly through south-facing or unshaded windows — exceeds the light tolerance of the majority of common indoor species. The ideal environment for most houseplants is one of indirect, filtered light that provides consistent illumination without the thermal stress of direct solar exposure.',
+    'Finally, the maintenance of leaf surfaces is an essential task that is almost universally dismissed as fussy or unnecessary. Dust accumulates on leaf surfaces over time, blocking the stomata through which the plant absorbs carbon dioxide and executes photosynthesis. Wiping leaves with a damp cloth on a weekly basis is not an optional aesthetic task — it is an essential physiological one. Houseplant ownership is a commitment, not a convenience. Those who are not prepared to learn what their plants require should reconsider acquiring them in the first place.'
+  ]
+}
+
+const ctxL26 = {
+  title: 'Sleep Is Not a Life Hack — It Is a Biological Non-Negotiable',
+  subtitle: 'Health Advocacy Article — Sleep Science',
+  paragraphs: [
+    'In a culture that celebrates productivity, endurance, and the willingness to sacrifice rest in the pursuit of achievement, sleep has been reframed as a variable — something to be optimised, compressed, or compensated for rather than protected. This reframing is not merely philosophically misguided. It is physiologically dangerous. Getting the recommended seven to nine hours of sleep is not a "life hack" that high-performing individuals have discovered. It is a biological baseline that the human body requires to function, repair, and survive.',
+    'During sleep, the body does not idle — it works. Critical repairs to muscle tissue, immune cells, and neurological pathways occur exclusively during sleep cycles. Memory consolidation — the process by which the day\'s experiences are encoded into long-term storage — cannot occur in a waking state. Individuals who consistently sleep fewer than seven hours per night accumulate a physiological debt that manifests as mood dysregulation, a weakened immune system, diminished cognitive focus, and elevated risk of chronic disease. The idea that this debt can be repaid on the weekend is not only incorrect — it reflects a fundamental misunderstanding of how the body manages biological repair cycles.',
+    'The environment in which one sleeps is not a matter of personal preference. A cool, dark room is not a preference — it is a physiological requirement. The human body initiates sleep by lowering its core temperature. A warm sleeping environment counteracts this process, disrupting the onset and depth of restorative sleep cycles. Darkness signals the pineal gland to release melatonin, the hormone that governs sleep onset. Ambient light — including the light emitted by screens — suppresses melatonin production and delays sleep onset, regardless of how tired the individual feels.',
+    'The cultural practice of working late into the night to meet professional deadlines, or sacrificing sleep to maintain a social life, must be understood for what it is: a decision to compromise a biological necessity in favour of a social or commercial priority. This is not balance — it is a trade-off with long-term physiological consequences. Sleep cannot be negotiated with, deferred indefinitely, or replaced. It must be prioritised, protected, and understood as the non-negotiable foundation of every other health behaviour we pursue.'
+  ]
+}
+
+const ctxL27 = {
+  title: 'Fetch Is Not a Casual Game — It Is an Energy Contract',
+  subtitle: 'Opinion Article — Companion Animal Behaviour',
+  paragraphs: [
+    'Fetch is widely regarded as one of the simplest and most instinctively satisfying games an owner can play with their dog. Throw the ball, watch the dog run, watch the dog return. Repeat. What could be more natural? In practice, however, fetch is one of the most mismanaged activities in the domestic dog\'s life — and the consequences of mismanagement extend from physical exhaustion to genuine safety risk. Playing fetch well is not instinctive. It requires intention, structure, and a clear understanding of what the activity demands from both parties.',
+    'The most immediate safety consideration is environmental. Playing fetch on or near a road, or in an unfenced area adjacent to traffic, is not a minor oversight — it is a failure of the most basic duty of care. A dog in mid-retrieve does not process environmental hazards in the way that a focused human does. The drive to return the ball overrides other sensory inputs. Playing in an area where traffic or other hazards are present exposes the animal to a foreseeable risk that the owner has failed to eliminate. This is not bad luck — it is a failure of responsibility.',
+    'Equipment selection is equally non-negotiable. The size of the ball must be appropriate to the size of the dog. A ball small enough to lodge in the throat is not a toy — it is a direct threat. Owners who dismiss this consideration as excessive are prioritising convenience over safety. Beyond the object itself, fetch must be understood as what it truly is: a vital training ground for communication and a controlled release of energy. Think of it as an energy contract — an agreement between owner and dog in which the owner takes responsibility for governing the terms. You should be the one to decide when the game begins, how long it continues, and crucially, when it ends.',
+    'A dog that stops returning the ball, lies down mid-game, or begins panting excessively is not being disobedient. It is communicating that it has reached its physical limit. Forcing a tired dog to continue is not "active living" — it is neglect. The dog is relying on you to read these signals and act accordingly. The energy contract is not simply a metaphor for structured play. It is a framework for responsible ownership in which the human partner assumes full accountability for the physical and emotional wellbeing of the animal in their care.'
+  ]
+}
+
+const ctxL28 = {
+  title: 'The Breeding Crisis: Why Australia Must Act Now to End Pet Overproduction',
+  subtitle: 'Opinion Article — Animal Ethics and Legislation',
+  paragraphs: [
+    'Australia euthanises more than 200,000 cats and dogs annually. These are not animals that lived full lives and died of natural causes. They are healthy, adoptable animals that were destroyed because there were not enough homes to place them in. This statistic is not a tragedy of circumstance — it is a consequence of policy failure, consumer behaviour, and an industry that continues to treat living animals as instruments of profit. The overbreeding crisis is real, it is measurable, and it is solvable. What it lacks is urgency.',
+    'The Victorian Government\'s efforts to regulate the breeding industry through licensing requirements and welfare inspections represent a necessary starting point. Yet they remain insufficient. A licensed breeder operating within current regulatory limits may maintain up to ten breeding females at any one time. This figure is presented as a reasonable cap, but it is fundamentally excessive. Ten breeding females, each producing one to two litters per year at an average litter size of five to eight animals, can generate between 50 and 160 animals annually from a single registered operation. This is not careful, welfare-focused breeding — it is small-scale industrial production that floods an already oversupplied adoption market.',
+    'The solution requires action on two fronts. At the legislative level, the government must introduce substantially reduced breeding limits, mandatory microchipping of all animals prior to sale, heavy fines for unlicensed breeding operations, and strict record-keeping requirements with public accountability. At the consumer level, the single most impactful action any prospective pet owner can take is to champion adoption from shelters rather than purchasing from breeders. Every animal purchased from a breeder is an animal for whom a shelter resident did not find a home.',
+    'The goal is not to eliminate the breeding industry — it is to reduce Australia\'s annual euthanasia rate to zero. That target is achievable. It requires treating animals as living beings with intrinsic value rather than consumer goods with a market price. It requires legislation with teeth, enforcement with resources, and consumers who are willing to make their purchasing decisions with an awareness of the systemic consequences. The 200,000 animals euthanised each year are not statistics. They are the cost of our current inaction.'
+  ]
+}
+
+const ctxL29 = {
+  title: 'The Evidence Is Clear: Processed Meat and the Risk of Colorectal Cancer',
+  subtitle: 'Public Health Report — Nutritional Science and Policy',
+  paragraphs: [
+    'In 2015, the World Health Organisation\'s International Agency for Research on Cancer (IARC) published a landmark analysis of over 800 independent studies examining the relationship between meat consumption and cancer risk. The findings were unambiguous. Processed meat — including cured, smoked, salted, and chemically preserved meat products — was classified as a Group 1 carcinogen: a substance with sufficient evidence of causing cancer in humans. This is the same classification applied to tobacco smoke and asbestos. The classification does not imply equivalence in magnitude of risk; it confirms equivalence in the strength of scientific evidence.',
+    'The specific risk identified in the IARC report is quantified and significant. For every 50 grams of processed meat consumed daily — roughly equivalent to two rashers of bacon or a single sausage — the risk of developing colorectal cancer increases by 18 per cent. Globally, high-processed-meat diets are estimated to contribute to approximately 34,000 cancer deaths annually. These are not projections or estimates based on limited data — they are conclusions drawn from an analysis of over 800 studies conducted across multiple countries, populations, and timeframes.',
+    'Despite the robustness of this evidence base, the meat industry has mounted a sustained campaign to distance red and processed meat from these findings. Industry representatives have emphasised the nutritional value of meat — its protein content, iron, zinc, and B vitamin profile — as a counterargument to public health recommendations. Dr. Christopher Wild, then Director of the IARC, acknowledged these nutritional considerations while maintaining that balanced dietary recommendations must account for the cancer risk associated with regular processed meat consumption. The nutritional value of a food does not negate its carcinogenic profile — it must be weighed against it.',
+    'The IARC\'s findings provide a scientifically robust foundation for public health policy. Governments that have incorporated these findings into national dietary guidelines are acting in the interest of their populations. Individuals who dismiss the report as alarmist or industry-funded misrepresent both the process and the conclusions. The evidence is not contested by serious independent researchers. It is contested by commercial interests for commercial reasons. Understanding this distinction is essential to making informed dietary decisions.'
+  ]
+}
+
+const ctxL30 = {
+  title: 'More Than Filler: Understanding Why Journalists Rely on Quotes',
+  subtitle: 'Media Studies Article — Journalism and Communication',
+  paragraphs: [
+    'In news reporting, the use of direct quotation is rarely incidental. Quotes are rarely used at random — they are strategic tools, selected by the journalist to serve specific communicative functions within the structure of the report. Understanding why quotes are used, and how they function within the architecture of a news story, is an essential component of media literacy. A reader who understands the strategic use of quotation is better equipped to evaluate the credibility, balance, and intent of the reporting they consume.',
+    'Quotes serve three primary functions in journalism. First, they provide evidence. A direct statement from a primary source — a scientist presenting research findings, a witness describing an event, a government official announcing a policy decision — carries an evidentiary weight that paraphrasing cannot replicate. The reader is given access to the source\'s own words, rather than the journalist\'s interpretation of them. This function is particularly important in reports covering scientific or technical subject matter, where quotes effectively bridge the gap between scientific findings and public understanding by allowing experts to speak directly to a general audience.',
+    'Second, quotes bolster authority. A news report that presents claims without attributing them to identifiable sources relies entirely on the journalist\'s credibility. By quoting named experts, officials, or eyewitnesses, the journalist transfers a portion of that credibility to the source. The report becomes accountable in a way that unsourced commentary cannot be. Third, quotes illustrate conflicting perspectives. When a journalist quotes both a public health expert recommending reduced meat consumption and a representative of an industry council emphasising nutritional value, the reader is invited to engage with a genuine debate. This ensures that a report does not appear biased to the audience, allowing them to weigh the evidence and form their own conclusions.',
+    'Whether a quote is used to add gravity to a claim, to humanise a statistic, or to highlight a controversy within a field, its presence acts as a window into the broader debate surrounding the story\'s subject matter. Skilled readers do not simply absorb quotes as fact — they consider who is speaking, what interest they may represent, and what the journalist\'s purpose was in choosing that voice over others. In this sense, the strategic use of quotation is not only a journalistic technique — it is an invitation to critical thinking.'
+  ]
+}
+
+const ctxL31 = {
+  title: 'The Historic Harbor Estate',
+  subtitle: 'Heritage Restoration: A Blend of 19th Century Grandeur and 21st Century Tech',
+  paragraphs: [
+    'About this listing: This 4-level sandstone mansion was built in 1888 and underwent a $2M restoration in 2024. The property spans over 600 square metres, featuring a private library, a 12-seat cinema room, and a professional-grade catering kitchen.',
+    'Note: Due to the historical sensitivity of the flooring and the antique fixtures, this property is strictly unsuitable for children under the age of 12 or guests with pets.',
+    'Amenities: Smart-home integrated climate and lighting; Secure gated entry; Full-time concierge; High-speed dedicated satellite internet (1GBps).',
+    'Note: Access to the third and fourth floors is via a grand staircase; there is no elevator, which may be a limitation for guests with limited mobility.',
+    'Prices: $850 per night. Weekly stay: 15% discount. Monthly stay: 35% discount. Note: A non-refundable security deposit of $2,000 is required upon booking confirmation for all stays exceeding 7 days.',
+    'The Neighbourhood: Situated in the Battery Point district, a prestigious heritage zone. The area is quiet after 8:00 PM as it is primarily residential. It is a 15-minute walk to the Wharfside district, which hosts fine-dining restaurants, maritime museums, and the terminal for the nightly harbor cruises.'
+  ]
+}
+
+const ctxL32 = {
+  title: 'The Eco-Innovation Hub',
+  subtitle: 'Living the Future: Zero-Impact Urban Design in Greendale',
+  paragraphs: [
+    'About this listing: This modular apartment is part of the "Greendale Innovation Project." The unit is constructed entirely from cross-laminated timber and recycled industrial waste. The space is dynamic; walls can be retracted to change a bedroom into a workspace.',
+    'Amenities: Greywater recycling system; Triple-glazed soundproof windows; Underfloor hydronic heating; Kitchenette with induction cooktop (no open flames).',
+    'Note: Guests are provided with an energy allowance of 15kWh per day. Any usage exceeding this is billed at $0.45 per kWh upon checkout.',
+    'Prices: $210 per night. Weekly discount: 10%. Monthly discount: 20%.',
+    'The Neighbourhood: Greendale is a rapidly gentrifying suburb. While formerly industrial, it now houses the city\'s largest university campus, tech incubators, and a vibrant arts scene. The area is exceptionally well-connected; the Greendale Interchange connects to four different train lines. Despite the high student population, the streets immediately surrounding the Innovation Hub remain quiet due to strict municipal noise ordinances.'
+  ]
+}
+
+const ctxL33 = {
+  title: 'The Transit Exchange Apartment',
+  subtitle: 'The Commuter\'s Dream: 30 Seconds to the Platform',
+  paragraphs: [
+    'About this listing: Located directly above the West Central Railway Terminus, this apartment is designed for the traveller who values efficiency. The unit is sound-engineered to block out platform noise, though light vibrations from heavy freight trains passing at night may be felt.',
+    'Amenities: 24/7 self-check-in kiosk; Washer/Dryer combo; Standing desk with dual monitors; Kitchen fully equipped with convection microwave and twin burner.',
+    'Note: There is zero parking provided. The host strongly advises against bringing a vehicle as the local traffic congestion is severe, and the nearest public parking garage is over 1km away.',
+    'Prices: $195 per night. Weekly discount: 20%. Monthly discount: 35%.',
+    'The Neighbourhood: West Central is a high-traffic hub. By day, it is a dense commercial zone filled with office workers, logistics couriers, and busy commuters. By night, the area clears out significantly. There are no major supermarkets in the immediate 500-metre radius, though there are several high-end grab-and-go convenience stores and a 24-hour pharmacy.'
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -4539,6 +4686,684 @@ const literacyQuestions = [
     ],
     answer: 'Yes,No,Yes',
     method: 'A — Floor 8 is the Incident Floor. The BMS lowers its pressure (negative pressure) by closing supply dampers to 0%, and does so within the 45-second trigger window. Yes. B — Floor 9 is a buffer zone directly above the breach. Buffer zones require high positive pressure, achieved by supply at 100% and exhaust at 0%. Ramping exhaust to 100% would depressurise the buffer floor and break the aerodynamic seal. No. C — 3 minutes equals 180 seconds, which exceeds the 120-second threshold. The BMS triggers an alert tone and boosts the blower by 15%. Yes.'
+  },
+
+  // ── Set 11 (Persuasive): KAP-7 Kitchen Safety ──────────────────────────────
+  { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
+    question: 'What is the primary argumentative purpose of the passage regarding the KAP-7 system?',
+    options: [
+      'A) To provide a technical overview of how KAP-7 sensors detect temperature fluctuations in residential environments.',
+      'B) To argue that implementing the KAP-7 system is a moral and practical necessity for every responsible homeowner.',
+      'C) To compare the cost-effectiveness of different home automation systems available on the consumer market.',
+      'D) To celebrate the technological innovation behind automated gas detection systems in modern appliances.'
+    ],
+    answer: 'B) To argue that implementing the KAP-7 system is a moral and practical necessity for every responsible homeowner.',
+    method: 'The passage explicitly states the KAP-7 is "no longer a luxury" but "a moral and practical imperative." The author argues all homeowners have "both the means and the obligation to install it." Options A, C, and D misrepresent the passage\'s persuasive intent.'
+  },
+  { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
+    question: 'Under what specific conditions does the KAP-7 protocol trigger an Emergency Cutoff Sequence?',
+    options: [
+      'A) When a stovetop temperature exceeds 200°C for more than 30 seconds without manual input.',
+      'B) When gas concentrations exceed 0.5% or smoke opacity reaches 15% density.',
+      'C) When the 24-hour lockout period on remote resets has been manually overridden.',
+      'D) When internal sensors detect an unattended heating event lasting under five seconds.'
+    ],
+    answer: 'B) When gas concentrations exceed 0.5% or smoke opacity reaches 15% density.',
+    method: 'The passage states the ECS activates under two conditions: "when gas concentrations in the kitchen environment exceed 0.5 per cent, or when smoke opacity reaches 15 per cent density." Option A describes the Tier 1 warning condition, not the ECS trigger.'
+  },
+  { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
+    question: 'Why does the author contend that the 24-hour remote-reset lockout is a necessary feature?',
+    options: [
+      'A) It reduces the energy costs associated with repeatedly restarting kitchen appliances.',
+      'B) It ensures that only licensed technicians are authorised to perform system resets.',
+      'C) It prevents homeowners from recklessly restarting a potentially volatile system without physically inspecting it first.',
+      'D) It automatically notifies emergency services of any detected gas or smoke concentration.'
+    ],
+    answer: 'C) It prevents homeowners from recklessly restarting a potentially volatile system without physically inspecting it first.',
+    method: 'The passage says the lockout prevents "a hasty, uninformed restart" and requires "a physical diagnostic inspection of the kitchen environment." The author frames this as protecting "human life," not reducing energy costs or notifying services.'
+  },
+  { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
+    question: 'How does the author characterise the viewpoint of those who criticise the system\'s sensitivity?',
+    options: [
+      'A) As forward-thinking consumers who prefer minimal technological intrusion in their daily lives.',
+      'B) As individuals who ignore the catastrophic reality of residential fires and mischaracterise safety as intrusiveness.',
+      'C) As qualified fire safety experts who have conducted independent testing on the KAP-7 protocol.',
+      'D) As early adopters who have experienced false alarms and prefer manual monitoring methods.'
+    ],
+    answer: 'B) As individuals who ignore the catastrophic reality of residential fires and mischaracterise safety as intrusiveness.',
+    method: 'The author states critics "ignore the catastrophic reality of residential gas fires and mischaracterise an intelligent safety protocol as an inconvenience." The passage gives no credibility to their position and offers no scientific or technical basis for their criticism.'
+  },
+  { group: 'L21', type: 'true_false_matrix', category: 'Home Safety Regulation', context: ctxL21,
+    question: 'Based on the passage, are the following statements about the KAP-7 system true or false?',
+    options: [
+      'The KAP-7 is described in the passage as an optional feature available only in premium smart-home systems.',
+      'The Emergency Cutoff Sequence terminates gas and electrical flow to registered appliances within five seconds.',
+      'A smoke opacity reading of exactly 15% density is one of the two conditions that trigger the ECS.',
+      'The system allows owners to reset it remotely via mobile application within the 24-hour lockout window.'
+    ],
+    answer: 'False,True,True,False',
+    method: 'A — The passage states the KAP-7 is "no longer a luxury" and is "a moral and practical imperative." False. B — "The KAP-7 terminates both gas and electrical flow to all registered kitchen appliances within five seconds." True. C — "When smoke opacity reaches 15 per cent density" is explicitly listed as an ECS trigger. True. D — The 24-hour lockout applies specifically to "remote resets." A "physical diagnostic inspection" is required. False.'
+  },
+
+  // ── Set 12 (Persuasive): Canine Welfare — Exercise Strategy 40-A ───────────
+  { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
+    question: 'What is the author\'s primary objective in advocating for Exercise Strategy 40-A?',
+    options: [
+      'A) To highlight the competitive benefits of structured training for dogs entering athletic competitions.',
+      'B) To argue that following a structured exercise framework is essential for the long-term health and welfare of pet dogs.',
+      'C) To provide step-by-step instructions for owners on how to train their dogs for high-intensity agility courses.',
+      'D) To promote the commercial sale of standardised exercise equipment designed for domestic canines.'
+    ],
+    answer: 'B) To argue that following a structured exercise framework is essential for the long-term health and welfare of pet dogs.',
+    method: 'The passage describes Exercise Strategy 40-A as "a structured protocol that, when followed correctly, protects the long-term physiological welfare of domestic canines." The article is advocacy for structured exercise, not a training manual, competitive guide, or commercial promotion.'
+  },
+  { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
+    question: 'What is the mandatory response when a dog\'s heart rate fails to normalise within five minutes of ceasing Tier A activity?',
+    options: [
+      'A) The dog must be given a 15% reduction in movement fluidity to prevent further strain.',
+      'B) The owner must immediately transition the dog to a Tier B scent enrichment session.',
+      'C) The owner must initiate an immediate cooling phase to prevent physiological harm.',
+      'D) All game modules must be halted for a mandatory 60-minute dehydration recovery window.'
+    ],
+    answer: 'C) The owner must initiate an immediate cooling phase to prevent physiological harm.',
+    method: 'The passage states: "If, at any point following the cessation of Tier A activity, a dog\'s heart rate fails to normalise within a five-minute window, the owner is required to initiate an immediate cooling phase." Option D describes the dehydration lockout, which is a separate protocol triggered by movement fluidity.'
+  },
+  { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
+    question: 'How does the author reinterpret a dog\'s failure to respond to commands during an enrichment session?',
+    options: [
+      'A) As a clear sign of willful disobedience that must be addressed with additional training repetitions.',
+      'B) As a deliberate behavioural protest indicating a preference for high-intensity Tier A activity.',
+      'C) As evidence of physiological exhaustion that demands an immediate cessation of all activity.',
+      'D) As a natural behavioural response triggered by high ambient temperatures in the training environment.'
+    ],
+    answer: 'C) As evidence of physiological exhaustion that demands an immediate cessation of all activity.',
+    method: 'The passage explicitly states this is "often falsely presumed" to be willful disobedience — the author argues the dog "is exhibiting the behavioural markers of physiological exhaustion" and that "the activity must cease immediately." Option A is the misconception the author is correcting.'
+  },
+  { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
+    question: 'What is the implied significance of the 60-minute dehydration lockout?',
+    options: [
+      'A) It allows the dog to self-regulate its activity levels without owner intervention.',
+      'B) It acts as an objective safeguard that compels owners to prioritise their dog\'s physiological needs over their own recreational preferences.',
+      'C) It provides the dog with sufficient rest to re-engage in high-intensity Tier A activities within a structured timeframe.',
+      'D) It ensures that the owner logs all exercise data for the dog\'s veterinary health file.'
+    ],
+    answer: 'B) It acts as an objective safeguard that compels owners to prioritise their dog\'s physiological needs over their own recreational preferences.',
+    method: 'The passage states the lockout "ensures that the dog\'s physiological needs are never compromised in the interest of an owner\'s recreational agenda." The 60 minutes is a non-negotiable enforced rest, not an opportunity to log data or prepare for Tier A activity.'
+  },
+  { group: 'L22', type: 'true_false_matrix', category: 'Animal Welfare', context: ctxL22,
+    question: 'Based on the passage, are the following statements about Exercise Strategy 40-A true or false?',
+    options: [
+      'A 15% drop in movement fluidity is described as a negligible observation that does not require immediate action.',
+      'Tier A activities such as running and ball retrieval are strictly capped at a maximum of 40 minutes per session.',
+      'Tier B enrichment sessions are strictly limited to 120 minutes regardless of the dog\'s engagement level.',
+      'A dog that ignores commands during a session is described as exhibiting willful disobedience.'
+    ],
+    answer: 'False,True,False,False',
+    method: 'A — A 15% fluidity drop triggers an "automatic dehydration lockout" halting all activity for 60 minutes — not a negligible observation. False. B — "Tier A covers high-intensity exercises…strictly capped at 40 minutes per session." True. C — 120 minutes is described as an example of what\'s possible, but sessions are "contingent upon the dog\'s engagement" and must stop when engagement drops. False. D — The passage explicitly states this is "often falsely presumed" and that the behaviour indicates physiological exhaustion. False.'
+  },
+
+  // ── Set 13 (Persuasive): Professional Baking ───────────────────────────────
+  { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
+    question: 'What is the author\'s overarching message concerning the nature of professional baking?',
+    options: [
+      'A) To celebrate the creative freedom and improvisation that define artisan baking traditions around the world.',
+      'B) To argue that professional baking demands strict technical precision, discipline, and an unwavering commitment to quality standards.',
+      'C) To promote the use of automation over human skill to reduce the time required for industrial bread production.',
+      'D) To provide a beginner\'s introduction to the fermentation principles underpinning sourdough recipes.'
+    ],
+    answer: 'B) To argue that professional baking demands strict technical precision, discipline, and an unwavering commitment to quality standards.',
+    method: 'The passage opens by defining baking as "a disciplined technical science" requiring "systematic precision" and argues that discarding inferior product is an act of professional integrity. Options A and C misrepresent the author\'s position; Option D describes a technical manual, not this persuasive article.'
+  },
+  { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
+    question: 'What are the consequences of the internal dough temperature rising above 30 degrees Celsius?',
+    options: [
+      'A) The fermentation chamber switches to a humidity-recovery protocol and delays baking by 10 minutes.',
+      'B) The misting system executes an emergency 10-second sequence to cool the overheated dough structure.',
+      'C) The yeast colony over-processes available sugars, causing an irreversible structural collapse during the bake.',
+      'D) The batch is automatically flagged as over-proofed and the 10-minute salvage timer begins.'
+    ],
+    answer: 'C) The yeast colony over-processes available sugars, causing an irreversible structural collapse during the bake.',
+    method: 'The passage states that above 30°C "the yeast colony over-processes the available sugars at an accelerated rate, producing an excess of carbon dioxide gas that the gluten network cannot contain. The result is an irreversible structural collapse during the bake." Options A and B describe humidity responses; Option D describes the over-proof flag.'
+  },
+  { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
+    question: 'Why does the author categorise the 10-minute salvage window as a test of \'baker\'s integrity\'?',
+    options: [
+      'A) Because the baker must resist the financial temptation to sell a product they know does not fully meet professional quality standards.',
+      'B) Because the window requires the baker to work under extreme time pressure, demonstrating physical endurance.',
+      'C) Because missing the window incurs a financial penalty enforced by the Master Baker\'s certification board.',
+      'D) Because completing the gentle-fold technique demonstrates the baker\'s manual dexterity and technical mastery.'
+    ],
+    answer: 'A) Because the baker must resist the financial temptation to sell a product they know does not fully meet professional quality standards.',
+    method: 'The passage frames the salvage window as an integrity test because "a professional who applies the gentle-fold knowing the result will be marginally acceptable is making a commercial decision that compromises their brand." Discarding the batch, not the technique itself, is the act of integrity. No certification board penalty is mentioned.'
+  },
+  { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
+    question: 'How does the author reconcile the role of automation with the goal of high-quality baking?',
+    options: [
+      'A) By arguing that automation should replace the baker\'s judgement entirely to eliminate the risk of human error.',
+      'B) By suggesting that automation is only relevant for mass-produced commercial bakeries, not artisan operations.',
+      'C) By framing automation as the tool that creates the precise conditions within which a disciplined baker exercises their judgement.',
+      'D) By presenting automation as a temporary measure until bakers develop sufficiently advanced manual techniques.'
+    ],
+    answer: 'C) By framing automation as the tool that creates the precise conditions within which a disciplined baker exercises their judgement.',
+    method: 'The passage states: "The automation does not make the decisions — it creates the conditions within which disciplined bakers can make them." This directly refutes Option A. The passage also argues that automation "is not an obstacle to quality — it is quality\'s precondition," ruling out Options B and D.'
+  },
+  { group: 'L23', type: 'true_false_matrix', category: 'Professional Standards', context: ctxL23,
+    question: 'Based on the passage, are the following statements about professional fermentation baking true or false?',
+    options: [
+      'The author believes that discarding over-proofed dough is a sign of professional incompetence.',
+      'The ideal fermentation chamber temperature specified in the passage is 26 degrees Celsius.',
+      'A drop in humidity below 75% triggers a misting sequence every 15 minutes.',
+      'A batch is flagged as over-proofed after 150 minutes of proofing time.'
+    ],
+    answer: 'False,True,False,True',
+    method: 'A — The passage states "A true professional does not mourn the loss of inferior product; they protect their brand." Discarding is integrity, not incompetence. False. B — "The fermentation chamber must remain anchored at a precise 26 degrees Celsius." True. C — The misting system triggers when sensors "detect a drop" below 75% — not on a fixed 15-minute schedule. False. D — "Once a batch has been proofing for 150 minutes, the chamber\'s monitoring system automatically flags the dough as over-proofed." True.'
+  },
+
+  // ── Set 14 (Persuasive): Human Hydration ───────────────────────────────────
+  { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
+    question: 'What is the main persuasive intent of this article?',
+    options: [
+      'A) To compare the health benefits of various caffeinated beverages as alternatives to water consumption.',
+      'B) To convince readers to treat hydration as a non-negotiable daily health requirement rather than an optional habit.',
+      'C) To provide a medically approved daily water intake schedule for professional athletes.',
+      'D) To outline the environmental benefits of reducing the consumption of carbonated sugary drinks globally.'
+    ],
+    answer: 'B) To convince readers to treat hydration as a non-negotiable daily health requirement rather than an optional habit.',
+    method: 'The article explicitly argues for "treating hydration as the foundational requirement for human vitality" and frames it as requiring "discipline." Options A, C, and D do not match the article\'s persuasive focus on daily hydration behaviour for the general reader.'
+  },
+  { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
+    question: 'According to the text, what does the sensation of thirst indicate?',
+    options: [
+      'A) A reliable early-warning signal that should prompt a moderate increase in daily water consumption.',
+      'B) That the body is functioning optimally and regulating its hydration levels effectively.',
+      'C) That the body has already entered a state of mild dehydration and is experiencing physiological distress.',
+      'D) A natural phenomenon caused by caffeine overconsumption with no direct link to hydration status.'
+    ],
+    answer: 'C) That the body has already entered a state of mild dehydration and is experiencing physiological distress.',
+    method: 'The passage states: "If you are waiting for the sensation of thirst before reaching for a glass of water, you have already allowed your body to enter a state of mild dehydration. Thirst is not a friendly reminder — it is a physiological distress signal." Option A contradicts the passage\'s core argument that thirst is a late, not early, signal.'
+  },
+  { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
+    question: 'Why does the author criticise society\'s reliance on caffeinated and sugary beverages?',
+    options: [
+      'A) Because caffeine and sugar have been clinically proven to impair kidney function and reduce joint lubrication capacity.',
+      'B) Because they are used as substitutes for water despite being ineffective at addressing the body\'s fundamental hydration deficit.',
+      'C) Because the agricultural production of sugar and caffeine crops depletes global freshwater reserves.',
+      'D) Because they inflate the cost of preventable healthcare by masking common symptoms of chronic fatigue.'
+    ],
+    answer: 'B) Because they are used as substitutes for water despite being ineffective at addressing the body\'s fundamental hydration deficit.',
+    method: 'The passage describes people "substituting caffeinated beverages and sugary drinks that provide a temporary sense of refreshment while doing nothing to address the body\'s underlying hydration deficit." The author\'s specific criticism is that these beverages substitute for water without delivering the same physiological benefit.'
+  },
+  { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
+    question: 'What does the author imply about people who wait until they are thirsty to drink?',
+    options: [
+      'A) That they are making a rational and biologically appropriate decision based on their body\'s natural feedback system.',
+      'B) That they are practising an effective, self-regulated hydration strategy endorsed by the article.',
+      'C) That they are already in a state of mild dehydration and are ignoring their body\'s distress signal.',
+      'D) That they are at lower risk of long-term health problems due to superior self-regulation.'
+    ],
+    answer: 'C) That they are already in a state of mild dehydration and are ignoring their body\'s distress signal.',
+    method: 'The passage directly states: "If you are waiting for the sensation of thirst...you have already allowed your body to enter a state of mild dehydration." Options A and B represent the opposite of the article\'s argument; Option D is contradicted by the passage\'s discussion of health consequences.'
+  },
+  { group: 'L24', type: 'true_false_matrix', category: 'Health Advocacy', context: ctxL24,
+    question: 'Based on the passage, are the following statements about hydration true or false?',
+    options: [
+      'Thirst is described in the passage as a gentle early signal that the body wants more water.',
+      'Pale, straw-like urine is identified as the only reliable objective indicator of adequate hydration.',
+      'Hydration is described as a foundational requirement for human vitality.',
+      'The author states that waiting until thirsty means you have already entered mild dehydration.'
+    ],
+    answer: 'False,True,True,True',
+    method: 'A — Thirst is described as "a physiological distress signal," not a gentle early reminder. False. B — "A pale, straw-like colour in urine is the only objective indicator one needs." True. C — The passage argues for "treating hydration as the foundational requirement for human vitality." True. D — "If you are waiting for the sensation of thirst...you have already allowed your body to enter a state of mild dehydration." True.'
+  },
+
+  // ── Set 15 (Persuasive): Indoor Gardening ──────────────────────────────────
+  { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
+    question: 'What is the author\'s primary argument regarding houseplant ownership?',
+    options: [
+      'A) That indoor plants are too complex for casual owners and should only be kept by trained botanists.',
+      'B) That owning indoor plants carries a duty of care that requires learning and applying proper maintenance principles.',
+      'C) To promote the commercialisation of indoor plant species that require minimal human maintenance.',
+      'D) To review the scientific literature on the psychological benefits of incorporating plants into domestic environments.'
+    ],
+    answer: 'B) That owning indoor plants carries a duty of care that requires learning and applying proper maintenance principles.',
+    method: 'The passage frames houseplant ownership as "a commitment, not a convenience" and argues owners must learn "what their plants require." The article does not argue plants are beyond casual owners or review scientific literature — it advocates for responsible ownership.'
+  },
+  { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
+    question: 'Why is overwatering identified as the biggest killer of indoor plants?',
+    options: [
+      'A) Because excess water dilutes nutrient concentration in the soil, leading to slow starvation of the root system.',
+      'B) Because daily watering schedules prevent owners from recognising other warning signs of plant distress.',
+      'C) Because it prevents the soil from breathing, effectively drowning the plant\'s root system.',
+      'D) Because frequent watering causes leaves to retain moisture, blocking their ability to absorb indirect sunlight.'
+    ],
+    answer: 'C) Because it prevents the soil from breathing, effectively drowning the plant\'s root system.',
+    method: 'The passage states: "When soil is saturated beyond its drainage capacity, it cannot breathe. The root system, deprived of oxygen and surrounded by standing water, begins to rot." Option A describes nutrient dilution, which is not the mechanism described in the passage.'
+  },
+  { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
+    question: 'Why does the author insist that cleaning leaves is not simply a cosmetic or \'fussy\' task?',
+    options: [
+      'A) To encourage owners to develop a routine aesthetic appreciation for the visual quality of their plants.',
+      'B) To challenge the dismissive attitude that causes owners to neglect a task directly linked to plant photosynthesis.',
+      'C) To argue that professional-grade cleaning equipment should be used for high-value ornamental plant species.',
+      'D) To suggest that all indoor plants should be moved outdoors weekly for a thorough rain-cleaning cycle.'
+    ],
+    answer: 'B) To challenge the dismissive attitude that causes owners to neglect a task directly linked to plant photosynthesis.',
+    method: 'The passage states wiping leaves "is not an optional aesthetic task — it is an essential physiological one," because dust "block[s] the stomata through which the plant absorbs carbon dioxide and executes photosynthesis." Options A, C, and D are not supported by the passage.'
+  },
+  { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
+    question: 'What tone does the author take toward readers who find plant care difficult or inconvenient?',
+    options: [
+      'A) An empathetic and supportive tone, acknowledging that plant care presents genuine challenges for busy individuals.',
+      'B) A critical and uncompromising tone, suggesting those unwilling to learn proper care should not own plants.',
+      'C) An encouraging tone that celebrates the gradual improvement of plant-care skills over time.',
+      'D) A neutral, informational tone that presents plant care as a purely technical skill requiring professional guidance.'
+    ],
+    answer: 'B) A critical and uncompromising tone, suggesting those unwilling to learn proper care should not own plants.',
+    method: 'The passage closes with: "Those who are not prepared to learn what their plants require should reconsider acquiring them in the first place." This is a direct, critical statement, not empathetic or neutral in tone.'
+  },
+  { group: 'L25', type: 'true_false_matrix', category: 'Environmental Wellbeing', context: ctxL25,
+    question: 'Based on the passage, are the following statements about houseplant care true or false?',
+    options: [
+      'The author suggests that most houseplants thrive in harsh, direct sunlight through unshaded windows.',
+      'Overwatering is described as a more common cause of plant death than neglect.',
+      'Wiping leaves with a damp cloth is identified as an essential task to support photosynthesis.',
+      'Neglect is identified as the primary cause of houseplant death.'
+    ],
+    answer: 'False,True,True,False',
+    method: 'A — The passage states "stop placing your plants in direct sunlight" and recommends "indirect, filtered light." False. B — "The biggest killer of indoor plants is not neglect — it is over-love. Specifically, it is overwatering." True. C — "Wiping leaves with a damp cloth on a weekly basis is...an essential physiological one," linked directly to photosynthesis. True. D — The passage explicitly states "The biggest killer of indoor plants is not neglect." False.'
+  },
+
+  // ── Set 16 (Persuasive): Sleep ─────────────────────────────────────────────
+  { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
+    question: 'What is the central thesis of this article?',
+    options: [
+      'A) To recommend a specific brand of sleep technology designed to optimise REM cycles for shift workers.',
+      'B) To argue that sleep is a non-negotiable biological necessity whose consistent prioritisation is essential for health.',
+      'C) To provide a medically approved seven-step bedtime routine for individuals experiencing chronic insomnia.',
+      'D) To discuss how workplace productivity metrics are impacted by the quality of employee sleep environments.'
+    ],
+    answer: 'B) To argue that sleep is a non-negotiable biological necessity whose consistent prioritisation is essential for health.',
+    method: 'The article states sleep is "a biological baseline that the human body requires to function, repair, and survive" and must be "prioritised, protected, and understood as the non-negotiable foundation." Options A, C, and D do not match the article\'s broad persuasive argument.'
+  },
+  { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
+    question: 'According to the passage, what specific tasks does the body perform during sleep?',
+    options: [
+      'A) Thermoregulation and active filtration of environmental toxins through the dermal lymphatic pathway.',
+      'B) The reinforcement of immune cell memory and the conversion of dietary protein into usable amino acids.',
+      'C) Critical repairs to muscle tissue, immune cells, neurological pathways, and the consolidation of memories.',
+      'D) The accelerated production of adrenaline reserves to support performance during the following morning.'
+    ],
+    answer: 'C) Critical repairs to muscle tissue, immune cells, neurological pathways, and the consolidation of memories.',
+    method: 'The passage states: "Critical repairs to muscle tissue, immune cells, and neurological pathways occur exclusively during sleep cycles. Memory consolidation…cannot occur in a waking state." Options A, B, and D introduce mechanisms not mentioned in the passage.'
+  },
+  { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
+    question: 'Why does the author reject the idea of compensating for lost sleep on the weekend?',
+    options: [
+      'A) Because weekend sleep is structurally different from weekday sleep and cannot produce the same neurological benefits.',
+      'B) Because health requires the consistent daily discipline of adequate sleep, not an irregular pattern of deprivation and recovery.',
+      'C) Because sleeping in on weekends disrupts circadian rhythm and causes chronic daytime fatigue syndrome.',
+      'D) Because the social obligations of weekends make environments incompatible with deep sleep states.'
+    ],
+    answer: 'B) Because health requires the consistent daily discipline of adequate sleep, not an irregular pattern of deprivation and recovery.',
+    method: 'The passage states: "The idea that this debt can be repaid on the weekend is not only incorrect — it reflects a fundamental misunderstanding of how the body manages biological repair cycles." The article\'s argument is about the need for consistency, not about circadian disruption or structural differences.'
+  },
+  { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
+    question: 'What is the author\'s implied view of working late into the night to meet professional deadlines?',
+    options: [
+      'A) That it is an admirable sign of professional dedication that can be balanced with strategic napping.',
+      'B) That it is a manageable trade-off provided it is compensated with a consistent weekend recovery routine.',
+      'C) That it represents a decision to compromise a biological necessity in favour of a commercial priority, with long-term consequences.',
+      'D) That it is a largely harmless habit provided the individual maintains a stable nutritional intake.'
+    ],
+    answer: 'C) That it represents a decision to compromise a biological necessity in favour of a commercial priority, with long-term consequences.',
+    method: 'The passage states: "working late into the night to meet professional deadlines…must be understood for what it is: a decision to compromise a biological necessity in favour of a social or commercial priority…a trade-off with long-term physiological consequences." Options A, B, and D contradict this position.'
+  },
+  { group: 'L26', type: 'true_false_matrix', category: 'Health Advocacy', context: ctxL26,
+    question: 'Based on the passage, are the following statements about sleep true or false?',
+    options: [
+      'The author describes getting seven to nine hours of sleep as a "life hack" that high performers have discovered.',
+      'A cool, dark room is described as a preference rather than a physiological requirement for sleep.',
+      'Sleep deprivation is linked in the passage to a weakened immune system.',
+      'Adults require a minimum of seven to nine hours of sleep to meet the body\'s biological baseline.'
+    ],
+    answer: 'False,False,True,True',
+    method: 'A — The passage explicitly states: "Getting the recommended seven to nine hours of sleep is not a \'life hack\'." False. B — "A cool, dark room is not a preference — it is a physiological requirement." False. C — The passage lists "a weakened immune system" as a consequence of consistent sleep deficit. True. D — The passage identifies seven to nine hours as "a biological baseline that the human body requires to function, repair, and survive." True.'
+  },
+
+  // ── Set 17 (Persuasive): Disciplined Fetch ─────────────────────────────────
+  { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
+    question: 'What is the author\'s main argument regarding how fetch should be played?',
+    options: [
+      'A) That fetch is most effective when dogs are given complete freedom to set the pace and intensity of the game.',
+      'B) That fetch should be treated as a structured, safety-conscious activity in which the owner assumes deliberate leadership.',
+      'C) That fetch is only appropriate for high-energy breeds and should not be used for all dogs.',
+      'D) That competitive fetch events offer the best framework for developing discipline and focus in domestic canines.'
+    ],
+    answer: 'B) That fetch should be treated as a structured, safety-conscious activity in which the owner assumes deliberate leadership.',
+    method: 'The passage frames fetch as an "energy contract" in which "the owner takes responsibility for governing the terms" and argues that owners must lead on safety, equipment choice, and session duration. Options A, C, and D are either contradicted or not supported by the passage.'
+  },
+  { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
+    question: 'Why does the author describe playing fetch near traffic as a failure of responsibility?',
+    options: [
+      'A) Because traffic vibrations disrupt the dog\'s ability to track the trajectory of a thrown ball accurately.',
+      'B) Because it demonstrates that the owner has failed to take basic precautions to eliminate foreseeable hazards.',
+      'C) Because local council regulations prohibit the use of public roads as informal exercise zones for domestic animals.',
+      'D) Because traffic noise exceeds safe decibel levels that can permanently damage a dog\'s sensitive auditory system.'
+    ],
+    answer: 'B) Because it demonstrates that the owner has failed to take basic precautions to eliminate foreseeable hazards.',
+    method: 'The passage states that playing near traffic "is not a minor oversight — it is a failure of the most basic duty of care," and that the risk is "foreseeable." No mention is made of council regulations, vibrations, or decibel levels.'
+  },
+  { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
+    question: 'What does the author mean by the term \'energy contract\' as used in the passage?',
+    options: [
+      'A) A written behavioural agreement between the owner and a professional trainer to manage the dog\'s exercise intensity.',
+      'B) A mutual commitment in which both dog and owner invest equal energy throughout the entire game session.',
+      'C) A structured understanding in which the owner governs when the game begins, continues, and ends.',
+      'D) A commercial arrangement between pet owners and subscription-based canine exercise services.'
+    ],
+    answer: 'C) A structured understanding in which the owner governs when the game begins, continues, and ends.',
+    method: 'The passage defines the energy contract as: "You should be the one to decide when the game begins, how long it continues, and crucially, when it ends." It is not a written agreement, a financial arrangement, or a mutual equal-energy commitment.'
+  },
+  { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
+    question: 'What does the author imply about why the owner must set the pace of the game?',
+    options: [
+      'A) Because competitive fetch rules establish that the throwing party always holds ultimate authority in the game.',
+      'B) Because dogs lack the self-awareness to recognise the physical limits of their own endurance.',
+      'C) Because allowing the dog to set the pace results in ball damage and reduces equipment longevity.',
+      'D) Because exercise pacing directly correlates with a dog\'s annual veterinary expenditure.'
+    ],
+    answer: 'B) Because dogs lack the self-awareness to recognise the physical limits of their own endurance.',
+    method: 'The passage states: "The dog is relying on you to read these signals and act accordingly," implying the dog cannot self-regulate. "Forcing a tired dog to continue is not \'active living\' — it is neglect." No competitive rules, ball damage, or veterinary costs are mentioned.'
+  },
+  { group: 'L27', type: 'true_false_matrix', category: 'Animal Welfare', context: ctxL27,
+    question: 'Based on the passage, are the following statements about playing fetch true or false?',
+    options: [
+      'Forcing an exhausted dog to continue playing fetch is described as a form of neglect.',
+      'The size of the ball used for fetch is described as irrelevant to the dog\'s safety.',
+      'Fetch is described as a vital training ground for communication and a controlled release of energy.',
+      'The author states that the dog should decide when the game begins and when it ends.'
+    ],
+    answer: 'True,False,True,False',
+    method: 'A — "Forcing a tired dog to continue is not \'active living\' — it is neglect." True. B — "The size of the ball must be appropriate to the size of the dog. A ball small enough to lodge in the throat is not a toy — it is a direct threat." False. C — "fetch must be understood as what it truly is: a vital training ground for communication and a controlled release of energy." True. D — "You should be the one to decide when the game begins, how long it continues, and crucially, when it ends." False.'
+  },
+
+  // ── Set 18 (Persuasive): Pet Overbreeding ──────────────────────────────────
+  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+    question: 'What is the author\'s main goal in this article?',
+    options: [
+      'A) To promote the establishment of government-funded breeding registries to monitor genetic diversity of domestic animals.',
+      'B) To argue for urgent legislative and behavioural reforms to end overbreeding and reduce animal euthanasia in Australia.',
+      'C) To review the economic performance of the Victorian Government\'s pet industry regulation framework.',
+      'D) To compare the adoption rates of cats and dogs across municipal shelter networks in regional Australia.'
+    ],
+    answer: 'B) To argue for urgent legislative and behavioural reforms to end overbreeding and reduce animal euthanasia in Australia.',
+    method: 'The passage calls for "action on two fronts": stronger legislation and consumer behavioural change, with the stated goal of reducing "Australia\'s annual euthanasia rate to zero." Options A, C, and D describe narrower or different objectives not found in the passage.'
+  },
+  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+    question: 'How many cats and dogs are euthanised in Australia annually according to the text?',
+    options: [
+      'A) 10,000',
+      'B) 50,000',
+      'C) 100,000',
+      'D) Over 200,000'
+    ],
+    answer: 'D) Over 200,000',
+    method: 'The passage opens with: "Australia euthanises more than 200,000 cats and dogs annually." This is the specific statistic cited at the outset of the article to establish the scale of the problem.'
+  },
+  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+    question: 'Why does the author argue that allowing ten breeding females is excessive?',
+    options: [
+      'A) Because it exceeds the nutritional capacity of standard domestic properties to support a healthy breeding program.',
+      'B) Because it enables a scale of production that mirrors profit-driven puppy farms rather than ethical, welfare-focused breeding.',
+      'C) Because it violates the maximum breeding quotas established under the Victorian Government\'s current legislation.',
+      'D) Because animals from large litters have statistically lower rates of successful adoption within the shelter system.'
+    ],
+    answer: 'B) Because it enables a scale of production that mirrors profit-driven puppy farms rather than ethical, welfare-focused breeding.',
+    method: 'The passage states ten females can produce "between 50 and 160 animals annually from a single registered operation" — characterised as "small-scale industrial production that floods an already oversupplied adoption market." This is explicitly contrasted with "careful, welfare-focused breeding." Options A, C, and D are not supported.'
+  },
+  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+    question: 'What does the author imply about the relationship between purchasing from a breeder and shelter adoption?',
+    options: [
+      'A) They are complementary practices that together ensure a diverse and healthy domestic animal population.',
+      'B) Purchasing from a breeder improves shelter adoption rates by reducing demand for lower-quality animals.',
+      'C) Purchasing from a breeder directly reduces the opportunity for a shelter animal to find a home.',
+      'D) Both practices contribute equally to reducing the euthanasia rate when undertaken responsibly.'
+    ],
+    answer: 'C) Purchasing from a breeder directly reduces the opportunity for a shelter animal to find a home.',
+    method: 'The passage states: "Every animal purchased from a breeder is an animal for whom a shelter resident did not find a home." This directly implies a zero-sum dynamic between the two practices. Options A, B, and D contradict this framing.'
+  },
+  { group: 'L28', type: 'true_false_matrix', category: 'Animal Ethics', context: ctxL28,
+    question: 'Based on the passage, are the following statements about the overbreeding crisis true or false?',
+    options: [
+      'The author believes that the Victorian Government\'s current legislative efforts have fully resolved the overbreeding crisis.',
+      'The author argues that animals should be viewed as instruments of profit by responsible breeders.',
+      'Shelter adoption is encouraged in the passage as an alternative to purchasing from breeders.',
+      'The author proposes that the ultimate goal is to reduce Australia\'s annual euthanasia rate to zero.'
+    ],
+    answer: 'False,False,True,True',
+    method: 'A — The passage describes government efforts as "a necessary starting point, yet they remain insufficient." False. B — The passage explicitly states animals must be treated "as living beings with intrinsic value rather than consumer goods with a market price." False. C — The passage says "the single most impactful action...is to champion adoption from shelters rather than purchasing from breeders." True. D — "The goal is...to reduce Australia\'s annual euthanasia rate to zero." True.'
+  },
+
+  // ── Set 19 (Persuasive): Processed Meat ────────────────────────────────────
+  { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
+    question: 'What is the core message the passage communicates about the IARC\'s findings on processed meat?',
+    options: [
+      'A) To encourage the complete elimination of red meat from global diets based on preliminary evidence.',
+      'B) To demonstrate that the nutritional value of processed meat outweighs any associated long-term health concerns.',
+      'C) To communicate scientifically supported evidence linking processed meat consumption to elevated colorectal cancer risk.',
+      'D) To call for a global ban on all meat-processing manufacturing facilities operating outside regulated nutritional standards.'
+    ],
+    answer: 'C) To communicate scientifically supported evidence linking processed meat consumption to elevated colorectal cancer risk.',
+    method: 'The passage presents the IARC\'s Group 1 classification and the 18% risk increase per 50g as "scientifically robust" conclusions from 800+ studies. The article is not advocating for elimination of all red meat or factory bans, and it explicitly acknowledges red meat\'s nutritional value.'
+  },
+  { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
+    question: 'What increase in colorectal cancer risk does the IARC report associate with consuming 50 grams of processed meat daily?',
+    options: [
+      'A) 5%',
+      'B) 10%',
+      'C) 15%',
+      'D) 18%'
+    ],
+    answer: 'D) 18%',
+    method: 'The passage states: "For every 50 grams of processed meat consumed daily…the risk of developing colorectal cancer increases by 18 per cent." Options A, B, and C are lower figures not cited in the passage.'
+  },
+  { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
+    question: 'Why does the author consider the IARC\'s research more authoritative than industry counter-arguments?',
+    options: [
+      'A) Because the IARC is directly funded by national governments, giving it complete immunity from commercial conflicts of interest.',
+      'B) Because the IARC\'s conclusions are based on over 800 independent studies, while the industry focuses on selective nutritional claims.',
+      'C) Because the IARC specifically endorses plant-based diets over all other dietary patterns in its annual health report.',
+      'D) Because its findings have been universally accepted by the meat industry without objection or formal counter-argument.'
+    ],
+    answer: 'B) Because the IARC\'s conclusions are based on over 800 independent studies, while the industry focuses on selective nutritional claims.',
+    method: 'The passage contrasts the IARC\'s "analysis of over 800 studies conducted across multiple countries, populations, and timeframes" with the industry\'s focus on "nutritional value" as a counter-argument to public health recommendations. Option D is directly contradicted by the passage: the industry did mount objections.'
+  },
+  { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
+    question: 'How does the author balance the nutritional value of red meat with the health risks identified by the IARC?',
+    options: [
+      'A) By arguing that the nutritional benefits of red meat fully justify its consumption at any quantity without restriction.',
+      'B) By suggesting that all red meat should be immediately removed from public dietary guidelines to eliminate cancer risk.',
+      'C) By acknowledging red meat\'s nutritional value while emphasising the need for balanced dietary recommendations that account for cancer risk.',
+      'D) By claiming that the IARC study negates all previously recognised nutritional benefits of consuming red meat.'
+    ],
+    answer: 'C) By acknowledging red meat\'s nutritional value while emphasising the need for balanced dietary recommendations that account for cancer risk.',
+    method: 'The passage cites Dr. Christopher Wild as "acknowledging these nutritional considerations while maintaining that balanced dietary recommendations must account for the cancer risk." The passage states nutritional value "must be weighed against" the carcinogenic profile — not ignored or dismissed.'
+  },
+  { group: 'L29', type: 'true_false_matrix', category: 'Public Health Research', context: ctxL29,
+    question: 'Based on the passage, are the following statements about the IARC report true or false?',
+    options: [
+      'The report estimates that approximately 34,000 cancer deaths annually are attributable to diets high in processed meat.',
+      'The passage explicitly defines processed meat as including ham, sausages, and bacon.',
+      'The meat industry is described in the passage as fully accepting the IARC\'s findings without objection.',
+      'The IARC analysis was based on over 800 independent studies conducted across multiple countries.'
+    ],
+    answer: 'True,False,False,True',
+    method: 'A — "High-processed-meat diets are estimated to contribute to approximately 34,000 cancer deaths annually." True. B — The passage refers to "processed meat" as a category but does not list specific products such as ham, sausages, or bacon. False. C — The passage states: "Despite the industry\'s attempt to distance red and processed meat from these findings." False. D — "conclusions drawn from an analysis of over 800 studies conducted across multiple countries, populations, and timeframes." True.'
+  },
+
+  // ── Set 20 (Persuasive): Value of Quotes in News ───────────────────────────
+  { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
+    question: 'What is the primary function of quotes in a news report according to the passage?',
+    options: [
+      'A) To allow journalists to reduce the volume of original writing required to meet a publication\'s word count targets.',
+      'B) To serve as strategic tools that provide evidence, establish authority, and illustrate competing perspectives.',
+      'C) To guarantee that all news reports achieve a legally mandated standard of editorial impartiality.',
+      'D) To provide advertisers with identifiable spokesperson quotes that can be repurposed for commercial campaigns.'
+    ],
+    answer: 'B) To serve as strategic tools that provide evidence, establish authority, and illustrate competing perspectives.',
+    method: 'The passage opens by stating: "Quotes are rarely used at random — they are strategic tools, selected by the journalist to serve specific communicative functions." It then identifies three primary functions: providing evidence, bolstering authority, and illustrating conflicting perspectives. Options A, C, and D are not supported.'
+  },
+  { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
+    question: 'Which of the following is explicitly identified in the passage as a reason for using quotes?',
+    options: [
+      'A) To ensure that news reports conform to the character limits imposed by digital publishing platforms.',
+      'B) To bridge the gap between scientific findings and public understanding of complex research.',
+      'C) To allow editors to verify the factual accuracy of a reporter\'s claims before a story goes to print.',
+      'D) To replace the need for primary investigative research by citing existing expert opinions.'
+    ],
+    answer: 'B) To bridge the gap between scientific findings and public understanding of complex research.',
+    method: 'The passage states that expert quotes "effectively bridge the gap between scientific findings and public understanding by allowing experts to speak directly to a general audience." Options A, C, and D describe editorial or production functions not mentioned in the passage.'
+  },
+  { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
+    question: 'Why does the author emphasise that quotes are \'strategic tools\'?',
+    options: [
+      'A) To argue that all quotes in journalism should be pre-approved by the original source before publication.',
+      'B) To highlight that journalists deliberately select quotes to achieve specific communicative effects within a story.',
+      'C) To suggest that quotes are only effective in reports covering scientific or medical subject matter.',
+      'D) To imply that readers should view all quoted sources with suspicion due to their selective placement.'
+    ],
+    answer: 'B) To highlight that journalists deliberately select quotes to achieve specific communicative effects within a story.',
+    method: 'The passage uses "strategic tools" to mean that quotes are deliberately chosen "to serve specific communicative functions." Skilled readers are invited to "consider who is speaking, what interest they may represent, and what the journalist\'s purpose was in choosing that voice." Option D overstates this as reason for suspicion; the text treats it as critical engagement.'
+  },
+  { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
+    question: 'How does including opposing voices affect the perceived credibility of a news report?',
+    options: [
+      'A) It reduces the report\'s credibility by introducing unresolved contradictions that confuse the reader.',
+      'B) It has no measurable effect on credibility, as readers focus exclusively on the journalist\'s own conclusions.',
+      'C) It enhances the report\'s perceived credibility by demonstrating balance and allowing the audience to weigh multiple perspectives.',
+      'D) It diminishes the authority of the primary source cited in the report by placing competing views alongside it.'
+    ],
+    answer: 'C) It enhances the report\'s perceived credibility by demonstrating balance and allowing the audience to weigh multiple perspectives.',
+    method: 'The passage states that quoting conflicting perspectives "ensures that a report does not appear biased to the audience, allowing them to weigh the evidence and form their own conclusions." This is presented as an enhancement to credibility, not a reduction or neutral effect.'
+  },
+  { group: 'L30', type: 'true_false_matrix', category: 'Media Literacy', context: ctxL30,
+    question: 'Based on the passage, are the following statements about the use of quotes in journalism true or false?',
+    options: [
+      'The author argues that quotes are used randomly to fill space in articles.',
+      'Quotes are described as a way to bridge the gap between researchers and the public.',
+      'Presenting conflicting views in a report is said to make it appear more biased to the audience.',
+      'Quotes are described as a window into the broader debate surrounding a story\'s subject matter.'
+    ],
+    answer: 'False,True,False,True',
+    method: 'A — "Quotes are rarely used at random — they are strategic tools." False. B — "quotes effectively bridge the gap between scientific findings and public understanding." True. C — The passage states presenting conflicting views "ensures that a report does not appear biased." False. D — "its presence acts as a window into the broader debate surrounding the story\'s subject matter." True.'
+  },
+
+  // ── Set 21 (Property Listing): The Historic Harbor Estate ──────────────────
+  { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
+    question: 'According to the listing, which guest would be explicitly refused a booking?',
+    options: [
+      'A) A pair of business travellers on a corporate trip.',
+      'B) A couple travelling with their 8-year-old child.',
+      'C) A solo traveller requiring high-speed internet access.',
+      'D) A group of adult friends celebrating a birthday.'
+    ],
+    answer: 'B) A couple travelling with their 8-year-old child.',
+    method: 'The listing explicitly states it is "strictly unsuitable for children under the age of 12." An 8-year-old falls within this restriction. Business travellers, guests requiring internet, and adult groups face no stated restrictions.'
+  },
+  { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
+    question: 'Which of the following is true regarding the property\'s accessibility?',
+    options: [
+      'A) The property is fully wheelchair accessible across all four levels.',
+      'B) An elevator provides access between the ground and upper floors.',
+      'C) The third and fourth floors are accessible only via the grand staircase.',
+      'D) The listing prohibits guests with limited mobility from booking.'
+    ],
+    answer: 'C) The third and fourth floors are accessible only via the grand staircase.',
+    method: 'The listing states: "Access to the third and fourth floors is via a grand staircase; there is no elevator, which may be a limitation for guests with limited mobility." The property notes this as a potential limitation, not a prohibition. Options A and B are directly contradicted by the listing.'
+  },
+  { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
+    question: 'The Battery Point neighbourhood is described as lively and active late into the night.',
+    options: ['True', 'False'],
+    answer: 'False',
+    method: 'The listing states: "The area is quiet after 8:00 PM as it is primarily residential." This directly contradicts a description of late-night activity. Fine dining and maritime attractions are nearby, but the immediate neighbourhood is quiet after 8 PM.'
+  },
+  { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
+    question: 'The $2,000 security deposit is refunded to the guest after a stay exceeding seven days.',
+    options: ['True', 'False'],
+    answer: 'False',
+    method: 'The listing explicitly describes the deposit as "non-refundable." It is required upon booking confirmation for stays exceeding 7 days but will not be returned to the guest at checkout.'
+  },
+
+  // ── Set 22 (Property Listing): The Eco-Innovation Hub ──────────────────────
+  { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
+    question: 'What is the financial consequence for a guest who exceeds their daily energy allowance?',
+    options: [
+      'A) They may be evicted from the property without a refund.',
+      'B) Their internet connection will be throttled to a slower speed.',
+      'C) They will be charged an additional $0.45 per kilowatt-hour at checkout.',
+      'D) Their energy allowance will be permanently removed for the remainder of their stay.'
+    ],
+    answer: 'C) They will be charged an additional $0.45 per kilowatt-hour at checkout.',
+    method: 'The listing states: "Any usage exceeding this is billed at $0.45 per kWh upon checkout." Options A, B, and D describe consequences not mentioned in the listing.'
+  },
+  { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
+    question: 'Based on the neighbourhood description, which statement is most accurate?',
+    options: [
+      'A) The area is consistently noisy at all hours due to the large student population.',
+      'B) The suburb lacks adequate public transport connections to the wider city.',
+      'C) It is a formerly industrial area undergoing gentrification with strong public transport links.',
+      'D) Greendale is a quiet rural district situated well outside the city centre.'
+    ],
+    answer: 'C) It is a formerly industrial area undergoing gentrification with strong public transport links.',
+    method: 'The listing describes Greendale as "rapidly gentrifying" and "formerly industrial," with the Greendale Interchange connecting to "four different train lines." Noise is noted to be controlled by ordinances, directly contradicting Option A. Options B and D misrepresent the description.'
+  },
+  { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
+    question: 'The apartment\'s internal layout can be physically reconfigured by the guest.',
+    options: ['True', 'False'],
+    answer: 'True',
+    method: 'The listing states: "The space is dynamic; walls can be retracted to change a bedroom into a workspace." This confirms that the internal layout can be altered by the guest.'
+  },
+  { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
+    question: 'Guests are permitted to cook using gas-powered appliances in the kitchen.',
+    options: ['True', 'False'],
+    answer: 'False',
+    method: 'The listing specifies a "Kitchenette with induction cooktop (no open flames)." The explicit note "no open flames" means gas-powered cooking is not permitted.'
+  },
+
+  // ── Set 23 (Property Listing): The Transit Exchange Apartment ──────────────
+  { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
+    question: 'What is the host\'s explicit advice to guests regarding personal vehicles?',
+    options: [
+      'A) Bring a personal vehicle as it is the most convenient way to explore the area.',
+      'B) Use the public parking garage located approximately 1km from the property.',
+      'C) Do not bring a vehicle, due to severe local traffic congestion and no on-site parking.',
+      'D) Arrange a private taxi service through the property\'s 24/7 kiosk.'
+    ],
+    answer: 'C) Do not bring a vehicle, due to severe local traffic congestion and no on-site parking.',
+    method: 'The listing states: "The host strongly advises against bringing a vehicle as the local traffic congestion is severe, and the nearest public parking garage is over 1km away." The garage is mentioned as an additional reason to avoid driving, not as a recommendation. Option D is not supported by the text.'
+  },
+  { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
+    question: 'What makes this apartment particularly suited to a specific type of traveller?',
+    options: [
+      'A) It is a luxurious and completely silent property ideal for relaxation.',
+      'B) It is positioned directly above a railway terminus, providing immediate access to the train network.',
+      'C) It is situated in a quiet residential suburb away from urban activity.',
+      'D) It is specifically designed to accommodate large groups with shared amenities.'
+    ],
+    answer: 'B) It is positioned directly above a railway terminus, providing immediate access to the train network.',
+    method: 'The listing opens: "Located directly above the West Central Railway Terminus, this apartment is designed for the traveller who values efficiency." The title also references "30 Seconds to the Platform." Options A, C, and D are contradicted or unsupported by the listing.'
+  },
+  { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
+    question: 'The apartment is completely free from all noise and vibration from the railway below.',
+    options: ['True', 'False'],
+    answer: 'False',
+    method: 'The listing states the unit is "sound-engineered to block out platform noise, though light vibrations from heavy freight trains passing at night may be felt." The qualification "though light vibrations…may be felt" confirms the property is not entirely free from railway disturbance.'
+  },
+  { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
+    question: 'Guests can access a large supermarket within a short walk of the property.',
+    options: ['True', 'False'],
+    answer: 'False',
+    method: 'The listing states: "There are no major supermarkets in the immediate 500-metre radius." Nearby options are limited to "high-end grab-and-go convenience stores and a 24-hour pharmacy" — not a major supermarket.'
   }
 ]
 

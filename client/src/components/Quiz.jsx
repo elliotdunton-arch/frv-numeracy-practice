@@ -46,7 +46,8 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       if (!v) return false
       const parts = v.split(',')
       const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
-      return parts.length === 3 && parts.every(p => p === lbl1 || p === lbl2)
+      const expectedLength = (q.options || []).length
+      return parts.length === expectedLength && parts.every(p => p === lbl1 || p === lbl2)
     }
     return v !== undefined && v !== null && v !== ''
   }
@@ -62,6 +63,69 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const current       = questions[currentIndex]
 
   if (!current) return null
+
+  const renderAnswerInputs = (q) => {
+    if (q.type === 'multiple_choice') {
+      return (
+        <div className="mc-options">
+          {(q.options || []).map(opt => (
+            <button
+              key={opt}
+              className={`mc-option${answers[q.id] === opt ? ' mc-selected' : ''}`}
+              onClick={() => handleAnswer(q.id, opt)}
+            >
+              {opt}
+            </button>
+          ))}
+        </div>
+      )
+    }
+    if (q.type === 'true_false_matrix') {
+      return (
+        <div className="tfm-rows">
+          {(q.options || []).map((stmt, i) => {
+            const parts = (answers[q.id] || ',,').split(',')
+            const sel = parts[i]
+            const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
+            return (
+              <div key={i} className="tfm-row">
+                <span className="tfm-stmt">{stmt}</span>
+                <div className="tfm-btns">
+                  <button
+                    className={`tfm-btn${sel === lbl1 ? ' tfm-true' : ''}`}
+                    onClick={() => handleMatrixToggle(q.id, i, lbl1)}
+                  >{lbl1}</button>
+                  <button
+                    className={`tfm-btn${sel === lbl2 ? ' tfm-false' : ''}`}
+                    onClick={() => handleMatrixToggle(q.id, i, lbl2)}
+                  >{lbl2}</button>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      )
+    }
+    return (
+      <div className="number-input-area">
+        <div className="answer-input-wrap">
+          {q.unit === '$' && <span className="input-unit input-unit-prefix">$</span>}
+          <input
+            type="text"
+            inputMode="decimal"
+            className="number-input"
+            placeholder="Enter your answer…"
+            value={answers[q.id] || ''}
+            onChange={e => handleAnswer(q.id, e.target.value)}
+            autoComplete="off"
+          />
+          {q.unit && q.unit !== '$' && (
+            <span className="input-unit input-unit-suffix">{q.unit}</span>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="quiz">
@@ -102,7 +166,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
                   bookmarked ? 'rb-bookmarked' : '',
                 ].join(' ')}
                 onClick={() => setCurrentIndex(i)}
-                title={`Q${i + 1} — ${q.category}${answered ? ' (answered)' : ''}${bookmarked ? ' ★' : ''}`}
+                title={`Q${i + 1}${answered ? ' (answered)' : ''}${bookmarked ? ' ★' : ''}`}
               >
                 {i + 1}
                 {bookmarked && <span className="rb-star">★</span>}
@@ -119,105 +183,60 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       </div>
 
       {/* Question */}
-      <div className="quiz-main">
+      <div className={`quiz-main${current.context ? ' quiz-main--wide' : ''}`}>
         <div className="question-card">
           <div className="question-meta">
             <span className="q-counter">Question {currentIndex + 1} of {questions.length}</span>
-            <span className="q-category-badge">{current.category}</span>
           </div>
 
-          {current.context && (
-            <div className="context-block">
-              {current.context.title && (
-                <div className="context-title">{current.context.title}</div>
-              )}
-              {current.context.subtitle && (
-                <div className="context-subtitle">{current.context.subtitle}</div>
-              )}
-              {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
-                <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
-                  {para}
-                </p>
-              ))}
-              {current.context.tables && current.context.tables.map((tbl, ti) => (
-                <div key={ti} className="context-table-wrap">
-                  {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
-                  <table className="context-table">
-                    <thead>
-                      <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
-                    </thead>
-                    <tbody>
-                      {tbl.rows.map((row, ri) => (
-                        <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ))}
-              {current.context.extraParagraphs && current.context.extraParagraphs.map((para, pi) => (
-                <p key={pi} className="context-paragraph">{para}</p>
-              ))}
-              {current.context.note && (
-                <div className="context-note">{current.context.note}</div>
-              )}
-            </div>
-          )}
-
-          <p className="question-text">{current.question}</p>
-
-          {current.type === 'multiple_choice' ? (
-            <div className="mc-options">
-              {(current.options || []).map(opt => (
-                <button
-                  key={opt}
-                  className={`mc-option${answers[current.id] === opt ? ' mc-selected' : ''}`}
-                  onClick={() => handleAnswer(current.id, opt)}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          ) : current.type === 'true_false_matrix' ? (
-            <div className="tfm-rows">
-              {(current.options || []).map((stmt, i) => {
-                const parts = (answers[current.id] || ',,').split(',')
-                const sel = parts[i]
-                const [lbl1, lbl2] = current.matrixLabels || ['True', 'False']
-                return (
-                  <div key={i} className="tfm-row">
-                    <span className="tfm-stmt">{stmt}</span>
-                    <div className="tfm-btns">
-                      <button
-                        className={`tfm-btn${sel === lbl1 ? ' tfm-true' : ''}`}
-                        onClick={() => handleMatrixToggle(current.id, i, lbl1)}
-                      >{lbl1}</button>
-                      <button
-                        className={`tfm-btn${sel === lbl2 ? ' tfm-false' : ''}`}
-                        onClick={() => handleMatrixToggle(current.id, i, lbl2)}
-                      >{lbl2}</button>
+          {current.context ? (
+            <div className="question-layout-split">
+              <div className="context-panel">
+                <div className="context-block">
+                  {current.context.title && (
+                    <div className="context-title">{current.context.title}</div>
+                  )}
+                  {current.context.subtitle && (
+                    <div className="context-subtitle">{current.context.subtitle}</div>
+                  )}
+                  {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
+                    <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
+                      {para}
+                    </p>
+                  ))}
+                  {current.context.tables && current.context.tables.map((tbl, ti) => (
+                    <div key={ti} className="context-table-wrap">
+                      {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
+                      <table className="context-table">
+                        <thead>
+                          <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
+                        </thead>
+                        <tbody>
+                          {tbl.rows.map((row, ri) => (
+                            <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
-                  </div>
-                )
-              })}
-            </div>
-          ) : (
-            <div className="number-input-area">
-              <div className="answer-input-wrap">
-                {current.unit === '$' && <span className="input-unit input-unit-prefix">$</span>}
-                <input
-                  type="text"
-                  inputMode="decimal"
-                  className="number-input"
-                  placeholder="Enter your answer…"
-                  value={answers[current.id] || ''}
-                  onChange={e => handleAnswer(current.id, e.target.value)}
-                  autoComplete="off"
-                />
-                {current.unit && current.unit !== '$' && (
-                  <span className="input-unit input-unit-suffix">{current.unit}</span>
-                )}
+                  ))}
+                  {current.context.extraParagraphs && current.context.extraParagraphs.map((para, pi) => (
+                    <p key={pi} className="context-paragraph">{para}</p>
+                  ))}
+                  {current.context.note && (
+                    <div className="context-note">{current.context.note}</div>
+                  )}
+                </div>
+              </div>
+              <div className="answer-panel">
+                <p className="question-text">{current.question}</p>
+                {renderAnswerInputs(current)}
               </div>
             </div>
+          ) : (
+            <>
+              <p className="question-text">{current.question}</p>
+              {renderAnswerInputs(current)}
+            </>
           )}
         </div>
 

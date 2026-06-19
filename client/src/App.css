@@ -662,6 +662,37 @@ body {
   margin: 0 auto;
 }
 
+.quiz-main--wide {
+  max-width: min(1180px, 96vw);
+}
+
+.question-layout-split {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.context-panel {
+  flex: 1 1 0;
+  min-width: 0;
+  max-height: 64vh;
+  overflow-y: auto;
+  padding-right: 6px;
+  border-right: 2px solid var(--gray-200);
+  scroll-behavior: smooth;
+}
+
+.context-panel .context-block {
+  margin-bottom: 0;
+}
+
+.answer-panel {
+  flex: 0 0 360px;
+  min-width: 260px;
+  position: sticky;
+  top: 20px;
+}
+
 .question-card {
   background: white;
   border-radius: var(--radius);
@@ -1731,6 +1762,23 @@ body {
   .btn-finish { font-size: 0.75rem; padding: 6px 10px; }
   .quiz-main { padding: 14px; }
   .question-card { padding: 18px; }
+
+  .question-layout-split {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .context-panel {
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 2px solid var(--gray-200);
+    padding-right: 0;
+    padding-bottom: 12px;
+  }
+  .answer-panel {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
   .question-text { font-size: 1.05rem; }
   .ribbon-btn { min-width: 32px; height: 32px; font-size: 0.7rem; }
 
