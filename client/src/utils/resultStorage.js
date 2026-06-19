@@ -27,6 +27,11 @@ export function getResultsForUser(username) {
   return getResults().filter(r => r.username === username)
 }
 
+export function deleteResult(id) {
+  const results = getResults().filter(r => r.id !== id)
+  localStorage.setItem(RESULTS_KEY, JSON.stringify(results))
+}
+
 export function getKnownUsers() {
   const names = getResults().map(r => r.username)
   return [...new Set(names)]

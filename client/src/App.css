@@ -2062,6 +2062,104 @@ body {
   margin: 0;
 }
 
+/* expand + delete controls */
+.pl-expand-cell, .pl-delete-cell { width: 32px; text-align: center; }
+
+.pl-expand-btn {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.12s, background 0.12s;
+  line-height: 1;
+}
+.pl-expand-btn:hover { color: var(--gray-700); background: var(--gray-100); }
+
+.pl-delete-btn {
+  background: none;
+  border: none;
+  color: var(--gray-300);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: color 0.12s, background 0.12s;
+  line-height: 1;
+}
+.pl-delete-btn:hover { color: #dc2626; background: #fef2f2; }
+.pl-delete-btn.pl-delete-confirm {
+  color: #dc2626;
+  background: #fef2f2;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  border: 1px solid #fca5a5;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+/* expanded row highlight */
+.pl-row-expanded td { background: #f8faff; }
+
+/* breakdown sub-row */
+.pl-breakdown-row td { padding: 0; border-bottom: 1px solid var(--gray-100); }
+.pl-breakdown {
+  padding: 12px 16px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f8faff;
+}
+
+.pl-breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pl-bd-cat {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.pl-bd-track {
+  flex: 1;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pl-bd-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+.plbd-good { background: #22c55e; }
+.plbd-poor { background: #f87171; }
+
+.pl-bd-score {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.pl-bd-unavailable {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  margin: 0;
+  font-style: italic;
+}
+
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */

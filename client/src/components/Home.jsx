@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { getUsername, setUsername, getResultsForUser, getKnownUsers } from '../utils/resultStorage'
+import { useState, Fragment } from 'react'
+import { getUsername, setUsername, getResultsForUser, getKnownUsers, deleteResult } from '../utils/resultStorage'
 
 const NUMERACY_CATEGORIES = [
   {
@@ -92,8 +92,10 @@ function formatTime(secs) {
 function ProgressLog() {
   const [currentUser, setCurrentUser] = useState(() => getUsername())
   const [results, setResults] = useState(() => currentUser ? getResultsForUser(currentUser) : [])
-  const [switchMode, setSwitchMode] = useState(false) // false | 'pick'
+  const [switchMode, setSwitchMode] = useState(false)
   const [newNameInput, setNewNameInput] = useState('')
+  const [expanded, setExpanded] = useState(new Set())
+  const [pendingDelete, setPendingDelete] = useState(null) // id awaiting confirmation
 
   const knownUsers = getKnownUsers()
 
@@ -103,6 +105,8 @@ function ProgressLog() {
     setResults(getResultsForUser(name))
     setSwitchMode(false)
     setNewNameInput('')
+    setExpanded(new Set())
+    setPendingDelete(null)
   }
 
   const handleNewName = () => {
@@ -111,6 +115,28 @@ function ProgressLog() {
     switchTo(t)
   }
 
+  const toggleExpand = (id) => {
+    setExpanded(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id); else next.add(id)
+      return next
+    })
+  }
+
+  const handleDeleteClick = (id) => {
+    if (pendingDelete === id) {
+      // second click — confirm
+      deleteResult(id)
+      setResults(prev => prev.filter(r => r.id !== id))
+      setExpanded(prev => { const n = new Set(prev); n.delete(id); return n })
+      setPendingDelete(null)
+    } else {
+      setPendingDelete(id)
+    }
+  }
+
+  const cancelDelete = () => setPendingDelete(null)
+
   if (!currentUser && knownUsers.length === 0) return null
 
   const avgPct = results.length
@@ -118,13 +144,11 @@ function ProgressLog() {
     : null
 
   return (
-    <div className="progress-log">
+    <div className="progress-log" onClick={e => { if (!e.target.closest('.pl-delete-btn')) cancelDelete() }}>
       <div className="progress-log-header">
         <div className="progress-log-title">
           <span>Progress Log</span>
-          {currentUser && (
-            <span className="progress-log-user"> — {currentUser}</span>
-          )}
+          {currentUser && <span className="progress-log-user"> — {currentUser}</span>}
         </div>
         <button
           className="progress-switch-btn"
@@ -159,11 +183,7 @@ function ProgressLog() {
               placeholder="Or enter a new name…"
               maxLength={50}
             />
-            <button
-              className="btn-record-save"
-              onClick={handleNewName}
-              disabled={!newNameInput.trim()}
-            >
+            <button className="btn-record-save" onClick={handleNewName} disabled={!newNameInput.trim()}>
               Switch
             </button>
           </div>
@@ -179,7 +199,7 @@ function ProgressLog() {
               <div className="progress-summary">
                 <span className="ps-stat"><strong>{results.length}</strong> test{results.length !== 1 ? 's' : ''} recorded</span>
                 <span className="ps-divider">·</span>
-                <span className="ps-stat">Average score: <strong>{avgPct}%</strong></span>
+                <span className="ps-stat">Average: <strong>{avgPct}%</strong></span>
                 <span className="ps-divider">·</span>
                 <span className="ps-stat">Best: <strong>{Math.max(...results.map(r => r.pct))}%</strong></span>
               </div>
@@ -187,30 +207,76 @@ function ProgressLog() {
                 <table className="progress-table">
                   <thead>
                     <tr>
+                      <th></th>
                       <th>Date</th>
                       <th>Section</th>
                       <th>Score</th>
                       <th>%</th>
                       <th>Time</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     {results.map(r => (
-                      <tr key={r.id}>
-                        <td>{formatDate(r.date)}</td>
-                        <td>
-                          <span className={`progress-section-badge psb-${r.section}`}>
-                            {SECTION_LABEL[r.section] || r.section}
-                          </span>
-                        </td>
-                        <td>{r.score} / {r.total}</td>
-                        <td>
-                          <span className={r.pct >= 70 ? 'progress-pass' : 'progress-fail'}>
-                            {r.pct}%
-                          </span>
-                        </td>
-                        <td>{formatTime(r.timeSecs)}</td>
-                      </tr>
+                      <Fragment key={r.id}>
+                        <tr className={expanded.has(r.id) ? 'pl-row-expanded' : ''}>
+                          <td className="pl-expand-cell">
+                            <button
+                              className="pl-expand-btn"
+                              onClick={() => toggleExpand(r.id)}
+                              title={expanded.has(r.id) ? 'Hide breakdown' : 'Show breakdown'}
+                            >
+                              {expanded.has(r.id) ? '▾' : '▸'}
+                            </button>
+                          </td>
+                          <td>{formatDate(r.date)}</td>
+                          <td>
+                            <span className={`progress-section-badge psb-${r.section}`}>
+                              {SECTION_LABEL[r.section] || r.section}
+                            </span>
+                          </td>
+                          <td>{r.score} / {r.total}</td>
+                          <td>
+                            <span className={r.pct >= 70 ? 'progress-pass' : 'progress-fail'}>
+                              {r.pct}%
+                            </span>
+                          </td>
+                          <td>{formatTime(r.timeSecs)}</td>
+                          <td className="pl-delete-cell">
+                            <button
+                              className={`pl-delete-btn${pendingDelete === r.id ? ' pl-delete-confirm' : ''}`}
+                              onClick={e => { e.stopPropagation(); handleDeleteClick(r.id) }}
+                              title={pendingDelete === r.id ? 'Click again to confirm deletion' : 'Delete this result'}
+                            >
+                              {pendingDelete === r.id ? 'Delete?' : '×'}
+                            </button>
+                          </td>
+                        </tr>
+                        {expanded.has(r.id) && (
+                          <tr className="pl-breakdown-row">
+                            <td colSpan="7">
+                              <div className="pl-breakdown">
+                                {r.breakdown && r.breakdown.length > 0 ? (
+                                  r.breakdown.map(({ cat, correct, total: t }) => (
+                                    <div key={cat} className="pl-breakdown-item">
+                                      <span className="pl-bd-cat">{cat}</span>
+                                      <div className="pl-bd-track">
+                                        <div
+                                          className={`pl-bd-bar ${correct / t >= 0.6 ? 'plbd-good' : 'plbd-poor'}`}
+                                          style={{ width: `${Math.round((correct / t) * 100)}%` }}
+                                        />
+                                      </div>
+                                      <span className="pl-bd-score">{correct}/{t}</span>
+                                    </div>
+                                  ))
+                                ) : (
+                                  <p className="pl-bd-unavailable">No category breakdown saved for this result.</p>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>
