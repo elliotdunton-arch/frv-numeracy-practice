@@ -1446,6 +1446,20 @@ const ctxCylP = {
   }]
 }
 
+// ── Shower head water savings context ────────────────────────────────────────
+
+const ctxShower = {
+  title: 'Shower Head Water Savings',
+  subtitle: 'Compare water usage between a water-efficient Spraysaver shower head and a standard Steadyflow shower head.',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Water used',  'Flow rate (L/min) × Duration (min)'],
+      ['Water saved', 'Steadyflow usage − Spraysaver usage'],
+    ]
+  }]
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -3212,6 +3226,68 @@ const questions = [
     answer: '4'
   },
 
+  // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
+  {
+    group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (7 L/min) vs Steadyflow (10 L/min). How many litres are saved in one 10-minute shower?',
+    answer: '30'
+  },
+  {
+    group: 'DJ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (6 L/min) vs Steadyflow (9 L/min). How many litres are saved in one 8-minute shower?',
+    answer: '24'
+  },
+  {
+    group: 'DK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (7.5 L/min) vs Steadyflow (12 L/min). How many litres are saved in one 12-minute shower?',
+    answer: '54'
+  },
+  {
+    group: 'DL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (5 L/min) vs Steadyflow (8 L/min). How many litres are saved in one 5-minute shower?',
+    answer: '15'
+  },
+  {
+    group: 'DM', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (8 L/min) vs Steadyflow (15 L/min). How many litres are saved in one 20-minute shower?',
+    answer: '140'
+  },
+  {
+    group: 'DN', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (6 L/min) vs Steadyflow (10 L/min). How many litres are saved in one 6-minute shower?',
+    answer: '24'
+  },
+  {
+    group: 'DO', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (7 L/min) vs Steadyflow (11 L/min). How many litres are saved in one 15-minute shower?',
+    answer: '60'
+  },
+  {
+    group: 'DP', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (9 L/min) vs Steadyflow (14 L/min). How many litres are saved in one 4-minute shower?',
+    answer: '20'
+  },
+  {
+    group: 'DQ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (5 L/min) vs Steadyflow (9 L/min). How many litres are saved in one 30-minute shower?',
+    answer: '120'
+  },
+  {
+    group: 'DR', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxShower,
+    question: 'Spraysaver (8 L/min) vs Steadyflow (13 L/min). How many litres are saved in one 7-minute shower?',
+    answer: '35'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -3256,6 +3332,8 @@ const units = {
   CX: [null, null],
   CY: [null], CZ: [null], DA: [null], DB: [null], DC: [null],
   DD: [null], DE: [null], DF: [null], DG: [null], DH: [null],
+  DI: ['L'], DJ: ['L'], DK: ['L'], DL: ['L'], DM: ['L'],
+  DN: ['L'], DO: ['L'], DP: ['L'], DQ: ['L'], DR: ['L'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3708,6 +3786,16 @@ const methods = {
   DH: [
     `SD per glass = 60 × 20 ÷ 100 × 0.789 ÷ 10\n  = 60 × 0.20 × 0.789 ÷ 10\n  = 9.468 ÷ 10\n  = 0.947 standard drinks\n\nMax full glasses under 4 SD:\n  4 × 0.947 = 3.79 SD ✓ (under limit)\n  5 × 0.947 = 4.73 SD ✗ (over limit)\n\nMaximum = 4 glasses`,
   ],
+  DI: [`Saving per minute = 10 − 7 = 3 L/min\nTotal saved = 3 × 10 = 30 L`],
+  DJ: [`Saving per minute = 9 − 6 = 3 L/min\nTotal saved = 3 × 8 = 24 L`],
+  DK: [`Saving per minute = 12 − 7.5 = 4.5 L/min\nTotal saved = 4.5 × 12 = 54 L`],
+  DL: [`Saving per minute = 8 − 5 = 3 L/min\nTotal saved = 3 × 5 = 15 L`],
+  DM: [`Saving per minute = 15 − 8 = 7 L/min\nTotal saved = 7 × 20 = 140 L`],
+  DN: [`Saving per minute = 10 − 6 = 4 L/min\nTotal saved = 4 × 6 = 24 L`],
+  DO: [`Saving per minute = 11 − 7 = 4 L/min\nTotal saved = 4 × 15 = 60 L`],
+  DP: [`Saving per minute = 14 − 9 = 5 L/min\nTotal saved = 5 × 4 = 20 L`],
+  DQ: [`Saving per minute = 9 − 5 = 4 L/min\nTotal saved = 4 × 30 = 120 L`],
+  DR: [`Saving per minute = 13 − 8 = 5 L/min\nTotal saved = 5 × 7 = 35 L`],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
