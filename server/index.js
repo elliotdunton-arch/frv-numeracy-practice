@@ -1582,6 +1582,22 @@ const ctxEB = {
   }]
 }
 
+// ── Volume unit conversion context ───────────────────────────────────────────
+
+const ctxUnit = {
+  title: 'Volume Unit Conversions',
+  subtitle: 'Apply volume unit conversions to solve practical problems.',
+  tables: [{
+    headers: ['Conversion', 'Equivalence'],
+    rows: [
+      ['1 m³',  '1,000 L  =  1 kL'],
+      ['1 kL',  '1,000 L'],
+      ['1 L',   '1,000 mL  =  1,000 cm³'],
+      ['1 cm³', '1,000 mm³'],
+    ]
+  }]
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -3480,6 +3496,128 @@ const questions = [
     answer: '8% increase'
   },
 
+  // ── Sets EC–EL: Volume Unit Conversions ──────────────────────────────────────
+  {
+    group: 'EC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A rectangular tank measures 2 m × 1.5 m × 0.5 m. What is the volume in m³?',
+    answer: '1.5'
+  },
+  {
+    group: 'EC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Using the volume you just calculated, how many kL can the tank hold?',
+    answer: '1.5'
+  },
+  {
+    group: 'ED', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 4,500 cm³ to Litres.',
+    answer: '4.5'
+  },
+  {
+    group: 'ED', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'How many 250 mL bottles can be filled from 4.5 L?',
+    answer: '18'
+  },
+  {
+    group: 'EE', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A concrete slab measures 4 m × 3 m × 0.15 m. What is the volume in m³?',
+    answer: '1.8'
+  },
+  {
+    group: 'EE', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'At $250 per m³, what is the cost of the concrete?',
+    answer: '450'
+  },
+  {
+    group: 'EF', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 50 kL to Litres.',
+    answer: '50000'
+  },
+  {
+    group: 'EF', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'How many hours does it take to filter 50,000 L at a rate of 5,000 L per hour?',
+    answer: '10'
+  },
+  {
+    group: 'EG', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A storage box is 200 cm × 150 cm × 40 cm. What is the volume in cm³?',
+    answer: '1200000'
+  },
+  {
+    group: 'EG', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 1,200,000 cm³ to Litres.',
+    answer: '1200'
+  },
+  {
+    group: 'EH', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 0.8 m³ to Litres.',
+    answer: '800'
+  },
+  {
+    group: 'EH', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'How many minutes does it take to fill 800 L at a rate of 40,000 mL per minute?',
+    answer: '20'
+  },
+  {
+    group: 'EI', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A pool measures 120 cm × 60 cm × 50 cm. What is the volume in cm³?',
+    answer: '360000'
+  },
+  {
+    group: 'EI', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 360,000 cm³ to kL.',
+    answer: '0.36'
+  },
+  {
+    group: 'EJ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Convert 2.5 L to cm³.',
+    answer: '2500'
+  },
+  {
+    group: 'EJ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'How many 500 mm³ medical vials can be filled from 2,500 cm³?',
+    answer: '5000'
+  },
+  {
+    group: 'EK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A 1 m³ barrel is used for storage. What is its capacity in kL?',
+    answer: '1'
+  },
+  {
+    group: 'EK', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'If 4 of those barrels are filled, what is the total volume in Litres?',
+    answer: '4000'
+  },
+  {
+    group: 'EL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'A drainage channel is 10 m long, 0.5 m wide, and 0.8 m deep. What is the volume in m³?',
+    answer: '4'
+  },
+  {
+    group: 'EL', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxUnit,
+    question: 'Each truck carries 5 m³. How many truckloads are needed for 4 m³?',
+    answer: '0.8'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -3591,6 +3729,16 @@ const units = {
   DS: ['%', null], DT: ['%', null], DU: ['%', null], DV: ['$', null],
   DW: [null, null], DX: ['$', null], DY: [null, null], DZ: ['$', null],
   EA: ['$', null], EB: ['$', null],
+  EC: ['m³', 'kL'],
+  ED: ['L', null],
+  EE: ['m³', '$'],
+  EF: ['L', null],
+  EG: ['cm³', 'L'],
+  EH: ['L', null],
+  EI: ['cm³', 'kL'],
+  EJ: ['cm³', null],
+  EK: ['kL', 'L'],
+  EL: ['m³', null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -4093,6 +4241,46 @@ const methods = {
     `Profit per m² = $1,500 − $250 = $1,250\nTotal profit = $1,250 × 500 = $625,000`,
     `New area = 500 × 1.20 = 600 m²\nNew cost/m² = $250 × 1.20 = $300\nNew rev/m² = $1,500 × 0.95 = $1,425\nNew profit/m² = $1,425 − $300 = $1,125\nNew total = $1,125 × 600 = $675,000\n% change = ($675,000 − $625,000) ÷ $625,000 × 100 = 8% increase`,
   ],
+  EC: [
+    `Volume = length × width × height\n= 2 × 1.5 × 0.5 = 1.5 m³`,
+    `1 m³ = 1 kL\n∴ 1.5 m³ = 1.5 kL`,
+  ],
+  ED: [
+    `1 L = 1,000 cm³\n4,500 ÷ 1,000 = 4.5 L`,
+    `4.5 L ÷ 0.25 L per bottle = 18 bottles`,
+  ],
+  EE: [
+    `Volume = 4 × 3 × 0.15 = 1.8 m³`,
+    `Cost = 1.8 m³ × $250 = $450`,
+  ],
+  EF: [
+    `1 kL = 1,000 L\n50 kL × 1,000 = 50,000 L`,
+    `Time = 50,000 L ÷ 5,000 L/hr = 10 hours`,
+  ],
+  EG: [
+    `Volume = 200 × 150 × 40 = 1,200,000 cm³`,
+    `1 L = 1,000 cm³\n1,200,000 ÷ 1,000 = 1,200 L`,
+  ],
+  EH: [
+    `1 m³ = 1,000 L\n0.8 × 1,000 = 800 L`,
+    `800 L = 800,000 mL\n800,000 ÷ 40,000 = 20 minutes`,
+  ],
+  EI: [
+    `Volume = 120 × 60 × 50 = 360,000 cm³`,
+    `1 kL = 1,000,000 cm³\n360,000 ÷ 1,000,000 = 0.36 kL`,
+  ],
+  EJ: [
+    `1 L = 1,000 cm³\n2.5 × 1,000 = 2,500 cm³`,
+    `1 cm³ = 1,000 mm³\n2,500 cm³ = 2,500,000 mm³\n2,500,000 ÷ 500 = 5,000 vials`,
+  ],
+  EK: [
+    `1 m³ = 1 kL (by definition)\n∴ 1 m³ barrel holds 1 kL`,
+    `4 barrels × 1 kL × 1,000 L/kL = 4,000 L`,
+  ],
+  EL: [
+    `Volume = 10 × 0.5 × 0.8 = 4 m³`,
+    `4 m³ ÷ 5 m³ per truck = 0.8 truckloads`,
+  ],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
@@ -4155,6 +4343,7 @@ const TOPIC_GROUPS = {
   'Standard Drinks':          ['CY','CZ','DA','DB','DC','DD','DE','DF','DG','DH'],
   'Shower Water Savings':     ['DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR'],
   'Business Scenarios':       ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB'],
+  'Unit Conversions':         ['EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL'],
 }
 
 app.get('/api/topics', (req, res) => {
