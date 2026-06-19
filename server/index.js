@@ -3569,6 +3569,18 @@ const ctxL19 = {
   ]
 }
 
+const ctxL20 = {
+  title: 'The Connected Grid: Redefining High-Rise Environmental Management in Modern Smart Cities',
+  subtitle: 'Public Policy Whitepaper — Published by the Urban Infrastructure Policy Institute (UIPI), 2026',
+  paragraphs: [
+    'As metropolitan centres expand vertically, the architectural design of commercial structures must adapt to mitigate localised environmental hazards. High-rise structures exceeding 25 metres in height present unique aerodynamic and atmospheric challenges, particularly regarding the internal migration of airborne pollutants, synthetic gases, and vapour contaminants across floor seams. This whitepaper examines the deployment of automated, active environmental zone control matrices managed via centralised Building Management Systems (BMS).',
+    'Automated Containment Airflow Sequence: Modern smart grids rely on automated sensor arrays to isolate threats within localised structural sectors. Upon the electronic activation of any automated liquid leak detector or dual-stage photoelectric vapour sensor on a given floor (designated the Incident Floor), the master BMS must initiate an active environmental containment sequence concurrently within 45 seconds of the initial alarm trigger.',
+    'This rapid damper adjustment creates a sharp pressure differential. By lowering the pressure on the Incident Floor and raising it on the buffer zones directly above and below, the building creates an aerodynamic seal that prevents hazardous vapours from travelling through pipe penetrations or elevator shafts.',
+    'Concurrently, high-output injection blowers activate at the base of all egress stairwells to keep escape paths clear. However, human factors continue to present an operational vulnerability.',
+    'UIPI field studies indicate that during building evacuations, egress stairwell doors are frequently propped open by occupants, causing a rapid drop in stairwell positive pressure. To counteract this, the BMS is programmed to track door status; if an escape door remains open for a continuous duration exceeding 120 seconds, the system triggers a localised alert tone at the facility command desk and automatically boosts the injection blower fan speed by 15% to mechanically compensate for the pressure loss.'
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -4470,6 +4482,63 @@ const literacyQuestions = [
     ],
     answer: 'False,True,True',
     method: 'A — Any screw with thread stripping "must be instantly disqualified from service." The manual also forbids "combining unrated fasteners or mixing mismatched alloy brackets to secure a single mounting corner." No exception exists for emergency deployments. False. B — "This filter element is certified to operate safely under a maximum continuous static airflow pressure differential of 22 kilopascals (kPa)." True. C — Synthetic sealing elements "must be permanently retired from service if exposed to petroleum-based cleaning agents." True.'
+  },
+
+  // ── Set 10 (original batch): The Connected Grid / Public Policy Whitepaper ──
+  { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
+    question: 'What is the primary focus of this strategic policy whitepaper?',
+    options: [
+      'A) To mandate the use of centralised biometric tracking badges for all high-rise construction workers.',
+      'B) To explain how automated Building Management Systems use airflow and pressure controls to contain environmental hazards in high-rise buildings.',
+      'C) To calculate the annual infrastructure energy consumption of high-output gantry cranes.',
+      'D) To argue against the expansion of high-density commercial structures exceeding 25 metres in height.'
+    ],
+    answer: 'B) To explain how automated Building Management Systems use airflow and pressure controls to contain environmental hazards in high-rise buildings.',
+    method: 'The whitepaper describes how a BMS activates within 45 seconds of a sensor trigger, creates pressure differentials between the Incident Floor and buffer zones, and compensates for door propping with blower boosts. Biometric tracking, crane energy budgets, and arguing against tall buildings are outside its scope.'
+  },
+  { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
+    question: 'What is the exact maximum time window allowed for the BMS to initiate the automated airflow containment sequence after a sensor is triggered?',
+    options: [
+      'A) 15 seconds',
+      'B) 45 seconds',
+      'C) 120 seconds',
+      'D) 14 days'
+    ],
+    answer: 'B) 45 seconds',
+    method: 'The paper states the BMS "must initiate an active environmental containment sequence concurrently within 45 seconds of the initial alarm trigger." 120 seconds is the maximum duration an egress door can be held open before the blower compensation kicks in — a separate system.'
+  },
+  { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
+    question: 'According to the paper, what configuration do the air dampers and exhaust fans take on the floor located directly above the containment breach?',
+    options: [
+      'A) Supply dampers close to 0% and exhaust fans ramp up to 100% extraction capacity.',
+      'B) Supply dampers open completely to 100% and exhaust fans are locked at 0% capacity.',
+      'C) Both supply dampers and exhaust fans cycle open and closed every 120 seconds.',
+      'D) They switch completely to a water-based deluge backup loop.'
+    ],
+    answer: 'B) Supply dampers open completely to 100% and exhaust fans are locked at 0% capacity.',
+    method: 'The floor directly above the breach is a buffer zone. The paper states buffer zones are placed under "raised" positive pressure to create an aerodynamic seal. Positive pressure is achieved by maximising incoming fresh air (supply dampers 100% open) and preventing air from leaving (exhaust fans at 0%). Option A describes the Incident Floor configuration (negative pressure).'
+  },
+  { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
+    question: 'What operational issue does the building system attempt to correct by automatically boosting the stairwell injection fan speed by 15%?',
+    options: [
+      'A) A power failure affecting the main server rooms on the Incident Floor.',
+      'B) A loss of positive air pressure caused by an egress stairwell door being held open for more than 120 seconds.',
+      'C) Excessive chemical contamination of the synthetic HEPA filter elements in Hangar B.',
+      'D) The lateral migration of pedestrian traffic across high-street transit ribbons.'
+    ],
+    answer: 'B) A loss of positive air pressure caused by an egress stairwell door being held open for more than 120 seconds.',
+    method: 'The paper states that propped-open egress doors cause "a rapid drop in stairwell positive pressure." When a door remains open beyond 120 seconds, the BMS automatically boosts injection blower fan speed by 15% to "mechanically compensate for the pressure loss." Options C and D reference content from other passages and are distractors.'
+  },
+  { group: 'L20', type: 'true_false_matrix', category: 'Public Policy Whitepaper', context: ctxL20,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the whitepaper\'s specifications, are these automated system actions correct during a vapour breach on Floor 8?',
+    options: [
+      'The supply air dampers on Floor 8 close completely to 0% fresh air influx within 45 seconds of the alarm.',
+      'The exhaust fans on Floor 9 ramp up to maximum operational capacity (100% extraction) to draw vapours up through the building.',
+      'Propping open a stairwell door for 3 minutes triggers an alert tone and causes the system to increase that shaft\'s blower speed by 15%.'
+    ],
+    answer: 'Yes,No,Yes',
+    method: 'A — Floor 8 is the Incident Floor. The BMS lowers its pressure (negative pressure) by closing supply dampers to 0%, and does so within the 45-second trigger window. Yes. B — Floor 9 is a buffer zone directly above the breach. Buffer zones require high positive pressure, achieved by supply at 100% and exhaust at 0%. Ramping exhaust to 100% would depressurise the buffer floor and break the aerodynamic seal. No. C — 3 minutes equals 180 seconds, which exceeds the 120-second threshold. The BMS triggers an alert tone and boosts the blower by 15%. Yes.'
   }
 ]
 
