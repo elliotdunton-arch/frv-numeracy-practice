@@ -19,7 +19,7 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      const endpoint = section === 'literacy' ? '/api/literacy-questions' : '/api/questions'
+      const endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : '/api/questions'
       const res = await fetch(endpoint)
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()

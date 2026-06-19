@@ -5386,6 +5386,117 @@ app.get('/api/literacy-questions', (req, res) => {
   res.json(customCount ? final.slice(0, customCount) : final)
 })
 
+const abstractQuestions = [
+  // ── Next in Sequence ───────────────────────────────────────────────────────
+  {
+    group: 'AR1',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q1_sequence.svg',
+    options: [
+      '/images/abstract/q1_a.svg',
+      '/images/abstract/q1_b.svg',
+      '/images/abstract/q1_c.svg',
+      '/images/abstract/q1_d.svg',
+    ],
+    answer: 'D',
+    method: 'The cross alternates between + and × each step. The dot rotates 45° anticlockwise each step: top → top-left → left → bottom-left → bottom. The 5th shape must be a + with the dot at the bottom. Option D is correct.'
+  },
+  {
+    group: 'AR2',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q2_sequence.svg',
+    options: [
+      '/images/abstract/q2_a.svg',
+      '/images/abstract/q2_b.svg',
+      '/images/abstract/q2_c.svg',
+      '/images/abstract/q2_d.svg',
+    ],
+    answer: 'A',
+    method: 'The highlighted (black) petal of the 8-pointed star rotates 45° clockwise each step: N → NE → E → SE. The next step is S (south). Option A shows the south petal filled black.'
+  },
+  {
+    group: 'AR3',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q3_sequence.svg',
+    options: [
+      '/images/abstract/q3_a.svg',
+      '/images/abstract/q3_b.svg',
+      '/images/abstract/q3_c.svg',
+      '/images/abstract/q3_d.svg',
+    ],
+    answer: 'B',
+    method: 'The pair of arrows rotates 90° anticlockwise each step. After four steps (4 × 90° = 360°) the arrangement returns to its original orientation: large arrow pointing right, small arrow pointing down. Option B is correct.'
+  },
+  {
+    group: 'AR4',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q4_sequence.svg',
+    options: [
+      '/images/abstract/q4_a.svg',
+      '/images/abstract/q4_b.svg',
+      '/images/abstract/q4_c.svg',
+      '/images/abstract/q4_d.svg',
+    ],
+    answer: 'B',
+    method: 'The three fills (solid black, polka-dot, white) cycle through the three regions in a fixed order each step. After the fourth frame (which repeats frame 1), the fifth frame continues to the second position in the cycle: top strip = dots, left strip = white, main area = black. Option B is correct.'
+  },
+  {
+    group: 'AR5',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q5_sequence.svg',
+    options: [
+      '/images/abstract/q5_a.svg',
+      '/images/abstract/q5_b.svg',
+      '/images/abstract/q5_c.svg',
+      '/images/abstract/q5_d.svg',
+    ],
+    answer: 'A',
+    method: 'The dot moves progressively inward on the dartboard: outer ring top-right → outer ring bottom-left → middle ring bottom → inner ring top → centre (bullseye). Option A shows the dot at the centre.'
+  },
+  {
+    group: 'AR6',
+    type: 'image_choice',
+    category: 'Next in Sequence',
+    question: 'Which option most logically and simply comes next in the sequence?',
+    questionImage: '/images/abstract/q6_sequence.svg',
+    options: [
+      '/images/abstract/q6_a.svg',
+      '/images/abstract/q6_b.svg',
+      '/images/abstract/q6_c.svg',
+      '/images/abstract/q6_d.svg',
+    ],
+    answer: 'D',
+    method: 'The interior of the sun\'s circle darkens progressively each step: white → very light grey → medium grey → dark grey → solid black. Option D shows the fully black (solid) interior, which is the next step in the sequence.'
+  },
+]
+
+app.get('/api/abstract-questions', (req, res) => {
+  const shuffled = [...abstractQuestions].sort(() => Math.random() - 0.5)
+  const final = shuffled.map((q, i) => ({
+    id: i + 1,
+    type: q.type,
+    category: q.category,
+    group: q.group,
+    question: q.question,
+    questionImage: q.questionImage || null,
+    options: q.options || null,
+    answer: q.answer,
+    method: q.method || null,
+  }))
+  const customCount = req.query.count ? parseInt(req.query.count) : null
+  res.json(customCount ? final.slice(0, customCount) : final)
+})
+
 // Serve built React app in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/dist')))

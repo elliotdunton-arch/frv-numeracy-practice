@@ -122,6 +122,28 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                         )
                       })}
                     </div>
+                  ) : q.type === 'image_choice' ? (
+                    <div className="img-choice-review">
+                      {q.questionImage && (
+                        <img src={q.questionImage} alt="Pattern" className="review-question-img" />
+                      )}
+                      <div className="img-choice-review-grid">
+                        {(q.options || []).map((src, i) => {
+                          const label = String.fromCharCode(65 + i)
+                          const isAnswer = q.answer === label
+                          const isSelected = userAns === label
+                          const cls = isAnswer ? 'icr-correct' : isSelected ? 'icr-wrong' : ''
+                          return (
+                            <div key={label} className={`img-choice-review-opt ${cls}`}>
+                              <img src={src} alt={`Option ${label}`} className="img-choice-review-img" />
+                              <span className="img-choice-review-label">
+                                {label}{isAnswer ? ' ✓' : isSelected ? ' ✗' : ''}
+                              </span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
                   ) : !correct && (
                     <div className="review-answers">
                       <span className="ans-wrong">

@@ -106,6 +106,32 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
         </div>
       )
     }
+    if (q.type === 'image_choice') {
+      return (
+        <>
+          {q.questionImage && (
+            <div className="img-question-wrap">
+              <img src={q.questionImage} alt="Pattern question" className="img-question-main" />
+            </div>
+          )}
+          <div className="img-choice-grid">
+            {(q.options || []).map((src, i) => {
+              const label = String.fromCharCode(65 + i)
+              return (
+                <button
+                  key={label}
+                  className={`img-choice-btn${answers[q.id] === label ? ' img-choice-selected' : ''}`}
+                  onClick={() => handleAnswer(q.id, label)}
+                >
+                  <img src={src} alt={`Option ${label}`} className="img-choice-img" />
+                  <span className="img-choice-label">{label}</span>
+                </button>
+              )
+            })}
+          </div>
+        </>
+      )
+    }
     return (
       <div className="number-input-area">
         <div className="answer-input-wrap">
@@ -130,7 +156,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   return (
     <div className="quiz">
       <header className="quiz-header">
-        <h1 className="quiz-title">FRV {section === 'literacy' ? 'Literacy' : 'Numeracy'} Test</h1>
+        <h1 className="quiz-title">FRV {section === 'literacy' ? 'Literacy' : section === 'abstract' ? 'Abstract Reasoning' : 'Numeracy'} Test</h1>
         <div className="quiz-header-right">
           <button
             className={`btn-calc-toggle ${showCalc ? 'active' : ''}`}

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <rect width="560" height="120" fill="white"/>
+
+  <!-- Box 1: sun with hollow (white) interior -->
+  <rect x="5" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="50" y1="33" x2="50" y2="22" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="61" y1="45.5" x2="66.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="69" y1="55" x2="78.6" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="61" y1="64.5" x2="66.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="50" y1="77" x2="50" y2="88" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="39" y1="64.5" x2="33.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="31" y1="55" x2="21.4" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="39" y1="45.5" x2="33.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="50" cy="55" r="22" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Arrow 1 -->
+  <text x="104" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 2: sun with very light gray interior -->
+  <rect x="115" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="160" y1="33" x2="160" y2="22" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="171" y1="45.5" x2="176.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="179" y1="55" x2="188.6" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="171" y1="64.5" x2="176.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="160" y1="77" x2="160" y2="88" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="149" y1="64.5" x2="143.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="141" y1="55" x2="131.4" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="149" y1="45.5" x2="143.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="160" cy="55" r="22" fill="#dddddd" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Arrow 2 -->
+  <text x="214" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 3: sun with medium-light gray interior -->
+  <rect x="225" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="270" y1="33" x2="270" y2="22" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="281" y1="45.5" x2="286.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="289" y1="55" x2="298.6" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="281" y1="64.5" x2="286.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="270" y1="77" x2="270" y2="88" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="259" y1="64.5" x2="253.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="251" y1="55" x2="241.4" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="259" y1="45.5" x2="253.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="270" cy="55" r="22" fill="#aaaaaa" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Arrow 3 -->
+  <text x="324" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 4: sun with dark gray interior -->
+  <rect x="335" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="380" y1="33" x2="380" y2="22" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="391" y1="45.5" x2="396.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="399" y1="55" x2="408.6" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="391" y1="64.5" x2="396.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="380" y1="77" x2="380" y2="88" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="369" y1="64.5" x2="363.5" y2="73.6" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="361" y1="55" x2="351.4" y2="55" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="369" y1="45.5" x2="363.5" y2="36.4" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="380" cy="55" r="22" fill="#555555" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Arrow 4 -->
+  <text x="434" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Question mark -->
+  <text x="490" y="68" font-family="Arial" font-size="36" font-weight="bold" fill="#1a1a1a" text-anchor="middle">?</text>
+</svg>
