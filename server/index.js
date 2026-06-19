@@ -1340,6 +1340,83 @@ const ctxPR10 = {
   ]}]
 }
 
+// ── Energy / nutrition contexts (ctxE09–ctxE13) ──────────────────────────────
+
+const ctxE09 = {
+  title: 'The Holiday Feast',
+  tables: [
+    { headers: ['Holiday Food', 'Energy (kJ)'], rows: [
+      ['Mince Pie',    '1,500'],
+      ['Roast Potato', '800'],
+      ['Eggnog',       '1,200'],
+    ]},
+    { headers: ['Activity', 'Energy Burn (kJ/hr)'], rows: [
+      ['Walking', '1,000'],
+      ['Dancing', '1,300'],
+    ]},
+  ]
+}
+
+const ctxE10 = {
+  title: 'School Canteen Calories',
+  tables: [
+    { headers: ['Canteen Item', 'Energy (kJ)'], rows: [
+      ['Meat Pie',     '1,900'],
+      ['Sausage Roll', '1,300'],
+      ['Juice Box',    '500'],
+    ]},
+    { headers: ['Activity', 'Energy Burn (kJ/hr)'], rows: [
+      ['Soccer',             '2,500'],
+      ['Study (Sedentary)',   '300'],
+    ]},
+  ]
+}
+
+const ctxE11 = {
+  title: 'Office Desk Energy',
+  tables: [
+    { headers: ['Office Snack', 'Energy (kJ)'], rows: [
+      ['Donut',   '850'],
+      ['Biscuit', '200'],
+      ['Mocha',   '900'],
+    ]},
+    { headers: ['Activity', 'Energy Burn (kJ/hr)'], rows: [
+      ['Fast Walking',    '1,100'],
+      ['Stair Climbing',  '2,400'],
+    ]},
+  ]
+}
+
+const ctxE12 = {
+  title: 'Weekend Sports Nutrition',
+  tables: [
+    { headers: ['Sports Drink / Snack', 'Energy (kJ)'], rows: [
+      ['Isotonic Drink', '600'],
+      ['Banana',         '400'],
+      ['Energy Gel',     '700'],
+    ]},
+    { headers: ['Activity', 'Energy Burn (kJ/hr)'], rows: [
+      ['Running',   '2,200'],
+      ['Swimming',  '1,600'],
+    ]},
+  ]
+}
+
+const ctxE13 = {
+  title: 'The Late Night Study Session',
+  tables: [
+    { headers: ['Study Snack', 'Energy (kJ)'], rows: [
+      ['Chocolate Bar', '1,000'],
+      ['Dried Fruit',   '500'],
+      ['Latte',         '700'],
+    ]},
+    { headers: ['Activity', 'Energy Burn (kJ/hr)'], rows: [
+      ['Cleaning', '800'],
+      ['Yoga',     '700'],
+    ]},
+  ]
+}
+
 // ── Cylinder geometry contexts ────────────────────────────────────────────────
 
 const ctxCylW = {
@@ -2950,6 +3027,86 @@ const questions = [
     answer: '23.55 m³'
   },
 
+  // ── Set CT: The Holiday Feast ─────────────────────────────────────────────
+  {
+    group: 'CT', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE09,
+    question: 'Jerome has a Mince Pie and an Eggnog. How many hours of walking does he need to burn this off?',
+    options: ['2.7 hours', '2.1 hours', '3.0 hours', '1.8 hours'],
+    answer: '2.7 hours'
+  },
+  {
+    group: 'CT', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE09,
+    question: 'If Jerome dances for 2 hours, how many Roast Potatoes (800 kJ each) has he effectively burned?',
+    options: ['2.5', '3.25', '4.0', '3.5'],
+    answer: '3.25'
+  },
+
+  // ── Set CU: School Canteen Calories ──────────────────────────────────────
+  {
+    group: 'CU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE10,
+    question: 'A student eats a Meat Pie and a Juice Box. How many minutes of soccer must they play to burn it off?',
+    options: ['45 mins', '57.6 mins', '50 mins', '65 mins'],
+    answer: '57.6 mins'
+  },
+  {
+    group: 'CU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE10,
+    question: 'How many minutes of soccer is equivalent to the energy in 4 Sausage Rolls?',
+    options: ['120 mins', '124.8 mins', '130 mins', '110 mins'],
+    answer: '124.8 mins'
+  },
+
+  // ── Set CV: Office Desk Energy ────────────────────────────────────────────
+  {
+    group: 'CV', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE11,
+    question: 'Jerome consumes 3 Biscuits and 1 Mocha. How many minutes of stair climbing are required to burn this off?',
+    options: ['35 mins', '37.5 mins', '40 mins', '42 mins'],
+    answer: '37.5 mins'
+  },
+  {
+    group: 'CV', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE11,
+    question: 'If Jerome does 30 minutes of stair climbing, has he burned off a Donut (850 kJ)?',
+    options: ['Yes, with 350 kJ to spare', 'No, he is short by 250 kJ', 'Yes, with 500 kJ to spare', 'No, he is short by 350 kJ'],
+    answer: 'Yes, with 350 kJ to spare'
+  },
+
+  // ── Set CW: Weekend Sports Nutrition ─────────────────────────────────────
+  {
+    group: 'CW', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE12,
+    question: 'A runner consumes 2 Isotonic Drinks and 1 Energy Gel. How many minutes of running burns this off?',
+    options: ['50 mins', '51.8 mins', '55 mins', '48.5 mins'],
+    answer: '51.8 mins'
+  },
+  {
+    group: 'CW', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE12,
+    question: 'If a swimmer swims for 90 minutes, how many Bananas (400 kJ each) worth of energy have they burned?',
+    options: ['5', '6', '7', '8'],
+    answer: '6'
+  },
+
+  // ── Set CX: The Late Night Study Session ──────────────────────────────────
+  {
+    group: 'CX', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE13,
+    question: 'Jerome has a Chocolate Bar and a Latte. How many hours of yoga does it take to burn this off? (Round to 1 decimal place)',
+    options: ['2.2 hours', '2.4 hours', '2.5 hours', '2.0 hours'],
+    answer: '2.4 hours'
+  },
+  {
+    group: 'CX', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxE13,
+    question: 'How many minutes of cleaning are needed to burn off 2 portions of Dried Fruit?',
+    options: ['70 mins', '75 mins', '80 mins', '85 mins'],
+    answer: '75 mins'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2987,6 +3144,11 @@ const units = {
   CQ: [null, '$'],
   CR: [null, null],
   CS: [null, null],
+  CT: [null, null],
+  CU: [null, null],
+  CV: [null, null],
+  CW: [null, null],
+  CX: [null, null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3388,6 +3550,26 @@ const methods = {
   CS: [
     `Base area = πr² = 3.14 × 2.5² = 3.14 × 6.25 = 19.625 m²\n\nRounded to one decimal place: 19.6 m²`,
     `Volume = πr²h = 3.14 × 2.5² × 1.2 = 3.14 × 6.25 × 1.2 = 23.55 m³`,
+  ],
+  CT: [
+    `Mince Pie + Eggnog = 1,500 + 1,200 = 2,700 kJ\n\n2,700 ÷ 1,000 (kJ/hr walking) = 2.7 hours`,
+    `Dancing for 2 hours: 1,300 kJ/hr × 2 = 2,600 kJ burned\n\n2,600 ÷ 800 (kJ per Roast Potato) = 3.25 Roast Potatoes`,
+  ],
+  CU: [
+    `Meat Pie + Juice Box = 1,900 + 500 = 2,400 kJ\n\nTime = (2,400 ÷ 2,500) × 60 = 0.96 × 60 = 57.6 mins`,
+    `4 Sausage Rolls = 4 × 1,300 = 5,200 kJ\n\nTime = (5,200 ÷ 2,500) × 60 = 2.08 × 60 = 124.8 mins`,
+  ],
+  CV: [
+    `3 Biscuits + 1 Mocha = (3 × 200) + 900 = 600 + 900 = 1,500 kJ\n\nTime = (1,500 ÷ 2,400) × 60 = 0.625 × 60 = 37.5 mins`,
+    `30 mins of stair climbing = 2,400 kJ/hr × (30 ÷ 60) = 2,400 × 0.5 = 1,200 kJ burned\n\n1,200 − 850 (Donut) = 350 kJ surplus\n→ Yes, with 350 kJ to spare`,
+  ],
+  CW: [
+    `2 Isotonic Drinks + 1 Energy Gel = (2 × 600) + 700 = 1,200 + 700 = 1,900 kJ\n\nTime = (1,900 ÷ 2,200) × 60 = 0.8636 × 60 ≈ 51.8 mins`,
+    `90 mins swimming = 1,600 kJ/hr × (90 ÷ 60) = 1,600 × 1.5 = 2,400 kJ burned\n\n2,400 ÷ 400 (kJ per Banana) = 6 Bananas`,
+  ],
+  CX: [
+    `Chocolate Bar + Latte = 1,000 + 700 = 1,700 kJ\n\n1,700 ÷ 700 (kJ/hr yoga) = 2.4286 ≈ 2.4 hours`,
+    `2 × Dried Fruit = 2 × 500 = 1,000 kJ\n\nTime = (1,000 ÷ 800) × 60 = 1.25 × 60 = 75 mins`,
   ],
 }
 
