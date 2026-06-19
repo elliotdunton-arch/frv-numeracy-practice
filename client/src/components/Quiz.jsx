@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 import Timer from './Timer'
 import Calculator from './Calculator'
 
-export default function Quiz({ questions, onSubmit, totalTime }) {
+export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState({})
   const [bookmarks, setBookmarks] = useState(new Set())
@@ -45,7 +45,8 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
     if (q.type === 'true_false_matrix') {
       if (!v) return false
       const parts = v.split(',')
-      return parts.length === 3 && parts.every(p => p === 'True' || p === 'False')
+      const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
+      return parts.length === 3 && parts.every(p => p === lbl1 || p === lbl2)
     }
     return v !== undefined && v !== null && v !== ''
   }
@@ -65,7 +66,7 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
   return (
     <div className="quiz">
       <header className="quiz-header">
-        <h1 className="quiz-title">FRV Numeracy Test</h1>
+        <h1 className="quiz-title">FRV {section === 'literacy' ? 'Literacy' : 'Numeracy'} Test</h1>
         <div className="quiz-header-right">
           <button
             className={`btn-calc-toggle ${showCalc ? 'active' : ''}`}
@@ -133,6 +134,11 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
               {current.context.subtitle && (
                 <div className="context-subtitle">{current.context.subtitle}</div>
               )}
+              {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
+                <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
+                  {para}
+                </p>
+              ))}
               {current.context.tables && current.context.tables.map((tbl, ti) => (
                 <div key={ti} className="context-table-wrap">
                   {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
@@ -147,6 +153,9 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
                     </tbody>
                   </table>
                 </div>
+              ))}
+              {current.context.extraParagraphs && current.context.extraParagraphs.map((para, pi) => (
+                <p key={pi} className="context-paragraph">{para}</p>
               ))}
               {current.context.note && (
                 <div className="context-note">{current.context.note}</div>
@@ -173,18 +182,19 @@ export default function Quiz({ questions, onSubmit, totalTime }) {
               {(current.options || []).map((stmt, i) => {
                 const parts = (answers[current.id] || ',,').split(',')
                 const sel = parts[i]
+                const [lbl1, lbl2] = current.matrixLabels || ['True', 'False']
                 return (
                   <div key={i} className="tfm-row">
                     <span className="tfm-stmt">{stmt}</span>
                     <div className="tfm-btns">
                       <button
-                        className={`tfm-btn${sel === 'True' ? ' tfm-true' : ''}`}
-                        onClick={() => handleMatrixToggle(current.id, i, 'True')}
-                      >True</button>
+                        className={`tfm-btn${sel === lbl1 ? ' tfm-true' : ''}`}
+                        onClick={() => handleMatrixToggle(current.id, i, lbl1)}
+                      >{lbl1}</button>
                       <button
-                        className={`tfm-btn${sel === 'False' ? ' tfm-false' : ''}`}
-                        onClick={() => handleMatrixToggle(current.id, i, 'False')}
-                      >False</button>
+                        className={`tfm-btn${sel === lbl2 ? ' tfm-false' : ''}`}
+                        onClick={() => handleMatrixToggle(current.id, i, lbl2)}
+                      >{lbl2}</button>
                     </div>
                   </div>
                 )

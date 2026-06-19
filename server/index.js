@@ -3372,6 +3372,455 @@ app.get('/api/questions', (req, res) => {
   res.json(final)
 })
 
+// ─── LITERACY QUESTION BANK ──────────────────────────────────────────────────
+
+const ctxL4 = {
+  title: 'The Digest — June Edition',
+  subtitle: 'Internal Corporate Newsletter',
+  paragraphs: [
+    'Welcome to the June edition of The Digest. Keeping our global network synchronized!',
+    'A Note from Leadership on Workspace Density Changes: As we transition into our hybrid workplace layout next quarter, the Facilities Management team will be rolling out the Dynamic Floor Allocation (DFA) framework across all regional operational offices. This framework is explicitly designed to maximize space efficiency while managing utility overheads, ensuring that our active physical footprints match real-time employee attendance data without causing desk shortages on peak days.',
+    '• Tier 1 (Standard Layout): This configuration is automatically maintained when daily office occupancy remains under 55% of total building capacity. Under Tier 1 parameters, standard hot-desking rules apply. Staff members have full access to all standard collaborative pods, utility stations operate on baseline energy-saver modes, and the digital desk-booking portal refreshes every 24 hours to clear expired reservations.',
+    '• Tier 2 (Collaborative Influx): Triggered immediately when daily occupancy tracking spikes between 55% and 80%, or if a regional office hosts a multi-department quarterly review session. Under Tier 2, common areas are dynamically re-allocated into hot-desking zones. Standard service paths are restricted to outbound traffic only during peak arrival hours to minimise elevator gridlock. Staff are strongly encouraged to utilise common breakrooms for impromptu syncs rather than booking enclosed meeting rooms.',
+    '• Tier 3 (Peak Capacity Mandate): This final operational tier is strictly enforced when building occupancy exceeds 80%, or when localised network metrics indicate that regional server bandwidth drops below a 15% safety margin. Immediate workplace adjustments are required. Enclosed meeting spaces are restricted to high-priority client-facing sessions only, and independent desk-booking features are entirely locked out in favour of automated team-based desk pooling. To preserve cooling and ventilation integrity, building management will explicitly forbid teams from propping open perimeter corridor doors for more than 15 consecutive minutes.'
+  ]
+}
+
+const ctxL5 = {
+  title: 'The Urban Canvas: Why We Must Reclaim Our Footpaths from Commercial Encroachment',
+  subtitle: 'Opinion — By Julian Vance, Senior Urbanist',
+  paragraphs: [
+    'Walk down any metropolitan high street today, and you will find yourself navigating an obstacle course. What was once designed as a democratic public asset—the humble pedestrian footpath—has been systematically chopped up by commercial outdoor dining, promotional signs, and dockless electric scooters. While local councils celebrate this commercialisation as a sign of a vibrant city economy, they are ignoring a critical infrastructure reality: our urban thoroughfares are reaching a dangerous saturation point.',
+    'The core issue is that cities are letting commercial interests distort the basic physical parameters of public space. Pedestrian traffic behaves much like fluid dynamics; when you constrict a channel, the pressure builds. On streets where outdoor dining decks consume more than 40% of the usable pavement, pedestrian walking speeds drop by half, and accidental collisions spike significantly. We are forcing parents with prams, elderly citizens, and people with mobility aids onto narrow ribbons of asphalt, often directly adjacent to heavy vehicle traffic.',
+    'To fix this, municipal boards must enforce a strict spatial priority framework. First, a mandatory two-metre clear transit ribbon must be legally preserved on all high-street footpaths, completely free of any furniture, umbrellas, or temporary advertising structures. If a business violates this clear path, local enforcement should issue an immediate, non-negotiable compliance fine within 24 hours of documentation.',
+    'Second, councils must abandon the practice of leasing out public kerbside space for dockless scooter parking zones unless the vehicle operators provide real-time, geofenced tracking data to municipal databases. The private sector has treated the public commons as free storage space for far too long. If we do not actively push back against this commercial creep, our footpaths will cease to function as shared infrastructure, transforming instead into restricted corridors of consumption. It is time to reclaim the right to walk without a receipt.'
+  ]
+}
+
+const ctxL6 = {
+  title: 'The Broken Valve: How Regulatory Oversight Lags Behind Automated Energy Hubs',
+  subtitle: 'Investigative Report — By Sarah Lin, Regional Investigative Unit',
+  paragraphs: [
+    'A three-month investigation into the automated liquid-fuel transfer hubs operating across western distribution corridors has revealed serious vulnerabilities in baseline safety tracking software and hardware inspection routines. The findings point to a systemic failure in how multi-jurisdictional infrastructure networks balance high-speed resource distribution with active environmental protection rules.',
+    'At the heart of the issue is the integration of older mechanical valves with modern, digital Building Management Systems (BMS). This infrastructure operates on a digital loop designed to catch pressure drops during fluid transit. According to internal operating manuals obtained via freedom of information laws, when a localised sensor detects a fluid variance or containment breach, the system is supposed to execute an automated shutdown sequence concurrently within 45 seconds to isolate the compromised pipeline.',
+    'However, field testing data reveals that over 30% of these legacy valves fail to respond to the digital BMS command signal. In the event of an active line rupture, this lag allows volatile fluids to continue pumping into open-air containment basins, relying entirely on field technicians to manually spot the failure and trigger physical cutoff switches.',
+    'The regulatory framework governing these facilities is equally compromised. Under current guidelines, if an audit logs an inoperable or lagging valve at a standard transfer hub, the operating agency is granted a 14-day administrative window to fix the component before facing civil penalties.',
+    'Yet, our analysis of inspection logs shows that compliance teams are using these 14-day windows to shuffle damaged assets between different zones, effectively resetting the audit countdown clocks without completing repairs. Environmental scientists warn that allowing volatile petroleum compounds to sit in open containment basins for weeks at a time can result in hazardous vapour leaks that migrate into nearby residential perimeters, threatening public health well before a physical spill reaches local waterways.'
+  ]
+}
+
+const ctxL7 = {
+  title: 'Apex Manufacturing Group — Fiscal 2026 Asset Reliability & Operational Risk Report',
+  subtitle: 'Executive Summary: Infrastructure Modernisation Initiatives',
+  paragraphs: [
+    'This section summarises the mechanical integrity profiles, capital equipment performance metrics, and asset reliability frameworks enforced across Apex Manufacturing Group\'s regional processing plants during the past fiscal year. As part of our commitment to reducing workplace risk and aligning with international environmental compliance frameworks, our operational asset tracking relied on a strict preventative maintenance schedule.',
+    'During the third quarter, engineering teams completed extensive lifecycle assessments of all high-load manufacturing hardware, focused on primary drive cylinders and heavy hydraulic line assemblies. Under our current Asset Risk Management Protocol (ARMP), components are tracked based on cumulative stress-hour metrics and sorted into three distinct operational wear classes:'
+  ],
+  tables: [
+    {
+      heading: null,
+      headers: ['Wear Classification', 'Structural Metric Criteria', 'Mandatory Action Parameter'],
+      rows: [
+        ['Class I (Stable)', 'Surface micro-abrasions measuring under 0.5mm in depth.', 'Document in the engineering log; continue standard 24-hour monitoring loops.'],
+        ['Class II (Monitored)', 'Material pitting or fatigue tracking between 0.5mm and 1.5mm.', 'Route the asset to the specialised ultrasonic testing enclosure in Hangar B within 48 hours.'],
+        ['Class III (Compromised)', 'Structural fractures or fine cracks exceeding 1.5mm in depth.', 'Immediate and permanent retirement from service; process component for alloy recycling.']
+      ]
+    }
+  ],
+  extraParagraphs: [
+    'A primary operational challenge logged during the year involved the cleaning routines for high-speed manufacturing lines. Field technicians noted that using standard chemical solvents often degraded the anti-corrosive synthetic polymers applied to the equipment\'s protective casing.',
+    'To address this, all regional facilities were mandated to transition to specialised aqueous cleaning arrays calibrated to a maximum fluid temperature of 45 degrees Celsius. Rapid thermal spikes above this limit cause dangerous micro-expansions in the composite alloy boundaries, which can crack tight mechanical seals and cause localised hydraulic fluid leaks.'
+  ]
+}
+
+const ctxL8 = {
+  title: 'Vanguard Tech Pro-Flow G3 Filtration Array: Installation & Safety Manual',
+  subtitle: 'Product Model Series: G3-Industrial / High-Pressure Gas Separation',
+  paragraphs: [
+    'This instruction manual governs the unboxing, physical installation, and long-term diagnostic tracking protocols for the Pro-Flow G3 Gaseous Filtration Array. The G3 system is engineered for integration into high-pressure industrial separation plants where gas purity index parameters are critical.',
+    'Section 1 — Structural Anchor Requirements & Rigging Alignment: Prior to anchoring the G3 filtration unit to the industrial concrete base plate, site engineers must verify the local structural load capacity metrics. The complete rigging configuration must utilise a dual-mount isolation template. Each independent structural anchor bolt must possess a verified static load rating of at least 22 kilonewtons (kN) to successfully manage operational vibrations.',
+    'If a single anchor bolt displays any signs of manufacturing degradation, surface rust, or fine hairline micro-cracking along its threaded column, it must be instantly disqualified from service. Installation teams are strictly forbidden from combining two or more compromised bolts to secure a single mounting corner; doing so violates the structural tolerance guarantees.',
+    'Section 2 — High-Efficiency Particulate Air (HEPA) Element Constraints: The internal filtration core relies on a multi-stage high-efficiency particulate air (HEPA) system. This element is rated to operate safely under a maximum continuous static pressure differential of 22 kilopascals (kPa).',
+    'To ensure clean airflow paths, technicians must inspect the silicone perimeter seals and tracking frames at the start of every operating shift cycle. The synthetic sealing elements are highly sensitive to chemical contamination; they must be permanently retired from service if they are exposed to any petroleum-based chemical solvents, unapproved aerosol cleaners, or machine fuel mixtures during installation or transport.',
+    'CRITICAL SYSTEM NOTE: If the system gauges register a sudden, localised pressure variance spike exceeding 5 kPa within the primary containment chamber, the G3 array will enter an automated fault state. This triggers a blinking indicator light on the external interface panel and freezes the system\'s intake valves. To clear this state, a technician must perform a full manual line purge; the system cannot be reset electronically from the master control desk.'
+  ]
+}
+
+const ctxL9 = {
+  title: 'In the Supreme Appellate Court: Judicial Advisory on the Enforcement of Section 44 Emergency Decrees',
+  subtitle: 'To All Municipal Authorities, Law Enforcement Administrators, and Regional Judicial Officers',
+  paragraphs: [
+    'This judicial advisory clarifies the strict statutory parameters, conditional matrices, and constitutional limitations governing the enforcement of emergency land-access and property-seizure orders issued under Section 44 of the State Infrastructure Act. Given the extraordinary executive powers activated by a Section 44 declaration, lower courts must apply rigorous evidentiary checks when reviewing civil detention actions originating from multi-jurisdictional enforcement commands.',
+    '1. Evidentiary Thresholds for a Valid Declaration: The appellate court emphasises that a Section 44 declaration does not exist as an open-ended executive option. It is legally valid only if the state utility commission establishes that the following three parameters were met simultaneously at the time of the order: (a) the regional Infrastructure Volatility Index (IVI) exceeds a calculated baseline value of 75; (b) local municipal utility and maintenance resources are officially documented as fully extended; (c) an active resource deficit or system failure directly threatens primary grid functionality or the safety of regional townships. If any of these three conditions are unmet, any subsequent property seizure or civil detention is legally void ab initio.',
+    '2. Statutory Exemptions Regarding Civil Detention: Under Subsection 4, law enforcement personnel may execute immediate civil detention of private landholders who wilfully refuse to comply with a mandatory resource redirection or land-access order. However, the legislature built an explicit statutory exemption into this framework to protect rural operational continuity.',
+    'An individual is completely exempt from immediate civil detention unless it can be proven they lack a verified, pre-approved Facility Continuity Plan (FCP). To qualify for this legal exemption, the landholder must present a valid FCP proving their property possesses a self-contained, functional power and water system capable of operating entirely independently of the municipal utility grid.',
+    'Lower courts are advised that the burden of proof rests on the enforcing agency to verify the status of an FCP before initiating formal detention proceedings.'
+  ]
+}
+
+const literacyQuestions = [
+  // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
+  { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
+    question: 'What is the primary focus of this newsletter feature?',
+    options: [
+      'A) To announce financial performance updates for global logistics operations.',
+      'B) To detail the operational tiers and mandatory workplace guidelines of the new Dynamic Floor Allocation framework.',
+      'C) To provide a maintenance manual for technicians servicing high-speed office elevators.',
+      'D) To outline the interview process for incoming facilities management staff.'
+    ],
+    answer: 'B) To detail the operational tiers and mandatory workplace guidelines of the new Dynamic Floor Allocation framework.',
+    method: 'The entire newsletter section introduces the DFA framework and explains its three operational tiers. Financial performance, elevator maintenance, and recruitment are not mentioned anywhere in the text.'
+  },
+  { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
+    question: 'What building occupancy range automatically triggers a Tier 2 Collaborative Influx configuration?',
+    options: [
+      'A) Daily occupancy strictly below 55%',
+      'B) Daily occupancy falling between 55% and 80%',
+      'C) Daily occupancy exceeding 80%',
+      'D) Occupancy measured exactly at 15%'
+    ],
+    answer: 'B) Daily occupancy falling between 55% and 80%',
+    method: 'Tier 2 is "triggered immediately when daily occupancy tracking spikes between 55% and 80%". Below 55% is Tier 1; above 80% is Tier 3. 15% refers to server bandwidth, not occupancy.'
+  },
+  { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
+    question: 'Why does the company restrict service paths to outbound traffic only during peak arrival hours under Tier 2?',
+    options: [
+      'A) To reduce printing and electricity costs across localised utility stations.',
+      'B) To mitigate potential human traffic congestion and elevator gridlock during peak times.',
+      'C) To encourage staff members to leave the office earlier in the day.',
+      'D) To ensure that regional server bandwidth remains within a 15% safety margin.'
+    ],
+    answer: 'B) To mitigate potential human traffic congestion and elevator gridlock during peak times.',
+    method: 'The text states paths are restricted to outbound traffic "to minimise elevator gridlock". The measure is about managing pedestrian flow during the busy morning arrival window, not costs or server metrics.'
+  },
+  { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
+    question: 'Under what specific technical condition will independent desk-booking features be locked out in favour of team pooling?',
+    options: [
+      'A) If building energy-saver modes are manually deactivated by an employee.',
+      'B) If a multi-department review session is scheduled more than 24 hours in advance.',
+      'C) If localised network metrics show that regional server bandwidth drops below a 15% safety margin.',
+      'D) If corridor doors are left propped open for exactly 15 minutes.'
+    ],
+    answer: 'C) If localised network metrics show that regional server bandwidth drops below a 15% safety margin.',
+    method: 'Tier 3 (which locks out desk-booking) is triggered when occupancy exceeds 80% OR "localised network metrics indicate that regional server bandwidth drops below a 15% safety margin". Option C matches this technical condition exactly.'
+  },
+  { group: 'L4', type: 'true_false_matrix', category: 'Workplace Policy', context: ctxL4,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the newsletter rules, are the following scenarios compliant?',
+    options: [
+      'Booking an enclosed meeting room for a casual internal chat during a Tier 2 occupancy surge.',
+      'Propping open a perimeter corridor door for 25 minutes straight to cool down a crowded office under Tier 3 rules.',
+      'Allowing the digital desk-booking portal to refresh every 24 hours when office occupancy is at 40%.'
+    ],
+    answer: 'No,No,Yes',
+    method: 'A — Under Tier 2, staff are "strongly encouraged to utilise common breakrooms rather than booking enclosed meeting rooms" for casual syncs. Not compliant. B — Tier 3 explicitly forbids propping perimeter corridor doors for more than 15 consecutive minutes; 25 minutes is a clear violation. C — 40% occupancy is below 55%, placing the office in Tier 1. Under Tier 1, "the digital desk-booking portal refreshes every 24 hours" — fully compliant.'
+  },
+
+  // ── Set 5: Urban Canvas / Footpaths Op-Ed ──────────────────────────────────
+  { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
+    question: 'What is the primary argument the author is presenting in this article?',
+    options: [
+      'A) To advocate for higher leasing fees to increase municipal council revenues.',
+      'B) To argue that commercial encroachment is ruining footpaths as public assets and demand strict regulatory limits.',
+      'C) To provide a historical review of how metropolitan high streets were originally constructed.',
+      'D) To promote the use of dockless electric scooters as a sustainable urban transit solution.'
+    ],
+    answer: 'B) To argue that commercial encroachment is ruining footpaths as public assets and demand strict regulatory limits.',
+    method: 'The author, Julian Vance, uses persuasive language throughout to argue that commercial dining, signage and scooters are degrading public footpaths. He then proposes strict regulations (two-metre ribbon, fines, scooter tracking data requirements) to fix this. The article is not about leasing revenues, history, or promoting scooters.'
+  },
+  { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
+    question: 'According to the article, what happens to pedestrian walking speeds on high streets where outdoor dining consumes more than 40% of the pavement?',
+    options: [
+      'A) Walking speeds increase due to a vibrant city atmosphere.',
+      'B) Walking speeds drop by half.',
+      'C) Walking speeds remain entirely unaffected.',
+      'D) Walking speeds adapt dynamically over a 24-hour period.'
+    ],
+    answer: 'B) Walking speeds drop by half.',
+    method: 'The article states directly: "On streets where outdoor dining decks consume more than 40% of the usable pavement, pedestrian walking speeds drop by half." This is a specific factual claim used to support the author\'s argument.'
+  },
+  { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
+    question: "What specific measure does the author propose to deal with businesses that block the proposed two-metre clear transit ribbon?",
+    options: [
+      'A) Leasing additional kerbside space to them at discounted commercial rates.',
+      'B) Mandatory relocation of their dining decks to secondary service lanes.',
+      'C) Issuing an immediate, non-negotiable compliance fine within 24 hours of documentation.',
+      'D) Requiring the business owners to submit real-time geofenced tracking data.'
+    ],
+    answer: 'C) Issuing an immediate, non-negotiable compliance fine within 24 hours of documentation.',
+    method: 'The author specifically states: "If a business violates this clear path, local enforcement should issue an immediate, non-negotiable compliance fine within 24 hours of documentation." Geofenced tracking applies to scooter operators, not dining businesses.'
+  },
+  { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
+    question: "Why does the author use the phrase 'the right to walk without a receipt'?",
+    options: [
+      'A) To complain about the rising costs of printing physical paper receipts in shops.',
+      'B) To emphasise that public walking spaces should be free and accessible, rather than taken over by businesses requiring purchases.',
+      'C) To suggest that pedestrians should be paid by the council for walking on metropolitan high streets.',
+      'D) To highlight the need for automated digital banking portals in urban transit corridors.'
+    ],
+    answer: 'B) To emphasise that public walking spaces should be free and accessible, rather than taken over by businesses requiring purchases.',
+    method: 'The phrase is figurative. A "receipt" is a symbol of a commercial transaction. The author is arguing that public footpaths — as democratic, shared assets — should not require people to be customers of nearby businesses in order to use them freely.'
+  },
+  { group: 'L5', type: 'true_false_matrix', category: 'Opinion Article', context: ctxL5,
+    matrixLabels: ['Yes', 'No'],
+    question: "Based on the author's arguments, does the article support the following ideas?",
+    options: [
+      'Allowing dockless scooter companies to use kerbside space without providing geofenced tracking data to councils.',
+      'Enforcing a mandatory two-metre wide ribbon on footpaths that must stay entirely clear of commercial property.',
+      'Celebrating the expansion of outdoor dining decks as an unmitigated safety win for elderly citizens.'
+    ],
+    answer: 'No,Yes,No',
+    method: 'A — The author explicitly states councils must NOT lease kerbside space to scooter operators "unless the vehicle operators provide real-time, geofenced tracking data". Not supported. B — The author directly proposes "a mandatory two-metre clear transit ribbon must be legally preserved on all high-street footpaths, completely free of any furniture". Fully supported. C — The author states outdoor dining forces "elderly citizens and people with mobility aids onto narrow ribbons of asphalt, often directly adjacent to heavy vehicle traffic" — presenting it as a safety hazard, not a win.'
+  },
+
+  // ── Set 6: Broken Valve / Investigative Report ─────────────────────────────
+  { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
+    question: 'What is the primary investigative goal of this news report?',
+    options: [
+      'A) To advertise the efficiency of modern digital Building Management Systems.',
+      'B) To expose technical vulnerabilities and regulatory gaps in automated fuel transfer hubs.',
+      'C) To provide a step-by-step guide for technicians operating manual cutoff switches.',
+      'D) To lobby for the permanent closure of all western distribution corridors.'
+    ],
+    answer: 'B) To expose technical vulnerabilities and regulatory gaps in automated fuel transfer hubs.',
+    method: 'The report\'s three-month investigation reveals that legacy valves fail to respond to digital BMS signals, and that operating agencies exploit the 14-day compliance window to avoid repairs. Both the technical flaw and the regulatory loophole are exposed — making B the correct primary purpose.'
+  },
+  { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
+    question: 'Within how many seconds is the automated system supposed to execute a pipeline shutdown sequence after a sensor registers a breach?',
+    options: [
+      'A) 14 seconds',
+      'B) 30 seconds',
+      'C) 45 seconds',
+      'D) 90 seconds'
+    ],
+    answer: 'C) 45 seconds',
+    method: 'The manual states the system "is supposed to execute an automated shutdown sequence concurrently within 45 seconds to isolate the compromised pipeline". 14 refers to the regulatory window (days), 30 refers to the percentage of failing valves, not a time value.'
+  },
+  { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
+    question: 'According to the report, how are operating agencies exploiting the current regulatory framework to avoid civil penalties?',
+    options: [
+      'A) By upgrading all legacy valves to high-efficiency automated models within 24 hours.',
+      'B) By utilising the 14-day window to move damaged assets between zones, resetting the audit clocks without fixing the issue.',
+      'C) By routing all automated communications through open civilian mobile phone networks.',
+      'D) By permanently shutting down the digital building management loops during audits.'
+    ],
+    answer: 'B) By utilising the 14-day window to move damaged assets between zones, resetting the audit clocks without fixing the issue.',
+    method: 'The report explicitly states compliance teams are "using these 14-day windows to shuffle damaged assets between different zones, effectively resetting the audit countdown clocks without completing repairs." This exploits the grace period without any genuine remediation.'
+  },
+  { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
+    question: 'What danger do environmental scientists associate with volatile petroleum compounds sitting long-term in open containment basins?',
+    options: [
+      'A) They can trigger an instantaneous 15% increase in regional utility server bandwidth.',
+      'B) They can create hazardous vapour leaks that travel into nearby residential areas before a physical spill hits the water.',
+      'C) They cause rapid micro-expansions that permanently seal the primary wing spars of transport vehicles.',
+      'D) They automatically invalidate the safety ratings of high-efficiency particulate filters.'
+    ],
+    answer: 'B) They can create hazardous vapour leaks that travel into nearby residential areas before a physical spill hits the water.',
+    method: 'Scientists warn that petroleum compounds in open basins "can result in hazardous vapour leaks that migrate into nearby residential perimeters, threatening public health well before a physical spill reaches local waterways." The residential vapour risk precedes any physical water contamination.'
+  },
+  { group: 'L6', type: 'true_false_matrix', category: 'Investigative Report', context: ctxL6,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the details revealed in the report, are the following statements true?',
+    options: [
+      'More than 30% of legacy mechanical valves failed to respond to the automated digital command signal during testing.',
+      'Current regulations impose immediate, non-negotiable civil penalties the moment a lagging valve is logged in an audit.',
+      'Automated sensors are designed to initiate a shutdown sequence when they detect pressure drops or variances.'
+    ],
+    answer: 'Yes,No,Yes',
+    method: 'A — The report states "over 30% of these legacy valves fail to respond to the digital BMS command signal." True. B — Current regulations grant a 14-day window before penalties apply. There is no immediate penalty. False. C — The system "is supposed to execute an automated shutdown sequence" when "a localised sensor detects a fluid variance or containment breach." True.'
+  },
+
+  // ── Set 7: Apex Manufacturing / Wear Classification Table ──────────────────
+  { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
+    question: 'What is the primary purpose of this executive summary?',
+    options: [
+      'A) To list the quarterly payroll expenses for Apex Manufacturing Group\'s field technicians.',
+      'B) To summarise equipment reliability metrics, wear classifications, and maintenance guidelines for the company\'s factories.',
+      'C) To announce the acquisition of new commercial flight paths and shipping terminals.',
+      'D) To detail marketing strategies for increasing consumer sales of anti-corrosive polymers.'
+    ],
+    answer: 'B) To summarise equipment reliability metrics, wear classifications, and maintenance guidelines for the company\'s factories.',
+    method: 'The summary covers mechanical integrity profiles, the three-tier ARMP wear classification table, and the aqueous cleaning mandate. It is entirely focused on operational reliability and maintenance protocols, not payroll, acquisitions, or marketing.'
+  },
+  { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
+    question: 'According to the report, what is the mandatory action parameter for a component sorted into Class II (Monitored)?',
+    options: [
+      'A) Document in the log and continue standard 24-hour monitoring loops.',
+      'B) Immediate and permanent retirement from service for alloy recycling.',
+      'C) Route the asset to the ultrasonic testing enclosure in Hangar B within 48 hours.',
+      'D) Increase fluid temperatures to exactly 60 degrees Celsius.'
+    ],
+    answer: 'C) Route the asset to the ultrasonic testing enclosure in Hangar B within 48 hours.',
+    method: 'The ARMP table states Class II (material pitting between 0.5mm and 1.5mm) requires the asset to be "routed to the specialised ultrasonic testing enclosure in Hangar B within 48 hours." Option A applies to Class I; option B applies to Class III.'
+  },
+  { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
+    question: 'Why does the company limit the fluid temperature of its specialised cleaning arrays to a maximum of 45 degrees Celsius?',
+    options: [
+      'A) Temperatures below 45 degrees Celsius reduce the time required to complete an ultrasonic check.',
+      'B) Higher temperatures cause micro-expansions in the composite alloy boundaries that can ruin mechanical seals.',
+      'C) It prevents the digital desk-booking portal from freezing during high-occupancy shifts.',
+      'D) It is the minimum pressure required to clear out petroleum compounds from Hangar B.'
+    ],
+    answer: 'B) Higher temperatures cause micro-expansions in the composite alloy boundaries that can ruin mechanical seals.',
+    method: 'The report states: "Rapid thermal spikes above this limit cause dangerous micro-expansions in the composite alloy boundaries, which can crack tight mechanical seals and cause localised hydraulic fluid leaks." The 45°C cap is a ceiling, not a minimum, and has no relation to ultrasonic checks or desk-booking systems.'
+  },
+  { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
+    question: 'What type of hardware damage would cause an asset to be immediately retired and recycled rather than repaired?',
+    options: [
+      'A) Surface micro-abrasions measuring exactly 0.2mm in depth.',
+      'B) Material pitting or fatigue measuring between 0.5mm and 1.5mm.',
+      'C) Any structural fracture or fine crack exceeding 1.5mm in depth.',
+      'D) Exposure to a 24-hour monitoring loop inside an office corridor zone.'
+    ],
+    answer: 'C) Any structural fracture or fine crack exceeding 1.5mm in depth.',
+    method: 'Class III (Compromised) applies to "structural fractures or fine cracks exceeding 1.5mm in depth" and requires "immediate and permanent retirement from service; process component for alloy recycling." 0.2mm is Class I (stable), and 0.5–1.5mm is Class II (monitored, sent to Hangar B).'
+  },
+  { group: 'L7', type: 'true_false_matrix', category: 'Technical Report', context: ctxL7,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the text rules, do these scenarios comply with the Asset Risk Management Protocol?',
+    options: [
+      'Leaving a component with a 1.8mm deep structural crack in active service because it passed a visual test.',
+      'Cleaning a drive cylinder using a high-temperature 70-degree Celsius chemical wash to remove grease quickly.',
+      'Logging a component with 0.8mm of material pitting and sending it to Hangar B for ultrasonic testing within 48 hours.'
+    ],
+    answer: 'No,No,Yes',
+    method: 'A — 1.8mm exceeds 1.5mm, placing this component in Class III. It must be immediately and permanently retired, not left in service regardless of a visual check. Non-compliant. B — The maximum cleaning temperature is 45°C. 70°C causes dangerous micro-expansions; this violates the mandate. Non-compliant. C — 0.8mm falls between 0.5mm and 1.5mm, classifying the component as Class II. Sending it to Hangar B within 48 hours is exactly the required action. Compliant.'
+  },
+
+  // ── Set 8: Vanguard Tech G3 / Technical Manual ─────────────────────────────
+  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
+    question: 'What is the primary purpose of this technical manual section?',
+    options: [
+      'A) To list wholesale market prices for replacement Pro-Flow G3 filter cores.',
+      'B) To detail the installation requirements, anchor metrics, and safety constraints for the G3 filtration array.',
+      'C) To compare the gas purity profiles of Vanguard filters with competitor products.',
+      'D) To provide instructions on how to clean petroleum-based solvents out of industrial concrete base plates.'
+    ],
+    answer: 'B) To detail the installation requirements, anchor metrics, and safety constraints for the G3 filtration array.',
+    method: 'The manual covers structural anchor bolt requirements (22 kN rating), HEPA pressure constraints (22 kPa), seal contamination rules, and the automated fault state triggered by pressure spikes. Its scope is entirely installation and safety — not pricing, competitor comparisons, or concrete cleaning.'
+  },
+  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
+    question: 'What minimum static load rating is required for each independent structural anchor bolt used to mount the G3 unit?',
+    options: [
+      'A) 5 kilonewtons (kN)',
+      'B) 15 kilonewtons (kN)',
+      'C) 22 kilonewtons (kN)',
+      'D) 45 kilonewtons (kN)'
+    ],
+    answer: 'C) 22 kilonewtons (kN)',
+    method: 'Section 1 states each independent structural anchor bolt must possess "a verified static load rating of at least 22 kilonewtons (kN) to successfully manage operational vibrations." Note that 22 kPa is the HEPA pressure limit — different unit and different system.'
+  },
+  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
+    question: 'What happens automatically if the G3 system gauges detect a pressure variance spike exceeding 5 kPa inside the primary chamber?',
+    options: [
+      'A) The system increases the injection blower speed by 15% to compensate.',
+      'B) The unit enters an automated fault state, blinks an indicator light, and freezes its intake valves.',
+      'C) The filtration array routes all data to a 14-day administrative review hold window.',
+      'D) The anchor bolts automatically release to relieve static pressure from the base plate.'
+    ],
+    answer: 'B) The unit enters an automated fault state, blinks an indicator light, and freezes its intake valves.',
+    method: 'The Critical System Note states that a spike exceeding 5 kPa "will enter an automated fault state. This triggers a blinking indicator light on the external interface panel and freezes the system\'s intake valves." The 14-day window is a regulatory term from the fuel hub article, not this manual.'
+  },
+  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
+    question: 'What protocol must be followed to restart the G3 filtration array after it enters an automated fault state due to a pressure spike?',
+    options: [
+      'A) The system can be easily reset electronically by an administrator sitting at the master control desk.',
+      'B) A technician must insert a physical key override into Hangar B within 45 minutes.',
+      'C) A technician must perform a full manual line purge on the physical unit.',
+      'D) The intake valves must be left frozen for a continuous duration exceeding 120 seconds.'
+    ],
+    answer: 'C) A technician must perform a full manual line purge on the physical unit.',
+    method: 'The manual explicitly states: "To clear this state, a technician must perform a full manual line purge; the system cannot be reset electronically from the master control desk." Option A directly contradicts this. The Hangar B and 120-second options are fabricated distractors.'
+  },
+  { group: 'L8', type: 'true_false_matrix', category: 'Technical Manual', context: ctxL8,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the manual instructions, are the following actions safe and compliant?',
+    options: [
+      'Using an anchor bolt that has fine hairline micro-cracking along its threads, provided the other bolts are in perfect condition.',
+      'Cleaning the synthetic HEPA sealing elements with a petroleum-based solvent to ensure a tight seal.',
+      'Operating the HEPA filter element under a continuous static pressure differential of 18 kilopascals (kPa).'
+    ],
+    answer: 'No,No,Yes',
+    method: 'A — The manual states a bolt showing any micro-cracking "must be instantly disqualified from service." It also explicitly forbids combining compromised bolts, regardless of the others\' condition. Not safe. B — HEPA sealing elements "must be permanently retired from service if they are exposed to any petroleum-based chemical solvents." Cleaning with such a solvent destroys the seal. Not compliant. C — The maximum continuous static pressure differential is 22 kPa. 18 kPa is safely below that limit. Compliant.'
+  },
+
+  // ── Set 9: Section 44 / Legal Advisory ────────────────────────────────────
+  { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
+    question: 'What is the core judicial focus of this court advisory?',
+    options: [
+      'A) To permanently rewrite environmental laws regarding protected public waterways.',
+      'B) To clarify the legal thresholds, extraordinary powers, and detention exemptions tied to Section 44 emergency declarations.',
+      'C) To approve pay increases for state utility commission field supervisors.',
+      'D) To establish software procurement rules for digital building management systems.'
+    ],
+    answer: 'B) To clarify the legal thresholds, extraordinary powers, and detention exemptions tied to Section 44 emergency declarations.',
+    method: 'The advisory\'s opening line states it "clarifies the strict statutory parameters, conditional matrices, and constitutional limitations governing the enforcement of emergency land-access and property-seizure orders issued under Section 44." Waterway laws, pay increases, and software procurement are not discussed.'
+  },
+  { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
+    question: 'What baseline value must the regional Infrastructure Volatility Index (IVI) exceed to satisfy the first parameter of a valid declaration?',
+    options: [
+      'A) Exactly 15',
+      'B) Between 22 and 45',
+      'C) A value of 75',
+      'D) No less than 120'
+    ],
+    answer: 'C) A value of 75',
+    method: 'The advisory states the IVI "exceeds a calculated baseline value of 75" as the first of three simultaneous conditions required for a valid Section 44 declaration. 15 is the bandwidth margin from an unrelated passage; 22 is the anchor bolt or pressure value from the G3 manual.'
+  },
+  { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
+    question: 'According to the advisory, what happens to a property seizure order if the enforcing agency fails to prove that municipal utility resources were fully extended at the time?',
+    options: [
+      'A) The order is routed to a 14-day administrative review window.',
+      'B) The seizure order becomes completely and legally void from the beginning.',
+      'C) The landholder is automatically placed under immediate civil detention.',
+      'D) The case is transferred directly to the Shift Fire Warden\'s master panel.'
+    ],
+    answer: 'B) The seizure order becomes completely and legally void from the beginning.',
+    method: 'The advisory states: "If any of these three conditions are unmet, any subsequent property seizure or civil detention is legally void ab initio." The Latin phrase "void ab initio" means void from the very beginning. Failing to prove resources were extended is failing one of the three conditions.'
+  },
+  { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
+    question: 'What specific physical proof must a valid Facility Continuity Plan contain to shield a landholder from civil detention?',
+    options: [
+      'A) Evidence that the landholder has lived on the property for longer than the Executive Director.',
+      'B) Documentation showing the property has self-contained power and water systems that function independently of the municipal grid.',
+      'C) A verified structural anchor certificate rated to at least 22 kilonewtons.',
+      'D) Real-time geofenced tracking data linked directly to a local customs checkpoint.'
+    ],
+    answer: 'B) Documentation showing the property has self-contained power and water systems that function independently of the municipal grid.',
+    method: 'To qualify for the detention exemption via the FCP, the landholder must prove "their property possesses a self-contained, functional power and water system capable of operating entirely independently of the municipal utility grid." Options C and D reference content from other passages in this question bank and are distractors.'
+  },
+  { group: 'L9', type: 'true_false_matrix', category: 'Legal Advisory', context: ctxL9,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Based on the legal constraints in the advisory, are the following emergency declarations valid?',
+    options: [
+      'An emergency is declared when the IVI is 85, local crews are maxed out, and a system failure threatens a major township.',
+      'An emergency is declared when an active deficit threatens a town, but the regional IVI is sitting at a safe score of 40.',
+      'Law enforcement attempts to detain a primary producer without first checking if they hold a verified independent Facility Continuity Plan.'
+    ],
+    answer: 'Yes,No,No',
+    method: 'A — All three simultaneous conditions are met: IVI 85 > 75, resources fully extended, and an active threat to a township. The declaration is valid. B — The IVI of 40 does not exceed 75, failing the first condition. Even with a genuine threat, all three conditions must be met simultaneously. Invalid. C — The advisory states the "burden of proof rests on the enforcing agency to verify the status of an FCP before initiating formal detention proceedings." Detaining without checking the FCP first violates the statutory exemption framework. Not compliant.'
+  }
+]
+
+app.get('/api/literacy-questions', (req, res) => {
+  const shuffled = shuffleByGroup(literacyQuestions)
+  const final = shuffled.map((q, i) => ({
+    id: i + 1,
+    type: q.type,
+    category: q.category,
+    group: q.group,
+    context: q.context || null,
+    question: q.question,
+    options: q.options || null,
+    answer: q.answer,
+    method: q.method || null,
+    unit: null,
+    matrixLabels: q.matrixLabels || null
+  }))
+  const customCount = req.query.count ? parseInt(req.query.count) : null
+  res.json(customCount ? final.slice(0, customCount) : final)
+})
+
 // Serve built React app in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/dist')))

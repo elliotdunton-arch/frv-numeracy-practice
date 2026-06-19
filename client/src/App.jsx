@@ -5,6 +5,7 @@ import Results from './components/Results'
 
 export default function App() {
   const [screen, setScreen] = useState('home')
+  const [section, setSection] = useState('numeracy')
   const [questions, setQuestions] = useState([])
   const [answers, setAnswers] = useState({})
   const [startTime, setStartTime] = useState(null)
@@ -18,10 +19,12 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/questions')
+      const endpoint = section === 'literacy' ? '/api/literacy-questions' : '/api/questions'
+      const res = await fetch(endpoint)
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
-      const selected = data.slice(0, customCount ?? 30)
+      const defaultCount = section === 'literacy' ? 30 : 30
+      const selected = data.slice(0, customCount ?? defaultCount)
       setQuestions(selected)
       setTotalTime(customCount ? customCount * 70 : 35 * 60)
       setAnswers({})
@@ -50,13 +53,20 @@ export default function App() {
   return (
     <div className="app">
       {screen === 'home' && (
-        <Home onStart={startTest} loading={loading} error={error} />
+        <Home
+          onStart={startTest}
+          loading={loading}
+          error={error}
+          section={section}
+          onSectionChange={setSection}
+        />
       )}
       {screen === 'quiz' && (
         <Quiz
           questions={questions}
           onSubmit={submitTest}
           totalTime={totalTime}
+          section={section}
         />
       )}
       {screen === 'results' && (

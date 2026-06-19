@@ -1,14 +1,45 @@
 import { useState } from 'react'
 
-export default function Home({ onStart, loading, error }) {
+const NUMERACY_CATEGORIES = [
+  {
+    name: 'Number and Algebra',
+    items: ['Percentages, fractions and decimals', 'Ratios, rates and proportions', 'Algebra and formulae']
+  },
+  {
+    name: 'Measurement and Geometry',
+    items: ['Area, volume, distances and speeds', 'Unit conversions (e.g. km to m)', 'Reading maps, plans and diagrams']
+  },
+  {
+    name: 'Statistics and Probability',
+    items: ['Reading graphs, charts and data', 'Mean, median, mode and range', 'Probability of events']
+  }
+]
+
+const LITERACY_CATEGORIES = [
+  {
+    name: 'Comprehension',
+    items: ['Identifying the primary purpose', 'Retrieving specific details', 'Understanding author intent']
+  },
+  {
+    name: 'Analysis & Inference',
+    items: ['Drawing logical inferences', 'Evaluating arguments', 'Interpreting figurative language']
+  },
+  {
+    name: 'Text Formats',
+    items: ['Policy documents and directives', 'Investigative reports', 'Technical manuals and legal briefs']
+  }
+]
+
+export default function Home({ onStart, loading, error, section, onSectionChange }) {
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
 
-  const presets = [5, 10, 20, 30, 40]
+  const presets = [5, 10, 20, 30]
+  const isLiteracy = section === 'literacy'
 
   const handleCountInput = (val) => {
     const n = parseInt(val)
-    if (!isNaN(n)) setCustomCount(Math.min(40, Math.max(1, n)))
+    if (!isNaN(n)) setCustomCount(Math.min(30, Math.max(1, n)))
   }
 
   const customTotalSecs = customCount * 70
@@ -16,37 +47,40 @@ export default function Home({ onStart, loading, error }) {
   const customSecs = customTotalSecs % 60
   const customTimeDisplay = `${customMins}:${String(customSecs).padStart(2, '0')}`
 
-  const categories = [
-    {
-      name: 'Number and Algebra',
-      items: ['Percentages, fractions and decimals', 'Ratios, rates and proportions', 'Algebra and formulae']
-    },
-    {
-      name: 'Measurement and Geometry',
-      items: ['Area, volume, distances and speeds', 'Unit conversions (e.g. km to m)', 'Reading maps, plans and diagrams']
-    },
-    {
-      name: 'Statistics and Probability',
-      items: ['Reading graphs, charts and data', 'Mean, median, mode and range', 'Probability of events']
-    }
-  ]
-
   const handleStart = () => {
     onStart(mode === 'custom' ? customCount : null)
   }
+
+  const categories = isLiteracy ? LITERACY_CATEGORIES : NUMERACY_CATEGORIES
 
   return (
     <div className="home">
       <div className="home-hero">
         <div className="hero-badge">Fire Rescue Victoria</div>
-        <h1>Numeracy Practice Test</h1>
+        <h1>{isLiteracy ? 'Literacy' : 'Numeracy'} Practice Test</h1>
         <p className="hero-sub">Aptitude Assessment — Recruitment Preparation</p>
+
+        <div className="section-toggle">
+          <button
+            className={`section-toggle-btn${!isLiteracy ? ' stb-active' : ''}`}
+            onClick={() => onSectionChange('numeracy')}
+          >
+            Numeracy
+          </button>
+          <button
+            className={`section-toggle-btn${isLiteracy ? ' stb-active' : ''}`}
+            onClick={() => onSectionChange('literacy')}
+          >
+            Literacy
+          </button>
+        </div>
       </div>
 
       <div className="home-card">
         <p className="card-desc">
-          This practice test mirrors the FRV Numeracy Skills Assessment. Questions are drawn from
-          numerical and mathematical contexts including words, tables, graphs and diagrams.
+          {isLiteracy
+            ? 'This practice test mirrors the FRV Literacy Skills Assessment. Questions are drawn from a range of text types including policy directives, investigative reports, technical manuals, opinion articles and legal briefs.'
+            : 'This practice test mirrors the FRV Numeracy Skills Assessment. Questions are drawn from numerical and mathematical contexts including words, tables, graphs and diagrams.'}
         </p>
 
         <div className="mode-selector">
@@ -101,12 +135,12 @@ export default function Home({ onStart, loading, error }) {
               <input
                 type="number"
                 min="1"
-                max="40"
+                max="30"
                 value={customCount}
                 onChange={e => handleCountInput(e.target.value)}
                 className="count-input"
               />
-              <span className="count-input-hint">questions (1–40) — or pick a preset above</span>
+              <span className="count-input-hint">questions (1–30) — or pick a preset above</span>
             </div>
           </div>
         )}
@@ -114,9 +148,20 @@ export default function Home({ onStart, loading, error }) {
         <div className="home-question-types">
           <p className="section-label">Question Format</p>
           <div className="qtype-row">
-            <span className="qtype-chip type-number_input">Calculated Number Entry</span>
+            {isLiteracy ? (
+              <>
+                <span className="qtype-chip type-multiple_choice">Multiple Choice</span>
+                <span className="qtype-chip type-true_false_matrix">Yes / No Evaluation</span>
+              </>
+            ) : (
+              <span className="qtype-chip type-number_input">Calculated Number Entry</span>
+            )}
           </div>
-          <p className="format-note">Every answer requires calculation. Some questions build on data or results from earlier questions in the same scenario.</p>
+          <p className="format-note">
+            {isLiteracy
+              ? 'Each passage is followed by four multiple-choice comprehension questions and one multi-statement evaluation. Read each text carefully before answering.'
+              : 'Every answer requires calculation. Some questions build on data or results from earlier questions in the same scenario.'}
+          </p>
         </div>
 
         <div className="home-categories">
@@ -141,7 +186,7 @@ export default function Home({ onStart, loading, error }) {
             <li>Use the question ribbon to navigate between questions at any time</li>
             <li>Bookmark questions you want to revisit — use the button in the navigation bar or the ribbon</li>
             <li>The test auto-submits when the timer reaches zero</li>
-            <li>A scientific calculator is available in the test</li>
+            {!isLiteracy && <li>A scientific calculator is available in the test</li>}
           </ul>
         </div>
 
