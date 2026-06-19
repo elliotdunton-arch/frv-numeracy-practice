@@ -4474,28 +4474,6 @@ const ctxL9 = {
   ]
 }
 
-const ctxL10 = {
-  title: 'Amendment Code 12-B: Kinetic Double-Skin Facade Micro-Ventilation Regulation',
-  subtitle: 'Municipal Infrastructure Board — Building Code Amendment',
-  paragraphs: [
-    'The Municipal Infrastructure Board has enacted Amendment Code 12-B to regulate the deployment of kinetic double-skin facades on commercial high-rise developments exceeding 35 meters in height. These structural envelopes utilise automated mechanical actuators to adjust glass louvers based on real-time wind shear and external ambient temperatures.',
-    '• Active Thermal Cushion Mode (ATCM): This state is automatically initialised when external temperatures fall below 12°C. The facade louvers close completely to lock a dense air boundary layer between the building\'s primary concrete thermal mass and the outer glazed shield, reducing heat loss by a calculated baseline minimum of 24%.',
-    '• Dynamic Exhaust Venting (DEV): Triggered immediately when internal building sensors report core zone temperatures above 24°C concurrently with an external wind speed under 15 knots. Under DEV parameters, the lower intake plenums open by 100% while the upper exhaust vents modulate open to create a chimney effect, purging internal heat without running active mechanical chillers.',
-    'If a mandatory automated inspection logs a mechanical actuator response lag exceeding 18 seconds during a mode transition, the system enters an isolated safety override state. Property managers are allowed a 7-day administrative correction window to service the physical linkages. If the component fails a secondary automated tracking scan after this 7-day period has elapsed, structural safety fines accumulate retroactively from the initial day of logging.'
-  ]
-}
-
-const ctxL11 = {
-  title: 'Clinical Efficacy Profile of Monoclonal Peptide Compound RX-94',
-  subtitle: 'Biomedical Research Abstract & Clinical Summary',
-  paragraphs: [
-    'A multi-centre, double-blind study evaluated the pharmacokinetic profile and therapeutic efficacy of compound RX-94 in managing chronic cellular inflammation pathways. RX-94 operates as a selective antagonist, targeting specific transmembrane receptors to inhibit downstream cytokine transcription cascades before cellular wall degradation occurs.',
-    '• Phase I Delivery Thresholds: Optimising therapeutic concentrations requires an intravenous loading dose calculated at 4.5 mg per kilogram of patient body weight. If the patient\'s baseline renal clearance rate drops below a 40 mL/min threshold, the primary loading dose must be instantly adjusted downward by a fixed 30% margin to prevent localised systemic accumulation.',
-    '• Adverse Reaction Indicators: Clinical tracking logged an overall mild tolerance profile. However, if a patient exhibits an acute plasma histamine spike exceeding 150 ng/mL within 90 minutes of initial infusion, the protocol mandates an immediate suspension of the delivery cycle.',
-    'Independent research teams noted that when RX-94 is introduced concurrently with standard anti-inflammatory therapies, therapeutic synergy increases by half, effectively shortening the patient recovery lifecycle. However, the compound remains highly unstable when exposed to ambient room temperatures for an extended duration; if kept outside an unshielded cold-chain refrigeration array (calibrated strictly between 2°C and 6°C) for more than 45 minutes, the peptide strands undergo irreversible denaturing, completely neutralising their therapeutic molecular capacity.'
-  ]
-}
-
 const ctxL12 = {
   title: 'The Architecture of Memory: Industrialisation and the Erasure of the Public Commons',
   subtitle: 'Philosophical Essay — By Dr. Evelyn Thorne, Cultural Historian',
@@ -4527,30 +4505,6 @@ const ctxL14 = {
   ]
 }
 
-const ctxL15 = {
-  title: 'Pathogen Vector Mitigation Frameworks in High-Density Urban Microclimates',
-  subtitle: 'Public Health Whitepaper — Published by the Global Epidemiological Policy Institute, 2026',
-  paragraphs: [
-    'As metropolitan populations consolidate within high-density high-rise structures, traditional epidemiological containment strategies must evolve to address localised vertical transmission pathways. Atmospheric research indicates that multi-storey commercial and residential complexes exceeding 45 meters in height create distinct internal aerodynamic pressures, capable of transporting airborne droplet vectors and microscopic particulate contaminants across floor seams via utility paths and shared ventilation conduits.',
-    'To systematically mitigate this vulnerability, modern smart infrastructure networks utilise automated active zoning matrices controlled via a centralised Building Management System (BMS). Upon the automated detection of an airborne particulate hazard or synthetic gaseous contaminant on a specific level (designated the Source Floor), the master BMS must activate an environmental isolation sequence concurrently within 60 seconds of the primary sensor alert.',
-    'This immediate damper manipulation establishes an abrupt atmospheric pressure differential. By forcing the Source Floor into a state of deep negative pressure while simultaneously establishing a high positive pressure cushion on the buffer floors directly above and below, the building creates a reliable aerodynamic shield. This barrier effectively blocks the migration of airborne vectors through vertical shafts.',
-    'However, human operational variables continue to challenge system integrity. Field tracking logs indicate that during building containment events, egress fire doors are frequently propped open by evacuating occupants. If an egress barrier is detected as open for a continuous duration exceeding 90 seconds, the BMS is programmed to trigger an audible warning at the main facility command desk and automatically increase the localised stairwell pressurisation blower speeds by a fixed 20% margin to mechanically counteract the pressure drop.'
-  ]
-}
-
-const ctxL16 = {
-  title: 'Hydro-Shield X3 Aqueous Separation Matrix: Technical Operation Manual',
-  subtitle: 'Product Model Series: X3-Industrial Wastewater Remediation Array',
-  paragraphs: [
-    'This operations guide governs the physical validation, deployment parameters, and diagnostic calibration routines for the Hydro-Shield X3 Aqueous Separation Matrix. The X3 system is specifically engineered for implementation within industrial processing facilities where high-volume chemical effluent remediation and grease extraction are required to meet municipal environmental dump codes.',
-    'Section 1 — Anchor Tolerance & Vibration Isolation Parameters: Prior to anchoring the X3 separation housing to the facility structural concrete foundation plate, site infrastructure engineers must verify the local dead-weight load bearing metrics. The complete mounting framework must utilise a quad-point isolation template. Each independent industrial anchor bolt must possess a verified static load threshold rating of at least 35 kilonewtons (kN) to successfully manage high-frequency operational vibrations.',
-    'If any single anchor bolt displays evidence of surface pitting, material stress fatigue, or fine hairline micro-cracking along its threaded shaft, it must be instantly disqualified from service. Installation teams are strictly forbidden from utilising uncertified weld overlays or structural shims to reinforce a compromised bolt mounting corner; doing so completely voids the product\'s engineering safety warranty.',
-    'Section 2 — Synthetic Coalescer Filter Element Constraints: The internal fluid remediation chamber relies on a multi-stage synthetic coalescer element. This element is rated to operate safely under a maximum continuous fluid operating pressure differential of 18 kilopascals (kPa).',
-    'To ensure continuous, unblocked fluid transit paths, field technicians must evaluate the perimeter seals and alignment tracks at the commencement of every 12-hour operational shift loop. The synthetic sealing compounds are highly sensitive to petroleum-based chemical solvents; they must be permanently retired from service if they are exposed to unapproved aerosol cleaners or concentrated hydrocarbon mixtures during installation or maintenance routines.',
-    'CRITICAL ALARM STATE: If the integrated digital diagnostic modules register a sudden pressure variance drop exceeding 4 kPa within the secondary chamber, the X3 matrix will initialise an automated shutdown cycle. This safety state triggers a flashing amber strobe on the diagnostic panel and locks the primary influx control valves. To clear this alarm, a certified technician must execute a complete manual fluid backwash; the system cannot be reset via the remote electronic control room console.'
-  ]
-}
-
 const ctxL17 = {
   title: 'The Algorithmic Panopticon: Attention Economics and the Fragmentation of Hyper-Localised Discourse',
   subtitle: 'Sociological Critique — By Professor Marcus Thorne, Media Ecology Group',
@@ -4569,19 +4523,6 @@ const ctxL18 = {
     'To manage this distribution challenge safely, modern regional whitepapers outline a strict structural implementation framework governed via centralised Automated Grid Controllers (AGC). Upon the electronic detection of a generation surplus or frequency surge within a specific regional hub (designated the Cooperative Core), the master AGC must initiate a grid-balancing sequence concurrently within 45 seconds of the initial surge logging.',
     'This fast technological adjustment establishes an immediate economic and physical boundary. By cutting inbound tariff rebates to 0% on the Cooperative Core while locking open-market export channels down completely, the network routes excess local clean energy directly into localised utility battery vaults. This prevents low-cost surplus power from flooding the primary macro-grid, protecting commercial wholesale energy prices from experiencing a destabilising deflationary collapse.',
     'However, localised consumption volatility continues to disrupt predictive model calculations. Infrastructure tracking data shows that during extreme thermal events, residential consumer demand spikes unpredictably due to sudden climate control pooling. If localised network metrics show that a regional cooperative core\'s reserve battery capacity drops below a critical 15% safety threshold for a continuous duration exceeding 120 seconds, the AGC is programmed to issue an emergency allocation warning to the municipal board and automatically boost secondary fossil-fuel peaker plant generation by a fixed 25% margin to mechanically stabilise the local grid frequency.'
-  ]
-}
-
-const ctxL19 = {
-  title: 'Ironclad Core-S4 Enterprise Firewall Array: Deployment & Safety Manual',
-  subtitle: 'Product Model Series: S4-Enterprise / High-Throughput Network Segmentation',
-  paragraphs: [
-    'This technical user manual governs the physical provisioning, network logical configuration, and long-term diagnostic monitoring frameworks for the Ironclad Core-S4 Enterprise Firewall Array. The S4 platform is engineered for integration into enterprise-level financial and distributed database environments where data packet integrity parameters and cryptographic isolation are business-critical.',
-    'Section 1 — Hardware Anchor Parameters & Airflow Integrity: Prior to mounting the S4 firewall chassis into a standard server rack enclosure, network infrastructure engineers must verify the local physical load-bearing and thermal metrics. The complete rack configuration must utilise a dual-slot structural mounting bracket template. Each independent chassis anchor screw must possess a verified shear threshold rating of at least 15 kilonewtons (kN) to manage structural torque and localised hardware cooling vibrations.',
-    'If a single anchor screw displays any evidence of thread stripping, manufacturing variance, or surface micro-cracking along its primary column, it must be instantly disqualified from service. Installation teams are strictly forbidden from combining unrated fasteners or mixing mismatched alloy brackets to secure a single mounting corner; doing so violates the system\'s physical structural integrity guarantees.',
-    'Section 2 — High-Efficiency Particulate Air (HEPA) Chassis Cooling Constraints: The internal processing core utilises high-throughput intake fans shielded by a specialised micromesh particulate filter array. This filter element is certified to operate safely under a maximum continuous static airflow pressure differential of 22 kilopascals (kPa).',
-    'To ensure clear thermal dissipation paths, field engineers must visually audit the silicone structural edge seals and alignment tracks at the commencement of every operating maintenance shift. The synthetic sealing elements are highly vulnerable to chemical deterioration; they must be permanently retired from service if exposed to petroleum-based cleaning agents, unapproved aerosol solvents, or machine lubrication compounds during unboxing or active maintenance routines.',
-    'CRITICAL SECURITY OVERRIDE: If the integrated hardware telemetry monitors log a sudden internal temperature variance spike exceeding 5°C within the primary processing containment chamber, the S4 array will force an automated lockdown state. This diagnostic response triggers a red warning indicator on the external faceplate and freezes all active data transit pipelines. To exit this lockdown state, an administrator must execute a physical hardware line purge via the localised system interface; the security array cannot be reset electronically from a remote network management desk.'
   ]
 }
 
@@ -5087,118 +5028,6 @@ const literacyQuestions = [
     method: 'A — All three simultaneous conditions are met: IVI 85 > 75, resources fully extended, and an active threat to a township. The declaration is valid. B — The IVI of 40 does not exceed 75, failing the first condition. Even with a genuine threat, all three conditions must be met simultaneously. Invalid. C — The advisory states the "burden of proof rests on the enforcing agency to verify the status of an FCP before initiating formal detention proceedings." Detaining without checking the FCP first violates the statutory exemption framework. Not compliant.'
   },
 
-  // ── Set 1 (new batch): Structural Amendment Code 12-B / Building Regulation ─
-  { group: 'L10', type: 'multiple_choice', category: 'Building Regulation', context: ctxL10,
-    question: 'What is the primary purpose of Amendment Code 12-B?',
-    options: [
-      'A) To mandate the complete replacement of all concrete thermal masses in historic structures.',
-      'B) To establish the operational parameters and compliance guidelines for kinetic double-skin facades.',
-      'C) To outline payroll schedules for technicians servicing active mechanical chillers.',
-      'D) To promote the use of unregulated single-skin glass shields in coastal high-density areas.'
-    ],
-    answer: 'B) To establish the operational parameters and compliance guidelines for kinetic double-skin facades.',
-    method: 'The amendment regulates the deployment, operational modes (ATCM and DEV), inspection standards, and compliance consequences for kinetic double-skin facades on commercial high-rises. Payroll, concrete replacement, and single-skin shields are not discussed.'
-  },
-  { group: 'L10', type: 'multiple_choice', category: 'Building Regulation', context: ctxL10,
-    question: 'What minimum heat loss reduction baseline is expected when a kinetic facade is operating under the Active Thermal Cushion Mode?',
-    options: [
-      'A) 12%',
-      'B) 15%',
-      'C) 24%',
-      'D) 35%'
-    ],
-    answer: 'C) 24%',
-    method: 'The code states ATCM reduces heat loss "by a calculated baseline minimum of 24%". The 12°C figure is the external temperature threshold that triggers ATCM, not a reduction percentage.'
-  },
-  { group: 'L10', type: 'multiple_choice', category: 'Building Regulation', context: ctxL10,
-    question: 'Under what specific concurrent conditions will the system initialise the Dynamic Exhaust Venting (DEV) configuration?',
-    options: [
-      'A) Internal temperatures below 12°C and external wind speeds exceeding 15 knots.',
-      'B) Internal temperatures above 24°C and external wind speeds under 15 knots.',
-      'C) External temperatures precisely at 35 meters with an actuator lag of 18 seconds.',
-      'D) Core zone temperatures matching the external ambient baseline exactly.'
-    ],
-    answer: 'B) Internal temperatures above 24°C and external wind speeds under 15 knots.',
-    method: 'DEV is "triggered immediately when internal building sensors report core zone temperatures above 24°C concurrently with an external wind speed under 15 knots." Both conditions must be met simultaneously. Option A reverses the temperature logic (12°C is the ATCM trigger) and inverts the wind speed direction.'
-  },
-  { group: 'L10', type: 'multiple_choice', category: 'Building Regulation', context: ctxL10,
-    question: 'What happens if a property manager resolves a lagging facade actuator 9 days after it was initially flagged in an automated inspection?',
-    options: [
-      'A) The system automatically extends the administrative window by an additional 14 days.',
-      'B) The structural safety fines are completely waived since the issue was eventually corrected.',
-      'C) Structural safety fines will apply and accumulate retroactively from the initial day of logging.',
-      'D) The building\'s primary occupancy certificate is instantly and permanently cancelled.'
-    ],
-    answer: 'C) Structural safety fines will apply and accumulate retroactively from the initial day of logging.',
-    method: '9 days exceeds the 7-day administrative correction window. The code states that if a component "fails a secondary automated tracking scan after this 7-day period has elapsed, structural safety fines accumulate retroactively from the initial day of logging." Fines are not waived simply because the issue was eventually fixed after the deadline.'
-  },
-  { group: 'L10', type: 'true_false_matrix', category: 'Building Regulation', context: ctxL10,
-    question: 'Evaluate the truth of the following statements:',
-    options: [
-      'A kinetic facade system that takes 25 seconds to complete a mode transition during an audit is fully compliant with the baseline rules.',
-      'The Active Thermal Cushion Mode relies on creating a trapped air boundary layer between the outer glazed shield and the building\'s concrete thermal mass.',
-      'The DEV mode relies heavily on active mechanical chillers to push heat down through the lower intake plenums.'
-    ],
-    answer: 'False,True,False',
-    method: 'A — The code flags any actuator response lag exceeding 18 seconds during a mode transition. 25 seconds exceeds this threshold, triggering a safety override state. Non-compliant. B — ATCM "close[s] completely to lock a dense air boundary layer between the building\'s primary concrete thermal mass and the outer glazed shield." True. C — DEV explicitly "purg[es] internal heat without running active mechanical chillers." The chimney effect drives heat out passively. False.'
-  },
-
-  // ── Set 2 (new batch): RX-94 Biomedical Research ──────────────────────────
-  { group: 'L11', type: 'multiple_choice', category: 'Biomedical Research', context: ctxL11,
-    question: 'What is the primary focus of this biomedical research summary?',
-    options: [
-      'A) To profile the structural cost of manufacturing synthetic anti-inflammatory tablets.',
-      'B) To detail the clinical application, dosing constraints, and storage safety parameters of compound RX-94.',
-      'C) To argue that all monoclonal peptides should be administered without medical supervision.',
-      'D) To provide a historical review of cellular wall degradation across marine biology specimens.'
-    ],
-    answer: 'B) To detail the clinical application, dosing constraints, and storage safety parameters of compound RX-94.',
-    method: 'The summary covers the loading dose calculation, renal clearance adjustment, adverse reaction suspension protocol, synergy with anti-inflammatory therapy, and cold-chain storage requirements. Manufacturing costs, supervision policy, and marine biology are not part of the scope.'
-  },
-  { group: 'L11', type: 'multiple_choice', category: 'Biomedical Research', context: ctxL11,
-    question: 'What specific dosing adjustment is required if a patient\'s renal clearance rate falls below 40 mL/min?',
-    options: [
-      'A) The loading dose must be increased by a fixed 30% margin.',
-      'B) The loading dose must be adjusted downward by a fixed 30% margin.',
-      'C) The loading dose must be maintained at exactly 4.5 mg per kilogram of body weight.',
-      'D) The delivery cycle must be permanently suspended within 90 minutes.'
-    ],
-    answer: 'B) The loading dose must be adjusted downward by a fixed 30% margin.',
-    method: 'If renal clearance drops below 40 mL/min, "the primary loading dose must be instantly adjusted downward by a fixed 30% margin to prevent localised systemic accumulation." Increasing the dose would worsen accumulation risk. The 90-minute suspension applies to the histamine spike adverse reaction, not to renal clearance.'
-  },
-  { group: 'L11', type: 'multiple_choice', category: 'Biomedical Research', context: ctxL11,
-    question: 'Why must compound RX-94 be strictly stored within a refrigeration array calibrated between 2°C and 6°C?',
-    options: [
-      'A) Exposure to room temperatures for over 45 minutes causes irreversible peptide denaturing that neutralises therapeutic value.',
-      'B) Lower temperatures trigger an immediate plasma histamine spike exceeding 150 ng/mL.',
-      'C) Cold temperatures prevent the anti-inflammatory therapies from achieving a 30% clearance margin.',
-      'D) It allows the peptide to bypass downstream cytokine transcription cascades completely.'
-    ],
-    answer: 'A) Exposure to room temperatures for over 45 minutes causes irreversible peptide denaturing that neutralises therapeutic value.',
-    method: 'The abstract states that if RX-94 is kept outside proper cold-chain refrigeration for more than 45 minutes, "the peptide strands undergo irreversible denaturing, completely neutralising their therapeutic molecular capacity." The cold chain preserves structural integrity, not histamine levels or clearance margins.'
-  },
-  { group: 'L11', type: 'multiple_choice', category: 'Biomedical Research', context: ctxL11,
-    question: 'If a clinical nurse leaves a vial of RX-94 on an open preparation counter at 22°C for exactly one hour before administration, what is the most likely therapeutic outcome?',
-    options: [
-      'A) The patient will experience an accelerated recovery lifecycle due to enhanced thermal activation.',
-      'B) The compound will fail to treat the inflammation because the peptide structure has been neutralised.',
-      'C) The compound\'s delivery loading dose will automatically double to compensate for time lost.',
-      'D) The patient\'s renal clearance tracking metrics will instantly spike above 40 mL/min.'
-    ],
-    answer: 'B) The compound will fail to treat the inflammation because the peptide structure has been neutralised.',
-    method: 'One hour (60 minutes) exceeds the 45-minute unshielded exposure limit. The peptide strands will have undergone irreversible denaturing, completely neutralising their therapeutic molecular capacity. There is no thermal activation benefit, and loading doses do not self-adjust based on ambient exposure time.'
-  },
-  { group: 'L11', type: 'true_false_matrix', category: 'Biomedical Research', context: ctxL11,
-    question: 'Evaluate the truth of the following statements:',
-    options: [
-      'An acute plasma histamine spike of 180 ng/mL noted 60 minutes into an infusion requires immediate suspension of the cycle.',
-      'RX-94 works by accelerating downstream cytokine transcription cascades to promote rapid cell wall degradation.',
-      'Combining RX-94 with standard anti-inflammatory therapies increases therapeutic synergy.'
-    ],
-    answer: 'True,False,True',
-    method: 'A — 180 ng/mL exceeds the 150 ng/mL threshold, and 60 minutes is within the 90-minute observation window. The protocol mandates "immediate suspension of the delivery cycle." True. B — RX-94 acts as a "selective antagonist" that "inhibit[s] downstream cytokine transcription cascades." It inhibits, not accelerates. False. C — "When RX-94 is introduced concurrently with standard anti-inflammatory therapies, therapeutic synergy increases by half." True.'
-  },
-
   // ── Set 3 (new batch): Architecture of Memory / Philosophical Essay ─────────
   { group: 'L12', type: 'multiple_choice', category: 'Philosophical Essay', context: ctxL12,
     question: 'What is the central thesis of Dr. Thorne\'s historical analysis?',
@@ -5367,118 +5196,6 @@ const literacyQuestions = [
     method: 'A — Wilful equipment mismanagement violates condition three. When this occurs, "the entire indemnification waiver is rendered completely void ab initio." The waiver does not remain valid. False. B — "If the vendor fails to submit a verified certificate before the 14-day window expires, the underlying master agreement is subject to immediate structural termination without financial penalty to the procurement agency." True. C — "Void ab initio" means void from the very beginning — the waiver is treated as if it never legally existed. It is not partially enforceable pending judicial review. False.'
   },
 
-  // ── Set 6 (new batch): Pathogen Vector / Public Health Whitepaper ───────────
-  { group: 'L15', type: 'multiple_choice', category: 'Public Health Policy', context: ctxL15,
-    question: 'What is the primary focus of this epidemiological policy document?',
-    options: [
-      'A) To advocate for the complete eradication of multi-storey residential buildings in urban centres.',
-      'B) To detail how automated Building Management Systems use targeted pressure containment matrices to prevent vertical pathogen migration.',
-      'C) To track the annual production budgets of high-output air filtration manufacturing groups.',
-      'D) To provide a manual on how to manually dismantle structural utility shafts during building evacuations.'
-    ],
-    answer: 'B) To detail how automated Building Management Systems use targeted pressure containment matrices to prevent vertical pathogen migration.',
-    method: 'The whitepaper explains how BMS-controlled pressure differentials isolate a contaminated floor (Source Floor) from the rest of the building, and describes the secondary response when egress doors are propped open. Building demolition, production budgets, and dismantling shafts are not part of the paper\'s scope.'
-  },
-  { group: 'L15', type: 'multiple_choice', category: 'Public Health Policy', context: ctxL15,
-    question: 'Within how many seconds must the BMS initialise the automated environmental isolation sequence after a primary sensor logs a hazard?',
-    options: [
-      'A) 20 seconds',
-      'B) 45 seconds',
-      'C) 60 seconds',
-      'D) 90 seconds'
-    ],
-    answer: 'C) 60 seconds',
-    method: 'The paper states "the master BMS must activate an environmental isolation sequence concurrently within 60 seconds of the primary sensor alert." 90 seconds is the egress door open duration that triggers the blower speed boost, not the initial isolation window.'
-  },
-  { group: 'L15', type: 'multiple_choice', category: 'Public Health Policy', context: ctxL15,
-    question: 'What specific layout configuration do the air handling systems adopt on the floors located directly adjacent to the contamination source?',
-    options: [
-      'A) Intake dampers close to 0% flow while exhaust extraction runs at 100% capacity.',
-      'B) Intake dampers open completely to 100% while exhaust extraction is locked at 0%.',
-      'C) Both intake dampers and exhaust systems are completely deactivated for 14 days.',
-      'D) Blower speeds are reduced by a fixed 20% margin to allow for manual air sampling.'
-    ],
-    answer: 'B) Intake dampers open completely to 100% while exhaust extraction is locked at 0%.',
-    method: 'Buffer floors are placed into a "high positive pressure cushion" relative to the Source Floor. To achieve positive pressure, intake dampers are opened fully to push clean air in while exhaust extraction is shut to prevent air from leaving. Option A describes the Source Floor configuration (negative pressure), not the buffer floors.'
-  },
-  { group: 'L15', type: 'multiple_choice', category: 'Public Health Policy', context: ctxL15,
-    question: 'What specific real-world challenge is the BMS attempting to fix by automatically boosting the stairwell pressurisation blowers by 20%?',
-    options: [
-      'A) A major drop in positive air pressure caused by occupants propping open egress fire doors for over 90 seconds.',
-      'B) A complete electrical failure across the primary server decks on the Source Floor.',
-      'C) An unannounced 30-day compliance audit executed by the municipal health board.',
-      'D) The chemical denaturing of anti-inflammatory peptide strands within the central ventilation core.'
-    ],
-    answer: 'A) A major drop in positive air pressure caused by occupants propping open egress fire doors for over 90 seconds.',
-    method: 'The paper states that when an egress barrier is open for more than 90 seconds, the BMS "automatically increase[s] the localised stairwell pressurisation blower speeds by a fixed 20% margin to mechanically counteract the pressure drop." The pressure drop caused by open doors threatens the containment barrier integrity.'
-  },
-  { group: 'L15', type: 'true_false_matrix', category: 'Public Health Policy', context: ctxL15,
-    question: 'Evaluate the accuracy of the following technical conditions:',
-    options: [
-      'Creating negative pressure on the Source Floor helps extract contaminated air while keeping the hazard from leaking into vertical transport shafts.',
-      'If an egress barrier door remains propped open for 45 seconds, the BMS instantly ramps up the stairwell blower speed by 20%.',
-      'The containment protocol relies on closing intake dampers completely (0% flow) on the buffer floors directly above and below the hazard.'
-    ],
-    answer: 'True,False,False',
-    method: 'A — Deep negative pressure on the Source Floor draws contaminants inward and downward, preventing them from migrating upward through vertical shafts into buffer floors. True. B — The trigger threshold is 90 seconds of continuous open door, not 45. At 45 seconds the BMS has not yet responded. False. C — Buffer floors receive a high positive pressure cushion — achieved by fully opening intake dampers (100%), not closing them. Closing intakes to 0% would describe the Source Floor configuration. False.'
-  },
-
-  // ── Set 7 (new batch): Hydro-Shield X3 / Technical Manual ──────────────────
-  { group: 'L16', type: 'multiple_choice', category: 'Technical Manual', context: ctxL16,
-    question: 'What is the primary purpose of this technical operations guide?',
-    options: [
-      'A) To detail the installation criteria, structural anchor metrics, and maintenance rules for the Hydro-Shield X3 separation system.',
-      'B) To outline retail pricing structures and volume discounts for replacement coalescer filter components.',
-      'C) To compare the fluid processing efficiency of the X3 array with municipal drinking water filtration grids.',
-      'D) To provide a list of local emergency plumbing contractors operating in industrial processing zones.'
-    ],
-    answer: 'A) To detail the installation criteria, structural anchor metrics, and maintenance rules for the Hydro-Shield X3 separation system.',
-    method: 'The operations guide covers anchor bolt load ratings, disqualification rules for compromised hardware, coalescer filter pressure constraints, seal maintenance requirements, and the critical alarm state reset procedure. Pricing, competitor comparisons, and contractor directories are outside its scope.'
-  },
-  { group: 'L16', type: 'multiple_choice', category: 'Technical Manual', context: ctxL16,
-    question: 'What is the minimum verified static load threshold required for each independent anchor bolt used to secure the X3 housing?',
-    options: [
-      'A) 4 kilonewtons (kN)',
-      'B) 18 kilonewtons (kN)',
-      'C) 35 kilonewtons (kN)',
-      'D) 45 kilonewtons (kN)'
-    ],
-    answer: 'C) 35 kilonewtons (kN)',
-    method: 'Section 1 states each independent industrial anchor bolt must possess "a verified static load threshold rating of at least 35 kilonewtons (kN) to successfully manage high-frequency operational vibrations." 18 kPa is the coalescer filter pressure differential limit — a different unit and a different component.'
-  },
-  { group: 'L16', type: 'multiple_choice', category: 'Technical Manual', context: ctxL16,
-    question: 'What sequence of events occurs automatically if the X3 digital diagnostic modules log a pressure variance drop exceeding 4 kPa inside the secondary chamber?',
-    options: [
-      'A) The system increases intake pump volumes by a fixed 20% margin to clear the block.',
-      'B) The unit initialises an automated shutdown cycle, triggers a flashing amber strobe, and locks the primary influx control valves.',
-      'C) The installation warranty is automatically cancelled and data is cleared from the remote network log.',
-      'D) The mounting framework releases the quad-point isolation template to relieve high-frequency vibrations.'
-    ],
-    answer: 'B) The unit initialises an automated shutdown cycle, triggers a flashing amber strobe, and locks the primary influx control valves.',
-    method: 'The Critical Alarm State section states: if a pressure variance drop exceeds 4 kPa, "the X3 matrix will initialise an automated shutdown cycle. This safety state triggers a flashing amber strobe on the diagnostic panel and locks the primary influx control valves." Pump volume increases and warranty cancellations are fabricated distractors.'
-  },
-  { group: 'L16', type: 'multiple_choice', category: 'Technical Manual', context: ctxL16,
-    question: 'How must an operational team restart the X3 separation matrix once it has entered an automated critical alarm state?',
-    options: [
-      'A) By clicking the electronic master reset icon on the remote control room console.',
-      'B) By replacing all four concrete anchor bolts with high-strength 35 kN fasteners within 12 hours.',
-      'C) By having a certified technician execute a complete manual fluid backwash on the physical unit.',
-      'D) By leaving the primary influx control valves locked out for a duration exceeding 45 minutes.'
-    ],
-    answer: 'C) By having a certified technician execute a complete manual fluid backwash on the physical unit.',
-    method: 'The manual explicitly states: "To clear this alarm, a certified technician must execute a complete manual fluid backwash; the system cannot be reset via the remote electronic control room console." Option A directly contradicts this. Replacing anchor bolts and waiting out the valve lockout are fabricated distractors.'
-  },
-  { group: 'L16', type: 'true_false_matrix', category: 'Technical Manual', context: ctxL16,
-    question: 'Evaluate the truth of the following technical directives:',
-    options: [
-      'Using an anchor bolt that displays fine hairline micro-cracking is permissible provided the other three bolts exceed the 35 kN load rating.',
-      'The synthetic filter sealing elements must be retired from service if they come into direct contact with unapproved petroleum-based chemical solvents.',
-      'The maximum continuous fluid operating pressure differential allowed for the coalescer filter element is 18 kilopascals (kPa).'
-    ],
-    answer: 'False,True,True',
-    method: 'A — Any bolt showing hairline micro-cracking "must be instantly disqualified from service." The guide also explicitly forbids using structural shims to compensate for a compromised corner, regardless of other bolts\' ratings. False. B — "The synthetic sealing compounds…must be permanently retired from service if they are exposed to unapproved aerosol cleaners or concentrated hydrocarbon mixtures." Petroleum-based solvents fall within this prohibition. True. C — "This element is rated to operate safely under a maximum continuous fluid operating pressure differential of 18 kilopascals (kPa)." True.'
-  },
-
   // ── Set 8 (new batch): Algorithmic Panopticon / Media Studies ──────────────
   { group: 'L17', type: 'multiple_choice', category: 'Media Studies', context: ctxL17,
     question: 'What is the primary analytical objective of Professor Thorne\'s sociological critique?',
@@ -5589,62 +5306,6 @@ const literacyQuestions = [
     ],
     answer: 'True,False,False',
     method: 'A — Routing surplus clean energy into vaults "prevents low-cost surplus power from flooding the primary macro-grid, protecting commercial wholesale energy prices from experiencing a destabilising deflationary collapse." True. B — The AGC triggers the peaker boost only after the threshold is breached for a "continuous duration exceeding 120 seconds." 30 seconds falls well short of this requirement. False. C — During a surge, inbound tariff rebates are cut to 0%, not maintained at 100%. The protocol discourages export to protect wholesale prices. False.'
-  },
-
-  // ── Set 10 (new batch): Ironclad Core-S4 Firewall / Technical Manual ────────
-  { group: 'L19', type: 'multiple_choice', category: 'Technical Manual', context: ctxL19,
-    question: 'What is the primary purpose of this technical firewall manual section?',
-    options: [
-      'A) To detail the physical mounting criteria, structural anchor ratings, and chassis maintenance constraints for the Core-S4 firewall array.',
-      'B) To compare the annual subscription pricing models of Ironclad software with competitor antivirus programs.',
-      'C) To outline the interview and onboarding framework for incoming network engineering personnel.',
-      'D) To provide directions on how to clean chemical lubrication compounds out of localised air-gapped cryptographic repositories.'
-    ],
-    answer: 'A) To detail the physical mounting criteria, structural anchor ratings, and chassis maintenance constraints for the Core-S4 firewall array.',
-    method: 'The manual covers chassis anchor screw shear ratings (15 kN), the thermal lockdown trigger (5°C spike), HEPA filter pressure limits (22 kPa), seal contamination rules, and the physical line purge reset protocol. Subscription pricing, HR onboarding, and cryptographic repository cleaning are outside its scope.'
-  },
-  { group: 'L19', type: 'multiple_choice', category: 'Technical Manual', context: ctxL19,
-    question: 'What minimum verified shear threshold rating is required for each independent chassis anchor screw used to mount the S4 firewall?',
-    options: [
-      'A) 5 kilonewtons (kN)',
-      'B) 15 kilonewtons (kN)',
-      'C) 22 kilonewtons (kN)',
-      'D) 35 kilonewtons (kN)'
-    ],
-    answer: 'B) 15 kilonewtons (kN)',
-    method: 'Section 1 states each chassis anchor screw must possess "a verified shear threshold rating of at least 15 kilonewtons (kN)." Note that 22 kPa is the HEPA filter pressure differential limit — a different unit and a different component. 35 kN is the anchor bolt rating from the Hydro-Shield X3 manual.'
-  },
-  { group: 'L19', type: 'multiple_choice', category: 'Technical Manual', context: ctxL19,
-    question: 'What operational defensive measure is initialised automatically if internal telemetry monitors register a temperature variance spike exceeding 5°C within the primary chamber?',
-    options: [
-      'A) The firewall routes all data packets to open civilian communication streams to bypass the block.',
-      'B) The array enters an automated lockdown state, flashes a red warning indicator, and freezes all active data transit pipelines.',
-      'C) The system automatically extends the administrative correction hold window by an additional 14 days.',
-      'D) The mounting brackets release the chassis anchor screws to maximise structural thermal ventilation.'
-    ],
-    answer: 'B) The array enters an automated lockdown state, flashes a red warning indicator, and freezes all active data transit pipelines.',
-    method: 'The Critical Security Override section states: a 5°C temperature spike causes the S4 to "force an automated lockdown state. This diagnostic response triggers a red warning indicator on the external faceplate and freezes all active data transit pipelines." Options A, C, and D are fabricated distractors referencing concepts from other passages.'
-  },
-  { group: 'L19', type: 'multiple_choice', category: 'Technical Manual', context: ctxL19,
-    question: 'What protocol must a network administrator follow to restore the S4 firewall array to active operation after an automated thermal lockdown has been triggered?',
-    options: [
-      'A) The administrator can easily clear the error state by logging into a remote network management desk.',
-      'B) The administrator must adjust the maximum continuous airflow differential to exactly 45 kPa via an online portal.',
-      'C) The administrator must execute a physical hardware line purge directly via the localised system interface.',
-      'D) The chassis anchor screws must be manually sprayed with an approved petroleum-based solvent.'
-    ],
-    answer: 'C) The administrator must execute a physical hardware line purge directly via the localised system interface.',
-    method: 'The manual explicitly states: "To exit this lockdown state, an administrator must execute a physical hardware line purge via the localised system interface; the security array cannot be reset electronically from a remote network management desk." Option A directly contradicts this. Options B and D are fabricated distractors.'
-  },
-  { group: 'L19', type: 'true_false_matrix', category: 'Technical Manual', context: ctxL19,
-    question: 'Evaluate the accuracy of the following operational procedures:',
-    options: [
-      'Utilising an anchor screw with a stripped thread is acceptable during an emergency deployment provided the secondary slot bracket is rated to 15 kN.',
-      'The chassis particulate filter element is designed to operate safely under a maximum continuous static airflow pressure differential of 22 kilopascals (kPa).',
-      'Exposing the synthetic chassis cooling seals to petroleum-based cleaning agents requires their permanent retirement from service.'
-    ],
-    answer: 'False,True,True',
-    method: 'A — Any screw with thread stripping "must be instantly disqualified from service." The manual also forbids "combining unrated fasteners or mixing mismatched alloy brackets to secure a single mounting corner." No exception exists for emergency deployments. False. B — "This filter element is certified to operate safely under a maximum continuous static airflow pressure differential of 22 kilopascals (kPa)." True. C — Synthetic sealing elements "must be permanently retired from service if exposed to petroleum-based cleaning agents." True.'
   },
 
   // ── Set 10 (original batch): The Connected Grid / Public Policy Whitepaper ──
