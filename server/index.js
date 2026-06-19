@@ -1340,6 +1340,35 @@ const ctxPR10 = {
   ]}]
 }
 
+// ── Cylinder geometry contexts ────────────────────────────────────────────────
+
+const ctxCylW = {
+  title: 'The Water Tank',
+  subtitle: 'A municipal water tank is a perfect cylinder with a radius (r) of 3 m and a total height (h) of 5 m.',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Area of a circle',      'πr²'],
+      ['Circumference',         '2πr'],
+      ['Volume of a cylinder',  'πr²h'],
+      ['π (pi)',                '3.14'],
+    ]
+  }]
+}
+
+const ctxCylP = {
+  title: 'The Circular Above-Ground Pool',
+  subtitle: 'An above-ground circular pool has a radius (r) of 2.5 m and a height (h) of 1.2 m.',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Area of a circle',     'πr²'],
+      ['Volume of a cylinder', 'πr²h'],
+      ['π (pi)',               '3.14'],
+    ]
+  }]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -2889,6 +2918,38 @@ const questions = [
     answer: '75480'
   },
 
+  // ── Set CR: The Water Tank ────────────────────────────────────────────────
+  {
+    group: 'CR', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxCylW,
+    question: 'What is the total closed surface area of the tank (base, top, and curved side wall)? Round to the nearest whole number.',
+    options: ['75 m²', '151 m²', '122 m²', '94 m²'],
+    answer: '151 m²'
+  },
+  {
+    group: 'CR', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxCylW,
+    question: 'If the tank is filled to 80% of its total capacity, what is the volume of water in cubic metres?',
+    options: ['113.04 m³', '141.3 m³', '90.43 m³', '85.2 m³'],
+    answer: '113.04 m³'
+  },
+
+  // ── Set CS: The Circular Pool ─────────────────────────────────────────────
+  {
+    group: 'CS', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxCylP,
+    question: 'What is the area of the ground covered by the pool (the base)?',
+    options: ['15.7 m²', '19.6 m²', '7.85 m²', '25 m²'],
+    answer: '19.6 m²'
+  },
+  {
+    group: 'CS', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxCylP,
+    question: 'What is the maximum volume of water the pool can hold in cubic metres?',
+    options: ['23.55 m³', '31.4 m³', '18.84 m³', '9.42 m³'],
+    answer: '23.55 m³'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -2924,6 +2985,8 @@ const units = {
   CO: ['%', '$'],
   CP: ['$', '$'],
   CQ: [null, '$'],
+  CR: [null, null],
+  CS: [null, null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3317,6 +3380,14 @@ const methods = {
   CQ: [
     `Mosman (−5%):    $2,100,000 × 0.95 = $1,995,000\nCottesloe (+8%): $1,650,000 × 1.08 = $1,782,000\n\nMosman ($1,995,000) > Cottesloe ($1,782,000)\nDifference = $1,995,000 − $1,782,000 = $213,000`,
     `Toorak median: $1,850,000\n20% deposit = $1,850,000 × 0.20 = $370,000\nBase loan = $1,850,000 − $370,000 = $1,480,000\n\nStamp duty (5% of purchase price) = $1,850,000 × 0.05 = $92,500\nBundled loan total = $1,480,000 + $92,500 = $1,572,500\n\nTier 1 Bank rate = 4.80%\nYear 1 interest = $1,572,500 × 0.048 = $75,480`,
+  ],
+  CR: [
+    `Closed cylinder surface area = 2πr² + 2πrh\n\nTwo circular faces:  2 × 3.14 × 3² = 2 × 3.14 × 9 = 56.52 m²\nCurved side wall:    2 × 3.14 × 3 × 5 = 94.2 m²\n\nTotal = 56.52 + 94.2 = 150.72 ≈ 151 m²`,
+    `Total volume = πr²h = 3.14 × 3² × 5 = 3.14 × 9 × 5 = 141.3 m³\n\n80% capacity = 141.3 × 0.80 = 113.04 m³`,
+  ],
+  CS: [
+    `Base area = πr² = 3.14 × 2.5² = 3.14 × 6.25 = 19.625 m²\n\nRounded to one decimal place: 19.6 m²`,
+    `Volume = πr²h = 3.14 × 2.5² × 1.2 = 3.14 × 6.25 × 1.2 = 23.55 m³`,
   ],
 }
 
