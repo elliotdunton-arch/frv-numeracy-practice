@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getUsername, setUsername, getResultsForUser, getKnownUsers } from '../utils/resultStorage'
 
 const NUMERACY_CATEGORIES = [
   {
@@ -73,6 +74,157 @@ const SECTION_CONTENT = {
     categories: ABSTRACT_CATEGORIES,
     calcNote: false,
   },
+}
+
+const SECTION_LABEL = { numeracy: 'Numeracy', literacy: 'Literacy', abstract: 'Abstract' }
+
+function formatDate(isoDate) {
+  const d = new Date(isoDate + 'T12:00:00')
+  return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+}
+
+function formatTime(secs) {
+  const m = Math.floor(secs / 60)
+  const s = secs % 60
+  return `${m}:${String(s).padStart(2, '0')}`
+}
+
+function ProgressLog() {
+  const [currentUser, setCurrentUser] = useState(() => getUsername())
+  const [results, setResults] = useState(() => currentUser ? getResultsForUser(currentUser) : [])
+  const [switchMode, setSwitchMode] = useState(false) // false | 'pick'
+  const [newNameInput, setNewNameInput] = useState('')
+
+  const knownUsers = getKnownUsers()
+
+  const switchTo = (name) => {
+    setUsername(name)
+    setCurrentUser(name)
+    setResults(getResultsForUser(name))
+    setSwitchMode(false)
+    setNewNameInput('')
+  }
+
+  const handleNewName = () => {
+    const t = newNameInput.trim()
+    if (!t) return
+    switchTo(t)
+  }
+
+  if (!currentUser && knownUsers.length === 0) return null
+
+  const avgPct = results.length
+    ? Math.round(results.reduce((s, r) => s + r.pct, 0) / results.length)
+    : null
+
+  return (
+    <div className="progress-log">
+      <div className="progress-log-header">
+        <div className="progress-log-title">
+          <span>Progress Log</span>
+          {currentUser && (
+            <span className="progress-log-user"> — {currentUser}</span>
+          )}
+        </div>
+        <button
+          className="progress-switch-btn"
+          onClick={() => { setSwitchMode(m => !m); setNewNameInput('') }}
+        >
+          {switchMode ? 'Cancel' : 'Switch user'}
+        </button>
+      </div>
+
+      {switchMode && (
+        <div className="progress-switch-panel">
+          {knownUsers.length > 0 && (
+            <div className="progress-known-users">
+              {knownUsers.map(name => (
+                <button
+                  key={name}
+                  className={`progress-user-chip${name === currentUser ? ' puc-active' : ''}`}
+                  onClick={() => switchTo(name)}
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+          )}
+          <div className="progress-new-name-row">
+            <input
+              type="text"
+              className="record-name-input"
+              value={newNameInput}
+              onChange={e => setNewNameInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleNewName()}
+              placeholder="Or enter a new name…"
+              maxLength={50}
+            />
+            <button
+              className="btn-record-save"
+              onClick={handleNewName}
+              disabled={!newNameInput.trim()}
+            >
+              Switch
+            </button>
+          </div>
+        </div>
+      )}
+
+      {!switchMode && currentUser && (
+        <>
+          {results.length === 0 ? (
+            <p className="progress-empty">No results recorded yet. Take a test and click <strong>Record Result</strong> to start tracking your progress.</p>
+          ) : (
+            <>
+              <div className="progress-summary">
+                <span className="ps-stat"><strong>{results.length}</strong> test{results.length !== 1 ? 's' : ''} recorded</span>
+                <span className="ps-divider">·</span>
+                <span className="ps-stat">Average score: <strong>{avgPct}%</strong></span>
+                <span className="ps-divider">·</span>
+                <span className="ps-stat">Best: <strong>{Math.max(...results.map(r => r.pct))}%</strong></span>
+              </div>
+              <div className="progress-table-wrap">
+                <table className="progress-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Section</th>
+                      <th>Score</th>
+                      <th>%</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {results.map(r => (
+                      <tr key={r.id}>
+                        <td>{formatDate(r.date)}</td>
+                        <td>
+                          <span className={`progress-section-badge psb-${r.section}`}>
+                            {SECTION_LABEL[r.section] || r.section}
+                          </span>
+                        </td>
+                        <td>{r.score} / {r.total}</td>
+                        <td>
+                          <span className={r.pct >= 70 ? 'progress-pass' : 'progress-fail'}>
+                            {r.pct}%
+                          </span>
+                        </td>
+                        <td>{formatTime(r.timeSecs)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
+        </>
+      )}
+
+      {!switchMode && !currentUser && (
+        <p className="progress-empty">Record a result after completing a test to start tracking your progress.</p>
+      )}
+    </div>
+  )
 }
 
 export default function Home({ onStart, loading, error, section, onSectionChange }) {
@@ -237,6 +389,8 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               : `Start Practice — ${customCount} Question${customCount !== 1 ? 's' : ''}`}
         </button>
       </div>
+
+      <ProgressLog />
     </div>
   )
 }

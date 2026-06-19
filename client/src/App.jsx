@@ -76,6 +76,7 @@ export default function App() {
           startTime={startTime}
           endTime={endTime}
           timeExpired={timeExpired}
+          section={section}
           onRestart={restartTest}
         />
       )}

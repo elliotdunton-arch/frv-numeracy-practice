@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getUsername, setUsername as storeUsername, saveResult } from '../utils/resultStorage'
 
 function isCorrect(q, userAnswer) {
   if (q.type === 'true_false_matrix') {
@@ -15,8 +16,10 @@ function isCorrect(q, userAnswer) {
   return clean(userAnswer).toLowerCase() === clean(q.answer).toLowerCase()
 }
 
-export default function Results({ questions, answers, startTime, endTime, timeExpired, onRestart }) {
+export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart }) {
   const [expandedWorking, setExpandedWorking] = useState({})
+  const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
+  const [nameInput, setNameInput] = useState('')
 
   const score = questions.filter(q => isCorrect(q, answers[q.id])).length
   const total = questions.length
@@ -37,6 +40,36 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
 
   const toggleWorking = (id) => {
     setExpandedWorking(prev => ({ ...prev, [id]: !prev[id] }))
+  }
+
+  const doSave = (username) => {
+    saveResult({
+      id: Date.now(),
+      username,
+      date: new Date().toISOString().split('T')[0],
+      section: section || 'numeracy',
+      score,
+      total,
+      pct,
+      timeSecs: elapsed,
+    })
+    setRecordState('saved')
+  }
+
+  const handleRecord = () => {
+    const existing = getUsername()
+    if (existing) {
+      doSave(existing)
+    } else {
+      setRecordState('name-needed')
+    }
+  }
+
+  const handleSaveName = () => {
+    const trimmed = nameInput.trim()
+    if (!trimmed) return
+    storeUsername(trimmed)
+    doSave(trimmed)
   }
 
   return (
@@ -64,6 +97,43 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
             </div>
             <div className="score-note">Pass mark: 70%</div>
           </div>
+        </div>
+
+        {/* Record Result */}
+        <div className="record-result-card">
+          {recordState === 'idle' && (
+            <button className="btn-record" onClick={handleRecord}>
+              Record Result
+            </button>
+          )}
+          {recordState === 'name-needed' && (
+            <div className="record-name-prompt">
+              <p>Enter your name to save this result:</p>
+              <div className="record-name-row">
+                <input
+                  type="text"
+                  className="record-name-input"
+                  value={nameInput}
+                  onChange={e => setNameInput(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleSaveName()}
+                  placeholder="Your name"
+                  autoFocus
+                  maxLength={50}
+                />
+                <button
+                  className="btn-record-save"
+                  onClick={handleSaveName}
+                  disabled={!nameInput.trim()}
+                >
+                  Save
+                </button>
+              </div>
+              <p className="record-name-hint">Your name is saved on this device. You can view your progress log on the home page.</p>
+            </div>
+          )}
+          {recordState === 'saved' && (
+            <p className="record-saved">✓ Result saved for <strong>{getUsername()}</strong></p>
+          )}
         </div>
 
         <div className="section-card">
