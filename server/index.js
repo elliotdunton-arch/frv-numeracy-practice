@@ -1446,6 +1446,21 @@ const ctxCylP = {
   }]
 }
 
+// ── Standard drinks context ───────────────────────────────────────────────────
+
+const ctxSD = {
+  title: 'Standard Drinks',
+  subtitle: 'In Australia, 1 standard drink contains 10 grams of pure alcohol (ethanol density = 0.789 g/mL).',
+  tables: [{
+    headers: ['Formula', 'Expression'],
+    rows: [
+      ['Standard drinks', 'Volume (mL) × %ABV ÷ 100 × 0.789 ÷ 10'],
+      ['Simplified',      'Volume (mL) × %ABV × 0.000789'],
+    ]
+  }],
+  note: 'The Australian health guideline recommends no more than 4 standard drinks on any single occasion.'
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -3107,6 +3122,96 @@ const questions = [
     answer: '75 mins'
   },
 
+  // ── Set CY: Standard Drinks — Beer ───────────────────────────────────────────
+  {
+    group: 'CY', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks on a single occasion. You are drinking 375ml bottles of beer with 4.8% alcohol. What is the maximum number of full bottles you can drink to stay under the 4-drink limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '2'
+  },
+
+  // ── Set CZ: Standard Drinks — Wine ───────────────────────────────────────────
+  {
+    group: 'CZ', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 150ml glasses of wine with 13.5% alcohol. What is the maximum number of full glasses you can drink to stay under the limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '2'
+  },
+
+  // ── Set DA: Standard Drinks — Light Beer ─────────────────────────────────────
+  {
+    group: 'DA', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 375ml bottles of light beer with 2.7% alcohol. What is the maximum number of full bottles you can drink to stay under the limit?',
+    options: ['3', '4', '5', '6'],
+    answer: '5'
+  },
+
+  // ── Set DB: Standard Drinks — Cider ──────────────────────────────────────────
+  {
+    group: 'DB', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 330ml bottles of cider with 5.0% alcohol. What is the maximum number of full bottles you can drink to stay under the limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '3'
+  },
+
+  // ── Set DC: Standard Drinks — Spirits ────────────────────────────────────────
+  {
+    group: 'DC', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 30ml nips of spirits with 40% alcohol. What is the maximum number of full nips you can drink to stay under the limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '4'
+  },
+
+  // ── Set DD: Standard Drinks — Stout ──────────────────────────────────────────
+  {
+    group: 'DD', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 330ml bottles of stout with 6.0% alcohol. What is the maximum number of full bottles you can drink to stay under the limit?',
+    options: ['1', '2', '3', '4'],
+    answer: '2'
+  },
+
+  // ── Set DE: Standard Drinks — Premix Vodka ───────────────────────────────────
+  {
+    group: 'DE', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 375ml bottles of premix vodka with 5.0% alcohol. What is the maximum number of full bottles you can drink to stay under the limit?',
+    options: ['1', '2', '3', '4'],
+    answer: '2'
+  },
+
+  // ── Set DF: Standard Drinks — Sparkling Wine ─────────────────────────────────
+  {
+    group: 'DF', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 120ml glasses of sparkling wine with 11.5% alcohol. What is the maximum number of full glasses you can drink to stay under the limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '3'
+  },
+
+  // ── Set DG: Standard Drinks — Pale Ale ───────────────────────────────────────
+  {
+    group: 'DG', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 375ml bottles of pale ale with 5.2% alcohol. What is the maximum number of full bottles you can drink to stay under the limit?',
+    options: ['1', '2', '3', '4'],
+    answer: '2'
+  },
+
+  // ── Set DH: Standard Drinks — Liqueur ────────────────────────────────────────
+  {
+    group: 'DH', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxSD,
+    question: 'The health recommendation is to drink no more than 4 standard drinks. You are drinking 60ml glasses of liqueur with 20% alcohol. What is the maximum number of full glasses you can drink to stay under the limit?',
+    options: ['2', '3', '4', '5'],
+    answer: '4'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -3149,6 +3254,8 @@ const units = {
   CV: [null, null],
   CW: [null, null],
   CX: [null, null],
+  CY: [null], CZ: [null], DA: [null], DB: [null], DC: [null],
+  DD: [null], DE: [null], DF: [null], DG: [null], DH: [null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -3570,6 +3677,36 @@ const methods = {
   CX: [
     `Chocolate Bar + Latte = 1,000 + 700 = 1,700 kJ\n\n1,700 ÷ 700 (kJ/hr yoga) = 2.4286 ≈ 2.4 hours`,
     `2 × Dried Fruit = 2 × 500 = 1,000 kJ\n\nTime = (1,000 ÷ 800) × 60 = 1.25 × 60 = 75 mins`,
+  ],
+  CY: [
+    `SD per bottle = 375 × 4.8 ÷ 100 × 0.789 ÷ 10\n  = 375 × 0.048 × 0.789 ÷ 10\n  = 14.202 ÷ 10\n  = 1.42 standard drinks\n\nMax full bottles under 4 SD:\n  2 × 1.42 = 2.84 SD ✓ (under limit)\n  3 × 1.42 = 4.26 SD ✗ (over limit)\n\nMaximum = 2 bottles`,
+  ],
+  CZ: [
+    `SD per glass = 150 × 13.5 ÷ 100 × 0.789 ÷ 10\n  = 150 × 0.135 × 0.789 ÷ 10\n  = 15.98 ÷ 10\n  = 1.60 standard drinks\n\nMax full glasses under 4 SD:\n  2 × 1.60 = 3.19 SD ✓ (under limit)\n  3 × 1.60 = 4.79 SD ✗ (over limit)\n\nMaximum = 2 glasses`,
+  ],
+  DA: [
+    `SD per bottle = 375 × 2.7 ÷ 100 × 0.789 ÷ 10\n  = 375 × 0.027 × 0.789 ÷ 10\n  = 7.989 ÷ 10\n  = 0.80 standard drinks\n\nMax full bottles under 4 SD:\n  5 × 0.80 = 3.99 SD ✓ (just under limit)\n  6 × 0.80 = 4.79 SD ✗ (over limit)\n\nMaximum = 5 bottles`,
+  ],
+  DB: [
+    `SD per bottle = 330 × 5.0 ÷ 100 × 0.789 ÷ 10\n  = 330 × 0.05 × 0.789 ÷ 10\n  = 13.02 ÷ 10\n  = 1.30 standard drinks\n\nMax full bottles under 4 SD:\n  3 × 1.30 = 3.91 SD ✓ (under limit)\n  4 × 1.30 = 5.21 SD ✗ (over limit)\n\nMaximum = 3 bottles`,
+  ],
+  DC: [
+    `SD per nip = 30 × 40 ÷ 100 × 0.789 ÷ 10\n  = 30 × 0.40 × 0.789 ÷ 10\n  = 9.468 ÷ 10\n  = 0.947 standard drinks\n\nMax full nips under 4 SD:\n  4 × 0.947 = 3.79 SD ✓ (under limit)\n  5 × 0.947 = 4.73 SD ✗ (over limit)\n\nMaximum = 4 nips`,
+  ],
+  DD: [
+    `SD per bottle = 330 × 6.0 ÷ 100 × 0.789 ÷ 10\n  = 330 × 0.06 × 0.789 ÷ 10\n  = 15.62 ÷ 10\n  = 1.56 standard drinks\n\nMax full bottles under 4 SD:\n  2 × 1.56 = 3.12 SD ✓ (under limit)\n  3 × 1.56 = 4.69 SD ✗ (over limit)\n\nMaximum = 2 bottles`,
+  ],
+  DE: [
+    `SD per bottle = 375 × 5.0 ÷ 100 × 0.789 ÷ 10\n  = 375 × 0.05 × 0.789 ÷ 10\n  = 14.794 ÷ 10\n  = 1.48 standard drinks\n\nMax full bottles under 4 SD:\n  2 × 1.48 = 2.96 SD ✓ (under limit)\n  3 × 1.48 = 4.44 SD ✗ (over limit)\n\nMaximum = 2 bottles`,
+  ],
+  DF: [
+    `SD per glass = 120 × 11.5 ÷ 100 × 0.789 ÷ 10\n  = 120 × 0.115 × 0.789 ÷ 10\n  = 10.888 ÷ 10\n  = 1.09 standard drinks\n\nMax full glasses under 4 SD:\n  3 × 1.09 = 3.27 SD ✓ (under limit)\n  4 × 1.09 = 4.35 SD ✗ (over limit)\n\nMaximum = 3 glasses`,
+  ],
+  DG: [
+    `SD per bottle = 375 × 5.2 ÷ 100 × 0.789 ÷ 10\n  = 375 × 0.052 × 0.789 ÷ 10\n  = 15.386 ÷ 10\n  = 1.54 standard drinks\n\nMax full bottles under 4 SD:\n  2 × 1.54 = 3.08 SD ✓ (under limit)\n  3 × 1.54 = 4.62 SD ✗ (over limit)\n\nMaximum = 2 bottles`,
+  ],
+  DH: [
+    `SD per glass = 60 × 20 ÷ 100 × 0.789 ÷ 10\n  = 60 × 0.20 × 0.789 ÷ 10\n  = 9.468 ÷ 10\n  = 0.947 standard drinks\n\nMax full glasses under 4 SD:\n  4 × 0.947 = 3.79 SD ✓ (under limit)\n  5 × 0.947 = 4.73 SD ✗ (over limit)\n\nMaximum = 4 glasses`,
   ],
 }
 
