@@ -104,6 +104,7 @@ body {
 
 .section-toggle-btn:hover { color: white; background: rgba(255,255,255,0.1); }
 .section-toggle-btn.stb-active { background: white; color: var(--navy); }
+.section-toggle-btn.stb-progress { border-left: 1px solid rgba(255,255,255,0.15); margin-left: 4px; }
 
 .home-card {
   background: white;
@@ -1934,12 +1935,13 @@ body {
 ══════════════════════════════════════ */
 
 .progress-log {
-  max-width: min(820px, 96vw);
-  margin: 0 auto 48px;
+  width: 100%;
+  max-width: 660px;
   background: #fff;
-  border: 1.5px solid var(--gray-200);
-  border-radius: 14px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .progress-log-header {
@@ -2099,7 +2101,7 @@ body {
 
   .breakdown-cat { width: 100px; font-size: 0.8rem; }
 
-  .progress-log { margin: 24px 16px; }
+  .progress-log { max-width: 96vw; }
   .progress-table-wrap { overflow-x: auto; }
   .progress-table th, .progress-table td { font-size: 0.8rem; padding: 8px 10px; }
 }

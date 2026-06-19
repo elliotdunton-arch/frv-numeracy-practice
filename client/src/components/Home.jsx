@@ -228,8 +228,14 @@ function ProgressLog() {
 }
 
 export default function Home({ onStart, loading, error, section, onSectionChange }) {
+  const [activeTab, setActiveTab] = useState(section) // 'numeracy' | 'literacy' | 'abstract' | 'progress'
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab)
+    if (tab !== 'progress') onSectionChange(tab)
+  }
 
   const presets = [5, 10, 20, 30]
 
@@ -248,37 +254,47 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   }
 
   const content = SECTION_CONTENT[section] || SECTION_CONTENT.numeracy
+  const heroTitle = activeTab === 'progress' ? 'Progress Log' : content.title
+  const heroSub = activeTab === 'progress' ? 'Track your test results over time' : 'Aptitude Assessment — Recruitment Preparation'
 
   return (
     <div className="home">
       <div className="home-hero">
         <div className="hero-badge">Fire Rescue Victoria</div>
-        <h1>{content.title}</h1>
-        <p className="hero-sub">Aptitude Assessment — Recruitment Preparation</p>
+        <h1>{heroTitle}</h1>
+        <p className="hero-sub">{heroSub}</p>
 
         <div className="section-toggle">
           <button
-            className={`section-toggle-btn${section === 'numeracy' ? ' stb-active' : ''}`}
-            onClick={() => onSectionChange('numeracy')}
+            className={`section-toggle-btn${activeTab === 'numeracy' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('numeracy')}
           >
             Numeracy
           </button>
           <button
-            className={`section-toggle-btn${section === 'literacy' ? ' stb-active' : ''}`}
-            onClick={() => onSectionChange('literacy')}
+            className={`section-toggle-btn${activeTab === 'literacy' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('literacy')}
           >
             Literacy
           </button>
           <button
-            className={`section-toggle-btn${section === 'abstract' ? ' stb-active' : ''}`}
-            onClick={() => onSectionChange('abstract')}
+            className={`section-toggle-btn${activeTab === 'abstract' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('abstract')}
           >
-            Abstract Reasoning
+            Abstract (beta)
+          </button>
+          <button
+            className={`section-toggle-btn stb-progress${activeTab === 'progress' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('progress')}
+          >
+            Progress
           </button>
         </div>
       </div>
 
-      <div className="home-card">
+      {activeTab === 'progress' && <ProgressLog />}
+
+      {activeTab !== 'progress' && <div className="home-card">
         <p className="card-desc">{content.desc}</p>
 
         <div className="mode-selector">
@@ -388,9 +404,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               ? 'Start Test'
               : `Start Practice — ${customCount} Question${customCount !== 1 ? 's' : ''}`}
         </button>
-      </div>
-
-      <ProgressLog />
+      </div>}
     </div>
   )
 }
