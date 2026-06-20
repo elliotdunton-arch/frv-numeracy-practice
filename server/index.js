@@ -1618,7 +1618,7 @@ const ctxSD = {
 const questions = [
 
   // ── Set 1: Sarah Chen — $55/hr, weekdays only ────────────────────────────
-  // Q1 hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 highest: Thu 8.5×55 = $467.50
+  // Q1 hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 total pay: 40.25×55 = $2,213.75
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
@@ -1628,12 +1628,12 @@ const questions = [
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
-    question: 'Calculate Sarah\'s earnings for each worked day. What were the total earnings on her highest-earning day?\n(Enter the dollar amount only)',
-    answer: '467.50'
+    question: 'Calculate Sarah\'s total gross pay for the week.\n(Enter the dollar amount only)',
+    answer: '2213.75'
   },
 
   // ── Set 2: Marcus Reid — $62/$93, full week ──────────────────────────────
-  // Q1 hours: 8+7.5+8.25+8+7.5+4 = 43.25   Q2 lowest: Sat 4×93 = $372
+  // Q1 hours: 8+7.5+8.25+8+7.5+4 = 43.25   Q2 total pay: 39.25×62+4×93 = $2,805.50
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
@@ -1643,12 +1643,12 @@ const questions = [
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
-    question: 'Calculate Marcus\'s earnings for each worked day using the applicable rate. What were the total earnings on his lowest-earning day?\n(Enter the dollar amount only)',
-    answer: '372'
+    question: 'Calculate Marcus\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
+    answer: '2805.50'
   },
 
   // ── Set 3: Anika Johansson — $58/hr, 4 weekdays ─────────────────────────
-  // Q1 hours: 7.25+8.5+7+8.25 = 31   Q2 highest: Wed 8.5×58 = $493
+  // Q1 hours: 7.25+8.5+7+8.25 = 31   Q2 total pay: 31×58 = $1,798
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
@@ -1658,12 +1658,12 @@ const questions = [
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
-    question: 'Calculate Anika\'s earnings for each worked day. What were the total earnings on her highest-earning day?\n(Enter the dollar amount only)',
-    answer: '493'
+    question: 'Calculate Anika\'s total gross pay for the week.\n(Enter the dollar amount only)',
+    answer: '1798'
   },
 
   // ── Set 4: Daniel Reyes — $65/$97.50, full week ──────────────────────────
-  // Q1 hours: 8+8.25+7.5+8.5+4+4 = 40.25   Q2 lowest weekday: Thu 7.5×65 = $487.50
+  // Q1 hours: 8+8.25+7.5+8.5+4+4 = 40.25   Q2 total pay: 32.25×65+8×97.50 = $2,876.25
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
@@ -1673,12 +1673,12 @@ const questions = [
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
-    question: 'Calculate Daniel\'s earnings for each weekday shift. What were the total earnings on his lowest-earning weekday?\n(Enter the dollar amount only)',
-    answer: '487.50'
+    question: 'Calculate Daniel\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
+    answer: '2876.25'
   },
 
   // ── Set 5: Lena Petrov — $70/hr, 4 weekdays, 90-min breaks ──────────────
-  // Q1 hours: 8.5+8.5+9.5+8.25 = 34.75   Q2 highest: Wed 9.5×70 = $665
+  // Q1 hours: 8.5+8.5+9.5+8.25 = 34.75   Q2 total pay: 34.75×70 = $2,432.50
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
@@ -1688,12 +1688,12 @@ const questions = [
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
-    question: 'Calculate Lena\'s earnings for each worked day. What were the total earnings on her highest-earning day?\n(Enter the dollar amount only)',
-    answer: '665'
+    question: 'Calculate Lena\'s total gross pay for the week.\n(Enter the dollar amount only)',
+    answer: '2432.50'
   },
 
   // ── Set 6: Omar Hassan — $64/$96/$128, full week ─────────────────────────
-  // Q1 hours: 8+9+7.5+8.25+7.5+3.5 = 43.75   Q2 highest: Sat 7.5×96 = $720
+  // Q1 hours: 8+9+7.5+8.25+7.5+3.5 = 43.75   Q2 total pay: 32.75×64+7.5×96+3.5×128 = $3,264
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
@@ -1703,12 +1703,12 @@ const questions = [
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
-    question: 'Calculate Omar\'s earnings for each worked day using the applicable rate. What were the total earnings on his highest-earning day?\n(Enter the dollar amount only)',
-    answer: '720'
+    question: 'Calculate Omar\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
+    answer: '3264'
   },
 
-  // ── Set 7: Claire Thompson — $68/$102, weekdays only for Q1 ─────────────
-  // Q1 weekday hours: 7.75+8.5+8.5+7.5 = 32.25   Q2 lowest weekday: Thu 7.5×68 = $510
+  // ── Set 7: Claire Thompson — $68/$102, weekdays Q1 / all days Q2 ─────────
+  // Q1 weekday hours: 7.75+8.5+8.5+7.5 = 32.25   Q2 total pay: 32.25×68+4×102 = $2,601
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
@@ -1718,12 +1718,12 @@ const questions = [
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
-    question: 'Calculate Claire\'s earnings for each weekday shift. What were the total earnings on her lowest-earning weekday?\n(Enter the dollar amount only)',
-    answer: '510'
+    question: 'Calculate Claire\'s total gross pay for the week, including her Saturday shift.\n(Enter the dollar amount only)',
+    answer: '2601'
   },
 
-  // ── Set 8: Ben Fitzgerald — $57/$85.50, weekdays for Q1 ─────────────────
-  // Q1 weekday hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 highest: Sat 10×85.5 = $855
+  // ── Set 8: Ben Fitzgerald — $57/$85.50, weekdays Q1 / all days Q2 ────────
+  // Q1 weekday hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 total pay: 40.25×57+10×85.50 = $3,149.25
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
@@ -1733,12 +1733,12 @@ const questions = [
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
-    question: 'Calculate Ben\'s earnings for each worked day using the applicable rate. What were the total earnings on his highest-earning day?\n(Enter the dollar amount only)',
-    answer: '855'
+    question: 'Calculate Ben\'s total gross pay for the week, including his Saturday shift.\n(Enter the dollar amount only)',
+    answer: '3149.25'
   },
 
   // ── Set 9: Nina Vasquez — $72/$108/$144, full week ──────────────────────
-  // Q1 hours: 8+9+8.25+7.5+4+3.5 = 40.25   Q2 highest: Wed 9×72 = $648 (not Sun at $144!)
+  // Q1 hours: 8+9+8.25+7.5+4+3.5 = 40.25   Q2 total pay: 32.75×72+4×108+3.5×144 = $3,294
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
@@ -1748,12 +1748,12 @@ const questions = [
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
-    question: 'Calculate Nina\'s earnings for each worked day using the applicable rate. What were the total earnings on her highest-earning day?\n(Enter the dollar amount only)',
-    answer: '648'
+    question: 'Calculate Nina\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
+    answer: '3294'
   },
 
-  // ── Set 10: Adrian Kowalczyk — $66/$99/$132, weekdays for Q1 ────────────
-  // Q1 weekday hours: 7.75+8.5+9+8 = 33.25   Q2 lowest all days: Mon 7.75×66 = $511.50
+  // ── Set 10: Adrian Kowalczyk — $66/$99/$132, weekdays Q1 / all days Q2 ──
+  // Q1 weekday hours: 7.75+8.5+9+8 = 33.25   Q2 total pay: 33.25×66+7.5×99+6×132 = $3,729
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
@@ -1763,8 +1763,8 @@ const questions = [
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
-    question: 'Calculate Adrian\'s earnings for each worked day using the applicable rate. What were the total earnings on his lowest-earning day?\n(Enter the dollar amount only)',
-    answer: '511.50'
+    question: 'Calculate Adrian\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
+    answer: '3729'
   },
 
   // ── Set K: Station Alpha — Toyota HiLux $45k, funding $32,500 ───────────
@@ -3745,43 +3745,43 @@ const units = {
 const methods = {
   A: [
     `For each worked day, calculate: Duration = End time − Start time, then subtract Non-Billable time.\n(15 min = 0.25 h  |  30 min = 0.50 h  |  45 min = 0.75 h  |  60 min = 1.00 h)\n\n  Mon: 3:30pm − 7:00am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 4:00pm − 7:00am = 9.00 h − 0.75 h = 8.25 h\n  Wed: 3:00pm − 7:00am = 8.00 h − 0.50 h = 7.50 h\n  Thu: 4:30pm − 7:00am = 9.50 h − 1.00 h = 8.50 h\n  Fri: 3:30pm − 7:00am = 8.50 h − 0.50 h = 8.00 h\n\nTotal: 8.00 + 8.25 + 7.50 + 8.50 + 8.00 = 40.25 h`,
-    `Multiply each day's billable hours × $55.00/hr:\n\n  Mon: 8.00 h × $55 = $440.00\n  Tue: 8.25 h × $55 = $453.75\n  Wed: 7.50 h × $55 = $412.50\n  Thu: 8.50 h × $55 = $467.50  ← highest\n  Fri: 8.00 h × $55 = $440.00\n\nHighest-earning day: Thursday = $467.50`,
+    `Multiply each day's billable hours × $55.00/hr, then sum:\n\n  Mon: 8.00 h × $55 = $440.00\n  Tue: 8.25 h × $55 = $453.75\n  Wed: 7.50 h × $55 = $412.50\n  Thu: 8.50 h × $55 = $467.50\n  Fri: 8.00 h × $55 = $440.00\n\nTotal gross pay: $440.00 + $453.75 + $412.50 + $467.50 + $440.00 = $2,213.75`,
   ],
   B: [
     `For each worked day, calculate billable hours = Duration − Non-Billable time.\n\n  Mon: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Wed: 3:30pm − 6:30am = 9.00 h − 0.75 h = 8.25 h\n  Thu: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Fri: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Sat: 12:00pm − 8:00am = 4.00 h (no Non-Billable)\n\nTotal (full week): 8.00 + 7.50 + 8.25 + 8.00 + 7.50 + 4.00 = 43.25 h`,
-    `Apply the applicable rate to each worked day:\n\n  Mon: 8.00 h × $62 (weekday) = $496.00\n  Tue: 7.50 h × $62 (weekday) = $465.00\n  Wed: 8.25 h × $62 (weekday) = $511.50\n  Thu: 8.00 h × $62 (weekday) = $496.00\n  Fri: 7.50 h × $62 (weekday) = $465.00\n  Sat: 4.00 h × $93 (weekend) = $372.00  ← lowest\n\nLowest-earning day: Saturday = $372.00`,
+    `Apply the correct rate to each worked day, then sum:\n\n  Mon: 8.00 h × $62 (weekday) = $496.00\n  Tue: 7.50 h × $62 (weekday) = $465.00\n  Wed: 8.25 h × $62 (weekday) = $511.50\n  Thu: 8.00 h × $62 (weekday) = $496.00\n  Fri: 7.50 h × $62 (weekday) = $465.00\n  Sat: 4.00 h × $93 (weekend) = $372.00\n\nTotal gross pay: $496 + $465 + $511.50 + $496 + $465 + $372 = $2,805.50`,
   ],
   C: [
     `Only 4 weekdays were worked (Tuesday was off).\n\n  Mon: 4:00pm − 8:00am = 8.00 h − 0.75 h = 7.25 h\n  Wed: 5:00pm − 7:30am = 9.50 h − 1.00 h = 8.50 h\n  Thu: 3:30pm − 8:00am = 7.50 h − 0.50 h = 7.00 h\n  Fri: 4:30pm − 7:30am = 9.00 h − 0.75 h = 8.25 h\n\nTotal (4 weekdays): 7.25 + 8.50 + 7.00 + 8.25 = 31.00 h`,
-    `Multiply each day's billable hours × $58.00/hr:\n\n  Mon: 7.25 h × $58 = $420.50\n  Wed: 8.50 h × $58 = $493.00  ← highest\n  Thu: 7.00 h × $58 = $406.00\n  Fri: 8.25 h × $58 = $478.50\n\nHighest-earning day: Wednesday = $493.00`,
+    `Multiply each day's billable hours × $58.00/hr, then sum:\n\n  Mon: 7.25 h × $58 = $420.50\n  Wed: 8.50 h × $58 = $493.00\n  Thu: 7.00 h × $58 = $406.00\n  Fri: 8.25 h × $58 = $478.50\n\nTotal gross pay: $420.50 + $493.00 + $406.00 + $478.50 = $1,798.00`,
   ],
   D: [
     `Monday was off. Calculate billable hours for each worked day:\n\n  Tue: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 3:00pm − 6:00am = 9.00 h − 0.75 h = 8.25 h\n  Thu: 2:00pm − 6:00am = 8.00 h − 0.50 h = 7.50 h\n  Fri: 3:30pm − 6:00am = 9.50 h − 1.00 h = 8.50 h\n  Sat: 2:00pm − 10:00am = 4.00 h (no Non-Billable)\n  Sun: 1:00pm − 9:00am = 4.00 h (no Non-Billable)\n\nTotal (full week): 8.00 + 8.25 + 7.50 + 8.50 + 4.00 + 4.00 = 40.25 h`,
-    `Apply the applicable rate to each worked day:\n\n  Tue: 8.00 h × $65 (weekday) = $520.00\n  Wed: 8.25 h × $65 (weekday) = $536.25\n  Thu: 7.50 h × $65 (weekday) = $487.50  ← lowest weekday\n  Fri: 8.50 h × $65 (weekday) = $552.50\n  Sat: 4.00 h × $97.50 (weekend) = $390.00\n  Sun: 4.00 h × $97.50 (weekend) = $390.00\n\nLowest weekday earnings: Thursday = $487.50`,
+    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $65 (weekday)    = $520.00\n  Wed: 8.25 h × $65 (weekday)    = $536.25\n  Thu: 7.50 h × $65 (weekday)    = $487.50\n  Fri: 8.50 h × $65 (weekday)    = $552.50\n  Sat: 4.00 h × $97.50 (weekend) = $390.00\n  Sun: 4.00 h × $97.50 (weekend) = $390.00\n\nTotal gross pay: $520 + $536.25 + $487.50 + $552.50 + $390 + $390 = $2,876.25`,
   ],
   E: [
     `Only 4 weekdays were worked (Thursday was off). Note: 90 min = 1.50 h.\n\n  Mon: 5:00pm − 7:00am = 10.00 h − 1.50 h = 8.50 h\n  Tue: 4:30pm − 7:00am = 9.50 h − 1.00 h = 8.50 h\n  Wed: 6:00pm − 7:00am = 11.00 h − 1.50 h = 9.50 h\n  Fri: 4:00pm − 7:00am = 9.00 h − 0.75 h = 8.25 h\n\nTotal (4 weekdays): 8.50 + 8.50 + 9.50 + 8.25 = 34.75 h`,
-    `Multiply each day's billable hours × $70.00/hr:\n\n  Mon: 8.50 h × $70 = $595.00\n  Tue: 8.50 h × $70 = $595.00\n  Wed: 9.50 h × $70 = $665.00  ← highest\n  Fri: 8.25 h × $70 = $577.50\n\nHighest-earning day: Wednesday = $665.00`,
+    `Multiply each day's billable hours × $70.00/hr, then sum:\n\n  Mon: 8.50 h × $70 = $595.00\n  Tue: 8.50 h × $70 = $595.00\n  Wed: 9.50 h × $70 = $665.00\n  Fri: 8.25 h × $70 = $577.50\n\nTotal gross pay: $595.00 + $595.00 + $665.00 + $577.50 = $2,432.50`,
   ],
   F: [
     `Monday was off. Calculate billable hours for each worked day:\n\n  Tue: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 4:30pm − 6:30am = 10.00 h − 1.00 h = 9.00 h\n  Thu: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Fri: 3:30pm − 6:30am = 9.00 h − 0.75 h = 8.25 h\n  Sat: 1:30pm − 6:00am = 7.50 h (no Non-Billable)\n  Sun: 10:30am − 7:00am = 3.50 h (no Non-Billable)\n\nTotal (full week): 8.00 + 9.00 + 7.50 + 8.25 + 7.50 + 3.50 = 43.75 h`,
-    `Apply the applicable rate to each worked day:\n\n  Tue: 8.00 h × $64 (weekday) = $512.00\n  Wed: 9.00 h × $64 (weekday) = $576.00\n  Thu: 7.50 h × $64 (weekday) = $480.00\n  Fri: 8.25 h × $64 (weekday) = $528.00\n  Sat: 7.50 h × $96 (Saturday) = $720.00  ← highest\n  Sun: 3.50 h × $128 (Sunday) = $448.00\n\nHighest-earning day: Saturday = $720.00`,
+    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $64 (weekday)  = $512.00\n  Wed: 9.00 h × $64 (weekday)  = $576.00\n  Thu: 7.50 h × $64 (weekday)  = $480.00\n  Fri: 8.25 h × $64 (weekday)  = $528.00\n  Sat: 7.50 h × $96 (Saturday) = $720.00\n  Sun: 3.50 h × $128 (Sunday)  = $448.00\n\nTotal gross pay: $512 + $576 + $480 + $528 + $720 + $448 = $3,264.00`,
   ],
   G: [
     `Q1 asks for weekdays only (Friday was off; Saturday is excluded from this total).\n\n  Mon: 3:30pm − 7:00am = 8.50 h − 0.75 h = 7.75 h\n  Tue: 4:00pm − 7:00am = 9.00 h − 0.50 h = 8.50 h\n  Wed: 5:00pm − 7:00am = 10.00 h − 1.50 h = 8.50 h\n  Thu: 3:00pm − 7:00am = 8.00 h − 0.50 h = 7.50 h\n\nTotal (weekdays only): 7.75 + 8.50 + 8.50 + 7.50 = 32.25 h`,
-    `Apply the applicable weekday rate to find the lowest-earning weekday:\n\n  Mon: 7.75 h × $68 = $527.00\n  Tue: 8.50 h × $68 = $578.00\n  Wed: 8.50 h × $68 = $578.00\n  Thu: 7.50 h × $68 = $510.00  ← lowest weekday\n\nLowest weekday earnings: Thursday = $510.00`,
+    `Apply the correct rate to ALL worked days (including Saturday), then sum:\n\n  Mon: 7.75 h × $68 (weekday)   = $527.00\n  Tue: 8.50 h × $68 (weekday)   = $578.00\n  Wed: 8.50 h × $68 (weekday)   = $578.00\n  Thu: 7.50 h × $68 (weekday)   = $510.00\n  Sat: 4.00 h × $102 (Saturday) = $408.00\n\nTotal gross pay: $527 + $578 + $578 + $510 + $408 = $2,601.00`,
   ],
   H: [
     `Q1 asks for weekday hours only (Saturday is excluded from this total).\n\n  Mon: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 3:00pm − 6:00am = 9.00 h − 0.75 h = 8.25 h\n  Wed: 2:00pm − 6:00am = 8.00 h − 0.50 h = 7.50 h\n  Thu: 3:30pm − 6:00am = 9.50 h − 1.00 h = 8.50 h\n  Fri: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n\nTotal (weekdays only): 8.00 + 8.25 + 7.50 + 8.50 + 8.00 = 40.25 h`,
-    `Apply the applicable rate to ALL worked days (including Saturday) to find the highest:\n\n  Mon: 8.00 h × $57 (weekday)  = $456.00\n  Tue: 8.25 h × $57 (weekday)  = $470.25\n  Wed: 7.50 h × $57 (weekday)  = $427.50\n  Thu: 8.50 h × $57 (weekday)  = $484.50\n  Fri: 8.00 h × $57 (weekday)  = $456.00\n  Sat: 4:00pm − 6:00am = 10.00 h × $85.50 (Saturday) = $855.00  ← highest\n\nHighest-earning day: Saturday = $855.00`,
+    `Apply the correct rate to ALL worked days (including Saturday), then sum:\n\n  Mon: 8.00 h × $57.00 (weekday)   = $456.00\n  Tue: 8.25 h × $57.00 (weekday)   = $470.25\n  Wed: 7.50 h × $57.00 (weekday)   = $427.50\n  Thu: 8.50 h × $57.00 (weekday)   = $484.50\n  Fri: 8.00 h × $57.00 (weekday)   = $456.00\n  Sat: 4:00pm − 6:00am = 10.00 h × $85.50 (Saturday) = $855.00\n\nTotal gross pay: $456 + $470.25 + $427.50 + $484.50 + $456 + $855 = $3,149.25`,
   ],
   I: [
     `Monday was off. Calculate billable hours for all other worked days:\n\n  Tue: 2:00pm − 5:30am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 3:30pm − 5:30am = 10.00 h − 1.00 h = 9.00 h\n  Thu: 2:30pm − 5:30am = 9.00 h − 0.75 h = 8.25 h\n  Fri: 1:30pm − 5:30am = 8.00 h − 0.50 h = 7.50 h\n  Sat: 10:00am − 6:00am = 4.00 h (no Non-Billable)\n  Sun: 10:30am − 7:00am = 3.50 h (no Non-Billable)\n\nTotal (full week): 8.00 + 9.00 + 8.25 + 7.50 + 4.00 + 3.50 = 40.25 h`,
-    `Apply the applicable rate to each worked day:\n\n  Tue: 8.00 h × $72 (weekday)  = $576.00\n  Wed: 9.00 h × $72 (weekday)  = $648.00  ← highest\n  Thu: 8.25 h × $72 (weekday)  = $594.00\n  Fri: 7.50 h × $72 (weekday)  = $540.00\n  Sat: 4.00 h × $108 (Saturday) = $432.00\n  Sun: 3.50 h × $144 (Sunday)   = $504.00\n\nHighest-earning day: Wednesday = $648.00`,
+    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $72 (weekday)   = $576.00\n  Wed: 9.00 h × $72 (weekday)   = $648.00\n  Thu: 8.25 h × $72 (weekday)   = $594.00\n  Fri: 7.50 h × $72 (weekday)   = $540.00\n  Sat: 4.00 h × $108 (Saturday) = $432.00\n  Sun: 3.50 h × $144 (Sunday)   = $504.00\n\nTotal gross pay: $576 + $648 + $594 + $540 + $432 + $504 = $3,294.00`,
   ],
   J: [
     `Q1 asks for weekdays only. Wednesday was off.\n\n  Mon: 3:15pm − 6:45am = 8.50 h − 0.75 h = 7.75 h\n  Tue: 4:45pm − 6:45am = 10.00 h − 1.50 h = 8.50 h\n  Thu: 5:15pm − 6:45am = 10.50 h − 1.50 h = 9.00 h\n  Fri: 3:45pm − 6:45am = 9.00 h − 1.00 h = 8.00 h\n\nTotal (weekdays only): 7.75 + 8.50 + 9.00 + 8.00 = 33.25 h`,
-    `Apply the applicable rate to ALL worked days to find the lowest:\n\n  Mon: 7.75 h × $66 (weekday)  = $511.50  ← lowest\n  Tue: 8.50 h × $66 (weekday)  = $561.00\n  Thu: 9.00 h × $66 (weekday)  = $594.00\n  Fri: 8.00 h × $66 (weekday)  = $528.00\n  Sat: 8.50 h − 0.50 h = 7.50 h × $99 (Saturday)  = $742.50\n  Sun: 1:00pm − 7:00am = 6.00 h × $132 (Sunday) = $792.00\n\nLowest-earning day: Monday = $511.50`,
+    `Apply the correct rate to ALL worked days, then sum:\n\n  Mon: 7.75 h × $66 (weekday)   = $511.50\n  Tue: 8.50 h × $66 (weekday)   = $561.00\n  Thu: 9.00 h × $66 (weekday)   = $594.00\n  Fri: 8.00 h × $66 (weekday)   = $528.00\n  Sat: 7.50 h × $99 (Saturday)  = $742.50\n  Sun: 6.00 h × $132 (Sunday)   = $792.00\n\nTotal gross pay: $511.50 + $561 + $594 + $528 + $742.50 + $792 = $3,729.00`,
   ],
   K: [
     `Add all funding sources:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total available funding:     $32,500\n\nShortfall = Purchase price − Total funding\nToyota HiLux: $45,000 − $32,500 = $12,500`,
