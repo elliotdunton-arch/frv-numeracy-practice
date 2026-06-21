@@ -6764,8 +6764,26 @@ const literacyQuestions = [
   }
 ]
 
+app.get('/api/literacy-topics', (req, res) => {
+  const categoryMap = {}
+  literacyQuestions.forEach(q => {
+    if (!categoryMap[q.category]) categoryMap[q.category] = 0
+    categoryMap[q.category]++
+  })
+  const result = Object.entries(categoryMap)
+    .map(([name, questionCount]) => ({ name, questionCount }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+  res.json(result)
+})
+
 app.get('/api/literacy-questions', (req, res) => {
-  const shuffled = shuffleByGroup(literacyQuestions)
+  const { count, categories } = req.query
+  let pool = literacyQuestions
+  if (categories) {
+    const cats = new Set(categories.split(',').map(c => c.trim()))
+    pool = literacyQuestions.filter(q => cats.has(q.category))
+  }
+  const shuffled = shuffleByGroup(pool)
   const final = shuffled.map((q, i) => ({
     id: i + 1,
     type: q.type,
@@ -6779,7 +6797,7 @@ app.get('/api/literacy-questions', (req, res) => {
     unit: null,
     matrixLabels: q.matrixLabels || null
   }))
-  const customCount = req.query.count ? parseInt(req.query.count) : null
+  const customCount = count ? parseInt(count) : null
   res.json(customCount ? final.slice(0, customCount) : final)
 })
 

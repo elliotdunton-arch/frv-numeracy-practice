@@ -21,7 +21,9 @@ export default function App() {
     setError(null)
     try {
       let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : '/api/questions'
-      if (selectedTopics && selectedTopics.length > 0) {
+      if (section === 'literacy' && selectedTopics && selectedTopics.length > 0) {
+        endpoint += '?categories=' + encodeURIComponent(selectedTopics.join(','))
+      } else if (selectedTopics && selectedTopics.length > 0) {
         endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
       }
       const res = await fetch(endpoint)
