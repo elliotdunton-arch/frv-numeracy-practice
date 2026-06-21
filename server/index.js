@@ -1577,6 +1577,128 @@ const ctxUnit = {
   }]
 }
 
+// ── Tech bundle sale contexts (ctxTech1–ctxTech10) ────────────────────────────
+
+const ctxTech1 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Media Studio Laptop', '$1,698.00', '15% off original RRP'],
+      ['SW Series 3 GPS Watch', '$299.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech2 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Workflow 3000 Laptop', '$2,194.00', '20% off original RRP'],
+      ['Slimline XP4 Watch', '$399.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech3 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Xforce Gamer Laptop', '$2,497.00', '20% off original RRP'],
+      ['Alta SportTracker Watch', '$459.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech4 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Media Studio Laptop', '$1,698.00', '15% off original RRP'],
+      ['Slimline XP4 Watch', '$399.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech5 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Workflow 3000 Laptop', '$2,194.00', '20% off original RRP'],
+      ['Alta SportTracker Watch', '$459.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech6 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Xforce Gamer Laptop', '$2,497.00', '20% off original RRP'],
+      ['SW Series 3 GPS Watch', '$299.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech7 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Media Studio Laptop', '$1,698.00', '15% off original RRP'],
+      ['Alta SportTracker Watch', '$459.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech8 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Workflow 3000 Laptop', '$2,194.00', '20% off original RRP'],
+      ['SW Series 3 GPS Watch', '$299.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech9 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Xforce Gamer Laptop', '$2,497.00', '20% off original RRP'],
+      ['Slimline XP4 Watch', '$399.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
+const ctxTech10 = {
+  title: 'TechMart Bundle Deal',
+  subtitle: 'Purchase a laptop and receive 50% off a smartwatch. Finance the full bundle over 52 weekly payments.',
+  tables: [{
+    headers: ['Item', 'Sale Price', 'Details'],
+    rows: [
+      ['Media Studio Laptop', '$1,698.00', '15% off original RRP'],
+      ['Slimline XP4 Watch', '$399.00', '50% off when purchased with laptop'],
+    ]
+  }]
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -3641,6 +3763,208 @@ const questions = [
     answer: '0.8'
   },
 
+  // ── Sets EM–EV: Tech Bundle Sale ─────────────────────────────────────────────
+
+  // EM — Media Studio + SW Series 3 GPS
+  {
+    group: 'EM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech1,
+    question: 'The Media Studio laptop is on sale for $1,698.00, which is 15% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '1997.65'
+  },
+  {
+    group: 'EM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech1,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the SW Series 3 GPS watch at 50% off)',
+    answer: '1847.50'
+  },
+  {
+    group: 'EM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech1,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '35.53'
+  },
+
+  // EN — Workflow 3000 + Slimline XP4
+  {
+    group: 'EN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech2,
+    question: 'The Workflow 3000 laptop is on sale for $2,194.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '2742.50'
+  },
+  {
+    group: 'EN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech2,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Slimline XP4 watch at 50% off)',
+    answer: '2393.50'
+  },
+  {
+    group: 'EN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech2,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '46.03'
+  },
+
+  // EO — Xforce Gamer + Alta SportTracker
+  {
+    group: 'EO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech3,
+    question: 'The Xforce Gamer laptop is on sale for $2,497.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '3121.25'
+  },
+  {
+    group: 'EO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech3,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Alta SportTracker watch at 50% off)',
+    answer: '2726.50'
+  },
+  {
+    group: 'EO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech3,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '52.43'
+  },
+
+  // EP — Media Studio + Slimline XP4
+  {
+    group: 'EP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech4,
+    question: 'The Media Studio laptop is on sale for $1,698.00, which is 15% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '1997.65'
+  },
+  {
+    group: 'EP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech4,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Slimline XP4 watch at 50% off)',
+    answer: '1897.50'
+  },
+  {
+    group: 'EP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech4,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '36.49'
+  },
+
+  // EQ — Workflow 3000 + Alta SportTracker
+  {
+    group: 'EQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech5,
+    question: 'The Workflow 3000 laptop is on sale for $2,194.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '2742.50'
+  },
+  {
+    group: 'EQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech5,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Alta SportTracker watch at 50% off)',
+    answer: '2423.50'
+  },
+  {
+    group: 'EQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech5,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '46.61'
+  },
+
+  // ER — Xforce Gamer + SW Series 3 GPS
+  {
+    group: 'ER', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech6,
+    question: 'The Xforce Gamer laptop is on sale for $2,497.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '3121.25'
+  },
+  {
+    group: 'ER', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech6,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the SW Series 3 GPS watch at 50% off)',
+    answer: '2646.50'
+  },
+  {
+    group: 'ER', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech6,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '50.89'
+  },
+
+  // ES — Media Studio + Alta SportTracker
+  {
+    group: 'ES', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech7,
+    question: 'The Media Studio laptop is on sale for $1,698.00, which is 15% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '1997.65'
+  },
+  {
+    group: 'ES', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech7,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Alta SportTracker watch at 50% off)',
+    answer: '1927.50'
+  },
+  {
+    group: 'ES', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech7,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '37.07'
+  },
+
+  // ET — Workflow 3000 + SW Series 3 GPS
+  {
+    group: 'ET', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech8,
+    question: 'The Workflow 3000 laptop is on sale for $2,194.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '2742.50'
+  },
+  {
+    group: 'ET', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech8,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the SW Series 3 GPS watch at 50% off)',
+    answer: '2343.50'
+  },
+  {
+    group: 'ET', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech8,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '45.07'
+  },
+
+  // EU — Xforce Gamer + Slimline XP4
+  {
+    group: 'EU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech9,
+    question: 'The Xforce Gamer laptop is on sale for $2,497.00, which is 20% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '3121.25'
+  },
+  {
+    group: 'EU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech9,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Slimline XP4 watch at 50% off)',
+    answer: '2696.50'
+  },
+  {
+    group: 'EU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech9,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '51.86'
+  },
+
+  // EV — Media Studio + Slimline XP4
+  {
+    group: 'EV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech10,
+    question: 'The Media Studio laptop is on sale for $1,698.00, which is 15% off its original price. What was the original price?\n(Round to 2 decimal places)',
+    answer: '1997.65'
+  },
+  {
+    group: 'EV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech10,
+    question: 'What is the total bundle cost? (Laptop at sale price, plus the Slimline XP4 watch at 50% off)',
+    answer: '1897.50'
+  },
+  {
+    group: 'EV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTech10,
+    question: 'If the total bundle cost is split into 52 equal weekly payments, how much is each payment?\n(Round to 2 decimal places)',
+    answer: '36.49'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -3762,6 +4086,8 @@ const units = {
   EJ: ['cm³', null],
   EK: ['kL', 'L'],
   EL: ['m³', null],
+  EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
+  ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -4313,6 +4639,56 @@ const methods = {
   EL: [
     `Volume = 10 × 0.5 × 0.8 = 4 m³`,
     `4 m³ ÷ 5 m³ per truck = 0.8 truckloads`,
+  ],
+  EM: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($299.00 × 0.50)\n  = $1,698.00 + $149.50\n  = $1,847.50`,
+    `Weekly payment = Total ÷ 52\n  = $1,847.50 ÷ 52\n  = $35.528…\n  = $35.53 (rounded to 2 decimal places)`,
+  ],
+  EN: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,194.00 ÷ (1 − 0.20)\n  = $2,194.00 ÷ 0.80\n  = $2,742.50`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,194.00 + ($399.00 × 0.50)\n  = $2,194.00 + $199.50\n  = $2,393.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,393.50 ÷ 52\n  = $46.028…\n  = $46.03 (rounded to 2 decimal places)`,
+  ],
+  EO: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,497.00 ÷ (1 − 0.20)\n  = $2,497.00 ÷ 0.80\n  = $3,121.25`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,497.00 + ($459.00 × 0.50)\n  = $2,497.00 + $229.50\n  = $2,726.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,726.50 ÷ 52\n  = $52.432…\n  = $52.43 (rounded to 2 decimal places)`,
+  ],
+  EP: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($399.00 × 0.50)\n  = $1,698.00 + $199.50\n  = $1,897.50`,
+    `Weekly payment = Total ÷ 52\n  = $1,897.50 ÷ 52\n  = $36.490…\n  = $36.49 (rounded to 2 decimal places)`,
+  ],
+  EQ: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,194.00 ÷ (1 − 0.20)\n  = $2,194.00 ÷ 0.80\n  = $2,742.50`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,194.00 + ($459.00 × 0.50)\n  = $2,194.00 + $229.50\n  = $2,423.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,423.50 ÷ 52\n  = $46.605…\n  = $46.61 (rounded to 2 decimal places)`,
+  ],
+  ER: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,497.00 ÷ (1 − 0.20)\n  = $2,497.00 ÷ 0.80\n  = $3,121.25`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,497.00 + ($299.00 × 0.50)\n  = $2,497.00 + $149.50\n  = $2,646.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,646.50 ÷ 52\n  = $50.894…\n  = $50.89 (rounded to 2 decimal places)`,
+  ],
+  ES: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($459.00 × 0.50)\n  = $1,698.00 + $229.50\n  = $1,927.50`,
+    `Weekly payment = Total ÷ 52\n  = $1,927.50 ÷ 52\n  = $37.067…\n  = $37.07 (rounded to 2 decimal places)`,
+  ],
+  ET: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,194.00 ÷ (1 − 0.20)\n  = $2,194.00 ÷ 0.80\n  = $2,742.50`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,194.00 + ($299.00 × 0.50)\n  = $2,194.00 + $149.50\n  = $2,343.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,343.50 ÷ 52\n  = $45.067…\n  = $45.07 (rounded to 2 decimal places)`,
+  ],
+  EU: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $2,497.00 ÷ (1 − 0.20)\n  = $2,497.00 ÷ 0.80\n  = $3,121.25`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $2,497.00 + ($399.00 × 0.50)\n  = $2,497.00 + $199.50\n  = $2,696.50`,
+    `Weekly payment = Total ÷ 52\n  = $2,696.50 ÷ 52\n  = $51.855…\n  = $51.86 (rounded to 2 decimal places)`,
+  ],
+  EV: [
+    `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
+    `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($399.00 × 0.50)\n  = $1,698.00 + $199.50\n  = $1,897.50`,
+    `Weekly payment = Total ÷ 52\n  = $1,897.50 ÷ 52\n  = $36.490…\n  = $36.49 (rounded to 2 decimal places)`,
   ],
 }
 
