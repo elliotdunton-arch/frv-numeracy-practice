@@ -196,6 +196,7 @@ const ctx10 = {
 
 const ctxK1 = {
   title: 'FRV Station Alpha — Fleet Vehicle Assessment',
+  formulaHint: 'Percentage covered = Total Budget ÷ Purchase Price × 100  |  Net cost after n years = Purchase Price − (Annual Fuel Saving × n)',
   tables: [
     {
       heading: 'Vehicle Options',
@@ -1912,19 +1913,19 @@ const questions = [
     answer: '69.81'
   },
 
-  // ── Set K: Station Alpha — Toyota HiLux $45k, funding $32,500 ───────────
-  // Q1 shortfall: 45000 − 32500 = $12,500   Q2 years for Ford Ranger: ⌈38500/2400⌉ = 17
+  // ── Set K: Station Alpha — funding $32,500, Ranger $38,500, Navara vs HiLux net cost ──
+  // Q1 % covered: 32500/38500×100 = 84.42   Q2 Navara net 5yr: 28000, HiLux: 29000, diff: 1000
   {
     group: 'K', type: 'number_input', category: 'Number and Algebra',
     context: ctxK1,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Toyota HiLux?\n(Enter the dollar amount only)',
-    answer: '12500'
+    question: 'What percentage of the Ford Ranger\'s purchase price is covered by the station\'s total available funding?\n(Round to 2 decimal places)',
+    answer: '84.42'
   },
   {
     group: 'K', type: 'number_input', category: 'Number and Algebra',
     context: ctxK1,
-    question: 'After how many complete years would the Ford Ranger\'s annual fuel savings cover its full purchase price?',
-    answer: '17'
+    question: 'Which vehicle has a lower net cost after 5 years — the Nissan Navara or the Toyota HiLux? By how much?\n(Enter the dollar difference only)',
+    answer: '1000'
   },
 
   // ── Set L: Station Bravo — Mitsubishi Triton $34k, funding $23,700 ──────
@@ -4033,7 +4034,7 @@ const questions = [
 const units = {
   A: ['h', '$', '$'],   B: ['h', '$', '$'],   C: ['h', '$', '$'],   D: ['h', '$', '$'],   E: ['h', '$', '$'],
   F: ['h', '$', '$'],   G: ['h', '$', '$'],   H: ['h', '$', '$'],   I: ['h', '$', '$'],   J: ['h', '$', '$'],
-  K: ['$', 'years'], L: ['$', 'years'], M: ['$', '$'],   N: ['$', 'years'], O: ['$', '$'],
+  K: ['%', '$'], L: ['$', 'years'], M: ['$', '$'],   N: ['$', 'years'], O: ['$', '$'],
   P: ['$', 'years'], Q: ['$', '$'],   R: ['$', 'years'], S: ['$', '$'],   T: ['$', '$'],
   U: ['m³', 'L'],  V: ['m³', 'L'],  W: ['m³', 'L'],
   X: ['m²', 'tiles'], Y: ['m²', 'boards'], Z: ['m²', 'pavers'],
@@ -4143,8 +4144,8 @@ const methods = {
     `New rate = Old rate × (1 + percentage increase)\n  = $67.45 × 1.035\n  = $69.81`,
   ],
   K: [
-    `Add all funding sources:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total available funding:     $32,500\n\nShortfall = Purchase price − Total funding\nToyota HiLux: $45,000 − $32,500 = $12,500`,
-    `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Ford Ranger: $38,500 ÷ $2,400/yr = 16.04 years → round up to 17 years\n\n  Check: 16 yrs × $2,400 = $38,400 (not enough)\n         17 yrs × $2,400 = $40,800 (covers the $38,500 price) ✓`,
+    `Total available funding:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total:                       $32,500\n\nPercentage covered = Total Budget ÷ Purchase Price × 100\n  = $32,500 ÷ $38,500 × 100\n  = 0.84415… × 100\n  = 84.42% (rounded to 2 decimal places)`,
+    `Net cost = Purchase Price − (Annual Fuel Saving × 5 years)\n\n  Nissan Navara: $42,000 − ($2,800 × 5) = $42,000 − $14,000 = $28,000\n  Toyota HiLux:  $45,000 − ($3,200 × 5) = $45,000 − $16,000 = $29,000\n\n  Navara has the lower net cost.\n  Difference: $29,000 − $28,000 = $1,000`,
   ],
   L: [
     `Add all funding sources:\n  Fleet operations budget: $12,500\n  Trade-in value:          $11,200\n  Total available funding: $23,700\n\nShortfall = Purchase price − Total funding\nMitsubishi Triton: $34,000 − $23,700 = $10,300`,
