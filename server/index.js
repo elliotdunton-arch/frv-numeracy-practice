@@ -5289,6 +5289,116 @@ const ctxL41 = {
   ]
 }
 
+const ctxL42 = {
+  title: 'Halving the fuel tax was a bad idea: there\'s a fairer alternative',
+  subtitle: 'Economic Policy — The Conversation',
+  paragraphs: [
+    'When governments cut fuel excise as a cost-of-living measure, the policy superficially appears to help households. But economists point out that fuel tax cuts are a blunt instrument: the benefits flow disproportionately to higher-income earners who drive more, while doing little for low-income households that rely on public transport or who spend a smaller proportion of their income on fuel.',
+    'The fiscal cost is significant — billions in foregone revenue — while the impact on pump prices is often quickly absorbed by market fluctuations. Critics argue this approach is unsustainable, particularly at a time when governments need revenue for public services and climate transition investment.',
+    'A fairer alternative, the author argues, would be targeted income support or concession payments that deliver relief directly to those who need it most, rather than an across-the-board subsidy that disproportionately rewards car ownership.'
+  ]
+}
+
+const ctxL43 = {
+  title: 'Labor\'s JobSeeker reforms are a welcome step but fall short of a radical rebuild',
+  subtitle: 'Social Policy — The Conversation',
+  paragraphs: [
+    'The Australian government\'s recent adjustments to the JobSeeker payment rate have been cautiously welcomed by welfare advocates. After years of the base rate sitting below the poverty line, any upward movement represents genuine progress for the hundreds of thousands of Australians who rely on the payment.',
+    'However, analysts and advocates argue the reforms do not go far enough. The increase remains modest relative to the cost of living, and the underlying compliance regime — mutual obligations, activity requirements, and financial penalties — remains largely intact. Critics contend that a true rebuild of the social safety net would require both a substantially higher base rate and a fundamental rethinking of the punitive conditions attached to receiving support.',
+    'The consensus among social policy researchers is that the reforms are a positive but insufficient step: meaningful in direction, limited in scale.'
+  ]
+}
+
+const ctxL44 = {
+  title: 'Worried about your job? Proven ways to ease job insecurity',
+  subtitle: 'Workplace Psychology — The Conversation',
+  paragraphs: [
+    'Job insecurity — the fear of losing one\'s employment or having working conditions deteriorate — is a significant source of psychological stress for millions of workers. Research shows it can impair sleep, erode concentration, and contribute to anxiety and depression, even when job loss does not ultimately occur.',
+    'Psychologists and occupational health researchers have identified a range of practical strategies that can meaningfully reduce the psychological toll of job insecurity. These include reframing perceptions of control, building professional networks, developing transferable skills, and engaging in proactive career planning. Social support — from colleagues, friends, and family — also plays a protective role.',
+    'Importantly, the research emphasises that job insecurity is not purely an individual problem; structural factors in labour markets and workplace cultures contribute significantly. But at the individual level, proven cognitive and behavioural strategies can buffer the worst psychological effects.'
+  ]
+}
+
+const ctxL45 = {
+  title: 'Forever renting: Lessons from New York, California and Europe',
+  subtitle: 'Housing Policy — The Conversation',
+  paragraphs: [
+    'In Australia, renting is often treated as a temporary state — a stepping stone toward homeownership. But in many comparable cities and countries, long-term renting is the norm rather than the exception. New York, California, Germany, and the Netherlands have large, stable populations of permanent renters who raise families, build communities, and grow old in their homes without ever owning them.',
+    'The key difference is policy. In these jurisdictions, strong tenant protections, long-term lease frameworks, rent stabilisation mechanisms, and institutional investment in quality rental housing have created conditions where renting is a viable and dignified long-term housing arrangement.',
+    'The author argues that Australia can draw direct lessons from these models — that "forever renting" does not have to mean insecurity, poor conditions, or social stigma, provided that the policy framework is designed to support renters rather than treat tenure as a failure state.'
+  ]
+}
+
+const ctxL46 = {
+  title: 'Three hours of free power: is Australia\'s scheme fair?',
+  subtitle: 'Energy Policy — The Conversation',
+  paragraphs: [
+    'Several Australian state governments have introduced schemes offering households a period of free or heavily discounted electricity — typically a few hours per day during off-peak periods — as a measure to ease cost-of-living pressures and shift demand away from peak grid load times.',
+    'While the schemes are popular, analysts have raised questions about their equity implications. The benefits are most accessible to households that can shift their energy use — running washing machines, dishwashers, or charging electric vehicles during the free window. This flexibility is far more available to households with stable, daytime routines, those working from home, or those with higher incomes and modern appliances.',
+    'For renters, shift workers, low-income households, and those without energy-intensive appliances, the scheme offers little practical benefit. The central question raised by researchers is whether the policy distributes its benefits equitably across the population, or whether it inadvertently favours those already better positioned to take advantage of it.'
+  ]
+}
+
+const ctxL47 = {
+  title: 'Trees and greenery can cool cities, but only the right type',
+  subtitle: 'Urban Environment — The Conversation',
+  paragraphs: [
+    'As cities face rising temperatures from both climate change and the urban heat island effect, urban greening — planting trees and vegetation in built environments — has been widely promoted as a cooling solution. Research confirms that green infrastructure can meaningfully lower surface and air temperatures in urban areas.',
+    'However, the evidence also shows that not all greenery is equally effective. The cooling benefits depend heavily on species selection, canopy density, water availability, and placement. Some tree species provide dense shade and high levels of evapo-transpiration, while others offer minimal canopy coverage or require irrigation volumes that offset environmental gains. Exotic species planted without regard for local climate conditions may perform poorly.',
+    'Urban planners and ecologists argue that effective cooling strategies require careful, evidence-based selection of plant species matched to local conditions — rather than generic "plant more trees" campaigns. The right type of greenery in the right location delivers significant cooling; the wrong type may provide only marginal benefit.'
+  ]
+}
+
+const ctxL48 = {
+  title: 'Heatwaves: Older people less likely to follow safety advice',
+  subtitle: 'Public Health — The Conversation',
+  paragraphs: [
+    'Older adults are among the most physiologically vulnerable populations during heatwaves, yet public health researchers have found a paradox: despite being at higher risk, older people are consistently less likely than younger age groups to follow established heat safety guidelines.',
+    'Studies show that older adults may underestimate their susceptibility to heat-related illness, feel less urgency to act on health warnings, or face structural barriers such as limited mobility, social isolation, or inadequate housing that make compliance with advice difficult. Some research suggests that prior experience of surviving previous heatwaves creates overconfidence that the current event is manageable.',
+    'Public health authorities argue that heat safety communication must be redesigned to account for these patterns — moving beyond generic advice to targeted, accessible messaging and direct outreach to older residents, particularly those living alone.'
+  ]
+}
+
+const ctxL49 = {
+  title: 'Sydney\'s urban development and the \'food bowl\'',
+  subtitle: 'Urban Planning & Agriculture — The Conversation',
+  paragraphs: [
+    'Sydney\'s outer metropolitan fringe has historically contained some of Australia\'s most productive agricultural land — fertile plains that have supplied fruit, vegetables, and dairy to the city for over a century. This region has been described as Sydney\'s "food bowl."',
+    'Decades of urban expansion have steadily encroached on this agricultural land. As Sydney\'s population has grown and housing development has pushed outward, farmland has been rezoned for residential and industrial use at a significant rate. Researchers estimate that a substantial proportion of the food bowl has already been lost to urban sprawl, with more under threat.',
+    'The consequences extend beyond local food production. The loss of peri-urban farmland reduces regional food security, increases reliance on long supply chains, and eliminates land that stores carbon and supports biodiversity. The author argues that urban development policies must urgently account for the irreversible nature of converting productive agricultural land — once built on, it is effectively gone.'
+  ]
+}
+
+const ctxL50 = {
+  title: 'El Niño declared: What it means for Australia',
+  subtitle: 'Climate Science — The Conversation',
+  paragraphs: [
+    'The declaration of an El Niño event by the Bureau of Meteorology signals a shift in Pacific Ocean and atmospheric conditions that historically brings significant changes to Australia\'s weather patterns. El Niño years are typically associated with reduced rainfall across much of eastern and southern Australia, elevated temperatures, and an increased risk of drought and bushfire.',
+    'The agricultural sector is particularly exposed during El Niño periods. Reduced soil moisture, lower river flows, and water allocation cuts affect crop yields and livestock conditions across the country. Farmers in rain-dependent regions face difficult planning decisions in the face of extended dry periods.',
+    'Beyond agriculture, El Niño conditions raise the risk of more intense and earlier bushfire seasons, heat stress events, and water supply pressures in some urban areas. Authorities and emergency services use El Niño declarations as a trigger for increased preparedness planning.'
+  ]
+}
+
+const ctxL51 = {
+  title: 'Why the heatwave in India and Pakistan is so dangerous',
+  subtitle: 'Climate & Public Health — The Conversation',
+  paragraphs: [
+    'The heatwaves that periodically strike the Indian subcontinent are among the deadliest weather events on Earth. While high temperatures alone are hazardous, climate scientists emphasise that the danger in India and Pakistan is compounded by the combination of extreme heat and high humidity — a combination that overwhelms the human body\'s primary cooling mechanism: sweating.',
+    'When the air is already saturated with moisture, sweat cannot evaporate efficiently. This prevents the body from shedding heat, causing core body temperature to rise rapidly even when individuals are resting in the shade. Researchers use the "wet-bulb temperature" to capture this combined heat-humidity effect; when it reaches certain thresholds, even healthy adults at rest face life-threatening conditions.',
+    'In densely populated regions with limited access to air conditioning, cool water, and shade, the impact is catastrophic — particularly for outdoor workers, the elderly, and those in informal settlements who have no means of escape from the heat.'
+  ]
+}
+
+const ctxL52 = {
+  title: 'World Cup: What is the right height for a soccer player?',
+  subtitle: 'Sports Science — The Conversation',
+  paragraphs: [
+    'The question of ideal physical attributes in elite sport is more complex than it first appears. In soccer, height is neither universally advantageous nor irrelevant — its value depends almost entirely on the player\'s position and role on the field. Goalkeepers and central defenders benefit significantly from height for aerial contests, while forwards and midfielders rely more on agility, low centre of gravity, and explosive acceleration, attributes that do not favour taller players.',
+    'Sports scientists analysing World Cup squads have found that elite teams typically contain a deliberate mix of body types — with shorter, nimble players dominating wide and attacking midfield roles, and taller, physically imposing players in central defensive and goalkeeping positions.',
+    'The research challenges simplistic assumptions about physical traits in sport. Optimal physical characteristics are not universal; they are position-specific, role-dependent, and always moderated by technical skill and tactical intelligence. In elite soccer, the "right" height depends entirely on what the team needs you to do.'
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -6692,6 +6802,149 @@ const literacyQuestions = [
     ],
     answer: 'B) Urgent, warning of the consequences of neglect.',
     method: 'The text describes a "narrowing window" for action, a "feedback loop" accelerating harm, and consequences that are "already visible." These word choices signal urgency and alarm. Option A is the opposite of the article\'s framing. Option C is contradicted by the author\'s direct engagement with climate science. Option D mischaracterises the author\'s position — the findings are presented clearly, not with confusion.'
+  },
+
+  // ── Set 42: Fuel tax ─────────────────────────────────────────────────────────
+  { group: 'L42', type: 'multiple_choice', category: 'Real Articles', context: ctxL42,
+    question: "What is the author's argument regarding the fuel tax policy?",
+    options: [
+      'A) It is the best way to support low-income families.',
+      'B) It is an unsustainable policy and better, more targeted alternatives exist.',
+      'C) Fuel tax should be increased immediately.',
+      'D) The policy has no impact on the budget.'
+    ],
+    answer: 'B) It is an unsustainable policy and better, more targeted alternatives exist.',
+    method: 'The author argues that cutting fuel excise is fiscally costly, benefits higher-income earners disproportionately, and is ultimately unsustainable. A fairer alternative — targeted income support — is explicitly proposed. Option A directly contradicts the author\'s position. Options C and D introduce claims not made in the text.'
+  },
+
+  // ── Set 43: JobSeeker reforms ─────────────────────────────────────────────────
+  { group: 'L43', type: 'multiple_choice', category: 'Real Articles', context: ctxL43,
+    question: 'How does the author characterize the recent JobSeeker reforms?',
+    options: [
+      'A) Complete and final.',
+      'B) A positive but insufficient measure.',
+      'C) A total failure.',
+      'D) Economically disastrous.'
+    ],
+    answer: 'B) A positive but insufficient measure.',
+    method: 'The author explicitly describes the reforms as meaningful in direction but limited in scale — a "welcome step" that falls short of a radical rebuild. Option A is contradicted by the critique that more is needed. Options C and D overstate the negative assessment; the author acknowledges real progress, just not enough.'
+  },
+
+  // ── Set 44: Job insecurity ────────────────────────────────────────────────────
+  { group: 'L44', type: 'multiple_choice', category: 'Real Articles', context: ctxL44,
+    question: 'What does the text suggest about managing job insecurity?',
+    options: [
+      'A) It is purely an individual problem.',
+      'B) There are proven, practical strategies to manage the psychological impact.',
+      'C) There is nothing that can be done.',
+      'D) One should immediately change careers.'
+    ],
+    answer: 'B) There are proven, practical strategies to manage the psychological impact.',
+    method: 'The text identifies specific evidence-based strategies — reframing control, building networks, developing skills, and seeking social support — that buffer the psychological effects of job insecurity. Option A is qualified by the text, which notes structural factors also contribute. Option C is directly contradicted. Option D is not suggested anywhere in the passage.'
+  },
+
+  // ── Set 45: Forever renting ───────────────────────────────────────────────────
+  { group: 'L45', type: 'multiple_choice', category: 'Real Articles', context: ctxL45,
+    question: 'What is the main lesson the author draws from international rental markets?',
+    options: [
+      'A) Renting is always cheaper than buying.',
+      'B) Permanent renting can be normalised with the right policy framework.',
+      'C) Renting is only for the wealthy.',
+      'D) Europe has the highest housing prices in the world.'
+    ],
+    answer: 'B) Permanent renting can be normalised with the right policy framework.',
+    method: 'The central argument is that cities like New York, Berlin, and Amsterdam demonstrate that long-term renting is viable and dignified when supported by strong tenant protections and quality rental housing — making the policy framework the key variable. Option A is not argued. Option C contradicts the article\'s framing of renting as a broad social norm. Option D is not mentioned.'
+  },
+
+  // ── Set 46: Free power scheme ─────────────────────────────────────────────────
+  { group: 'L46', type: 'multiple_choice', category: 'Real Articles', context: ctxL46,
+    question: "What is the core question raised about the 'free power' scheme?",
+    options: [
+      'A) Whether it is technically possible.',
+      'B) Whether the benefits are distributed equitably across the population.',
+      'C) If power companies can afford it.',
+      'D) If it encourages more overall power usage.'
+    ],
+    answer: 'B) Whether the benefits are distributed equitably across the population.',
+    method: 'The article\'s central concern is equity — that the scheme\'s practical benefits flow to households with the flexibility and appliances to use off-peak windows, while renters, shift workers, and low-income households gain little. Option A is not raised — technical feasibility is assumed. Options C and D are not the focus of the analysis presented.'
+  },
+
+  // ── Set 47: Trees and urban cooling ──────────────────────────────────────────
+  { group: 'L47', type: 'multiple_choice', category: 'Real Articles', context: ctxL47,
+    question: 'What condition does the author place on urban cooling via greenery?',
+    options: [
+      'A) Any plant will work equally well.',
+      'B) The plants must be native to the area.',
+      'C) Only specific types of greenery provide effective cooling.',
+      'D) City planners must plant trees at night.'
+    ],
+    answer: 'C) Only specific types of greenery provide effective cooling.',
+    method: 'The author explicitly states that cooling benefits depend on species selection, canopy density, water availability, and placement — and that not all greenery is equally effective. Option A directly contradicts this finding. Option B is too narrow; the text discusses species performance broadly, not just nativeness. Option D is not mentioned anywhere in the passage.'
+  },
+
+  // ── Set 48: Heatwaves and older people ───────────────────────────────────────
+  { group: 'L48', type: 'multiple_choice', category: 'Real Articles', context: ctxL48,
+    question: 'What is the primary finding regarding older demographics and heatwave safety?',
+    options: [
+      'A) They are more careful than younger groups.',
+      'B) They are less likely to adhere to established safety guidelines.',
+      'C) They are immune to heat exhaustion.',
+      'D) They do not receive heat warnings.'
+    ],
+    answer: 'B) They are less likely to adhere to established safety guidelines.',
+    method: 'The text states older people are "consistently less likely than younger age groups to follow established heat safety guidelines" despite being more physiologically vulnerable. Option A is the opposite of the finding. Option C is contradicted — older adults are described as among the most vulnerable. Option D is not argued; the issue is behavioural response, not warning receipt.'
+  },
+
+  // ── Set 49: Sydney food bowl ──────────────────────────────────────────────────
+  { group: 'L49', type: 'multiple_choice', category: 'Real Articles', context: ctxL49,
+    question: "How has urban development impacted Sydney's food production capacity?",
+    options: [
+      'A) It has improved soil quality in agricultural zones.',
+      'B) It has replaced agricultural zones, effectively consuming the food bowl.',
+      'C) It has had no measurable impact.',
+      'D) It has shifted food production into the CBD.'
+    ],
+    answer: 'B) It has replaced agricultural zones, effectively consuming the food bowl.',
+    method: 'The article describes farmland being rezoned and built over at a significant rate, with a substantial proportion of the food bowl already lost to urban sprawl. The metaphor of the city "devouring" its food bowl captures the irreversible nature of this loss. Options A, C, and D contradict or ignore the evidence presented.'
+  },
+
+  // ── Set 50: El Niño ───────────────────────────────────────────────────────────
+  { group: 'L50', type: 'multiple_choice', category: 'Real Articles', context: ctxL50,
+    question: 'What is the primary concern for Australia following an El Niño declaration?',
+    options: [
+      'A) Increased flooding across all states.',
+      'B) Changes to weather patterns that could impact agriculture and disaster risk.',
+      'C) A widespread decrease in temperature.',
+      'D) The end of the summer season.'
+    ],
+    answer: 'B) Changes to weather patterns that could impact agriculture and disaster risk.',
+    method: 'The text describes El Niño\'s effects as reduced rainfall, higher temperatures, drought risk, bushfire risk, and agricultural stress — all stemming from altered weather patterns. Option A is the opposite; El Niño is associated with drier conditions, not flooding. Options C and D contradict the described effects.'
+  },
+
+  // ── Set 51: India/Pakistan heatwave ──────────────────────────────────────────
+  { group: 'L51', type: 'multiple_choice', category: 'Real Articles', context: ctxL51,
+    question: 'What makes the heatwave in India and Pakistan particularly hazardous?',
+    options: [
+      'A) The combination of extreme temperature and high humidity.',
+      'B) The lack of public transport.',
+      'C) The suddenness of the event.',
+      'D) The lack of medical staff.'
+    ],
+    answer: 'A) The combination of extreme temperature and high humidity.',
+    method: 'The text explicitly states that the danger is compounded by the combination of extreme heat and high humidity, which prevents effective sweating and heat dissipation. The wet-bulb temperature concept is introduced to explain this combined effect. Options B, C, and D are not identified as primary hazards in the passage.'
+  },
+
+  // ── Set 52: Soccer player height ─────────────────────────────────────────────
+  { group: 'L52', type: 'multiple_choice', category: 'Real Articles', context: ctxL52,
+    question: 'What does the text imply about athletic physical traits?',
+    options: [
+      'A) Taller is always better in soccer.',
+      'B) There is no correlation between height and performance.',
+      'C) Optimal physical traits vary based on position and role.',
+      'D) Only short players can be professional athletes.'
+    ],
+    answer: 'C) Optimal physical traits vary based on position and role.',
+    method: 'The article\'s central argument is that the value of height in soccer is entirely position-dependent — beneficial for goalkeepers and defenders, less relevant or even disadvantageous for attackers and wide midfielders. Option A overstates the value of height. Option B understates the relevance of physical traits. Option D is not argued and contradicts the evidence of elite teams featuring varied body types.'
   }
 ]
 
