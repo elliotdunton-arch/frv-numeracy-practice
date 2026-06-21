@@ -1714,6 +1714,42 @@ const ctxMap2 = {
   formulaHint: 'Actual distance (km) = (Map distance cm × Scale) ÷ 100,000  |  Travel time (h) = Distance ÷ Speed',
 }
 
+const ctxMap3 = {
+  title: 'Incident Command — Sector Map',
+  subtitle: 'The incident command map uses a scale of 1:50,000. The route from staging area to the forward command post measures 25 mm on the map. Crew travel speed on foot is 2.5 km/h.',
+  formulaHint: 'Actual distance (km) = (Map distance mm × Scale) ÷ 1,000,000  |  Travel time (h) = Distance ÷ Speed',
+}
+
+const ctxMap4 = {
+  title: 'Fire Perimeter Planning',
+  subtitle: 'A fireground operations map uses a scale of 1:20,000. The total fire perimeter measures 3.6 km on the ground. A secondary access track is 2.4 km in length.',
+  formulaHint: 'Map distance (mm) = Actual distance (km) × 1,000,000 ÷ Scale',
+}
+
+const ctxMap5 = {
+  title: 'Building Floor Plan — Evacuation Routes',
+  subtitle: 'A building floor plan is drawn at a scale of 1:500. The primary evacuation corridor measures 35 mm on the plan. A stairwell access route measures 48 mm on the same plan.',
+  formulaHint: 'Actual distance (m) = (Map distance mm × Scale) ÷ 1,000',
+}
+
+const ctxMap6 = {
+  title: 'Station Layout Drawing',
+  subtitle: 'A fire station layout is drawn at a scale of 1:200. The apparatus bay is 8.4 m long in reality. The training room is 3.6 m wide in reality.',
+  formulaHint: 'Map distance (mm) = Actual distance (m) × 1,000 ÷ Scale',
+}
+
+const ctxMap7 = {
+  title: 'Hazmat Site Survey',
+  subtitle: 'A site survey map uses a scale of 1:1,000. The hazmat exclusion zone boundary measures 7.5 cm on the map. A hose lay route is drawn as 12.4 cm on the same map.',
+  formulaHint: 'Actual distance (m) = (Map distance cm × Scale) ÷ 100',
+}
+
+const ctxMap8 = {
+  title: 'Operations Area Map',
+  subtitle: 'An incident operations map is drawn at a scale of 1:500. A safety exclusion zone extends 45 m from the incident in reality. A secondary perimeter is established 85 m from the incident.',
+  formulaHint: 'Map distance (cm) = Actual distance (m) × 100 ÷ Scale',
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -4070,6 +4106,96 @@ const questions = [
     answer: '1.25'
   },
 
+  // ── Set EY: Incident Command Sector Map — mm→km, 1:50,000, 25 mm, 2.5 km/h ──
+  // Q1: 25×50,000÷1,000,000 = 1.25 km   Q2: 1.25÷2.5 = 0.5 h
+  {
+    group: 'EY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap3,
+    question: 'The route measures 25 mm on the map. What is the actual distance in kilometres?',
+    answer: '1.25'
+  },
+  {
+    group: 'EY', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap3,
+    question: 'Using your answer, how many hours will it take the crew to travel to the forward command post on foot?',
+    answer: '0.5'
+  },
+
+  // ── Set EZ: Fire Perimeter Planning — km→mm, 1:20,000 ────────────────────────
+  // Q1: 3.6 km × 1,000,000 ÷ 20,000 = 180 mm   Q2: 2.4 × 1,000,000 ÷ 20,000 = 120 mm
+  {
+    group: 'EZ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap4,
+    question: 'The total fire perimeter is 3.6 km on the ground. How long should the perimeter line be on the map, in millimetres?',
+    answer: '180'
+  },
+  {
+    group: 'EZ', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap4,
+    question: 'The secondary access track is 2.4 km in length. How long should it be drawn on the map, in millimetres?',
+    answer: '120'
+  },
+
+  // ── Set FA: Building Floor Plan — mm→m, 1:500 ────────────────────────────────
+  // Q1: 35×500÷1,000 = 17.5 m   Q2: 48×500÷1,000 = 24 m
+  {
+    group: 'FA', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap5,
+    question: 'The primary evacuation corridor measures 35 mm on the plan. What is its actual length in metres?',
+    answer: '17.5'
+  },
+  {
+    group: 'FA', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap5,
+    question: 'The stairwell access route measures 48 mm on the plan. What is its actual length in metres?',
+    answer: '24'
+  },
+
+  // ── Set FB: Station Layout Drawing — m→mm, 1:200 ─────────────────────────────
+  // Q1: 8.4×1,000÷200 = 42 mm   Q2: 3.6×1,000÷200 = 18 mm
+  {
+    group: 'FB', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap6,
+    question: 'The apparatus bay is 8.4 m long in reality. How long should it be drawn on the plan, in millimetres?',
+    answer: '42'
+  },
+  {
+    group: 'FB', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap6,
+    question: 'The training room is 3.6 m wide in reality. How wide should it be drawn on the plan, in millimetres?',
+    answer: '18'
+  },
+
+  // ── Set FC: Hazmat Site Survey — cm→m, 1:1,000 ───────────────────────────────
+  // Q1: 7.5×1,000÷100 = 75 m   Q2: 12.4×1,000÷100 = 124 m
+  {
+    group: 'FC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap7,
+    question: 'The exclusion zone boundary measures 7.5 cm on the map. What is the actual distance in metres?',
+    answer: '75'
+  },
+  {
+    group: 'FC', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap7,
+    question: 'The hose lay route is drawn as 12.4 cm on the map. What is the actual length in metres?',
+    answer: '124'
+  },
+
+  // ── Set FD: Operations Area Map — m→cm, 1:500 ────────────────────────────────
+  // Q1: 45×100÷500 = 9 cm   Q2: 85×100÷500 = 17 cm
+  {
+    group: 'FD', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap8,
+    question: 'The safety exclusion zone extends 45 m from the incident. How far should this be drawn on the map, in centimetres?',
+    answer: '9'
+  },
+  {
+    group: 'FD', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap8,
+    question: 'The secondary perimeter is 85 m from the incident. How far should this be drawn on the map, in centimetres?',
+    answer: '17'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -4191,6 +4317,9 @@ const units = {
   EJ: ['cm³', null],
   EK: ['kL', 'L'],
   EW: ['km', 'h'], EX: ['km', 'h'],
+  EY: ['km', 'h'], EZ: ['mm', 'mm'],
+  FA: ['m', 'm'], FB: ['mm', 'mm'],
+  FC: ['m', 'm'], FD: ['cm', 'cm'],
   EL: ['m³', null],
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
@@ -4764,6 +4893,30 @@ const methods = {
     `Actual distance = Map distance (cm) × Scale ÷ 100,000\n  = 16 cm × 25,000 ÷ 100,000\n  = 400,000 ÷ 100,000\n  = 4.0 km`,
     `Travel time = Distance ÷ Speed\n  = 4.0 km ÷ 3.2 km/h\n  = 1.25 hours`,
   ],
+  EY: [
+    `Actual distance (km) = Map distance (mm) × Scale ÷ 1,000,000\n  = 25 mm × 50,000 ÷ 1,000,000\n  = 1,250,000 ÷ 1,000,000\n  = 1.25 km`,
+    `Travel time = Distance ÷ Speed\n  = 1.25 km ÷ 2.5 km/h\n  = 0.5 hours`,
+  ],
+  EZ: [
+    `Map distance (mm) = Actual distance (km) × 1,000,000 ÷ Scale\n  = 3.6 km × 1,000,000 ÷ 20,000\n  = 3,600,000 ÷ 20,000\n  = 180 mm`,
+    `Map distance (mm) = 2.4 km × 1,000,000 ÷ 20,000\n  = 2,400,000 ÷ 20,000\n  = 120 mm`,
+  ],
+  FA: [
+    `Actual distance (m) = Map distance (mm) × Scale ÷ 1,000\n  = 35 mm × 500 ÷ 1,000\n  = 17,500 ÷ 1,000\n  = 17.5 m`,
+    `Actual distance (m) = 48 mm × 500 ÷ 1,000\n  = 24,000 ÷ 1,000\n  = 24 m`,
+  ],
+  FB: [
+    `Map distance (mm) = Actual distance (m) × 1,000 ÷ Scale\n  = 8.4 m × 1,000 ÷ 200\n  = 8,400 ÷ 200\n  = 42 mm`,
+    `Map distance (mm) = 3.6 m × 1,000 ÷ 200\n  = 3,600 ÷ 200\n  = 18 mm`,
+  ],
+  FC: [
+    `Actual distance (m) = Map distance (cm) × Scale ÷ 100\n  = 7.5 cm × 1,000 ÷ 100\n  = 7,500 ÷ 100\n  = 75 m`,
+    `Actual distance (m) = 12.4 cm × 1,000 ÷ 100\n  = 12,400 ÷ 100\n  = 124 m`,
+  ],
+  FD: [
+    `Map distance (cm) = Actual distance (m) × 100 ÷ Scale\n  = 45 m × 100 ÷ 500\n  = 4,500 ÷ 500\n  = 9 cm`,
+    `Map distance (cm) = 85 m × 100 ÷ 500\n  = 8,500 ÷ 500\n  = 17 cm`,
+  ],
   EM: [
     `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
     `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($299.00 × 0.50)\n  = $1,698.00 + $149.50\n  = $1,847.50`,
@@ -4878,7 +5031,7 @@ const TOPIC_GROUPS = {
   'Business Scenarios':       ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB'],
   'Unit Conversions':         ['EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL'],
   'Tech Bundle Sales':        ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
-  'Map & Scale Reading':      ['EW','EX'],
+  'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD'],
 }
 
 app.get('/api/topics', (req, res) => {
