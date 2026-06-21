@@ -5221,6 +5221,36 @@ const ctxL33 = {
   ]
 }
 
+const ctxL34 = {
+  title: "One Nation's anti-abortion turn shows MAGA's creeping power in Australia",
+  subtitle: 'Opinion & Analysis — The Conversation',
+  paragraphs: [
+    'One Nation\'s recent shift toward anti-abortion policy positions has drawn attention from political analysts who see it as a sign of growing MAGA influence in Australian domestic politics. The party\'s adoption of rhetoric and policy stances closely mirroring those of the American far-right has raised questions about the transnational reach of populist movements.',
+    'Analysts argue that the convergence is not coincidental. Digital media ecosystems, shared political networks, and coordinated messaging strategies have allowed American political strategies to take root in Australian political discourse — particularly within minor parties operating on the populist fringe.',
+    `Key quote: "One Nation's anti-abortion turn shows MAGA's creeping power in Australia."`
+  ]
+}
+
+const ctxL35 = {
+  title: 'Why Trump is putting an MMA fight cage in the White House',
+  subtitle: 'Opinion & Analysis — The Conversation',
+  paragraphs: [
+    'The decision to install a Mixed Martial Arts fight cage in the White House grounds has been interpreted by commentators as more than a sports enthusiast\'s indulgence. Political analysts suggest it functions as a deliberate piece of political theatre — a symbol of the administration\'s embrace of hyper-masculine, combative aesthetics as a mode of political communication.',
+    'The fight cage metaphor captures a broader shift in political culture: one in which confrontation, dominance, and spectacle have displaced compromise and deliberation. In this framing, governance is a zero-sum contest where showing strength matters more than finding consensus.',
+    'Key quote: "Political discourse has shifted toward spectacle and confrontation."'
+  ]
+}
+
+const ctxL36 = {
+  title: 'Men make up less than 18% of Australian primary school teachers: Is this a problem?',
+  subtitle: 'Analysis — The Conversation',
+  paragraphs: [
+    'A significant gender imbalance persists in Australia\'s primary school teaching workforce, with men comprising fewer than 18% of teachers at that level. The question of whether this constitutes a problem is contested. Some advocates point to the value of diverse role models for children, while others caution against oversimplifying what is a structural issue rooted in broader social attitudes.',
+    'The underrepresentation of men in primary teaching is closely linked to longstanding societal stereotypes that categorise caring and nurturing work as inherently feminine. These perceptions influence career choices and may contribute to stigma around men who do enter the profession.',
+    'Key quote: "While some argue for the benefits of male role models, the issue is linked to stereotypes about gendered work."'
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -6577,6 +6607,45 @@ const literacyQuestions = [
     options: ['True', 'False'],
     answer: 'False',
     method: 'The listing states: "There are no major supermarkets in the immediate 500-metre radius." Nearby options are limited to "high-end grab-and-go convenience stores and a 24-hour pharmacy" — not a major supermarket.'
+  },
+
+  // ── Set 34: One Nation / MAGA influence ──────────────────────────────────────
+  { group: 'L34', type: 'multiple_choice', category: 'Real Articles', context: ctxL34,
+    question: 'What is the primary objective of this article?',
+    options: [
+      'A) To report on the legislative success of anti-abortion laws.',
+      'B) To argue that Australian politics is becoming influenced by American political trends.',
+      'C) To provide a history of One Nation\'s internal policy shifts.',
+      'D) To compare abortion policies in Australia versus the US.'
+    ],
+    answer: 'B) To argue that Australian politics is becoming influenced by American political trends.',
+    method: 'The article\'s central argument is about transnational political influence — specifically, how MAGA-aligned strategies from the US are shaping Australian minor party politics. Option A is too narrow (no legislation is passed), C focuses on internal party history rather than the broader argument, and D is a comparison article the author is not writing.'
+  },
+
+  // ── Set 35: Trump MMA fight cage metaphor ─────────────────────────────────────
+  { group: 'L35', type: 'multiple_choice', category: 'Real Articles', context: ctxL35,
+    question: "What does the 'MMA fight cage' metaphor primarily imply?",
+    options: [
+      'A) A plan to host sports events at the White House.',
+      'B) That politics has shifted to spectacle and a \'winner-take-all\' mentality.',
+      'C) The administration is prioritising combat training for staff.',
+      'D) The White House is being renovated for security purposes.'
+    ],
+    answer: "B) That politics has shifted to spectacle and a 'winner-take-all' mentality.",
+    method: 'The article uses the fight cage as political metaphor, not literal reporting. The key quote — "political discourse has shifted toward spectacle and confrontation" — confirms the author is analysing symbolism and communication style. Options A, C, and D treat the cage as a literal object rather than a rhetorical device.'
+  },
+
+  // ── Set 36: Male primary school teachers ─────────────────────────────────────
+  { group: 'L36', type: 'multiple_choice', category: 'Real Articles', context: ctxL36,
+    question: 'What does the author suggest about the societal perception of this issue?',
+    options: [
+      'A) There is universal consensus that it is irrelevant.',
+      'B) It is solely due to a lack of interest from men.',
+      'C) The issue is complex and linked to societal stereotypes about gendered work.',
+      'D) The government has already resolved the gender balance in teaching.'
+    ],
+    answer: 'C) The issue is complex and linked to societal stereotypes about gendered work.',
+    method: 'The author explicitly frames the gender imbalance as a structural issue rooted in stereotypes that classify caring work as feminine. Option A is contradicted by the debate the article describes. Option B is an oversimplification the author argues against. Option D is unsupported — no resolution is mentioned.'
   }
 ]
 
