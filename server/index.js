@@ -1700,6 +1700,20 @@ const ctxTech10 = {
   }]
 }
 
+// ── Map scale contexts ────────────────────────────────────────────────────────
+
+const ctxMap1 = {
+  title: 'Mitchell Regional Briefing',
+  subtitle: 'The map scale is 1:15,000. The path from Western Base to Northern Peak measures 10 cm on the map. Transport speed is limited to 4 km/h.',
+  formulaHint: 'Actual distance (km) = (Map distance cm × Scale) ÷ 100,000  |  Travel time (h) = Distance ÷ Speed',
+}
+
+const ctxMap2 = {
+  title: 'Forest Trail Operations',
+  subtitle: 'Topographical map scale 1:25,000. Planned route is 16 cm on the map. Average hiking speed is 3.2 km/h.',
+  formulaHint: 'Actual distance (km) = (Map distance cm × Scale) ÷ 100,000  |  Travel time (h) = Distance ÷ Speed',
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
@@ -3966,6 +3980,36 @@ const questions = [
     answer: '36.49'
   },
 
+  // ── Set EW: Mitchell Regional Briefing — 1:15,000, 10 cm, 4 km/h ─────────────
+  // Q1: 10×15000÷100000 = 1.5 km   Q2: 1.5÷4 = 0.375 h
+  {
+    group: 'EW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap1,
+    question: 'What is the actual distance of the path in kilometres?',
+    answer: '1.5'
+  },
+  {
+    group: 'EW', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap1,
+    question: 'How many hours of travel time should the team allocate?\n(Round to 3 decimal places)',
+    answer: '0.375'
+  },
+
+  // ── Set EX: Forest Trail Operations — 1:25,000, 16 cm, 3.2 km/h ─────────────
+  // Q1: 16×25000÷100000 = 4.0 km   Q2: 4.0÷3.2 = 1.25 h
+  {
+    group: 'EX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap2,
+    question: 'What is the actual distance of the trail in kilometres?',
+    answer: '4'
+  },
+  {
+    group: 'EX', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMap2,
+    question: 'How many hours will the party spend on the trail?',
+    answer: '1.25'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -4086,6 +4130,7 @@ const units = {
   EI: ['cm³', 'kL'],
   EJ: ['cm³', null],
   EK: ['kL', 'L'],
+  EW: ['km', 'h'], EX: ['km', 'h'],
   EL: ['m³', null],
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
@@ -4640,6 +4685,14 @@ const methods = {
   EL: [
     `Volume = 10 × 0.5 × 0.8 = 4 m³`,
     `4 m³ ÷ 5 m³ per truck = 0.8 truckloads`,
+  ],
+  EW: [
+    `Actual distance = Map distance (cm) × Scale ÷ 100,000\n  = 10 cm × 15,000 ÷ 100,000\n  = 150,000 ÷ 100,000\n  = 1.5 km`,
+    `Travel time = Distance ÷ Speed\n  = 1.5 km ÷ 4 km/h\n  = 0.375 hours`,
+  ],
+  EX: [
+    `Actual distance = Map distance (cm) × Scale ÷ 100,000\n  = 16 cm × 25,000 ÷ 100,000\n  = 400,000 ÷ 100,000\n  = 4.0 km`,
+    `Travel time = Distance ÷ Speed\n  = 4.0 km ÷ 3.2 km/h\n  = 1.25 hours`,
   ],
   EM: [
     `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
