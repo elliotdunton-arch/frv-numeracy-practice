@@ -843,6 +843,14 @@ body {
 .context-table tr:last-child td { border-bottom: none; }
 .context-table tr:nth-child(even) td { background: var(--gray-50); }
 
+.context-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
 .context-note {
   font-size: 0.76rem;
   color: var(--gray-500);

@@ -280,6 +280,9 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
                   {current.context.subtitle && (
                     <div className="context-subtitle">{current.context.subtitle}</div>
                   )}
+                  {current.context.image && (
+                    <img src={current.context.image} alt="Question context" className="context-image" />
+                  )}
                   {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
                     <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
                       {para}
