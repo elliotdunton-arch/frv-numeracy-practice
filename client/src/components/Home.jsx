@@ -608,34 +608,63 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
             {formulaOpen && (
               <div className="strategy-guide-body">
+
                 <div className="sg-section">
-                  <div className="sg-heading">Volume &amp; Capacity Conversions</div>
+                  <div className="sg-heading">1. Volume &amp; Capacity — "The Bridge"</div>
+                  <p className="sg-note">The most common trap is confusing linear, square (area), and cubic (volume) conversions.</p>
                   <ul className="sg-list">
-                    <li><strong>Golden Rule:</strong> Units change by cubed factor for volume (e.g., cm³ to m³ is divided by 1,000,000).</li>
-                    <li><strong>1 cm³ = 1 mL</strong></li>
-                    <li><strong>1,000 cm³ = 1 L</strong></li>
-                    <li><strong>1 m³ = 1,000 L = 1 kL</strong></li>
+                    <li><strong>Length:</strong> units change by factor of 10, 100, or 1,000.</li>
+                    <li><strong>Area:</strong> units change by the <em>squared</em> factor (e.g., 1 m² = 10,000 cm²).</li>
+                    <li><strong>Volume:</strong> units change by the <em>cubed</em> factor (e.g., 1 m³ = 1,000,000 cm³ — <em>not</em> 1,000).</li>
                   </ul>
+                  <table className="conv-table">
+                    <thead>
+                      <tr><th>From</th><th>To</th><th>Operation</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>1 cm³</td><td>1 mL</td><td>1 : 1 (direct)</td></tr>
+                      <tr><td>1,000 cm³</td><td>1 L</td><td>÷ 1,000</td></tr>
+                      <tr><td>1 m³</td><td>1,000 L</td><td>× 1,000</td></tr>
+                      <tr><td>1 m³</td><td>1 kL</td><td>1 : 1 (direct)</td></tr>
+                      <tr><td>1 L</td><td>1,000 mL</td><td>× 1,000</td></tr>
+                    </tbody>
+                  </table>
+                  <p className="sg-tip">💡 Shortcut: always convert to a base unit (Litres or cm³) before calculating if units in the question don't match.</p>
                 </div>
 
                 <div className="sg-section">
-                  <div className="sg-heading">Geometry</div>
+                  <div className="sg-heading">2. Geometry</div>
                   <ul className="sg-list formula-list">
-                    <li><span className="fl-name">Rectangle Area</span><span className="fl-formula">Length × Width</span></li>
-                    <li><span className="fl-name">Triangle Area</span><span className="fl-formula">0.5 × Base × Height</span></li>
+                    <li><span className="fl-name">Rectangle / Square Area</span><span className="fl-formula">Length × Width</span></li>
+                    <li><span className="fl-name">Triangle Area</span><span className="fl-formula">½ × Base × Height</span></li>
                     <li><span className="fl-name">Circle Area</span><span className="fl-formula">π × r²</span></li>
+                    <li><span className="fl-name">Circle Circumference</span><span className="fl-formula">π × d  (or 2πr)</span></li>
                     <li><span className="fl-name">Rectangular Prism Volume</span><span className="fl-formula">Length × Width × Height</span></li>
+                    <li><span className="fl-name">Cylinder Volume</span><span className="fl-formula">(π × r²) × Height</span></li>
                   </ul>
                 </div>
 
                 <div className="sg-section">
-                  <div className="sg-heading">Rates &amp; Change</div>
+                  <div className="sg-heading">3. Ratios, Percentages &amp; Speed</div>
                   <ul className="sg-list formula-list">
-                    <li><span className="fl-name">Percentage Change</span><span className="fl-formula">((New − Old) / Old) × 100</span></li>
+                    <li><span className="fl-name">Percentage Change</span><span className="fl-formula">(New − Old) / Old × 100</span></li>
                     <li><span className="fl-name">Speed</span><span className="fl-formula">Distance / Time</span></li>
-                    <li><span className="fl-name">Average</span><span className="fl-formula">Sum of values / Number of values</span></li>
+                    <li><span className="fl-name">Time</span><span className="fl-formula">Distance / Speed</span></li>
+                    <li><span className="fl-name">Distance</span><span className="fl-formula">Speed × Time</span></li>
+                    <li><span className="fl-name">Average</span><span className="fl-formula">Sum of values / Count</span></li>
+                  </ul>
+                  <p className="sg-note">Keep units consistent — km/h or m/s — don't mix.</p>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">4. FRV Pro-Tips</div>
+                  <ul className="sg-list">
+                    <li><strong>The Zero Check:</strong> Count zeros carefully in volume conversions. 1 m³ = 1,000,000 cm³, not 1,000.</li>
+                    <li><strong>Fraction → Decimal:</strong> If stuck on a division problem, convert to a decimal immediately — it's faster in a timed environment.</li>
+                    <li><strong>Estimation:</strong> Short on time? Estimate to eliminate two obviously wrong answers and improve your guessing odds.</li>
                   </ul>
                 </div>
+
               </div>
             )}
           </div>

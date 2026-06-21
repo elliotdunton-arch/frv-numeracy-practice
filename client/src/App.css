@@ -2569,3 +2569,42 @@ body {
   font-size: 0.8rem;
   text-align: right;
 }
+
+/* ── Conversion table inside formula guide ──────────────── */
+.conv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 4px;
+  font-size: 0.8rem;
+}
+.conv-table th {
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1.5px solid var(--gray-200);
+}
+.conv-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--text-primary);
+}
+.conv-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.conv-table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
+.sg-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+.sg-tip {
+  font-size: 0.8rem;
+  color: #1d4ed8;
+  margin: 6px 0 0;
+  line-height: 1.5;
+}
