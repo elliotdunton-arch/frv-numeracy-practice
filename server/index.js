@@ -5251,6 +5251,56 @@ const ctxL36 = {
   ]
 }
 
+const ctxL37 = {
+  title: 'Kerbside parking is great for drivers but terrible for everyone else',
+  subtitle: 'Urban Planning — The Conversation',
+  paragraphs: [
+    'In most Australian cities, kerbside parking occupies a substantial portion of street width — space that is, in effect, publicly owned real estate being handed over for the free or subsidised storage of private vehicles. While this arrangement suits drivers, it imposes significant costs on everyone else: pedestrians lose footpath width, cyclists are pushed into traffic, bus routes are slowed, and potential uses such as street gardens, outdoor dining, or bike lanes are foreclosed.',
+    'Urban economists point out that free kerbside parking is a hidden subsidy that distorts transport behaviour, encouraging car use over walking, cycling, or public transit. Rather than reflecting the true cost of occupying premium urban space, kerbside parking pricing is typically far below market value — or zero — creating artificial demand and contributing to traffic congestion as drivers circle looking for spots.',
+    'The author argues that reclaiming kerbside space for collective benefit requires confronting the political power of car-dependent communities, who frame any removal of parking as an attack on their lifestyle. In reality, the redistribution of this space would benefit a far larger share of the population.'
+  ]
+}
+
+const ctxL38 = {
+  title: 'What drives women to have a freebirth?',
+  subtitle: 'Health & Society — The Conversation',
+  paragraphs: [
+    'Freebirth — the practice of giving birth without any medical attendance — is a small but growing phenomenon in Australia and other Western countries. Researchers studying the motivations behind this choice have found that the primary drivers are not a lack of access to hospitals, but rather a deep distrust of clinical birth environments and a strong desire for bodily autonomy.',
+    'Women who choose freebirth frequently report negative prior experiences with medicalised birth settings: feeling unheard, subjected to interventions they did not consent to, or pressured into procedures that conflicted with their birth preferences. For these women, the risk calculation shifts — the perceived risks of clinical intervention outweigh the perceived risks of unassisted birth.',
+    'Researchers emphasise that understanding freebirth requires engaging with the structural failures in maternity care that erode trust, rather than dismissing women\'s choices as simply uninformed. Bodily autonomy and relational continuity of care are central to women\'s accounts of why they made this decision.'
+  ]
+}
+
+const ctxL39 = {
+  title: 'More than chatbots: Why business AI agents are the next battleground',
+  subtitle: 'Technology & Business — The Conversation',
+  paragraphs: [
+    'For years, the dominant public image of artificial intelligence in business has been the chatbot: a conversational interface that answers questions and handles simple customer service queries. But a new generation of AI systems — known as AI agents — is fundamentally different. Rather than merely responding to text prompts, agents are capable of planning, making decisions, and completing multi-step tasks autonomously, often with access to external tools, databases, and other software systems.',
+    'The distinction matters enormously for business. A chatbot can tell a customer their order status. An AI agent can check the order status, identify a delay, contact the supplier, reschedule the delivery, notify the customer, and update the internal logistics dashboard — all without human intervention. This shift from conversation to action is what makes AI agents a genuine business transformation, not merely an upgrade in customer service quality.',
+    'Technology analysts argue that the companies which successfully deploy autonomous AI agents will gain decisive competitive advantages in speed and operational efficiency, making the development and governance of these systems the defining corporate technology battleground of the coming decade.'
+  ]
+}
+
+const ctxL40 = {
+  title: 'The maths behind having a sustainable wardrobe',
+  subtitle: 'Environment & Lifestyle — The Conversation',
+  paragraphs: [
+    'Sustainable fashion is often framed in qualitative terms — buy less, buy better, avoid fast fashion. But researchers have started applying quantitative frameworks to clothing sustainability, asking: how many times must a garment be worn before its environmental cost is justified? This approach treats sustainability as a ratio of environmental impact per unit of use, rather than a fixed property of how a garment is made.',
+    'The mathematics are instructive. A high-quality wool coat with a significant carbon footprint in its production may be far more sustainable than a cheap synthetic alternative if worn 200 times versus 8 times. Conversely, buying an ethically produced item that gets worn twice and donated does not constitute sustainable consumption. Frequency of use becomes the critical variable that most wardrobe sustainability calculations overlook.',
+    'The author argues that genuinely sustainable wardrobes are built not by obsessing over fabric certifications or brand ethics alone, but by maximising the usage rate of every item — balancing how much was put into making something against how much the wearer actually gets out of it.'
+  ]
+}
+
+const ctxL41 = {
+  title: 'Healthy soil can protect land from soaring heat',
+  subtitle: 'Climate & Environment — The Conversation',
+  paragraphs: [
+    'As extreme heat events become more frequent and intense across Australia, researchers are turning attention to an often-overlooked resource: soil. Healthy, organic-rich soil retains significantly more moisture than degraded or compacted soil, and that moisture plays a critical role in moderating surface temperatures through evaporative cooling. Land with healthy soil can remain measurably cooler during heatwaves than adjacent degraded land.',
+    'The problem is that decades of intensive agriculture, land clearing, and urban development have left vast tracts of Australian soil depleted and unable to perform this buffering function. Soil scientists warn that unless land management practices change, the feedback loop between degraded soil and rising heat will accelerate, making marginal land increasingly uninhabitable for agriculture and wildlife.',
+    'The author\'s tone throughout is urgent: the window for reversing soil degradation is narrowing, and the consequences of inaction — from failed crops to increased wildfire risk and collapsing ecosystems — are already visible. Protecting and restoring soil health is framed not as an environmental nicety but as a frontline response to climate risk.'
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -6646,6 +6696,71 @@ const literacyQuestions = [
     ],
     answer: 'C) The issue is complex and linked to societal stereotypes about gendered work.',
     method: 'The author explicitly frames the gender imbalance as a structural issue rooted in stereotypes that classify caring work as feminine. Option A is contradicted by the debate the article describes. Option B is an oversimplification the author argues against. Option D is unsupported — no resolution is mentioned.'
+  },
+
+  // ── Set 37: Kerbside parking ──────────────────────────────────────────────────
+  { group: 'L37', type: 'multiple_choice', category: 'Real Articles', context: ctxL37,
+    question: "What is the author's primary argument concerning kerbside parking?",
+    options: [
+      'A) It is a vital service that should be expanded.',
+      'B) It prioritises private vehicle storage over public space utility.',
+      'C) It is the most cost-effective solution for city congestion.',
+      'D) It has no impact on urban walkability.'
+    ],
+    answer: 'B) It prioritises private vehicle storage over public space utility.',
+    method: 'The author\'s central argument is that publicly owned street space is being handed over to private vehicle storage at the expense of pedestrians, cyclists, and alternative uses. Option A directly opposes the article\'s argument. Option C misrepresents the author\'s position — kerbside parking is described as distorting transport behaviour, not solving congestion. Option D is contradicted by the article\'s explicit claim that pedestrians lose footpath width.'
+  },
+
+  // ── Set 38: Freebirth ─────────────────────────────────────────────────────────
+  { group: 'L38', type: 'multiple_choice', category: 'Real Articles', context: ctxL38,
+    question: "What does the text suggest is the main driver for women choosing 'freebirth'?",
+    options: [
+      'A) A desire for medical intervention.',
+      'B) Distrust of clinical environments and a desire for bodily autonomy.',
+      'C) Lack of available hospitals.',
+      'D) A recommendation from their GP.'
+    ],
+    answer: 'B) Distrust of clinical environments and a desire for bodily autonomy.',
+    method: 'The text explicitly states that the primary drivers are "a deep distrust of clinical birth environments and a strong desire for bodily autonomy." Option A is the opposite of the article\'s finding. Option C is ruled out — the text clarifies the choice is not driven by lack of access. Option D contradicts the framing of freebirth as a rejection of medical authority.'
+  },
+
+  // ── Set 39: AI agents vs chatbots ────────────────────────────────────────────
+  { group: 'L39', type: 'multiple_choice', category: 'Real Articles', context: ctxL39,
+    question: "Why does the author differentiate between 'chatbots' and 'AI agents'?",
+    options: [
+      'A) Chatbots are faster but agents are cheaper.',
+      'B) Agents are capable of completing autonomous tasks rather than just responding to text.',
+      'C) There is no meaningful difference between the two.',
+      'D) AI agents are not yet legal for use in business.'
+    ],
+    answer: 'B) Agents are capable of completing autonomous tasks rather than just responding to text.',
+    method: 'The article\'s core distinction is between conversation (chatbots) and action (agents). The text states agents can "plan, make decisions, and complete multi-step tasks autonomously" — fundamentally different from answering a query. Option A introduces a speed/cost comparison not made in the text. Option C contradicts the article\'s entire premise. Option D is fabricated — no legal restriction is mentioned.'
+  },
+
+  // ── Set 40: Sustainable wardrobe maths ───────────────────────────────────────
+  { group: 'L40', type: 'multiple_choice', category: 'Real Articles', context: ctxL40,
+    question: "What is the primary implication of 'maths' in the context of sustainable clothing?",
+    options: [
+      'A) Calculating the exact price of fabric.',
+      'B) Balancing usage frequency against environmental cost.',
+      'C) Determining the speed of fashion trends.',
+      'D) Measuring the weight of garments.'
+    ],
+    answer: 'B) Balancing usage frequency against environmental cost.',
+    method: 'The article frames sustainability as a ratio: environmental impact divided by number of uses. The "maths" refers to this calculation — how often a garment is worn relative to what it cost the environment to produce. Option A confuses environmental cost with financial price. Options C and D introduce concepts (trend speed, weight) that are not discussed in the text.'
+  },
+
+  // ── Set 41: Healthy soil and heat ────────────────────────────────────────────
+  { group: 'L41', type: 'multiple_choice', category: 'Real Articles', context: ctxL41,
+    question: "What is the author's tone regarding the state of soil health?",
+    options: [
+      'A) Optimistic and unconcerned.',
+      'B) Urgent, warning of the consequences of neglect.',
+      'C) Indifferent to climate data.',
+      'D) Confused by the scientific findings.'
+    ],
+    answer: 'B) Urgent, warning of the consequences of neglect.',
+    method: 'The text describes a "narrowing window" for action, a "feedback loop" accelerating harm, and consequences that are "already visible." These word choices signal urgency and alarm. Option A is the opposite of the article\'s framing. Option C is contradicted by the author\'s direct engagement with climate science. Option D mischaracterises the author\'s position — the findings are presented clearly, not with confusion.'
   }
 ]
 
