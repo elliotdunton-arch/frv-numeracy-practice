@@ -657,7 +657,89 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                 </div>
 
                 <div className="sg-section">
-                  <div className="sg-heading">4. FRV Pro-Tips</div>
+                  <div className="sg-heading">4. Pay & Timesheets</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Total pay</span><span className="fl-formula">Σ (hours × rate) per day type</span></li>
+                    <li><span className="fl-name">Saturday rate</span><span className="fl-formula">Weekday rate × 1.5</span></li>
+                    <li><span className="fl-name">Sunday rate</span><span className="fl-formula">Weekday rate × 2</span></li>
+                    <li><span className="fl-name">Gender Pay Gap (GPG)</span><span className="fl-formula">(Male avg − Female avg) ÷ Male avg × 100</span></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">5. Pricing & Discounts</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Unit price</span><span className="fl-formula">Total price ÷ Quantity</span></li>
+                    <li><span className="fl-name">% saving</span><span className="fl-formula">(Original − Sale) ÷ Original × 100</span></li>
+                    <li><span className="fl-name">Discounted price</span><span className="fl-formula">Original × (1 − discount%)</span></li>
+                    <li><span className="fl-name">Find original price</span><span className="fl-formula">Sale price ÷ (1 − discount%)</span></li>
+                  </ul>
+                  <p className="sg-note">Reverse discount tip: if $80 is the price after a 20% discount → Original = $80 ÷ 0.80 = $100.</p>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">6. Fleet Vehicle Costs</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Net cost after n years</span><span className="fl-formula">Purchase price − (Annual saving × n)</span></li>
+                    <li><span className="fl-name">Break-even year</span><span className="fl-formula">n = (Price A − Price B) ÷ (Saving A − Saving B), round up</span></li>
+                    <li><span className="fl-name">% of budget covered</span><span className="fl-formula">Budget ÷ Purchase price × 100</span></li>
+                  </ul>
+                  <p className="sg-note">Break-even: the year when the cheaper-to-run vehicle's cumulative savings exceed its higher upfront cost.</p>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">7. Loans & Depreciation</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Total repaid</span><span className="fl-formula">Monthly payment × months (+ balloon)</span></li>
+                    <li><span className="fl-name">Total interest</span><span className="fl-formula">Total repaid − Principal borrowed</span></li>
+                    <li><span className="fl-name">Monthly interest (reducing)</span><span className="fl-formula">Balance × (Annual rate ÷ 12)</span></li>
+                    <li><span className="fl-name">New balance (reducing)</span><span className="fl-formula">Balance + Monthly interest − Payment</span></li>
+                    <li><span className="fl-name">Annual depreciation</span><span className="fl-formula">(Purchase price − Resale value) ÷ Years</span></li>
+                    <li><span className="fl-name">Value after n years</span><span className="fl-formula">Purchase price − (n × Annual depreciation)</span></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">8. Property & Home Loans</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Deposit amount</span><span className="fl-formula">Property value × deposit%</span></li>
+                    <li><span className="fl-name">Loan amount</span><span className="fl-formula">Property value − Deposit (± bundled costs)</span></li>
+                    <li><span className="fl-name">Annual interest</span><span className="fl-formula">Loan balance × annual interest rate</span></li>
+                    <li><span className="fl-name">Gross rental yield</span><span className="fl-formula">Annual rent ÷ Property value × 100</span></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">9. Water, Energy & Standard Drinks</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Water used</span><span className="fl-formula">Flow rate (L/min) × Duration (min)</span></li>
+                    <li><span className="fl-name">Water saved</span><span className="fl-formula">Standard flow usage − Efficient flow usage</span></li>
+                    <li><span className="fl-name">Energy burned</span><span className="fl-formula">Activity rate (kJ/min) × Duration (min)</span></li>
+                    <li><span className="fl-name">Standard drinks</span><span className="fl-formula">Volume (mL) × %ABV × 0.000789</span></li>
+                  </ul>
+                  <p className="sg-note">Standard drinks: 0.000789 is the ethanol density constant (g/mL ÷ 10g per standard drink).</p>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">10. Map & Scale Reading</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Actual distance (km)</span><span className="fl-formula">Map distance (cm) × Scale ÷ 100,000</span></li>
+                    <li><span className="fl-name">Travel time</span><span className="fl-formula">Actual distance ÷ Speed</span></li>
+                  </ul>
+                  <p className="sg-note">Example: 10 cm on a 1:15,000 map → 10 × 15,000 ÷ 100,000 = 1.5 km.</p>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">11. Business Profit</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Gross profit</span><span className="fl-formula">Revenue − Cost of Goods Sold (COGS)</span></li>
+                    <li><span className="fl-name">Net profit</span><span className="fl-formula">Gross profit − Operating expenses</span></li>
+                    <li><span className="fl-name">Net profit margin</span><span className="fl-formula">Net profit ÷ Revenue × 100</span></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">12. FRV Pro-Tips</div>
                   <ul className="sg-list">
                     <li><strong>The Zero Check:</strong> Count zeros carefully in volume conversions. 1 m³ = 1,000,000 cm³, not 1,000.</li>
                     <li><strong>Fraction → Decimal:</strong> If stuck on a division problem, convert to a decimal immediately — it's faster in a timed environment.</li>
