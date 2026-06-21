@@ -37,12 +37,13 @@ function formatUserTimeHM(str) {
   return formatHM(h * 60 + m)
 }
 
-export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, pausedMs = 0 }) {
+export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, onRetryIncorrect, pausedMs = 0 }) {
   const [expandedWorking, setExpandedWorking] = useState({})
   const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
   const [nameInput, setNameInput] = useState('')
 
   const score = questions.filter(q => isCorrect(q, answers[q.id])).length
+  const incorrectQuestions = questions.filter(q => !isCorrect(q, answers[q.id]))
   const total = questions.length
   const pct = Math.round((score / total) * 100)
 
@@ -121,41 +122,53 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
           </div>
         </div>
 
-        {/* Record Result */}
-        <div className="record-result-card">
-          {recordState === 'idle' && (
-            <button className="btn-record" onClick={handleRecord}>
-              Record Result
-            </button>
-          )}
-          {recordState === 'name-needed' && (
-            <div className="record-name-prompt">
-              <p>Enter your name to save this result:</p>
-              <div className="record-name-row">
-                <input
-                  type="text"
-                  className="record-name-input"
-                  value={nameInput}
-                  onChange={e => setNameInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && handleSaveName()}
-                  placeholder="Your name"
-                  autoFocus
-                  maxLength={50}
-                />
-                <button
-                  className="btn-record-save"
-                  onClick={handleSaveName}
-                  disabled={!nameInput.trim()}
-                >
-                  Save
-                </button>
+        {/* Action ribbon */}
+        <div className="results-ribbon">
+          <div className="ribbon-col ribbon-left">
+            {recordState === 'idle' && (
+              <button className="btn-record" onClick={handleRecord}>Record Result</button>
+            )}
+            {recordState === 'name-needed' && (
+              <div className="record-name-prompt">
+                <p>Enter your name to save this result:</p>
+                <div className="record-name-row">
+                  <input
+                    type="text"
+                    className="record-name-input"
+                    value={nameInput}
+                    onChange={e => setNameInput(e.target.value)}
+                    onKeyDown={e => e.key === 'Enter' && handleSaveName()}
+                    placeholder="Your name"
+                    autoFocus
+                    maxLength={50}
+                  />
+                  <button
+                    className="btn-record-save"
+                    onClick={handleSaveName}
+                    disabled={!nameInput.trim()}
+                  >
+                    Save
+                  </button>
+                </div>
+                <p className="record-name-hint">Your name is saved on this device. You can view your progress log on the home page.</p>
               </div>
-              <p className="record-name-hint">Your name is saved on this device. You can view your progress log on the home page.</p>
-            </div>
-          )}
-          {recordState === 'saved' && (
-            <p className="record-saved">✓ Result saved for <strong>{getUsername()}</strong></p>
-          )}
+            )}
+            {recordState === 'saved' && (
+              <p className="record-saved">✓ Result saved for <strong>{getUsername()}</strong></p>
+            )}
+          </div>
+
+          <div className="ribbon-col ribbon-center">
+            <button className="btn-restart" onClick={onRestart}>Take Another Test</button>
+          </div>
+
+          <div className="ribbon-col ribbon-right">
+            {incorrectQuestions.length > 0 && (
+              <button className="btn-retry" onClick={() => onRetryIncorrect(incorrectQuestions)}>
+                Retry Incorrect ({incorrectQuestions.length})
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="section-card">
@@ -272,11 +285,6 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
           </div>
         </div>
 
-        <div className="results-footer">
-          <button className="btn-restart" onClick={onRestart}>
-            Take Another Test
-          </button>
-        </div>
       </div>
     </div>
   )

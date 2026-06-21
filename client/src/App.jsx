@@ -56,6 +56,16 @@ export default function App() {
     setScreen('home')
   }
 
+  const retryIncorrect = (incorrectQuestions) => {
+    setQuestions(incorrectQuestions)
+    setTotalTime(incorrectQuestions.length * 70)
+    setAnswers({})
+    setStartTime(Date.now())
+    setEndTime(null)
+    setTimeExpired(false)
+    setScreen('quiz')
+  }
+
   return (
     <div className="app">
       {screen === 'home' && (
@@ -84,6 +94,7 @@ export default function App() {
           timeExpired={timeExpired}
           section={section}
           onRestart={restartTest}
+          onRetryIncorrect={retryIncorrect}
           pausedMs={pausedMs}
         />
       )}

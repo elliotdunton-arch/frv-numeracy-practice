@@ -633,6 +633,37 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                 </div>
 
                 <div className="sg-section">
+                  <div className="sg-heading">1b. Length Conversions (mm, cm, m, km)</div>
+                  <table className="conv-table">
+                    <thead>
+                      <tr><th>Unit</th><th>mm</th><th>cm</th><th>m</th><th>km</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>1 mm</strong></td><td>1</td><td>÷ 10</td><td>÷ 1,000</td><td>÷ 1,000,000</td></tr>
+                      <tr><td><strong>1 cm</strong></td><td>× 10</td><td>1</td><td>÷ 100</td><td>÷ 100,000</td></tr>
+                      <tr><td><strong>1 m</strong></td><td>× 1,000</td><td>× 100</td><td>1</td><td>÷ 1,000</td></tr>
+                      <tr><td><strong>1 km</strong></td><td>× 1,000,000</td><td>× 100,000</td><td>× 1,000</td><td>1</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">1c. Area Conversions (mm², cm², m², km²)</div>
+                  <table className="conv-table">
+                    <thead>
+                      <tr><th>Unit</th><th>mm²</th><th>cm²</th><th>m²</th><th>km²</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>1 mm²</strong></td><td>1</td><td>÷ 100</td><td>÷ 1,000,000</td><td>÷ 10¹²</td></tr>
+                      <tr><td><strong>1 cm²</strong></td><td>× 100</td><td>1</td><td>÷ 10,000</td><td>÷ 10¹⁰</td></tr>
+                      <tr><td><strong>1 m²</strong></td><td>× 1,000,000</td><td>× 10,000</td><td>1</td><td>÷ 1,000,000</td></tr>
+                      <tr><td><strong>1 km²</strong></td><td>× 10¹²</td><td>× 10¹⁰</td><td>× 1,000,000</td><td>1</td></tr>
+                    </tbody>
+                  </table>
+                  <p className="sg-note">Rule: area factors are the square of the length factor (e.g., 1 m = 100 cm → 1 m² = 100² = 10,000 cm²).</p>
+                </div>
+
+                <div className="sg-section">
                   <div className="sg-heading">2. Geometry</div>
                   <ul className="sg-list formula-list">
                     <li><span className="fl-name">Rectangle / Square Area</span><span className="fl-formula">Length × Width</span></li>
