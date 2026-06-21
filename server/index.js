@@ -7178,35 +7178,35 @@ const literacyQuestions = [
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: 'What is the purpose of this poster?',
     options: [
-      'A) To advertise a new community event hosted by MetroCorp.',
-      'B) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
-      'C) To celebrate the opening of Mulberry Creek Park.',
-      'D) To oppose the construction of the freeway entirely.'
+      'A) To persuade MetroCorp not to go ahead with building the freeway.',
+      'B) To persuade people that the MetroLink freeway should not be built.',
+      'C) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
+      'D) To convince people that the problem with trucks in suburban areas is that they are noisy, polluting and dangerous.'
     ],
-    answer: 'B) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
-    method: 'Community protest posters typically focus on a specific, actionable concern rather than opposing an entire project. This poster calls on readers to write to MetroCorp about the entrance location — a targeted "call to action". Option D is too broad; the poster does not oppose the freeway itself, only the placement of the entrance.'
+    answer: 'C) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
+    method: "The poster's primary goal is to advocate for a change in the freeway's placement ('move the new freeway entrance') by directing residents to contact MetroCorp ('Have your say!! Email MetroCorp...'). Options A and B are too broad — the poster does not oppose the freeway itself, only the entrance location. Option D focuses on truck problems generally, not the poster's specific call to action."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: 'Why are the Friends of Mulberry Creek involved in this issue?',
     options: [
-      'A) They are a government body responsible for approving new freeways.',
-      'B) They have been hired by MetroCorp to advise on the project.',
-      'C) They are concerned that the park they look after will be ruined.',
-      'D) They believe the freeway will reduce traffic through the suburb.'
+      'A) They are concerned about the safety of park users.',
+      'B) They are concerned about truck noise affecting park users.',
+      'C) They are concerned about the environmental effects of trucks.',
+      'D) They are concerned that the park they look after will be ruined.'
     ],
-    answer: 'C) They are concerned that the park they look after will be ruined.',
-    method: '"Friends of [Place Name]" groups are volunteer community organisations whose mission is to protect and maintain that specific local environment. The poster indicates Mulberry Creek Park is threatened by the entrance location, which is why this group is leading the campaign.'
+    answer: 'D) They are concerned that the park they look after will be ruined.',
+    method: "The poster states the freeway plans will 'dig up the Mulberry Creek Reserve, destroying 30 years of regeneration work.' As a group dedicated to protecting the park, their involvement is rooted in preventing this destruction — not noise, general safety, or broader environmental effects of trucks."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "The poster uses the term 'cost-cutting'. Which phrase could be used instead of 'cost-cutting' without changing the meaning?",
     options: [
-      'A) Saving money.',
-      'B) Building faster.',
-      'C) Taking shortcuts.',
-      'D) Reducing workers.'
+      'A) Saving time.',
+      'B) Saving space.',
+      'C) Saving money.',
+      'D) Saving materials.'
     ],
-    answer: 'A) Saving money.',
-    method: "'Cost-cutting' is a standard business term that means reducing expenses. 'Saving money' is a direct synonym. Options B, C and D introduce meanings not present in the original term — 'cost-cutting' does not imply speed, shortcuts or staff reductions on its own."
+    answer: 'C) Saving money.',
+    method: "'Cost-cutting' is a business term specifically referring to reducing expenditure. 'Saving money' is a direct synonym. In the context of the poster, it suggests MetroCorp is choosing a cheaper route at the expense of the community. Options A, B and D refer to other types of savings unrelated to cost."
   },
   { group: 'L53', type: 'true_false_matrix', category: 'Community Poster', context: ctxL53,
     matrixLabels: ['Yes', 'No'],
@@ -7217,18 +7217,18 @@ const literacyQuestions = [
       'Trucks with dangerous loads will travel over houses.',
     ],
     answer: 'Yes,No,Yes',
-    method: "The poster explicitly states the park will be destroyed (Yes) and that trucks carrying dangerous loads will travel through the suburb (Yes). There is no mention of local streets being closed during construction — this is not an argument the poster makes (No)."
+    method: "Park ruined — Yes: confirmed by the point about Mulberry Creek Reserve being dug up, destroying 30 years of regeneration work.\nStreets closed — No: while the poster complains about trucks on streets, it makes no claim that streets will be closed during construction.\nDangerous loads — Yes: confirmed by the point about a raised road carrying dangerous goods over homes."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "'Let's work together to make our suburb safer, healthier and truck free.' Which group of people does this suggest the poster is aimed at?",
     options: [
-      'A) State government officials.',
-      'B) MetroCorp engineers.',
-      'C) Environmental scientists.',
-      'D) Local residents.'
+      'A) Truck drivers.',
+      'B) Local residents.',
+      'C) The government.',
+      'D) Managers at MetroCorp.'
     ],
-    answer: 'D) Local residents.',
-    method: "The phrase 'our suburb' signals that the poster is addressing people who live in the affected area. The appeal to community solidarity ('let's work together') and the focus on everyday concerns like safety and health are hallmarks of messaging designed to mobilise local residents rather than professionals or government bodies."
+    answer: 'B) Local residents.',
+    method: "The phrase 'our suburb' establishes a shared connection with people living in the immediate area. The goal of the poster is to mobilise these residents to take action. Truck drivers, government officials and MetroCorp managers would not identify with 'our suburb' in this context."
   },
 ]
 
