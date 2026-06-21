@@ -4807,6 +4807,8 @@ const TOPIC_GROUPS = {
   'Shower Water Savings':     ['DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR'],
   'Business Scenarios':       ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB'],
   'Unit Conversions':         ['EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL'],
+  'Tech Bundle Sales':        ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
+  'Map & Scale Reading':      ['EW','EX'],
 }
 
 app.get('/api/topics', (req, res) => {
