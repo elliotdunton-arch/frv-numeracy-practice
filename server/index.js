@@ -5067,7 +5067,22 @@ app.get('/api/questions', (req, res) => {
     const allowed = new Set(names.flatMap(n => TOPIC_GROUPS[n] || []))
     pool = questions.filter(q => allowed.has(q.group))
   }
-  const shuffled = shuffleByGroup(pool)
+  let shuffled = shuffleByGroup(pool)
+
+  // Guarantee at least one Crew Timesheet group appears in first 30 (full tests only)
+  if (!topics) {
+    const tsGroups = new Set(TOPIC_GROUPS['Crew Timesheets'] || [])
+    const hasTs = shuffled.slice(0, 30).some(q => tsGroups.has(q.group))
+    if (!hasTs) {
+      const firstTsIdx = shuffled.findIndex(q => tsGroups.has(q.group))
+      if (firstTsIdx !== -1) {
+        const tsGroup = shuffled[firstTsIdx].group
+        const tsQs = shuffled.filter(q => q.group === tsGroup)
+        const others = shuffled.filter(q => q.group !== tsGroup)
+        shuffled = [...tsQs, ...others]
+      }
+    }
+  }
 
   const groupPos = {}
   const final = shuffled.map((q, i) => {
