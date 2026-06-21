@@ -304,6 +304,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [categoryList, setCategoryList] = useState([])
   const [selectedCategories, setSelectedCategories] = useState(new Set())
   const [strategyOpen, setStrategyOpen] = useState(false)
+  const [formulaOpen, setFormulaOpen] = useState(false)
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
@@ -594,6 +595,51 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             ))}
           </div>
         </div>
+
+        {activeTab === 'numeracy' && (
+          <div className="strategy-guide">
+            <button
+              className={`strategy-guide-toggle${formulaOpen ? ' sgt-open' : ''}`}
+              onClick={() => setFormulaOpen(o => !o)}
+            >
+              <span className="tft-icon">{formulaOpen ? '▾' : '▸'}</span>
+              Numeracy Formula Reference
+            </button>
+
+            {formulaOpen && (
+              <div className="strategy-guide-body">
+                <div className="sg-section">
+                  <div className="sg-heading">Volume &amp; Capacity Conversions</div>
+                  <ul className="sg-list">
+                    <li><strong>Golden Rule:</strong> Units change by cubed factor for volume (e.g., cm³ to m³ is divided by 1,000,000).</li>
+                    <li><strong>1 cm³ = 1 mL</strong></li>
+                    <li><strong>1,000 cm³ = 1 L</strong></li>
+                    <li><strong>1 m³ = 1,000 L = 1 kL</strong></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">Geometry</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Rectangle Area</span><span className="fl-formula">Length × Width</span></li>
+                    <li><span className="fl-name">Triangle Area</span><span className="fl-formula">0.5 × Base × Height</span></li>
+                    <li><span className="fl-name">Circle Area</span><span className="fl-formula">π × r²</span></li>
+                    <li><span className="fl-name">Rectangular Prism Volume</span><span className="fl-formula">Length × Width × Height</span></li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">Rates &amp; Change</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Percentage Change</span><span className="fl-formula">((New − Old) / Old) × 100</span></li>
+                    <li><span className="fl-name">Speed</span><span className="fl-formula">Distance / Time</span></li>
+                    <li><span className="fl-name">Average</span><span className="fl-formula">Sum of values / Number of values</span></li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         {activeTab === 'literacy' && (
           <div className="strategy-guide">

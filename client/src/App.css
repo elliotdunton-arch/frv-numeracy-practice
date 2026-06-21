@@ -2549,3 +2549,23 @@ body {
 .sg-list li strong {
   color: var(--text-primary);
 }
+
+/* ── Formula list (name + formula two-column) ───────────── */
+.formula-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.fl-name {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.83rem;
+  flex-shrink: 0;
+}
+.fl-formula {
+  color: #1d4ed8;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 0.8rem;
+  text-align: right;
+}
