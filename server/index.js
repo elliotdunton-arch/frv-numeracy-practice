@@ -4985,18 +4985,6 @@ const ctxL7 = {
   ]
 }
 
-const ctxL8 = {
-  title: 'Vanguard Tech Pro-Flow G3 Filtration Array: Installation & Safety Manual',
-  subtitle: 'Product Model Series: G3-Industrial / High-Pressure Gas Separation',
-  paragraphs: [
-    'This instruction manual governs the unboxing, physical installation, and long-term diagnostic tracking protocols for the Pro-Flow G3 Gaseous Filtration Array. The G3 system is engineered for integration into high-pressure industrial separation plants where gas purity index parameters are critical.',
-    'Section 1 — Structural Anchor Requirements & Rigging Alignment: Prior to anchoring the G3 filtration unit to the industrial concrete base plate, site engineers must verify the local structural load capacity metrics. The complete rigging configuration must utilise a dual-mount isolation template. Each independent structural anchor bolt must possess a verified static load rating of at least 22 kilonewtons (kN) to successfully manage operational vibrations.',
-    'If a single anchor bolt displays any signs of manufacturing degradation, surface rust, or fine hairline micro-cracking along its threaded column, it must be instantly disqualified from service. Installation teams are strictly forbidden from combining two or more compromised bolts to secure a single mounting corner; doing so violates the structural tolerance guarantees.',
-    'Section 2 — High-Efficiency Particulate Air (HEPA) Element Constraints: The internal filtration core relies on a multi-stage high-efficiency particulate air (HEPA) system. This element is rated to operate safely under a maximum continuous static pressure differential of 22 kilopascals (kPa).',
-    'To ensure clean airflow paths, technicians must inspect the silicone perimeter seals and tracking frames at the start of every operating shift cycle. The synthetic sealing elements are highly sensitive to chemical contamination; they must be permanently retired from service if they are exposed to any petroleum-based chemical solvents, unapproved aerosol cleaners, or machine fuel mixtures during installation or transport.',
-    'CRITICAL SYSTEM NOTE: If the system gauges register a sudden, localised pressure variance spike exceeding 5 kPa within the primary containment chamber, the G3 array will enter an automated fault state. This triggers a blinking indicator light on the external interface panel and freezes the system\'s intake valves. To clear this state, a technician must perform a full manual line purge; the system cannot be reset electronically from the master control desk.'
-  ]
-}
 
 const ctxL9 = {
   title: 'In the Supreme Appellate Court: Judicial Advisory on the Enforcement of Section 44 Emergency Decrees',
@@ -5528,63 +5516,6 @@ const literacyQuestions = [
     ],
     answer: 'No,No,Yes',
     method: 'A — 1.8mm exceeds 1.5mm, placing this component in Class III. It must be immediately and permanently retired, not left in service regardless of a visual check. Non-compliant. B — The maximum cleaning temperature is 45°C. 70°C causes dangerous micro-expansions; this violates the mandate. Non-compliant. C — 0.8mm falls between 0.5mm and 1.5mm, classifying the component as Class II. Sending it to Hangar B within 48 hours is exactly the required action. Compliant.'
-  },
-
-  // ── Set 8: Vanguard Tech G3 / Technical Manual ─────────────────────────────
-  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
-    question: 'What is the primary purpose of this technical manual section?',
-    options: [
-      'A) To list wholesale market prices for replacement Pro-Flow G3 filter cores.',
-      'B) To detail the installation requirements, anchor metrics, and safety constraints for the G3 filtration array.',
-      'C) To compare the gas purity profiles of Vanguard filters with competitor products.',
-      'D) To provide instructions on how to clean petroleum-based solvents out of industrial concrete base plates.'
-    ],
-    answer: 'B) To detail the installation requirements, anchor metrics, and safety constraints for the G3 filtration array.',
-    method: 'The manual covers structural anchor bolt requirements (22 kN rating), HEPA pressure constraints (22 kPa), seal contamination rules, and the automated fault state triggered by pressure spikes. Its scope is entirely installation and safety — not pricing, competitor comparisons, or concrete cleaning.'
-  },
-  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
-    question: 'What minimum static load rating is required for each independent structural anchor bolt used to mount the G3 unit?',
-    options: [
-      'A) 5 kilonewtons (kN)',
-      'B) 15 kilonewtons (kN)',
-      'C) 22 kilonewtons (kN)',
-      'D) 45 kilonewtons (kN)'
-    ],
-    answer: 'C) 22 kilonewtons (kN)',
-    method: 'Section 1 states each independent structural anchor bolt must possess "a verified static load rating of at least 22 kilonewtons (kN) to successfully manage operational vibrations." Note that 22 kPa is the HEPA pressure limit — different unit and different system.'
-  },
-  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
-    question: 'What happens automatically if the G3 system gauges detect a pressure variance spike exceeding 5 kPa inside the primary chamber?',
-    options: [
-      'A) The system increases the injection blower speed by 15% to compensate.',
-      'B) The unit enters an automated fault state, blinks an indicator light, and freezes its intake valves.',
-      'C) The filtration array routes all data to a 14-day administrative review hold window.',
-      'D) The anchor bolts automatically release to relieve static pressure from the base plate.'
-    ],
-    answer: 'B) The unit enters an automated fault state, blinks an indicator light, and freezes its intake valves.',
-    method: 'The Critical System Note states that a spike exceeding 5 kPa "will enter an automated fault state. This triggers a blinking indicator light on the external interface panel and freezes the system\'s intake valves." The 14-day window is a regulatory term from the fuel hub article, not this manual.'
-  },
-  { group: 'L8', type: 'multiple_choice', category: 'Technical Manual', context: ctxL8,
-    question: 'What protocol must be followed to restart the G3 filtration array after it enters an automated fault state due to a pressure spike?',
-    options: [
-      'A) The system can be easily reset electronically by an administrator sitting at the master control desk.',
-      'B) A technician must insert a physical key override into Hangar B within 45 minutes.',
-      'C) A technician must perform a full manual line purge on the physical unit.',
-      'D) The intake valves must be left frozen for a continuous duration exceeding 120 seconds.'
-    ],
-    answer: 'C) A technician must perform a full manual line purge on the physical unit.',
-    method: 'The manual explicitly states: "To clear this state, a technician must perform a full manual line purge; the system cannot be reset electronically from the master control desk." Option A directly contradicts this. The Hangar B and 120-second options are fabricated distractors.'
-  },
-  { group: 'L8', type: 'true_false_matrix', category: 'Technical Manual', context: ctxL8,
-    matrixLabels: ['Yes', 'No'],
-    question: 'Based on the manual instructions, are the following actions safe and compliant?',
-    options: [
-      'Using an anchor bolt that has fine hairline micro-cracking along its threads, provided the other bolts are in perfect condition.',
-      'Cleaning the synthetic HEPA sealing elements with a petroleum-based solvent to ensure a tight seal.',
-      'Operating the HEPA filter element under a continuous static pressure differential of 18 kilopascals (kPa).'
-    ],
-    answer: 'No,No,Yes',
-    method: 'A — The manual states a bolt showing any micro-cracking "must be instantly disqualified from service." It also explicitly forbids combining compromised bolts, regardless of the others\' condition. Not safe. B — HEPA sealing elements "must be permanently retired from service if they are exposed to any petroleum-based chemical solvents." Cleaning with such a solvent destroys the seal. Not compliant. C — The maximum continuous static pressure differential is 22 kPa. 18 kPa is safely below that limit. Compliant.'
   },
 
   // ── Set 9: Section 44 / Legal Advisory ────────────────────────────────────
