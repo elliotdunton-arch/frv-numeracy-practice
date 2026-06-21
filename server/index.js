@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-const NOTE = 'Convert minutes to decimal hours: 15 min = 0.25  |  30 min = 0.50  |  35 min = 0.58  |  45 min = 0.75  |  50 min = 0.83  |  60 min = 1.00  |  75 min = 1.25  |  90 min = 1.50'
+const NOTE = 'Convert minutes to decimal hours: 15 min = 0.25  |  30 min = 0.50  |  45 min = 0.75  |  60 min = 1.00'
 
 // ── 10 timesheet contexts ─────────────────────────────────────────────────────
 
@@ -18,11 +18,11 @@ const ctx1 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:15am', '3:45pm', '35 mins'],
-      ['Tuesday',   '7:15am', '4:15pm', '50 mins'],
-      ['Wednesday', '7:15am', '3:15pm', '35 mins'],
-      ['Thursday',  '7:15am', '4:45pm', '75 mins'],
-      ['Friday',    '7:15am', '3:45pm', '35 mins'],
+      ['Monday',    '7:15am', '3:45pm', '30 mins'],
+      ['Tuesday',   '7:15am', '4:15pm', '45 mins'],
+      ['Wednesday', '7:15am', '3:15pm', '30 mins'],
+      ['Thursday',  '7:15am', '4:45pm', '60 mins'],
+      ['Friday',    '7:15am', '3:45pm', '30 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -36,11 +36,11 @@ const ctx2 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '6:45am', '3:15pm',  '35 mins'],
-      ['Tuesday',   '6:45am', '2:45pm',  '50 mins'],
-      ['Wednesday', '6:45am', '3:45pm',  '75 mins'],
-      ['Thursday',  '6:45am', '3:15pm',  '35 mins'],
-      ['Friday',    '6:45am', '2:45pm',  '35 mins'],
+      ['Monday',    '6:45am', '3:15pm',  '30 mins'],
+      ['Tuesday',   '6:45am', '2:45pm',  '45 mins'],
+      ['Wednesday', '6:45am', '3:45pm',  '60 mins'],
+      ['Thursday',  '6:45am', '3:15pm',  '30 mins'],
+      ['Friday',    '6:45am', '2:45pm',  '30 mins'],
       ['Saturday',  '8:15am', '12:15pm', '—'],
       ['Sunday',    '—',      '—',       '—'],
     ]
@@ -54,11 +54,11 @@ const ctx3 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '8:15am', '4:15pm', '50 mins'],
+      ['Monday',    '8:15am', '4:15pm', '45 mins'],
       ['Tuesday',   '—',      '—',      '—'],
-      ['Wednesday', '7:45am', '5:15pm', '75 mins'],
-      ['Thursday',  '8:15am', '3:45pm', '35 mins'],
-      ['Friday',    '7:45am', '4:45pm', '50 mins'],
+      ['Wednesday', '7:45am', '5:15pm', '60 mins'],
+      ['Thursday',  '8:15am', '3:45pm', '30 mins'],
+      ['Friday',    '7:45am', '4:45pm', '45 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -73,10 +73,10 @@ const ctx4 = {
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',       '—',       '—'],
-      ['Tuesday',   '6:15am',  '2:45pm',  '50 mins'],
-      ['Wednesday', '6:15am',  '3:15pm',  '75 mins'],
-      ['Thursday',  '6:15am',  '2:15pm',  '35 mins'],
-      ['Friday',    '6:15am',  '3:45pm',  '75 mins'],
+      ['Tuesday',   '6:15am',  '2:45pm',  '45 mins'],
+      ['Wednesday', '6:15am',  '3:15pm',  '60 mins'],
+      ['Thursday',  '6:15am',  '2:15pm',  '30 mins'],
+      ['Friday',    '6:15am',  '3:45pm',  '60 mins'],
       ['Saturday',  '10:15am', '2:15pm',  '—'],
       ['Sunday',    '9:15am',  '1:15pm',  '—'],
     ]
@@ -90,11 +90,11 @@ const ctx5 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:15am', '5:15pm', '90 mins'],
-      ['Tuesday',   '7:15am', '4:45pm', '75 mins'],
-      ['Wednesday', '7:15am', '6:15pm', '90 mins'],
+      ['Monday',    '7:15am', '5:15pm', '60 mins'],
+      ['Tuesday',   '7:15am', '4:45pm', '60 mins'],
+      ['Wednesday', '7:15am', '6:15pm', '60 mins'],
       ['Thursday',  '—',      '—',      '—'],
-      ['Friday',    '7:15am', '4:15pm', '50 mins'],
+      ['Friday',    '7:15am', '4:15pm', '45 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -109,10 +109,10 @@ const ctx6 = {
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',      '—',       '—'],
-      ['Tuesday',   '6:45am', '3:15pm',  '35 mins'],
-      ['Wednesday', '6:45am', '4:45pm',  '75 mins'],
-      ['Thursday',  '6:45am', '2:45pm',  '35 mins'],
-      ['Friday',    '6:45am', '3:45pm',  '50 mins'],
+      ['Tuesday',   '6:45am', '3:15pm',  '30 mins'],
+      ['Wednesday', '6:45am', '4:45pm',  '60 mins'],
+      ['Thursday',  '6:45am', '2:45pm',  '30 mins'],
+      ['Friday',    '6:45am', '3:45pm',  '45 mins'],
       ['Saturday',  '6:15am', '1:45pm',  '—'],
       ['Sunday',    '7:15am', '10:45am', '—'],
     ]
@@ -126,10 +126,10 @@ const ctx7 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:15am', '3:45pm',  '50 mins'],
-      ['Tuesday',   '7:15am', '4:15pm',  '35 mins'],
-      ['Wednesday', '7:15am', '5:15pm',  '90 mins'],
-      ['Thursday',  '7:15am', '3:15pm',  '35 mins'],
+      ['Monday',    '7:15am', '3:45pm',  '45 mins'],
+      ['Tuesday',   '7:15am', '4:15pm',  '30 mins'],
+      ['Wednesday', '7:15am', '5:15pm',  '60 mins'],
+      ['Thursday',  '7:15am', '3:15pm',  '30 mins'],
       ['Friday',    '—',      '—',       '—'],
       ['Saturday',  '8:15am', '12:15pm', '—'],
       ['Sunday',    '—',      '—',       '—'],
@@ -144,11 +144,11 @@ const ctx8 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '6:15am', '2:45pm', '35 mins'],
-      ['Tuesday',   '6:15am', '3:15pm', '50 mins'],
-      ['Wednesday', '6:15am', '2:15pm', '35 mins'],
-      ['Thursday',  '6:15am', '3:45pm', '75 mins'],
-      ['Friday',    '6:15am', '2:45pm', '35 mins'],
+      ['Monday',    '6:15am', '2:45pm', '30 mins'],
+      ['Tuesday',   '6:15am', '3:15pm', '45 mins'],
+      ['Wednesday', '6:15am', '2:15pm', '30 mins'],
+      ['Thursday',  '6:15am', '3:45pm', '60 mins'],
+      ['Friday',    '6:15am', '2:45pm', '30 mins'],
       ['Saturday',  '6:15am', '4:15pm', '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -163,10 +163,10 @@ const ctx9 = {
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',      '—',       '—'],
-      ['Tuesday',   '5:45am', '2:15pm',  '35 mins'],
-      ['Wednesday', '5:45am', '3:45pm',  '75 mins'],
-      ['Thursday',  '5:45am', '2:45pm',  '50 mins'],
-      ['Friday',    '5:45am', '1:45pm',  '35 mins'],
+      ['Tuesday',   '5:45am', '2:15pm',  '30 mins'],
+      ['Wednesday', '5:45am', '3:45pm',  '60 mins'],
+      ['Thursday',  '5:45am', '2:45pm',  '45 mins'],
+      ['Friday',    '5:45am', '1:45pm',  '30 mins'],
       ['Saturday',  '6:15am', '10:15am', '—'],
       ['Sunday',    '7:15am', '10:45am', '—'],
     ]
@@ -180,12 +180,12 @@ const ctx10 = {
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:00am', '3:30pm', '50 mins'],
-      ['Tuesday',   '7:00am', '5:00pm', '90 mins'],
+      ['Monday',    '7:00am', '3:30pm', '45 mins'],
+      ['Tuesday',   '7:00am', '5:00pm', '60 mins'],
       ['Wednesday', '—',      '—',      '—'],
-      ['Thursday',  '7:00am', '5:30pm', '90 mins'],
-      ['Friday',    '7:00am', '4:00pm', '75 mins'],
-      ['Saturday',  '7:15am', '3:15pm', '35 mins'],
+      ['Thursday',  '7:00am', '5:30pm', '60 mins'],
+      ['Friday',    '7:00am', '4:00pm', '60 mins'],
+      ['Saturday',  '7:15am', '3:15pm', '30 mins'],
       ['Sunday',    '7:15am', '1:15pm', '—'],
     ]
   }],
@@ -1750,12 +1750,18 @@ const ctxMap8 = {
   formulaHint: 'Map distance (cm) = Actual distance (m) × 100 ÷ Scale',
 }
 
+const ctxMitchell = {
+  title: 'Mitchell Town Map',
+  subtitle: 'Leo has just arrived in the town of Mitchell. Below is a map of the town.',
+  image: '/images/numeracy/Numeracy 01.png',
+}
+
 // ── Standard drinks context ───────────────────────────────────────────────────
 
 const ctxSD = {
   title: 'Standard Drinks',
   subtitle: 'In Australia, 1 standard drink contains 10 grams of pure alcohol (ethanol density = 0.789 g/mL).',
-  formulaHint: 'Standard drinks = Volume (mL) × %ABV × 0.000789',
+  formulaHint: 'Standard drinks = Volume (mL) × (ABV% ÷ 100) × 0.789 ÷ 10',
   note: 'The Australian health guideline recommends no more than 4 standard drinks on any single occasion.'
 }
 
@@ -1768,13 +1774,13 @@ const questions = [
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
     question: 'Calculate the total number of paid weekday hours Sarah worked this week.',
-    answer: '39.67'
+    answer: '40.25'
   },
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
     question: "What is the difference in gross pay between Sarah's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '46.04'
+    answer: '55.25'
   },
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
@@ -1788,13 +1794,13 @@ const questions = [
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
     question: 'Calculate the total number of paid hours Marcus worked across the full week.',
-    answer: '42.17'
+    answer: '42.75'
   },
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
     question: "What is the difference in gross pay between Marcus's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '122.17'
+    answer: '127.48'
   },
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
@@ -1808,13 +1814,13 @@ const questions = [
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
     question: 'Calculate the total number of paid hours Anika worked this week.',
-    answer: '30.5'
+    answer: '31'
   },
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
     question: "What is the difference in gross pay between Anika's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '78'
+    answer: '87.75'
   },
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
@@ -1828,13 +1834,13 @@ const questions = [
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
     question: 'Calculate the total number of paid hours Daniel worked across the full week.',
-    answer: '39.08'
+    answer: '39.75'
   },
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
     question: "What is the difference in gross pay between Daniel's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '148.82'
+    answer: '165.36'
   },
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
@@ -1848,13 +1854,13 @@ const questions = [
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
     question: 'Calculate the total number of paid weekday hours Lena worked this week.',
-    answer: '34.42'
+    answer: '35.75'
   },
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
     question: "What is the difference in gross pay between Lena's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '96.60'
+    answer: '126.79'
   },
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
@@ -1868,7 +1874,7 @@ const questions = [
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
     question: 'Calculate the total number of paid hours Omar worked across the full week.',
-    answer: '43.25'
+    answer: '43.75'
   },
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
@@ -1888,13 +1894,13 @@ const questions = [
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
     question: 'Calculate the total number of paid hours Claire worked across the full week.',
-    answer: '36'
+    answer: '36.75'
   },
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
     question: "What is the difference in gross pay between Claire's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '173.355'
+    answer: '208.03'
   },
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
@@ -1908,13 +1914,13 @@ const questions = [
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
     question: 'Calculate the total number of paid hours Ben worked across the full week.',
-    answer: '49.67'
+    answer: '50.25'
   },
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
     question: "What is the difference in gross pay between Ben's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '439.075'
+    answer: '434.25'
   },
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
@@ -1928,13 +1934,13 @@ const questions = [
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
     question: 'Calculate the total number of paid hours Nina worked across the full week.',
-    answer: '39.75'
+    answer: '40.25'
   },
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
     question: "What is the difference in gross pay between Nina's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '204.05'
+    answer: '222.60'
   },
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
@@ -1948,13 +1954,13 @@ const questions = [
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
     question: 'Calculate the total number of paid hours Adrian worked across the full week.',
-    answer: '46.33'
+    answer: '47.75'
   },
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
     question: "What is the difference in gross pay between Adrian's highest and lowest earning days?\n(Enter the dollar amount only)",
-    answer: '292.28'
+    answer: '286.66'
   },
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
@@ -4205,6 +4211,33 @@ const questions = [
     answer: '17'
   },
 
+  // ── Set FE: Mitchell Town Map ─────────────────────────────────────────────────
+  {
+    group: 'FE', type: 'multiple_choice', category: 'Measurement and Geometry',
+    context: ctxMitchell,
+    question: 'Leo wants to get from the train station to the police station. Which of the following describes the most direct route?',
+    options: [
+      'A — Travel east along Station St. Turn right at Market St. After Moon St, the police station will be on his left.',
+      'B — Travel east along Station St. Turn right at Market St. After Moon St, the police station will be on his right.',
+      'C — Travel east along Station St. Turn right at Market St. Before Moon St, the police station will be on his left.',
+      'D — Travel west along Station St. Turn right at Market St. After Moon St, the police station will be on his right.',
+      'E — Travel west along Station St. Turn right at Market St. After Moon St, the police station will be on his left.',
+    ],
+    answer: 'A — Travel east along Station St. Turn right at Market St. After Moon St, the police station will be on his left.'
+  },
+  {
+    group: 'FE', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMitchell,
+    question: 'The scale on the map of Mitchell is 1:15 000. If Leo travelled 10 centimetres (cm) on the map, how many kilometres (km) would this be?',
+    answer: '1.5'
+  },
+  {
+    group: 'FE', type: 'number_input', category: 'Measurement and Geometry',
+    context: ctxMitchell,
+    question: 'Leo goes for a 5 km walk around Mitchell. If Leo walks at an average pace of 4 km/h, how long will it take him to walk this distance? Give your answer in minutes.',
+    answer: '75'
+  },
+
   // ── Sets DI–DR: Shower Head Water Savings ────────────────────────────────────
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
@@ -4329,6 +4362,7 @@ const units = {
   EY: ['km', 'h'], EZ: ['mm', 'mm'],
   FA: ['m', 'm'], FB: ['mm', 'mm'],
   FC: ['m', 'm'], FD: ['cm', 'cm'],
+  FE: [null, 'km', 'mins'],
   EL: ['m³', null],
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
@@ -4337,53 +4371,53 @@ const units = {
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
 const methods = {
   A: [
-    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 50 min = 8h 10m = 490 min\n  Wed: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Thu: 4:45pm − 7:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Fri: 3:45pm − 7:15am = 8h 30m − 35 min = 7h 55m = 475 min\n\nTotal minutes: 475 + 490 + 445 + 495 + 475 = 2,380 min\nConvert to hours: 2,380 ÷ 60 = 39.67 h`,
-    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $55.25 = 7.917 h × $55.25 = $437.41\n  Tue: 490/60 × $55.25 = 8.167 h × $55.25 = $451.22\n  Wed: 445/60 × $55.25 = 7.417 h × $55.25 = $409.77\n  Thu: 495/60 × $55.25 = 8.250 h × $55.25 = $455.81\n  Fri: 475/60 × $55.25 = 7.917 h × $55.25 = $437.41\n\n  Highest earning day: Thursday  = $455.81\n  Lowest earning day:  Wednesday = $409.77\n\nDifference: $455.81 − $409.77 = $46.04`,
+    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 30 min = 8h 00m = 480 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 45 min = 8h 15m = 495 min\n  Wed: 3:15pm − 7:15am = 8h 00m − 30 min = 7h 30m = 450 min\n  Thu: 4:45pm − 7:15am = 9h 30m − 60 min = 8h 30m = 510 min\n  Fri: 3:45pm − 7:15am = 8h 30m − 30 min = 8h 00m = 480 min\n\nTotal minutes: 480 + 495 + 450 + 510 + 480 = 2,415 min\nConvert to hours: 2,415 ÷ 60 = 40.25 h`,
+    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 8.00 h × $55.25 = $442.00\n  Tue: 8.25 h × $55.25 = $455.81\n  Wed: 7.50 h × $55.25 = $414.38\n  Thu: 8.50 h × $55.25 = $469.63\n  Fri: 8.00 h × $55.25 = $442.00\n\n  Highest earning day: Thursday  = $469.63\n  Lowest earning day:  Wednesday = $414.38\n\nDifference: $469.63 − $414.38 = $55.25`,
     `New rate = Old rate × (1 + percentage increase)\n  = $55.25 × 1.025\n  = $56.63`,
   ],
   B: [
-    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 2:45pm − 6:45am = 8h 00m − 50 min = 7h 10m = 430 min\n  Wed: 3:45pm − 6:45am = 9h 00m − 75 min = 7h 45m = 465 min\n  Thu: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Fri: 2:45pm − 6:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 475 + 430 + 465 + 475 + 445 + 240 = 2,530 min\nConvert to hours: 2,530 ÷ 60 = 42.17 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $63.75 = 7.917 h × $63.75 = $504.69\n  Tue: 430/60 × $63.75 = 7.167 h × $63.75 = $456.88\n  Wed: 465/60 × $63.75 = 7.750 h × $63.75 = $494.06\n  Thu: 475/60 × $63.75 = 7.917 h × $63.75 = $504.69\n  Fri: 445/60 × $63.75 = 7.417 h × $63.75 = $472.81\n  Sat: 4.000 h × $95.63 (sat rate)         = $382.52\n\n  Highest earning day: Monday / Thursday = $504.69\n  Lowest earning day:  Saturday          = $382.52\n\nDifference: $504.69 − $382.52 = $122.17`,
+    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n\n  Mon: 3:15pm − 6:45am = 8h 30m − 30 min = 8h 00m = 480 min\n  Tue: 2:45pm − 6:45am = 8h 00m − 45 min = 7h 15m = 435 min\n  Wed: 3:45pm − 6:45am = 9h 00m − 60 min = 8h 00m = 480 min\n  Thu: 3:15pm − 6:45am = 8h 30m − 30 min = 8h 00m = 480 min\n  Fri: 2:45pm − 6:45am = 8h 00m − 30 min = 7h 30m = 450 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 480 + 435 + 480 + 480 + 450 + 240 = 2,565 min\nConvert to hours: 2,565 ÷ 60 = 42.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 8.00 h × $63.75 = $510.00\n  Tue: 7.25 h × $63.75 = $462.19\n  Wed: 8.00 h × $63.75 = $510.00\n  Thu: 8.00 h × $63.75 = $510.00\n  Fri: 7.50 h × $63.75 = $478.13\n  Sat: 4.00 h × $95.63 (sat rate) = $382.52\n\n  Highest earning day: Mon / Wed / Thu = $510.00\n  Lowest earning day:  Saturday        = $382.52\n\nDifference: $510.00 − $382.52 = $127.48`,
     `New rate = Old rate × (1 − percentage decrease)\n  = $63.75 × 0.985\n  = $62.79`,
   ],
   C: [
-    `Tuesday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 4:15pm − 8:15am = 8h 00m − 50 min = 7h 10m = 430 min\n  Wed: 5:15pm − 7:45am = 9h 30m − 75 min = 8h 15m = 495 min\n  Thu: 3:45pm − 8:15am = 7h 30m − 35 min = 6h 55m = 415 min\n  Fri: 4:45pm − 7:45am = 9h 00m − 50 min = 8h 10m = 490 min\n\nTotal minutes: 430 + 495 + 415 + 490 = 1,830 min\nConvert to hours: 1,830 ÷ 60 = 30.5 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 430/60 × $58.50 = 7.167 h × $58.50 = $419.25\n  Wed: 495/60 × $58.50 = 8.250 h × $58.50 = $482.63\n  Thu: 415/60 × $58.50 = 6.917 h × $58.50 = $404.63\n  Fri: 490/60 × $58.50 = 8.167 h × $58.50 = $477.75\n\n  Highest earning day: Wednesday = $482.63\n  Lowest earning day:  Thursday  = $404.63\n\nDifference: $482.63 − $404.63 = $78.00`,
+    `Tuesday was off. Calculate billable hours for each worked day.\n\n  Mon: 4:15pm − 8:15am = 8h 00m − 45 min = 7h 15m = 435 min\n  Wed: 5:15pm − 7:45am = 9h 30m − 60 min = 8h 30m = 510 min\n  Thu: 3:45pm − 8:15am = 7h 30m − 30 min = 7h 00m = 420 min\n  Fri: 4:45pm − 7:45am = 9h 00m − 45 min = 8h 15m = 495 min\n\nTotal minutes: 435 + 510 + 420 + 495 = 1,860 min\nConvert to hours: 1,860 ÷ 60 = 31 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 7.25 h × $58.50 = $424.13\n  Wed: 8.50 h × $58.50 = $497.25\n  Thu: 7.00 h × $58.50 = $409.50\n  Fri: 8.25 h × $58.50 = $482.63\n\n  Highest earning day: Wednesday = $497.25\n  Lowest earning day:  Thursday  = $409.50\n\nDifference: $497.25 − $409.50 = $87.75`,
     `New rate = Old rate × (1 + percentage increase)\n  = $58.50 × 1.032\n  = $60.37`,
   ],
   D: [
-    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 2:45pm − 6:15am = 8h 30m − 50 min = 7h 40m = 460 min\n  Wed: 3:15pm − 6:15am = 9h 00m − 75 min = 7h 45m = 465 min\n  Thu: 2:15pm − 6:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Fri: 3:45pm − 6:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Sat: 2:15pm − 10:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 1:15pm − 9:15am  = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 460 + 465 + 445 + 495 + 240 + 240 = 2,345 min\nConvert to hours: 2,345 ÷ 60 = 39.08 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 460/60 × $66.15 = 7.667 h × $66.15 = $507.15\n  Wed: 465/60 × $66.15 = 7.750 h × $66.15 = $512.66\n  Thu: 445/60 × $66.15 = 7.417 h × $66.15 = $490.61\n  Fri: 495/60 × $66.15 = 8.250 h × $66.15 = $545.74\n  Sat: 4.000 h × $99.23 (sat rate)          = $396.92\n  Sun: 4.000 h × $132.30 (sun rate)         = $529.20\n\n  Highest earning day: Friday   = $545.74\n  Lowest earning day:  Saturday = $396.92\n\nDifference: $545.74 − $396.92 = $148.82`,
+    `Monday was off. Calculate billable hours for each worked day.\n\n  Tue: 2:45pm − 6:15am = 8h 30m − 45 min = 7h 45m = 465 min\n  Wed: 3:15pm − 6:15am = 9h 00m − 60 min = 8h 00m = 480 min\n  Thu: 2:15pm − 6:15am = 8h 00m − 30 min = 7h 30m = 450 min\n  Fri: 3:45pm − 6:15am = 9h 30m − 60 min = 8h 30m = 510 min\n  Sat: 2:15pm − 10:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 1:15pm − 9:15am  = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 465 + 480 + 450 + 510 + 240 + 240 = 2,385 min\nConvert to hours: 2,385 ÷ 60 = 39.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 7.75 h × $66.15 = $512.66\n  Wed: 8.00 h × $66.15 = $529.20\n  Thu: 7.50 h × $66.15 = $496.13\n  Fri: 8.50 h × $66.15 = $562.28\n  Sat: 4.00 h × $99.23 (sat rate)  = $396.92\n  Sun: 4.00 h × $132.30 (sun rate) = $529.20\n\n  Highest earning day: Friday   = $562.28\n  Lowest earning day:  Saturday = $396.92\n\nDifference: $562.28 − $396.92 = $165.36`,
     `New rate = Old rate × (1 + percentage increase)\n  = $66.15 × 1.042\n  = $68.93`,
   ],
   E: [
-    `Thursday was off. Calculate billable hours for each worked day.\n(50 min = 0.83 h  |  75 min = 1.25 h  |  90 min = 1.50 h)\n\n  Mon: 5:15pm − 7:15am = 10h 00m − 90 min = 8h 30m = 510 min\n  Tue: 4:45pm − 7:15am = 9h 30m  − 75 min = 8h 15m = 495 min\n  Wed: 6:15pm − 7:15am = 11h 00m − 90 min = 9h 30m = 570 min\n  Fri: 4:15pm − 7:15am = 9h 00m  − 50 min = 8h 10m = 490 min\n\nTotal minutes: 510 + 495 + 570 + 490 = 2,065 min\nConvert to hours: 2,065 ÷ 60 = 34.42 h`,
-    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 510/60 × $72.45 = 8.500 h × $72.45 = $615.83\n  Tue: 495/60 × $72.45 = 8.250 h × $72.45 = $597.71\n  Wed: 570/60 × $72.45 = 9.500 h × $72.45 = $688.28\n  Fri: 490/60 × $72.45 = 8.167 h × $72.45 = $591.68\n\n  Highest earning day: Wednesday = $688.28\n  Lowest earning day:  Friday    = $591.68\n\nDifference: $688.28 − $591.68 = $96.60`,
+    `Thursday was off. Calculate billable hours for each worked day.\n\n  Mon: 5:15pm − 7:15am = 10h 00m − 60 min = 9h 00m = 540 min\n  Tue: 4:45pm − 7:15am = 9h 30m  − 60 min = 8h 30m = 510 min\n  Wed: 6:15pm − 7:15am = 11h 00m − 60 min = 10h 00m = 600 min\n  Fri: 4:15pm − 7:15am = 9h 00m  − 45 min = 8h 15m = 495 min\n\nTotal minutes: 540 + 510 + 600 + 495 = 2,145 min\nConvert to hours: 2,145 ÷ 60 = 35.75 h`,
+    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 9.00 h × $72.45 = $652.05\n  Tue: 8.50 h × $72.45 = $615.83\n  Wed: 10.00 h × $72.45 = $724.50\n  Fri: 8.25 h × $72.45 = $597.71\n\n  Highest earning day: Wednesday = $724.50\n  Lowest earning day:  Friday    = $597.71\n\nDifference: $724.50 − $597.71 = $126.79`,
     `New rate = Old rate × (1 − percentage decrease)\n  = $72.45 × 0.98\n  = $71.00`,
   ],
   F: [
-    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Wed: 4:45pm − 6:45am = 10h 00m − 75 min = 8h 45m = 525 min\n  Thu: 2:45pm − 6:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Fri: 3:45pm − 6:45am = 9h 00m − 50 min = 8h 10m = 490 min\n  Sat: 1:45pm − 6:15am = 7h 30m = 450 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 475 + 525 + 445 + 490 + 450 + 210 = 2,595 min\nConvert to hours: 2,595 ÷ 60 = 43.25 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 475/60 × $64.80 = 7.917 h × $64.80 = $513.00\n  Wed: 525/60 × $64.80 = 8.750 h × $64.80 = $567.00\n  Thu: 445/60 × $64.80 = 7.417 h × $64.80 = $480.60\n  Fri: 490/60 × $64.80 = 8.167 h × $64.80 = $529.20\n  Sat: 7.500 h × $97.20 (sat rate)         = $729.00\n  Sun: 3.500 h × $129.60 (sun rate)        = $453.60\n\n  Highest earning day: Saturday = $729.00\n  Lowest earning day:  Sunday   = $453.60\n\nNote: Sunday ($453.60) is lower than Thursday ($480.60) — confirm before selecting.\n\nDifference: $729.00 − $453.60 = $275.40`,
+    `Monday was off. Calculate billable hours for each worked day.\n\n  Tue: 3:15pm − 6:45am = 8h 30m − 30 min = 8h 00m = 480 min\n  Wed: 4:45pm − 6:45am = 10h 00m − 60 min = 9h 00m = 540 min\n  Thu: 2:45pm − 6:45am = 8h 00m − 30 min = 7h 30m = 450 min\n  Fri: 3:45pm − 6:45am = 9h 00m − 45 min = 8h 15m = 495 min\n  Sat: 1:45pm − 6:15am = 7h 30m = 450 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 480 + 540 + 450 + 495 + 450 + 210 = 2,625 min\nConvert to hours: 2,625 ÷ 60 = 43.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 8.00 h × $64.80 = $518.40\n  Wed: 9.00 h × $64.80 = $583.20\n  Thu: 7.50 h × $64.80 = $486.00\n  Fri: 8.25 h × $64.80 = $534.60\n  Sat: 7.50 h × $97.20 (sat rate)  = $729.00\n  Sun: 3.50 h × $129.60 (sun rate) = $453.60\n\n  Highest earning day: Saturday = $729.00\n  Lowest earning day:  Sunday   = $453.60\n\nNote: Sunday ($453.60) is lower than Thursday ($486.00) — confirm before selecting.\n\nDifference: $729.00 − $453.60 = $275.40`,
     `New rate = Old rate × (1 + percentage increase)\n  = $64.80 × 1.05\n  = $68.04`,
   ],
   G: [
-    `Friday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  90 min = 1.50 h)\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 50 min = 7h 40m = 460 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 35 min = 8h 25m = 505 min\n  Wed: 5:15pm − 7:15am = 10h 00m − 90 min = 8h 30m = 510 min\n  Thu: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 460 + 505 + 510 + 445 + 240 = 2,160 min\nConvert to hours: 2,160 ÷ 60 = 36 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 460/60 × $69.35 = 7.667 h × $69.35 = $531.68\n  Tue: 505/60 × $69.35 = 8.417 h × $69.35 = $583.70\n  Wed: 510/60 × $69.35 = 8.500 h × $69.35 = $589.48\n  Thu: 445/60 × $69.35 = 7.417 h × $69.35 = $514.35\n  Sat: 4.000 h × $104.03 (sat rate)         = $416.12\n\n  Highest earning day: Wednesday = $589.48\n  Lowest earning day:  Saturday  = $416.12\n\nDifference: $589.48 − $416.12 = $173.36 (≈ $173.355)`,
+    `Friday was off. Calculate billable hours for each worked day.\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 45 min = 7h 45m = 465 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 30 min = 8h 30m = 510 min\n  Wed: 5:15pm − 7:15am = 10h 00m − 60 min = 9h 00m = 540 min\n  Thu: 3:15pm − 7:15am = 8h 00m − 30 min = 7h 30m = 450 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 465 + 510 + 540 + 450 + 240 = 2,205 min\nConvert to hours: 2,205 ÷ 60 = 36.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 7.75 h × $69.35 = $537.46\n  Tue: 8.50 h × $69.35 = $589.48\n  Wed: 9.00 h × $69.35 = $624.15\n  Thu: 7.50 h × $69.35 = $520.13\n  Sat: 4.00 h × $104.03 (sat rate) = $416.12\n\n  Highest earning day: Wednesday = $624.15\n  Lowest earning day:  Saturday  = $416.12\n\nDifference: $624.15 − $416.12 = $208.03`,
     `New rate = Old rate × (1 − percentage decrease)\n  = $104.03 × 0.97\n  = $100.91`,
   ],
   H: [
-    `Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 2:45pm − 6:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 3:15pm − 6:15am = 9h 00m − 50 min = 8h 10m = 490 min\n  Wed: 2:15pm − 6:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Thu: 3:45pm − 6:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Fri: 2:45pm − 6:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Sat: 4:15pm − 6:15am = 10h 00m = 600 min (no Non-Billable)\n\nTotal minutes: 475 + 490 + 445 + 495 + 475 + 600 = 2,980 min\nConvert to hours: 2,980 ÷ 60 = 49.67 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $57.90 = 7.917 h × $57.90 = $458.38\n  Tue: 490/60 × $57.90 = 8.167 h × $57.90 = $472.88\n  Wed: 445/60 × $57.90 = 7.417 h × $57.90 = $429.43\n  Thu: 495/60 × $57.90 = 8.250 h × $57.90 = $477.68\n  Fri: 475/60 × $57.90 = 7.917 h × $57.90 = $458.38\n  Sat: 10.000 h × $86.85 (sat rate)         = $868.50\n\n  Highest earning day: Saturday  = $868.50\n  Lowest earning day:  Wednesday = $429.43 (≈ $429.425)\n\nDifference: $868.50 − $429.43 = $439.08 (exact: $439.075)`,
+    `Calculate billable hours for each worked day.\n\n  Mon: 2:45pm − 6:15am = 8h 30m − 30 min = 8h 00m = 480 min\n  Tue: 3:15pm − 6:15am = 9h 00m − 45 min = 8h 15m = 495 min\n  Wed: 2:15pm − 6:15am = 8h 00m − 30 min = 7h 30m = 450 min\n  Thu: 3:45pm − 6:15am = 9h 30m − 60 min = 8h 30m = 510 min\n  Fri: 2:45pm − 6:15am = 8h 30m − 30 min = 8h 00m = 480 min\n  Sat: 4:15pm − 6:15am = 10h 00m = 600 min (no Non-Billable)\n\nTotal minutes: 480 + 495 + 450 + 510 + 480 + 600 = 3,015 min\nConvert to hours: 3,015 ÷ 60 = 50.25 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 8.00 h × $57.90 = $463.20\n  Tue: 8.25 h × $57.90 = $477.68\n  Wed: 7.50 h × $57.90 = $434.25\n  Thu: 8.50 h × $57.90 = $492.15\n  Fri: 8.00 h × $57.90 = $463.20\n  Sat: 10.00 h × $86.85 (sat rate) = $868.50\n\n  Highest earning day: Saturday  = $868.50\n  Lowest earning day:  Wednesday = $434.25\n\nDifference: $868.50 − $434.25 = $434.25`,
     `New rate = Old rate × (1 + percentage increase)\n  = $57.90 × 1.018\n  = $58.94`,
   ],
   I: [
-    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 2:15pm − 5:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Wed: 3:45pm − 5:45am = 10h 00m − 75 min = 8h 45m = 525 min\n  Thu: 2:45pm − 5:45am = 9h 00m − 50 min = 8h 10m = 490 min\n  Fri: 1:45pm − 5:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 10:15am − 6:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 475 + 525 + 490 + 445 + 240 + 210 = 2,385 min\nConvert to hours: 2,385 ÷ 60 = 39.75 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 475/60 × $74.20 = 7.917 h × $74.20 = $587.42\n  Wed: 525/60 × $74.20 = 8.750 h × $74.20 = $649.25\n  Thu: 490/60 × $74.20 = 8.167 h × $74.20 = $605.97\n  Fri: 445/60 × $74.20 = 7.417 h × $74.20 = $550.32\n  Sat: 4.000 h × $111.30 (sat rate)         = $445.20\n  Sun: 3.500 h × $148.40 (sun rate)         = $519.40\n\n  Highest earning day: Wednesday = $649.25\n  Lowest earning day:  Saturday  = $445.20\n\nDifference: $649.25 − $445.20 = $204.05`,
+    `Monday was off. Calculate billable hours for each worked day.\n\n  Tue: 2:15pm − 5:45am = 8h 30m − 30 min = 8h 00m = 480 min\n  Wed: 3:45pm − 5:45am = 10h 00m − 60 min = 9h 00m = 540 min\n  Thu: 2:45pm − 5:45am = 9h 00m − 45 min = 8h 15m = 495 min\n  Fri: 1:45pm − 5:45am = 8h 00m − 30 min = 7h 30m = 450 min\n  Sat: 10:15am − 6:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 480 + 540 + 495 + 450 + 240 + 210 = 2,415 min\nConvert to hours: 2,415 ÷ 60 = 40.25 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 8.00 h × $74.20 = $593.60\n  Wed: 9.00 h × $74.20 = $667.80\n  Thu: 8.25 h × $74.20 = $612.15\n  Fri: 7.50 h × $74.20 = $556.50\n  Sat: 4.00 h × $111.30 (sat rate) = $445.20\n  Sun: 3.50 h × $148.40 (sun rate) = $519.40\n\n  Highest earning day: Wednesday = $667.80\n  Lowest earning day:  Saturday  = $445.20\n\nDifference: $667.80 − $445.20 = $222.60`,
     `New rate = Old rate × (1 + percentage increase)\n  = $74.20 × 1.022\n  = $75.83`,
   ],
   J: [
-    `Wednesday was off. Calculate billable hours for each worked day.\n(50 min = 0.83 h  |  75 min = 1.25 h  |  90 min = 1.50 h)\n\n  Mon: 3:30pm − 7:00am = 8h 30m − 50 min = 7h 40m = 460 min\n  Tue: 5:00pm − 7:00am = 10h 00m − 90 min = 8h 30m = 510 min\n  Thu: 5:30pm − 7:00am = 10h 30m − 90 min = 9h 00m = 540 min\n  Fri: 4:00pm − 7:00am = 9h 00m − 75 min = 7h 45m = 465 min\n  Sat: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sun: 1:15pm − 7:15am = 6h 00m = 360 min (no Non-Billable)\n\nTotal minutes: 460 + 510 + 540 + 465 + 445 + 360 = 2,780 min\nConvert to hours: 2,780 ÷ 60 = 46.33 h`,
-    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 460/60 × $67.45 = 7.667 h × $67.45 = $517.12\n  Tue: 510/60 × $67.45 = 8.500 h × $67.45 = $573.33\n  Thu: 540/60 × $67.45 = 9.000 h × $67.45 = $607.05\n  Fri: 465/60 × $67.45 = 7.750 h × $67.45 = $522.74\n  Sat: 445/60 × $101.18 = 7.417 h × $101.18 = $750.42\n  Sun: 6.000 h × $134.90 (sun rate)          = $809.40\n\n  Highest earning day: Sunday = $809.40\n  Lowest earning day:  Monday = $517.12\n\nDifference: $809.40 − $517.12 = $292.28`,
+    `Wednesday was off. Calculate billable hours for each worked day.\n\n  Mon: 3:30pm − 7:00am = 8h 30m − 45 min = 7h 45m = 465 min\n  Tue: 5:00pm − 7:00am = 10h 00m − 60 min = 9h 00m = 540 min\n  Thu: 5:30pm − 7:00am = 10h 30m − 60 min = 9h 30m = 570 min\n  Fri: 4:00pm − 7:00am = 9h 00m − 60 min = 8h 00m = 480 min\n  Sat: 3:15pm − 7:15am = 8h 00m − 30 min = 7h 30m = 450 min\n  Sun: 1:15pm − 7:15am = 6h 00m = 360 min (no Non-Billable)\n\nTotal minutes: 465 + 540 + 570 + 480 + 450 + 360 = 2,865 min\nConvert to hours: 2,865 ÷ 60 = 47.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 7.75 h × $67.45 = $522.74\n  Tue: 9.00 h × $67.45 = $607.05\n  Thu: 9.50 h × $67.45 = $640.78\n  Fri: 8.00 h × $67.45 = $539.60\n  Sat: 7.50 h × $101.18 (sat rate)  = $758.85\n  Sun: 6.00 h × $134.90 (sun rate)  = $809.40\n\n  Highest earning day: Sunday = $809.40\n  Lowest earning day:  Monday = $522.74\n\nDifference: $809.40 − $522.74 = $286.66`,
     `New rate = Old rate × (1 + percentage increase)\n  = $67.45 × 1.035\n  = $69.81`,
   ],
   K: [
@@ -4926,6 +4960,11 @@ const methods = {
     `Map distance (cm) = Actual distance (m) × 100 ÷ Scale\n  = 45 m × 100 ÷ 500\n  = 4,500 ÷ 500\n  = 9 cm`,
     `Map distance (cm) = 85 m × 100 ÷ 500\n  = 8,500 ÷ 500\n  = 17 cm`,
   ],
+  FE: [
+    `Find the police station symbol on the map key (circle with a cross inside ⊕).\nLocate it on the map — it sits on Market St, south of Moon St.\nFrom Mitchell Station: travel east along Station St, then turn right (south) onto Market St.\nAfter passing Moon St, the police station is on the left (east side of Market St).\nAnswer: A`,
+    `Scale 1:15 000 means 1 cm on the map = 15 000 cm in real life.\n10 cm on map = 10 × 15 000 = 150 000 cm\nConvert to metres: 150 000 ÷ 100 = 1 500 m\nConvert to kilometres: 1 500 ÷ 1 000 = 1.5 km`,
+    `Time = Distance ÷ Speed\n  = 5 km ÷ 4 km/h\n  = 1.25 hours\n  = 1.25 × 60\n  = 75 minutes`,
+  ],
   EM: [
     `Original price = Sale price ÷ (1 − discount rate)\n  = $1,698.00 ÷ (1 − 0.15)\n  = $1,698.00 ÷ 0.85\n  = $1,997.647…\n  = $1,997.65 (rounded to 2 decimal places)`,
     `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($299.00 × 0.50)\n  = $1,698.00 + $149.50\n  = $1,847.50`,
@@ -5047,7 +5086,7 @@ const TOPIC_GROUPS = {
   'Business Scenarios':       ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB'],
   'Unit Conversions':         ['EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL'],
   'Tech Bundle Sales':        ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
-  'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD'],
+  'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD','FE'],
 }
 
 app.get('/api/topics', (req, res) => {

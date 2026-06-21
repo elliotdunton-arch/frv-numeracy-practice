@@ -749,10 +749,10 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                     <li><span className="fl-name">Burn time (mins)</span><span className="fl-formula">(Food kJ ÷ Activity rate kJ/hr) × 60</span></li>
                     <li><span className="fl-name">Burn time (hrs)</span><span className="fl-formula">Food kJ ÷ Activity rate (kJ/hr)</span></li>
                     <li><span className="fl-name">Food equivalent</span><span className="fl-formula">kJ burned ÷ kJ per food item</span></li>
-                    <li><span className="fl-name">Standard drinks</span><span className="fl-formula">Volume (mL) × %ABV × 0.000789</span></li>
+                    <li><span className="fl-name">Standard drinks</span><span className="fl-formula">Volume (mL) × (ABV% ÷ 100) × 0.789 ÷ 10</span></li>
                   </ul>
                   <p className="sg-note">Activity rates are given in kJ/hr (e.g. soccer 2,500 kJ/hr, running 2,200 kJ/hr, walking 1,000 kJ/hr). These are always provided in the question context.</p>
-                  <p className="sg-note">Standard drinks: 0.000789 is the ethanol density constant (g/mL ÷ 10g per standard drink).</p>
+                  <p className="sg-note">Standard drinks: 0.789 is the ethanol density (g/mL). Dividing by 10 converts grams to standard drinks (1 standard drink = 10g pure alcohol).</p>
                 </div>
 
                 <div className="sg-section">
