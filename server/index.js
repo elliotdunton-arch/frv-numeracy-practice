@@ -5622,6 +5622,11 @@ const ctxL52 = {
   ]
 }
 
+const ctxL53 = {
+  title: 'Community Poster — Mulberry Creek Freeway Entrance',
+  image: '/images/literacy/Literacy 01.png',
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -7168,7 +7173,63 @@ const literacyQuestions = [
     ],
     answer: 'C) Optimal physical traits vary based on position and role.',
     method: 'The article\'s central argument is that the value of height in soccer is entirely position-dependent — beneficial for goalkeepers and defenders, less relevant or even disadvantageous for attackers and wide midfielders. Option A overstates the value of height. Option B understates the relevance of physical traits. Option D is not argued and contradicts the evidence of elite teams featuring varied body types.'
-  }
+  },
+  // ── Set L53: Community Poster — Mulberry Creek ────────────────────────────
+  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+    question: 'What is the purpose of this poster?',
+    options: [
+      'A) To advertise a new community event hosted by MetroCorp.',
+      'B) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
+      'C) To celebrate the opening of Mulberry Creek Park.',
+      'D) To oppose the construction of the freeway entirely.'
+    ],
+    answer: 'B) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
+    method: 'Community protest posters typically focus on a specific, actionable concern rather than opposing an entire project. This poster calls on readers to write to MetroCorp about the entrance location — a targeted "call to action". Option D is too broad; the poster does not oppose the freeway itself, only the placement of the entrance.'
+  },
+  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+    question: 'Why are the Friends of Mulberry Creek involved in this issue?',
+    options: [
+      'A) They are a government body responsible for approving new freeways.',
+      'B) They have been hired by MetroCorp to advise on the project.',
+      'C) They are concerned that the park they look after will be ruined.',
+      'D) They believe the freeway will reduce traffic through the suburb.'
+    ],
+    answer: 'C) They are concerned that the park they look after will be ruined.',
+    method: '"Friends of [Place Name]" groups are volunteer community organisations whose mission is to protect and maintain that specific local environment. The poster indicates Mulberry Creek Park is threatened by the entrance location, which is why this group is leading the campaign.'
+  },
+  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+    question: "The poster uses the term 'cost-cutting'. Which phrase could be used instead of 'cost-cutting' without changing the meaning?",
+    options: [
+      'A) Saving money.',
+      'B) Building faster.',
+      'C) Taking shortcuts.',
+      'D) Reducing workers.'
+    ],
+    answer: 'A) Saving money.',
+    method: "'Cost-cutting' is a standard business term that means reducing expenses. 'Saving money' is a direct synonym. Options B, C and D introduce meanings not present in the original term — 'cost-cutting' does not imply speed, shortcuts or staff reductions on its own."
+  },
+  { group: 'L53', type: 'true_false_matrix', category: 'Community Poster', context: ctxL53,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Does this poster use the following arguments for moving the freeway entrance?',
+    options: [
+      'A park will be ruined.',
+      'Local streets will be closed off during construction.',
+      'Trucks with dangerous loads will travel over houses.',
+    ],
+    answer: 'Yes,No,Yes',
+    method: "The poster explicitly states the park will be destroyed (Yes) and that trucks carrying dangerous loads will travel through the suburb (Yes). There is no mention of local streets being closed during construction — this is not an argument the poster makes (No)."
+  },
+  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+    question: "'Let's work together to make our suburb safer, healthier and truck free.' Which group of people does this suggest the poster is aimed at?",
+    options: [
+      'A) State government officials.',
+      'B) MetroCorp engineers.',
+      'C) Environmental scientists.',
+      'D) Local residents.'
+    ],
+    answer: 'D) Local residents.',
+    method: "The phrase 'our suburb' signals that the poster is addressing people who live in the affected area. The appeal to community solidarity ('let's work together') and the focus on everyday concerns like safety and health are hallmarks of messaging designed to mobilise local residents rather than professionals or government bodies."
+  },
 ]
 
 app.get('/api/literacy-topics', (req, res) => {
