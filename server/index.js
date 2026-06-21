@@ -1978,10 +1978,11 @@ const questions = [
     answer: '1000'
   },
   {
-    group: 'K', type: 'number_input', category: 'Number and Algebra',
+    group: 'K', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK1,
-    question: 'After how many complete years will the Toyota HiLux have a lower net cost than the Nissan Navara?',
-    answer: '8'
+    question: 'Which vehicle has the lowest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the lowest)',
+    options: ['Toyota HiLux', 'Ford Ranger', 'Nissan Navara', 'Isuzu D-Max'],
+    answer: 'Ford Ranger'
   },
 
   // ── Set L: Station Bravo ─────────────────────────────────────────────────────
@@ -1999,10 +2000,11 @@ const questions = [
     answer: '21'
   },
   {
-    group: 'L', type: 'number_input', category: 'Number and Algebra',
+    group: 'L', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK2,
-    question: 'After how many complete years will the Toyota HiLux have a lower net cost than the Ford Ranger?',
-    answer: '10'
+    question: 'Which vehicle has the highest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the highest)',
+    options: ['Mitsubishi Triton', 'Toyota HiLux', 'Ford Ranger', 'Mazda BT-50'],
+    answer: 'Toyota HiLux'
   },
 
   // ── Set M: Station Charlie ───────────────────────────────────────────────────
@@ -2020,10 +2022,11 @@ const questions = [
     answer: '20400'
   },
   {
-    group: 'M', type: 'number_input', category: 'Number and Algebra',
+    group: 'M', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK3,
-    question: 'After how many complete years will the Ford Everest have a lower net cost than the Toyota Fortuner?',
-    answer: '9'
+    question: 'Which vehicle has the lowest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the lowest)',
+    options: ['Isuzu D-Max', 'Ford Everest', 'Toyota Fortuner', 'Mitsubishi Pajero'],
+    answer: 'Mitsubishi Pajero'
   },
 
   // ── Set N: Station Delta ─────────────────────────────────────────────────────
@@ -2043,8 +2046,8 @@ const questions = [
   {
     group: 'N', type: 'number_input', category: 'Number and Algebra',
     context: ctxK4,
-    question: 'After how many complete years will the Toyota Landcruiser have a lower net cost than the Nissan Patrol?',
-    answer: '14'
+    question: 'Calculate the annual fuel saving as a percentage of purchase price for each vehicle. What is the highest percentage among all four vehicles?\n(Round to 2 decimal places)',
+    answer: '6.67'
   },
 
   // ── Set O: Station Echo ──────────────────────────────────────────────────────
@@ -2062,10 +2065,11 @@ const questions = [
     answer: '36500'
   },
   {
-    group: 'O', type: 'number_input', category: 'Number and Algebra',
+    group: 'O', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK5,
-    question: 'After how many complete years will the Toyota Prado have a lower net cost than the Ford Endura?',
-    answer: '13'
+    question: 'Which vehicle has the lowest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the lowest)',
+    options: ['Toyota Prado', 'Nissan Pathfinder', 'Holden Trailblazer', 'Ford Endura'],
+    answer: 'Holden Trailblazer'
   },
 
   // ── Set P: Station Foxtrot ───────────────────────────────────────────────────
@@ -2083,10 +2087,11 @@ const questions = [
     answer: '14'
   },
   {
-    group: 'P', type: 'number_input', category: 'Number and Algebra',
+    group: 'P', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK6,
-    question: 'After how many complete years will the Mercedes Sprinter have a lower net cost than the Iveco Daily?',
-    answer: '19'
+    question: 'Which vehicle has the highest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the highest)',
+    options: ['Mercedes Sprinter', 'Toyota HiAce', 'Ford Transit', 'Iveco Daily'],
+    answer: 'Toyota HiAce'
   },
 
   // ── Set Q: Station Golf ──────────────────────────────────────────────────────
@@ -2104,10 +2109,11 @@ const questions = [
     answer: '700'
   },
   {
-    group: 'Q', type: 'number_input', category: 'Number and Algebra',
+    group: 'Q', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK7,
-    question: 'After how many complete years will the Isuzu D-Max X-Terrain have a lower net cost than the Mitsubishi Triton GSR?',
-    answer: '13'
+    question: 'Which vehicle has the lowest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the lowest)',
+    options: ['Toyota HiLux 4WD', 'Ford Ranger XLT', 'Isuzu D-Max X-Terrain', 'Mitsubishi Triton GSR'],
+    answer: 'Ford Ranger XLT'
   },
 
   // ── Set R: Station Hotel ─────────────────────────────────────────────────────
@@ -2125,10 +2131,11 @@ const questions = [
     answer: '17'
   },
   {
-    group: 'R', type: 'number_input', category: 'Number and Algebra',
+    group: 'R', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK8,
-    question: 'After how many complete years will the Hyundai Santa Fe have a lower net cost than the Toyota RAV4?',
-    answer: '12'
+    question: 'Which vehicle has the highest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the highest)',
+    options: ['Toyota RAV4', 'Hyundai Santa Fe', 'Kia Sorento', 'Mazda CX-5'],
+    answer: 'Hyundai Santa Fe'
   },
 
   // ── Set S: Station Juliet ────────────────────────────────────────────────────
@@ -2146,10 +2153,11 @@ const questions = [
     answer: '14000'
   },
   {
-    group: 'S', type: 'number_input', category: 'Number and Algebra',
+    group: 'S', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK9,
-    question: 'After how many complete years will the Toyota LandCruiser 200 have a lower net cost than the Nissan Patrol Ti?',
-    answer: '12'
+    question: 'Which vehicle has the lowest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the lowest)',
+    options: ['Toyota LandCruiser 200', 'Nissan Patrol Ti', 'Mitsubishi Pajero Exceed', 'Toyota Fortuner Crusade'],
+    answer: 'Toyota Fortuner Crusade'
   },
 
   // ── Set T: Station Kilo ──────────────────────────────────────────────────────
@@ -2167,10 +2175,11 @@ const questions = [
     answer: '33200'
   },
   {
-    group: 'T', type: 'number_input', category: 'Number and Algebra',
+    group: 'T', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxK10,
-    question: 'After how many complete years will the Mercedes-Benz Vito have a lower net cost than the Toyota HiAce LWB?',
-    answer: '12'
+    question: 'Which vehicle has the highest annual fuel saving as a percentage of its purchase price?\n(Calculate each percentage, then identify the highest)',
+    options: ['Mercedes-Benz Vito', 'Toyota HiAce LWB', 'Ford Transit Custom', 'Renault Trafic'],
+    answer: 'Mercedes-Benz Vito'
   },
 
   // ── Set U: Rainwater tank — 4.5×3.2×2.5m, fill 3/4 ─────────────────────
@@ -3056,7 +3065,7 @@ const questions = [
     context: ctxB10,
     question: 'A hardware procurement agent buys a bundle consisting of exactly 3 boxes of Anchor Class M10 and 2 boxes of Anchor Class M16. What is the combined total number of individual structural anchors purchased?',
     options: ['94 anchors', '102 anchors', '112 anchors', '124 anchors'],
-    answer: '94 anchors'
+    answer: '112 anchors'
   },
   {
     group: 'BW', type: 'multiple_choice', category: 'Number and Algebra',
@@ -4264,8 +4273,8 @@ const questions = [
 const units = {
   A: ['h', '$', '$'],   B: ['h', '$', '$'],   C: ['h', '$', '$'],   D: ['h', '$', '$'],   E: ['h', '$', '$'],
   F: ['h', '$', '$'],   G: ['h', '$', '$'],   H: ['h', '$', '$'],   I: ['h', '$', '$'],   J: ['h', '$', '$'],
-  K: ['%', '$', 'years'], L: ['$', 'years', 'years'], M: ['$', '$', 'years'],   N: ['$', 'years', 'years'], O: ['$', '$', 'years'],
-  P: ['$', 'years', 'years'], Q: ['$', '$', 'years'],   R: ['$', 'years', 'years'], S: ['$', '$', 'years'],   T: ['$', '$', 'years'],
+  K: ['%', '$', null], L: ['$', 'years', null], M: ['$', '$', null],   N: ['$', 'years', '%'], O: ['$', '$', null],
+  P: ['$', 'years', null], Q: ['$', '$', null],   R: ['$', 'years', null], S: ['$', '$', null],   T: ['$', '$', null],
   U: ['m³', 'L'],  V: ['m³', 'L'],  W: ['m³', 'L'],
   X: ['m²', 'tiles'], Y: ['m²', 'boards'], Z: ['m²', 'pavers'],
   AA: ['m', 'sleepers'], AB: ['m', 'strips'],
@@ -4380,52 +4389,52 @@ const methods = {
   K: [
     `Total available funding:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total:                       $32,500\n\nPercentage covered = Total Budget ÷ Purchase Price × 100\n  = $32,500 ÷ $38,500 × 100\n  = 0.84415… × 100\n  = 84.42% (rounded to 2 decimal places)`,
     `Net cost = Purchase Price − (Annual Fuel Saving × 5 years)\n\n  Nissan Navara: $42,000 − ($2,800 × 5) = $42,000 − $14,000 = $28,000\n  Toyota HiLux:  $45,000 − ($3,200 × 5) = $45,000 − $16,000 = $29,000\n\n  Navara has the lower net cost.\n  Difference: $29,000 − $28,000 = $1,000`,
-    `Find the year n where HiLux net cost < Navara net cost:\n  HiLux net cost:  $45,000 − $3,200n\n  Navara net cost: $42,000 − $2,800n\n\n  $45,000 − $3,200n < $42,000 − $2,800n\n  $3,000 < $400n\n  n > 7.5 → round up to 8 complete years\n\n  Check year 7: HiLux $45,000 − $22,400 = $22,600  |  Navara $42,000 − $19,600 = $22,400  (Navara still lower)\n  Check year 8: HiLux $45,000 − $25,600 = $19,400  |  Navara $42,000 − $22,400 = $19,600  (HiLux lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota HiLux:  $3,200 ÷ $45,000 × 100 = 7.11%\n  Ford Ranger:   $2,400 ÷ $38,500 × 100 = 6.23%  ← lowest\n  Nissan Navara: $2,800 ÷ $42,000 × 100 = 6.67%\n  Isuzu D-Max:   $3,600 ÷ $51,000 × 100 = 7.06%\n\nLowest: Ford Ranger at 6.23%`,
   ],
   L: [
     `Add all funding sources:\n  Fleet operations budget: $12,500\n  Trade-in value:          $11,200\n  Total available funding: $23,700\n\nShortfall = Purchase price − Total funding\nMitsubishi Triton: $34,000 − $23,700 = $10,300`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Mazda BT-50: $33,200 ÷ $1,650/yr = 20.12 years → round up to 21 years\n\n  Check: 20 yrs × $1,650 = $33,000 (not enough)\n         21 yrs × $1,650 = $34,650 (covers the $33,200 price) ✓`,
-    `Find the year n where HiLux net cost < Ranger net cost:\n  HiLux net cost:  $41,500 − $2,600n\n  Ranger net cost: $36,800 − $2,100n\n\n  $41,500 − $2,600n < $36,800 − $2,100n\n  $4,700 < $500n\n  n > 9.4 → round up to 10 complete years\n\n  Check year  9: HiLux $41,500 − $23,400 = $18,100  |  Ranger $36,800 − $18,900 = $17,900  (Ranger still lower)\n  Check year 10: HiLux $41,500 − $26,000 = $15,500  |  Ranger $36,800 − $21,000 = $15,800  (HiLux lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Mitsubishi Triton: $1,800 ÷ $34,000 × 100 = 5.29%\n  Toyota HiLux:      $2,600 ÷ $41,500 × 100 = 6.27%  ← highest\n  Ford Ranger:       $2,100 ÷ $36,800 × 100 = 5.71%\n  Mazda BT-50:       $1,650 ÷ $33,200 × 100 = 4.97%\n\nHighest: Toyota HiLux at 6.27%`,
   ],
   M: [
     `Add all funding sources:\n  State equipment grant:  $22,000\n  Surplus equipment sale: $9,500\n  Total available funding: $31,500\n\nShortfall = Purchase price − Total funding\nMitsubishi Pajero: $44,500 − $31,500 = $13,000`,
     `Total fuel savings = Annual fuel saving × Number of years\n\n  Isuzu D-Max: $3,400/yr × 6 years = $20,400`,
-    `Find the year n where Everest net cost < Fortuner net cost:\n  Everest net cost:  $55,000 − $3,900n\n  Fortuner net cost: $52,500 − $3,600n\n\n  $55,000 − $3,900n < $52,500 − $3,600n\n  $2,500 < $300n\n  n > 8.33 → round up to 9 complete years\n\n  Check year 8: Everest $55,000 − $31,200 = $23,800  |  Fortuner $52,500 − $28,800 = $23,700  (Fortuner still lower)\n  Check year 9: Everest $55,000 − $35,100 = $19,900  |  Fortuner $52,500 − $32,400 = $20,100  (Everest lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Isuzu D-Max:       $3,400 ÷ $48,000 × 100 = 7.08%\n  Ford Everest:      $3,900 ÷ $55,000 × 100 = 7.09%\n  Toyota Fortuner:   $3,600 ÷ $52,500 × 100 = 6.86%\n  Mitsubishi Pajero: $2,900 ÷ $44,500 × 100 = 6.52%  ← lowest\n\nLowest: Mitsubishi Pajero at 6.52%`,
   ],
   N: [
     `Add all funding sources:\n  Fleet allocation:        $19,200\n  External grant:          $15,300\n  Equipment reserve fund:  $8,000\n  Total available funding: $42,500\n\nShortfall = Purchase price − Total funding\nMitsubishi Pajero Sport: $58,500 − $42,500 = $16,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Ford Ranger Raptor: $68,000 ÷ $4,500/yr = 15.11 years → round up to 16 years\n\n  Check: 15 yrs × $4,500 = $67,500 (not enough)\n         16 yrs × $4,500 = $72,000 (covers the $68,000 price) ✓`,
-    `Find the year n where LandCruiser net cost < Patrol net cost:\n  LandCruiser net cost: $78,000 − $5,200n\n  Patrol net cost:      $72,500 − $4,800n\n\n  $78,000 − $5,200n < $72,500 − $4,800n\n  $5,500 < $400n\n  n > 13.75 → round up to 14 complete years\n\n  Check year 13: LandCruiser $78,000 − $67,600 = $10,400  |  Patrol $72,500 − $62,400 = $10,100  (Patrol still lower)\n  Check year 14: LandCruiser $78,000 − $72,800 = $5,200   |  Patrol $72,500 − $67,200 = $5,300   (LandCruiser lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota Landcruiser:     $5,200 ÷ $78,000 × 100 = 6.67%  ← highest (tied)\n  Nissan Patrol:           $4,800 ÷ $72,500 × 100 = 6.62%\n  Ford Ranger Raptor:      $4,500 ÷ $68,000 × 100 = 6.62%\n  Mitsubishi Pajero Sport: $3,900 ÷ $58,500 × 100 = 6.67%  ← highest (tied)\n\nBoth Toyota Landcruiser and Mitsubishi Pajero Sport share the highest ratio.\nHighest: 6.67%`,
   ],
   O: [
     `Add all funding sources:\n  Community infrastructure grant: $25,000\n  Fundraising proceeds:            $8,750\n  Total available funding:         $33,750\n\nShortfall = Purchase price − Total funding\nHolden Trailblazer: $47,500 − $33,750 = $13,750`,
     `Net cost = Purchase price − Total fuel savings over N years\n\n  Nissan Pathfinder:\n  Total fuel savings (5 years): $3,500 × 5 = $17,500\n  Net cost: $54,000 − $17,500 = $36,500`,
-    `Find the year n where Prado net cost < Endura net cost:\n  Prado net cost:  $62,000 − $4,100n\n  Endura net cost: $51,000 − $3,200n\n\n  $62,000 − $4,100n < $51,000 − $3,200n\n  $11,000 < $900n\n  n > 12.22 → round up to 13 complete years\n\n  Check year 12: Prado $62,000 − $49,200 = $12,800  |  Endura $51,000 − $38,400 = $12,600  (Endura still lower)\n  Check year 13: Prado $62,000 − $53,300 = $8,700   |  Endura $51,000 − $41,600 = $9,400   (Prado lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota Prado:       $4,100 ÷ $62,000 × 100 = 6.61%\n  Nissan Pathfinder:  $3,500 ÷ $54,000 × 100 = 6.48%\n  Holden Trailblazer: $2,900 ÷ $47,500 × 100 = 6.11%  ← lowest\n  Ford Endura:        $3,200 ÷ $51,000 × 100 = 6.27%\n\nLowest: Holden Trailblazer at 6.11%`,
   ],
   P: [
     `Add all funding sources:\n  Annual fleet budget:           $24,000\n  Decommissioned asset proceeds: $18,500\n  Total available funding:       $42,500\n\nShortfall = Purchase price − Total funding\nFord Transit: $58,500 − $42,500 = $16,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Iveco Daily: $72,000 ÷ $5,500/yr = 13.09 years → round up to 14 years\n\n  Check: 13 yrs × $5,500 = $71,500 (not enough)\n         14 yrs × $5,500 = $77,000 (covers the $72,000 price) ✓`,
-    `Find the year n where Sprinter net cost < Iveco net cost:\n  Sprinter net cost: $85,000 − $6,200n\n  Iveco net cost:    $72,000 − $5,500n\n\n  $85,000 − $6,200n < $72,000 − $5,500n\n  $13,000 < $700n\n  n > 18.57 → round up to 19 complete years\n\n  Check year 18: Sprinter $85,000 − $111,600 = −$26,600  |  Iveco $72,000 − $99,000 = −$27,000  (Iveco still lower)\n  Check year 19: Sprinter $85,000 − $117,800 = −$32,800  |  Iveco $72,000 − $104,500 = −$32,500 (Sprinter lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Mercedes Sprinter: $6,200 ÷ $85,000 × 100 = 7.29%\n  Toyota HiAce:      $4,800 ÷ $62,000 × 100 = 7.74%  ← highest\n  Ford Transit:      $4,200 ÷ $58,500 × 100 = 7.18%\n  Iveco Daily:       $5,500 ÷ $72,000 × 100 = 7.64%\n\nHighest: Toyota HiAce at 7.74%`,
   ],
   Q: [
     `Add all funding sources:\n  Station allocation:      $29,000\n  Sold surplus equipment:  $12,500\n  Total available funding: $41,500\n\nShortfall = Purchase price − Total funding\nFord Ranger XLT: $46,500 − $41,500 = $5,000`,
     `Annual saving difference = Higher annual saving − Lower annual saving\n\n  Toyota HiLux 4WD:  $3,800/yr\n  Ford Ranger XLT:   $3,100/yr\n  Difference: $3,800 − $3,100 = $700/yr`,
-    `Find the year n where D-Max net cost < Triton net cost:\n  D-Max net cost:  $58,000 − $4,200n\n  Triton net cost: $49,500 − $3,500n\n\n  $58,000 − $4,200n < $49,500 − $3,500n\n  $8,500 < $700n\n  n > 12.14 → round up to 13 complete years\n\n  Check year 12: D-Max $58,000 − $50,400 = $7,600   |  Triton $49,500 − $42,000 = $7,500   (Triton still lower)\n  Check year 13: D-Max $58,000 − $54,600 = $3,400   |  Triton $49,500 − $45,500 = $4,000   (D-Max lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota HiLux 4WD:      $3,800 ÷ $52,000 × 100 = 7.31%\n  Ford Ranger XLT:       $3,100 ÷ $46,500 × 100 = 6.67%  ← lowest\n  Isuzu D-Max X-Terrain: $4,200 ÷ $58,000 × 100 = 7.24%\n  Mitsubishi Triton GSR: $3,500 ÷ $49,500 × 100 = 7.07%\n\nLowest: Ford Ranger XLT at 6.67%`,
   ],
   R: [
     `Add all funding sources:\n  Fleet operations budget: $31,000\n  Fleet levy collection:   $16,500\n  Total available funding: $47,500\n\nShortfall = Purchase price − Total funding\nHyundai Santa Fe: $48,500 − $47,500 = $1,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Kia Sorento: $42,000 ÷ $2,600/yr = 16.15 years → round up to 17 years\n\n  Check: 16 yrs × $2,600 = $41,600 (not enough)\n         17 yrs × $2,600 = $44,200 (covers the $42,000 price) ✓`,
-    `Find the year n where Santa Fe net cost < RAV4 net cost:\n  Santa Fe net cost: $48,500 − $3,200n\n  RAV4 net cost:     $44,000 − $2,800n\n\n  $48,500 − $3,200n < $44,000 − $2,800n\n  $4,500 < $400n\n  n > 11.25 → round up to 12 complete years\n\n  Check year 11: Santa Fe $48,500 − $35,200 = $13,300  |  RAV4 $44,000 − $30,800 = $13,200  (RAV4 still lower)\n  Check year 12: Santa Fe $48,500 − $38,400 = $10,100  |  RAV4 $44,000 − $33,600 = $10,400  (Santa Fe lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota RAV4:      $2,800 ÷ $44,000 × 100 = 6.36%\n  Hyundai Santa Fe: $3,200 ÷ $48,500 × 100 = 6.60%  ← highest\n  Kia Sorento:      $2,600 ÷ $42,000 × 100 = 6.19%\n  Mazda CX-5:       $2,400 ÷ $39,500 × 100 = 6.08%\n\nHighest: Hyundai Santa Fe at 6.60%`,
   ],
   S: [
     `Add all funding sources:\n  Regional fleet budget:         $27,000\n  Community infrastructure fund: $12,500\n  Equipment resale proceeds:      $6,700\n  Total available funding:        $46,200\n\nShortfall = Purchase price − Total funding\nToyota Fortuner Crusade: $68,500 − $46,200 = $22,300`,
     `Multi-year savings difference = (Annual saving A − Annual saving B) × Years\n\n  Toyota LandCruiser 200:   $6,500/yr\n  Mitsubishi Pajero Exceed: $5,100/yr\n  Annual difference: $6,500 − $5,100 = $1,400/yr\n  Over 10 years: $1,400 × 10 = $14,000`,
-    `Find the year n where LandCruiser 200 net cost < Patrol Ti net cost:\n  LandCruiser 200 net cost: $92,000 − $6,500n\n  Patrol Ti net cost:       $88,500 − $6,200n\n\n  $92,000 − $6,500n < $88,500 − $6,200n\n  $3,500 < $300n\n  n > 11.67 → round up to 12 complete years\n\n  Check year 11: LC200 $92,000 − $71,500 = $20,500  |  Patrol $88,500 − $68,200 = $20,300  (Patrol still lower)\n  Check year 12: LC200 $92,000 − $78,000 = $14,000  |  Patrol $88,500 − $74,400 = $14,100  (LC200 lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Toyota LandCruiser 200:   $6,500 ÷ $92,000 × 100 = 7.07%\n  Nissan Patrol Ti:          $6,200 ÷ $88,500 × 100 = 7.01%\n  Mitsubishi Pajero Exceed:  $5,100 ÷ $74,000 × 100 = 6.89%\n  Toyota Fortuner Crusade:   $4,700 ÷ $68,500 × 100 = 6.86%  ← lowest\n\nLowest: Toyota Fortuner Crusade at 6.86%`,
   ],
   T: [
     `Add all funding sources:\n  State transport infrastructure grant: $42,000\n  Equipment reserve fund:               $21,500\n  Community contribution:                $9,000\n  Total available funding:              $72,500\n\nShortfall = Purchase price − Total funding\nMercedes-Benz Vito: $95,000 − $72,500 = $22,500`,
     `Net cost = Purchase price − Total fuel savings over N years\n\n  Toyota HiAce LWB:\n  Total fuel savings (8 years): $6,100 × 8 = $48,800\n  Net cost: $82,000 − $48,800 = $33,200`,
-    `Find the year n where Vito net cost < HiAce LWB net cost:\n  Vito net cost:     $95,000 − $7,200n\n  HiAce LWB net cost: $82,000 − $6,100n\n\n  $95,000 − $7,200n < $82,000 − $6,100n\n  $13,000 < $1,100n\n  n > 11.82 → round up to 12 complete years\n\n  Check year 11: Vito $95,000 − $79,200 = $15,800  |  HiAce $82,000 − $67,100 = $14,900  (HiAce still lower)\n  Check year 12: Vito $95,000 − $86,400 = $8,600   |  HiAce $82,000 − $73,200 = $8,800   (Vito lower ✓)`,
+    `Annual saving ÷ Purchase price × 100:\n  Mercedes-Benz Vito:  $7,200 ÷ $95,000 × 100 = 7.58%  ← highest\n  Toyota HiAce LWB:    $6,100 ÷ $82,000 × 100 = 7.44%\n  Ford Transit Custom: $5,800 ÷ $78,500 × 100 = 7.39%\n  Renault Trafic:      $5,300 ÷ $71,000 × 100 = 7.46%\n\nHighest: Mercedes-Benz Vito at 7.58%`,
   ],
   U: [
     `Volume = Length × Width × Depth\n  = 4.5 m × 3.2 m × 2.5 m\n  = 14.4 × 2.5\n  = 36 m³`,
@@ -4644,7 +4653,7 @@ const methods = {
     `Unit cost per m²:\n  CD Formply Structural: $72.00 ÷ 2.88 m² = $25.00/m²\n  DD Tongue & Groove:    $51.84 ÷ 2.16 m² = $24.00/m²\n\nDD Tongue & Groove is cheaper by $1.00 per square metre.`,
   ],
   BW: [
-    `Anchor Class M10: 3 boxes × 24 anchors = 72 anchors\nAnchor Class M16: 2 boxes × 20 anchors = 40 anchors\n\nTotal: 72 + 40 = 94 anchors`,
+    `Anchor Class M10: 3 boxes × 24 anchors = 72 anchors\nAnchor Class M16: 2 boxes × 20 anchors = 40 anchors\n\nTotal: 72 + 40 = 112 anchors`,
     `Cost per single anchor:\n  M10: $96 ÷ 24 = $4.00 per anchor\n  M12: $140 ÷ 28 = $5.00 per anchor\n  M16: $180 ÷ 20 = $9.00 per anchor\n\nTensile kg per dollar:\n  M10: 3,600 ÷ 4.00 = 900 kg/$\n  M12: 4,900 ÷ 5.00 = 980 kg/$  ← highest\n  M16: 6,200 ÷ 9.00 = 688.9 kg/$`,
   ],
   BX: [
