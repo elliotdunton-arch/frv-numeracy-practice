@@ -1927,8 +1927,8 @@ const questions = [
     answer: '69.81'
   },
 
-  // ── Set K: Station Alpha — funding $32,500, Ranger $38,500, Navara vs HiLux net cost ──
-  // Q1 % covered: 32500/38500×100 = 84.42   Q2 Navara net 5yr: 28000, HiLux: 29000, diff: 1000
+  // ── Set K: Station Alpha ─────────────────────────────────────────────────────
+  // Q1 % covered: 32500/38500×100=84.42  Q2 Navara 28k vs HiLux 29k diff=1000  Q3 HiLux<Navara after ⌈3000/400⌉=8yr
   {
     group: 'K', type: 'number_input', category: 'Number and Algebra',
     context: ctxK1,
@@ -1941,9 +1941,15 @@ const questions = [
     question: 'Which vehicle has a lower net cost after 5 years — the Nissan Navara or the Toyota HiLux? By how much?\n(Enter the dollar difference only)',
     answer: '1000'
   },
+  {
+    group: 'K', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK1,
+    question: 'After how many complete years will the Toyota HiLux have a lower net cost than the Nissan Navara?',
+    answer: '8'
+  },
 
-  // ── Set L: Station Bravo — Mitsubishi Triton $34k, funding $23,700 ──────
-  // Q1 shortfall: 34000 − 23700 = $10,300   Q2 years for Mazda BT-50: ⌈33200/1650⌉ = 21
+  // ── Set L: Station Bravo ─────────────────────────────────────────────────────
+  // Q1 shortfall: 10300  Q2 BT-50 payback: 21yr  Q3 HiLux<Ranger after ⌈4700/500⌉=10yr
   {
     group: 'L', type: 'number_input', category: 'Number and Algebra',
     context: ctxK2,
@@ -1956,9 +1962,15 @@ const questions = [
     question: 'After how many complete years would the Mazda BT-50\'s annual fuel savings cover its full purchase price?',
     answer: '21'
   },
+  {
+    group: 'L', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK2,
+    question: 'After how many complete years will the Toyota HiLux have a lower net cost than the Ford Ranger?',
+    answer: '10'
+  },
 
-  // ── Set M: Station Charlie — Mitsubishi Pajero $44.5k, funding $31,500 ──
-  // Q1 shortfall: 44500 − 31500 = $13,000   Q2 D-Max total savings 6yr: 6×3400 = $20,400
+  // ── Set M: Station Charlie ───────────────────────────────────────────────────
+  // Q1 shortfall: 13000  Q2 D-Max 6yr savings: 20400  Q3 Everest<Fortuner after ⌈2500/300⌉=9yr
   {
     group: 'M', type: 'number_input', category: 'Number and Algebra',
     context: ctxK3,
@@ -1971,9 +1983,15 @@ const questions = [
     question: 'What would be the total fuel saving provided by the Isuzu D-Max over 6 years?\n(Enter the dollar amount only)',
     answer: '20400'
   },
+  {
+    group: 'M', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK3,
+    question: 'After how many complete years will the Ford Everest have a lower net cost than the Toyota Fortuner?',
+    answer: '9'
+  },
 
-  // ── Set N: Station Delta — Pajero Sport $58.5k, funding $42,500 ─────────
-  // Q1 shortfall: 58500 − 42500 = $16,000   Q2 years for Ford Ranger Raptor: ⌈68000/4500⌉ = 16
+  // ── Set N: Station Delta ─────────────────────────────────────────────────────
+  // Q1 shortfall: 16000  Q2 Raptor payback: 16yr  Q3 LandCruiser<Patrol after ⌈5500/400⌉=14yr
   {
     group: 'N', type: 'number_input', category: 'Number and Algebra',
     context: ctxK4,
@@ -1986,9 +2004,15 @@ const questions = [
     question: 'After how many complete years would the Ford Ranger Raptor\'s annual fuel savings cover its full purchase price?',
     answer: '16'
   },
+  {
+    group: 'N', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK4,
+    question: 'After how many complete years will the Toyota Landcruiser have a lower net cost than the Nissan Patrol?',
+    answer: '14'
+  },
 
-  // ── Set O: Station Echo — Holden Trailblazer $47.5k, funding $33,750 ────
-  // Q1 shortfall: 47500 − 33750 = $13,750   Q2 Pathfinder net cost after 5yr: 54000−5×3500 = $36,500
+  // ── Set O: Station Echo ──────────────────────────────────────────────────────
+  // Q1 shortfall: 13750  Q2 Pathfinder net 5yr: 36500  Q3 Prado<Endura after ⌈11000/900⌉=13yr
   {
     group: 'O', type: 'number_input', category: 'Number and Algebra',
     context: ctxK5,
@@ -1998,12 +2022,18 @@ const questions = [
   {
     group: 'O', type: 'number_input', category: 'Number and Algebra',
     context: ctxK5,
-    question: 'Calculate the net cost of the Nissan Pathfinder after 5 years of fuel savings.\n(Net cost = Purchase price − total fuel savings\nEnter the dollar amount only)',
+    question: 'Calculate the net cost of the Nissan Pathfinder after 5 years of fuel savings.\n(Enter the dollar amount only)',
     answer: '36500'
   },
+  {
+    group: 'O', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK5,
+    question: 'After how many complete years will the Toyota Prado have a lower net cost than the Ford Endura?',
+    answer: '13'
+  },
 
-  // ── Set P: Station Foxtrot — Ford Transit $58.5k, funding $42,500 ───────
-  // Q1 shortfall: 58500 − 42500 = $16,000   Q2 years for Iveco Daily: ⌈72000/5500⌉ = 14
+  // ── Set P: Station Foxtrot ───────────────────────────────────────────────────
+  // Q1 shortfall: 16000  Q2 Iveco payback: 14yr  Q3 Sprinter<Iveco after ⌈13000/700⌉=19yr
   {
     group: 'P', type: 'number_input', category: 'Number and Algebra',
     context: ctxK6,
@@ -2016,9 +2046,15 @@ const questions = [
     question: 'After how many complete years would the Iveco Daily\'s annual fuel savings cover its full purchase price?',
     answer: '14'
   },
+  {
+    group: 'P', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK6,
+    question: 'After how many complete years will the Mercedes Sprinter have a lower net cost than the Iveco Daily?',
+    answer: '19'
+  },
 
-  // ── Set Q: Station Golf — Ford Ranger XLT $46.5k, funding $41,500 ───────
-  // Q1 shortfall: 46500 − 41500 = $5,000   Q2 annual diff HiLux vs Ranger: 3800−3100 = $700
+  // ── Set Q: Station Golf ──────────────────────────────────────────────────────
+  // Q1 shortfall: 5000  Q2 HiLux vs Ranger annual diff: 700  Q3 D-Max<Triton after ⌈8500/700⌉=13yr
   {
     group: 'Q', type: 'number_input', category: 'Number and Algebra',
     context: ctxK7,
@@ -2031,9 +2067,15 @@ const questions = [
     question: 'How much more in annual fuel savings would the Toyota HiLux 4WD provide compared to the Ford Ranger XLT?\n(Enter the dollar amount only)',
     answer: '700'
   },
+  {
+    group: 'Q', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK7,
+    question: 'After how many complete years will the Isuzu D-Max X-Terrain have a lower net cost than the Mitsubishi Triton GSR?',
+    answer: '13'
+  },
 
-  // ── Set R: Station Hotel — Hyundai Santa Fe $48.5k, funding $47,500 ─────
-  // Q1 shortfall: 48500 − 47500 = $1,000   Q2 years for Kia Sorento: ⌈42000/2600⌉ = 17
+  // ── Set R: Station Hotel ─────────────────────────────────────────────────────
+  // Q1 shortfall: 1000  Q2 Sorento payback: 17yr  Q3 Santa Fe<RAV4 after ⌈4500/400⌉=12yr
   {
     group: 'R', type: 'number_input', category: 'Number and Algebra',
     context: ctxK8,
@@ -2046,9 +2088,15 @@ const questions = [
     question: 'After how many complete years would the Kia Sorento\'s annual fuel savings cover its full purchase price?',
     answer: '17'
   },
+  {
+    group: 'R', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK8,
+    question: 'After how many complete years will the Hyundai Santa Fe have a lower net cost than the Toyota RAV4?',
+    answer: '12'
+  },
 
-  // ── Set S: Station Juliet — Fortuner Crusade $68.5k, funding $46,200 ────
-  // Q1 shortfall: 68500 − 46200 = $22,300   Q2 LandCruiser vs Pajero over 10yr: 10×(6500−5100) = $14,000
+  // ── Set S: Station Juliet ────────────────────────────────────────────────────
+  // Q1 shortfall: 22300  Q2 LC200 vs Pajero 10yr diff: 14000  Q3 LC200<Patrol Ti after ⌈3500/300⌉=12yr
   {
     group: 'S', type: 'number_input', category: 'Number and Algebra',
     context: ctxK9,
@@ -2061,9 +2109,15 @@ const questions = [
     question: 'Over 10 years, how much more in total fuel savings would the Toyota LandCruiser 200 provide compared to the Mitsubishi Pajero Exceed?\n(Enter the dollar amount only)',
     answer: '14000'
   },
+  {
+    group: 'S', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK9,
+    question: 'After how many complete years will the Toyota LandCruiser 200 have a lower net cost than the Nissan Patrol Ti?',
+    answer: '12'
+  },
 
-  // ── Set T: Station Kilo — Mercedes-Benz Vito $95k, funding $72,500 ──────
-  // Q1 shortfall: 95000 − 72500 = $22,500   Q2 HiAce LWB net cost 8yr: 82000−8×6100 = $33,200
+  // ── Set T: Station Kilo ──────────────────────────────────────────────────────
+  // Q1 shortfall: 22500  Q2 HiAce net 8yr: 33200  Q3 Vito<HiAce after ⌈13000/1100⌉=12yr
   {
     group: 'T', type: 'number_input', category: 'Number and Algebra',
     context: ctxK10,
@@ -2073,8 +2127,14 @@ const questions = [
   {
     group: 'T', type: 'number_input', category: 'Number and Algebra',
     context: ctxK10,
-    question: 'Calculate the net cost of the Toyota HiAce LWB after 8 years of fuel savings.\n(Net cost = Purchase price − total fuel savings\nEnter the dollar amount only)',
+    question: 'Calculate the net cost of the Toyota HiAce LWB after 8 years of fuel savings.\n(Enter the dollar amount only)',
     answer: '33200'
+  },
+  {
+    group: 'T', type: 'number_input', category: 'Number and Algebra',
+    context: ctxK10,
+    question: 'After how many complete years will the Mercedes-Benz Vito have a lower net cost than the Toyota HiAce LWB?',
+    answer: '12'
   },
 
   // ── Set U: Rainwater tank — 4.5×3.2×2.5m, fill 3/4 ─────────────────────
@@ -4078,8 +4138,8 @@ const questions = [
 const units = {
   A: ['h', '$', '$'],   B: ['h', '$', '$'],   C: ['h', '$', '$'],   D: ['h', '$', '$'],   E: ['h', '$', '$'],
   F: ['h', '$', '$'],   G: ['h', '$', '$'],   H: ['h', '$', '$'],   I: ['h', '$', '$'],   J: ['h', '$', '$'],
-  K: ['%', '$'], L: ['$', 'years'], M: ['$', '$'],   N: ['$', 'years'], O: ['$', '$'],
-  P: ['$', 'years'], Q: ['$', '$'],   R: ['$', 'years'], S: ['$', '$'],   T: ['$', '$'],
+  K: ['%', '$', 'years'], L: ['$', 'years', 'years'], M: ['$', '$', 'years'],   N: ['$', 'years', 'years'], O: ['$', '$', 'years'],
+  P: ['$', 'years', 'years'], Q: ['$', '$', 'years'],   R: ['$', 'years', 'years'], S: ['$', '$', 'years'],   T: ['$', '$', 'years'],
   U: ['m³', 'L'],  V: ['m³', 'L'],  W: ['m³', 'L'],
   X: ['m²', 'tiles'], Y: ['m²', 'boards'], Z: ['m²', 'pavers'],
   AA: ['m', 'sleepers'], AB: ['m', 'strips'],
@@ -4191,42 +4251,52 @@ const methods = {
   K: [
     `Total available funding:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total:                       $32,500\n\nPercentage covered = Total Budget ÷ Purchase Price × 100\n  = $32,500 ÷ $38,500 × 100\n  = 0.84415… × 100\n  = 84.42% (rounded to 2 decimal places)`,
     `Net cost = Purchase Price − (Annual Fuel Saving × 5 years)\n\n  Nissan Navara: $42,000 − ($2,800 × 5) = $42,000 − $14,000 = $28,000\n  Toyota HiLux:  $45,000 − ($3,200 × 5) = $45,000 − $16,000 = $29,000\n\n  Navara has the lower net cost.\n  Difference: $29,000 − $28,000 = $1,000`,
+    `Find the year n where HiLux net cost < Navara net cost:\n  HiLux net cost:  $45,000 − $3,200n\n  Navara net cost: $42,000 − $2,800n\n\n  $45,000 − $3,200n < $42,000 − $2,800n\n  $3,000 < $400n\n  n > 7.5 → round up to 8 complete years\n\n  Check year 7: HiLux $45,000 − $22,400 = $22,600  |  Navara $42,000 − $19,600 = $22,400  (Navara still lower)\n  Check year 8: HiLux $45,000 − $25,600 = $19,400  |  Navara $42,000 − $22,400 = $19,600  (HiLux lower ✓)`,
   ],
   L: [
     `Add all funding sources:\n  Fleet operations budget: $12,500\n  Trade-in value:          $11,200\n  Total available funding: $23,700\n\nShortfall = Purchase price − Total funding\nMitsubishi Triton: $34,000 − $23,700 = $10,300`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Mazda BT-50: $33,200 ÷ $1,650/yr = 20.12 years → round up to 21 years\n\n  Check: 20 yrs × $1,650 = $33,000 (not enough)\n         21 yrs × $1,650 = $34,650 (covers the $33,200 price) ✓`,
+    `Find the year n where HiLux net cost < Ranger net cost:\n  HiLux net cost:  $41,500 − $2,600n\n  Ranger net cost: $36,800 − $2,100n\n\n  $41,500 − $2,600n < $36,800 − $2,100n\n  $4,700 < $500n\n  n > 9.4 → round up to 10 complete years\n\n  Check year  9: HiLux $41,500 − $23,400 = $18,100  |  Ranger $36,800 − $18,900 = $17,900  (Ranger still lower)\n  Check year 10: HiLux $41,500 − $26,000 = $15,500  |  Ranger $36,800 − $21,000 = $15,800  (HiLux lower ✓)`,
   ],
   M: [
     `Add all funding sources:\n  State equipment grant:  $22,000\n  Surplus equipment sale: $9,500\n  Total available funding: $31,500\n\nShortfall = Purchase price − Total funding\nMitsubishi Pajero: $44,500 − $31,500 = $13,000`,
     `Total fuel savings = Annual fuel saving × Number of years\n\n  Isuzu D-Max: $3,400/yr × 6 years = $20,400`,
+    `Find the year n where Everest net cost < Fortuner net cost:\n  Everest net cost:  $55,000 − $3,900n\n  Fortuner net cost: $52,500 − $3,600n\n\n  $55,000 − $3,900n < $52,500 − $3,600n\n  $2,500 < $300n\n  n > 8.33 → round up to 9 complete years\n\n  Check year 8: Everest $55,000 − $31,200 = $23,800  |  Fortuner $52,500 − $28,800 = $23,700  (Fortuner still lower)\n  Check year 9: Everest $55,000 − $35,100 = $19,900  |  Fortuner $52,500 − $32,400 = $20,100  (Everest lower ✓)`,
   ],
   N: [
     `Add all funding sources:\n  Fleet allocation:        $19,200\n  External grant:          $15,300\n  Equipment reserve fund:  $8,000\n  Total available funding: $42,500\n\nShortfall = Purchase price − Total funding\nMitsubishi Pajero Sport: $58,500 − $42,500 = $16,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Ford Ranger Raptor: $68,000 ÷ $4,500/yr = 15.11 years → round up to 16 years\n\n  Check: 15 yrs × $4,500 = $67,500 (not enough)\n         16 yrs × $4,500 = $72,000 (covers the $68,000 price) ✓`,
+    `Find the year n where LandCruiser net cost < Patrol net cost:\n  LandCruiser net cost: $78,000 − $5,200n\n  Patrol net cost:      $72,500 − $4,800n\n\n  $78,000 − $5,200n < $72,500 − $4,800n\n  $5,500 < $400n\n  n > 13.75 → round up to 14 complete years\n\n  Check year 13: LandCruiser $78,000 − $67,600 = $10,400  |  Patrol $72,500 − $62,400 = $10,100  (Patrol still lower)\n  Check year 14: LandCruiser $78,000 − $72,800 = $5,200   |  Patrol $72,500 − $67,200 = $5,300   (LandCruiser lower ✓)`,
   ],
   O: [
     `Add all funding sources:\n  Community infrastructure grant: $25,000\n  Fundraising proceeds:            $8,750\n  Total available funding:         $33,750\n\nShortfall = Purchase price − Total funding\nHolden Trailblazer: $47,500 − $33,750 = $13,750`,
     `Net cost = Purchase price − Total fuel savings over N years\n\n  Nissan Pathfinder:\n  Total fuel savings (5 years): $3,500 × 5 = $17,500\n  Net cost: $54,000 − $17,500 = $36,500`,
+    `Find the year n where Prado net cost < Endura net cost:\n  Prado net cost:  $62,000 − $4,100n\n  Endura net cost: $51,000 − $3,200n\n\n  $62,000 − $4,100n < $51,000 − $3,200n\n  $11,000 < $900n\n  n > 12.22 → round up to 13 complete years\n\n  Check year 12: Prado $62,000 − $49,200 = $12,800  |  Endura $51,000 − $38,400 = $12,600  (Endura still lower)\n  Check year 13: Prado $62,000 − $53,300 = $8,700   |  Endura $51,000 − $41,600 = $9,400   (Prado lower ✓)`,
   ],
   P: [
     `Add all funding sources:\n  Annual fleet budget:           $24,000\n  Decommissioned asset proceeds: $18,500\n  Total available funding:       $42,500\n\nShortfall = Purchase price − Total funding\nFord Transit: $58,500 − $42,500 = $16,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Iveco Daily: $72,000 ÷ $5,500/yr = 13.09 years → round up to 14 years\n\n  Check: 13 yrs × $5,500 = $71,500 (not enough)\n         14 yrs × $5,500 = $77,000 (covers the $72,000 price) ✓`,
+    `Find the year n where Sprinter net cost < Iveco net cost:\n  Sprinter net cost: $85,000 − $6,200n\n  Iveco net cost:    $72,000 − $5,500n\n\n  $85,000 − $6,200n < $72,000 − $5,500n\n  $13,000 < $700n\n  n > 18.57 → round up to 19 complete years\n\n  Check year 18: Sprinter $85,000 − $111,600 = −$26,600  |  Iveco $72,000 − $99,000 = −$27,000  (Iveco still lower)\n  Check year 19: Sprinter $85,000 − $117,800 = −$32,800  |  Iveco $72,000 − $104,500 = −$32,500 (Sprinter lower ✓)`,
   ],
   Q: [
     `Add all funding sources:\n  Station allocation:      $29,000\n  Sold surplus equipment:  $12,500\n  Total available funding: $41,500\n\nShortfall = Purchase price − Total funding\nFord Ranger XLT: $46,500 − $41,500 = $5,000`,
     `Annual saving difference = Higher annual saving − Lower annual saving\n\n  Toyota HiLux 4WD:  $3,800/yr\n  Ford Ranger XLT:   $3,100/yr\n  Difference: $3,800 − $3,100 = $700/yr`,
+    `Find the year n where D-Max net cost < Triton net cost:\n  D-Max net cost:  $58,000 − $4,200n\n  Triton net cost: $49,500 − $3,500n\n\n  $58,000 − $4,200n < $49,500 − $3,500n\n  $8,500 < $700n\n  n > 12.14 → round up to 13 complete years\n\n  Check year 12: D-Max $58,000 − $50,400 = $7,600   |  Triton $49,500 − $42,000 = $7,500   (Triton still lower)\n  Check year 13: D-Max $58,000 − $54,600 = $3,400   |  Triton $49,500 − $45,500 = $4,000   (D-Max lower ✓)`,
   ],
   R: [
     `Add all funding sources:\n  Fleet operations budget: $31,000\n  Fleet levy collection:   $16,500\n  Total available funding: $47,500\n\nShortfall = Purchase price − Total funding\nHyundai Santa Fe: $48,500 − $47,500 = $1,000`,
     `Divide the vehicle's purchase price by its annual fuel saving, then round UP to whole years.\n\n  Kia Sorento: $42,000 ÷ $2,600/yr = 16.15 years → round up to 17 years\n\n  Check: 16 yrs × $2,600 = $41,600 (not enough)\n         17 yrs × $2,600 = $44,200 (covers the $42,000 price) ✓`,
+    `Find the year n where Santa Fe net cost < RAV4 net cost:\n  Santa Fe net cost: $48,500 − $3,200n\n  RAV4 net cost:     $44,000 − $2,800n\n\n  $48,500 − $3,200n < $44,000 − $2,800n\n  $4,500 < $400n\n  n > 11.25 → round up to 12 complete years\n\n  Check year 11: Santa Fe $48,500 − $35,200 = $13,300  |  RAV4 $44,000 − $30,800 = $13,200  (RAV4 still lower)\n  Check year 12: Santa Fe $48,500 − $38,400 = $10,100  |  RAV4 $44,000 − $33,600 = $10,400  (Santa Fe lower ✓)`,
   ],
   S: [
     `Add all funding sources:\n  Regional fleet budget:         $27,000\n  Community infrastructure fund: $12,500\n  Equipment resale proceeds:      $6,700\n  Total available funding:        $46,200\n\nShortfall = Purchase price − Total funding\nToyota Fortuner Crusade: $68,500 − $46,200 = $22,300`,
     `Multi-year savings difference = (Annual saving A − Annual saving B) × Years\n\n  Toyota LandCruiser 200:   $6,500/yr\n  Mitsubishi Pajero Exceed: $5,100/yr\n  Annual difference: $6,500 − $5,100 = $1,400/yr\n  Over 10 years: $1,400 × 10 = $14,000`,
+    `Find the year n where LandCruiser 200 net cost < Patrol Ti net cost:\n  LandCruiser 200 net cost: $92,000 − $6,500n\n  Patrol Ti net cost:       $88,500 − $6,200n\n\n  $92,000 − $6,500n < $88,500 − $6,200n\n  $3,500 < $300n\n  n > 11.67 → round up to 12 complete years\n\n  Check year 11: LC200 $92,000 − $71,500 = $20,500  |  Patrol $88,500 − $68,200 = $20,300  (Patrol still lower)\n  Check year 12: LC200 $92,000 − $78,000 = $14,000  |  Patrol $88,500 − $74,400 = $14,100  (LC200 lower ✓)`,
   ],
   T: [
     `Add all funding sources:\n  State transport infrastructure grant: $42,000\n  Equipment reserve fund:               $21,500\n  Community contribution:                $9,000\n  Total available funding:              $72,500\n\nShortfall = Purchase price − Total funding\nMercedes-Benz Vito: $95,000 − $72,500 = $22,500`,
     `Net cost = Purchase price − Total fuel savings over N years\n\n  Toyota HiAce LWB:\n  Total fuel savings (8 years): $6,100 × 8 = $48,800\n  Net cost: $82,000 − $48,800 = $33,200`,
+    `Find the year n where Vito net cost < HiAce LWB net cost:\n  Vito net cost:     $95,000 − $7,200n\n  HiAce LWB net cost: $82,000 − $6,100n\n\n  $95,000 − $7,200n < $82,000 − $6,100n\n  $13,000 < $1,100n\n  n > 11.82 → round up to 12 complete years\n\n  Check year 11: Vito $95,000 − $79,200 = $15,800  |  HiAce $82,000 − $67,100 = $14,900  (HiAce still lower)\n  Check year 12: Vito $95,000 − $86,400 = $8,600   |  HiAce $82,000 − $73,200 = $8,800   (Vito lower ✓)`,
   ],
   U: [
     `Volume = Length × Width × Depth\n  = 4.5 m × 3.2 m × 2.5 m\n  = 14.4 × 2.5\n  = 36 m³`,
