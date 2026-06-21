@@ -8,9 +8,13 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const [bookmarks, setBookmarks] = useState(new Set())
   const [showConfirm, setShowConfirm] = useState(false)
   const [showCalc, setShowCalc] = useState(false)
+  const [isPaused, setIsPaused] = useState(false)
+  const [showHint, setShowHint] = useState({})
 
   const answersRef = useRef({})
   const ribbonRef  = useRef(null)
+  const pauseStartRef = useRef(null)
+  const totalPausedMsRef = useRef(0)
 
   useEffect(() => {
     if (!ribbonRef.current) return
@@ -34,11 +38,22 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
     })
   }
 
+  const handlePause = () => {
+    if (!isPaused) {
+      pauseStartRef.current = Date.now()
+      setIsPaused(true)
+    } else {
+      totalPausedMsRef.current += Date.now() - pauseStartRef.current
+      pauseStartRef.current = null
+      setIsPaused(false)
+    }
+  }
+
   const handleExpire = useCallback(() => {
-    onSubmit(answersRef.current, true)
+    onSubmit(answersRef.current, true, totalPausedMsRef.current)
   }, [onSubmit])
 
-  const confirmSubmit = () => onSubmit(answersRef.current, false)
+  const confirmSubmit = () => onSubmit(answersRef.current, false, totalPausedMsRef.current)
 
   const isAnswered = (q) => {
     const v = answers[q.id]
@@ -48,6 +63,11 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
       const expectedLength = (q.options || []).length
       return parts.length === expectedLength && parts.every(p => p === lbl1 || p === lbl2)
+    }
+    if (q.inputType === 'time_hm') {
+      if (!v) return false
+      const parts = v.split(':')
+      return parts.length === 2 && parts[0] !== '' && parts[1] !== ''
     }
     return v !== undefined && v !== null && v !== ''
   }
@@ -132,6 +152,35 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
         </>
       )
     }
+    if (q.inputType === 'time_hm') {
+      const stored = answers[q.id] || ':'
+      const [hStr, mStr] = stored.split(':')
+      return (
+        <div className="number-input-area">
+          <div className="time-hm-input">
+            <input
+              type="number"
+              min="0"
+              className="time-hm-hours"
+              placeholder="0"
+              value={hStr || ''}
+              onChange={e => handleAnswer(q.id, `${e.target.value}:${mStr || ''}`)}
+            />
+            <span className="time-hm-sep">h</span>
+            <input
+              type="number"
+              min="0"
+              max="59"
+              className="time-hm-mins"
+              placeholder="00"
+              value={mStr || ''}
+              onChange={e => handleAnswer(q.id, `${hStr || ''}:${e.target.value}`)}
+            />
+            <span className="time-hm-sep">min</span>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className="number-input-area">
         <div className="answer-input-wrap">
@@ -164,10 +213,16 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
           >
             🧮 Calculator
           </button>
+          <button
+            className={`btn-pause ${isPaused ? 'btn-pause--paused' : ''}`}
+            onClick={handlePause}
+          >
+            {isPaused ? '▶ Resume' : '⏸ Pause'}
+          </button>
           <button className="btn-finish" onClick={() => setShowConfirm(true)}>
             Finish Test
           </button>
-          <Timer totalSeconds={totalTime} onExpire={handleExpire} />
+          <Timer totalSeconds={totalTime} onExpire={handleExpire} isPaused={isPaused} />
         </div>
       </header>
 
@@ -255,6 +310,21 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
               </div>
               <div className="answer-panel">
                 <p className="question-text">{current.question}</p>
+                {current.context.formulaHint && (
+                  <>
+                    <button
+                      className="hint-btn"
+                      onClick={() => setShowHint(h => ({ ...h, [current.id]: !h[current.id] }))}
+                    >
+                      💡 {showHint[current.id] ? 'Hide formula' : 'Show formula'}
+                    </button>
+                    {showHint[current.id] && (
+                      <div className="hint-panel">
+                        <pre className="hint-content">{current.context.formulaHint}</pre>
+                      </div>
+                    )}
+                  </>
+                )}
                 {renderAnswerInputs(current)}
               </div>
             </div>
@@ -291,6 +361,16 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       </div>
 
       {showCalc && <Calculator onClose={() => setShowCalc(false)} />}
+
+      {isPaused && (
+        <div className="pause-overlay">
+          <div className="pause-card">
+            <p className="pause-title">Test Paused</p>
+            <p className="pause-subtitle">Your progress is saved. The timer has stopped.</p>
+            <button className="btn-resume" onClick={handlePause}>▶ Resume Test</button>
+          </div>
+        </div>
+      )}
 
       {showConfirm && (
         <div className="modal-overlay" onClick={() => setShowConfirm(false)}>

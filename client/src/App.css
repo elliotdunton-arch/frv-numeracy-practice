@@ -2328,3 +2328,162 @@ body {
   .progress-table-wrap { overflow-x: auto; }
   .progress-table th, .progress-table td { font-size: 0.8rem; padding: 8px 10px; }
 }
+
+/* ══════════════════════════════════════
+   PAUSE BUTTON & TIMER PAUSED STATE
+══════════════════════════════════════ */
+.btn-pause {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.btn-pause:hover { background: rgba(255,255,255,0.22); }
+.btn-pause--paused {
+  background: rgba(251,191,36,0.25);
+  border-color: #fbbf24;
+  color: #fbbf24;
+}
+
+.timer-paused .timer-label { color: #fbbf24; }
+.timer-paused .timer-digits { color: #fbbf24; opacity: 0.8; }
+
+/* ══════════════════════════════════════
+   PAUSE OVERLAY
+══════════════════════════════════════ */
+.pause-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+  backdrop-filter: blur(4px);
+}
+
+.pause-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 48px 56px;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+  max-width: 380px;
+  width: 90%;
+}
+
+.pause-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.pause-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 28px;
+}
+
+.btn-resume {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-resume:hover {
+  background: var(--brand-dark, #2563eb);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════
+   FORMULA HINT BUTTON & PANEL
+══════════════════════════════════════ */
+.hint-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(234,179,8,0.1);
+  color: #92400e;
+  border: 1px solid rgba(234,179,8,0.35);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin: 8px 0;
+}
+.hint-btn:hover { background: rgba(234,179,8,0.18); }
+
+.hint-panel {
+  background: rgba(254,252,232,0.95);
+  border: 1px solid rgba(234,179,8,0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 4px 0 10px;
+}
+
+.hint-content {
+  font-size: 0.85rem;
+  color: #78350f;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
+   TIME H:M INPUT
+══════════════════════════════════════ */
+.time-hm-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.time-hm-hours,
+.time-hm-mins {
+  width: 72px;
+  padding: 10px 12px;
+  border: 2px solid var(--gray-300);
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  background: white;
+  color: var(--text-primary);
+  transition: border-color 0.15s;
+  -moz-appearance: textfield;
+}
+.time-hm-hours::-webkit-inner-spin-button,
+.time-hm-hours::-webkit-outer-spin-button,
+.time-hm-mins::-webkit-inner-spin-button,
+.time-hm-mins::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.time-hm-hours:focus,
+.time-hm-mins:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+.time-hm-sep {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 28px;
+  text-align: center;
+}

@@ -14,6 +14,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [totalTime, setTotalTime] = useState(35 * 60)
+  const [pausedMs, setPausedMs] = useState(0)
 
   const startTest = async (customCount = null, selectedTopics = null) => {
     setLoading(true)
@@ -41,10 +42,11 @@ export default function App() {
     }
   }
 
-  const submitTest = (userAnswers, expired = false) => {
+  const submitTest = (userAnswers, expired = false, pausedMillis = 0) => {
     setAnswers(userAnswers)
     setEndTime(Date.now())
     setTimeExpired(expired)
+    setPausedMs(pausedMillis)
     setScreen('results')
   }
 
@@ -80,6 +82,7 @@ export default function App() {
           timeExpired={timeExpired}
           section={section}
           onRestart={restartTest}
+          pausedMs={pausedMs}
         />
       )}
     </div>

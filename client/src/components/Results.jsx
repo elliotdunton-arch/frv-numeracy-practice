@@ -1,12 +1,26 @@
 import { useState } from 'react'
 import { getUsername, setUsername as storeUsername, saveResult } from '../utils/resultStorage'
 
+function formatHM(totalMins) {
+  const h = Math.floor(totalMins / 60)
+  const m = totalMins % 60
+  return `${h}h ${String(m).padStart(2, '0')}m`
+}
+
 function isCorrect(q, userAnswer) {
   if (q.type === 'true_false_matrix') {
     if (!userAnswer) return false
     const ua = userAnswer.split(',').map(p => p.trim().toLowerCase())
     const ca = q.answer.split(',').map(p => p.trim().toLowerCase())
     return ua.length === ca.length && ua.every((v, i) => v === ca[i])
+  }
+  if (q.inputType === 'time_hm') {
+    if (!userAnswer || !userAnswer.includes(':')) return false
+    const [h, m] = userAnswer.split(':').map(Number)
+    if (isNaN(h) || isNaN(m)) return false
+    const totalMins = h * 60 + m
+    const expected = parseFloat(q.answer)
+    return Math.abs(totalMins - expected) < 1
   }
   if (!userAnswer && userAnswer !== 0) return false
   const clean = s => String(s).replace(/[$,%\s]/g, '')
@@ -16,7 +30,14 @@ function isCorrect(q, userAnswer) {
   return clean(userAnswer).toLowerCase() === clean(q.answer).toLowerCase()
 }
 
-export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart }) {
+function formatUserTimeHM(str) {
+  if (!str || !str.includes(':')) return str || 'Not answered'
+  const [h, m] = str.split(':').map(Number)
+  if (isNaN(h) || isNaN(m)) return str
+  return formatHM(h * 60 + m)
+}
+
+export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, pausedMs = 0 }) {
   const [expandedWorking, setExpandedWorking] = useState({})
   const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
   const [nameInput, setNameInput] = useState('')
@@ -25,7 +46,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   const total = questions.length
   const pct = Math.round((score / total) * 100)
 
-  const elapsed = Math.round((endTime - startTime) / 1000)
+  const elapsed = Math.round((endTime - startTime - pausedMs) / 1000)
   const elMin = Math.floor(elapsed / 60)
   const elSec = elapsed % 60
 
@@ -214,6 +235,13 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                           )
                         })}
                       </div>
+                    </div>
+                  ) : q.inputType === 'time_hm' && !correct ? (
+                    <div className="review-answers">
+                      <span className="ans-wrong">
+                        {userAns && userAns !== ':' ? `Your answer: ${formatUserTimeHM(userAns)}` : 'Not answered'}
+                      </span>
+                      <span className="ans-correct">Correct: {formatHM(parseFloat(q.answer))}</span>
                     </div>
                   ) : !correct && (
                     <div className="review-answers">

@@ -8,21 +8,21 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-const NOTE = 'Convert minutes to decimal hours: 15 min = 0.25  |  30 min = 0.50  |  45 min = 0.75  |  60 min = 1.00  |  90 min = 1.50'
+const NOTE = 'Convert minutes to decimal hours: 15 min = 0.25  |  30 min = 0.50  |  35 min = 0.58  |  45 min = 0.75  |  50 min = 0.83  |  60 min = 1.00  |  75 min = 1.25  |  90 min = 1.50'
 
 // ── 10 timesheet contexts ─────────────────────────────────────────────────────
 
 const ctx1 = {
   title: 'FRV Station Alpha — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Sarah Chen  |  Rate: $55.00/hr',
+  subtitle: 'Firefighter: Sarah Chen  |  Weekday rate: $55.25/hr  |  Saturday rate: $82.88/hr  |  Sunday rate: $110.50/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:00am', '3:30pm', '30 mins'],
-      ['Tuesday',   '7:00am', '4:00pm', '45 mins'],
-      ['Wednesday', '7:00am', '3:00pm', '30 mins'],
-      ['Thursday',  '7:00am', '4:30pm', '60 mins'],
-      ['Friday',    '7:00am', '3:30pm', '30 mins'],
+      ['Monday',    '7:15am', '3:45pm', '35 mins'],
+      ['Tuesday',   '7:15am', '4:15pm', '50 mins'],
+      ['Wednesday', '7:15am', '3:15pm', '35 mins'],
+      ['Thursday',  '7:15am', '4:45pm', '75 mins'],
+      ['Friday',    '7:15am', '3:45pm', '35 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -32,16 +32,16 @@ const ctx1 = {
 
 const ctx2 = {
   title: 'FRV Station Bravo — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Marcus Reid  |  Weekday rate: $62.00/hr  |  Weekend rate: $93.00/hr',
+  subtitle: 'Firefighter: Marcus Reid  |  Weekday rate: $63.75/hr  |  Saturday rate: $95.63/hr  |  Sunday rate: $127.50/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '6:30am', '3:00pm',  '30 mins'],
-      ['Tuesday',   '6:30am', '2:30pm',  '30 mins'],
-      ['Wednesday', '6:30am', '3:30pm',  '45 mins'],
-      ['Thursday',  '6:30am', '3:00pm',  '30 mins'],
-      ['Friday',    '6:30am', '2:30pm',  '30 mins'],
-      ['Saturday',  '8:00am', '12:00pm', '—'],
+      ['Monday',    '6:45am', '3:15pm',  '35 mins'],
+      ['Tuesday',   '6:45am', '2:45pm',  '50 mins'],
+      ['Wednesday', '6:45am', '3:45pm',  '75 mins'],
+      ['Thursday',  '6:45am', '3:15pm',  '35 mins'],
+      ['Friday',    '6:45am', '2:45pm',  '35 mins'],
+      ['Saturday',  '8:15am', '12:15pm', '—'],
       ['Sunday',    '—',      '—',       '—'],
     ]
   }],
@@ -50,15 +50,15 @@ const ctx2 = {
 
 const ctx3 = {
   title: 'FRV Station Charlie — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Anika Johansson  |  Rate: $58.00/hr',
+  subtitle: 'Firefighter: Anika Johansson  |  Weekday rate: $58.50/hr  |  Saturday rate: $87.75/hr  |  Sunday rate: $117.00/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '8:00am', '4:00pm', '45 mins'],
+      ['Monday',    '8:15am', '4:15pm', '50 mins'],
       ['Tuesday',   '—',      '—',      '—'],
-      ['Wednesday', '7:30am', '5:00pm', '60 mins'],
-      ['Thursday',  '8:00am', '3:30pm', '30 mins'],
-      ['Friday',    '7:30am', '4:30pm', '45 mins'],
+      ['Wednesday', '7:45am', '5:15pm', '75 mins'],
+      ['Thursday',  '8:15am', '3:45pm', '35 mins'],
+      ['Friday',    '7:45am', '4:45pm', '50 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -68,17 +68,17 @@ const ctx3 = {
 
 const ctx4 = {
   title: 'FRV Station Delta — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Daniel Reyes  |  Weekday rate: $65.00/hr  |  Weekend rate: $97.50/hr',
+  subtitle: 'Firefighter: Daniel Reyes  |  Weekday rate: $66.15/hr  |  Saturday rate: $99.23/hr  |  Sunday rate: $132.30/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',       '—',       '—'],
-      ['Tuesday',   '6:00am',  '2:30pm',  '30 mins'],
-      ['Wednesday', '6:00am',  '3:00pm',  '45 mins'],
-      ['Thursday',  '6:00am',  '2:00pm',  '30 mins'],
-      ['Friday',    '6:00am',  '3:30pm',  '60 mins'],
-      ['Saturday',  '10:00am', '2:00pm',  '—'],
-      ['Sunday',    '9:00am',  '1:00pm',  '—'],
+      ['Tuesday',   '6:15am',  '2:45pm',  '50 mins'],
+      ['Wednesday', '6:15am',  '3:15pm',  '75 mins'],
+      ['Thursday',  '6:15am',  '2:15pm',  '35 mins'],
+      ['Friday',    '6:15am',  '3:45pm',  '75 mins'],
+      ['Saturday',  '10:15am', '2:15pm',  '—'],
+      ['Sunday',    '9:15am',  '1:15pm',  '—'],
     ]
   }],
   note: NOTE
@@ -86,15 +86,15 @@ const ctx4 = {
 
 const ctx5 = {
   title: 'FRV Station Echo — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Lena Petrov  |  Rate: $70.00/hr',
+  subtitle: 'Firefighter: Lena Petrov  |  Weekday rate: $72.45/hr  |  Saturday rate: $108.68/hr  |  Sunday rate: $144.90/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:00am', '5:00pm', '90 mins'],
-      ['Tuesday',   '7:00am', '4:30pm', '60 mins'],
-      ['Wednesday', '7:00am', '6:00pm', '90 mins'],
+      ['Monday',    '7:15am', '5:15pm', '90 mins'],
+      ['Tuesday',   '7:15am', '4:45pm', '75 mins'],
+      ['Wednesday', '7:15am', '6:15pm', '90 mins'],
       ['Thursday',  '—',      '—',      '—'],
-      ['Friday',    '7:00am', '4:00pm', '45 mins'],
+      ['Friday',    '7:15am', '4:15pm', '50 mins'],
       ['Saturday',  '—',      '—',      '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
@@ -104,17 +104,17 @@ const ctx5 = {
 
 const ctx6 = {
   title: 'FRV Station Foxtrot — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Omar Hassan  |  Weekday rate: $64.00/hr  |  Saturday rate: $96.00/hr  |  Sunday rate: $128.00/hr',
+  subtitle: 'Firefighter: Omar Hassan  |  Weekday rate: $64.80/hr  |  Saturday rate: $97.20/hr  |  Sunday rate: $129.60/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',      '—',       '—'],
-      ['Tuesday',   '6:30am', '3:00pm',  '30 mins'],
-      ['Wednesday', '6:30am', '4:30pm',  '60 mins'],
-      ['Thursday',  '6:30am', '2:30pm',  '30 mins'],
-      ['Friday',    '6:30am', '3:30pm',  '45 mins'],
-      ['Saturday',  '6:00am', '1:30pm',  '—'],
-      ['Sunday',    '7:00am', '10:30am', '—'],
+      ['Tuesday',   '6:45am', '3:15pm',  '35 mins'],
+      ['Wednesday', '6:45am', '4:45pm',  '75 mins'],
+      ['Thursday',  '6:45am', '2:45pm',  '35 mins'],
+      ['Friday',    '6:45am', '3:45pm',  '50 mins'],
+      ['Saturday',  '6:15am', '1:45pm',  '—'],
+      ['Sunday',    '7:15am', '10:45am', '—'],
     ]
   }],
   note: NOTE
@@ -122,16 +122,16 @@ const ctx6 = {
 
 const ctx7 = {
   title: 'FRV Station Golf — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Claire Thompson  |  Weekday rate: $68.00/hr  |  Saturday rate: $102.00/hr',
+  subtitle: 'Firefighter: Claire Thompson  |  Weekday rate: $69.35/hr  |  Saturday rate: $104.03/hr  |  Sunday rate: $138.70/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '7:00am', '3:30pm',  '45 mins'],
-      ['Tuesday',   '7:00am', '4:00pm',  '30 mins'],
-      ['Wednesday', '7:00am', '5:00pm',  '90 mins'],
-      ['Thursday',  '7:00am', '3:00pm',  '30 mins'],
+      ['Monday',    '7:15am', '3:45pm',  '50 mins'],
+      ['Tuesday',   '7:15am', '4:15pm',  '35 mins'],
+      ['Wednesday', '7:15am', '5:15pm',  '90 mins'],
+      ['Thursday',  '7:15am', '3:15pm',  '35 mins'],
       ['Friday',    '—',      '—',       '—'],
-      ['Saturday',  '8:00am', '12:00pm', '—'],
+      ['Saturday',  '8:15am', '12:15pm', '—'],
       ['Sunday',    '—',      '—',       '—'],
     ]
   }],
@@ -140,16 +140,16 @@ const ctx7 = {
 
 const ctx8 = {
   title: 'FRV Station Hotel — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Ben Fitzgerald  |  Weekday rate: $57.00/hr  |  Saturday rate: $85.50/hr',
+  subtitle: 'Firefighter: Ben Fitzgerald  |  Weekday rate: $57.90/hr  |  Saturday rate: $86.85/hr  |  Sunday rate: $115.80/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '6:00am', '2:30pm', '30 mins'],
-      ['Tuesday',   '6:00am', '3:00pm', '45 mins'],
-      ['Wednesday', '6:00am', '2:00pm', '30 mins'],
-      ['Thursday',  '6:00am', '3:30pm', '60 mins'],
-      ['Friday',    '6:00am', '2:30pm', '30 mins'],
-      ['Saturday',  '6:00am', '4:00pm', '—'],
+      ['Monday',    '6:15am', '2:45pm', '35 mins'],
+      ['Tuesday',   '6:15am', '3:15pm', '50 mins'],
+      ['Wednesday', '6:15am', '2:15pm', '35 mins'],
+      ['Thursday',  '6:15am', '3:45pm', '75 mins'],
+      ['Friday',    '6:15am', '2:45pm', '35 mins'],
+      ['Saturday',  '6:15am', '4:15pm', '—'],
       ['Sunday',    '—',      '—',      '—'],
     ]
   }],
@@ -158,17 +158,17 @@ const ctx8 = {
 
 const ctx9 = {
   title: 'FRV Station Juliet — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Nina Vasquez  |  Weekday rate: $72.00/hr  |  Saturday rate: $108.00/hr  |  Sunday rate: $144.00/hr',
+  subtitle: 'Firefighter: Nina Vasquez  |  Weekday rate: $74.20/hr  |  Saturday rate: $111.30/hr  |  Sunday rate: $148.40/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
       ['Monday',    '—',      '—',       '—'],
-      ['Tuesday',   '5:30am', '2:00pm',  '30 mins'],
-      ['Wednesday', '5:30am', '3:30pm',  '60 mins'],
-      ['Thursday',  '5:30am', '2:30pm',  '45 mins'],
-      ['Friday',    '5:30am', '1:30pm',  '30 mins'],
-      ['Saturday',  '6:00am', '10:00am', '—'],
-      ['Sunday',    '7:00am', '10:30am', '—'],
+      ['Tuesday',   '5:45am', '2:15pm',  '35 mins'],
+      ['Wednesday', '5:45am', '3:45pm',  '75 mins'],
+      ['Thursday',  '5:45am', '2:45pm',  '50 mins'],
+      ['Friday',    '5:45am', '1:45pm',  '35 mins'],
+      ['Saturday',  '6:15am', '10:15am', '—'],
+      ['Sunday',    '7:15am', '10:45am', '—'],
     ]
   }],
   note: NOTE
@@ -176,17 +176,17 @@ const ctx9 = {
 
 const ctx10 = {
   title: 'FRV Station Kilo — Weekly Crew Timesheet',
-  subtitle: 'Firefighter: Adrian Kowalczyk  |  Weekday rate: $66.00/hr  |  Saturday rate: $99.00/hr  |  Sunday rate: $132.00/hr',
+  subtitle: 'Firefighter: Adrian Kowalczyk  |  Weekday rate: $67.45/hr  |  Saturday rate: $101.18/hr  |  Sunday rate: $134.90/hr',
   tables: [{
     headers: ['Day', 'Start Time', 'End Time', 'Non-Billable'],
     rows: [
-      ['Monday',    '6:45am', '3:15pm', '45 mins'],
-      ['Tuesday',   '6:45am', '4:45pm', '90 mins'],
+      ['Monday',    '7:00am', '3:30pm', '50 mins'],
+      ['Tuesday',   '7:00am', '5:00pm', '90 mins'],
       ['Wednesday', '—',      '—',      '—'],
-      ['Thursday',  '6:45am', '5:15pm', '90 mins'],
-      ['Friday',    '6:45am', '3:45pm', '60 mins'],
-      ['Saturday',  '7:00am', '3:00pm', '30 mins'],
-      ['Sunday',    '7:00am', '1:00pm', '—'],
+      ['Thursday',  '7:00am', '5:30pm', '90 mins'],
+      ['Friday',    '7:00am', '4:00pm', '75 mins'],
+      ['Saturday',  '7:15am', '3:15pm', '35 mins'],
+      ['Sunday',    '7:15am', '1:15pm', '—'],
     ]
   }],
   note: NOTE
@@ -998,7 +998,7 @@ const ctxF2a = {
 }
 const ctxF2b = {
   title: 'Barrel Filling — Irrigation Redirect',
-  subtitle: 'The combined output from Zone 1 and Zone 4 (432 L total) is redirected entirely to fill a series of small individual holding barrels. Each barrel has a maximum capacity of exactly 0.024 m³. (1 m³ = 1000 L)',
+  subtitle: 'The combined output from Zone 1 and Zone 4 is redirected entirely to fill a series of small individual holding barrels. Each barrel has a maximum capacity of exactly 0.024 m³. (1 m³ = 1000 L)',
 }
 
 const ctxF3a = {
@@ -1032,7 +1032,7 @@ const ctxF5a = {
 }
 const ctxF5b = {
   title: 'Reservoir Tank 3 — Drainage Pump',
-  subtitle: 'Reservoir Tank 3 holds 3,400 L of liquid (0.85 m depth × 4.0 m² base area × 1,000 L/m³). A drainage pump removes water at a constant rate of 12.5 L per minute.',
+  subtitle: 'A drainage pump is connected to Reservoir Tank 3, which holds the volume of liquid you calculated from its dimensions. The pump removes water at a constant rate of 12.5 L per minute. (1 m³ = 1,000 L)',
 }
 
 // ── Building / construction contexts (ctxB1–ctxB3) ───────────────────────────
@@ -1422,28 +1422,13 @@ const ctxE13 = {
 const ctxCylW = {
   title: 'The Water Tank',
   subtitle: 'A municipal water tank is a perfect cylinder with a radius (r) of 3 m and a total height (h) of 5 m.',
-  tables: [{
-    headers: ['Formula', 'Expression'],
-    rows: [
-      ['Area of a circle',      'πr²'],
-      ['Circumference',         '2πr'],
-      ['Volume of a cylinder',  'πr²h'],
-      ['π (pi)',                '3.14'],
-    ]
-  }]
+  formulaHint: 'Area of a circle = πr²  |  Circumference = 2πr  |  Volume of a cylinder = πr²h  |  π = 3.14',
 }
 
 const ctxCylP = {
   title: 'The Circular Above-Ground Pool',
   subtitle: 'An above-ground circular pool has a radius (r) of 2.5 m and a height (h) of 1.2 m.',
-  tables: [{
-    headers: ['Formula', 'Expression'],
-    rows: [
-      ['Area of a circle',     'πr²'],
-      ['Volume of a cylinder', 'πr²h'],
-      ['π (pi)',               '3.14'],
-    ]
-  }]
+  formulaHint: 'Area of a circle = πr²  |  Volume of a cylinder = πr²h  |  π = 3.14',
 }
 
 // ── Shower head water savings context ────────────────────────────────────────
@@ -1451,13 +1436,7 @@ const ctxCylP = {
 const ctxShower = {
   title: 'Shower Head Water Savings',
   subtitle: 'Compare water usage between a water-efficient Spraysaver shower head and a standard Steadyflow shower head.',
-  tables: [{
-    headers: ['Formula', 'Expression'],
-    rows: [
-      ['Water used',  'Flow rate (L/min) × Duration (min)'],
-      ['Water saved', 'Steadyflow usage − Spraysaver usage'],
-    ]
-  }]
+  formulaHint: 'Water used = Flow rate (L/min) × Duration (min)  |  Water saved = Steadyflow usage − Spraysaver usage',
 }
 
 // ── Business scenario contexts (DS–EB) ───────────────────────────────────────
@@ -1603,13 +1582,7 @@ const ctxUnit = {
 const ctxSD = {
   title: 'Standard Drinks',
   subtitle: 'In Australia, 1 standard drink contains 10 grams of pure alcohol (ethanol density = 0.789 g/mL).',
-  tables: [{
-    headers: ['Formula', 'Expression'],
-    rows: [
-      ['Standard drinks', 'Volume (mL) × %ABV ÷ 100 × 0.789 ÷ 10'],
-      ['Simplified',      'Volume (mL) × %ABV × 0.000789'],
-    ]
-  }],
+  formulaHint: 'Standard drinks = Volume (mL) × %ABV × 0.000789',
   note: 'The Australian health guideline recommends no more than 4 standard drinks on any single occasion.'
 }
 
@@ -1617,154 +1590,204 @@ const ctxSD = {
 
 const questions = [
 
-  // ── Set 1: Sarah Chen — $55/hr, weekdays only ────────────────────────────
-  // Q1 hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 total pay: 40.25×55 = $2,213.75
+  // ── Set 1: Sarah Chen — weekday $55.25, sat $82.88, sun $110.50 ─────────
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
-    question: 'Calculate the total number of paid weekday hours Sarah worked.',
-    answer: '40.25'
+    question: 'Calculate the total number of paid weekday hours Sarah worked this week.',
+    answer: '39.67'
   },
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
-    question: 'Calculate Sarah\'s total gross pay for the week.\n(Enter the dollar amount only)',
-    answer: '2213.75'
+    question: "What is the difference in gross pay between Sarah's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '46.04'
+  },
+  {
+    group: 'A', type: 'number_input', category: 'Number and Algebra',
+    context: ctx1,
+    question: "If Sarah's weekday rate increases by 2.5%, what is her new hourly rate?\n(Round to 2 decimal places)",
+    answer: '56.63'
   },
 
-  // ── Set 2: Marcus Reid — $62/$93, full week ──────────────────────────────
-  // Q1 hours: 8+7.5+8.25+8+7.5+4 = 43.25   Q2 total pay: 39.25×62+4×93 = $2,805.50
+  // ── Set 2: Marcus Reid — weekday $63.75, sat $95.63, sun $127.50 ─────────
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
     question: 'Calculate the total number of paid hours Marcus worked across the full week.',
-    answer: '43.25'
+    answer: '42.17'
   },
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
-    question: 'Calculate Marcus\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
-    answer: '2805.50'
+    question: "What is the difference in gross pay between Marcus's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '122.17'
+  },
+  {
+    group: 'B', type: 'number_input', category: 'Number and Algebra',
+    context: ctx2,
+    question: "If Marcus's weekday rate decreases by 1.5%, what is his new hourly rate?\n(Round to 2 decimal places)",
+    answer: '62.79'
   },
 
-  // ── Set 3: Anika Johansson — $58/hr, 4 weekdays ─────────────────────────
-  // Q1 hours: 7.25+8.5+7+8.25 = 31   Q2 total pay: 31×58 = $1,798
+  // ── Set 3: Anika Johansson — weekday $58.50, sat $87.75, sun $117.00 ─────
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
-    question: 'Calculate the total number of paid hours Anika worked across all her shifts this week.',
-    answer: '31'
+    question: 'Calculate the total number of paid hours Anika worked this week.',
+    answer: '30.5'
   },
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
-    question: 'Calculate Anika\'s total gross pay for the week.\n(Enter the dollar amount only)',
-    answer: '1798'
+    question: "What is the difference in gross pay between Anika's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '78'
+  },
+  {
+    group: 'C', type: 'number_input', category: 'Number and Algebra',
+    context: ctx3,
+    question: "If Anika's weekday rate increases by 3.2%, what is her new hourly rate?\n(Round to 2 decimal places)",
+    answer: '60.37'
   },
 
-  // ── Set 4: Daniel Reyes — $65/$97.50, full week ──────────────────────────
-  // Q1 hours: 8+8.25+7.5+8.5+4+4 = 40.25   Q2 total pay: 32.25×65+8×97.50 = $2,876.25
+  // ── Set 4: Daniel Reyes — weekday $66.15, sat $99.23, sun $132.30 ─────────
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
-    question: 'Calculate the total number of paid hours Daniel worked across the full week, including weekend shifts.',
-    answer: '40.25'
+    question: 'Calculate the total number of paid hours Daniel worked across the full week.',
+    answer: '39.08'
   },
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
-    question: 'Calculate Daniel\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
-    answer: '2876.25'
+    question: "What is the difference in gross pay between Daniel's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '148.82'
+  },
+  {
+    group: 'D', type: 'number_input', category: 'Number and Algebra',
+    context: ctx4,
+    question: "If Daniel's weekday rate increases by 4.2%, what is his new hourly rate?\n(Round to 2 decimal places)",
+    answer: '68.93'
   },
 
-  // ── Set 5: Lena Petrov — $70/hr, 4 weekdays, 90-min breaks ──────────────
-  // Q1 hours: 8.5+8.5+9.5+8.25 = 34.75   Q2 total pay: 34.75×70 = $2,432.50
+  // ── Set 5: Lena Petrov — weekday $72.45, sat $108.68, sun $144.90 ─────────
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
-    question: 'Calculate the total number of paid hours Lena worked across all her weekday shifts.',
-    answer: '34.75'
+    question: 'Calculate the total number of paid weekday hours Lena worked this week.',
+    answer: '34.42'
   },
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
-    question: 'Calculate Lena\'s total gross pay for the week.\n(Enter the dollar amount only)',
-    answer: '2432.50'
+    question: "What is the difference in gross pay between Lena's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '96.60'
+  },
+  {
+    group: 'E', type: 'number_input', category: 'Number and Algebra',
+    context: ctx5,
+    question: "If Lena's weekday rate decreases by 2%, what is her new hourly rate?\n(Round to 2 decimal places)",
+    answer: '71.00'
   },
 
-  // ── Set 6: Omar Hassan — $64/$96/$128, full week ─────────────────────────
-  // Q1 hours: 8+9+7.5+8.25+7.5+3.5 = 43.75   Q2 total pay: 32.75×64+7.5×96+3.5×128 = $3,264
+  // ── Set 6: Omar Hassan — weekday $64.80, sat $97.20, sun $129.60 ──────────
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
     question: 'Calculate the total number of paid hours Omar worked across the full week.',
-    answer: '43.75'
+    answer: '43.25'
   },
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
-    question: 'Calculate Omar\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
-    answer: '3264'
+    question: "What is the difference in gross pay between Omar's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '275.40'
+  },
+  {
+    group: 'F', type: 'number_input', category: 'Number and Algebra',
+    context: ctx6,
+    question: "If Omar's weekday rate increases by 5%, what is his new hourly rate?\n(Round to 2 decimal places)",
+    answer: '68.04'
   },
 
-  // ── Set 7: Claire Thompson — $68/$102, weekdays Q1 / all days Q2 ─────────
-  // Q1 weekday hours: 7.75+8.5+8.5+7.5 = 32.25   Q2 total pay: 32.25×68+4×102 = $2,601
+  // ── Set 7: Claire Thompson — weekday $69.35, sat $104.03, sun $138.70 ─────
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
-    question: 'Calculate the total number of paid weekday hours Claire worked.',
-    answer: '32.25'
+    question: 'Calculate the total number of paid hours Claire worked across the full week.',
+    answer: '36'
   },
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
-    question: 'Calculate Claire\'s total gross pay for the week, including her Saturday shift.\n(Enter the dollar amount only)',
-    answer: '2601'
+    question: "What is the difference in gross pay between Claire's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '173.355'
+  },
+  {
+    group: 'G', type: 'number_input', category: 'Number and Algebra',
+    context: ctx7,
+    question: "If the Saturday rate decreases by 3%, what is the new Saturday hourly rate?\n(Round to 2 decimal places)",
+    answer: '100.91'
   },
 
-  // ── Set 8: Ben Fitzgerald — $57/$85.50, weekdays Q1 / all days Q2 ────────
-  // Q1 weekday hours: 8+8.25+7.5+8.5+8 = 40.25   Q2 total pay: 40.25×57+10×85.50 = $3,149.25
+  // ── Set 8: Ben Fitzgerald — weekday $57.90, sat $86.85, sun $115.80 ────────
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
-    question: 'Calculate the total number of paid weekday hours Ben worked.',
-    answer: '40.25'
+    question: 'Calculate the total number of paid hours Ben worked across the full week.',
+    answer: '49.67'
   },
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
-    question: 'Calculate Ben\'s total gross pay for the week, including his Saturday shift.\n(Enter the dollar amount only)',
-    answer: '3149.25'
+    question: "What is the difference in gross pay between Ben's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '439.075'
+  },
+  {
+    group: 'H', type: 'number_input', category: 'Number and Algebra',
+    context: ctx8,
+    question: "If Ben's weekday rate increases by 1.8%, what is his new hourly rate?\n(Round to 2 decimal places)",
+    answer: '58.94'
   },
 
-  // ── Set 9: Nina Vasquez — $72/$108/$144, full week ──────────────────────
-  // Q1 hours: 8+9+8.25+7.5+4+3.5 = 40.25   Q2 total pay: 32.75×72+4×108+3.5×144 = $3,294
+  // ── Set 9: Nina Vasquez — weekday $74.20, sat $111.30, sun $148.40 ─────────
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
     question: 'Calculate the total number of paid hours Nina worked across the full week.',
-    answer: '40.25'
+    answer: '39.75'
   },
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
-    question: 'Calculate Nina\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
-    answer: '3294'
+    question: "What is the difference in gross pay between Nina's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '204.05'
+  },
+  {
+    group: 'I', type: 'number_input', category: 'Number and Algebra',
+    context: ctx9,
+    question: "If Nina's weekday rate increases by 2.2%, what is her new hourly rate?\n(Round to 2 decimal places)",
+    answer: '75.83'
   },
 
-  // ── Set 10: Adrian Kowalczyk — $66/$99/$132, weekdays Q1 / all days Q2 ──
-  // Q1 weekday hours: 7.75+8.5+9+8 = 33.25   Q2 total pay: 33.25×66+7.5×99+6×132 = $3,729
+  // ── Set 10: Adrian Kowalczyk — weekday $67.45, sat $101.18, sun $134.90 ────
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
-    question: 'Calculate the total number of paid weekday hours Adrian worked.',
-    answer: '33.25'
+    question: 'Calculate the total number of paid hours Adrian worked across the full week.',
+    answer: '46.33'
   },
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
-    question: 'Calculate Adrian\'s total gross pay for the week, applying the correct rate to each worked day.\n(Enter the dollar amount only)',
-    answer: '3729'
+    question: "What is the difference in gross pay between Adrian's highest and lowest earning days?\n(Enter the dollar amount only)",
+    answer: '292.28'
+  },
+  {
+    group: 'J', type: 'number_input', category: 'Number and Algebra',
+    context: ctx10,
+    question: "If Adrian's weekday rate increases by 3.5%, what is his new hourly rate?\n(Round to 2 decimal places)",
+    answer: '69.81'
   },
 
   // ── Set K: Station Alpha — Toyota HiLux $45k, funding $32,500 ───────────
@@ -1928,7 +1951,7 @@ const questions = [
   {
     group: 'U', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxU,
-    question: 'Using your answer to Question A as the total tank volume, how many liters does the tank hold when filled to 3/4 of its total capacity?',
+    question: 'How many litres does the tank hold when filled to 3/4 of its total capacity?',
     answer: '27000'
   },
 
@@ -1943,7 +1966,7 @@ const questions = [
   {
     group: 'V', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxV,
-    question: 'Using the combined volume from Question A, how many liters does the basin hold when operating at 4/5 of its full capacity?',
+    question: 'How many litres does the basin hold when operating at 4/5 of its full capacity?',
     answer: '72000'
   },
 
@@ -1958,7 +1981,7 @@ const questions = [
   {
     group: 'W', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxW,
-    question: 'Using the internal volume from Question A, how many liters does the vault hold when filled to 3/5 of its operational capacity?',
+    question: 'How many litres does the vault hold when filled to 3/5 of its operational capacity?',
     answer: '13500'
   },
 
@@ -1973,7 +1996,7 @@ const questions = [
   {
     group: 'X', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxX,
-    question: 'Using the floor area from Question A, what is the minimum number of 600mm x 600mm tiles required to cover the entire surface?',
+    question: 'What is the minimum number of 600mm × 600mm tiles required to cover the entire courtyard surface?',
     answer: '500'
   },
 
@@ -1988,7 +2011,7 @@ const questions = [
   {
     group: 'Y', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxY,
-    question: 'Using the total area from Question A, what is the minimum number of 1.2m x 0.4m decking boards required to cover the entire terrace?',
+    question: 'What is the minimum number of 1.2m × 0.4m decking boards required to cover the entire terrace?',
     answer: '130'
   },
 
@@ -2003,7 +2026,7 @@ const questions = [
   {
     group: 'Z', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxZ,
-    question: 'Using the total base area from Question A, what is the minimum number of 400mm x 400mm rubber pavers required to cover both sections completely?',
+    question: 'What is the minimum number of 400mm × 400mm rubber pavers required to cover both sections completely?',
     answer: '680'
   },
 
@@ -2018,7 +2041,7 @@ const questions = [
   {
     group: 'AA', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAA,
-    question: 'Using the perimeter from Question A, what is the minimum number of 2.4m timber sleepers required to frame the entire boundary?',
+    question: 'What is the minimum number of 2.4m timber sleepers required to frame the entire boundary?',
     answer: '20'
   },
 
@@ -2033,7 +2056,7 @@ const questions = [
   {
     group: 'AB', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAB,
-    question: 'Using the perimeter from Question A, what is the minimum number of 3.5m steel edging strips required to border the entire plaza?',
+    question: 'What is the minimum number of 3.5m steel edging strips required to border the entire plaza?',
     answer: '20'
   },
 
@@ -2048,7 +2071,7 @@ const questions = [
   {
     group: 'AC', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAC,
-    question: 'Convert the block volume from Question A into mL (1 mL = 1,000 mm³), then calculate the total volume of plasticiser admixture required at the stated dose rate.',
+    question: "Convert the block's total volume from mm³ into mL (1 mL = 1,000 mm³), then calculate the total volume of plasticiser admixture required at the stated dose rate.",
     answer: '27'
   },
 
@@ -2063,7 +2086,7 @@ const questions = [
   {
     group: 'AD', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxAD,
-    question: 'Convert the slab volume from Question A into mL (1 mL = 1,000 mm³), then calculate the exact volume of curing compound required at the stated dose rate.',
+    question: "Convert the slab's total volume from mm³ into mL (1 mL = 1,000 mm³), then calculate the exact volume of curing compound required at the stated dose rate.",
     answer: '81'
   },
 
@@ -2417,141 +2440,141 @@ const questions = [
 
   // AY — Set 1: HQ employees average | Sarah scooter detour
   {
-    group: 'AY', type: 'number_input', category: 'Number and Algebra',
+    group: 'AY', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT1a,
-    question: 'What is the average travel time for a single one-way commute among these 5 employees? Give your answer in minutes.',
+    question: 'What is the average travel time for a single one-way commute among these 5 employees? Give your answer in hours and minutes.',
     answer: '46'
   },
   {
-    group: 'AY', type: 'number_input', category: 'Number and Algebra',
+    group: 'AY', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT1b,
-    question: 'How many minutes earlier does Sarah need to leave home to ensure she arrives at the station at her usual time?',
+    question: 'How much earlier does Sarah need to leave home to ensure she arrives at the station at her usual time? Give your answer in hours and minutes.',
     answer: '15'
   },
 
   // AZ — Set 2: University students average | James highway rain
   {
-    group: 'AZ', type: 'number_input', category: 'Number and Algebra',
+    group: 'AZ', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT2a,
-    question: 'What is the average one-way travel time taken across these 6 students? Give your answer in minutes.',
+    question: 'What is the average one-way travel time taken across these 6 students? Give your answer in hours and minutes.',
     answer: '51'
   },
   {
-    group: 'AZ', type: 'number_input', category: 'Number and Algebra',
+    group: 'AZ', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT2b,
-    question: 'How many minutes longer will his morning drive take compared to his regular highway commute?',
+    question: 'How much longer will his morning drive take compared to his regular highway commute? Give your answer in hours and minutes.',
     answer: '12'
   },
 
   // BA — Set 3: Warehouse couriers average | Elena electric bike
   {
-    group: 'BA', type: 'number_input', category: 'Number and Algebra',
+    group: 'BA', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT3a,
-    question: 'What is the average one-way journey time across these 5 couriers? Give your answer in minutes.',
+    question: 'What is the average one-way journey time across these 5 couriers? Give your answer in hours and minutes.',
     answer: '66'
   },
   {
-    group: 'BA', type: 'number_input', category: 'Number and Algebra',
+    group: 'BA', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT3b,
-    question: 'How many minutes of travel time does Elena save on her trip to work by using the electric bike?',
+    question: 'How much travel time does Elena save on her trip to work by using the electric bike? Give your answer in hours and minutes.',
     answer: '10'
   },
 
   // BB — Set 4: Medical practitioners average | Courier hub return limiter
   {
-    group: 'BB', type: 'number_input', category: 'Number and Algebra',
+    group: 'BB', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT4a,
-    question: 'What is the average travel time across the 6 practitioners? Give your answer in minutes.',
+    question: 'What is the average travel time across the 6 practitioners? Give your answer in hours and minutes.',
     answer: '49'
   },
   {
-    group: 'BB', type: 'number_input', category: 'Number and Algebra',
+    group: 'BB', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT4b,
-    question: 'How many minutes longer does the return leg take compared to the outward leg?',
+    question: 'How much longer does the return leg take compared to the outward leg? Give your answer in hours and minutes.',
     answer: '15'
   },
 
   // BC — Set 5: Civil engineers average | Liam accident delay
   {
-    group: 'BC', type: 'number_input', category: 'Number and Algebra',
+    group: 'BC', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT5a,
-    question: 'What is the average one-way travel time for the 5 engineers? Give your answer in minutes.',
+    question: 'What is the average one-way travel time for the 5 engineers? Give your answer in hours and minutes.',
     answer: '80'
   },
   {
-    group: 'BC', type: 'number_input', category: 'Number and Algebra',
+    group: 'BC', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT5b,
-    question: 'How many minutes earlier must Liam leave his home to arrive at the site at his standard time during the delay?',
+    question: 'How much earlier must Liam leave his home to arrive at the site at his standard time during the delay? Give your answer in hours and minutes.',
     answer: '60'
   },
 
   // BD — Set 6: Harbour supervisors average | Emergency van school traffic
   {
-    group: 'BD', type: 'number_input', category: 'Number and Algebra',
+    group: 'BD', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT6a,
-    question: 'What is the average commute duration among these 6 shift supervisors? Give your answer in minutes.',
+    question: 'What is the average commute duration among these 6 shift supervisors? Give your answer in hours and minutes.',
     answer: '56'
   },
   {
-    group: 'BD', type: 'number_input', category: 'Number and Algebra',
+    group: 'BD', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT6b,
-    question: 'How many minutes longer does the return trip take than the outward emergency run?',
+    question: 'How much longer does the return trip take than the outward emergency run? Give your answer in hours and minutes.',
     answer: '15'
   },
 
   // BE — Set 7: Retail employees average | Executive peak vs off-peak
   {
-    group: 'BE', type: 'number_input', category: 'Number and Algebra',
+    group: 'BE', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT7a,
-    question: 'What is the average one-way travel time among these 5 individual profiles? Give your answer in minutes.',
+    question: 'What is the average one-way travel time among these 5 individual profiles? Give your answer in hours and minutes.',
     answer: '45'
   },
   {
-    group: 'BE', type: 'number_input', category: 'Number and Algebra',
+    group: 'BE', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT7b,
-    question: 'How many minutes of travel time does the executive save by choosing to drive outside of peak hours?',
+    question: 'How much travel time does the executive save by choosing to drive outside of peak hours? Give your answer in hours and minutes.',
     answer: '70'
   },
 
   // BF — Set 8: Airline crew average | Distribution truck loaded vs empty
   {
-    group: 'BF', type: 'number_input', category: 'Number and Algebra',
+    group: 'BF', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT8a,
-    question: 'What is the average one-way ground transit duration across these 6 crew members? Give your answer in minutes.',
+    question: 'What is the average one-way ground transit duration across these 6 crew members? Give your answer in hours and minutes.',
     answer: '78'
   },
   {
-    group: 'BF', type: 'number_input', category: 'Number and Algebra',
+    group: 'BF', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT8b,
-    question: 'How many minutes faster is the return leg compared to the outbound delivery leg?',
+    question: 'How much faster is the return leg compared to the outbound delivery leg? Give your answer in hours and minutes.',
     answer: '18'
   },
 
   // BG — Set 9: Research hub scientists average | Claire maintenance restriction
   {
-    group: 'BG', type: 'number_input', category: 'Number and Algebra',
+    group: 'BG', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT9a,
-    question: 'What is the average travel time for a single journey across these 5 scientists? Give your answer in minutes.',
+    question: 'What is the average travel time for a single journey across these 5 scientists? Give your answer in hours and minutes.',
     answer: '61'
   },
   {
-    group: 'BG', type: 'number_input', category: 'Number and Algebra',
+    group: 'BG', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT9b,
-    question: 'How many additional minutes does Claire spend on her commute because of the maintenance speed restriction?',
+    question: 'How much additional time does Claire spend on her commute because of the maintenance speed restriction? Give your answer in hours and minutes.',
     answer: '30'
   },
 
   // BH — Set 10: Council workers average | Medical courier peak vs overnight
   {
-    group: 'BH', type: 'number_input', category: 'Number and Algebra',
+    group: 'BH', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT10a,
-    question: 'What is the average travel time for a single leg across these 6 community workers? Give your answer in minutes.',
+    question: 'What is the average travel time for a single leg across these 6 community workers? Give your answer in hours and minutes.',
     answer: '52'
   },
   {
-    group: 'BH', type: 'number_input', category: 'Number and Algebra',
+    group: 'BH', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT10b,
-    question: 'How many minutes longer does the daytime delivery run take compared to the overnight run?',
+    question: 'How much longer does the daytime delivery run take compared to the overnight run? Give your answer in hours and minutes.',
     answer: '25'
   },
 
@@ -2594,9 +2617,9 @@ const questions = [
     answer: '38.25'
   },
   {
-    group: 'BK', type: 'number_input', category: 'Measurement and Geometry',
+    group: 'BK', type: 'number_input', inputType: 'time_hm', category: 'Measurement and Geometry',
     context: ctxF3b,
-    question: 'How many total minutes can the irrigation line run continuously into this drainage tank before it overflows?',
+    question: 'How long can the irrigation line run continuously into this drainage tank before it overflows? Give your answer in hours and minutes.',
     answer: '600'
   },
 
@@ -2622,9 +2645,9 @@ const questions = [
     answer: '3400'
   },
   {
-    group: 'BM', type: 'number_input', category: 'Measurement and Geometry',
+    group: 'BM', type: 'number_input', inputType: 'time_hm', category: 'Measurement and Geometry',
     context: ctxF5b,
-    question: 'How many minutes will it take to pump Reservoir Tank 3 completely empty?',
+    question: 'How long will it take to pump Reservoir Tank 3 completely empty? Give your answer in hours and minutes.',
     answer: '272'
   },
 
@@ -3684,8 +3707,8 @@ const questions = [
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
 const units = {
-  A: ['h', '$'],   B: ['h', '$'],   C: ['h', '$'],   D: ['h', '$'],   E: ['h', '$'],
-  F: ['h', '$'],   G: ['h', '$'],   H: ['h', '$'],   I: ['h', '$'],   J: ['h', '$'],
+  A: ['h', '$', '$'],   B: ['h', '$', '$'],   C: ['h', '$', '$'],   D: ['h', '$', '$'],   E: ['h', '$', '$'],
+  F: ['h', '$', '$'],   G: ['h', '$', '$'],   H: ['h', '$', '$'],   I: ['h', '$', '$'],   J: ['h', '$', '$'],
   K: ['$', 'years'], L: ['$', 'years'], M: ['$', '$'],   N: ['$', 'years'], O: ['$', '$'],
   P: ['$', 'years'], Q: ['$', '$'],   R: ['$', 'years'], S: ['$', '$'],   T: ['$', '$'],
   U: ['m³', 'L'],  V: ['m³', 'L'],  W: ['m³', 'L'],
@@ -3696,9 +3719,9 @@ const units = {
   AJ: ['$', '$'], AK: [null, '$'], AL: ['$', '$'], AM: [null, '$'], AN: ['$', '$'],
   AO: ['$', null], AP: ['$', null], AQ: ['$', null], AR: ['$', null], AS: ['$', null],
   AT: ['$', null], AU: ['$', null], AV: ['$', null], AW: ['$', null], AX: ['$', null],
-  AY: ['min', 'min'], AZ: ['min', 'min'], BA: ['min', 'min'], BB: ['min', 'min'], BC: ['min', 'min'],
-  BD: ['min', 'min'], BE: ['min', 'min'], BF: ['min', 'min'], BG: ['min', 'min'], BH: ['min', 'min'],
-  BI: ['mL', null], BJ: ['L', 'barrels'], BK: ['L', 'min'], BL: ['mL', 'mL'], BM: ['L', 'min'],
+  AY: [null, null], AZ: [null, null], BA: [null, null], BB: [null, null], BC: [null, null],
+  BD: [null, null], BE: [null, null], BF: [null, null], BG: [null, null], BH: [null, null],
+  BI: ['mL', null], BJ: ['L', 'barrels'], BK: ['L', null], BL: ['mL', 'mL'], BM: ['L', null],
   BN: [null, null], BO: [null, null], BP: [null, null],
   BQ: [null, null], BR: [null, null], BS: [null, null], BT: [null, null], BU: [null, null],
   BV: [null, null], BW: [null, null],
@@ -3744,44 +3767,54 @@ const units = {
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
 const methods = {
   A: [
-    `For each worked day, calculate: Duration = End time − Start time, then subtract Non-Billable time.\n(15 min = 0.25 h  |  30 min = 0.50 h  |  45 min = 0.75 h  |  60 min = 1.00 h)\n\n  Mon: 3:30pm − 7:00am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 4:00pm − 7:00am = 9.00 h − 0.75 h = 8.25 h\n  Wed: 3:00pm − 7:00am = 8.00 h − 0.50 h = 7.50 h\n  Thu: 4:30pm − 7:00am = 9.50 h − 1.00 h = 8.50 h\n  Fri: 3:30pm − 7:00am = 8.50 h − 0.50 h = 8.00 h\n\nTotal: 8.00 + 8.25 + 7.50 + 8.50 + 8.00 = 40.25 h`,
-    `Multiply each day's billable hours × $55.00/hr, then sum:\n\n  Mon: 8.00 h × $55 = $440.00\n  Tue: 8.25 h × $55 = $453.75\n  Wed: 7.50 h × $55 = $412.50\n  Thu: 8.50 h × $55 = $467.50\n  Fri: 8.00 h × $55 = $440.00\n\nTotal gross pay: $440.00 + $453.75 + $412.50 + $467.50 + $440.00 = $2,213.75`,
+    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 50 min = 8h 10m = 490 min\n  Wed: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Thu: 4:45pm − 7:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Fri: 3:45pm − 7:15am = 8h 30m − 35 min = 7h 55m = 475 min\n\nTotal minutes: 475 + 490 + 445 + 495 + 475 = 2,380 min\nConvert to hours: 2,380 ÷ 60 = 39.67 h`,
+    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $55.25 = 7.917 h × $55.25 = $437.41\n  Tue: 490/60 × $55.25 = 8.167 h × $55.25 = $451.22\n  Wed: 445/60 × $55.25 = 7.417 h × $55.25 = $409.77\n  Thu: 495/60 × $55.25 = 8.250 h × $55.25 = $455.81\n  Fri: 475/60 × $55.25 = 7.917 h × $55.25 = $437.41\n\n  Highest earning day: Thursday  = $455.81\n  Lowest earning day:  Wednesday = $409.77\n\nDifference: $455.81 − $409.77 = $46.04`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $55.25 × 1.025\n  = $56.63`,
   ],
   B: [
-    `For each worked day, calculate billable hours = Duration − Non-Billable time.\n\n  Mon: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Wed: 3:30pm − 6:30am = 9.00 h − 0.75 h = 8.25 h\n  Thu: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Fri: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Sat: 12:00pm − 8:00am = 4.00 h (no Non-Billable)\n\nTotal (full week): 8.00 + 7.50 + 8.25 + 8.00 + 7.50 + 4.00 = 43.25 h`,
-    `Apply the correct rate to each worked day, then sum:\n\n  Mon: 8.00 h × $62 (weekday) = $496.00\n  Tue: 7.50 h × $62 (weekday) = $465.00\n  Wed: 8.25 h × $62 (weekday) = $511.50\n  Thu: 8.00 h × $62 (weekday) = $496.00\n  Fri: 7.50 h × $62 (weekday) = $465.00\n  Sat: 4.00 h × $93 (weekend) = $372.00\n\nTotal gross pay: $496 + $465 + $511.50 + $496 + $465 + $372 = $2,805.50`,
+    `For each worked day, calculate billable hours = (End − Start) minus Non-Billable.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 2:45pm − 6:45am = 8h 00m − 50 min = 7h 10m = 430 min\n  Wed: 3:45pm − 6:45am = 9h 00m − 75 min = 7h 45m = 465 min\n  Thu: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Fri: 2:45pm − 6:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 475 + 430 + 465 + 475 + 445 + 240 = 2,530 min\nConvert to hours: 2,530 ÷ 60 = 42.17 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $63.75 = 7.917 h × $63.75 = $504.69\n  Tue: 430/60 × $63.75 = 7.167 h × $63.75 = $456.88\n  Wed: 465/60 × $63.75 = 7.750 h × $63.75 = $494.06\n  Thu: 475/60 × $63.75 = 7.917 h × $63.75 = $504.69\n  Fri: 445/60 × $63.75 = 7.417 h × $63.75 = $472.81\n  Sat: 4.000 h × $95.63 (sat rate)         = $382.52\n\n  Highest earning day: Monday / Thursday = $504.69\n  Lowest earning day:  Saturday          = $382.52\n\nDifference: $504.69 − $382.52 = $122.17`,
+    `New rate = Old rate × (1 − percentage decrease)\n  = $63.75 × 0.985\n  = $62.79`,
   ],
   C: [
-    `Only 4 weekdays were worked (Tuesday was off).\n\n  Mon: 4:00pm − 8:00am = 8.00 h − 0.75 h = 7.25 h\n  Wed: 5:00pm − 7:30am = 9.50 h − 1.00 h = 8.50 h\n  Thu: 3:30pm − 8:00am = 7.50 h − 0.50 h = 7.00 h\n  Fri: 4:30pm − 7:30am = 9.00 h − 0.75 h = 8.25 h\n\nTotal (4 weekdays): 7.25 + 8.50 + 7.00 + 8.25 = 31.00 h`,
-    `Multiply each day's billable hours × $58.00/hr, then sum:\n\n  Mon: 7.25 h × $58 = $420.50\n  Wed: 8.50 h × $58 = $493.00\n  Thu: 7.00 h × $58 = $406.00\n  Fri: 8.25 h × $58 = $478.50\n\nTotal gross pay: $420.50 + $493.00 + $406.00 + $478.50 = $1,798.00`,
+    `Tuesday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 4:15pm − 8:15am = 8h 00m − 50 min = 7h 10m = 430 min\n  Wed: 5:15pm − 7:45am = 9h 30m − 75 min = 8h 15m = 495 min\n  Thu: 3:45pm − 8:15am = 7h 30m − 35 min = 6h 55m = 415 min\n  Fri: 4:45pm − 7:45am = 9h 00m − 50 min = 8h 10m = 490 min\n\nTotal minutes: 430 + 495 + 415 + 490 = 1,830 min\nConvert to hours: 1,830 ÷ 60 = 30.5 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 430/60 × $58.50 = 7.167 h × $58.50 = $419.25\n  Wed: 495/60 × $58.50 = 8.250 h × $58.50 = $482.63\n  Thu: 415/60 × $58.50 = 6.917 h × $58.50 = $404.63\n  Fri: 490/60 × $58.50 = 8.167 h × $58.50 = $477.75\n\n  Highest earning day: Wednesday = $482.63\n  Lowest earning day:  Thursday  = $404.63\n\nDifference: $482.63 − $404.63 = $78.00`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $58.50 × 1.032\n  = $60.37`,
   ],
   D: [
-    `Monday was off. Calculate billable hours for each worked day:\n\n  Tue: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 3:00pm − 6:00am = 9.00 h − 0.75 h = 8.25 h\n  Thu: 2:00pm − 6:00am = 8.00 h − 0.50 h = 7.50 h\n  Fri: 3:30pm − 6:00am = 9.50 h − 1.00 h = 8.50 h\n  Sat: 2:00pm − 10:00am = 4.00 h (no Non-Billable)\n  Sun: 1:00pm − 9:00am = 4.00 h (no Non-Billable)\n\nTotal (full week): 8.00 + 8.25 + 7.50 + 8.50 + 4.00 + 4.00 = 40.25 h`,
-    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $65 (weekday)    = $520.00\n  Wed: 8.25 h × $65 (weekday)    = $536.25\n  Thu: 7.50 h × $65 (weekday)    = $487.50\n  Fri: 8.50 h × $65 (weekday)    = $552.50\n  Sat: 4.00 h × $97.50 (weekend) = $390.00\n  Sun: 4.00 h × $97.50 (weekend) = $390.00\n\nTotal gross pay: $520 + $536.25 + $487.50 + $552.50 + $390 + $390 = $2,876.25`,
+    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 2:45pm − 6:15am = 8h 30m − 50 min = 7h 40m = 460 min\n  Wed: 3:15pm − 6:15am = 9h 00m − 75 min = 7h 45m = 465 min\n  Thu: 2:15pm − 6:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Fri: 3:45pm − 6:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Sat: 2:15pm − 10:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 1:15pm − 9:15am  = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 460 + 465 + 445 + 495 + 240 + 240 = 2,345 min\nConvert to hours: 2,345 ÷ 60 = 39.08 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 460/60 × $66.15 = 7.667 h × $66.15 = $507.15\n  Wed: 465/60 × $66.15 = 7.750 h × $66.15 = $512.66\n  Thu: 445/60 × $66.15 = 7.417 h × $66.15 = $490.61\n  Fri: 495/60 × $66.15 = 8.250 h × $66.15 = $545.74\n  Sat: 4.000 h × $99.23 (sat rate)          = $396.92\n  Sun: 4.000 h × $132.30 (sun rate)         = $529.20\n\n  Highest earning day: Friday   = $545.74\n  Lowest earning day:  Saturday = $396.92\n\nDifference: $545.74 − $396.92 = $148.82`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $66.15 × 1.042\n  = $68.93`,
   ],
   E: [
-    `Only 4 weekdays were worked (Thursday was off). Note: 90 min = 1.50 h.\n\n  Mon: 5:00pm − 7:00am = 10.00 h − 1.50 h = 8.50 h\n  Tue: 4:30pm − 7:00am = 9.50 h − 1.00 h = 8.50 h\n  Wed: 6:00pm − 7:00am = 11.00 h − 1.50 h = 9.50 h\n  Fri: 4:00pm − 7:00am = 9.00 h − 0.75 h = 8.25 h\n\nTotal (4 weekdays): 8.50 + 8.50 + 9.50 + 8.25 = 34.75 h`,
-    `Multiply each day's billable hours × $70.00/hr, then sum:\n\n  Mon: 8.50 h × $70 = $595.00\n  Tue: 8.50 h × $70 = $595.00\n  Wed: 9.50 h × $70 = $665.00\n  Fri: 8.25 h × $70 = $577.50\n\nTotal gross pay: $595.00 + $595.00 + $665.00 + $577.50 = $2,432.50`,
+    `Thursday was off. Calculate billable hours for each worked day.\n(50 min = 0.83 h  |  75 min = 1.25 h  |  90 min = 1.50 h)\n\n  Mon: 5:15pm − 7:15am = 10h 00m − 90 min = 8h 30m = 510 min\n  Tue: 4:45pm − 7:15am = 9h 30m  − 75 min = 8h 15m = 495 min\n  Wed: 6:15pm − 7:15am = 11h 00m − 90 min = 9h 30m = 570 min\n  Fri: 4:15pm − 7:15am = 9h 00m  − 50 min = 8h 10m = 490 min\n\nTotal minutes: 510 + 495 + 570 + 490 = 2,065 min\nConvert to hours: 2,065 ÷ 60 = 34.42 h`,
+    `Calculate each weekday's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 510/60 × $72.45 = 8.500 h × $72.45 = $615.83\n  Tue: 495/60 × $72.45 = 8.250 h × $72.45 = $597.71\n  Wed: 570/60 × $72.45 = 9.500 h × $72.45 = $688.28\n  Fri: 490/60 × $72.45 = 8.167 h × $72.45 = $591.68\n\n  Highest earning day: Wednesday = $688.28\n  Lowest earning day:  Friday    = $591.68\n\nDifference: $688.28 − $591.68 = $96.60`,
+    `New rate = Old rate × (1 − percentage decrease)\n  = $72.45 × 0.98\n  = $71.00`,
   ],
   F: [
-    `Monday was off. Calculate billable hours for each worked day:\n\n  Tue: 3:00pm − 6:30am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 4:30pm − 6:30am = 10.00 h − 1.00 h = 9.00 h\n  Thu: 2:30pm − 6:30am = 8.00 h − 0.50 h = 7.50 h\n  Fri: 3:30pm − 6:30am = 9.00 h − 0.75 h = 8.25 h\n  Sat: 1:30pm − 6:00am = 7.50 h (no Non-Billable)\n  Sun: 10:30am − 7:00am = 3.50 h (no Non-Billable)\n\nTotal (full week): 8.00 + 9.00 + 7.50 + 8.25 + 7.50 + 3.50 = 43.75 h`,
-    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $64 (weekday)  = $512.00\n  Wed: 9.00 h × $64 (weekday)  = $576.00\n  Thu: 7.50 h × $64 (weekday)  = $480.00\n  Fri: 8.25 h × $64 (weekday)  = $528.00\n  Sat: 7.50 h × $96 (Saturday) = $720.00\n  Sun: 3.50 h × $128 (Sunday)  = $448.00\n\nTotal gross pay: $512 + $576 + $480 + $528 + $720 + $448 = $3,264.00`,
+    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 3:15pm − 6:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Wed: 4:45pm − 6:45am = 10h 00m − 75 min = 8h 45m = 525 min\n  Thu: 2:45pm − 6:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Fri: 3:45pm − 6:45am = 9h 00m − 50 min = 8h 10m = 490 min\n  Sat: 1:45pm − 6:15am = 7h 30m = 450 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 475 + 525 + 445 + 490 + 450 + 210 = 2,595 min\nConvert to hours: 2,595 ÷ 60 = 43.25 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 475/60 × $64.80 = 7.917 h × $64.80 = $513.00\n  Wed: 525/60 × $64.80 = 8.750 h × $64.80 = $567.00\n  Thu: 445/60 × $64.80 = 7.417 h × $64.80 = $480.60\n  Fri: 490/60 × $64.80 = 8.167 h × $64.80 = $529.20\n  Sat: 7.500 h × $97.20 (sat rate)         = $729.00\n  Sun: 3.500 h × $129.60 (sun rate)        = $453.60\n\n  Highest earning day: Saturday = $729.00\n  Lowest earning day:  Sunday   = $453.60\n\nNote: Sunday ($453.60) is lower than Thursday ($480.60) — confirm before selecting.\n\nDifference: $729.00 − $453.60 = $275.40`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $64.80 × 1.05\n  = $68.04`,
   ],
   G: [
-    `Q1 asks for weekdays only (Friday was off; Saturday is excluded from this total).\n\n  Mon: 3:30pm − 7:00am = 8.50 h − 0.75 h = 7.75 h\n  Tue: 4:00pm − 7:00am = 9.00 h − 0.50 h = 8.50 h\n  Wed: 5:00pm − 7:00am = 10.00 h − 1.50 h = 8.50 h\n  Thu: 3:00pm − 7:00am = 8.00 h − 0.50 h = 7.50 h\n\nTotal (weekdays only): 7.75 + 8.50 + 8.50 + 7.50 = 32.25 h`,
-    `Apply the correct rate to ALL worked days (including Saturday), then sum:\n\n  Mon: 7.75 h × $68 (weekday)   = $527.00\n  Tue: 8.50 h × $68 (weekday)   = $578.00\n  Wed: 8.50 h × $68 (weekday)   = $578.00\n  Thu: 7.50 h × $68 (weekday)   = $510.00\n  Sat: 4.00 h × $102 (Saturday) = $408.00\n\nTotal gross pay: $527 + $578 + $578 + $510 + $408 = $2,601.00`,
+    `Friday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  90 min = 1.50 h)\n\n  Mon: 3:45pm − 7:15am = 8h 30m − 50 min = 7h 40m = 460 min\n  Tue: 4:15pm − 7:15am = 9h 00m − 35 min = 8h 25m = 505 min\n  Wed: 5:15pm − 7:15am = 10h 00m − 90 min = 8h 30m = 510 min\n  Thu: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 12:15pm − 8:15am = 4h 00m = 240 min (no Non-Billable)\n\nTotal minutes: 460 + 505 + 510 + 445 + 240 = 2,160 min\nConvert to hours: 2,160 ÷ 60 = 36 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 460/60 × $69.35 = 7.667 h × $69.35 = $531.68\n  Tue: 505/60 × $69.35 = 8.417 h × $69.35 = $583.70\n  Wed: 510/60 × $69.35 = 8.500 h × $69.35 = $589.48\n  Thu: 445/60 × $69.35 = 7.417 h × $69.35 = $514.35\n  Sat: 4.000 h × $104.03 (sat rate)         = $416.12\n\n  Highest earning day: Wednesday = $589.48\n  Lowest earning day:  Saturday  = $416.12\n\nDifference: $589.48 − $416.12 = $173.36 (≈ $173.355)`,
+    `New rate = Old rate × (1 − percentage decrease)\n  = $104.03 × 0.97\n  = $100.91`,
   ],
   H: [
-    `Q1 asks for weekday hours only (Saturday is excluded from this total).\n\n  Mon: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n  Tue: 3:00pm − 6:00am = 9.00 h − 0.75 h = 8.25 h\n  Wed: 2:00pm − 6:00am = 8.00 h − 0.50 h = 7.50 h\n  Thu: 3:30pm − 6:00am = 9.50 h − 1.00 h = 8.50 h\n  Fri: 2:30pm − 6:00am = 8.50 h − 0.50 h = 8.00 h\n\nTotal (weekdays only): 8.00 + 8.25 + 7.50 + 8.50 + 8.00 = 40.25 h`,
-    `Apply the correct rate to ALL worked days (including Saturday), then sum:\n\n  Mon: 8.00 h × $57.00 (weekday)   = $456.00\n  Tue: 8.25 h × $57.00 (weekday)   = $470.25\n  Wed: 7.50 h × $57.00 (weekday)   = $427.50\n  Thu: 8.50 h × $57.00 (weekday)   = $484.50\n  Fri: 8.00 h × $57.00 (weekday)   = $456.00\n  Sat: 4:00pm − 6:00am = 10.00 h × $85.50 (Saturday) = $855.00\n\nTotal gross pay: $456 + $470.25 + $427.50 + $484.50 + $456 + $855 = $3,149.25`,
+    `Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Mon: 2:45pm − 6:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Tue: 3:15pm − 6:15am = 9h 00m − 50 min = 8h 10m = 490 min\n  Wed: 2:15pm − 6:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Thu: 3:45pm − 6:15am = 9h 30m − 75 min = 8h 15m = 495 min\n  Fri: 2:45pm − 6:15am = 8h 30m − 35 min = 7h 55m = 475 min\n  Sat: 4:15pm − 6:15am = 10h 00m = 600 min (no Non-Billable)\n\nTotal minutes: 475 + 490 + 445 + 495 + 475 + 600 = 2,980 min\nConvert to hours: 2,980 ÷ 60 = 49.67 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 475/60 × $57.90 = 7.917 h × $57.90 = $458.38\n  Tue: 490/60 × $57.90 = 8.167 h × $57.90 = $472.88\n  Wed: 445/60 × $57.90 = 7.417 h × $57.90 = $429.43\n  Thu: 495/60 × $57.90 = 8.250 h × $57.90 = $477.68\n  Fri: 475/60 × $57.90 = 7.917 h × $57.90 = $458.38\n  Sat: 10.000 h × $86.85 (sat rate)         = $868.50\n\n  Highest earning day: Saturday  = $868.50\n  Lowest earning day:  Wednesday = $429.43 (≈ $429.425)\n\nDifference: $868.50 − $429.43 = $439.08 (exact: $439.075)`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $57.90 × 1.018\n  = $58.94`,
   ],
   I: [
-    `Monday was off. Calculate billable hours for all other worked days:\n\n  Tue: 2:00pm − 5:30am = 8.50 h − 0.50 h = 8.00 h\n  Wed: 3:30pm − 5:30am = 10.00 h − 1.00 h = 9.00 h\n  Thu: 2:30pm − 5:30am = 9.00 h − 0.75 h = 8.25 h\n  Fri: 1:30pm − 5:30am = 8.00 h − 0.50 h = 7.50 h\n  Sat: 10:00am − 6:00am = 4.00 h (no Non-Billable)\n  Sun: 10:30am − 7:00am = 3.50 h (no Non-Billable)\n\nTotal (full week): 8.00 + 9.00 + 8.25 + 7.50 + 4.00 + 3.50 = 40.25 h`,
-    `Apply the correct rate to each worked day, then sum:\n\n  Tue: 8.00 h × $72 (weekday)   = $576.00\n  Wed: 9.00 h × $72 (weekday)   = $648.00\n  Thu: 8.25 h × $72 (weekday)   = $594.00\n  Fri: 7.50 h × $72 (weekday)   = $540.00\n  Sat: 4.00 h × $108 (Saturday) = $432.00\n  Sun: 3.50 h × $144 (Sunday)   = $504.00\n\nTotal gross pay: $576 + $648 + $594 + $540 + $432 + $504 = $3,294.00`,
+    `Monday was off. Calculate billable hours for each worked day.\n(35 min = 0.58 h  |  50 min = 0.83 h  |  75 min = 1.25 h)\n\n  Tue: 2:15pm − 5:45am = 8h 30m − 35 min = 7h 55m = 475 min\n  Wed: 3:45pm − 5:45am = 10h 00m − 75 min = 8h 45m = 525 min\n  Thu: 2:45pm − 5:45am = 9h 00m − 50 min = 8h 10m = 490 min\n  Fri: 1:45pm − 5:45am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sat: 10:15am − 6:15am = 4h 00m = 240 min (no Non-Billable)\n  Sun: 10:45am − 7:15am = 3h 30m = 210 min (no Non-Billable)\n\nTotal minutes: 475 + 525 + 490 + 445 + 240 + 210 = 2,385 min\nConvert to hours: 2,385 ÷ 60 = 39.75 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Tue: 475/60 × $74.20 = 7.917 h × $74.20 = $587.42\n  Wed: 525/60 × $74.20 = 8.750 h × $74.20 = $649.25\n  Thu: 490/60 × $74.20 = 8.167 h × $74.20 = $605.97\n  Fri: 445/60 × $74.20 = 7.417 h × $74.20 = $550.32\n  Sat: 4.000 h × $111.30 (sat rate)         = $445.20\n  Sun: 3.500 h × $148.40 (sun rate)         = $519.40\n\n  Highest earning day: Wednesday = $649.25\n  Lowest earning day:  Saturday  = $445.20\n\nDifference: $649.25 − $445.20 = $204.05`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $74.20 × 1.022\n  = $75.83`,
   ],
   J: [
-    `Q1 asks for weekdays only. Wednesday was off.\n\n  Mon: 3:15pm − 6:45am = 8.50 h − 0.75 h = 7.75 h\n  Tue: 4:45pm − 6:45am = 10.00 h − 1.50 h = 8.50 h\n  Thu: 5:15pm − 6:45am = 10.50 h − 1.50 h = 9.00 h\n  Fri: 3:45pm − 6:45am = 9.00 h − 1.00 h = 8.00 h\n\nTotal (weekdays only): 7.75 + 8.50 + 9.00 + 8.00 = 33.25 h`,
-    `Apply the correct rate to ALL worked days, then sum:\n\n  Mon: 7.75 h × $66 (weekday)   = $511.50\n  Tue: 8.50 h × $66 (weekday)   = $561.00\n  Thu: 9.00 h × $66 (weekday)   = $594.00\n  Fri: 8.00 h × $66 (weekday)   = $528.00\n  Sat: 7.50 h × $99 (Saturday)  = $742.50\n  Sun: 6.00 h × $132 (Sunday)   = $792.00\n\nTotal gross pay: $511.50 + $561 + $594 + $528 + $742.50 + $792 = $3,729.00`,
+    `Wednesday was off. Calculate billable hours for each worked day.\n(50 min = 0.83 h  |  75 min = 1.25 h  |  90 min = 1.50 h)\n\n  Mon: 3:30pm − 7:00am = 8h 30m − 50 min = 7h 40m = 460 min\n  Tue: 5:00pm − 7:00am = 10h 00m − 90 min = 8h 30m = 510 min\n  Thu: 5:30pm − 7:00am = 10h 30m − 90 min = 9h 00m = 540 min\n  Fri: 4:00pm − 7:00am = 9h 00m − 75 min = 7h 45m = 465 min\n  Sat: 3:15pm − 7:15am = 8h 00m − 35 min = 7h 25m = 445 min\n  Sun: 1:15pm − 7:15am = 6h 00m = 360 min (no Non-Billable)\n\nTotal minutes: 460 + 510 + 540 + 465 + 445 + 360 = 2,780 min\nConvert to hours: 2,780 ÷ 60 = 46.33 h`,
+    `Calculate each day's gross pay, then find the difference between the highest and lowest.\n\n  Mon: 460/60 × $67.45 = 7.667 h × $67.45 = $517.12\n  Tue: 510/60 × $67.45 = 8.500 h × $67.45 = $573.33\n  Thu: 540/60 × $67.45 = 9.000 h × $67.45 = $607.05\n  Fri: 465/60 × $67.45 = 7.750 h × $67.45 = $522.74\n  Sat: 445/60 × $101.18 = 7.417 h × $101.18 = $750.42\n  Sun: 6.000 h × $134.90 (sun rate)          = $809.40\n\n  Highest earning day: Sunday = $809.40\n  Lowest earning day:  Monday = $517.12\n\nDifference: $809.40 − $517.12 = $292.28`,
+    `New rate = Old rate × (1 + percentage increase)\n  = $67.45 × 1.035\n  = $69.81`,
   ],
   K: [
     `Add all funding sources:\n  Station budget allocation:   $18,000\n  Decommissioned vehicle sale: $14,500\n  Total available funding:     $32,500\n\nShortfall = Purchase price − Total funding\nToyota HiLux: $45,000 − $32,500 = $12,500`,
@@ -3993,7 +4026,7 @@ const methods = {
   ],
   BK: [
     `Volume = Flow rate × Time\n  = 850 mL/min × 45 min = 38,250 mL\n\nConvert to litres:\n  38,250 mL ÷ 1,000 = 38.25 L`,
-    `Convert tank capacity to litres:\n  0.51 m³ × 1,000 L/m³ = 510 L\n\nConvert flow rate to L/min:\n  850 mL/min ÷ 1,000 = 0.85 L/min\n\nTime = Capacity ÷ Flow rate\n  = 510 L ÷ 0.85 L/min = 600 minutes`,
+    `Convert tank capacity to litres:\n  0.51 m³ × 1,000 L/m³ = 510 L\n\nConvert flow rate to L/min:\n  850 mL/min ÷ 1,000 = 0.85 L/min\n\nTime = Capacity ÷ Flow rate\n  = 510 L ÷ 0.85 L/min = 600 minutes\n  = 600 ÷ 60 = 10 hours 0 minutes`,
   ],
   BL: [
     `Grade A Nitro concentration: 4.5 mL per litre\nSub-tank volume: 180 L\n\nConcentrate needed: 4.5 mL/L × 180 L = 810 mL`,
@@ -4001,7 +4034,7 @@ const methods = {
   ],
   BM: [
     `Volume = Floor area × Liquid depth\n  = 4.0 m² × 0.85 m = 3.4 m³\n\nConvert to litres:\n  3.4 m³ × 1,000 L/m³ = 3,400 L`,
-    `Time = Volume ÷ Pump rate\n  = 3,400 L ÷ 12.5 L/min = 272 minutes`,
+    `Time = Volume ÷ Pump rate\n  = 3,400 L ÷ 12.5 L/min = 272 minutes\n  = 4 hours 32 minutes (272 ÷ 60 = 4 remainder 32)`,
   ],
   BN: [
     `EcoTimber Hub: "Buy 2 get 25% off total timber cost"\n  Standard price: $200.00 each\n  2 slabs = 2 × $200 = $400.00\n  25% discount: $400.00 × 0.75 = $300.00`,
@@ -4374,6 +4407,7 @@ app.get('/api/questions', (req, res) => {
     return {
       id: i + 1,
       type: q.type,
+      inputType: q.inputType || null,
       category: q.category,
       group: q.group,
       context: q.context || null,

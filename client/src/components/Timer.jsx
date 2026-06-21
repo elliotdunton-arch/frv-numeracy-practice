@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'
 
-export default function Timer({ totalSeconds, onExpire }) {
+export default function Timer({ totalSeconds, onExpire, isPaused }) {
   const [secondsLeft, setSecondsLeft] = useState(totalSeconds)
 
   const expire = useCallback(onExpire, [])
 
   useEffect(() => {
-    if (secondsLeft <= 0) {
-      expire()
+    if (isPaused || secondsLeft <= 0) {
+      if (secondsLeft <= 0) expire()
       return
     }
     const id = setInterval(() => {
@@ -21,7 +21,7 @@ export default function Timer({ totalSeconds, onExpire }) {
       })
     }, 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [isPaused, secondsLeft])
 
   const minutes = Math.floor(secondsLeft / 60)
   const seconds = secondsLeft % 60
@@ -30,8 +30,8 @@ export default function Timer({ totalSeconds, onExpire }) {
   const isWarning = secondsLeft < 300
 
   return (
-    <div className={`timer ${isDanger ? 'timer-danger' : isWarning ? 'timer-warning' : ''}`}>
-      <div className="timer-label">Time Remaining</div>
+    <div className={`timer ${isPaused ? 'timer-paused' : isDanger ? 'timer-danger' : isWarning ? 'timer-warning' : ''}`}>
+      <div className="timer-label">{isPaused ? 'Paused' : 'Time Remaining'}</div>
       <div className="timer-digits">
         {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
       </div>
