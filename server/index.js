@@ -4988,28 +4988,35 @@ function shuffle(arr) {
 }
 
 function shuffleByGroup(qs) {
-  // Build one array-of-questions per group, preserving internal order
+  // Build reverse lookup: group code → TOPIC_GROUPS category name
+  const groupToTopic = {}
+  for (const [topicName, groupCodes] of Object.entries(TOPIC_GROUPS)) {
+    for (const code of groupCodes) groupToTopic[code] = topicName
+  }
+
+  // Build one array-of-questions per group code
   const groupMap = {}
   qs.forEach(q => {
     if (!groupMap[q.group]) groupMap[q.group] = []
     groupMap[q.group].push(q)
   })
-  const groups = Object.values(groupMap)
 
-  // Bucket groups by theme (context title, or group code if no context)
+  // Bucket groups by topic category (TOPIC_GROUPS name when registered,
+  // otherwise fall back to context title — covers literacy articles)
   const themeMap = {}
-  groups.forEach(grp => {
-    const key = grp[0].context?.title ?? grp[0].group
+  Object.entries(groupMap).forEach(([code, grpQs]) => {
+    const key = groupToTopic[code] ?? grpQs[0].context?.title ?? code
     if (!themeMap[key]) themeMap[key] = []
-    themeMap[key].push(grp)
+    themeMap[key].push(grpQs)
   })
 
-  // Shuffle groups within each theme, then shuffle the theme order
+  // Shuffle groups within each topic bucket, then shuffle bucket order
   const themes = Object.values(themeMap)
   themes.forEach(t => shuffle(t))
   shuffle(themes)
 
-  // Round-robin: take one group per theme per round
+  // Round-robin across topic buckets: one group per bucket per round
+  // This ensures a 30-question test cycles through all categories before repeating
   const result = []
   const maxRounds = Math.max(...themes.map(t => t.length))
   for (let round = 0; round < maxRounds; round++) {

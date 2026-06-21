@@ -745,9 +745,13 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                   <ul className="sg-list formula-list">
                     <li><span className="fl-name">Water used</span><span className="fl-formula">Flow rate (L/min) × Duration (min)</span></li>
                     <li><span className="fl-name">Water saved</span><span className="fl-formula">Standard flow usage − Efficient flow usage</span></li>
-                    <li><span className="fl-name">Energy burned</span><span className="fl-formula">Activity rate (kJ/min) × Duration (min)</span></li>
+                    <li><span className="fl-name">kJ burned (hrs)</span><span className="fl-formula">Activity rate (kJ/hr) × Time (hrs)</span></li>
+                    <li><span className="fl-name">Burn time (mins)</span><span className="fl-formula">(Food kJ ÷ Activity rate kJ/hr) × 60</span></li>
+                    <li><span className="fl-name">Burn time (hrs)</span><span className="fl-formula">Food kJ ÷ Activity rate (kJ/hr)</span></li>
+                    <li><span className="fl-name">Food equivalent</span><span className="fl-formula">kJ burned ÷ kJ per food item</span></li>
                     <li><span className="fl-name">Standard drinks</span><span className="fl-formula">Volume (mL) × %ABV × 0.000789</span></li>
                   </ul>
+                  <p className="sg-note">Activity rates are given in kJ/hr (e.g. soccer 2,500 kJ/hr, running 2,200 kJ/hr, walking 1,000 kJ/hr). These are always provided in the question context.</p>
                   <p className="sg-note">Standard drinks: 0.000789 is the ethanol density constant (g/mL ÷ 10g per standard drink).</p>
                 </div>
 
