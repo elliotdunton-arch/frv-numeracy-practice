@@ -303,6 +303,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [categoriesOpen, setCategoriesOpen] = useState(false)
   const [categoryList, setCategoryList] = useState([])
   const [selectedCategories, setSelectedCategories] = useState(new Set())
+  const [strategyOpen, setStrategyOpen] = useState(false)
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
@@ -593,6 +594,64 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             ))}
           </div>
         </div>
+
+        {activeTab === 'literacy' && (
+          <div className="strategy-guide">
+            <button
+              className={`strategy-guide-toggle${strategyOpen ? ' sgt-open' : ''}`}
+              onClick={() => setStrategyOpen(o => !o)}
+            >
+              <span className="tft-icon">{strategyOpen ? '▾' : '▸'}</span>
+              Literacy Strategy Guide
+            </button>
+
+            {strategyOpen && (
+              <div className="strategy-guide-body">
+                <div className="sg-section">
+                  <div className="sg-heading">1. The "Reverse Reading" Method</div>
+                  <ul className="sg-list">
+                    <li>Do not read the article first — it is a waste of time.</li>
+                    <li><strong>Scan the questions first.</strong> Identify keywords (names, dates, specific concepts) so you know exactly what you are hunting for in the text.</li>
+                    <li><strong>Scan the text.</strong> Look for topic sentences and conclusion paragraphs to grasp the main argument quickly.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">2. The "Elimination" Strategy</div>
+                  <ul className="sg-list">
+                    <li><strong>Beware of Extremes.</strong> Be suspicious of answers containing absolute words: <em>always, never, all, none, impossible, perfectly</em>. If an option is an absolute, it is rarely correct unless explicitly supported.</li>
+                    <li><strong>Ignore Outside Knowledge.</strong> Even if you know a topic well, answer only based on the provided text. If it isn't written there, it is not "True" for the purpose of the test.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">3. Categorising Question Types</div>
+                  <ul className="sg-list">
+                    <li><strong>Inference:</strong> The answer is not explicitly stated. Deduce it from tone, metaphors, or adjectives (e.g., "lukewarm silence" = not positive).</li>
+                    <li><strong>Vocabulary in Context:</strong> Use the surrounding sentence. Determine if the word has a positive or negative connotation in that specific context.</li>
+                    <li><strong>Main Purpose:</strong> Ensure the answer summarises the <em>whole</em> text, not just one specific detail or paragraph.</li>
+                    <li><strong>Fact Extraction:</strong> Find the keyword from the question in the text. The answer is almost always in that sentence or the one immediately following.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">4. Time Management — The "60-Second Rule"</div>
+                  <ul className="sg-list">
+                    <li><strong>Don't get stuck.</strong> If a question is taking longer than 60–90 seconds, flag it, make a best guess, and move on.</li>
+                    <li><strong>All points are equal.</strong> A simple question at the end of the test is worth the same as a difficult one in the middle. Do not sacrifice easy points by getting stuck on a "rabbit hole" question.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">5. Review Routine (Post-Practice)</div>
+                  <ul className="sg-list">
+                    <li><strong>Analyse the "Why."</strong> If you get a question wrong, don't just note the correct answer — identify why the distractor was tempting. Was it a "half-truth" (correct in the beginning, wrong in the conclusion)? Did it use a common stereotype?</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="instructions-section">
           <p className="section-label">Before You Begin</p>
