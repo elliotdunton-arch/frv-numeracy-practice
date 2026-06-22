@@ -5242,15 +5242,6 @@ const ctxL13 = {
   ]
 }
 
-const ctxL14 = {
-  title: 'Statutory Construction Advisory — Indemnification Frameworks Under Section 88',
-  subtitle: 'To All Regional Counsel, Claims Adjusters, and Contract Procurement Officers',
-  paragraphs: [
-    'This advisory details the precise statutory interpretation and conditional matrices governing the activation of corporate indemnification protections under Section 88 of the Trans-National Commerce Act. Given the significant fiscal liabilities shifted by these clauses, contract procurement officers must verify specific evidentiary compliance markers before authorising third-party vendor liability waivers during multi-jurisdictional procurement reviews.',
-    '1. Verification Thresholds for a Valid Indemnification Claim: A Section 88 liability waiver is legally valid and binding only if the underlying commercial master agreement establishes that the following three criteria were met simultaneously at the date of the operational loss: (a) the primary operational failure occurred within an officially designated, high-risk industrial transit zone; (b) the third-party vendor was operating under an active, unexpired Operational Safety Certificate (OSC) verified by a municipal transportation board; (c) the localised infrastructure asset damage did not originate from documented gross negligence or wilful equipment mismanagement by the vendor\'s field agents. If any of these three core conditions are left unfulfilled, the entire indemnification waiver is rendered completely void ab initio, and primary fiscal liability reverts fully to the independent vendor.',
-    '2. Enforcement Limitations and Regulatory Cures: Under Subsection 7, if an audit logs a missing or expired OSC for an active on-site vendor, the procurement agency is granted a strict 14-day administrative correction window to compel the vendor to achieve certification compliance. During this 14-day window, all outstanding corporate progress payments are placed on an automated administrative hold. If the vendor fails to submit a verified certificate before the 14-day window expires, the underlying master agreement is subject to immediate structural termination without financial penalty to the procurement agency.'
-  ]
-}
 
 const ctxL17 = {
   title: 'The Algorithmic Panopticon: Attention Economics and the Fragmentation of Hyper-Localised Discourse',
@@ -6057,62 +6048,6 @@ const literacyQuestions = [
     ],
     answer: 'False,False,True',
     method: 'A — Unencrypted transaction records are Tier A and must be moved to an air-gapped cryptographic repository within 12 hours. Storing them on an open cluster for 36 hours violates this rule. Non-compliant. B — The containment sequence locks out independent remote access and requires "a Tier 1 security engineer executes a physical manual override at the regional server deck." Remote home reset is not permitted. Non-compliant. C — "Upon reaching this limit, the system clears the records unless an active compliance audit hold has been manually logged." Without a hold, deletion at 90 days is correct protocol. Compliant.'
-  },
-
-  // ── Set 5 (new batch): Section 88 / Legal Advisory ─────────────────────────
-  { group: 'L14', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL14,
-    question: 'What is the primary legal focus of this statutory advisory?',
-    options: [
-      'A) To permanently dissolve the Trans-National Commerce Act in favour of localised municipal codes.',
-      'B) To clarify the explicit verification thresholds and enforcement limitations governing Section 88 indemnification waivers.',
-      'C) To advertise a new training program for third-party commercial transport drivers.',
-      'D) To outline the corporate insurance premiums required for commercial office buildings.'
-    ],
-    answer: 'B) To clarify the explicit verification thresholds and enforcement limitations governing Section 88 indemnification waivers.',
-    method: 'The advisory opens by stating it details "the precise statutory interpretation and conditional matrices governing the activation of corporate indemnification protections under Section 88." It defines three validity conditions, the 14-day correction window, and the void ab initio consequence. Dissolving the act, driver training, and insurance premiums are not discussed.'
-  },
-  { group: 'L14', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL14,
-    question: 'What happens to outstanding corporate progress payments while a vendor is within the 14-day administrative correction window for an expired OSC?',
-    options: [
-      'A) They are permanently forfeited and redirected to municipal infrastructure funds.',
-      'B) They are automatically doubled to help the vendor expedite their certification costs.',
-      'C) They are placed on an automated administrative hold.',
-      'D) They are paid out immediately to avoid contract termination disputes.'
-    ],
-    answer: 'C) They are placed on an automated administrative hold.',
-    method: 'Subsection 7 states: "During this 14-day window, all outstanding corporate progress payments are placed on an automated administrative hold." They are neither forfeited, doubled, nor immediately released.'
-  },
-  { group: 'L14', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL14,
-    question: 'Under Section 88 rules, what is the legal consequence if an enforcing agency discovers that a vendor\'s asset damage resulted from documented gross negligence?',
-    options: [
-      'A) The contract is extended for an additional 14 days to allow for structural repairs.',
-      'B) The indemnification waiver becomes completely void from the beginning, shifting liability back to the vendor.',
-      'C) The procurement agency must pay all civil fines on behalf of the third-party vendor.',
-      'D) The case is referred to an independent corporate arbitrator within 30 seconds.'
-    ],
-    answer: 'B) The indemnification waiver becomes completely void from the beginning, shifting liability back to the vendor.',
-    method: 'Gross negligence by vendor field agents violates the third validity condition. When any of the three conditions are unmet, "the entire indemnification waiver is rendered completely void ab initio, and primary fiscal liability reverts fully to the independent vendor." The agency does not absorb the fines.'
-  },
-  { group: 'L14', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL14,
-    question: 'Why does the advisory state that the burden of proof rests on procurement officers to verify vendor certification markers?',
-    options: [
-      'A) To prevent the procurement agency from absorbing massive fiscal liabilities caused by non-compliant third-party vendors.',
-      'B) To ensure that all third-party field agents are paid higher hourly operational wages.',
-      'C) To fast-track the deployment of high-risk industrial transit zones in metropolitan residential areas.',
-      'D) To bypass the 14-day administrative correction window entirely during quarterly audits.'
-    ],
-    answer: 'A) To prevent the procurement agency from absorbing massive fiscal liabilities caused by non-compliant third-party vendors.',
-    method: 'If a waiver is voided due to unverified or unmet conditions, fiscal liability reverts to the vendor — but only if the procurement agency has done its due diligence. Failing to verify beforehand could expose the agency to disputed liability. Proactive verification protects the agency from absorbing costs caused by non-compliant vendors.'
-  },
-  { group: 'L14', type: 'true_false_matrix', category: 'Legal Advisory', context: ctxL14,
-    question: 'Evaluate the truth of the following statements:',
-    options: [
-      'A liability waiver remains valid even if the vendor\'s field agents are proven to have engaged in wilful equipment mismanagement.',
-      'If a vendor fails to produce a valid Operational Safety Certificate after the 14-day window closes, the contract can be terminated without penalty.',
-      'The phrase void ab initio means that a contract waiver remains partially enforceable until a judge formally reviews the case data.'
-    ],
-    answer: 'False,True,False',
-    method: 'A — Wilful equipment mismanagement violates condition three. When this occurs, "the entire indemnification waiver is rendered completely void ab initio." The waiver does not remain valid. False. B — "If the vendor fails to submit a verified certificate before the 14-day window expires, the underlying master agreement is subject to immediate structural termination without financial penalty to the procurement agency." True. C — "Void ab initio" means void from the very beginning — the waiver is treated as if it never legally existed. It is not partially enforceable pending judicial review. False.'
   },
 
   // ── Set 8 (new batch): Algorithmic Panopticon / Media Studies ──────────────
@@ -7440,14 +7375,34 @@ app.get('/api/literacy-topics', (req, res) => {
 
 app.get('/api/literacy-questions', (req, res) => {
   const { count, categories } = req.query
+  const TARGET = count ? parseInt(count) : 30
   let pool = literacyQuestions
   if (categories) {
     const cats = new Set(categories.split(',').map(c => c.trim()))
     pool = literacyQuestions.filter(q => cats.has(q.category))
+  } else {
+    // General test: exclude groups with only 1 question so every body of text
+    // has multiple questions associated with it
+    const groupSizes = {}
+    literacyQuestions.forEach(q => { groupSizes[q.group] = (groupSizes[q.group] || 0) + 1 })
+    pool = literacyQuestions.filter(q => groupSizes[q.group] >= 2)
   }
   const shuffled = shuffleByGroup(pool)
-  const final = shuffled.map((q, i) => ({
-    id: i + 1,
+
+  // Take complete groups — never cut mid-group
+  const taken = []
+  let i = 0
+  while (i < shuffled.length) {
+    const grp = shuffled[i].group
+    let j = i
+    while (j < shuffled.length && shuffled[j].group === grp) j++
+    taken.push(...shuffled.slice(i, j))
+    i = j
+    if (taken.length >= TARGET) break
+  }
+
+  const final = taken.map((q, idx) => ({
+    id: idx + 1,
     type: q.type,
     category: q.category,
     group: q.group,
@@ -7459,8 +7414,7 @@ app.get('/api/literacy-questions', (req, res) => {
     unit: null,
     matrixLabels: q.matrixLabels || null
   }))
-  const customCount = count ? parseInt(count) : null
-  res.json(customCount ? final.slice(0, customCount) : final)
+  res.json(final)
 })
 
 const abstractQuestions = [

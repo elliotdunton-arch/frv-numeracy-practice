@@ -29,7 +29,8 @@ export default function App() {
       const res = await fetch(endpoint)
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
-      const selected = data.slice(0, customCount ?? 30)
+      // Literacy: server already returns complete groups (no mid-group cuts), use as-is
+      const selected = section === 'literacy' ? data : data.slice(0, customCount ?? 30)
       setQuestions(selected)
       setTotalTime(selected.length * 70)
       setAnswers({})
