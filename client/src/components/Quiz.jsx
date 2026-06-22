@@ -60,9 +60,9 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
     if (q.type === 'true_false_matrix') {
       if (!v) return false
       const parts = v.split(',')
-      const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
+      const labels = new Set(q.matrixLabels || ['True', 'False'])
       const expectedLength = (q.options || []).length
-      return parts.length === expectedLength && parts.every(p => p === lbl1 || p === lbl2)
+      return parts.length === expectedLength && parts.every(p => labels.has(p))
     }
     if (q.inputType === 'time_hm') {
       if (!v) return false
@@ -101,24 +101,23 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       )
     }
     if (q.type === 'true_false_matrix') {
+      const labels = q.matrixLabels || ['True', 'False']
       return (
         <div className="tfm-rows">
           {(q.options || []).map((stmt, i) => {
-            const parts = (answers[q.id] || ',,').split(',')
-            const sel = parts[i]
-            const [lbl1, lbl2] = q.matrixLabels || ['True', 'False']
+            const parts = (answers[q.id] || '').split(',')
+            const sel = parts[i] || ''
             return (
               <div key={i} className="tfm-row">
                 <span className="tfm-stmt">{stmt}</span>
                 <div className="tfm-btns">
-                  <button
-                    className={`tfm-btn${sel === lbl1 ? ' tfm-true' : ''}`}
-                    onClick={() => handleMatrixToggle(q.id, i, lbl1)}
-                  >{lbl1}</button>
-                  <button
-                    className={`tfm-btn${sel === lbl2 ? ' tfm-false' : ''}`}
-                    onClick={() => handleMatrixToggle(q.id, i, lbl2)}
-                  >{lbl2}</button>
+                  {labels.map(lbl => (
+                    <button
+                      key={lbl}
+                      className={`tfm-btn${sel === lbl ? ' tfm-true' : ''}`}
+                      onClick={() => handleMatrixToggle(q.id, i, lbl)}
+                    >{lbl}</button>
+                  ))}
                 </div>
               </div>
             )

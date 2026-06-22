@@ -5627,6 +5627,11 @@ const ctxL53 = {
   image: '/images/literacy/Literacy 01.png',
 }
 
+const ctxL54 = {
+  title: 'News Article — Processed Meat and Cancer Risk',
+  image: '/images/literacy/Literacy 02.png',
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -7229,6 +7234,64 @@ const literacyQuestions = [
     ],
     answer: 'B) Local residents.',
     method: "The phrase 'our suburb' establishes a shared connection with people living in the immediate area. The goal of the poster is to mobilise these residents to take action. Truck drivers, government officials and MetroCorp managers would not identify with 'our suburb' in this context."
+  },
+
+  // ── Set L54: News Article — Processed Meat and Cancer ─────────────────────
+  { group: 'L54', type: 'true_false_matrix', category: 'News Article', context: ctxL54,
+    matrixLabels: ['Yes', 'No', 'Not stated'],
+    question: 'Are the following statements Yes, No or Not stated based on the article?',
+    options: [
+      'Eating 50 grams of ham every day can make you 18% more likely to get cancer.',
+      'The way that processed meat is cooked is a factor in how likely it is to cause cancer.',
+      'Eating red meat definitely causes cancer.',
+      'Over 30,000 people die every year from cancer linked to eating high levels of processed meat.',
+    ],
+    answer: 'Yes,Not stated,No,Yes',
+    method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Not stated: The article discusses types of meat and amounts consumed, but says nothing about cooking methods as a factor.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
+  },
+  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+    question: 'Which sentence best describes the information presented in the article?',
+    options: [
+      'A) Eating processed meat causes cancer in the same way as smoking cigarettes.',
+      'B) There is a small chance of developing cancer from eating processed meat that increases if more meat is eaten.',
+      'C) Red meat and processed meat are equally likely to cause colorectal cancer.',
+      'D) Eating any amount of processed meat daily significantly increases your cancer risk.',
+    ],
+    answer: 'B) There is a small chance of developing cancer from eating processed meat that increases if more meat is eaten.',
+    method: "This aligns with Kurt Straif's quote: while the risk of developing colorectal cancer from eating processed meat is small, 'this risk increases with the amount of meat consumed.' Options A and D overstate the risk. Option C is not supported — the article treats red and processed meat differently."
+  },
+  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+    question: 'The news report uses quotes. Which of the following is NOT a reason why quotes were included in this news report?',
+    options: [
+      'A) To provide evidence from expert sources.',
+      'B) To back up the opinion of the writer.',
+      'C) To present differing perspectives from different groups.',
+      'D) To give authority to the claims made in the article.',
+    ],
+    answer: 'B) To back up the opinion of the writer.',
+    method: "A news report should remain objective — the writer's personal opinion should not feature. Quotes from the WHO provide expert evidence (A and D), and quotes from the Meat Industry Council present a contrasting perspective (C). Backing up the writer's own opinion is not a valid journalistic use of quotes and would compromise the report's objectivity."
+  },
+  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+    question: 'On which topic do WHO experts and the Meat Industry Council disagree?',
+    options: [
+      'A) Whether processed meat should be banned.',
+      'B) Whether red meat can cause cancer.',
+      'C) Whether processed meat is more dangerous than cigarettes.',
+      'D) Whether red meat has any nutritional value.',
+    ],
+    answer: 'B) Whether red meat can cause cancer.',
+    method: "The article explicitly highlights this conflict: WHO says red meat is 'likely to cause the disease,' while the Meat Industry Council states 'there is no causal link between red meat and cancer.' The other options are not debated between the two parties in the article."
+  },
+  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+    question: 'If the risk of developing colorectal cancer from eating processed meat is small, what is the importance of the study?',
+    options: [
+      'A) The risk of colorectal cancer from processed meat is higher than previously thought.',
+      'B) Processed meat is now classified as equally dangerous as smoking and alcohol.',
+      'C) A large number of people in the world who eat processed meat are affected.',
+      'D) The study proves that all processed meat should be removed from supermarkets.',
+    ],
+    answer: 'C) A large number of people in the world who eat processed meat are affected.',
+    method: "The article addresses this directly: 'Given the large number of people around the world that eat processed meat,' Straif said the 'global impact on cancer incidence is of public health importance.' Even a small individual risk becomes significant when multiplied across billions of people. Options A, B and D are not supported by the article."
   },
 ]
 
