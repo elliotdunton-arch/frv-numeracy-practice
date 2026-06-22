@@ -5632,6 +5632,11 @@ const ctxL54 = {
   image: '/images/literacy/Literacy 02.png',
 }
 
+const ctxL55 = {
+  title: 'Email — Bilvington Bushfire Preparedness',
+  image: '/images/literacy/Literacy 03.png',
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -7292,6 +7297,62 @@ const literacyQuestions = [
     ],
     answer: 'C) A large number of people in the world who eat processed meat are affected.',
     method: "The article addresses this directly: 'Given the large number of people around the world that eat processed meat,' Straif said the 'global impact on cancer incidence is of public health importance.' Even a small individual risk becomes significant when multiplied across billions of people. Options A, B and D are not supported by the article."
+  },
+  // ── Set L55: Email — Bilvington Bushfire Preparedness ────────────────────
+  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+    question: 'What is the purpose of this email?',
+    options: [
+      'A) To inform people about the risks of bushfires.',
+      'B) To inform people about what to do in case of a bushfire.',
+      'C) To tell people when to evacuate their homes during a bushfire.',
+      'D) To encourage people to prepare their properties against bushfires.'
+    ],
+    answer: 'D) To encourage people to prepare their properties against bushfires.',
+    method: "The email is a call to action urging residents to prepare their properties before fire season. It does not simply inform about risks (A) or general bushfire procedures (B), and it does not tell people when to evacuate (C). The emphasis throughout is on preparation steps residents should take now."
+  },
+  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+    question: 'According to the email, why is it important for people in Bilvington to act now?',
+    options: [
+      'A) Lawns grow faster at this time of the year.',
+      'B) The time of the year when bushfires occur is approaching.',
+      'C) There have been a number of bushfires in the area recently.',
+      'D) Peoples\' gardens may be overgrown at this time of the year.'
+    ],
+    answer: 'B) The time of the year when bushfires occur is approaching.',
+    method: "The email refers to the coming fire season, indicating that bushfire season is approaching and action must be taken beforehand. There is no mention of recent fires in the area (C), and while lawn maintenance is recommended, the urgency is driven by the season — not growth rates (A) or garden condition (D)."
+  },
+  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+    question: 'Why is it particularly important for Bilvington residents to follow the advice in the email?',
+    options: [
+      'A) The town has thick vegetation around it.',
+      'B) The town is hard for fire crews to access.',
+      'C) There have been a large number of bushfires near the town.',
+      'D) Most houses in the town are surrounded by flammable materials.'
+    ],
+    answer: 'A) The town has thick vegetation around it.',
+    method: "The email states that Bilvington is surrounded by dense bushland, making the vegetation around the town the key risk factor that makes preparation especially important. The email does not mention access difficulties for fire crews (B), recent fires (C), or a general problem with flammable materials around houses (D)."
+  },
+  { group: 'L55', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following actions does the email encourage people to carry out?',
+    options: [
+      'Regularly cut grass surrounding the house.',
+      'Ensure there is a hose close to the property.',
+      'Ensure that petrol is not stored near the house.',
+    ],
+    answer: 'Yes,No,Yes',
+    method: "Regularly cut grass — Yes: the email advises keeping grass mown short around the property.\nEnsure a hose nearby — No: having a hose close to the property is not mentioned as a specific action in the email.\nStore petrol away from house — Yes: the email advises storing flammable liquids (such as petrol) in a shed away from the house."
+  },
+  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+    question: "When referring to mature trees, what does the email mean by 'strategically placed'?",
+    options: [
+      'A) Only old trees kept.',
+      'B) Planted far away from the property.',
+      'C) Planted in a position that will help protect the property.',
+      'D) Maintained so that there are no overhanging branches.'
+    ],
+    answer: 'C) Planted in a position that will help protect the property.',
+    method: "'Strategically' means positioned intentionally to achieve a specific purpose. The email explains that mature trees can provide shelter and act as a firebreak when correctly positioned relative to the property. Option B is too simple — distance alone is not the point. Options A and D relate to maintenance, not positioning for protection."
   },
 ]
 
