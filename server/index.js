@@ -5691,48 +5691,48 @@ const ctxL56 = {
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
-    question: 'What is the primary focus of this newsletter feature?',
+    question: "The newsletter describes the DFA framework as 'explicitly designed to maximize space efficiency while managing utility overheads.' What does this framing imply about the company's primary motivation?",
     options: [
-      'A) To announce financial performance updates for global logistics operations.',
-      'B) To detail the operational tiers and mandatory workplace guidelines of the new Dynamic Floor Allocation framework.',
-      'C) To provide a maintenance manual for technicians servicing high-speed office elevators.',
-      'D) To outline the interview process for incoming facilities management staff.'
+      "A) Employee wellbeing is the central priority, with space efficiency a secondary consideration.",
+      "B) The framework is a cost-management tool disguised as a workplace convenience measure.",
+      "C) The company is responding to employee complaints about desk shortages on peak attendance days.",
+      "D) The framework was developed to satisfy external environmental compliance requirements."
     ],
-    answer: 'B) To detail the operational tiers and mandatory workplace guidelines of the new Dynamic Floor Allocation framework.',
-    method: 'The entire newsletter section introduces the DFA framework and explains its three operational tiers. Financial performance, elevator maintenance, and recruitment are not mentioned anywhere in the text.'
+    answer: "B) The framework is a cost-management tool disguised as a workplace convenience measure.",
+    method: "The newsletter explicitly frames the DFA framework around 'space efficiency' and 'managing utility overheads' — both financial and operational efficiency goals. While avoiding desk shortages is mentioned, it is subordinate to those goals. Option A is contradicted by the cost-focused language; Option C misreads 'desk shortages' as the motivation rather than as a problem the efficiency goal also happens to solve; Option D is not supported — no compliance framework is mentioned."
   },
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
-    question: 'What building occupancy range automatically triggers a Tier 2 Collaborative Influx configuration?',
+    question: "A regional office hosts a multi-department quarterly review when building occupancy is 45%. Which tier applies, and why?",
     options: [
-      'A) Daily occupancy strictly below 55%',
-      'B) Daily occupancy falling between 55% and 80%',
-      'C) Daily occupancy exceeding 80%',
-      'D) Occupancy measured exactly at 15%'
+      "A) Tier 1, because occupancy is below the 55% threshold and no other trigger applies.",
+      "B) Tier 2, because hosting a multi-department quarterly review is itself a Tier 2 trigger regardless of occupancy.",
+      "C) Tier 3, because multi-department events always override the standard occupancy thresholds.",
+      "D) Tier 1, because the quarterly review does not affect the desk-booking portal refresh cycle."
     ],
-    answer: 'B) Daily occupancy falling between 55% and 80%',
-    method: 'Tier 2 is "triggered immediately when daily occupancy tracking spikes between 55% and 80%". Below 55% is Tier 1; above 80% is Tier 3. 15% refers to server bandwidth, not occupancy.'
+    answer: "B) Tier 2, because hosting a multi-department quarterly review is itself a Tier 2 trigger regardless of occupancy.",
+    method: "Tier 2 is triggered 'when daily occupancy tracking spikes between 55% and 80%, OR if a regional office hosts a multi-department quarterly review session.' The OR means either condition alone is sufficient — 45% occupancy satisfies Tier 1 on its own, but the quarterly review event independently activates Tier 2. Option A ignores the second trigger. Option C overstates the effect. Option D conflates the desk-booking rule (a Tier 1 feature) with the tier selection logic."
   },
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
-    question: 'Why does the company restrict service paths to outbound traffic only during peak arrival hours under Tier 2?',
+    question: "Under Tier 2, staff are 'strongly encouraged' to use breakrooms rather than booking enclosed meeting rooms for impromptu syncs. What does the word 'strongly encouraged' — rather than 'required' — reveal about this rule?",
     options: [
-      'A) To reduce printing and electricity costs across localised utility stations.',
-      'B) To mitigate potential human traffic congestion and elevator gridlock during peak times.',
-      'C) To encourage staff members to leave the office earlier in the day.',
-      'D) To ensure that regional server bandwidth remains within a 15% safety margin.'
+      "A) The rule is merely a suggestion and carries no consequence for staff who book meeting rooms regardless.",
+      "B) The company prefers behavioural compliance over enforcement because imposing a hard ban would conflict with employment agreements.",
+      "C) It is a preference, not a mandate, implying staff retain the right to book meeting rooms but are expected to exercise judgement.",
+      "D) The policy applies only to junior staff; senior employees are exempt from the breakroom preference under Tier 2."
     ],
-    answer: 'B) To mitigate potential human traffic congestion and elevator gridlock during peak times.',
-    method: 'The text states paths are restricted to outbound traffic "to minimise elevator gridlock". The measure is about managing pedestrian flow during the busy morning arrival window, not costs or server metrics.'
+    answer: "C) It is a preference, not a mandate, implying staff retain the right to book meeting rooms but are expected to exercise judgement.",
+    method: "The newsletter distinguishes between rules that are 'strictly enforced' or use mandatory language (Tier 3 meeting room restrictions, corridor door rules) and those expressed as encouragement (Tier 2 breakroom preference). 'Strongly encouraged' is softer than 'required' or 'mandated,' indicating staff are expected to comply through professional judgement, not binding rule. Option A overstates the permissiveness; Option B speculates about employment law with no textual support; Option D is not mentioned in the text."
   },
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
-    question: 'Under what specific technical condition will independent desk-booking features be locked out in favour of team pooling?',
+    question: "Which of the following conclusions is most strongly supported by the way the three DFA tiers are structured?",
     options: [
-      'A) If building energy-saver modes are manually deactivated by an employee.',
-      'B) If a multi-department review session is scheduled more than 24 hours in advance.',
-      'C) If localised network metrics show that regional server bandwidth drops below a 15% safety margin.',
-      'D) If corridor doors are left propped open for exactly 15 minutes.'
+      "A) The framework treats all occupancy conditions as equally disruptive and applies the same core restrictions at every tier.",
+      "B) The framework escalates restrictions incrementally, with each tier adding constraints that the previous tier does not impose.",
+      "C) Tier 3 is the standard operating mode, with Tiers 1 and 2 representing temporary exceptions during low-attendance periods.",
+      "D) The framework was primarily designed to restrict elevator use, with desk-booking and meeting room rules added as secondary measures."
     ],
-    answer: 'C) If localised network metrics show that regional server bandwidth drops below a 15% safety margin.',
-    method: 'Tier 3 (which locks out desk-booking) is triggered when occupancy exceeds 80% OR "localised network metrics indicate that regional server bandwidth drops below a 15% safety margin". Option C matches this technical condition exactly.'
+    answer: "B) The framework escalates restrictions incrementally, with each tier adding constraints that the previous tier does not impose.",
+    method: "Tier 1 imposes only standard hot-desking rules. Tier 2 adds restricted service paths and breakroom preferences. Tier 3 adds meeting room restrictions, desk-booking lockout, and corridor door rules — each tier layering additional constraints onto those below it. Option A is directly contradicted by the tiered escalation. Option C inverts the framework's logic; Tier 1 is the baseline. Option D misidentifies elevator gridlock as the framework's primary purpose — it is one concern among several."
   },
   { group: 'L4', type: 'true_false_matrix', category: 'Workplace Policy', context: ctxL4,
     matrixLabels: ['Yes', 'No'],
@@ -5748,48 +5748,48 @@ const literacyQuestions = [
 
   // ── Set 5: Urban Canvas / Footpaths Op-Ed ──────────────────────────────────
   { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
-    question: 'What is the primary argument the author is presenting in this article?',
+    question: "The author compares pedestrian traffic to 'fluid dynamics' and says that 'when you constrict a channel, the pressure builds.' What is the author's purpose in using this analogy?",
     options: [
-      'A) To advocate for higher leasing fees to increase municipal council revenues.',
-      'B) To argue that commercial encroachment is ruining footpaths as public assets and demand strict regulatory limits.',
-      'C) To provide a historical review of how metropolitan high streets were originally constructed.',
-      'D) To promote the use of dockless electric scooters as a sustainable urban transit solution.'
+      "A) To suggest that city planners should consult engineers rather than urban designers when redesigning footpaths.",
+      "B) To make an abstract safety claim feel concrete and inevitable, implying that overcrowded footpaths cause harm by physical law.",
+      "C) To acknowledge that commercial encroachment is a natural process that cities cannot reasonably be expected to resist.",
+      "D) To compare the speed at which pedestrians walk to the flow rate of liquids in a pipe."
     ],
-    answer: 'B) To argue that commercial encroachment is ruining footpaths as public assets and demand strict regulatory limits.',
-    method: 'The author, Julian Vance, uses persuasive language throughout to argue that commercial dining, signage and scooters are degrading public footpaths. He then proposes strict regulations (two-metre ribbon, fines, scooter tracking data requirements) to fix this. The article is not about leasing revenues, history, or promoting scooters.'
+    answer: "B) To make an abstract safety claim feel concrete and inevitable, implying that overcrowded footpaths cause harm by physical law.",
+    method: "By invoking fluid dynamics — a precise, scientific domain — the author frames footpath congestion not as a policy debate but as an unavoidable physical consequence of constricting a channel. This rhetorical move makes his safety argument feel like established science rather than opinion. Option A misreads the analogy as a literal recommendation. Option C inverts the author's position; the analogy supports intervention, not acceptance. Option D is a literal misreading of a figurative comparison."
   },
   { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
-    question: 'According to the article, what happens to pedestrian walking speeds on high streets where outdoor dining consumes more than 40% of the pavement?',
+    question: "The author states that outdoor dining decks consuming more than 40% of usable pavement cause walking speeds to 'drop by half' and force vulnerable users onto 'narrow ribbons of asphalt.' What does the author imply about local councils that celebrate this commercialisation?",
     options: [
-      'A) Walking speeds increase due to a vibrant city atmosphere.',
-      'B) Walking speeds drop by half.',
-      'C) Walking speeds remain entirely unaffected.',
-      'D) Walking speeds adapt dynamically over a 24-hour period.'
+      "A) That councils are unaware of the safety data because it has not been published in public planning documents.",
+      "B) That councils are prioritising an economic narrative over documented evidence of physical harm to their most vulnerable residents.",
+      "C) That councils are correct to celebrate it, since the data only concerns collision rates, not walking speeds.",
+      "D) That councils have outsourced footpath decisions to private dining operators who set their own space allocation rules."
     ],
-    answer: 'B) Walking speeds drop by half.',
-    method: 'The article states directly: "On streets where outdoor dining decks consume more than 40% of the usable pavement, pedestrian walking speeds drop by half." This is a specific factual claim used to support the author\'s argument.'
+    answer: "B) That councils are prioritising an economic narrative over documented evidence of physical harm to their most vulnerable residents.",
+    method: "The author presents the safety data (halved walking speeds, displacement of pram users and mobility-aid users) immediately after noting that councils 'celebrate this commercialisation as a sign of a vibrant city economy.' The juxtaposition implies councils are knowingly choosing economic framing over safety evidence. Option A is contradicted — the author presents the data as available; ignorance is not the implied problem. Option C misconstrues the article's evidence. Option D is speculation not supported by the text."
   },
   { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
-    question: "What specific measure does the author propose to deal with businesses that block the proposed two-metre clear transit ribbon?",
+    question: "The author proposes that councils should stop leasing kerbside space to scooter operators unless they provide 'real-time, geofenced tracking data to municipal databases.' What does this condition suggest about the author's broader view of the relationship between private operators and public space?",
     options: [
-      'A) Leasing additional kerbside space to them at discounted commercial rates.',
-      'B) Mandatory relocation of their dining decks to secondary service lanes.',
-      'C) Issuing an immediate, non-negotiable compliance fine within 24 hours of documentation.',
-      'D) Requiring the business owners to submit real-time geofenced tracking data.'
+      "A) Private operators should be banned from all public spaces until new legislation is passed.",
+      "B) Private use of public space is acceptable only when operators demonstrate accountability to the public institutions that govern it.",
+      "C) The council should own and operate all scooter fleets directly to eliminate the need for private contracts.",
+      "D) Geofenced tracking is more important than the two-metre ribbon because scooters cause more harm than dining decks."
     ],
-    answer: 'C) Issuing an immediate, non-negotiable compliance fine within 24 hours of documentation.',
-    method: 'The author specifically states: "If a business violates this clear path, local enforcement should issue an immediate, non-negotiable compliance fine within 24 hours of documentation." Geofenced tracking applies to scooter operators, not dining businesses.'
+    answer: "B) Private use of public space is acceptable only when operators demonstrate accountability to the public institutions that govern it.",
+    method: "The author's condition — real-time tracking data as the price of kerbside access — implies a transactional accountability model: private operators may use public space, but only if they surrender information that lets councils manage it. He is not proposing a ban (Option A) or public ownership (Option C). Option D is a ranking not made in the text; the author treats both as serious problems requiring different remedies."
   },
   { group: 'L5', type: 'multiple_choice', category: 'Opinion Article', context: ctxL5,
-    question: "Why does the author use the phrase 'the right to walk without a receipt'?",
+    question: "Which of the following statements from the article represents the author's opinion rather than a cited fact?",
     options: [
-      'A) To complain about the rising costs of printing physical paper receipts in shops.',
-      'B) To emphasise that public walking spaces should be free and accessible, rather than taken over by businesses requiring purchases.',
-      'C) To suggest that pedestrians should be paid by the council for walking on metropolitan high streets.',
-      'D) To highlight the need for automated digital banking portals in urban transit corridors.'
+      "A) 'On streets where outdoor dining decks consume more than 40% of the usable pavement, pedestrian walking speeds drop by half.'",
+      "B) 'Local councils celebrate this commercialisation as a sign of a vibrant city economy.'",
+      "C) 'The private sector has treated the public commons as free storage space for far too long.'",
+      "D) 'A mandatory two-metre clear transit ribbon must be legally preserved on all high-street footpaths.'"
     ],
-    answer: 'B) To emphasise that public walking spaces should be free and accessible, rather than taken over by businesses requiring purchases.',
-    method: 'The phrase is figurative. A "receipt" is a symbol of a commercial transaction. The author is arguing that public footpaths — as democratic, shared assets — should not require people to be customers of nearby businesses in order to use them freely.'
+    answer: "C) 'The private sector has treated the public commons as free storage space for far too long.'",
+    method: "Option C is a value judgement — 'for far too long' is an evaluative phrase that cannot be objectively verified from the text. It expresses the author's moral position, not a measured finding. Option A is presented as an empirical claim (a specific statistic). Option B describes councils' stated position, not the author's opinion. Option D is a policy proposal — it is the author's recommendation, but framed as a regulatory prescription rather than a subjective judgement about past behaviour."
   },
   { group: 'L5', type: 'true_false_matrix', category: 'Opinion Article', context: ctxL5,
     matrixLabels: ['Yes', 'No'],
@@ -5805,48 +5805,48 @@ const literacyQuestions = [
 
   // ── Set 6: Broken Valve / Investigative Report ─────────────────────────────
   { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
-    question: 'What is the primary investigative goal of this news report?',
+    question: "The report describes compliance teams 'shuffling damaged assets between different zones, effectively resetting the audit countdown clocks.' What does this practice reveal about the current 14-day regulatory window?",
     options: [
-      'A) To advertise the efficiency of modern digital Building Management Systems.',
-      'B) To expose technical vulnerabilities and regulatory gaps in automated fuel transfer hubs.',
-      'C) To provide a step-by-step guide for technicians operating manual cutoff switches.',
-      'D) To lobby for the permanent closure of all western distribution corridors.'
+      "A) The 14-day window was designed too short, leaving agencies no time to complete genuine repairs before penalties apply.",
+      "B) The regulatory window can be manipulated as an indefinite deferral mechanism, meaning some faulty valves may never actually be repaired.",
+      "C) The practice is legal under current guidelines but the report recommends it be penalised under a proposed new framework.",
+      "D) Operating agencies shuffle assets because different zones have different technical standards that require different valve models."
     ],
-    answer: 'B) To expose technical vulnerabilities and regulatory gaps in automated fuel transfer hubs.',
-    method: 'The report\'s three-month investigation reveals that legacy valves fail to respond to digital BMS signals, and that operating agencies exploit the 14-day compliance window to avoid repairs. Both the technical flaw and the regulatory loophole are exposed — making B the correct primary purpose.'
+    answer: "B) The regulatory window can be manipulated as an indefinite deferral mechanism, meaning some faulty valves may never actually be repaired.",
+    method: "By moving a damaged asset to a new zone, its audit clock resets — the agency can keep doing this indefinitely, never completing repairs while technically remaining within each individual 14-day window. This is not described as legal or recommended (Option C); the report frames it as an exploit. Option A misidentifies the problem as time pressure rather than the loophole itself. Option D introduces a technical explanation not found in the report."
   },
   { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
-    question: 'Within how many seconds is the automated system supposed to execute a pipeline shutdown sequence after a sensor registers a breach?',
+    question: "When legacy valves fail to respond to the BMS shutdown signal, what does the report say actually happens in the interval before a field technician intervenes?",
     options: [
-      'A) 14 seconds',
-      'B) 30 seconds',
-      'C) 45 seconds',
-      'D) 90 seconds'
+      "A) The BMS automatically reroutes the fluid to a secondary containment pipeline to prevent open-air exposure.",
+      "B) The compromised pipeline continues pumping volatile fluids into open-air containment basins until a technician manually triggers a cutoff.",
+      "C) An alert is sent to the nearest regulatory authority, which dispatches an inspector within 14 days.",
+      "D) The system enters a safe-hold mode, halting all fluid transfer across the network until the fault is cleared."
     ],
-    answer: 'C) 45 seconds',
-    method: 'The manual states the system "is supposed to execute an automated shutdown sequence concurrently within 45 seconds to isolate the compromised pipeline". 14 refers to the regulatory window (days), 30 refers to the percentage of failing valves, not a time value.'
+    answer: "B) The compromised pipeline continues pumping volatile fluids into open-air containment basins until a technician manually triggers a cutoff.",
+    method: "The report states that when legacy valves fail to respond, 'volatile fluids continue pumping into open-air containment basins, relying entirely on field technicians to manually spot the failure and trigger physical cutoff switches.' There is no automatic rerouting (A), no safe-hold mode (D), and regulatory notification is described as a post-event compliance process, not an immediate safety response (C)."
   },
   { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
-    question: 'According to the report, how are operating agencies exploiting the current regulatory framework to avoid civil penalties?',
+    question: "The report notes that over 30% of legacy valves fail to respond to the digital BMS command signal. What is the most significant implication of this failure rate for the safety of these hubs?",
     options: [
-      'A) By upgrading all legacy valves to high-efficiency automated models within 24 hours.',
-      'B) By utilising the 14-day window to move damaged assets between zones, resetting the audit clocks without fixing the issue.',
-      'C) By routing all automated communications through open civilian mobile phone networks.',
-      'D) By permanently shutting down the digital building management loops during audits.'
+      "A) The automated shutdown system provides no reliable safety margin when legacy hardware is integrated into it.",
+      "B) The failure rate means field technicians must be stationed permanently inside each transfer hub to monitor valve performance.",
+      "C) Replacing 30% of valves would bring the network into full compliance without any need to reform the regulatory framework.",
+      "D) The failure rate is acceptable because open-air containment basins are engineered to hold volatile fluids indefinitely."
     ],
-    answer: 'B) By utilising the 14-day window to move damaged assets between zones, resetting the audit clocks without fixing the issue.',
-    method: 'The report explicitly states compliance teams are "using these 14-day windows to shuffle damaged assets between different zones, effectively resetting the audit countdown clocks without completing repairs." This exploits the grace period without any genuine remediation.'
+    answer: "A) The automated shutdown system provides no reliable safety margin when legacy hardware is integrated into it.",
+    method: "When nearly a third of valves fail to respond to the digital command, the automated shutdown — designed to isolate a breach within 45 seconds — becomes unreliable as a safety system. The network falls back on manual human intervention, which is slower and less consistent. Option B is not stated in the report. Option C ignores the regulatory exploitation problem the report documents. Option D contradicts the article's warning about vapour leaks and environmental risk."
   },
   { group: 'L6', type: 'multiple_choice', category: 'Investigative Report', context: ctxL6,
-    question: 'What danger do environmental scientists associate with volatile petroleum compounds sitting long-term in open containment basins?',
+    question: "Environmental scientists warn of a specific timing sequence of harm when petroleum compounds sit in open containment basins. Which conclusion about that sequence is most strongly supported by the report?",
     options: [
-      'A) They can trigger an instantaneous 15% increase in regional utility server bandwidth.',
-      'B) They can create hazardous vapour leaks that travel into nearby residential areas before a physical spill hits the water.',
-      'C) They cause rapid micro-expansions that permanently seal the primary wing spars of transport vehicles.',
-      'D) They automatically invalidate the safety ratings of high-efficiency particulate filters.'
+      "A) A physical spill into waterways will reach residential areas first, followed later by airborne vapour exposure.",
+      "B) Vapour leaks can threaten residential areas before any liquid spill reaches local waterways.",
+      "C) Both vapour and liquid contamination occur simultaneously once petroleum compounds enter the open-air basin.",
+      "D) The primary health risk is to field technicians working at the hub, not to nearby residential communities."
     ],
-    answer: 'B) They can create hazardous vapour leaks that travel into nearby residential areas before a physical spill hits the water.',
-    method: 'Scientists warn that petroleum compounds in open basins "can result in hazardous vapour leaks that migrate into nearby residential perimeters, threatening public health well before a physical spill reaches local waterways." The residential vapour risk precedes any physical water contamination.'
+    answer: "B) Vapour leaks can threaten residential areas before any liquid spill reaches local waterways.",
+    method: "The report states scientists warn that petroleum compounds in open basins 'can result in hazardous vapour leaks that migrate into nearby residential perimeters, threatening public health well before a physical spill reaches local waterways.' The word 'well before' establishes that vapour harm precedes liquid contamination. Option A reverses the sequence. Option C contradicts 'well before' by suggesting simultaneity. Option D misidentifies the primary exposed population — the report explicitly identifies residential communities."
   },
   { group: 'L6', type: 'true_false_matrix', category: 'Investigative Report', context: ctxL6,
     matrixLabels: ['Yes', 'No'],
@@ -5862,48 +5862,48 @@ const literacyQuestions = [
 
   // ── Set 7: Apex Manufacturing / Wear Classification Table ──────────────────
   { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
-    question: 'What is the primary purpose of this executive summary?',
+    question: "A component has surface abrasions of 0.4mm. A technician argues it should be sent to Hangar B for ultrasonic testing immediately. Is this correct according to the ARMP table, and why?",
     options: [
-      'A) To list the quarterly payroll expenses for Apex Manufacturing Group\'s field technicians.',
-      'B) To summarise equipment reliability metrics, wear classifications, and maintenance guidelines for the company\'s factories.',
-      'C) To announce the acquisition of new commercial flight paths and shipping terminals.',
-      'D) To detail marketing strategies for increasing consumer sales of anti-corrosive polymers.'
+      "A) Yes — any measurable abrasion triggers a Hangar B routing regardless of depth.",
+      "B) No — 0.4mm falls within Class I (Stable), which only requires logging and standard monitoring, not ultrasonic testing.",
+      "C) Yes — 0.4mm is close enough to the 0.5mm threshold that precautionary escalation is required.",
+      "D) No — 0.4mm components must be immediately retired and processed for alloy recycling."
     ],
-    answer: 'B) To summarise equipment reliability metrics, wear classifications, and maintenance guidelines for the company\'s factories.',
-    method: 'The summary covers mechanical integrity profiles, the three-tier ARMP wear classification table, and the aqueous cleaning mandate. It is entirely focused on operational reliability and maintenance protocols, not payroll, acquisitions, or marketing.'
+    answer: "B) No — 0.4mm falls within Class I (Stable), which only requires logging and standard monitoring, not ultrasonic testing.",
+    method: "Class I (Stable) covers surface micro-abrasions measuring under 0.5mm in depth. The mandatory action is to 'document in the engineering log; continue standard 24-hour monitoring loops.' Hangar B ultrasonic testing applies to Class II (0.5mm–1.5mm). Option A invents a rule not in the table. Option C introduces a 'close enough' precautionary principle that the ARMP does not contain — classifications are fixed thresholds, not gradients. Option D describes Class III, which requires cracks exceeding 1.5mm."
   },
   { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
-    question: 'According to the report, what is the mandatory action parameter for a component sorted into Class II (Monitored)?',
+    question: "What can be inferred from the fact that Class II components are sent to the ultrasonic testing enclosure rather than immediately retired?",
     options: [
-      'A) Document in the log and continue standard 24-hour monitoring loops.',
-      'B) Immediate and permanent retirement from service for alloy recycling.',
-      'C) Route the asset to the ultrasonic testing enclosure in Hangar B within 48 hours.',
-      'D) Increase fluid temperatures to exactly 60 degrees Celsius.'
+      "A) Class II damage is considered cosmetic and can be monitored indefinitely without additional testing.",
+      "B) Ultrasonic testing will always confirm the component is safe and return it to active service.",
+      "C) The ARMP treats Class II damage as potentially serious but not yet conclusively requiring retirement — further assessment determines its fate.",
+      "D) Components in Class II are retired at the technician's discretion following the Hangar B assessment."
     ],
-    answer: 'C) Route the asset to the ultrasonic testing enclosure in Hangar B within 48 hours.',
-    method: 'The ARMP table states Class II (material pitting between 0.5mm and 1.5mm) requires the asset to be "routed to the specialised ultrasonic testing enclosure in Hangar B within 48 hours." Option A applies to Class I; option B applies to Class III.'
+    answer: "C) The ARMP treats Class II damage as potentially serious but not yet conclusively requiring retirement — further assessment determines its fate.",
+    method: "Class II components are neither simply logged (Class I's outcome) nor immediately retired (Class III's outcome). Instead, they receive advanced ultrasonic testing — implying the damage is significant enough to warrant specialist assessment but has not yet crossed the threshold for automatic retirement. Option A misstates Class I's action and incorrectly describes Class II pitting as cosmetic. Option B overstates what the text says — the outcome of testing is not specified. Option D introduces technician discretion that is not part of the described protocol."
   },
   { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
-    question: 'Why does the company limit the fluid temperature of its specialised cleaning arrays to a maximum of 45 degrees Celsius?',
+    question: "The report states that standard chemical solvents 'often degraded the anti-corrosive synthetic polymers applied to the equipment's protective casing.' What does this problem reveal about the relationship between cleaning and equipment protection?",
     options: [
-      'A) Temperatures below 45 degrees Celsius reduce the time required to complete an ultrasonic check.',
-      'B) Higher temperatures cause micro-expansions in the composite alloy boundaries that can ruin mechanical seals.',
-      'C) It prevents the digital desk-booking portal from freezing during high-occupancy shifts.',
-      'D) It is the minimum pressure required to clear out petroleum compounds from Hangar B.'
+      "A) Cleaning routines must be abandoned entirely for high-load equipment to prevent casing damage.",
+      "B) The method used to clean equipment can itself cause the kind of damage the equipment's protective coating was designed to prevent.",
+      "C) Anti-corrosive polymer coatings are ineffective and should be replaced with aqueous-resistant synthetic alternatives.",
+      "D) The problem only applies to Hangar B equipment, where higher temperatures are required for cleaning."
     ],
-    answer: 'B) Higher temperatures cause micro-expansions in the composite alloy boundaries that can ruin mechanical seals.',
-    method: 'The report states: "Rapid thermal spikes above this limit cause dangerous micro-expansions in the composite alloy boundaries, which can crack tight mechanical seals and cause localised hydraulic fluid leaks." The 45°C cap is a ceiling, not a minimum, and has no relation to ultrasonic checks or desk-booking systems.'
+    answer: "B) The method used to clean equipment can itself cause the kind of damage the equipment's protective coating was designed to prevent.",
+    method: "The polymers protect against corrosion, yet standard solvents that clean the equipment strip those polymers — meaning the cleaning process creates the very vulnerability the coating was meant to block. This is why the mandate switched to aqueous arrays at controlled temperatures. Option A is an overreaction not supported by the text; cleaning continues under a modified method. Option C is not suggested — the polymers are described as worth protecting, not replacing. Option D is not stated — the problem is described as occurring across facilities, not specifically in Hangar B."
   },
   { group: 'L7', type: 'multiple_choice', category: 'Technical Report', context: ctxL7,
-    question: 'What type of hardware damage would cause an asset to be immediately retired and recycled rather than repaired?',
+    question: "In the context of the report, the word 'retirement' as applied to a Class III component most nearly means:",
     options: [
-      'A) Surface micro-abrasions measuring exactly 0.2mm in depth.',
-      'B) Material pitting or fatigue measuring between 0.5mm and 1.5mm.',
-      'C) Any structural fracture or fine crack exceeding 1.5mm in depth.',
-      'D) Exposure to a 24-hour monitoring loop inside an office corridor zone.'
+      "A) The component is removed from the production line temporarily while a repair is completed.",
+      "B) The component is transferred to a monitoring programme in Hangar B pending a future assessment.",
+      "C) The component is permanently removed from service and processed as raw material.",
+      "D) The component is stored offsite until a replacement part of the same specification arrives."
     ],
-    answer: 'C) Any structural fracture or fine crack exceeding 1.5mm in depth.',
-    method: 'Class III (Compromised) applies to "structural fractures or fine cracks exceeding 1.5mm in depth" and requires "immediate and permanent retirement from service; process component for alloy recycling." 0.2mm is Class I (stable), and 0.5–1.5mm is Class II (monitored, sent to Hangar B).'
+    answer: "C) The component is permanently removed from service and processed as raw material.",
+    method: "The ARMP table specifies 'immediate and permanent retirement from service; process component for alloy recycling.' 'Alloy recycling' means the component is broken down for raw material, not stored or temporarily removed. Option A describes a temporary removal inconsistent with 'permanent.' Option B describes the Class II pathway, not Class III. Option D introduces a storage scenario not mentioned in the protocol."
   },
   { group: 'L7', type: 'true_false_matrix', category: 'Technical Report', context: ctxL7,
     matrixLabels: ['Yes', 'No'],
@@ -5919,48 +5919,48 @@ const literacyQuestions = [
 
   // ── Set 9: Section 44 / Legal Advisory ────────────────────────────────────
   { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
-    question: 'What is the core judicial focus of this court advisory?',
+    question: "The advisory states that a Section 44 declaration is 'legally valid only if' three parameters 'were met simultaneously.' What does the word 'simultaneously' reveal about how courts must evaluate a disputed declaration?",
     options: [
-      'A) To permanently rewrite environmental laws regarding protected public waterways.',
-      'B) To clarify the legal thresholds, extraordinary powers, and detention exemptions tied to Section 44 emergency declarations.',
-      'C) To approve pay increases for state utility commission field supervisors.',
-      'D) To establish software procurement rules for digital building management systems.'
+      "A) Courts may approve a declaration if at least two of the three conditions are satisfied, provided the third was met within 14 days.",
+      "B) Meeting all three conditions is required, but they may have been satisfied at different points in time before the declaration was issued.",
+      "C) All three conditions must have existed at the same time when the declaration was made — no single condition can substitute for the others.",
+      "D) The three conditions need only be documented simultaneously; when they actually occurred is irrelevant to the declaration's validity."
     ],
-    answer: 'B) To clarify the legal thresholds, extraordinary powers, and detention exemptions tied to Section 44 emergency declarations.',
-    method: 'The advisory\'s opening line states it "clarifies the strict statutory parameters, conditional matrices, and constitutional limitations governing the enforcement of emergency land-access and property-seizure orders issued under Section 44." Waterway laws, pay increases, and software procurement are not discussed.'
+    answer: "C) All three conditions must have existed at the same time when the declaration was made — no single condition can substitute for the others.",
+    method: "The advisory explicitly states 'all three parameters were met simultaneously at the time of the order.' 'Simultaneously' means co-existing at the same moment, not staggered across time. Option A invents a two-out-of-three threshold not in the text. Option B contradicts 'simultaneously' by allowing sequential satisfaction. Option D misreads simultaneity as a documentation formality rather than a factual requirement."
   },
   { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
-    question: 'What baseline value must the regional Infrastructure Volatility Index (IVI) exceed to satisfy the first parameter of a valid declaration?',
+    question: "An IVI reading of 75 is recorded at the time a Section 44 declaration is made. The other two conditions are fully satisfied. Is the declaration valid?",
     options: [
-      'A) Exactly 15',
-      'B) Between 22 and 45',
-      'C) A value of 75',
-      'D) No less than 120'
+      "A) Yes — an IVI of 75 equals the baseline value, which satisfies the first condition.",
+      "B) No — the IVI must exceed 75, not merely equal it, so a reading of exactly 75 does not satisfy the first condition.",
+      "C) Yes — the IVI condition is the weakest of the three; meeting the other two is sufficient to validate the declaration.",
+      "D) No — an IVI reading of 75 automatically invalidates all three conditions, making the declaration void ab initio."
     ],
-    answer: 'C) A value of 75',
-    method: 'The advisory states the IVI "exceeds a calculated baseline value of 75" as the first of three simultaneous conditions required for a valid Section 44 declaration. 15 is the bandwidth margin from an unrelated passage; 22 is the anchor bolt or pressure value from the G3 manual.'
+    answer: "B) No — the IVI must exceed 75, not merely equal it, so a reading of exactly 75 does not satisfy the first condition.",
+    method: "The advisory states the IVI must 'exceed a calculated baseline value of 75.' 'Exceed' means strictly greater than — a reading of exactly 75 does not exceed 75. Option A confuses 'exceeds' with 'equals or exceeds.' Option C invents a hierarchy among the three conditions; the advisory treats all three as equally mandatory. Option D overstates the consequence — a failure of one condition voids the declaration, not all conditions."
   },
   { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
-    question: 'According to the advisory, what happens to a property seizure order if the enforcing agency fails to prove that municipal utility resources were fully extended at the time?',
+    question: "The advisory uses the Latin phrase 'void ab initio' to describe the legal status of a seizure made without satisfying all three conditions. What does this phrase most precisely mean in this context?",
     options: [
-      'A) The order is routed to a 14-day administrative review window.',
-      'B) The seizure order becomes completely and legally void from the beginning.',
-      'C) The landholder is automatically placed under immediate civil detention.',
-      'D) The case is transferred directly to the Shift Fire Warden\'s master panel.'
+      "A) The seizure is valid temporarily but becomes void once a court formally reviews the declaration.",
+      "B) The seizure is treated as if it was never lawfully made — it has no legal force from the moment it was executed.",
+      "C) The seizure remains in effect but the enforcing agency must compensate the landholder for the period of unlawful detention.",
+      "D) The seizure is voided from the date the missing condition is identified and documented by a lower court."
     ],
-    answer: 'B) The seizure order becomes completely and legally void from the beginning.',
-    method: 'The advisory states: "If any of these three conditions are unmet, any subsequent property seizure or civil detention is legally void ab initio." The Latin phrase "void ab initio" means void from the very beginning. Failing to prove resources were extended is failing one of the three conditions.'
+    answer: "B) The seizure is treated as if it was never lawfully made — it has no legal force from the moment it was executed.",
+    method: "'Void ab initio' is Latin for 'void from the beginning' — meaning the legal action is treated as though it never had any lawful existence, not merely cancelled going forward. Option A describes a different legal concept (voidable, subject to review) rather than void ab initio. Option C adds a compensation obligation not mentioned in the advisory. Option D misidentifies the operative date — 'from the beginning' means from execution, not from the date of identification."
   },
   { group: 'L9', type: 'multiple_choice', category: 'Legal Advisory', context: ctxL9,
-    question: 'What specific physical proof must a valid Facility Continuity Plan contain to shield a landholder from civil detention?',
+    question: "The advisory places the 'burden of proof' on the enforcing agency to verify an FCP before initiating detention. Which of the following, if true, would most weaken the enforcing agency's case for a valid detention?",
     options: [
-      'A) Evidence that the landholder has lived on the property for longer than the Executive Director.',
-      'B) Documentation showing the property has self-contained power and water systems that function independently of the municipal grid.',
-      'C) A verified structural anchor certificate rated to at least 22 kilonewtons.',
-      'D) Real-time geofenced tracking data linked directly to a local customs checkpoint.'
+      "A) The landholder submitted an FCP application three months before the emergency declaration was made.",
+      "B) The enforcing agency initiated detention proceedings without checking whether the landholder held a pre-approved FCP.",
+      "C) The landholder's property water supply had been partially connected to the municipal grid six months prior to the declaration.",
+      "D) The IVI at the time of the declaration was recorded as 78, slightly above the threshold of 75."
     ],
-    answer: 'B) Documentation showing the property has self-contained power and water systems that function independently of the municipal grid.',
-    method: 'To qualify for the detention exemption via the FCP, the landholder must prove "their property possesses a self-contained, functional power and water system capable of operating entirely independently of the municipal utility grid." Options C and D reference content from other passages in this question bank and are distractors.'
+    answer: "B) The enforcing agency initiated detention proceedings without checking whether the landholder held a pre-approved FCP.",
+    method: "The advisory states the burden of proof rests on the enforcing agency to verify FCP status before initiating detention. If the agency skipped this verification step, it has failed to meet its own procedural obligation, directly weakening any defence of the detention. Option A describes a pending application, not a 'verified, pre-approved' FCP — it may strengthen the landholder's argument but not necessarily void the detention. Option C is a factual question about grid independence that would affect the FCP's validity, not the process. Option D supports the validity of the declaration (IVI > 75), not detention."
   },
   { group: 'L9', type: 'true_false_matrix', category: 'Legal Advisory', context: ctxL9,
     matrixLabels: ['Yes', 'No'],
@@ -5976,48 +5976,48 @@ const literacyQuestions = [
 
   // ── Set 3 (new batch): Architecture of Memory / Philosophical Essay ─────────
   { group: 'L12', type: 'multiple_choice', category: 'Philosophical Essay', context: ctxL12,
-    question: 'What is the central thesis of Dr. Thorne\'s historical analysis?',
+    question: "Dr. Thorne describes cities that have traded their public commons for commercial spaces as eventually losing 'the civic cohesion required to sustain any long-term economic framework.' What does this argument imply about the relationship between public space and economic health?",
     options: [
-      'A) To promote the construction of more high-speed industrial logistics networks in old-growth parklands.',
-      'B) To argue that spatial rationalisation and commercial encroachment are destroying the urban commons and eroding civic cohesion.',
-      'C) To calculate the exact financial revenue generated by advertising structures in high-density areas.',
-      'D) To provide a manual for installing commercial security turnstiles in residential districts.'
+      "A) Economic growth is incompatible with preserving public space, making trade-offs between the two unavoidable.",
+      "B) Civic cohesion is a luxury that only economically prosperous cities can afford to invest in.",
+      "C) The social bonds formed in uncommercialised public space are a precondition for a functioning economy, not its competitor.",
+      "D) Commercial encroachment is self-correcting — once economies weaken, markets naturally restore public spaces."
     ],
-    answer: 'B) To argue that spatial rationalisation and commercial encroachment are destroying the urban commons and eroding civic cohesion.',
-    method: 'Dr. Thorne\'s essay traces how industrial monetisation of public space has transformed cities into logistics networks, reduced civic interaction, and ultimately threatens the social cohesion that economic frameworks depend upon. The essay argues for preservation, not revenue calculation or logistics expansion.'
+    answer: "C) The social bonds formed in uncommercialised public space are a precondition for a functioning economy, not its competitor.",
+    method: "Dr. Thorne's argument is that losing the civic commons is self-defeating for economic health — not just a cultural loss. The city needs civic cohesion to sustain its economic framework, so public space is foundational to commercial life, not opposed to it. Option A treats them as zero-sum; Thorne explicitly argues the opposite. Option B inverts the causal chain — Thorne argues civic space precedes prosperity, not the reverse. Option D is speculative market self-correction with no support in the text."
   },
   { group: 'L12', type: 'multiple_choice', category: 'Philosophical Essay', context: ctxL12,
-    question: 'According to empirical studies cited in the text, what happens to civic interactions when commercial facades consume over 60% of the visible streetscape?',
+    question: "The essay states that when commercial facades exceed 60% of the visible streetscape, civic interactions are 'replaced by isolated consumer transactions.' What does this specific replacement suggest about the nature of commerce in that environment?",
     options: [
-      'A) Civic interactions increase significantly due to enhanced consumer confidence.',
-      'B) Civic interactions drop by nearly two-thirds.',
-      'C) Civic interactions remain entirely unchanged across all demographics.',
-      'D) Civic interactions adjust dynamically depending on industrial transit schedules.'
+      "A) Commercial activity and civic interaction are compatible and often occur in the same spaces.",
+      "B) Commercial activity in dense streetscapes transforms the nature of public encounters — from shared experience to individual purchasing.",
+      "C) The empirical drop in civic interaction reflects residents choosing to spend time at home rather than in commercial areas.",
+      "D) Consumer transactions are a higher-quality form of interaction that indicates a more economically developed urban environment."
     ],
-    answer: 'B) Civic interactions drop by nearly two-thirds.',
-    method: 'The essay cites: "In urban environments where commercial facades consume more than 60% of the visible streetscape, empirical studies indicate that individual civic interactions drop by nearly two-thirds, replaced by isolated consumer transactions."'
+    answer: "B) Commercial activity in dense streetscapes transforms the nature of public encounters — from shared experience to individual purchasing.",
+    method: "The phrase 'replaced by isolated consumer transactions' is the key: the social structure of the street changes character. Where people once engaged with each other freely, they now engage primarily as buyers and sellers. This is not about going home (Option C) or economic development (Option D) — it is a qualitative shift in how human presence in public space is structured. Option A is contradicted by the essay's core premise that heavy commercialisation suppresses civic interaction."
   },
   { group: 'L12', type: 'multiple_choice', category: 'Philosophical Essay', context: ctxL12,
-    question: 'What specific operational requirement defines the "Tactical Openness" methodology proposed by contemporary urbanists?',
+    question: "The essay describes critics of 'Tactical Openness' as arguing that such mandates 'suppress local economic vitality.' How does the author respond to this criticism?",
     options: [
-      'A) Licensing public high streets to private commercial developers at steep financial discounts.',
-      'B) Ensuring a mandatory baseline percentage of unmonetised public space is kept free of commercial footprints or ads.',
-      'C) Replacing organic civic tapestries with automated high-speed logistics networks.',
-      'D) Restricting pedestrian walking habits to coordinated transit routines during peak commute windows.'
+      "A) By conceding that economic vitality must take priority in high-density commercial districts, even at the cost of civic space.",
+      "B) By arguing that the critics are correct in the short term but wrong about long-term consequences.",
+      "C) By contending that this defence ignores a historical truth: civic cohesion built in public space is itself what sustains long-term economic health.",
+      "D) By proposing a financial compensation scheme to offset the economic losses caused by preserving unmonetised space."
     ],
-    answer: 'B) Ensuring a mandatory baseline percentage of unmonetised public space is kept free of commercial footprints or ads.',
-    method: '"Tactical Openness" demands that "municipal planning codes preserve a mandatory baseline percentage of unmonetised public space within every residential district. This infrastructure must remain completely free from advertising structures, security turnstiles, or commercial dining footprints." Options A, C, and D describe the commercial and rationalising trends the essay opposes.'
+    answer: "C) By contending that this defence ignores a historical truth: civic cohesion built in public space is itself what sustains long-term economic health.",
+    method: "The essay directly responds: 'this defence ignores a deeper historical truth: a city that systematically trades its public commons for private commercial receipts eventually loses the civic cohesion required to sustain any long-term economic framework.' The author does not concede (Option A), qualify by time horizon (Option B), or propose compensation (Option D)."
   },
   { group: 'L12', type: 'multiple_choice', category: 'Philosophical Essay', context: ctxL12,
-    question: 'What does the author imply by stating that a city "loses the civic cohesion required to sustain any long-term economic framework"?',
+    question: "The essay describes the phenomenon of 'Spatial Rationalisation' as altering 'the psychological parameters of civic engagement.' In the context of the passage, what does the word 'rationalisation' most nearly mean?",
     options: [
-      'A) Commercial success is completely independent of how public spaces are managed or preserved.',
-      'B) A healthy economy ultimately relies on the underlying social bonds cultivated within uncommodified public spaces.',
-      'C) Municipalities should completely eliminate commercial zones to maximise tax collections from public squares.',
-      'D) High-speed logistics networks are the only true source of long-term civic interaction.'
+      "A) The process of making public spaces more logical and fair by distributing them equitably among all users.",
+      "B) The redesign of city space around efficiency and throughput rather than open-ended human interaction.",
+      "C) A planning strategy that combines commercial and civic functions in the same physical locations.",
+      "D) The psychological adjustment citizens make when adapting to new commercial environments over time."
     ],
-    answer: 'B) A healthy economy ultimately relies on the underlying social bonds cultivated within uncommodified public spaces.',
-    method: 'The author\'s argument is that trading the public commons for commercial receipts is self-defeating: the civic cohesion built in unmonetised shared spaces is what makes a functional, long-term economy possible in the first place. Commercial success and civic health are interdependent, not separate.'
+    answer: "B) The redesign of city space around efficiency and throughput rather than open-ended human interaction.",
+    method: "The essay explains that Spatial Rationalisation follows from industrial frameworks that 'prioritised spatial monetisation,' turning cities into 'highly calculated logistics networks optimised for resource throughput.' Walking becomes an 'orchestrated transit routine characterised by hyper-efficiency.' So 'rationalisation' here means optimising for efficient movement and commercial use — not equity (Option A), mixed-use design (Option C), or individual psychological adaptation (Option D)."
   },
   { group: 'L12', type: 'true_false_matrix', category: 'Philosophical Essay', context: ctxL12,
     question: 'Are the following assertions accurate reflections of the text?',
@@ -6032,48 +6032,48 @@ const literacyQuestions = [
 
   // ── Set 4 (new batch): Meridian DRP-402 / Corporate Security Policy ─────────
   { group: 'L13', type: 'multiple_choice', category: 'Corporate Policy', context: ctxL13,
-    question: 'What is the primary operational objective of corporate protocol DRP-402?',
+    question: "DRP-402 requires Tier A records to be transferred to an 'air-gapped cryptographic repository.' What does the term 'air-gapped' imply about this storage system's security design?",
     options: [
-      'A) To reduce corporate expenditure on physical printing papers across localised branches.',
-      'B) To establish strict rules for categorising, retaining, and securing digital financial and operational records.',
-      'C) To outline the recruitment framework for incoming Tier 1 security engineers.',
-      'D) To publicise Meridian Financial Group\'s quarterly investment performance metrics to the open market.'
+      "A) The repository encrypts records in transit using standard cloud-based architecture.",
+      "B) The repository is physically isolated from network connections, so it cannot be accessed remotely.",
+      "C) The repository uses multi-factor authentication to restrict remote access to Tier 1 engineers only.",
+      "D) The repository automatically disconnects from the network whenever a variance spike exceeds 5%."
     ],
-    answer: 'B) To establish strict rules for categorising, retaining, and securing digital financial and operational records.',
-    method: 'DRP-402 defines two classification tiers with specific retention and encryption rules, a 30-second automated containment trigger, and a physical override protocol — all focused on data security and regulatory compliance. Printing costs, recruitment, and market disclosures are not part of this protocol.'
+    answer: "B) The repository is physically isolated from network connections, so it cannot be accessed remotely.",
+    method: "'Air-gapped' is a specific security term meaning a system is completely isolated from external networks — there is no network connection to breach. This is a higher level of protection than encryption (Option A) or authentication (Option C), which still allow remote access in principle. Option D describes the automated containment sequence triggered by a variance spike, which is a separate mechanism that applies to the live network, not the air-gapped repository."
   },
   { group: 'L13', type: 'multiple_choice', category: 'Corporate Policy', context: ctxL13,
-    question: 'Within what timeframe must Classification Tier A sensitive records be transferred to an air-gapped cryptographic repository?',
+    question: "A Tier B employee access log has been on the active network cluster for 88 days. An executive officer has not logged any compliance hold. What will happen to that data in approximately two days, and under what condition could this outcome be avoided?",
     options: [
-      'A) Within 30 seconds of an automated alarm trigger.',
-      'B) Within 12 hours of initial validation.',
-      'C) Exactly 90 days following standard employee access reviews.',
-      'D) Only after a compliance audit hold has been manually cleared.'
+      "A) The data will be transferred to the air-gapped repository; this is the mandatory action for all records after 90 days.",
+      "B) The data will be cleared automatically; an executive officer could prevent deletion by logging a compliance audit hold before day 90.",
+      "C) The data will be locked out from remote access; a Tier 1 engineer must execute a physical override to extend the retention period.",
+      "D) The data will be flagged for a 30-second containment sequence; resetting the clock requires a manual confirmation from regional management."
     ],
-    answer: 'B) Within 12 hours of initial validation.',
-    method: 'Tier A records "must be automatically transferred to a localised, air-gapped cryptographic repository within 12 hours of initial validation." The 30-second window applies to the automated containment sequence after a variance spike, and 90 days is the Tier B retention ceiling.'
+    answer: "B) The data will be cleared automatically; an executive officer could prevent deletion by logging a compliance audit hold before day 90.",
+    method: "The protocol states Tier B data is 'retained on standard active network clusters for a duration of 90 days' and 'the system clears the records unless an active compliance audit hold has been manually logged by an executive officer.' The air-gapped transfer (Option A) applies only to Tier A records. The lockout and physical override (Option C) apply to the variance spike containment sequence, not retention expiry. The 30-second containment sequence (Option D) is triggered by a security variance, not a retention deadline."
   },
   { group: 'L13', type: 'multiple_choice', category: 'Corporate Policy', context: ctxL13,
-    question: 'What technical defence mechanism is triggered automatically if a data verification variance spike exceeds a 5% threshold?',
+    question: "After the automated containment sequence locks out remote access, the protocol requires 'a Tier 1 security engineer executes a physical manual override at the regional server deck.' What is the purpose of requiring a physical action rather than allowing a remote reset?",
     options: [
-      'A) The system clears all operational log data and deletes Tier A records permanently.',
-      'B) The system locks out independent remote access and limits data flow to outbound diagnostics within 30 seconds.',
-      'C) The data is routed to open civilian mobile networks to distribute processing loads.',
-      'D) The cloud-based architecture transitions to a 7-day administrative correction loop.'
+      "A) Remote systems are too slow to process the override command within the required 30-second window.",
+      "B) Requiring physical presence ensures that the system cannot be unlocked by the same remote intrusion that may have triggered the containment sequence.",
+      "C) A physical override is cheaper to implement than a secure remote authentication protocol.",
+      "D) The protocol requires a physical log to be signed in person for compliance audit purposes."
     ],
-    answer: 'B) The system locks out independent remote access and limits data flow to outbound diagnostics within 30 seconds.',
-    method: 'A variance spike exceeding 5% triggers an "automated containment sequence concurrently within 30 seconds" that "locks out independent remote access credentials and restricts data flow to outbound diagnostics only." Records are not deleted, and civilian networks are not used.'
+    answer: "B) Requiring physical presence ensures that the system cannot be unlocked by the same remote intrusion that may have triggered the containment sequence.",
+    method: "The containment sequence was triggered because of a potential security breach (variance spike). If the reset could be performed remotely, an attacker who caused the spike could also reset the lockout — defeating the purpose of the containment. A physical presence requirement breaks this attack vector. Option A is not stated and the 30-second window applies to the lockout trigger, not the override. Option C is speculation with no textual support. Option D describes a compliance documentation requirement not mentioned in the protocol."
   },
   { group: 'L13', type: 'multiple_choice', category: 'Corporate Policy', context: ctxL13,
-    question: 'Under what specific condition can Classification Tier B data remain on active network clusters for longer than the standard 90-day retention ceiling?',
+    question: "DRP-402 classifies 'credit assessment metrics' under Tier A and 'employee application access logs' under Tier B. What principle appears to govern which classification applies to a given record?",
     options: [
-      'A) If the data consists entirely of sensitive credit assessment metrics.',
-      'B) If an executive officer manually logs an active compliance audit hold before the limit is reached.',
-      'C) If a security tracking array registers an automated verification variance under 5%.',
-      'D) If a regional operations manager requests an outbound diagnostic file transfer.'
+      "A) Tier A covers any record older than 12 hours; Tier B covers records created within the last 24 hours.",
+      "B) Tier A covers records involving direct financial or personal risk to consumers; Tier B covers records related to internal operational processes.",
+      "C) Tier A covers records that must be disclosed to regulators; Tier B covers records that are exempt from external disclosure.",
+      "D) Tier A applies to digital records; Tier B applies to physical documents stored at regional branch offices."
     ],
-    answer: 'B) If an executive officer manually logs an active compliance audit hold before the limit is reached.',
-    method: 'Tier B data is cleared after 90 days "unless an active compliance audit hold has been manually logged by an executive officer." Credit assessment metrics are Tier A, and a variance under 5% does not affect the retention schedule.'
+    answer: "B) Tier A covers records involving direct financial or personal risk to consumers; Tier B covers records related to internal operational processes.",
+    method: "Tier A examples — transaction histories, personally identifiable information (PII), credit assessment metrics — all carry direct risk to consumers if exposed. Tier B examples — employee access metrics, server logs, internal communications — are operational records about the company's own systems. This consumer-facing versus operationally-internal distinction is the organising logic of the two tiers. Options A, C, and D describe classification criteria not stated in the protocol."
   },
   { group: 'L13', type: 'true_false_matrix', category: 'Corporate Policy', context: ctxL13,
     question: 'Evaluate whether the following operational scenarios are compliant:',
@@ -6088,48 +6088,48 @@ const literacyQuestions = [
 
   // ── Set 8 (new batch): Algorithmic Panopticon / Media Studies ──────────────
   { group: 'L17', type: 'multiple_choice', category: 'Media Studies', context: ctxL17,
-    question: 'What is the primary analytical objective of Professor Thorne\'s sociological critique?',
+    question: "Professor Thorne describes the shift in communication as moving from 'democratic forums' to 'highly targeted algorithmic feedback environments.' What does he imply by calling these environments 'feedback' loops?",
     options: [
-      'A) To promote the expansion of programmatic targeted advertising to increase platform development budgets.',
-      'B) To argue that hyper-optimised algorithmic engagement loops are destroying analytical comprehension and fragmenting civic discourse.',
-      'C) To provide a software engineering manual for increasing platform click-through metrics by 70%.',
-      'D) To document the history of print journalism in rural communities across the late twentieth century.'
+      "A) Platforms collect user opinions as structured feedback to improve their content moderation systems.",
+      "B) Users receive content selected to match and amplify their existing preferences, which in turn shapes what content they see next.",
+      "C) Advertisers use feedback from click-through data to determine which communities receive political messaging.",
+      "D) The democratic forum model failed because it provided no structured response mechanism for users disagreeing with editorial decisions."
     ],
-    answer: 'B) To argue that hyper-optimised algorithmic engagement loops are destroying analytical comprehension and fragmenting civic discourse.',
-    method: 'Professor Thorne traces how engagement-maximising algorithms have replaced deliberate discourse with reactive outrage cycles, reducing comprehension and threatening democratic stability. The essay advocates "Algorithmic Friction" as a corrective. Expanding advertising, boosting click-throughs, and print journalism history are all contrary to the essay\'s argument.'
+    answer: "B) Users receive content selected to match and amplify their existing preferences, which in turn shapes what content they see next.",
+    method: "A feedback loop, in Thorne's usage, means the algorithm uses a user's engagement behaviour to select more of the same type of content, which generates more engagement, which feeds the same selection again — the output continuously reinforces the input. This is distinct from formal feedback mechanisms (Option A) or advertiser targeting analytics (Option C). Option D introduces a criticism of the democratic forum model that Thorne does not make."
   },
   { group: 'L17', type: 'multiple_choice', category: 'Media Studies', context: ctxL17,
-    question: 'According to the empirical data cited by the author, what happens to user comprehension metrics when online feeds derive over 70% of revenue from targeted advertising?',
+    question: "The essay identifies a specific revenue threshold — 70% from targeted advertising — beyond which comprehension metrics fall sharply. What does the author's use of this threshold suggest about the cause of the comprehension decline?",
     options: [
-      'A) Analytical comprehension metrics increase dramatically due to efficient data sorting.',
-      'B) Analytical comprehension metrics drop by nearly three-fourths, replaced by brief outrage interactions.',
-      'C) Comprehension metrics remain perfectly stable across all primary demographic user brackets.',
-      'D) Comprehension levels adjust dynamically every 90 seconds based on localised network speeds.'
+      "A) Any amount of targeted advertising is harmful to comprehension, and the 70% figure simply marks where the damage becomes measurable.",
+      "B) The comprehension decline is not caused by advertising itself, but by the algorithmic content-selection practices that advertising-dependent revenue models incentivise.",
+      "C) Platforms that stay below 70% targeted advertising revenue are unaffected by the engagement maximisation dynamics described in the essay.",
+      "D) The 70% threshold marks the point at which government regulation becomes legally permissible under media law."
     ],
-    answer: 'B) Analytical comprehension metrics drop by nearly three-fourths, replaced by brief outrage interactions.',
-    method: 'The essay states: "empirical tracking indicates that deep analytical comprehension metrics drop by nearly three-fourths, replaced by brief, high-velocity outrage interactions" in environments where more than 70% of platform revenue comes from targeted advertising.'
+    answer: "B) The comprehension decline is not caused by advertising itself, but by the algorithmic content-selection practices that advertising-dependent revenue models incentivise.",
+    method: "The essay's argument is that when platforms derive the majority of revenue from targeted advertising, they are structurally incentivised to maximise engagement at the expense of analytical depth — because outrage and emotional content drive more clicks. The advertising revenue model drives the algorithmic choices that produce the comprehension decline. Option A overstates the essay's position — the threshold matters. Option C implies a clean binary not supported by the text. Option D introduces media law not mentioned in the essay."
   },
   { group: 'L17', type: 'multiple_choice', category: 'Media Studies', context: ctxL17,
-    question: 'What specific engineering adjustment defines the "Algorithmic Friction" design methodology proposed by media reform groups?',
+    question: "Industry lobbyists argue that 'Algorithmic Friction' features 'suppress user autonomy and hurt digital market innovation.' How does the author characterise this objection?",
     options: [
-      'A) Transitioning all digital communication platforms to open-source mobile phone networks.',
-      'B) Integrating deliberate delays, cooling-off periods, and verification checks before users can amplify highly polarised material.',
-      'C) Eliminating all moderation features to allow user interaction patterns to evolve organically.',
-      'D) Restricting platform registration exclusively to certified media sociology researchers.'
+      "A) As a well-founded concern that the author ultimately concedes must be balanced against civic interests.",
+      "B) As a technically accurate description of the feature's effects, even if the author disagrees with prioritising those effects.",
+      "C) As a defence that ignores the structural reality that trading analytical depth for engagement is already destroying the cognitive basis of democracy.",
+      "D) As a misunderstanding of what 'Algorithmic Friction' actually involves — lobbyists are reacting to a version of the policy that does not reflect reform groups' actual proposal."
     ],
-    answer: 'B) Integrating deliberate delays, cooling-off periods, and verification checks before users can amplify highly polarised material.',
-    method: '"Algorithmic Friction" demands that "platform engineering teams integrate deliberate delays, cooling-off periods, and mandatory verification checks before a user can amplify highly polarised material to a wider audience network." Options C and D are contrary to the approach; open-source transitions are unrelated to the methodology described.'
+    answer: "C) As a defence that ignores the structural reality that trading analytical depth for engagement is already destroying the cognitive basis of democracy.",
+    method: "The essay states: 'this defence ignores a critical structural reality: a communication landscape that systematically trades collective analytical depth for short-term engagement clicks eventually loses the cognitive stability required to maintain a functioning democratic society.' The author does not concede (Option A), agree with the accuracy of the lobbyists' description (Option B), or argue they misunderstand the proposal (Option D)."
   },
   { group: 'L17', type: 'multiple_choice', category: 'Media Studies', context: ctxL17,
-    question: 'What does the author imply by stating that a digital landscape can lose the "cognitive stability required to maintain a functioning democratic society"?',
+    question: "The essay describes two parallel transitions: the architectural transformation of online platforms (from democratic forums to algorithmic feedback loops), and the cognitive transformation of discourse (from dialectical exchange to reactive outrage). What does the author imply about the relationship between these two shifts?",
     options: [
-      'A) Democratic institutions are fully capable of surviving regardless of how fragmented public information becomes.',
-      'B) Continuous exposure to high-velocity, algorithmically driven outrage undermines the shared analytical capacity needed for civic self-governance.',
-      'C) Digital platforms should be completely managed by industrial transport and logistics boards.',
-      'D) Increasing user screen duration is the single most effective method for stabilising modern political networks.'
+      "A) The cognitive shift happened first and created demand for the architectural change as users sought more emotionally resonant content.",
+      "B) The two shifts are coincidental — they occurred at the same time in history but are driven by independent forces.",
+      "C) The architectural shift — the design of platforms around engagement maximisation — directly produces the cognitive shift in how people communicate.",
+      "D) The cognitive shift can be reversed through individual willpower without any change to platform architecture."
     ],
-    answer: 'B) Continuous exposure to high-velocity, algorithmically driven outrage undermines the shared analytical capacity needed for civic self-governance.',
-    method: 'The author argues that when a communication landscape trades "collective analytical depth for short-term engagement clicks," it erodes the shared cognitive foundation that democracies rely on. Self-governance requires citizens capable of sustained analysis — something algorithmic outrage loops actively degrade.'
+    answer: "C) The architectural shift — the design of platforms around engagement maximisation — directly produces the cognitive shift in how people communicate.",
+    method: "Thorne's argument is explicitly causal: it is because platforms are 'designed to maximise screen duration at the direct expense of contextual nuance' that communication 'shifts from deliberate dialectical exchange to reactive, short-form expression.' The platform architecture drives the cognitive outcome. Option A reverses the causal arrow. Option B denies causation the essay explicitly asserts. Option D contradicts the essay's call for engineered structural remedies (Algorithmic Friction) over personal willpower."
   },
   { group: 'L17', type: 'true_false_matrix', category: 'Media Studies', context: ctxL17,
     question: 'Evaluate the truth of the following statements:',
@@ -6144,48 +6144,48 @@ const literacyQuestions = [
 
   // ── Set 9 (new batch): Decentralised Energy Grid / Economic Policy ──────────
   { group: 'L18', type: 'multiple_choice', category: 'Economic Policy', context: ctxL18,
-    question: 'What is the primary analytical focus of this strategic economic whitepaper?',
+    question: "During a generation surplus, the AGC cuts inbound tariff rebates to 0% on the Cooperative Core while locking export channels 'completely.' What economic harm is this dual action designed to prevent?",
     options: [
-      'A) To promote the permanent closure of all municipal renewable energy generation networks globally.',
-      'B) To detail how Automated Grid Controllers use targeted storage containment and fiscal matrices to balance decentralised power surges.',
-      'C) To calculate the annual infrastructure manufacturing budgets of high-capacity residential solar cells.',
-      'D) To provide a step-by-step technical guide for manually dismantling localised utility battery vaults.'
+      "A) It prevents cooperative members from accumulating excessive credit balances that could distort local energy pricing.",
+      "B) It prevents surplus clean energy from flooding the macro-grid wholesale market and driving prices into a deflationary collapse.",
+      "C) It prevents residential consumers from drawing on battery reserves during peak demand periods.",
+      "D) It prevents rival cooperatives from purchasing surplus energy at below-market rates during a surge event."
     ],
-    answer: 'B) To detail how Automated Grid Controllers use targeted storage containment and fiscal matrices to balance decentralised power surges.',
-    method: 'The whitepaper explains how AGCs redirect surplus clean energy into storage vaults, cut export channels, and boost fossil-fuel peaker plants during demand spikes — all to stabilise decentralised grid operations. Closing networks, manufacturing budgets, and dismantling vaults are not discussed.'
+    answer: "B) It prevents surplus clean energy from flooding the macro-grid wholesale market and driving prices into a deflationary collapse.",
+    method: "The whitepaper states the dual action 'prevents low-cost surplus power from flooding the primary macro-grid, protecting commercial wholesale energy prices from experiencing a destabilising deflationary collapse.' The concern is macro-grid price stability, not individual credit balances (Option A), consumer battery access (Option C), or inter-cooperative competition (Option D)."
   },
   { group: 'L18', type: 'multiple_choice', category: 'Economic Policy', context: ctxL18,
-    question: 'Within how many seconds must the automated controller initiate the grid-balancing sequence following a frequency surge trigger?',
+    question: "The whitepaper identifies two distinct triggering events that activate different AGC responses: a generation surplus and a battery reserve falling below 15%. Which statement most accurately describes how these two events differ in what they threaten?",
     options: [
-      'A) 15 seconds',
-      'B) 25 seconds',
-      'C) 45 seconds',
-      'D) 120 seconds'
+      "A) A surplus threatens the physical safety of storage vaults, while a low battery reserve threatens billing accuracy.",
+      "B) A surplus threatens macro-grid wholesale price stability, while a low battery reserve threatens local grid frequency stability.",
+      "C) Both events threaten local grid frequency stability, but a surplus does so more immediately than a low battery reserve.",
+      "D) A surplus threatens the AGC's ability to initiate a 45-second sequence, while a low battery reserve threatens the cooperative's export channel access."
     ],
-    answer: 'C) 45 seconds',
-    method: 'The paper states "the master AGC must initiate a grid-balancing sequence concurrently within 45 seconds of the initial surge logging." 120 seconds is the minimum continuous threshold for low battery reserves before the peaker plant boost is triggered — a separate mechanism.'
+    answer: "B) A surplus threatens macro-grid wholesale price stability, while a low battery reserve threatens local grid frequency stability.",
+    method: "A surplus triggers export lockdowns and tariff cuts to protect wholesale market prices from deflation — an economic stability concern. A battery reserve below 15% triggers a peaker plant boost 'to mechanically stabilise the local grid frequency' — a physical grid stability concern. The two events are distinct in what they endanger. Option C incorrectly treats both as grid frequency problems. Options A and D introduce consequences not stated in the whitepaper."
   },
   { group: 'L18', type: 'multiple_choice', category: 'Economic Policy', context: ctxL18,
-    question: 'What specific layout configuration do the Wholesale Export Channels adopt when a macro-grid energy surge is logged?',
+    question: "The whitepaper notes that during extreme thermal events, residential demand spikes 'unpredictably due to sudden climate control pooling.' Why does the word 'unpredictably' present a specific challenge for the AGC's design?",
     options: [
-      'A) Export channels open completely to 100% capacity while inbound tariffs are increased by half.',
-      'B) Export channels are locked 100% closed while inbound tariff rebates are cut to 0% on the Cooperative Core.',
-      'C) They switch completely to a voluntary consumer-led recycling rebate pool for 14 days.',
-      'D) Generation volumes are adjusted downward by a fixed 30% margin within 90 minutes.'
+      "A) It means the AGC cannot be pre-programmed with fixed response rules and must rely on manual human operators.",
+      "B) It means predictive models used to anticipate demand cannot reliably account for these spikes, increasing the risk of battery reserves dropping unexpectedly below the safety threshold.",
+      "C) It means cooperative members are unaware of their energy usage until billing occurs, making demand management impossible.",
+      "D) It means the 45-second grid-balancing window is insufficient to respond to surges caused by climate control pooling."
     ],
-    answer: 'B) Export channels are locked 100% closed while inbound tariff rebates are cut to 0% on the Cooperative Core.',
-    method: 'During a surplus event, the AGC responds by "cutting inbound tariff rebates to 0% on the Cooperative Core while locking open-market export channels down completely." This forces excess energy into local battery vaults and prevents it from destabilising macro-grid wholesale prices.'
+    answer: "B) It means predictive models used to anticipate demand cannot reliably account for these spikes, increasing the risk of battery reserves dropping unexpectedly below the safety threshold.",
+    method: "The whitepaper states that this unpredictability 'continues to disrupt predictive model calculations.' If demand spikes cannot be predicted, the AGC's pre-planned allocation models fail to account for them, which can cause battery reserves to drop below the 15% threshold faster than expected. Option A is contradicted — the AGC is explicitly automated with defined response parameters. Option C conflates unpredictable demand with billing opacity. Option D misapplies the 45-second window, which is for surplus balancing, not demand spike response."
   },
   { group: 'L18', type: 'multiple_choice', category: 'Economic Policy', context: ctxL18,
-    question: 'What specific market or grid hazard is the AGC attempting to correct by automatically boosting secondary peaker plant generation by 25%?',
+    question: "Battery reserves drop below 15% at 2:00 PM and remain there until 2:01 PM, when they recover. Does the AGC trigger the 25% peaker boost, and why?",
     options: [
-      'A) A threat to local grid stability caused by cooperative battery reserves dropping below a 15% safety threshold for over 120 seconds.',
-      'B) A complete breakdown in communication between regional counsel and the contract procurement officers.',
-      'C) A sudden 22% upward trajectory in synthetic microplastic particle accumulation metrics.',
-      'D) The irreversible denaturing of anti-corrosive polymers within the localised concrete foundation plate.'
+      "A) Yes — the 15% threshold was crossed, which is sufficient to trigger the boost regardless of duration.",
+      "B) No — the reserves recovered within 60 seconds of the threshold being crossed, so the recovery condition cancels the boost.",
+      "C) No — the reserves were below 15% for only 60 seconds, which does not exceed the required continuous duration of 120 seconds.",
+      "D) Yes — any period below 15% constitutes an emergency allocation that automatically triggers the municipal board warning."
     ],
-    answer: 'A) A threat to local grid stability caused by cooperative battery reserves dropping below a 15% safety threshold for over 120 seconds.',
-    method: 'The paper states: "If localised network metrics show that a regional cooperative core\'s reserve battery capacity drops below a critical 15% safety threshold for a continuous duration exceeding 120 seconds, the AGC…automatically boost[s] secondary fossil-fuel peaker plant generation by a fixed 25% margin to mechanically stabilise the local grid frequency." Options B, C, and D reference content from other passages and are distractors.'
+    answer: "C) No — the reserves were below 15% for only 60 seconds, which does not exceed the required continuous duration of 120 seconds.",
+    method: "The whitepaper requires the threshold to be breached 'for a continuous duration exceeding 120 seconds.' From 2:00 PM to 2:01 PM is exactly 60 seconds — half the required duration. The boost is not triggered. Option A ignores the duration requirement. Option B invents a recovery cancellation rule not in the text. Option D confuses the boost trigger with the municipal board warning, which is issued concurrently — but neither activates here because the duration condition is not met."
   },
   { group: 'L18', type: 'true_false_matrix', category: 'Economic Policy', context: ctxL18,
     question: 'Evaluate the truth of the following operational scenarios:',
@@ -6200,48 +6200,48 @@ const literacyQuestions = [
 
   // ── Set 10 (original batch): The Connected Grid / Public Policy Whitepaper ──
   { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
-    question: 'What is the primary focus of this strategic policy whitepaper?',
+    question: "The whitepaper states that the BMS creates a 'sharp pressure differential' between the Incident Floor and adjacent buffer zones. What physical purpose does this differential serve?",
     options: [
-      'A) To mandate the use of centralised biometric tracking badges for all high-rise construction workers.',
-      'B) To explain how automated Building Management Systems use airflow and pressure controls to contain environmental hazards in high-rise buildings.',
-      'C) To calculate the annual infrastructure energy consumption of high-output gantry cranes.',
-      'D) To argue against the expansion of high-density commercial structures exceeding 25 metres in height.'
+      "A) It forces fresh air into the Incident Floor to dilute the hazardous vapours to safe concentration levels.",
+      "B) It prevents contaminated air on the Incident Floor from migrating into adjacent floors by trapping it under negative pressure.",
+      "C) It activates the stairwell blowers to push evacuating occupants towards the nearest emergency exit.",
+      "D) It shuts down the elevator system to prevent cross-contamination between floors during an emergency."
     ],
-    answer: 'B) To explain how automated Building Management Systems use airflow and pressure controls to contain environmental hazards in high-rise buildings.',
-    method: 'The whitepaper describes how a BMS activates within 45 seconds of a sensor trigger, creates pressure differentials between the Incident Floor and buffer zones, and compensates for door propping with blower boosts. Biometric tracking, crane energy budgets, and arguing against tall buildings are outside its scope.'
+    answer: "B) It prevents contaminated air on the Incident Floor from migrating into adjacent floors by trapping it under negative pressure.",
+    method: "The whitepaper explains that by lowering pressure on the Incident Floor (negative pressure) and raising it on buffer zones above and below (positive pressure), the building creates 'an aerodynamic seal that prevents hazardous vapours from travelling through pipe penetrations or elevator shafts.' The differential acts as a physical barrier through air pressure — not dilution (Option A), not stairwell activation (Option C), and not elevator shutdown (Option D), though elevators are mentioned as a pathway the seal addresses."
   },
   { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
-    question: 'What is the exact maximum time window allowed for the BMS to initiate the automated airflow containment sequence after a sensor is triggered?',
+    question: "The whitepaper identifies 'human factors' as a continuing 'operational vulnerability' in the BMS containment system. Which specific human behaviour is identified as the primary threat to stairwell pressure integrity?",
     options: [
-      'A) 15 seconds',
-      'B) 45 seconds',
-      'C) 120 seconds',
-      'D) 14 days'
+      "A) Occupants activating the emergency stairwell lighting, which draws power away from the injection blower fans.",
+      "B) Occupants propping open egress stairwell doors during evacuations, causing a rapid drop in positive stairwell pressure.",
+      "C) Occupants using elevator shafts as alternative evacuation routes, disrupting the pressure differential on adjacent floors.",
+      "D) Occupants activating the fire alarm manually before the automated sensor has triggered the BMS sequence."
     ],
-    answer: 'B) 45 seconds',
-    method: 'The paper states the BMS "must initiate an active environmental containment sequence concurrently within 45 seconds of the initial alarm trigger." 120 seconds is the maximum duration an egress door can be held open before the blower compensation kicks in — a separate system.'
+    answer: "B) Occupants propping open egress stairwell doors during evacuations, causing a rapid drop in positive stairwell pressure.",
+    method: "The whitepaper states: 'UIPI field studies indicate that during building evacuations, egress stairwell doors are frequently propped open by occupants, causing a rapid drop in stairwell positive pressure.' This is the specific human behaviour identified as the operational vulnerability. Options A, C, and D describe behaviours not mentioned in the whitepaper."
   },
   { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
-    question: 'According to the paper, what configuration do the air dampers and exhaust fans take on the floor located directly above the containment breach?',
+    question: "A vapour breach occurs on Floor 8 of a 20-storey building. On Floor 9 (directly above), the BMS must establish positive pressure. Which configuration achieves this, and why does it differ from the Floor 8 configuration?",
     options: [
-      'A) Supply dampers close to 0% and exhaust fans ramp up to 100% extraction capacity.',
-      'B) Supply dampers open completely to 100% and exhaust fans are locked at 0% capacity.',
-      'C) Both supply dampers and exhaust fans cycle open and closed every 120 seconds.',
-      'D) They switch completely to a water-based deluge backup loop.'
+      "A) Floor 9: supply dampers 100% open, exhaust fans 0%; Floor 8: supply dampers 0%, exhaust fans 100% — because the Incident Floor needs negative pressure to contain vapours, while buffer zones need positive pressure to block migration.",
+      "B) Floor 9: supply dampers 0%, exhaust fans 100%; Floor 8: supply dampers 100%, exhaust fans 0% — because extracting air from buffer zones draws vapours upward away from the breach.",
+      "C) Floor 9 and Floor 8 both receive 0% supply and 100% exhaust to purge contaminated air simultaneously from both floors.",
+      "D) Floor 9: supply dampers 50%, exhaust fans 50%; Floor 8: supply dampers 0%, exhaust fans 100% — to create a gradual pressure gradient between the two floors."
     ],
-    answer: 'B) Supply dampers open completely to 100% and exhaust fans are locked at 0% capacity.',
-    method: 'The floor directly above the breach is a buffer zone. The paper states buffer zones are placed under "raised" positive pressure to create an aerodynamic seal. Positive pressure is achieved by maximising incoming fresh air (supply dampers 100% open) and preventing air from leaving (exhaust fans at 0%). Option A describes the Incident Floor configuration (negative pressure).'
+    answer: "A) Floor 9: supply dampers 100% open, exhaust fans 0%; Floor 8: supply dampers 0%, exhaust fans 100% — because the Incident Floor needs negative pressure to contain vapours, while buffer zones need positive pressure to block migration.",
+    method: "The whitepaper explains that by 'lowering the pressure on the Incident Floor and raising it on the buffer zones directly above and below,' the building creates an aerodynamic seal. Negative pressure on Floor 8 is achieved by cutting supply air (0%) and maximising extraction (100%). Positive pressure on Floor 9 is achieved by maximising supply air (100%) and blocking extraction (0%). Option B reverses both configurations. Option C applies uniform extraction to both floors, which would not create the pressure differential the system depends on. Option D invents a gradient compromise not described in the whitepaper."
   },
   { group: 'L20', type: 'multiple_choice', category: 'Public Policy Whitepaper', context: ctxL20,
-    question: 'What operational issue does the building system attempt to correct by automatically boosting the stairwell injection fan speed by 15%?',
+    question: "An egress stairwell door is propped open at 3:00 PM. At 3:02 PM it is still open. The BMS has triggered a localised alert tone and boosted the injection blower by 15%. At 3:03 PM the door is finally closed. What does the whitepaper suggest about the stairwell pressure between 3:00 PM and 3:02 PM?",
     options: [
-      'A) A power failure affecting the main server rooms on the Incident Floor.',
-      'B) A loss of positive air pressure caused by an egress stairwell door being held open for more than 120 seconds.',
-      'C) Excessive chemical contamination of the synthetic HEPA filter elements in Hangar B.',
-      'D) The lateral migration of pedestrian traffic across high-street transit ribbons.'
+      "A) Stairwell positive pressure was unaffected until the alert tone triggered at 3:02 PM, after which it dropped rapidly.",
+      "B) Stairwell positive pressure dropped from the moment the door was propped open, not only after the 120-second threshold.",
+      "C) Stairwell pressure remained stable because the BMS compensates for open doors in real time without any delay.",
+      "D) Stairwell pressure increased due to the natural airflow through the open door, reducing the need for blower compensation."
     ],
-    answer: 'B) A loss of positive air pressure caused by an egress stairwell door being held open for more than 120 seconds.',
-    method: 'The paper states that propped-open egress doors cause "a rapid drop in stairwell positive pressure." When a door remains open beyond 120 seconds, the BMS automatically boosts injection blower fan speed by 15% to "mechanically compensate for the pressure loss." Options C and D reference content from other passages and are distractors.'
+    answer: "B) Stairwell positive pressure dropped from the moment the door was propped open, not only after the 120-second threshold.",
+    method: "The whitepaper states that propped doors cause 'a rapid drop in stairwell positive pressure' — this is the physical effect of the open door itself. The 120-second threshold is the trigger for the BMS automated response (alert tone + blower boost), not the trigger for the pressure drop. The pressure drop begins immediately when the door is propped. Option A conflates the timing of the BMS response with the timing of the pressure drop. Option C is contradicted — the BMS does not compensate in real time; it waits 120 seconds. Option D is physically incorrect."
   },
   { group: 'L20', type: 'true_false_matrix', category: 'Public Policy Whitepaper', context: ctxL20,
     matrixLabels: ['Yes', 'No'],
@@ -6257,48 +6257,48 @@ const literacyQuestions = [
 
   // ── Set 11 (Persuasive): KAP-7 Kitchen Safety ──────────────────────────────
   { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
-    question: 'What is the primary argumentative purpose of the passage regarding the KAP-7 system?',
+    question: "The passage states: 'The KAP-7 does not replace good judgement — it exists precisely for the moments when good judgement fails.' What does this sentence reveal about the author's view of human reliability in kitchen safety?",
     options: [
-      'A) To provide a technical overview of how KAP-7 sensors detect temperature fluctuations in residential environments.',
-      'B) To argue that implementing the KAP-7 system is a moral and practical necessity for every responsible homeowner.',
-      'C) To compare the cost-effectiveness of different home automation systems available on the consumer market.',
-      'D) To celebrate the technological innovation behind automated gas detection systems in modern appliances.'
+      "A) That good judgement is usually sufficient, and the KAP-7 is only necessary for households with a history of kitchen accidents.",
+      "B) That even attentive homeowners cannot be counted on to prevent all kitchen hazards, making an automated system a necessary complement.",
+      "C) That the KAP-7 is designed to improve homeowners' judgement over time by alerting them to near-miss incidents.",
+      "D) That the failure of good judgement is caused by outdated kitchen appliances that should be replaced alongside the KAP-7 installation."
     ],
-    answer: 'B) To argue that implementing the KAP-7 system is a moral and practical necessity for every responsible homeowner.',
-    method: 'The passage explicitly states the KAP-7 is "no longer a luxury" but "a moral and practical imperative." The author argues all homeowners have "both the means and the obligation to install it." Options A, C, and D misrepresent the passage\'s persuasive intent.'
+    answer: "B) That even attentive homeowners cannot be counted on to prevent all kitchen hazards, making an automated system a necessary complement.",
+    method: "The phrase 'precisely for the moments when good judgement fails' acknowledges that lapses happen to anyone — not just careless people. Combined with 'The argument that kitchen safety can be managed through attentiveness and common sense has been disproved by fire statistics year after year,' the author is arguing that human attention is inherently fallible. Option A limits the KAP-7 to households with a history of accidents, which the passage does not do. Option C misreads the sentence as describing a training function. Option D introduces appliance age as a causal factor not mentioned in the passage."
   },
   { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
-    question: 'Under what specific conditions does the KAP-7 protocol trigger an Emergency Cutoff Sequence?',
+    question: "A stovetop temperature reaches 220°C and holds for 35 seconds with no manual input registered. Gas concentrations in the kitchen are at 0.3%. Which KAP-7 response is triggered, and why does the more severe response not activate?",
     options: [
-      'A) When a stovetop temperature exceeds 200°C for more than 30 seconds without manual input.',
-      'B) When gas concentrations exceed 0.5% or smoke opacity reaches 15% density.',
-      'C) When the 24-hour lockout period on remote resets has been manually overridden.',
-      'D) When internal sensors detect an unattended heating event lasting under five seconds.'
+      "A) The Emergency Cutoff Sequence activates, because a temperature above 200°C for more than 30 seconds triggers the ECS regardless of gas concentration.",
+      "B) A Tier 1 unattended heating warning is logged, because the temperature threshold and duration conditions are met but neither ECS trigger threshold has been reached.",
+      "C) No response occurs, because the gas concentration is below the 0.5% threshold and this is the only condition the system monitors.",
+      "D) The ECS activates, because 0.3% gas concentration combined with a 220°C temperature crosses the combined-hazard threshold."
     ],
-    answer: 'B) When gas concentrations exceed 0.5% or smoke opacity reaches 15% density.',
-    method: 'The passage states the ECS activates under two conditions: "when gas concentrations in the kitchen environment exceed 0.5 per cent, or when smoke opacity reaches 15 per cent density." Option A describes the Tier 1 warning condition, not the ECS trigger.'
+    answer: "B) A Tier 1 unattended heating warning is logged, because the temperature threshold and duration conditions are met but neither ECS trigger threshold has been reached.",
+    method: "The Tier 1 warning triggers when 'a cooktop surface temperature exceeds 200 degrees Celsius for more than 30 continuous seconds without any manual input' — all three conditions are met (220°C, 35 seconds, no input). The ECS activates only when 'gas concentrations exceed 0.5 per cent OR smoke opacity reaches 15 per cent density.' Gas is at 0.3% (below 0.5%) and no smoke opacity is mentioned — neither ECS condition is met. Option A incorrectly elevates the temperature condition to an ECS trigger. Option C ignores the Tier 1 monitoring function. Option D invents a 'combined-hazard threshold' not in the passage."
   },
   { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
-    question: 'Why does the author contend that the 24-hour remote-reset lockout is a necessary feature?',
+    question: "Critics of the KAP-7 call the system 'oversensitive' and say it 'intrudes on daily domestic life.' The author characterises this criticism as individuals who 'ignore the catastrophic reality of residential gas fires.' What does this characterisation imply about the author's view of the critics' reasoning?",
     options: [
-      'A) It reduces the energy costs associated with repeatedly restarting kitchen appliances.',
-      'B) It ensures that only licensed technicians are authorised to perform system resets.',
-      'C) It prevents homeowners from recklessly restarting a potentially volatile system without physically inspecting it first.',
-      'D) It automatically notifies emergency services of any detected gas or smoke concentration.'
+      "A) The critics have conducted genuine safety research that the author has chosen not to engage with directly.",
+      "B) The critics are raising a legitimate cost-of-convenience concern that the author acknowledges but outweighs with safety data.",
+      "C) The critics are substituting personal inconvenience for an accurate assessment of risk, leading them to misjudge the system's purpose.",
+      "D) The critics are primarily motivated by financial interests in competing home safety products."
     ],
-    answer: 'C) It prevents homeowners from recklessly restarting a potentially volatile system without physically inspecting it first.',
-    method: 'The passage says the lockout prevents "a hasty, uninformed restart" and requires "a physical diagnostic inspection of the kitchen environment." The author frames this as protecting "human life," not reducing energy costs or notifying services.'
+    answer: "C) The critics are substituting personal inconvenience for an accurate assessment of risk, leading them to misjudge the system's purpose.",
+    method: "The author says critics 'mischaracterise an intelligent safety protocol as an inconvenience' — meaning they are reframing a safety tool as a nuisance because their frame of reference is convenience rather than catastrophic risk. Option A is contradicted — the passage gives no credibility to the critics' research. Option B overstates the author's concession; he does not acknowledge their concern as legitimate, only as understandable given their misframing. Option D introduces financial motivation with no textual support."
   },
   { group: 'L21', type: 'multiple_choice', category: 'Home Safety Regulation', context: ctxL21,
-    question: 'How does the author characterise the viewpoint of those who criticise the system\'s sensitivity?',
+    question: "The passage argues that the KAP-7 is 'no longer a luxury available only to those with premium smart-home budgets.' What consequence does this statement have for the author's moral argument?",
     options: [
-      'A) As forward-thinking consumers who prefer minimal technological intrusion in their daily lives.',
-      'B) As individuals who ignore the catastrophic reality of residential fires and mischaracterise safety as intrusiveness.',
-      'C) As qualified fire safety experts who have conducted independent testing on the KAP-7 protocol.',
-      'D) As early adopters who have experienced false alarms and prefer manual monitoring methods.'
+      "A) It allows the author to argue that financial affordability is no longer a valid reason to avoid installation, strengthening the obligation to install.",
+      "B) It shifts the focus of the article from safety advocacy to consumer market analysis.",
+      "C) It acknowledges that some homeowners remain unable to afford the KAP-7 and should not be held to the same obligation.",
+      "D) It implies that premium smart-home users bear a greater moral responsibility than standard homeowners."
     ],
-    answer: 'B) As individuals who ignore the catastrophic reality of residential fires and mischaracterise safety as intrusiveness.',
-    method: 'The author states critics "ignore the catastrophic reality of residential gas fires and mischaracterise an intelligent safety protocol as an inconvenience." The passage gives no credibility to their position and offers no scientific or technical basis for their criticism.'
+    answer: "A) It allows the author to argue that financial affordability is no longer a valid reason to avoid installation, strengthening the obligation to install.",
+    method: "By removing the cost barrier, the author closes off 'I can't afford it' as an excuse — leaving only unwillingness as the reason for non-installation. This directly reinforces the moral claim: 'every homeowner now has both the means and the obligation to install it.' Option B misreads the remark as market analysis. Option C inverts the author's argument — the whole point is that cost is no longer a distinguishing factor. Option D introduces a comparative moral hierarchy between homeowner types that the passage does not draw."
   },
   { group: 'L21', type: 'true_false_matrix', category: 'Home Safety Regulation', context: ctxL21,
     question: 'Based on the passage, are the following statements about the KAP-7 system true or false?',
@@ -6314,48 +6314,48 @@ const literacyQuestions = [
 
   // ── Set 12 (Persuasive): Canine Welfare — Exercise Strategy 40-A ───────────
   { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
-    question: 'What is the author\'s primary objective in advocating for Exercise Strategy 40-A?',
+    question: "The passage describes Exercise Strategy 40-A as 'a structured protocol — not a set of recommendations.' What does this distinction imply about how owners should treat its guidelines?",
     options: [
-      'A) To highlight the competitive benefits of structured training for dogs entering athletic competitions.',
-      'B) To argue that following a structured exercise framework is essential for the long-term health and welfare of pet dogs.',
-      'C) To provide step-by-step instructions for owners on how to train their dogs for high-intensity agility courses.',
-      'D) To promote the commercial sale of standardised exercise equipment designed for domestic canines.'
+      "A) Owners may selectively apply the guidelines that suit their dog's breed and temperament.",
+      "B) The guidelines are advisory only and carry no consequence if ignored, unlike formal regulations.",
+      "C) The guidelines are binding requirements that must be followed in full to protect the animal's welfare.",
+      "D) The strategy is a provisional framework that owners should adapt based on their own observations over time."
     ],
-    answer: 'B) To argue that following a structured exercise framework is essential for the long-term health and welfare of pet dogs.',
-    method: 'The passage describes Exercise Strategy 40-A as "a structured protocol that, when followed correctly, protects the long-term physiological welfare of domestic canines." The article is advocacy for structured exercise, not a training manual, competitive guide, or commercial promotion.'
+    answer: "C) The guidelines are binding requirements that must be followed in full to protect the animal's welfare.",
+    method: "Calling it a 'structured protocol' rather than a 'set of recommendations' means the guidelines are not optional suggestions — they are a system with defined thresholds, mandatory responses (cooling phases, dehydration lockouts), and prescribed actions. Option A and D imply selectivity or adaptation the passage does not endorse. Option B misreads 'protocol' as advisory — the passage presents it as a duty of care."
   },
   { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
-    question: 'What is the mandatory response when a dog\'s heart rate fails to normalise within five minutes of ceasing Tier A activity?',
+    question: "A Tier A session ends at 10:00 AM. At 10:06 AM the dog's heart rate has not normalised. Separately, the owner notices the dog's movement fluidity has dropped by 18%. Which of the following correctly identifies all mandatory responses that apply?",
     options: [
-      'A) The dog must be given a 15% reduction in movement fluidity to prevent further strain.',
-      'B) The owner must immediately transition the dog to a Tier B scent enrichment session.',
-      'C) The owner must initiate an immediate cooling phase to prevent physiological harm.',
-      'D) All game modules must be halted for a mandatory 60-minute dehydration recovery window.'
+      "A) Initiate a cooling phase only — the fluidity drop does not require an independent response once a cooling phase is already active.",
+      "B) Initiate a cooling phase for the elevated heart rate, AND halt all game modules for a 60-minute dehydration recovery window for the fluidity drop — both protocols apply independently.",
+      "C) Transition to a Tier B enrichment session — this satisfies both the heart rate and fluidity thresholds simultaneously.",
+      "D) Initiate a 60-minute dehydration lockout only — this is the higher-priority response and supersedes the cooling phase requirement."
     ],
-    answer: 'C) The owner must initiate an immediate cooling phase to prevent physiological harm.',
-    method: 'The passage states: "If, at any point following the cessation of Tier A activity, a dog\'s heart rate fails to normalise within a five-minute window, the owner is required to initiate an immediate cooling phase." Option D describes the dehydration lockout, which is a separate protocol triggered by movement fluidity.'
+    answer: "B) Initiate a cooling phase for the elevated heart rate, AND halt all game modules for a 60-minute dehydration recovery window for the fluidity drop — both protocols apply independently.",
+    method: "Two separate threshold breaches have occurred: (1) heart rate not normalised within 5 minutes post-Tier A activity requires 'an immediate cooling phase'; (2) a 15% or more drop in movement fluidity triggers 'an automatic dehydration lockout: all game modules halted for a mandatory 60-minute recovery period.' These are distinct protocols with independent triggers — both apply concurrently. Option A incorrectly merges the two protocols. Option C introduces a transition to Tier B that is not prescribed for either condition. Option D invents a priority hierarchy between the two protocols that the passage does not establish."
   },
   { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
-    question: 'How does the author reinterpret a dog\'s failure to respond to commands during an enrichment session?',
+    question: "The passage states that a dog ignoring commands during enrichment is 'often falsely presumed' to be willful disobedience. What does the word 'falsely' suggest about owners who make this assumption?",
     options: [
-      'A) As a clear sign of willful disobedience that must be addressed with additional training repetitions.',
-      'B) As a deliberate behavioural protest indicating a preference for high-intensity Tier A activity.',
-      'C) As evidence of physiological exhaustion that demands an immediate cessation of all activity.',
-      'D) As a natural behavioural response triggered by high ambient temperatures in the training environment.'
+      "A) That they are deliberately neglecting their dogs by ignoring obvious signs of physical distress.",
+      "B) That they are misinterpreting a physiological signal as a behavioural one, and acting on an incorrect premise.",
+      "C) That they are applying Tier A discipline frameworks incorrectly to Tier B activity contexts.",
+      "D) That they lack sufficient training in canine exercise science to interpret their dog's behaviour accurately."
     ],
-    answer: 'C) As evidence of physiological exhaustion that demands an immediate cessation of all activity.',
-    method: 'The passage explicitly states this is "often falsely presumed" to be willful disobedience — the author argues the dog "is exhibiting the behavioural markers of physiological exhaustion" and that "the activity must cease immediately." Option A is the misconception the author is correcting.'
+    answer: "B) That they are misinterpreting a physiological signal as a behavioural one, and acting on an incorrect premise.",
+    method: "'Falsely presumed' means the assumption is factually wrong — the dog is not being disobedient, it is exhausted. Owners who act on this false premise will continue the session, causing harm. Option A implies intentional neglect; the passage describes a misunderstanding, not deliberate inaction. Option C introduces a cross-tier framework confusion the passage does not describe. Option D shifts the critique to formal training gaps rather than the specific interpretive error the passage identifies."
   },
   { group: 'L22', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL22,
-    question: 'What is the implied significance of the 60-minute dehydration lockout?',
+    question: "The passage states the 60-minute dehydration lockout 'ensures that the dog's physiological needs are never compromised in the interest of an owner's recreational agenda.' What does the phrase 'recreational agenda' imply about a risk the protocol is designed to guard against?",
     options: [
-      'A) It allows the dog to self-regulate its activity levels without owner intervention.',
-      'B) It acts as an objective safeguard that compels owners to prioritise their dog\'s physiological needs over their own recreational preferences.',
-      'C) It provides the dog with sufficient rest to re-engage in high-intensity Tier A activities within a structured timeframe.',
-      'D) It ensures that the owner logs all exercise data for the dog\'s veterinary health file.'
+      "A) That owners may prioritise their own enjoyment of the activity over the animal's welfare when the two are in conflict.",
+      "B) That professional dog trainers use recreational frameworks that are incompatible with the protocol's medical standards.",
+      "C) That recreational exercise is inherently harmful to dogs and should be replaced with structured therapeutic activity.",
+      "D) That dogs have their own recreational preferences that may conflict with the owner's planned exercise schedule."
     ],
-    answer: 'B) It acts as an objective safeguard that compels owners to prioritise their dog\'s physiological needs over their own recreational preferences.',
-    method: 'The passage states the lockout "ensures that the dog\'s physiological needs are never compromised in the interest of an owner\'s recreational agenda." The 60 minutes is a non-negotiable enforced rest, not an opportunity to log data or prepare for Tier A activity.'
+    answer: "A) That owners may prioritise their own enjoyment of the activity over the animal's welfare when the two are in conflict.",
+    method: "'Recreational agenda' refers to the owner's desire to continue play — and the passage implies owners might override a dog's physical distress signals to keep playing. The lockout removes this choice. Option B introduces professional trainers as a distinct category not discussed in the passage. Option C misreads the protocol — structured exercise is explicitly endorsed. Option D attributes a 'recreational agenda' to the dog rather than the owner, inverting the passage's concern."
   },
   { group: 'L22', type: 'true_false_matrix', category: 'Animal Welfare', context: ctxL22,
     question: 'Based on the passage, are the following statements about Exercise Strategy 40-A true or false?',
@@ -6371,48 +6371,48 @@ const literacyQuestions = [
 
   // ── Set 13 (Persuasive): Professional Baking ───────────────────────────────
   { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
-    question: 'What is the author\'s overarching message concerning the nature of professional baking?',
+    question: "The passage opens: 'Professional baking at the artisan and commercial level is not a craft sustained by intuition or improvisation.' What is the rhetorical purpose of beginning with a negative claim — what something is NOT?",
     options: [
-      'A) To celebrate the creative freedom and improvisation that define artisan baking traditions around the world.',
-      'B) To argue that professional baking demands strict technical precision, discipline, and an unwavering commitment to quality standards.',
-      'C) To promote the use of automation over human skill to reduce the time required for industrial bread production.',
-      'D) To provide a beginner\'s introduction to the fermentation principles underpinning sourdough recipes.'
+      "A) To acknowledge that some bakers do use intuition effectively before arguing that this approach is inferior.",
+      "B) To immediately challenge a common assumption about baking — that it is creative and instinctive — and reframe it as a technical science requiring precision.",
+      "C) To distinguish artisan baking from commercial baking by showing they require different skill sets.",
+      "D) To suggest that traditional baking methods have been made obsolete by modern automated fermentation systems."
     ],
-    answer: 'B) To argue that professional baking demands strict technical precision, discipline, and an unwavering commitment to quality standards.',
-    method: 'The passage opens by defining baking as "a disciplined technical science" requiring "systematic precision" and argues that discarding inferior product is an act of professional integrity. Options A and C misrepresent the author\'s position; Option D describes a technical manual, not this persuasive article.'
+    answer: "B) To immediately challenge a common assumption about baking — that it is creative and instinctive — and reframe it as a technical science requiring precision.",
+    method: "Opening with what baking is NOT sets up a contrast: the expected view (creative, intuitive craft) is rejected in favour of the author's position (technical, precision-driven science). This rhetorical move is designed to surprise a reader who associates baking with artistry and force them to reconsider. Option A suggests the author concedes the intuition argument — he does not. Option C invents a distinction between artisan and commercial baking that the passage treats as a unified category. Option D is not the implication of the opening line."
   },
   { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
-    question: 'What are the consequences of the internal dough temperature rising above 30 degrees Celsius?',
+    question: "The passage specifies that the fermentation chamber must be maintained at 'a precise 26 degrees Celsius' and that dough above 30 degrees causes irreversible structural collapse. A baker's chamber drifts to 28°C. Which statement is most strongly supported by the passage?",
     options: [
-      'A) The fermentation chamber switches to a humidity-recovery protocol and delays baking by 10 minutes.',
-      'B) The misting system executes an emergency 10-second sequence to cool the overheated dough structure.',
-      'C) The yeast colony over-processes available sugars, causing an irreversible structural collapse during the bake.',
-      'D) The batch is automatically flagged as over-proofed and the 10-minute salvage timer begins.'
+      "A) The dough is safe, because 28°C is below the 30°C threshold at which structural collapse occurs.",
+      "B) The dough has already been irreversibly damaged, because any deviation above 26°C triggers the same collapse mechanism as 30°C.",
+      "C) The baker is in a risk zone — the chamber has deviated from the required temperature, though the 30°C collapse threshold has not yet been breached.",
+      "D) The misting system will activate at 28°C to lower the temperature back to 26°C before the collapse threshold is reached."
     ],
-    answer: 'C) The yeast colony over-processes available sugars, causing an irreversible structural collapse during the bake.',
-    method: 'The passage states that above 30°C "the yeast colony over-processes the available sugars at an accelerated rate, producing an excess of carbon dioxide gas that the gluten network cannot contain. The result is an irreversible structural collapse during the bake." Options A and B describe humidity responses; Option D describes the over-proof flag.'
+    answer: "C) The baker is in a risk zone — the chamber has deviated from the required temperature, though the 30°C collapse threshold has not yet been breached.",
+    method: "The passage establishes 26°C as the required temperature and 30°C as the collapse trigger. At 28°C, the chamber has deviated from the protocol — it is no longer compliant — but has not yet reached the collapse threshold. This is different from Option A (which implies compliance at 28°C) and Option B (which implies collapse has already occurred). Option D is not supported — the misting system responds to humidity drops below 75%, not temperature deviations."
   },
   { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
-    question: 'Why does the author categorise the 10-minute salvage window as a test of \'baker\'s integrity\'?',
+    question: "The passage says the over-proofed baker's 10-minute salvage window is 'not merely a technical checkpoint — it is a test of a baker's integrity.' What specifically makes applying the gentle-fold technique an integrity failure rather than a technical solution?",
     options: [
-      'A) Because the baker must resist the financial temptation to sell a product they know does not fully meet professional quality standards.',
-      'B) Because the window requires the baker to work under extreme time pressure, demonstrating physical endurance.',
-      'C) Because missing the window incurs a financial penalty enforced by the Master Baker\'s certification board.',
-      'D) Because completing the gentle-fold technique demonstrates the baker\'s manual dexterity and technical mastery.'
+      "A) The gentle-fold technique is a prohibited method under professional fermentation standards and should never be used.",
+      "B) Applying the technique when the result will only be 'marginally acceptable' means choosing to sell a substandard product for commercial gain.",
+      "C) The technique is ineffective on over-proofed dough and applying it wastes time that should be spent on a fresh batch.",
+      "D) A professional who applies the technique without discarding the batch has violated the 150-minute proofing time limit."
     ],
-    answer: 'A) Because the baker must resist the financial temptation to sell a product they know does not fully meet professional quality standards.',
-    method: 'The passage frames the salvage window as an integrity test because "a professional who applies the gentle-fold knowing the result will be marginally acceptable is making a commercial decision that compromises their brand." Discarding the batch, not the technique itself, is the act of integrity. No certification board penalty is mentioned.'
+    answer: "B) Applying the technique when the result will only be 'marginally acceptable' means choosing to sell a substandard product for commercial gain.",
+    method: "The passage states: 'a professional who applies the gentle-fold knowing the result will be marginally acceptable is making a commercial decision that compromises their brand.' The technique itself is not prohibited (Option A) — the problem is knowingly producing and selling inferior product. The passage does not say the technique is ineffective (Option C). Option D misattributes the integrity failure to a timing rule rather than the choice to market a compromised product."
   },
   { group: 'L23', type: 'multiple_choice', category: 'Professional Standards', context: ctxL23,
-    question: 'How does the author reconcile the role of automation with the goal of high-quality baking?',
+    question: "The passage closes by comparing the KAP-7 kitchen safety system to the fermentation protocol, noting they share 'the same underlying philosophy.' What shared principle does the author identify?",
     options: [
-      'A) By arguing that automation should replace the baker\'s judgement entirely to eliminate the risk of human error.',
-      'B) By suggesting that automation is only relevant for mass-produced commercial bakeries, not artisan operations.',
-      'C) By framing automation as the tool that creates the precise conditions within which a disciplined baker exercises their judgement.',
-      'D) By presenting automation as a temporary measure until bakers develop sufficiently advanced manual techniques.'
+      "A) Both systems are designed to remove human decision-making from high-stakes processes to eliminate the possibility of error.",
+      "B) Both systems represent precision as the precondition for quality — not an obstacle to the craft they support.",
+      "C) Both systems were developed in response to documented industry failures that caused financial loss to operators.",
+      "D) Both systems prioritise speed over quality by automating the most time-consuming stages of a complex process."
     ],
-    answer: 'C) By framing automation as the tool that creates the precise conditions within which a disciplined baker exercises their judgement.',
-    method: 'The passage states: "The automation does not make the decisions — it creates the conditions within which disciplined bakers can make them." This directly refutes Option A. The passage also argues that automation "is not an obstacle to quality — it is quality\'s precondition," ruling out Options B and D.'
+    answer: "B) Both systems represent precision as the precondition for quality — not an obstacle to the craft they support.",
+    method: "The passage states: 'precision is not an obstacle to quality — it is quality's precondition.' The KAP-7 and fermentation protocol both enforce precise automated conditions (temperature, humidity, gas concentration) to enable rather than restrict human skill. Option A overstates — neither system eliminates human decisions; both create conditions within which decisions are made. Options C and D introduce origins and speed claims not made in the passage."
   },
   { group: 'L23', type: 'true_false_matrix', category: 'Professional Standards', context: ctxL23,
     question: 'Based on the passage, are the following statements about professional fermentation baking true or false?',
@@ -6428,48 +6428,48 @@ const literacyQuestions = [
 
   // ── Set 14 (Persuasive): Human Hydration ───────────────────────────────────
   { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
-    question: 'What is the main persuasive intent of this article?',
+    question: "The article opens: 'Water is not a supplement to good health — it is its foundation.' What does the distinction between 'supplement' and 'foundation' imply about how the author views hydration relative to other health behaviours?",
     options: [
-      'A) To compare the health benefits of various caffeinated beverages as alternatives to water consumption.',
-      'B) To convince readers to treat hydration as a non-negotiable daily health requirement rather than an optional habit.',
-      'C) To provide a medically approved daily water intake schedule for professional athletes.',
-      'D) To outline the environmental benefits of reducing the consumption of carbonated sugary drinks globally.'
+      "A) Hydration is only important when other health habits — diet, exercise, sleep — are already well established.",
+      "B) Hydration is optional for people who already take vitamins and other dietary supplements.",
+      "C) Hydration is a prerequisite that underpins all other aspects of health, rather than an add-on to an existing healthy lifestyle.",
+      "D) Supplements and vitamins are ineffective compared to water, making hydration the only health behaviour worth prioritising."
     ],
-    answer: 'B) To convince readers to treat hydration as a non-negotiable daily health requirement rather than an optional habit.',
-    method: 'The article explicitly argues for "treating hydration as the foundational requirement for human vitality" and frames it as requiring "discipline." Options A, C, and D do not match the article\'s persuasive focus on daily hydration behaviour for the general reader.'
+    answer: "C) Hydration is a prerequisite that underpins all other aspects of health, rather than an add-on to an existing healthy lifestyle.",
+    method: "A 'supplement' adds to something already working; a 'foundation' supports everything built on top of it. The author is positioning hydration as the base layer of health — the thing on which all other health behaviours depend. Option A inverts the logic — hydration does not come after other habits, it underlies them. Option B misreads 'supplement' as referring to vitamin supplements. Option D overstates the argument — the author is not dismissing other health behaviours, only elevating water to foundational status."
   },
   { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
-    question: 'According to the text, what does the sensation of thirst indicate?',
+    question: "The article describes thirst as 'not a friendly reminder — it is a physiological distress signal.' What is the author's purpose in using the word 'friendly' before rejecting it?",
     options: [
-      'A) A reliable early-warning signal that should prompt a moderate increase in daily water consumption.',
-      'B) That the body is functioning optimally and regulating its hydration levels effectively.',
-      'C) That the body has already entered a state of mild dehydration and is experiencing physiological distress.',
-      'D) A natural phenomenon caused by caffeine overconsumption with no direct link to hydration status.'
+      "A) To suggest that thirst is genuinely friendly in the sense that it motivates people to drink before serious harm occurs.",
+      "B) To contrast the reassuring way most people interpret thirst with the physiological reality the author wants to correct.",
+      "C) To acknowledge that some researchers describe thirst as a friendly signal and to note this as an area of scientific disagreement.",
+      "D) To describe the sensation of thirst as pleasant and non-threatening so readers do not become anxious about experiencing it."
     ],
-    answer: 'C) That the body has already entered a state of mild dehydration and is experiencing physiological distress.',
-    method: 'The passage states: "If you are waiting for the sensation of thirst before reaching for a glass of water, you have already allowed your body to enter a state of mild dehydration. Thirst is not a friendly reminder — it is a physiological distress signal." Option A contradicts the passage\'s core argument that thirst is a late, not early, signal.'
+    answer: "B) To contrast the reassuring way most people interpret thirst with the physiological reality the author wants to correct.",
+    method: "By invoking 'friendly reminder' — a phrase that implies thirst is helpful and timely — the author captures the common, reassuring interpretation before immediately rejecting it with 'physiological distress signal.' This contrast is rhetorical: it names the assumption being dismantled before dismantling it. Option A accepts the 'friendly' framing the author is rejecting. Option C invents a scientific debate not present in the article. Option D misreads the rhetorical purpose as emotional reassurance."
   },
   { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
-    question: 'Why does the author criticise society\'s reliance on caffeinated and sugary beverages?',
+    question: "The article states that caffeinated and sugary drinks 'provide a temporary sense of refreshment while doing nothing to address the body's underlying hydration deficit.' What does the word 'underlying' imply about the nature of the deficit being discussed?",
     options: [
-      'A) Because caffeine and sugar have been clinically proven to impair kidney function and reduce joint lubrication capacity.',
-      'B) Because they are used as substitutes for water despite being ineffective at addressing the body\'s fundamental hydration deficit.',
-      'C) Because the agricultural production of sugar and caffeine crops depletes global freshwater reserves.',
-      'D) Because they inflate the cost of preventable healthcare by masking common symptoms of chronic fatigue.'
+      "A) That dehydration only becomes a deficit once it is confirmed by a medical test — until then it remains a surface-level concern.",
+      "B) That the hydration deficit persists beneath the feeling of refreshment these drinks temporarily provide, meaning the problem is masked but not resolved.",
+      "C) That caffeine causes dehydration at a deeper cellular level that water alone cannot address without supplementary electrolytes.",
+      "D) That the deficit is caused by an underlying medical condition and should be diagnosed before attempting to treat it with increased water intake."
     ],
-    answer: 'B) Because they are used as substitutes for water despite being ineffective at addressing the body\'s fundamental hydration deficit.',
-    method: 'The passage describes people "substituting caffeinated beverages and sugary drinks that provide a temporary sense of refreshment while doing nothing to address the body\'s underlying hydration deficit." The author\'s specific criticism is that these beverages substitute for water without delivering the same physiological benefit.'
+    answer: "B) That the hydration deficit persists beneath the feeling of refreshment these drinks temporarily provide, meaning the problem is masked but not resolved.",
+    method: "'Underlying' here means the deficit continues to exist at a physiological level even when superficial feelings of refreshment occur. The word signals that the apparent fix — feeling refreshed — does not address the real problem. Option A introduces medical testing as a prerequisite, not in the article. Option C invents a deeper cellular dehydration argument and an electrolyte requirement not mentioned. Option D shifts focus to medical diagnosis that the article does not raise."
   },
   { group: 'L24', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL24,
-    question: 'What does the author imply about people who wait until they are thirsty to drink?',
+    question: "The article closes by describing inadequate hydration as 'a rationalisation, not a reason.' In context, what distinction is the author drawing?",
     options: [
-      'A) That they are making a rational and biologically appropriate decision based on their body\'s natural feedback system.',
-      'B) That they are practising an effective, self-regulated hydration strategy endorsed by the article.',
-      'C) That they are already in a state of mild dehydration and are ignoring their body\'s distress signal.',
-      'D) That they are at lower risk of long-term health problems due to superior self-regulation.'
+      "A) A rationalisation is a false justification for a choice the person has already made; a reason is a genuine cause rooted in evidence.",
+      "B) A rationalisation is a private thought that affects only the individual; a reason has public health implications.",
+      "C) A rationalisation is used by people who lack scientific knowledge; a reason is used only by researchers and health professionals.",
+      "D) A rationalisation can be corrected through education; a reason cannot change because it is grounded in objective fact."
     ],
-    answer: 'C) That they are already in a state of mild dehydration and are ignoring their body\'s distress signal.',
-    method: 'The passage directly states: "If you are waiting for the sensation of thirst...you have already allowed your body to enter a state of mild dehydration." Options A and B represent the opposite of the article\'s argument; Option D is contradicted by the passage\'s discussion of health consequences.'
+    answer: "A) A rationalisation is a false justification for a choice the person has already made; a reason is a genuine cause rooted in evidence.",
+    method: "The author calls the argument that hydration 'requires excessive effort' a rationalisation — meaning it is not a genuine, evidence-based explanation but a post-hoc justification for choosing not to drink adequately. The infrastructure to hydrate correctly is 'universally available,' so the effort claim is not a real barrier. Options B, C, and D introduce social, professional, or educational distinctions that the passage does not make — the author's argument is about truth versus self-justification, not about audience type."
   },
   { group: 'L24', type: 'true_false_matrix', category: 'Health Advocacy', context: ctxL24,
     question: 'Based on the passage, are the following statements about hydration true or false?',
@@ -6485,48 +6485,48 @@ const literacyQuestions = [
 
   // ── Set 15 (Persuasive): Indoor Gardening ──────────────────────────────────
   { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
-    question: 'What is the author\'s primary argument regarding houseplant ownership?',
+    question: "The passage describes watering plants daily as 'a death sentence delivered with the best of intentions.' What does this phrase reveal about the author's view of the owners who do it?",
     options: [
-      'A) That indoor plants are too complex for casual owners and should only be kept by trained botanists.',
-      'B) That owning indoor plants carries a duty of care that requires learning and applying proper maintenance principles.',
-      'C) To promote the commercialisation of indoor plant species that require minimal human maintenance.',
-      'D) To review the scientific literature on the psychological benefits of incorporating plants into domestic environments.'
+      "A) That these owners are callous and neglectful, caring more about their daily routine than the plant's survival.",
+      "B) That well-meaning behaviour can cause serious harm when it is based on instinct rather than knowledge of what the plant actually needs.",
+      "C) That daily watering is acceptable in summer but becomes harmful only during winter when plants are dormant.",
+      "D) That overwatering is a symptom of emotional over-attachment to plants, which distorts owners' judgment."
     ],
-    answer: 'B) That owning indoor plants carries a duty of care that requires learning and applying proper maintenance principles.',
-    method: 'The passage frames houseplant ownership as "a commitment, not a convenience" and argues owners must learn "what their plants require." The article does not argue plants are beyond casual owners or review scientific literature — it advocates for responsible ownership.'
+    answer: "B) That well-meaning behaviour can cause serious harm when it is based on instinct rather than knowledge of what the plant actually needs.",
+    method: "'With the best of intentions' signals the author is not blaming owners for malice or carelessness — only for acting on an untested instinct (affection = daily watering) without understanding the plant's needs. The phrase captures the irony: the affectionate impulse causes the very harm it seeks to prevent. Option A incorrectly characterises the owners as callous. Option C introduces a seasonal exception not in the passage. Option D psychologises the behaviour in a way the author does not."
   },
   { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
-    question: 'Why is overwatering identified as the biggest killer of indoor plants?',
+    question: "The passage states that root rot from overwatering is 'usually irreversible by the time visible symptoms appear on the leaves.' What is the practical implication of this timing for plant owners?",
     options: [
-      'A) Because excess water dilutes nutrient concentration in the soil, leading to slow starvation of the root system.',
-      'B) Because daily watering schedules prevent owners from recognising other warning signs of plant distress.',
-      'C) Because it prevents the soil from breathing, effectively drowning the plant\'s root system.',
-      'D) Because frequent watering causes leaves to retain moisture, blocking their ability to absorb indirect sunlight.'
+      "A) Owners should act quickly when they first notice yellowing leaves, as this is the earliest sign that overwatering has begun.",
+      "B) By the time an owner sees evidence of damage on the leaves, the underlying root damage has likely already progressed beyond repair.",
+      "C) Visible leaf symptoms reliably appear before root rot becomes serious, giving owners an adequate window to reduce watering.",
+      "D) The damage from overwatering is limited to the root zone and does not affect the visible parts of the plant until after full recovery."
     ],
-    answer: 'C) Because it prevents the soil from breathing, effectively drowning the plant\'s root system.',
-    method: 'The passage states: "When soil is saturated beyond its drainage capacity, it cannot breathe. The root system, deprived of oxygen and surrounded by standing water, begins to rot." Option A describes nutrient dilution, which is not the mechanism described in the passage.'
+    answer: "B) By the time an owner sees evidence of damage on the leaves, the underlying root damage has likely already progressed beyond repair.",
+    method: "The passage says visible symptoms appear after the process is 'usually irreversible' — meaning leaf symptoms are a lagging indicator, not an early warning system. Option A treats visible symptoms as a timely cue for intervention, which the passage directly contradicts. Option C inverts the passage's claim by suggesting symptoms precede serious damage. Option D misreads the passage to suggest visible symptoms occur only during recovery."
   },
   { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
-    question: 'Why does the author insist that cleaning leaves is not simply a cosmetic or \'fussy\' task?',
+    question: "Dust blocking the stomata prevents the plant from absorbing carbon dioxide and executing photosynthesis. What does this biological mechanism reveal about the relationship between leaf cleanliness and plant survival?",
     options: [
-      'A) To encourage owners to develop a routine aesthetic appreciation for the visual quality of their plants.',
-      'B) To challenge the dismissive attitude that causes owners to neglect a task directly linked to plant photosynthesis.',
-      'C) To argue that professional-grade cleaning equipment should be used for high-value ornamental plant species.',
-      'D) To suggest that all indoor plants should be moved outdoors weekly for a thorough rain-cleaning cycle.'
+      "A) Leaf cleanliness affects plant appearance but has a negligible impact on the plant's metabolic processes.",
+      "B) A clean leaf surface is necessary for photosynthesis — meaning that accumulated dust directly impairs the plant's ability to produce energy from light.",
+      "C) Plants grown indoors require more frequent cleaning than outdoor plants because indoor air contains higher levels of carbon dioxide.",
+      "D) Stomata can compensate for dust blockage by absorbing carbon dioxide through the root system instead."
     ],
-    answer: 'B) To challenge the dismissive attitude that causes owners to neglect a task directly linked to plant photosynthesis.',
-    method: 'The passage states wiping leaves "is not an optional aesthetic task — it is an essential physiological one," because dust "block[s] the stomata through which the plant absorbs carbon dioxide and executes photosynthesis." Options A, C, and D are not supported by the passage.'
+    answer: "B) A clean leaf surface is necessary for photosynthesis — meaning that accumulated dust directly impairs the plant's ability to produce energy from light.",
+    method: "Stomata are the entry point for carbon dioxide, which is essential for photosynthesis — the process by which plants produce energy. Blocked stomata mean reduced photosynthesis, which directly affects the plant's ability to function and survive. Option A understates the impact by calling it negligible. Option C inverts the CO2 logic — the issue is blocked CO2 intake, not ambient concentration. Option D is biologically incorrect; stomata are on leaves, not roots, and carbon dioxide is absorbed through leaves."
   },
   { group: 'L25', type: 'multiple_choice', category: 'Environmental Wellbeing', context: ctxL25,
-    question: 'What tone does the author take toward readers who find plant care difficult or inconvenient?',
+    question: "The article ends: 'Those who are not prepared to learn what their plants require should reconsider acquiring them in the first place.' Which conclusion about the author's view of houseplant ownership is most strongly supported by this closing statement?",
     options: [
-      'A) An empathetic and supportive tone, acknowledging that plant care presents genuine challenges for busy individuals.',
-      'B) A critical and uncompromising tone, suggesting those unwilling to learn proper care should not own plants.',
-      'C) An encouraging tone that celebrates the gradual improvement of plant-care skills over time.',
-      'D) A neutral, informational tone that presents plant care as a purely technical skill requiring professional guidance.'
+      "A) The author believes houseplant ownership is a privilege reserved for people with horticultural training.",
+      "B) The author views ownership as a moral obligation that, once entered into, demands genuine effort to understand and meet the plant's needs.",
+      "C) The author is primarily concerned with reducing the volume of plants disposed of in landfill due to preventable owner error.",
+      "D) The author suggests that most plants are unsuitable for indoor environments and should only be grown by dedicated gardeners."
     ],
-    answer: 'B) A critical and uncompromising tone, suggesting those unwilling to learn proper care should not own plants.',
-    method: 'The passage closes with: "Those who are not prepared to learn what their plants require should reconsider acquiring them in the first place." This is a direct, critical statement, not empathetic or neutral in tone.'
+    answer: "B) The author views ownership as a moral obligation that, once entered into, demands genuine effort to understand and meet the plant's needs.",
+    method: "The closing statement places the responsibility squarely on the owner — not the plant, the environment, or the plant's complexity. Ownership requires learning; those unwilling to do so should not acquire plants. This frames ownership as a duty of care. Option A introduces a training qualification the passage does not impose — the issue is willingness to learn, not formal credentials. Option C introduces waste disposal concerns not in the text. Option D implies most plants are unsuitable indoors, contradicting the article's premise that appropriate indoor plants exist if cared for correctly."
   },
   { group: 'L25', type: 'true_false_matrix', category: 'Environmental Wellbeing', context: ctxL25,
     question: 'Based on the passage, are the following statements about houseplant care true or false?',
@@ -6542,48 +6542,48 @@ const literacyQuestions = [
 
   // ── Set 16 (Persuasive): Sleep ─────────────────────────────────────────────
   { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
-    question: 'What is the central thesis of this article?',
+    question: "The article describes sleep as 'a biological baseline that the human body requires to function, repair, and survive.' What is the significance of the word 'baseline' in this context?",
     options: [
-      'A) To recommend a specific brand of sleep technology designed to optimise REM cycles for shift workers.',
-      'B) To argue that sleep is a non-negotiable biological necessity whose consistent prioritisation is essential for health.',
-      'C) To provide a medically approved seven-step bedtime routine for individuals experiencing chronic insomnia.',
-      'D) To discuss how workplace productivity metrics are impacted by the quality of employee sleep environments.'
+      "A) It implies that sleep is the minimum acceptable standard — everything else in health builds from it, not on top of other habits.",
+      "B) It implies that sleep varies significantly between individuals and that 'baseline' refers to each person's personal minimum.",
+      "C) It describes sleep as a lower-level health concern compared to diet and exercise, which provide more direct performance benefits.",
+      "D) It positions sleep as the starting point for high-performance optimisation strategies used by athletes and executives."
     ],
-    answer: 'B) To argue that sleep is a non-negotiable biological necessity whose consistent prioritisation is essential for health.',
-    method: 'The article states sleep is "a biological baseline that the human body requires to function, repair, and survive" and must be "prioritised, protected, and understood as the non-negotiable foundation." Options A, C, and D do not match the article\'s broad persuasive argument.'
+    answer: "A) It implies that sleep is the minimum acceptable standard — everything else in health builds from it, not on top of other habits.",
+    method: "A baseline is a foundational level below which a system cannot function adequately. By calling sleep a biological baseline, the author means it is the non-negotiable floor of health — not an add-on or a variable, but the thing on which all other functioning depends. Option B misreads 'baseline' as a personal variable rather than a universal minimum. Option C incorrectly ranks sleep as lower than other health behaviours. Option D reframes the article as performance optimisation rather than basic biological necessity."
   },
   { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
-    question: 'According to the passage, what specific tasks does the body perform during sleep?',
+    question: "The article states that memory consolidation 'cannot occur in a waking state.' What is the implication of this claim for someone who consistently sleeps only five hours per night?",
     options: [
-      'A) Thermoregulation and active filtration of environmental toxins through the dermal lymphatic pathway.',
-      'B) The reinforcement of immune cell memory and the conversion of dietary protein into usable amino acids.',
-      'C) Critical repairs to muscle tissue, immune cells, neurological pathways, and the consolidation of memories.',
-      'D) The accelerated production of adrenaline reserves to support performance during the following morning.'
+      "A) Their memory consolidation will be partially impaired, but the deficit can be reversed by sleeping longer on rest days.",
+      "B) Their memory consolidation will be fully intact because five hours provides sufficient time for one complete consolidation cycle.",
+      "C) Their memory consolidation will be consistently incomplete, contributing to the cognitive decline described alongside immune and neurological effects.",
+      "D) Memory consolidation will only be affected if the person is also experiencing mood dysregulation caused by another health condition."
     ],
-    answer: 'C) Critical repairs to muscle tissue, immune cells, neurological pathways, and the consolidation of memories.',
-    method: 'The passage states: "Critical repairs to muscle tissue, immune cells, and neurological pathways occur exclusively during sleep cycles. Memory consolidation…cannot occur in a waking state." Options A, B, and D introduce mechanisms not mentioned in the passage.'
+    answer: "C) Their memory consolidation will be consistently incomplete, contributing to the cognitive decline described alongside immune and neurological effects.",
+    method: "If memory consolidation requires sleep and this person chronically undersleeps, consolidation will be incomplete night after night — accumulating a deficit that contributes to the broader physiological debt the article describes. Option A contradicts the article's claim that weekend debt repayment is 'not only incorrect.' Option B is contradicted by the article's seven-to-nine-hour requirement. Option D makes memory consolidation conditional on another condition, which the passage does not suggest."
   },
   { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
-    question: 'Why does the author reject the idea of compensating for lost sleep on the weekend?',
+    question: "The article describes working late at night to meet professional deadlines as 'a trade-off with long-term physiological consequences.' What assumption does this characterisation challenge?",
     options: [
-      'A) Because weekend sleep is structurally different from weekday sleep and cannot produce the same neurological benefits.',
-      'B) Because health requires the consistent daily discipline of adequate sleep, not an irregular pattern of deprivation and recovery.',
-      'C) Because sleeping in on weekends disrupts circadian rhythm and causes chronic daytime fatigue syndrome.',
-      'D) Because the social obligations of weekends make environments incompatible with deep sleep states.'
+      "A) The assumption that professional dedication and physical health are permanently incompatible goals.",
+      "B) The assumption that sacrificing sleep for work is a responsible and manageable trade-off with acceptable costs.",
+      "C) The assumption that people who work late do so purely for financial gain rather than genuine professional commitment.",
+      "D) The assumption that cognitive performance improves under deadline pressure, making lost sleep less consequential."
     ],
-    answer: 'B) Because health requires the consistent daily discipline of adequate sleep, not an irregular pattern of deprivation and recovery.',
-    method: 'The passage states: "The idea that this debt can be repaid on the weekend is not only incorrect — it reflects a fundamental misunderstanding of how the body manages biological repair cycles." The article\'s argument is about the need for consistency, not about circadian disruption or structural differences.'
+    answer: "B) The assumption that sacrificing sleep for work is a responsible and manageable trade-off with acceptable costs.",
+    method: "By calling it 'a trade-off with long-term physiological consequences,' the author is pushing back against the cultural assumption that working late is a normal, cost-free productivity decision. The word 'consequences' signals that the cost is real and lasting — not a minor inconvenience. Option A overstates the article's position; the author is not arguing they are permanently incompatible. Option C introduces motivational speculation not in the text. Option D is a separate cognitive performance claim not made in the passage."
   },
   { group: 'L26', type: 'multiple_choice', category: 'Health Advocacy', context: ctxL26,
-    question: 'What is the author\'s implied view of working late into the night to meet professional deadlines?',
+    question: "The article states that ambient light from screens 'suppresses melatonin production and delays sleep onset, regardless of how tired the individual feels.' What does the phrase 'regardless of how tired' imply about the relationship between feeling tired and being able to fall asleep?",
     options: [
-      'A) That it is an admirable sign of professional dedication that can be balanced with strategic napping.',
-      'B) That it is a manageable trade-off provided it is compensated with a consistent weekend recovery routine.',
-      'C) That it represents a decision to compromise a biological necessity in favour of a commercial priority, with long-term consequences.',
-      'D) That it is a largely harmless habit provided the individual maintains a stable nutritional intake.'
+      "A) That tiredness and sleep readiness are identical states — if you feel tired, your body is ready to sleep.",
+      "B) That feeling tired is a subjective experience, while the body's ability to fall asleep depends on hormonal conditions that screen light disrupts independently.",
+      "C) That screens primarily affect sleep quality rather than sleep onset, meaning tired people can still fall asleep quickly despite exposure.",
+      "D) That melatonin suppression is only harmful when combined with high-intensity exercise or nutritional deficits."
     ],
-    answer: 'C) That it represents a decision to compromise a biological necessity in favour of a commercial priority, with long-term consequences.',
-    method: 'The passage states: "working late into the night to meet professional deadlines…must be understood for what it is: a decision to compromise a biological necessity in favour of a social or commercial priority…a trade-off with long-term physiological consequences." Options A, B, and D contradict this position.'
+    answer: "B) That feeling tired is a subjective experience, while the body's ability to fall asleep depends on hormonal conditions that screen light disrupts independently.",
+    method: "'Regardless of how tired' separates the subjective feeling of fatigue from the physiological conditions required for sleep onset. Melatonin governs sleep onset; screen light suppresses melatonin regardless of tiredness — so a person can feel exhausted yet still struggle to fall asleep due to hormonal disruption. Option A conflates the two states the sentence is separating. Option C misidentifies the effect as quality rather than onset, which the passage specifies. Option D adds conditions (exercise, nutrition) not mentioned in the passage."
   },
   { group: 'L26', type: 'true_false_matrix', category: 'Health Advocacy', context: ctxL26,
     question: 'Based on the passage, are the following statements about sleep true or false?',
@@ -6599,48 +6599,48 @@ const literacyQuestions = [
 
   // ── Set 17 (Persuasive): Disciplined Fetch ─────────────────────────────────
   { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
-    question: 'What is the author\'s main argument regarding how fetch should be played?',
+    question: "The passage opens by describing fetch as 'one of the most mismanaged activities in the domestic dog's life.' What does the author identify as the root cause of this mismanagement?",
     options: [
-      'A) That fetch is most effective when dogs are given complete freedom to set the pace and intensity of the game.',
-      'B) That fetch should be treated as a structured, safety-conscious activity in which the owner assumes deliberate leadership.',
-      'C) That fetch is only appropriate for high-energy breeds and should not be used for all dogs.',
-      'D) That competitive fetch events offer the best framework for developing discipline and focus in domestic canines.'
+      "A) Owners choose unsafe equipment without researching appropriate ball sizes for their dog's breed.",
+      "B) Owners assume fetch is instinctive and requires no intentional structure, leading them to overlook safety and limits.",
+      "C) Competitive fetch culture encourages owners to push their dogs beyond healthy endurance limits.",
+      "D) Dogs lack the ability to signal when they are tired, so owners have no reliable way to judge when to stop."
     ],
-    answer: 'B) That fetch should be treated as a structured, safety-conscious activity in which the owner assumes deliberate leadership.',
-    method: 'The passage frames fetch as an "energy contract" in which "the owner takes responsibility for governing the terms" and argues that owners must lead on safety, equipment choice, and session duration. Options A, C, and D are either contradicted or not supported by the passage.'
+    answer: "B) Owners assume fetch is instinctive and requires no intentional structure, leading them to overlook safety and limits.",
+    method: "The passage states: 'Playing fetch well is not instinctive. It requires intention, structure, and a clear understanding of what the activity demands from both parties.' The mismanagement stems from owners treating it as trivially simple rather than as an activity requiring deliberate oversight. Option A is a consequence of mismanagement, not its root cause. Option C introduces competitive culture not mentioned in the passage. Option D is contradicted — the passage explicitly says dogs do signal tiredness (stopping, lying down, panting), but owners fail to read those signals."
   },
   { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
-    question: 'Why does the author describe playing fetch near traffic as a failure of responsibility?',
+    question: "The passage says: 'A dog in mid-retrieve does not process environmental hazards in the way that a focused human does.' What does this observation imply about how environmental safety decisions should be made during fetch?",
     options: [
-      'A) Because traffic vibrations disrupt the dog\'s ability to track the trajectory of a thrown ball accurately.',
-      'B) Because it demonstrates that the owner has failed to take basic precautions to eliminate foreseeable hazards.',
-      'C) Because local council regulations prohibit the use of public roads as informal exercise zones for domestic animals.',
-      'D) Because traffic noise exceeds safe decibel levels that can permanently damage a dog\'s sensitive auditory system.'
+      "A) Dogs can be trained to pause before entering dangerous zones, making the owner's location choice less critical.",
+      "B) Because the dog cannot manage its own safety in the moment of play, the owner must do so in advance by selecting a safe environment.",
+      "C) The observation suggests that dogs have inferior spatial awareness and should only play fetch in enclosed indoor spaces.",
+      "D) Owners should shout warnings at dogs during retrieval to redirect their attention toward nearby hazards."
     ],
-    answer: 'B) Because it demonstrates that the owner has failed to take basic precautions to eliminate foreseeable hazards.',
-    method: 'The passage states that playing near traffic "is not a minor oversight — it is a failure of the most basic duty of care," and that the risk is "foreseeable." No mention is made of council regulations, vibrations, or decibel levels.'
+    answer: "B) Because the dog cannot manage its own safety in the moment of play, the owner must do so in advance by selecting a safe environment.",
+    method: "If a dog's cognitive state during retrieval overrides its ability to process hazards, then the dog cannot protect itself in the moment — that responsibility shifts entirely to the owner, who must create conditions in which the hazard does not exist. This supports the passage's 'duty of care' framing. Option A is contradicted by the passage — training to pause is not mentioned as a solution. Option C overstates the implication; no restriction to indoor spaces is suggested. Option D introduces shouted warnings not described in the passage."
   },
   { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
-    question: 'What does the author mean by the term \'energy contract\' as used in the passage?',
+    question: "The passage frames fetch as 'a vital training ground for communication.' What type of communication is the author referring to?",
     options: [
-      'A) A written behavioural agreement between the owner and a professional trainer to manage the dog\'s exercise intensity.',
-      'B) A mutual commitment in which both dog and owner invest equal energy throughout the entire game session.',
-      'C) A structured understanding in which the owner governs when the game begins, continues, and ends.',
-      'D) A commercial arrangement between pet owners and subscription-based canine exercise services.'
+      "A) Training the dog to respond to verbal commands given during the game, such as 'drop it' or 'come.'",
+      "B) The owner learning to read the dog's physical signals of tiredness and the dog learning to trust that the owner will respond to them.",
+      "C) Using fetch to develop the dog's social confidence so it can communicate effectively with other dogs at the park.",
+      "D) Teaching the dog to communicate its preferences for ball type and throwing distance through observable play patterns."
     ],
-    answer: 'C) A structured understanding in which the owner governs when the game begins, continues, and ends.',
-    method: 'The passage defines the energy contract as: "You should be the one to decide when the game begins, how long it continues, and crucially, when it ends." It is not a written agreement, a financial arrangement, or a mutual equal-energy commitment.'
+    answer: "B) The owner learning to read the dog's physical signals of tiredness and the dog learning to trust that the owner will respond to them.",
+    method: "The passage frames the communication in fetch as bidirectional: the dog signals (stopping, panting, lying down) and the owner must read and respond correctly. The passage frames this as accountability — 'the dog is relying on you to read these signals.' Option A focuses on trained verbal commands, which the passage does not describe as the form of communication in question. Options C and D introduce social confidence and preference-signalling not mentioned in the passage."
   },
   { group: 'L27', type: 'multiple_choice', category: 'Animal Welfare', context: ctxL27,
-    question: 'What does the author imply about why the owner must set the pace of the game?',
+    question: "The passage states: 'Forcing a tired dog to continue is not active living — it is neglect.' What does this reframing reveal about how some owners may be misinterpreting their own behaviour?",
     options: [
-      'A) Because competitive fetch rules establish that the throwing party always holds ultimate authority in the game.',
-      'B) Because dogs lack the self-awareness to recognise the physical limits of their own endurance.',
-      'C) Because allowing the dog to set the pace results in ball damage and reduces equipment longevity.',
-      'D) Because exercise pacing directly correlates with a dog\'s annual veterinary expenditure.'
+      "A) Some owners are deliberately neglecting their dogs by refusing to acknowledge that tiredness is a valid reason to stop.",
+      "B) Some owners may believe they are providing healthy exercise when they are actually causing harm by continuing past the dog's physical limits.",
+      "C) Some owners engage in extended fetch sessions primarily to meet their own daily step count goals.",
+      "D) The term 'active living' refers to a specific pet health campaign that the author is critiquing as misleading."
     ],
-    answer: 'B) Because dogs lack the self-awareness to recognise the physical limits of their own endurance.',
-    method: 'The passage states: "The dog is relying on you to read these signals and act accordingly," implying the dog cannot self-regulate. "Forcing a tired dog to continue is not \'active living\' — it is neglect." No competitive rules, ball damage, or veterinary costs are mentioned.'
+    answer: "B) Some owners may believe they are providing healthy exercise when they are actually causing harm by continuing past the dog's physical limits.",
+    method: "The reframing — 'not active living — it is neglect' — implies that what looks and feels like responsible, health-promoting behaviour (keeping the dog active) is actually harmful when pushed past the dog's limits. The owner thinks they're doing good. The passage corrects this misunderstanding. Option A implies intentional neglect, which contradicts the 'misinterpretation' framing. Option C introduces step counts not in the text. Option D treats 'active living' as a named campaign rather than a common cultural phrase."
   },
   { group: 'L27', type: 'true_false_matrix', category: 'Animal Welfare', context: ctxL27,
     question: 'Based on the passage, are the following statements about playing fetch true or false?',
@@ -6656,48 +6656,48 @@ const literacyQuestions = [
 
   // ── Set 18 (Persuasive): Pet Overbreeding ──────────────────────────────────
   { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
-    question: 'What is the author\'s main goal in this article?',
+    question: "The passage opens: 'Australia euthanises more than 200,000 cats and dogs annually. These are not animals that lived full lives and died of natural causes.' Why does the author add this clarification?",
     options: [
-      'A) To promote the establishment of government-funded breeding registries to monitor genetic diversity of domestic animals.',
-      'B) To argue for urgent legislative and behavioural reforms to end overbreeding and reduce animal euthanasia in Australia.',
-      'C) To review the economic performance of the Victorian Government\'s pet industry regulation framework.',
-      'D) To compare the adoption rates of cats and dogs across municipal shelter networks in regional Australia.'
+      "A) To distinguish between healthy animals euthanised due to overpopulation and those euthanised for medical reasons — only the latter are the article's concern.",
+      "B) To pre-emptively close off an interpretation of euthanasia as a natural or compassionate endpoint, framing it instead as a preventable outcome of systemic failure.",
+      "C) To establish that Australia's euthanasia rate is higher than the global average, implying it is a uniquely Australian problem.",
+      "D) To shift blame from the government to individual breeders by clarifying that the animals dying are adoptable, not medically compromised."
     ],
-    answer: 'B) To argue for urgent legislative and behavioural reforms to end overbreeding and reduce animal euthanasia in Australia.',
-    method: 'The passage calls for "action on two fronts": stronger legislation and consumer behavioural change, with the stated goal of reducing "Australia\'s annual euthanasia rate to zero." Options A, C, and D describe narrower or different objectives not found in the passage.'
+    answer: "B) To pre-emptively close off an interpretation of euthanasia as a natural or compassionate endpoint, framing it instead as a preventable outcome of systemic failure.",
+    method: "By specifying that these are 'healthy, adoptable animals' — not animals at end of life — the author removes any comfort the word 'euthanasia' might suggest and forces the reader to confront the deaths as avoidable. This framing immediately establishes the moral urgency. Option A inverts the article's concern — medical euthanasia is not discussed, and the 200,000 figure refers to the adoptable animals. Option C introduces a global comparison not in the text. Option D misidentifies the rhetorical target — the author is not primarily blaming individual breeders in the opening."
   },
   { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
-    question: 'How many cats and dogs are euthanised in Australia annually according to the text?',
+    question: "The passage describes the Victorian Government's current regulations as 'a necessary starting point, yet they remain insufficient.' What does this phrasing reveal about the author's position on government action?",
     options: [
-      'A) 10,000',
-      'B) 50,000',
-      'C) 100,000',
-      'D) Over 200,000'
+      "A) The author believes government regulation has been counterproductive and should be replaced entirely by consumer-led change.",
+      "B) The author acknowledges the regulations as meaningful but argues they fall short of what is needed to resolve the crisis.",
+      "C) The author considers the regulations sufficient for licensed operations but inadequate for unlicensed breeders.",
+      "D) The author treats government regulation as the primary solution and consumer behaviour as a secondary concern."
     ],
-    answer: 'D) Over 200,000',
-    method: 'The passage opens with: "Australia euthanises more than 200,000 cats and dogs annually." This is the specific statistic cited at the outset of the article to establish the scale of the problem.'
+    answer: "B) The author acknowledges the regulations as meaningful but argues they fall short of what is needed to resolve the crisis.",
+    method: "'Necessary starting point' concedes genuine value; 'insufficient' signals that more is required. This is a measured critique — not a rejection of regulation but a demand for stronger regulation. Option A misreads the passage — the author calls regulation 'necessary,' not counterproductive. Option C introduces a licensed/unlicensed distinction the passage does not draw. Option D reverses the article's structure — the author calls for action on 'two fronts,' giving consumer behaviour equal weight."
   },
   { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
-    question: 'Why does the author argue that allowing ten breeding females is excessive?',
+    question: "The author calculates that ten breeding females can produce between 50 and 160 animals annually from a single operation. How does this calculation function as an argument?",
     options: [
-      'A) Because it exceeds the nutritional capacity of standard domestic properties to support a healthy breeding program.',
-      'B) Because it enables a scale of production that mirrors profit-driven puppy farms rather than ethical, welfare-focused breeding.',
-      'C) Because it violates the maximum breeding quotas established under the Victorian Government\'s current legislation.',
-      'D) Because animals from large litters have statistically lower rates of successful adoption within the shelter system.'
+      "A) It demonstrates that the government has undercounted the total number of animals entering the adoption market each year.",
+      "B) It shows that the legal cap of ten females, despite appearing modest, actually enables industrial-scale production that exacerbates the oversupply problem.",
+      "C) It proves that breeders with ten females are directly responsible for all 200,000 annual euthanisations in Australia.",
+      "D) It establishes that reducing breeding to five females per operation would be sufficient to bring supply into balance with adoption demand."
     ],
-    answer: 'B) Because it enables a scale of production that mirrors profit-driven puppy farms rather than ethical, welfare-focused breeding.',
-    method: 'The passage states ten females can produce "between 50 and 160 animals annually from a single registered operation" — characterised as "small-scale industrial production that floods an already oversupplied adoption market." This is explicitly contrasted with "careful, welfare-focused breeding." Options A, C, and D are not supported.'
+    answer: "B) It shows that the legal cap of ten females, despite appearing modest, actually enables industrial-scale production that exacerbates the oversupply problem.",
+    method: "The calculation is a rhetorical device to expose the gap between the appearance of the regulation (a 'reasonable cap') and its practical effect (up to 160 animals annually from one operation). The author's point is that the number sounds small but behaves like industrial production at scale. Option A misreads the calculation's purpose — it is directed at the regulatory limit, not an official count. Option C overstates the causal link. Option D introduces an alternative threshold not proposed by the author."
   },
   { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
-    question: 'What does the author imply about the relationship between purchasing from a breeder and shelter adoption?',
+    question: "The passage states: 'The goal is not to eliminate the breeding industry — it is to reduce Australia's annual euthanasia rate to zero.' What does this distinction reveal about the author's position?",
     options: [
-      'A) They are complementary practices that together ensure a diverse and healthy domestic animal population.',
-      'B) Purchasing from a breeder improves shelter adoption rates by reducing demand for lower-quality animals.',
-      'C) Purchasing from a breeder directly reduces the opportunity for a shelter animal to find a home.',
-      'D) Both practices contribute equally to reducing the euthanasia rate when undertaken responsibly.'
+      "A) The author is unwilling to advocate for strong regulatory reform because eliminating the industry entirely would be economically damaging.",
+      "B) The author is proposing a targeted outcome — zero euthanasia — without requiring the abolition of breeding, suggesting reform and coexistence are compatible.",
+      "C) The author concedes that the breeding industry is fundamentally ethical and that euthanasia is caused by other factors beyond breeding levels.",
+      "D) The distinction is a rhetorical compromise designed to make the article's argument palatable to readers who work in the pet industry."
     ],
-    answer: 'C) Purchasing from a breeder directly reduces the opportunity for a shelter animal to find a home.',
-    method: 'The passage states: "Every animal purchased from a breeder is an animal for whom a shelter resident did not find a home." This directly implies a zero-sum dynamic between the two practices. Options A, B, and D contradict this framing.'
+    answer: "B) The author is proposing a targeted outcome — zero euthanasia — without requiring the abolition of breeding, suggesting reform and coexistence are compatible.",
+    method: "The author explicitly disavows elimination of the industry while maintaining an ambitious euthanasia goal. This means the argument is about scale and behaviour, not existence — reduced breeding limits, mandatory microchipping, and consumer adoption would achieve the target without banning breeding. Option A mischaracterises the author's advocacy as reluctant. Option C contradicts the article's core claim that overbreeding causes the euthanasia crisis. Option D speculates about rhetorical strategy with no textual support."
   },
   { group: 'L28', type: 'true_false_matrix', category: 'Animal Ethics', context: ctxL28,
     question: 'Based on the passage, are the following statements about the overbreeding crisis true or false?',
@@ -6713,48 +6713,48 @@ const literacyQuestions = [
 
   // ── Set 19 (Persuasive): Processed Meat ────────────────────────────────────
   { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
-    question: 'What is the core message the passage communicates about the IARC\'s findings on processed meat?',
+    question: "The passage explains that classifying processed meat as a Group 1 carcinogen 'does not imply equivalence in magnitude of risk; it confirms equivalence in the strength of scientific evidence.' What distinction is the author drawing?",
     options: [
-      'A) To encourage the complete elimination of red meat from global diets based on preliminary evidence.',
-      'B) To demonstrate that the nutritional value of processed meat outweighs any associated long-term health concerns.',
-      'C) To communicate scientifically supported evidence linking processed meat consumption to elevated colorectal cancer risk.',
-      'D) To call for a global ban on all meat-processing manufacturing facilities operating outside regulated nutritional standards.'
+      "A) Processed meat is equally as harmful as tobacco and asbestos — the Group 1 label means all three cause cancer at the same rate.",
+      "B) Processed meat belongs in the same classification category as tobacco and asbestos not because it causes equal harm, but because the evidence that it causes cancer is equally robust.",
+      "C) The Group 1 classification is provisional and will be upgraded to reflect the greater danger of tobacco compared to processed meat.",
+      "D) The classification is intended to discourage consumption at any level, regardless of the quantity of processed meat consumed."
     ],
-    answer: 'C) To communicate scientifically supported evidence linking processed meat consumption to elevated colorectal cancer risk.',
-    method: 'The passage presents the IARC\'s Group 1 classification and the 18% risk increase per 50g as "scientifically robust" conclusions from 800+ studies. The article is not advocating for elimination of all red meat or factory bans, and it explicitly acknowledges red meat\'s nutritional value.'
+    answer: "B) Processed meat belongs in the same classification category as tobacco and asbestos not because it causes equal harm, but because the evidence that it causes cancer is equally robust.",
+    method: "The passage explicitly makes this distinction: Group 1 is an evidentiary category, not a harm-magnitude category. Being in the same group as tobacco means the evidence is equally conclusive — not that the risk is equally large. Option A conflates evidentiary strength with harm magnitude, which the passage directly warns against. Option C introduces a provisional framing and upgrade system not in the text. Option D misreads the classification as a blanket consumption warning independent of quantity."
   },
   { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
-    question: 'What increase in colorectal cancer risk does the IARC report associate with consuming 50 grams of processed meat daily?',
+    question: "The IARC's analysis was based on 'over 800 studies conducted across multiple countries, populations, and timeframes.' Why does the passage specifically emphasise the breadth of this evidence base?",
     options: [
-      'A) 5%',
-      'B) 10%',
-      'C) 15%',
-      'D) 18%'
+      "A) To establish that the finding applies universally regardless of diet, genetics, or cooking method.",
+      "B) To show that the conclusion is not dependent on any single study or population, making it more difficult for critics to dismiss on methodological grounds.",
+      "C) To suggest that individual dietary choices have no meaningful effect on cancer risk given the population-scale data involved.",
+      "D) To imply that 800 studies are the minimum threshold required for a Group 1 carcinogen classification."
     ],
-    answer: 'D) 18%',
-    method: 'The passage states: "For every 50 grams of processed meat consumed daily…the risk of developing colorectal cancer increases by 18 per cent." Options A, B, and C are lower figures not cited in the passage.'
+    answer: "B) To show that the conclusion is not dependent on any single study or population, making it more difficult for critics to dismiss on methodological grounds.",
+    method: "By spanning 800+ studies, multiple countries, and diverse populations, the evidence base cannot be attributed to a single flawed study or a culturally specific dietary pattern. This breadth is the source of the finding's robustness — and why the passage contrasts it with the meat industry's narrower counter-arguments. Option A overstates universality; the passage does not claim the finding applies regardless of all variables. Option C misreads the population-scale data as negating individual relevance. Option D invents a minimum study threshold not mentioned."
   },
   { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
-    question: 'Why does the author consider the IARC\'s research more authoritative than industry counter-arguments?',
+    question: "The passage states: 'The evidence is not contested by serious independent researchers. It is contested by commercial interests for commercial reasons.' What rhetorical purpose does drawing this distinction serve?",
     options: [
-      'A) Because the IARC is directly funded by national governments, giving it complete immunity from commercial conflicts of interest.',
-      'B) Because the IARC\'s conclusions are based on over 800 independent studies, while the industry focuses on selective nutritional claims.',
-      'C) Because the IARC specifically endorses plant-based diets over all other dietary patterns in its annual health report.',
-      'D) Because its findings have been universally accepted by the meat industry without objection or formal counter-argument.'
+      "A) It establishes that disagreement within the scientific community is normal and that both sides of the debate are equally credible.",
+      "B) It delegitimises the source of opposition by attributing it to financial motivation rather than scientific merit, framing the debate as settled among neutral experts.",
+      "C) It acknowledges that commercial interests have produced some valid counter-evidence that qualified researchers find compelling.",
+      "D) It warns readers that independent researchers may eventually change their position as new commercial studies emerge."
     ],
-    answer: 'B) Because the IARC\'s conclusions are based on over 800 independent studies, while the industry focuses on selective nutritional claims.',
-    method: 'The passage contrasts the IARC\'s "analysis of over 800 studies conducted across multiple countries, populations, and timeframes" with the industry\'s focus on "nutritional value" as a counter-argument to public health recommendations. Option D is directly contradicted by the passage: the industry did mount objections.'
+    answer: "B) It delegitimises the source of opposition by attributing it to financial motivation rather than scientific merit, framing the debate as settled among neutral experts.",
+    method: "By separating 'serious independent researchers' (who do not contest the finding) from 'commercial interests' (who do), the author frames the opposition as motivated by profit, not science. This rhetorical move positions the industry's challenge as a commercial strategy rather than a scientific debate — closing down the argument on grounds of source credibility. Option A implies equal credibility, which the sentence directly refutes. Option C concedes validity to the commercial counter-evidence, contradicting the passage's stance. Option D introduces a future reversal not suggested by the text."
   },
   { group: 'L29', type: 'multiple_choice', category: 'Public Health Research', context: ctxL29,
-    question: 'How does the author balance the nutritional value of red meat with the health risks identified by the IARC?',
+    question: "Dr. Christopher Wild is quoted as saying that nutritional considerations must be 'weighed against' the carcinogenic profile of processed meat. What does the inclusion of this quote reveal about the author's argumentative strategy?",
     options: [
-      'A) By arguing that the nutritional benefits of red meat fully justify its consumption at any quantity without restriction.',
-      'B) By suggesting that all red meat should be immediately removed from public dietary guidelines to eliminate cancer risk.',
-      'C) By acknowledging red meat\'s nutritional value while emphasising the need for balanced dietary recommendations that account for cancer risk.',
-      'D) By claiming that the IARC study negates all previously recognised nutritional benefits of consuming red meat.'
+      "A) It undermines the author's central argument by introducing expert doubt about whether the cancer risk is significant enough to act on.",
+      "B) It presents an apparent concession — that processed meat has genuine nutritional value — in order to show that even proponents of the IARC findings acknowledge complexity, making the conclusion more, not less, credible.",
+      "C) It shifts the article's focus from public health policy to individual dietary choice, suggesting the decision is ultimately personal rather than institutional.",
+      "D) It signals that the author considers the IARC findings to be preliminary and subject to revision once more nutritional research is conducted."
     ],
-    answer: 'C) By acknowledging red meat\'s nutritional value while emphasising the need for balanced dietary recommendations that account for cancer risk.',
-    method: 'The passage cites Dr. Christopher Wild as "acknowledging these nutritional considerations while maintaining that balanced dietary recommendations must account for the cancer risk." The passage states nutritional value "must be weighed against" the carcinogenic profile — not ignored or dismissed.'
+    answer: "B) It presents an apparent concession — that processed meat has genuine nutritional value — in order to show that even proponents of the IARC findings acknowledge complexity, making the conclusion more, not less, credible.",
+    method: "The author cites Dr. Wild precisely to demonstrate that IARC advocates are not dismissing nutritional value outright — they are making a considered, evidence-based judgment that risk outweighs benefit. This 'concede-and-counter' structure strengthens the author's case because it pre-empts the industry's main objection (nutritional value) and shows the IARC already accounted for it. Option A misreads the quote as weakening the argument — it actually reinforces it through intellectual honesty. Option C overstates the individualising effect; the passage focuses on dietary guidelines (institutional). Option D reads 'weighed against' as a sign of uncertainty, when it is a sign of balanced certainty."
   },
   { group: 'L29', type: 'true_false_matrix', category: 'Public Health Research', context: ctxL29,
     question: 'Based on the passage, are the following statements about the IARC report true or false?',
@@ -6770,48 +6770,48 @@ const literacyQuestions = [
 
   // ── Set 20 (Persuasive): Value of Quotes in News ───────────────────────────
   { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
-    question: 'What is the primary function of quotes in a news report according to the passage?',
+    question: "The passage describes quotes as 'strategic tools, selected by the journalist to serve specific communicative functions.' Which of the following best captures the implication of describing quote selection as 'strategic'?",
     options: [
-      'A) To allow journalists to reduce the volume of original writing required to meet a publication\'s word count targets.',
-      'B) To serve as strategic tools that provide evidence, establish authority, and illustrate competing perspectives.',
-      'C) To guarantee that all news reports achieve a legally mandated standard of editorial impartiality.',
-      'D) To provide advertisers with identifiable spokesperson quotes that can be repurposed for commercial campaigns.'
+      "A) The journalist is manipulating the reader by suppressing inconvenient source material that contradicts the article's conclusions.",
+      "B) The journalist applies deliberate editorial judgment — choosing which voices to include based on the communicative effect each quote will have on the reader.",
+      "C) Quotes are inserted only to satisfy publication requirements for a minimum number of attributed sources per article.",
+      "D) The term 'strategic' signals that quotes in journalism are unreliable because they represent the journalist's paraphrase rather than the source's original words."
     ],
-    answer: 'B) To serve as strategic tools that provide evidence, establish authority, and illustrate competing perspectives.',
-    method: 'The passage opens by stating: "Quotes are rarely used at random — they are strategic tools, selected by the journalist to serve specific communicative functions." It then identifies three primary functions: providing evidence, bolstering authority, and illustrating conflicting perspectives. Options A, C, and D are not supported.'
+    answer: "B) The journalist applies deliberate editorial judgment — choosing which voices to include based on the communicative effect each quote will have on the reader.",
+    method: "The passage uses 'strategic' to mean purposeful and function-driven: quotes are chosen 'to serve specific communicative functions' such as providing evidence, bolstering authority, and illustrating competing perspectives. This is an editorial judgment call, not manipulation (Option A, which misreads deliberateness as deception). Option C invents a minimum-attribution requirement not mentioned in the passage. Option D confuses 'strategic selection' with inaccurate reproduction — the passage specifies that quotes give the reader access to 'the source's own words, rather than the journalist's interpretation.'"
   },
   { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
-    question: 'Which of the following is explicitly identified in the passage as a reason for using quotes?',
+    question: "The passage contrasts reports that quote named sources with reports that 'rely entirely on the journalist's credibility.' What weakness in unsourced reporting does this contrast expose?",
     options: [
-      'A) To ensure that news reports conform to the character limits imposed by digital publishing platforms.',
-      'B) To bridge the gap between scientific findings and public understanding of complex research.',
-      'C) To allow editors to verify the factual accuracy of a reporter\'s claims before a story goes to print.',
-      'D) To replace the need for primary investigative research by citing existing expert opinions.'
+      "A) Unsourced reports are always factually inaccurate because journalists lack the specialist knowledge to interpret technical findings without expert help.",
+      "B) Unsourced reports cannot demonstrate that claims originate from authoritative external sources, so readers have no independent reference point to evaluate the account.",
+      "C) Unsourced reports are prohibited under journalism ethics codes, meaning any report without direct quotation is unpublishable.",
+      "D) Unsourced reports are less likely to attract advertising revenue because sponsors require identifiable spokespeople in editorial content."
     ],
-    answer: 'B) To bridge the gap between scientific findings and public understanding of complex research.',
-    method: 'The passage states that expert quotes "effectively bridge the gap between scientific findings and public understanding by allowing experts to speak directly to a general audience." Options A, C, and D describe editorial or production functions not mentioned in the passage.'
+    answer: "B) Unsourced reports cannot demonstrate that claims originate from authoritative external sources, so readers have no independent reference point to evaluate the account.",
+    method: "The passage explains that quoting named experts or officials 'transfers a portion of that credibility to the source,' making 'the report accountable in a way that unsourced commentary cannot be.' The weakness of unsourced reports is therefore accountability — readers cannot independently verify or evaluate the basis of claims. Option A overstates the implication; the passage does not say journalists are incapable, only that their credibility alone is insufficient. Option C invents a legal/ethical prohibition not mentioned in the text. Option D introduces advertising revenue, which the passage does not discuss."
   },
   { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
-    question: 'Why does the author emphasise that quotes are \'strategic tools\'?',
+    question: "The passage advises skilled readers to 'consider who is speaking, what interest they may represent, and what the journalist's purpose was in choosing that voice over others.' What reading practice is the author recommending here?",
     options: [
-      'A) To argue that all quotes in journalism should be pre-approved by the original source before publication.',
-      'B) To highlight that journalists deliberately select quotes to achieve specific communicative effects within a story.',
-      'C) To suggest that quotes are only effective in reports covering scientific or medical subject matter.',
-      'D) To imply that readers should view all quoted sources with suspicion due to their selective placement.'
+      "A) Treating all quoted sources as biased until independent fact-checkers have verified their statements.",
+      "B) Evaluating each quote not only for its content but also for the institutional or personal interests the speaker might have, and for the editorial purpose the quote serves in the story.",
+      "C) Seeking out the original full interview transcripts for every quote before forming a view on the article's claims.",
+      "D) Disregarding quotes from industry representatives entirely, since they are included solely to introduce doubt rather than to illuminate the topic."
     ],
-    answer: 'B) To highlight that journalists deliberately select quotes to achieve specific communicative effects within a story.',
-    method: 'The passage uses "strategic tools" to mean that quotes are deliberately chosen "to serve specific communicative functions." Skilled readers are invited to "consider who is speaking, what interest they may represent, and what the journalist\'s purpose was in choosing that voice." Option D overstates this as reason for suspicion; the text treats it as critical engagement.'
+    answer: "B) Evaluating each quote not only for its content but also for the institutional or personal interests the speaker might have, and for the editorial purpose the quote serves in the story.",
+    method: "The passage's advice maps onto three evaluative questions: who is speaking (identity and credibility), what interest they represent (motivation), and why the journalist selected that voice (editorial purpose). This is the definition of active, critical reading. Option A adds a 'treat as biased until verified' standard the passage does not endorse — it recommends consideration, not wholesale scepticism. Option C goes beyond the text; the passage does not suggest finding source transcripts. Option D tells readers to disregard industry voices entirely, which contradicts the passage's point that quoting competing perspectives aids balance."
   },
   { group: 'L30', type: 'multiple_choice', category: 'Media Literacy', context: ctxL30,
-    question: 'How does including opposing voices affect the perceived credibility of a news report?',
+    question: "The passage states that a quote 'acts as a window into the broader debate surrounding the story's subject matter.' Which of the following scenarios best illustrates this function?",
     options: [
-      'A) It reduces the report\'s credibility by introducing unresolved contradictions that confuse the reader.',
-      'B) It has no measurable effect on credibility, as readers focus exclusively on the journalist\'s own conclusions.',
-      'C) It enhances the report\'s perceived credibility by demonstrating balance and allowing the audience to weigh multiple perspectives.',
-      'D) It diminishes the authority of the primary source cited in the report by placing competing views alongside it.'
+      "A) A journalist quotes a police officer's exact words rather than paraphrasing them, ensuring legal accuracy in reporting a criminal conviction.",
+      "B) A report on sugar taxes quotes both a public health researcher citing childhood obesity data and a beverage industry spokesperson emphasising consumer freedom, revealing an active policy dispute.",
+      "C) A feature article quotes a celebrity chef describing their favourite recipe, adding a personal dimension to a story about restaurant industry trends.",
+      "D) An investigative piece quotes internal company documents to prove that a corporation was aware of safety failures before they became public."
     ],
-    answer: 'C) It enhances the report\'s perceived credibility by demonstrating balance and allowing the audience to weigh multiple perspectives.',
-    method: 'The passage states that quoting conflicting perspectives "ensures that a report does not appear biased to the audience, allowing them to weigh the evidence and form their own conclusions." This is presented as an enhancement to credibility, not a reduction or neutral effect.'
+    answer: "B) A report on sugar taxes quotes both a public health researcher citing childhood obesity data and a beverage industry spokesperson emphasising consumer freedom, revealing an active policy dispute.",
+    method: "The passage explains that quoting both a public health expert and an industry representative 'invites the reader to engage with a genuine debate,' which is the 'window into the broader debate' function. Option B is the only scenario that explicitly involves opposing voices on a contested question, making the underlying policy dispute visible to the reader. Option A prioritises legal accuracy through direct quotation — an evidentiary function, not a debate-illuminating one. Option C uses a quote to humanise a story (a function the passage mentions in passing) but does not expose a broader debate. Option D uses documentary evidence to establish fact — the evidentiary function, not the perspective-mapping function."
   },
   { group: 'L30', type: 'true_false_matrix', category: 'Media Literacy', context: ctxL30,
     question: 'Based on the passage, are the following statements about the use of quotes in journalism true or false?',
@@ -6827,391 +6827,391 @@ const literacyQuestions = [
 
   // ── Set 21 (Property Listing): The Historic Harbor Estate ──────────────────
   { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
-    question: 'According to the listing, which guest would be explicitly refused a booking?',
+    question: "A family contacts the host to enquire about a 10-night stay for two adults and their 11-year-old daughter. They have no pets and plan to pay the security deposit. Should the host accept the booking?",
     options: [
-      'A) A pair of business travellers on a corporate trip.',
-      'B) A couple travelling with their 8-year-old child.',
-      'C) A solo traveller requiring high-speed internet access.',
-      'D) A group of adult friends celebrating a birthday.'
+      "A) Yes — the family has a pet-free party, is willing to pay the deposit, and 10 nights exceeds the threshold for the weekly discount.",
+      "B) No — the listing requires a minimum stay of 14 nights, which 10 nights does not satisfy.",
+      "C) No — the listing states the property is strictly unsuitable for children under 12, and their daughter is 11.",
+      "D) Yes — the deposit requirement applies only to stays exceeding 14 days, so it is not applicable here and the stay is otherwise unrestricted."
     ],
-    answer: 'B) A couple travelling with their 8-year-old child.',
-    method: 'The listing explicitly states it is "strictly unsuitable for children under the age of 12." An 8-year-old falls within this restriction. Business travellers, guests requiring internet, and adult groups face no stated restrictions.'
+    answer: "C) No — the listing states the property is strictly unsuitable for children under 12, and their daughter is 11.",
+    method: "The listing is explicit: 'strictly unsuitable for children under the age of 12.' An 11-year-old falls within this restriction, making the booking unsuitable regardless of deposit payment or party size. Option A ignores this age restriction. Option B invents a minimum-stay requirement not mentioned in the listing. Option D misreads the deposit clause — it applies to stays exceeding 7 days (not 14), but the age restriction, not the deposit, is the decisive issue here."
   },
   { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
-    question: 'Which of the following is true regarding the property\'s accessibility?',
+    question: "The listing notes the absence of an elevator as 'may be a limitation for guests with limited mobility.' What does the use of 'may be' rather than 'is' imply about the listing's approach to this issue?",
     options: [
-      'A) The property is fully wheelchair accessible across all four levels.',
-      'B) An elevator provides access between the ground and upper floors.',
-      'C) The third and fourth floors are accessible only via the grand staircase.',
-      'D) The listing prohibits guests with limited mobility from booking.'
+      "A) The host is legally obligated to use qualifying language rather than definitive statements when describing accessibility features.",
+      "B) The listing is hedging — acknowledging a genuine constraint without issuing a prohibition, leaving the assessment of suitability to the individual guest.",
+      "C) 'May be a limitation' implies that a lift is available for guests who request it, but is not standard.",
+      "D) The host considers limited mobility to be a minor inconvenience that most guests will be able to manage without difficulty."
     ],
-    answer: 'C) The third and fourth floors are accessible only via the grand staircase.',
-    method: 'The listing states: "Access to the third and fourth floors is via a grand staircase; there is no elevator, which may be a limitation for guests with limited mobility." The property notes this as a potential limitation, not a prohibition. Options A and B are directly contradicted by the listing.'
+    answer: "B) The listing is hedging — acknowledging a genuine constraint without issuing a prohibition, leaving the assessment of suitability to the individual guest.",
+    method: "The phrasing 'may be a limitation' is a qualified disclosure: the host is flagging a genuine accessibility issue (no lift, access via grand staircase only) without formally restricting the booking. The 'may be' shifts responsibility for the suitability assessment to the guest, unlike the age and pet restrictions which use the word 'strictly.' Option A invents a legal requirement. Option C is directly contradicted by the text, which explicitly states 'there is no elevator.' Option D speculates about the host's intent in a way the listing does not support."
   },
   { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
-    question: 'The Battery Point neighbourhood is described as lively and active late into the night.',
+    question: "A guest books a 10-night stay and pays the $2,000 security deposit. After checking out, they request a refund of the deposit. Are they entitled to receive it?",
     options: ['True', 'False'],
     answer: 'False',
-    method: 'The listing states: "The area is quiet after 8:00 PM as it is primarily residential." This directly contradicts a description of late-night activity. Fine dining and maritime attractions are nearby, but the immediate neighbourhood is quiet after 8 PM.'
+    method: "The listing explicitly states the security deposit is 'non-refundable.' A 10-night stay exceeds the 7-day threshold that triggers the deposit requirement, but 'non-refundable' means the guest has no entitlement to its return regardless of the condition of the property or the length of stay."
   },
   { group: 'L31', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL31,
-    question: 'The $2,000 security deposit is refunded to the guest after a stay exceeding seven days.',
+    question: "A guest wants to dine at fine-dining restaurants after 9:00 PM on the evening of their arrival. Based solely on the listing, they can walk to suitable restaurants without leaving the Battery Point neighbourhood.",
     options: ['True', 'False'],
     answer: 'False',
-    method: 'The listing explicitly describes the deposit as "non-refundable." It is required upon booking confirmation for stays exceeding 7 days but will not be returned to the guest at checkout.'
+    method: "The listing states that fine-dining restaurants are located in the Wharfside district — 'a 15-minute walk' away. Battery Point itself is 'quiet after 8:00 PM as it is primarily residential.' Fine dining is available in the area, but not within the Battery Point neighbourhood itself — the guest must walk to Wharfside."
   },
 
   // ── Set 22 (Property Listing): The Eco-Innovation Hub ──────────────────────
   { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
-    question: 'What is the financial consequence for a guest who exceeds their daily energy allowance?',
+    question: "A guest stays for 3 nights and uses 20 kWh of energy per day. Based on the listing, what additional charge will they incur at checkout?",
     options: [
-      'A) They may be evicted from the property without a refund.',
-      'B) Their internet connection will be throttled to a slower speed.',
-      'C) They will be charged an additional $0.45 per kilowatt-hour at checkout.',
-      'D) Their energy allowance will be permanently removed for the remainder of their stay.'
+      "A) $6.75 — they are charged for the total daily usage of 20 kWh across all 3 nights at $0.45 per kWh.",
+      "B) $2.25 — they exceeded the daily allowance by 5 kWh on the first night only and are not charged for subsequent overages.",
+      "C) $0 — the 15 kWh allowance is a weekly cap, not a daily limit, so three days of 20 kWh falls within the permitted range.",
+      "D) $6.75 — they exceeded the daily allowance by 5 kWh each day, giving 15 kWh of excess usage across the stay, billed at $0.45 per kWh."
     ],
-    answer: 'C) They will be charged an additional $0.45 per kilowatt-hour at checkout.',
-    method: 'The listing states: "Any usage exceeding this is billed at $0.45 per kWh upon checkout." Options A, B, and D describe consequences not mentioned in the listing.'
+    answer: "D) $6.75 — they exceeded the daily allowance by 5 kWh each day, giving 15 kWh of excess usage across the stay, billed at $0.45 per kWh.",
+    method: "The listing allows 15 kWh per day; excess is billed at $0.45 per kWh at checkout. At 20 kWh/day, the guest exceeds the allowance by 5 kWh each day. Over 3 days: 5 × 3 = 15 kWh excess. 15 × $0.45 = $6.75. Option A arrives at the same dollar figure ($6.75) but calculates it incorrectly — billing 20 kWh total rather than 15 kWh of excess (i.e., it charges for the whole usage including the free allowance). Option B only charges for the first night's overage, which is not how a per-day billing system works. Option C misreads 'per day' as a weekly cap, which the listing does not state."
   },
   { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
-    question: 'Based on the neighbourhood description, which statement is most accurate?',
+    question: "The listing notes that the streets near the Innovation Hub 'remain quiet due to strict municipal noise ordinances' despite a high student population in the suburb. What tension does this detail resolve for a prospective guest?",
     options: [
-      'A) The area is consistently noisy at all hours due to the large student population.',
-      'B) The suburb lacks adequate public transport connections to the wider city.',
-      'C) It is a formerly industrial area undergoing gentrification with strong public transport links.',
-      'D) Greendale is a quiet rural district situated well outside the city centre.'
+      "A) It explains why the gentrification process in Greendale has been slower than in comparable suburbs.",
+      "B) It addresses a potential concern that the large student presence might translate into noise disturbance, clarifying that regulation prevents this.",
+      "C) It confirms that the university campus is not located within the immediate vicinity of the apartment.",
+      "D) It indicates that guests are legally obligated to observe noise restrictions during their stay or face municipal fines."
     ],
-    answer: 'C) It is a formerly industrial area undergoing gentrification with strong public transport links.',
-    method: 'The listing describes Greendale as "rapidly gentrifying" and "formerly industrial," with the Greendale Interchange connecting to "four different train lines." Noise is noted to be controlled by ordinances, directly contradicting Option A. Options B and D misrepresent the description.'
+    answer: "B) It addresses a potential concern that the large student presence might translate into noise disturbance, clarifying that regulation prevents this.",
+    method: "The listing first mentions a 'high student population' — a detail that might make a prospective guest worry about noise — then immediately qualifies it with the noise ordinance information. This structure is designed to pre-empt a concern the guest might form. Option A draws an unrelated conclusion about gentrification speed. Option C misreads the detail; the campus is mentioned as present in Greendale, not absent from the immediate area. Option D places a legal obligation on the guest, which is not what the listing states — the ordinance governs the broader area, not a guest's specific conduct."
   },
   { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
-    question: 'The apartment\'s internal layout can be physically reconfigured by the guest.',
+    question: "A guest arrives and wants to separate the bedroom from the workspace to create two distinct areas. Based on the listing, this is possible.",
     options: ['True', 'False'],
     answer: 'True',
-    method: 'The listing states: "The space is dynamic; walls can be retracted to change a bedroom into a workspace." This confirms that the internal layout can be altered by the guest.'
+    method: "The listing states: 'The space is dynamic; walls can be retracted to change a bedroom into a workspace.' The ability to retract walls implies they can also be extended or repositioned — the dynamic configuration allows the guest to separate the spaces as desired."
   },
   { group: 'L32', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL32,
-    question: 'Guests are permitted to cook using gas-powered appliances in the kitchen.',
+    question: "A guest who planned to bring a portable gas camping stove for cooking can use it in the apartment's kitchenette.",
     options: ['True', 'False'],
     answer: 'False',
-    method: 'The listing specifies a "Kitchenette with induction cooktop (no open flames)." The explicit note "no open flames" means gas-powered cooking is not permitted.'
+    method: "The listing specifies the kitchenette has an 'induction cooktop (no open flames).' A gas camping stove produces an open flame, which is explicitly prohibited. The prohibition is absolute — there is no exception for portable or guest-owned appliances."
   },
 
   // ── Set 23 (Property Listing): The Transit Exchange Apartment ──────────────
   { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
-    question: 'What is the host\'s explicit advice to guests regarding personal vehicles?',
+    question: "A guest drives to the apartment and wants to park their car nearby during a 5-night stay. Which statement best describes what the listing tells them?",
     options: [
-      'A) Bring a personal vehicle as it is the most convenient way to explore the area.',
-      'B) Use the public parking garage located approximately 1km from the property.',
-      'C) Do not bring a vehicle, due to severe local traffic congestion and no on-site parking.',
-      'D) Arrange a private taxi service through the property\'s 24/7 kiosk.'
+      "A) On-site parking is available at an additional nightly fee arranged through the 24/7 self-check-in kiosk.",
+      "B) The host advises strongly against bringing a vehicle, and any parking would require travelling over 1 km to the nearest public garage.",
+      "C) Street parking is available within the immediate area, though the host does not guarantee a space.",
+      "D) The nearest parking garage is 500 metres away and is recommended by the host for guests who drive."
     ],
-    answer: 'C) Do not bring a vehicle, due to severe local traffic congestion and no on-site parking.',
-    method: 'The listing states: "The host strongly advises against bringing a vehicle as the local traffic congestion is severe, and the nearest public parking garage is over 1km away." The garage is mentioned as an additional reason to avoid driving, not as a recommendation. Option D is not supported by the text.'
+    answer: "B) The host advises strongly against bringing a vehicle, and any parking would require travelling over 1 km to the nearest public garage.",
+    method: "The listing is explicit: 'There is zero parking provided. The host strongly advises against bringing a vehicle as the local traffic congestion is severe, and the nearest public parking garage is over 1km away.' Option A invents on-site parking — the listing states zero parking is provided. Option C invents street parking not mentioned in the listing. Option D understates the distance (500 m vs. over 1 km) and misrepresents the garage as a host recommendation when the host actually advises against driving altogether."
   },
   { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
-    question: 'What makes this apartment particularly suited to a specific type of traveller?',
+    question: "The listing describes the apartment as 'designed for the traveller who values efficiency.' Which combination of features best supports this characterisation?",
     options: [
-      'A) It is a luxurious and completely silent property ideal for relaxation.',
-      'B) It is positioned directly above a railway terminus, providing immediate access to the train network.',
-      'C) It is situated in a quiet residential suburb away from urban activity.',
-      'D) It is specifically designed to accommodate large groups with shared amenities.'
+      "A) The standing desk with dual monitors and the washer/dryer combo, which cater to guests who need to work and manage laundry during longer stays.",
+      "B) The 24/7 self-check-in kiosk and the location directly above the railway terminus, enabling arrival and departure without waiting for a host or travelling to the station.",
+      "C) The sound-engineered unit and the high-end convenience stores nearby, which allow guests to sleep and eat without leaving the immediate precinct.",
+      "D) The fully equipped kitchen and the 20% weekly discount, which make the apartment cost-effective for travellers who prefer to cook their own meals."
     ],
-    answer: 'B) It is positioned directly above a railway terminus, providing immediate access to the train network.',
-    method: 'The listing opens: "Located directly above the West Central Railway Terminus, this apartment is designed for the traveller who values efficiency." The title also references "30 Seconds to the Platform." Options A, C, and D are contradicted or unsupported by the listing.'
+    answer: "B) The 24/7 self-check-in kiosk and the location directly above the railway terminus, enabling arrival and departure without waiting for a host or travelling to the station.",
+    method: "The concept of 'efficiency' in this listing is primarily about transit speed and frictionless access. The subtitle ('30 Seconds to the Platform') and the 24/7 self-check-in kiosk directly minimise waiting and travel time. These features together define the apartment's core value proposition for the efficiency-focused traveller. Option A is valid as a work-travel convenience but does not specifically support the transit efficiency framing. Option C conflates noise management and food access with efficiency, which is a stretch. Option D focuses on cost-efficiency rather than time-efficiency, which is a different concept."
   },
   { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
-    question: 'The apartment is completely free from all noise and vibration from the railway below.',
+    question: "A guest who is a light sleeper wants to know if they will be disturbed during the night. Based on the listing, platform noise from the railway will not be an issue, but some disturbance from freight trains is possible.",
     options: ['True', 'False'],
-    answer: 'False',
-    method: 'The listing states the unit is "sound-engineered to block out platform noise, though light vibrations from heavy freight trains passing at night may be felt." The qualification "though light vibrations…may be felt" confirms the property is not entirely free from railway disturbance.'
+    answer: 'True',
+    method: "The listing states the unit is 'sound-engineered to block out platform noise' — confirming platform noise is handled — 'though light vibrations from heavy freight trains passing at night may be felt.' This two-part disclosure is precisely what the statement summarises: platform noise addressed, freight vibration possible."
   },
   { group: 'L33', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxL33,
-    question: 'Guests can access a large supermarket within a short walk of the property.',
+    question: "A guest arriving late at night needs to buy groceries for breakfast. They will find at least one option for purchasing food within 500 metres of the apartment.",
     options: ['True', 'False'],
-    answer: 'False',
-    method: 'The listing states: "There are no major supermarkets in the immediate 500-metre radius." Nearby options are limited to "high-end grab-and-go convenience stores and a 24-hour pharmacy" — not a major supermarket.'
+    answer: 'True',
+    method: "The listing states there are no major supermarkets within 500 metres, but it does mention 'several high-end grab-and-go convenience stores and a 24-hour pharmacy' in the neighbourhood. At least one of these food-purchasing options is within the immediate area, even if a full supermarket is not. The statement is true — the guest will find an option, even if it is limited."
   },
 
   // ── Set 34: One Nation / MAGA influence ──────────────────────────────────────
   { group: 'L34', type: 'multiple_choice', category: 'Real Articles', context: ctxL34,
-    question: 'What is the primary objective of this article?',
+    question: "The article notes that polling found 'approximately half of One Nation supporters considered themselves broadly pro-choice.' Why does the author include this polling data?",
     options: [
-      'A) To report on the legislative success of anti-abortion laws.',
-      'B) To argue that Australian politics is becoming influenced by American political trends.',
-      'C) To provide a history of One Nation\'s internal policy shifts.',
-      'D) To compare abortion policies in Australia versus the US.'
+      "A) To suggest that One Nation's leadership should reverse its anti-abortion stance to align with the majority of its voters.",
+      "B) To demonstrate that the party's anti-abortion shift is being driven by external ideological influences rather than by demand from its own voter base.",
+      "C) To argue that Australian voters broadly oppose abortion access across all major political parties.",
+      "D) To show that the Liberal Party's collapse created a voter vacuum that One Nation has filled with socially conservative policy."
     ],
-    answer: 'B) To argue that Australian politics is becoming influenced by American political trends.',
-    method: 'The article\'s central argument is about transnational political influence — specifically, how MAGA-aligned strategies from the US are shaping Australian minor party politics. Option A is too narrow (no legislation is passed), C focuses on internal party history rather than the broader argument, and D is a comparison article the author is not writing.'
+    answer: "B) To demonstrate that the party's anti-abortion shift is being driven by external ideological influences rather than by demand from its own voter base.",
+    method: "The polling data immediately follows the claim that the anti-abortion turn 'does not appear to reflect the views of One Nation's own voter base.' The function of the statistic is to provide evidence for this claim — the shift is coming from somewhere other than grassroots pressure. Option A goes further than the article argues; the author is not issuing a prescription, only describing a disconnect. Option C overstates the polling data, which concerns only One Nation supporters. Option D is a separate point about the South Australian election, not what the polling data establishes."
   },
 
   // ── Set 35: Trump MMA fight cage metaphor ─────────────────────────────────────
   { group: 'L35', type: 'multiple_choice', category: 'Real Articles', context: ctxL35,
-    question: "What does the 'MMA fight cage' metaphor primarily imply?",
+    question: "The article notes that the UFC event 'fell on Trump's birthday rather than on the actual date of American independence.' The author describes this timing as 'the most revealing detail of all.' What does the author imply by this?",
     options: [
-      'A) A plan to host sports events at the White House.',
-      'B) That politics has shifted to spectacle and a \'winner-take-all\' mentality.',
-      'C) The administration is prioritising combat training for staff.',
-      'D) The White House is being renovated for security purposes.'
+      "A) The administration simply made a scheduling error by staging a patriotic event on the wrong date.",
+      "B) The conflation of national celebration with personal commemoration reveals a presidency that frames national identity through the lens of one individual's glorification.",
+      "C) Trump's birthday is itself a public holiday in the United States, making the choice of date appropriate.",
+      "D) The timing reveals that the administration prioritises sporting spectacle over traditional forms of political ceremony."
     ],
-    answer: "B) That politics has shifted to spectacle and a 'winner-take-all' mentality.",
-    method: 'The article uses the fight cage as political metaphor, not literal reporting. The key quote — "political discourse has shifted toward spectacle and confrontation" — confirms the author is analysing symbolism and communication style. Options A, C, and D treat the cage as a literal object rather than a rhetorical device.'
+    answer: "B) The conflation of national celebration with personal commemoration reveals a presidency that frames national identity through the lens of one individual's glorification.",
+    method: "The article explicitly calls the birthday/independence date conflation 'the most revealing detail' — stronger language than any other in the piece. The author's thesis is that staging combat spectacle at the White House signals a winner-takes-all conception of governance. Holding a national celebration on the president's birthday rather than Independence Day is the ultimate expression of this: the nation's story becomes the president's personal story. Option A dismisses it as error, which contradicts 'most revealing.' Option C is factually incorrect; Trump's birthday is not a public holiday. Option D is partially true but misses the deeper implication about the fusion of personal and national identity."
   },
 
   // ── Set 36: Male primary school teachers ─────────────────────────────────────
   { group: 'L36', type: 'multiple_choice', category: 'Real Articles', context: ctxL36,
-    question: 'What does the author suggest about the societal perception of this issue?',
+    question: "The article describes a 'self-reinforcing cycle' in which low male representation makes it harder for the next generation of male teachers to imagine themselves in the profession. What type of problem does this framing suggest the gender imbalance is?",
     options: [
-      'A) There is universal consensus that it is irrelevant.',
-      'B) It is solely due to a lack of interest from men.',
-      'C) The issue is complex and linked to societal stereotypes about gendered work.',
-      'D) The government has already resolved the gender balance in teaching.'
+      "A) A problem caused primarily by low wages, which can be fixed by raising teacher salaries.",
+      "B) A purely individual perception problem that targeted recruitment advertising can fully resolve.",
+      "C) A structural problem that compounds over time and cannot be solved through recruitment alone, because the conditions that discourage men from entering the profession are reproduced by the absence of men in it.",
+      "D) A problem limited to primary school teaching, with no parallel in other female-dominated caring professions."
     ],
-    answer: 'C) The issue is complex and linked to societal stereotypes about gendered work.',
-    method: 'The author explicitly frames the gender imbalance as a structural issue rooted in stereotypes that classify caring work as feminine. Option A is contradicted by the debate the article describes. Option B is an oversimplification the author argues against. Option D is unsupported — no resolution is mentioned.'
+    answer: "C) A structural problem that compounds over time and cannot be solved through recruitment alone, because the conditions that discourage men from entering the profession are reproduced by the absence of men in it.",
+    method: "The 'self-reinforcing cycle' framing positions the problem as systemic: low representation perpetuates the cultural perception that men do not belong in the profession, which deters future entry, which sustains low representation. This is the definition of a structural problem that requires addressing deep cultural drivers, not just surface-level recruitment. Option A highlights salary, which the article mentions as one factor among many — not the only or primary cause. Option B is explicitly rejected by the article, which says most researchers favour 'addressing the deeper cultural drivers, rather than treating recruitment in isolation.' Option D contradicts the article's discussion of broader societal attitudes about gendered caring work."
   },
 
   // ── Set 37: Kerbside parking ──────────────────────────────────────────────────
   { group: 'L37', type: 'multiple_choice', category: 'Real Articles', context: ctxL37,
-    question: "What is the author's primary argument concerning kerbside parking?",
+    question: "The author argues that 'free parking is not free to the city — it simply redistributes the cost onto everyone who uses the street, whether or not they arrived by car.' What economic principle does this argument invoke?",
     options: [
-      'A) It is a vital service that should be expanded.',
-      'B) It prioritises private vehicle storage over public space utility.',
-      'C) It is the most cost-effective solution for city congestion.',
-      'D) It has no impact on urban walkability.'
+      "A) That subsidised services are inherently inefficient because they attract more users than the infrastructure can support.",
+      "B) That a zero price conceals a real cost that is borne by the general public, making kerbside parking an invisible subsidy to drivers funded by all street users.",
+      "C) That drivers who park on public streets should be taxed at a higher rate to fund public transport alternatives.",
+      "D) That free parking reduces congestion by eliminating the time drivers spend searching for paid spaces."
     ],
-    answer: 'B) It prioritises private vehicle storage over public space utility.',
-    method: 'The author\'s central argument is that publicly owned street space is being handed over to private vehicle storage at the expense of pedestrians, cyclists, and alternative uses. Option A directly opposes the article\'s argument. Option C misrepresents the author\'s position — kerbside parking is described as distorting transport behaviour, not solving congestion. Option D is contradicted by the article\'s explicit claim that pedestrians lose footpath width.'
+    answer: "B) That a zero price conceals a real cost that is borne by the general public, making kerbside parking an invisible subsidy to drivers funded by all street users.",
+    method: "The author's argument is that pricing kerbside space at zero does not eliminate its cost — it transfers that cost to the collective: lost alternative uses, increased congestion from circling drivers, reduced road width for others. 'Not free to the city' means the cost exists but is diffused invisibly across all street users, effectively subsidising drivers at the expense of everyone else. Option A is about overconsumption due to low price — partially implied but not the specific principle the quoted sentence invokes. Option C introduces a tax proposal not made in the article. Option D directly contradicts the text, which says zero-priced parking increases congestion because drivers circle for spots."
   },
 
   // ── Set 38: Freebirth ─────────────────────────────────────────────────────────
   { group: 'L38', type: 'multiple_choice', category: 'Real Articles', context: ctxL38,
-    question: "What does the text suggest is the main driver for women choosing 'freebirth'?",
+    question: "The article states that researchers 'caution against treating freebirth as a single phenomenon with a single explanation.' What implication does this caution carry for public health messaging about freebirth?",
     options: [
-      'A) A desire for medical intervention.',
-      'B) Distrust of clinical environments and a desire for bodily autonomy.',
-      'C) Lack of available hospitals.',
-      'D) A recommendation from their GP.'
+      "A) Public health authorities should avoid the topic of freebirth entirely to prevent inadvertently endorsing the practice.",
+      "B) Effective communication about freebirth risks must account for the diversity of motivations — including those based on positive body confidence, not just distrust or limited access.",
+      "C) Because motivations are varied, no evidence-based intervention can reduce freebirth rates, making the issue intractable.",
+      "D) Only women who choose freebirth due to distrust of the medical system represent a public health concern; other motivations pose no risk."
     ],
-    answer: 'B) Distrust of clinical environments and a desire for bodily autonomy.',
-    method: 'The text explicitly states that the primary drivers are "a deep distrust of clinical birth environments and a strong desire for bodily autonomy." Option A is the opposite of the article\'s finding. Option C is ruled out — the text clarifies the choice is not driven by lack of access. Option D contradicts the framing of freebirth as a rejection of medical authority.'
+    answer: "B) Effective communication about freebirth risks must account for the diversity of motivations — including those based on positive body confidence, not just distrust or limited access.",
+    method: "The article describes multiple distinct motivations: previous birth trauma and distrust, lack of access and cost barriers, and a positive view of birth as a natural process not requiring medical management. If messaging treats all freebirth as driven by fear or ignorance, it will fail to reach women whose choice is grounded in confidence rather than distrust. Researchers' caution explicitly targets this one-size approach. Option A is not argued — the article advocates for better engagement, not silence. Option C misreads the caution as pessimism about intervention; the article suggests addressing 'structural failures in maternity care.' Option D creates an unwarranted safety distinction between motivational types not made in the text."
   },
 
   // ── Set 39: AI agents vs chatbots ────────────────────────────────────────────
   { group: 'L39', type: 'multiple_choice', category: 'Real Articles', context: ctxL39,
-    question: "Why does the author differentiate between 'chatbots' and 'AI agents'?",
+    question: "The article warns that 'the more useful an agent becomes, the more it controls what information a customer receives and which products or services are recommended to them.' What concern does this observation raise?",
     options: [
-      'A) Chatbots are faster but agents are cheaper.',
-      'B) Agents are capable of completing autonomous tasks rather than just responding to text.',
-      'C) There is no meaningful difference between the two.',
-      'D) AI agents are not yet legal for use in business.'
+      "A) That AI agents will eventually replace human customer service workers entirely, creating unemployment across the service sector.",
+      "B) That the growing power of AI agents creates a structural conflict of interest: the platform that owns the agent has a financial incentive to shape the agent's recommendations in its own favour rather than the customer's.",
+      "C) That AI agents are not yet accurate enough to provide reliable recommendations, exposing businesses to legal liability for incorrect advice.",
+      "D) That customers will become overly dependent on AI agents, losing the ability to make independent purchasing decisions."
     ],
-    answer: 'B) Agents are capable of completing autonomous tasks rather than just responding to text.',
-    method: 'The article\'s core distinction is between conversation (chatbots) and action (agents). The text states agents can "plan, make decisions, and complete multi-step tasks autonomously" — fundamentally different from answering a query. Option A introduces a speed/cost comparison not made in the text. Option C contradicts the article\'s entire premise. Option D is fabricated — no legal restriction is mentioned.'
+    answer: "B) That the growing power of AI agents creates a structural conflict of interest: the platform that owns the agent has a financial incentive to shape the agent's recommendations in its own favour rather than the customer's.",
+    method: "The article states that every AI agent interaction generates 'a substantial informational advantage for whoever owns the platform' and asks 'in whose interests they operate.' This is a governance and conflict-of-interest concern: the agent's usefulness to the customer depends on it being neutral, but the platform owner profits from shaping its outputs. Option A describes job displacement — a legitimate concern but not what this specific passage is warning about. Option C raises an accuracy/liability issue not discussed here. Option D describes a dependency concern the article does not raise."
   },
 
   // ── Set 40: Sustainable wardrobe maths ───────────────────────────────────────
   { group: 'L40', type: 'multiple_choice', category: 'Real Articles', context: ctxL40,
-    question: "What is the primary implication of 'maths' in the context of sustainable clothing?",
+    question: "The article argues that 'buying an ethically produced garment that is worn twice and donated does not constitute sustainable consumption, no matter how responsibly it was made.' What assumption about sustainable fashion does this claim challenge?",
     options: [
-      'A) Calculating the exact price of fabric.',
-      'B) Balancing usage frequency against environmental cost.',
-      'C) Determining the speed of fashion trends.',
-      'D) Measuring the weight of garments.'
+      "A) The assumption that sustainable fashion is too expensive for most consumers to afford.",
+      "B) The assumption that a garment's production ethics and certifications are sufficient indicators of its sustainability, regardless of how often it is actually worn.",
+      "C) The assumption that donating clothing to charity is harmful to the environment because it extends garment life unnecessarily.",
+      "D) The assumption that synthetic fabrics are always less sustainable than natural fibres, regardless of usage frequency."
     ],
-    answer: 'B) Balancing usage frequency against environmental cost.',
-    method: 'The article frames sustainability as a ratio: environmental impact divided by number of uses. The "maths" refers to this calculation — how often a garment is worn relative to what it cost the environment to produce. Option A confuses environmental cost with financial price. Options C and D introduce concepts (trend speed, weight) that are not discussed in the text.'
+    answer: "B) The assumption that a garment's production ethics and certifications are sufficient indicators of its sustainability, regardless of how often it is actually worn.",
+    method: "The article explicitly states that 'the production ethics and fabric certification of the cheap item are irrelevant' to the sustainability calculation if it is barely worn, and symmetrically that an ethically made garment worn only twice 'does not constitute sustainable consumption.' This directly challenges the fashion industry's habit of marketing sustainability through production credentials — certifications, ethical sourcing, organic materials — rather than through use rates. Option A introduces affordability, which the article does not discuss in this context. Option C misreads the donation example; the article is not arguing against donation, but against using donation as a proxy for sustainable consumption. Option D is a specific application of the use-rate logic but is not the broader assumption the quoted sentence is challenging."
   },
 
   // ── Set 41: Healthy soil and heat ────────────────────────────────────────────
   { group: 'L41', type: 'multiple_choice', category: 'Real Articles', context: ctxL41,
-    question: "What is the author's tone regarding the state of soil health?",
+    question: "The article describes a 'feedback loop' in which soil degradation raises surface temperatures, which suppresses plant growth, which reduces organic matter returned to the soil, which further degrades soil quality. What does the use of 'feedback loop' imply about the challenge of reversing this process?",
     options: [
-      'A) Optimistic and unconcerned.',
-      'B) Urgent, warning of the consequences of neglect.',
-      'C) Indifferent to climate data.',
-      'D) Confused by the scientific findings.'
+      "A) Reversing the process is straightforward, since improving one element of the loop — such as adding organic matter — will automatically repair all others in sequence.",
+      "B) The loop is self-reinforcing, meaning that inaction allows the problem to worsen progressively and that breaking the cycle requires active, sustained intervention rather than a single corrective step.",
+      "C) The loop can only be broken through government policy, since individual farmers lack the resources to implement the required changes.",
+      "D) The feedback loop refers to a natural seasonal cycle that resolves itself once temperatures drop in autumn, making the damage temporary."
     ],
-    answer: 'B) Urgent, warning of the consequences of neglect.',
-    method: 'The text describes a "narrowing window" for action, a "feedback loop" accelerating harm, and consequences that are "already visible." These word choices signal urgency and alarm. Option A is the opposite of the article\'s framing. Option C is contradicted by the author\'s direct engagement with climate science. Option D mischaracterises the author\'s position — the findings are presented clearly, not with confusion.'
+    answer: "B) The loop is self-reinforcing, meaning that inaction allows the problem to worsen progressively and that breaking the cycle requires active, sustained intervention rather than a single corrective step.",
+    method: "A feedback loop is a mechanism where each consequence worsens the initial cause — degraded soil → higher temperatures → less plant matter → more degradation. This self-reinforcing dynamic means the problem intensifies if unaddressed. The article notes that 'practical farming methods can restore some of the lost buffering capacity over time' but requires 'sustained effort and a shift away from' existing norms, confirming that intervention is possible but not quick or automatic. Option A misreads the loop as a chain of easy sequential fixes. Option C is not supported — the article mentions farming methods as a solution, not exclusively government policy. Option D contradicts the article's characterisation of the harm as ongoing and already manifested in 'failed crops, increased wildfire susceptibility, and ecosystem collapse.'"
   },
 
   // ── Set 42: Fuel tax ─────────────────────────────────────────────────────────
   { group: 'L42', type: 'multiple_choice', category: 'Real Articles', context: ctxL42,
-    question: "What is the author's argument regarding the fuel tax policy?",
+    question: "The article describes the fuel excise cut as 'regressive.' In the context of the article's argument, what does 'regressive' mean?",
     options: [
-      'A) It is the best way to support low-income families.',
-      'B) It is an unsustainable policy and better, more targeted alternatives exist.',
-      'C) Fuel tax should be increased immediately.',
-      'D) The policy has no impact on the budget.'
+      "A) The policy is unpopular because it was implemented without sufficient public consultation.",
+      "B) The policy delivers proportionally greater benefits to higher-income households than to lower-income households, reversing the usual aim of cost-of-living relief.",
+      "C) The policy was introduced retroactively, applying to fuel already purchased before the announcement.",
+      "D) The policy is environmentally regressive because it subsidises fossil fuel use at a time when emissions reduction is a national priority."
     ],
-    answer: 'B) It is an unsustainable policy and better, more targeted alternatives exist.',
-    method: 'The author argues that cutting fuel excise is fiscally costly, benefits higher-income earners disproportionately, and is ultimately unsustainable. A fairer alternative — targeted income support — is explicitly proposed. Option A directly contradicts the author\'s position. Options C and D introduce claims not made in the text.'
+    answer: "B) The policy delivers proportionally greater benefits to higher-income households than to lower-income households, reversing the usual aim of cost-of-living relief.",
+    method: "The article uses 'regressive' in its economic policy sense: a policy that provides larger absolute or proportional benefits to those with higher incomes. The article states that 'higher-income households, who on average drive more kilometres and own more vehicles, receive a larger absolute benefit from the cut than lower-income households.' This is the definition of a regressive redistribution. Option A introduces a procedural/political meaning not used in the article. Option C introduces a temporal meaning (retroactive) not discussed. Option D describes an environmental dimension the article does raise separately, but this is not the meaning of 'regressive' in context — the article defines it through the distributional consequences, not the climate impact."
   },
 
   // ── Set 43: JobSeeker reforms ─────────────────────────────────────────────────
   { group: 'L43', type: 'multiple_choice', category: 'Real Articles', context: ctxL43,
-    question: 'How does the author characterize the recent JobSeeker reforms?',
+    question: "Welfare advocates responded to the JobSeeker reforms with 'cautious welcome.' What does the qualifier 'cautious' signal about their position?",
     options: [
-      'A) Complete and final.',
-      'B) A positive but insufficient measure.',
-      'C) A total failure.',
-      'D) Economically disastrous.'
+      "A) They oppose the reforms on principle and are using diplomatic language to avoid public conflict with the government.",
+      "B) They endorse the direction of the reforms while explicitly reserving judgement — noting that the scale falls short of the commissioned review's recommendations and that key issues remain unaddressed.",
+      "C) They are uncertain whether the reforms will pass parliament and are waiting to see the final legislation before committing to a position.",
+      "D) They welcome the reforms fully but are cautious about celebrating prematurely, given the government's past record of announcing but not implementing policy changes."
     ],
-    answer: 'B) A positive but insufficient measure.',
-    method: 'The author explicitly describes the reforms as meaningful in direction but limited in scale — a "welcome step" that falls short of a radical rebuild. Option A is contradicted by the critique that more is needed. Options C and D overstate the negative assessment; the author acknowledges real progress, just not enough.'
+    answer: "B) They endorse the direction of the reforms while explicitly reserving judgement — noting that the scale falls short of the commissioned review's recommendations and that key issues remain unaddressed.",
+    method: "The article explains exactly what the 'caution' consists of: 'acknowledging that the direction of travel is right — more tailored support, less one-size-fits-all processing — they have nonetheless been clear that the scale of the changes falls well short of what the same review recommended.' The 'welcome' captures endorsement of direction; the 'cautious' captures dissatisfaction with scale and scope. Option A reads 'cautious' as concealed opposition, but the article makes clear advocates genuinely welcome the direction. Option C introduces a parliamentary uncertainty not mentioned in the text. Option D invents a past-record concern not discussed in the article."
   },
 
   // ── Set 44: Job insecurity ────────────────────────────────────────────────────
   { group: 'L44', type: 'multiple_choice', category: 'Real Articles', context: ctxL44,
-    question: 'What does the text suggest about managing job insecurity?',
+    question: "The article states that job insecurity 'is not purely a personal failing or a matter of individual temperament.' What does this qualification add to the article's advice on managing insecurity?",
     options: [
-      'A) It is purely an individual problem.',
-      'B) There are proven, practical strategies to manage the psychological impact.',
-      'C) There is nothing that can be done.',
-      'D) One should immediately change careers.'
+      "A) It suggests that individuals should not bother developing personal coping strategies since the problem originates in structural factors beyond their control.",
+      "B) It prevents readers from interpreting the practical strategies described as a suggestion that those who feel insecure simply lack resilience, by acknowledging that workplace culture and labour market structures also shape the experience.",
+      "C) It implies that job insecurity is entirely a political problem that can only be solved through legislative reform, not individual action.",
+      "D) It argues that highly resilient individuals never experience job insecurity, regardless of the external conditions they face."
     ],
-    answer: 'B) There are proven, practical strategies to manage the psychological impact.',
-    method: 'The text identifies specific evidence-based strategies — reframing control, building networks, developing skills, and seeking social support — that buffer the psychological effects of job insecurity. Option A is qualified by the text, which notes structural factors also contribute. Option C is directly contradicted. Option D is not suggested anywhere in the passage.'
+    answer: "B) It prevents readers from interpreting the practical strategies described as a suggestion that those who feel insecure simply lack resilience, by acknowledging that workplace culture and labour market structures also shape the experience.",
+    method: "The article walks a careful line: it presents evidence-based individual strategies while simultaneously stating that the problem is not 'purely' individual. This qualification avoids victim-blaming — the insecurity is real and structurally produced, not just a failure of personal attitude. Option A misreads the qualification as an argument against individual action — the article explicitly states 'proven strategies exist that can meaningfully reduce the psychological burden.' Option C similarly goes too far in the structural direction; the article endorses both individual and structural responses. Option D directly contradicts the article, which begins by stating that job insecurity can be 'as psychologically damaging as unemployment itself' — it does not say resilient people are immune."
   },
 
   // ── Set 45: Forever renting ───────────────────────────────────────────────────
   { group: 'L45', type: 'multiple_choice', category: 'Real Articles', context: ctxL45,
-    question: 'What is the main lesson the author draws from international rental markets?',
+    question: "The article describes Vienna, where 'residents raise families, age in place, and build community ties without the precariousness that characterises renting in Australian cities.' What does the contrast between Vienna and Australia suggest is the key variable explaining the difference in rental experience?",
     options: [
-      'A) Renting is always cheaper than buying.',
-      'B) Permanent renting can be normalised with the right policy framework.',
-      'C) Renting is only for the wealthy.',
-      'D) Europe has the highest housing prices in the world.'
+      "A) Austria has a stronger economy than Australia, enabling the government to fund more social housing.",
+      "B) Viennese renters are culturally less attached to homeownership, making them more willing to rent long-term regardless of policy settings.",
+      "C) The policy framework — including subsidised housing, rent support, and long-term security of tenure — determines whether renting can be a stable, dignified option rather than a precarious one.",
+      "D) Vienna's rental success is due to its low population density, which reduces demand pressure and makes long-term rental leases easier for landlords to offer."
     ],
-    answer: 'B) Permanent renting can be normalised with the right policy framework.',
-    method: 'The central argument is that cities like New York, Berlin, and Amsterdam demonstrate that long-term renting is viable and dignified when supported by strong tenant protections and quality rental housing — making the policy framework the key variable. Option A is not argued. Option C contradicts the article\'s framing of renting as a broad social norm. Option D is not mentioned.'
+    answer: "C) The policy framework — including subsidised housing, rent support, and long-term security of tenure — determines whether renting can be a stable, dignified option rather than a precarious one.",
+    method: "The article's central argument is that the difference between Vienna and Australian cities is not cultural or demographic but structural: policy choices about social housing, subsidies, and tenant protections shape the quality of rental experience. The article explicitly states that 'long-term renting can be secure and dignified — but only if the policy settings are deliberately designed to make it so.' Option A attributes the difference to economic capacity, which the article does not argue. Option B attributes it to cultural attitudes toward ownership — the article treats Australian ownership culture as an obstacle to policy reform, not as the variable that explains Vienna's success. Option D introduces population density as a variable not discussed in the text."
   },
 
   // ── Set 46: Free power scheme ─────────────────────────────────────────────────
   { group: 'L46', type: 'multiple_choice', category: 'Real Articles', context: ctxL46,
-    question: "What is the core question raised about the 'free power' scheme?",
+    question: "The article suggests that 'households who cannot shift their usage may end up subsidising the savings of those who can.' What mechanism would produce this outcome?",
     options: [
-      'A) Whether it is technically possible.',
-      'B) Whether the benefits are distributed equitably across the population.',
-      'C) If power companies can afford it.',
-      'D) If it encourages more overall power usage.'
+      "A) The government taxes low-income households at a higher rate to fund the solar rebates provided to high-income homeowners.",
+      "B) Retailers recovering the cost of free-hour electricity through higher tariffs at other times or for other customer segments, meaning households unable to use the free window pay more to cover the discount others receive.",
+      "C) Smart meter installation fees are passed on to all electricity users, including those who never benefit from the free-power scheme.",
+      "D) High-income households apply for government grants to install solar panels, reducing supply costs and raising prices for non-solar households."
     ],
-    answer: 'B) Whether the benefits are distributed equitably across the population.',
-    method: 'The article\'s central concern is equity — that the scheme\'s practical benefits flow to households with the flexibility and appliances to use off-peak windows, while renters, shift workers, and low-income households gain little. Option A is not raised — technical feasibility is assumed. Options C and D are not the focus of the analysis presented.'
+    answer: "B) Retailers recovering the cost of free-hour electricity through higher tariffs at other times or for other customer segments, meaning households unable to use the free window pay more to cover the discount others receive.",
+    method: "The article states: 'Retailers who offer free electricity during those hours must recover that cost somewhere. The most likely mechanisms are higher tariffs at other times of day, or increased prices for other customer segments.' If tariffs rise at other hours to recover the cost, households who use electricity outside the free window — shift workers, renters without smart appliances — effectively pay more so that flexible, well-resourced households can save. Option A invents a government taxation mechanism not described in the article. Option C mentions smart meter installation fees, which the article does not discuss as a cost-transfer mechanism. Option D describes a separate solar-grant mechanism not mentioned in the passage."
   },
 
   // ── Set 47: Trees and urban cooling ──────────────────────────────────────────
   { group: 'L47', type: 'multiple_choice', category: 'Real Articles', context: ctxL47,
-    question: 'What condition does the author place on urban cooling via greenery?',
+    question: "The article describes a study in Hong Kong where 'dense planting sometimes increased moisture in the air to a point where it partially offset the thermal benefit.' What principle does this finding illustrate?",
     options: [
-      'A) Any plant will work equally well.',
-      'B) The plants must be native to the area.',
-      'C) Only specific types of greenery provide effective cooling.',
-      'D) City planners must plant trees at night.'
+      "A) Urban greening programmes are ineffective in high-density cities and should be replaced with reflective surface materials.",
+      "B) The relationship between greenery and cooling is not linear — beyond a certain point in humid climates, additional planting can reduce rather than enhance the cooling effect.",
+      "C) Hong Kong's climate is so unusual that findings from studies conducted there cannot inform urban greening policy in other cities.",
+      "D) Dense tree canopies always produce worse cooling outcomes than sparse planting, regardless of local climate conditions."
     ],
-    answer: 'C) Only specific types of greenery provide effective cooling.',
-    method: 'The author explicitly states that cooling benefits depend on species selection, canopy density, water availability, and placement — and that not all greenery is equally effective. Option A directly contradicts this finding. Option B is too narrow; the text discusses species performance broadly, not just nativeness. Option D is not mentioned anywhere in the passage.'
+    answer: "B) The relationship between greenery and cooling is not linear — beyond a certain point in humid climates, additional planting can reduce rather than enhance the cooling effect.",
+    method: "The Hong Kong example is cited to illustrate the article's broader argument that 'more greenery was not automatically better' and that blanket policies of simply planting more trees can miss the mark without careful calibration to local climate. This demonstrates that the greenery-cooling relationship is non-linear and context-dependent. Option A generalises to a conclusion against urban greening altogether, which the article does not support. Option C incorrectly treats Hong Kong as an outlier that cannot inform other contexts — the article uses it as a general illustration. Option D overstates the Hong Kong finding by claiming dense canopies always perform worse, a claim not made in the text."
   },
 
   // ── Set 48: Heatwaves and older people ───────────────────────────────────────
   { group: 'L48', type: 'multiple_choice', category: 'Real Articles', context: ctxL48,
-    question: 'What is the primary finding regarding older demographics and heatwave safety?',
+    question: "The article notes that risk messaging which speaks to 'vulnerable people' in the abstract does not translate into personal risk perception for many older adults who do not identify with that category. What communication failure does this identify?",
     options: [
-      'A) They are more careful than younger groups.',
-      'B) They are less likely to adhere to established safety guidelines.',
-      'C) They are immune to heat exhaustion.',
-      'D) They do not receive heat warnings.'
+      "A) Public health authorities are not distributing heat warnings widely enough for older adults to encounter them.",
+      "B) Older adults have poor literacy skills that prevent them from understanding heat safety messaging.",
+      "C) Generic warnings that address a demographic category at arm's length fail to trigger the personal risk perception that motivates protective behaviour, because many older individuals do not see themselves as 'vulnerable.'",
+      "D) Heat warnings focus on outdoor workers rather than older adults, making the messaging irrelevant to the most at-risk group."
     ],
-    answer: 'B) They are less likely to adhere to established safety guidelines.',
-    method: 'The text states older people are "consistently less likely than younger age groups to follow established heat safety guidelines" despite being more physiologically vulnerable. Option A is the opposite of the finding. Option C is contradicted — older adults are described as among the most vulnerable. Option D is not argued; the issue is behavioural response, not warning receipt.'
+    answer: "C) Generic warnings that address a demographic category at arm's length fail to trigger the personal risk perception that motivates protective behaviour, because many older individuals do not see themselves as 'vulnerable.'",
+    method: "The article establishes that personal risk perception is 'a powerful predictor of protective behaviour' — people who believe they are personally at risk act. But abstract messaging about 'vulnerable people' fails because many older adults do not self-identify as vulnerable, creating a gap between the message's target and the reader's self-concept. This is a communication design failure, not a distribution or literacy problem. Option A misreads the issue — the article notes 30% of people miss warnings, but the 'most troubling' finding is that 41% of people who do see warnings don't act, which is the self-identification gap. Option B introduces literacy as a barrier not mentioned in the article. Option D invents an outdoor-worker focus not present in the text."
   },
 
   // ── Set 49: Sydney food bowl ──────────────────────────────────────────────────
   { group: 'L49', type: 'multiple_choice', category: 'Real Articles', context: ctxL49,
-    question: "How has urban development impacted Sydney's food production capacity?",
+    question: "The article states that the loss of Sydney's agricultural land 'is irreversible' — 'once the soil is sealed under concrete and the drainage altered — it is effectively gone.' What does this characterisation imply about planning decisions currently being made?",
     options: [
-      'A) It has improved soil quality in agricultural zones.',
-      'B) It has replaced agricultural zones, effectively consuming the food bowl.',
-      'C) It has had no measurable impact.',
-      'D) It has shifted food production into the CBD.'
+      "A) Current planning decisions are inconsequential because future technology will allow agricultural land to be recovered from beneath urban development.",
+      "B) Decisions made now about what to develop carry permanent consequences that cannot be corrected by future policy changes, making the current planning period uniquely consequential.",
+      "C) Planning authorities are already aware of the irreversibility and have put adequate protections in place to prevent further agricultural land loss.",
+      "D) The irreversibility applies only to vegetable-growing land; pastoral and livestock land can be recovered if development is reversed."
     ],
-    answer: 'B) It has replaced agricultural zones, effectively consuming the food bowl.',
-    method: 'The article describes farmland being rezoned and built over at a significant rate, with a substantial proportion of the food bowl already lost to urban sprawl. The metaphor of the city "devouring" its food bowl captures the irreversible nature of this loss. Options A, C, and D contradict or ignore the evidence presented.'
+    answer: "B) Decisions made now about what to develop carry permanent consequences that cannot be corrected by future policy changes, making the current planning period uniquely consequential.",
+    method: "The article explicitly states that 'the decisions being made now about what to develop and what to protect will shape Sydney's food geography for centuries.' The irreversibility claim converts what might seem like a short-term planning trade-off into a permanent foreclosure of future options. Option A contradicts 'effectively gone' — the article makes no allowance for future technology recovering sealed land. Option C is directly contradicted by the article, which describes protections as systematically absent: 'agricultural zoning has been treated as provisional rather than permanent.' Option D introduces a distinction between land types not supported by the text."
   },
 
   // ── Set 50: El Niño ───────────────────────────────────────────────────────────
   { group: 'L50', type: 'multiple_choice', category: 'Real Articles', context: ctxL50,
-    question: 'What is the primary concern for Australia following an El Niño declaration?',
+    question: "The article states that 'the strength of the event does not reliably predict the severity of its impacts,' citing the 2002 El Niño as an example. What does this mean for how farmers and emergency services should respond to an El Niño declaration?",
     options: [
-      'A) Increased flooding across all states.',
-      'B) Changes to weather patterns that could impact agriculture and disaster risk.',
-      'C) A widespread decrease in temperature.',
-      'D) The end of the summer season.'
+      "A) They should wait for a 'strong' El Niño to be declared before activating preparedness measures, since weak events rarely cause significant disruption.",
+      "B) They should respond to the declaration itself as a shift in probabilities that warrants action, rather than waiting to assess the event's ultimate strength before planning.",
+      "C) The unreliable relationship between strength and impact means El Niño declarations are not a reliable basis for planning decisions.",
+      "D) Only farmers in southern states need to respond, since the impacts of El Niño are confined to southern Australia."
     ],
-    answer: 'B) Changes to weather patterns that could impact agriculture and disaster risk.',
-    method: 'The text describes El Niño\'s effects as reduced rainfall, higher temperatures, drought risk, bushfire risk, and agricultural stress — all stemming from altered weather patterns. Option A is the opposite; El Niño is associated with drier conditions, not flooding. Options C and D contradict the described effects.'
+    answer: "B) They should respond to the declaration itself as a shift in probabilities that warrants action, rather than waiting to assess the event's ultimate strength before planning.",
+    method: "The article makes this point explicitly: El Niño 'shifts the odds in ways that prudent planning needs to account for,' regardless of event strength. The 2002 example shows that a weak event can be highly destructive — meaning waiting until a 'strong' classification emerges before acting is a false strategy. Option A is directly contradicted by the 2002 example: a weak event produced severe outcomes. Option C misreads the point; the unreliability of strength as a predictor makes early response based on the declaration (not strength) more important, not less. Option D is contradicted by the text, which describes effects across multiple Australian regions including the tropical north and southern states."
   },
 
   // ── Set 51: India/Pakistan heatwave ──────────────────────────────────────────
   { group: 'L51', type: 'multiple_choice', category: 'Real Articles', context: ctxL51,
-    question: 'What makes the heatwave in India and Pakistan particularly hazardous?',
+    question: "The article states that at a wet-bulb temperature of 35°C, 'a healthy adult at rest — doing nothing, in the shade — cannot survive for more than a few hours.' Why does the author specify that the person is 'healthy,' 'at rest,' and 'in the shade'?",
     options: [
-      'A) The combination of extreme temperature and high humidity.',
-      'B) The lack of public transport.',
-      'C) The suddenness of the event.',
-      'D) The lack of medical staff.'
+      "A) To show that the 35°C wet-bulb threshold is conservative and that most people can survive well above that level if they are physically fit.",
+      "B) To establish that the 35°C threshold represents the absolute physiological limit even under the most favourable possible conditions — meaning anyone working outdoors or already unwell faces a lower survival threshold.",
+      "C) To argue that people who are unhealthy, active, or in direct sunlight are personally responsible for heat-related deaths because they fail to take adequate precautions.",
+      "D) To suggest that the danger of wet-bulb temperatures only applies to people who are already medically compromised, not to healthy individuals in normal circumstances."
     ],
-    answer: 'A) The combination of extreme temperature and high humidity.',
-    method: 'The text explicitly states that the danger is compounded by the combination of extreme heat and high humidity, which prevents effective sweating and heat dissipation. The wet-bulb temperature concept is introduced to explain this combined effect. Options B, C, and D are not identified as primary hazards in the passage.'
+    answer: "B) To establish that the 35°C threshold represents the absolute physiological limit even under the most favourable possible conditions — meaning anyone working outdoors or already unwell faces a lower survival threshold.",
+    method: "By specifying the best-case scenario (healthy, resting, shaded), the article establishes 35°C as a floor — the minimum level at which survival is threatened when everything is as favourable as possible. This makes the threshold more alarming, not less: millions of people in India and Pakistan who work outdoors in direct sun while exerting themselves face conditions that become lethal at lower wet-bulb temperatures than 35°C. Option A reads the best-case framing as a sign of conservatism in the other direction — suggesting people can tolerate more — which inverts the author's point. Option C introduces a blame framing completely absent from the article. Option D directly contradicts the text, which establishes that even a healthy adult at rest cannot survive at this threshold."
   },
 
   // ── Set 52: Soccer player height ─────────────────────────────────────────────
   { group: 'L52', type: 'multiple_choice', category: 'Real Articles', context: ctxL52,
-    question: 'What does the text imply about athletic physical traits?',
+    question: "The article concludes that 'optimal physical characteristics are not universal; they are position-specific, role-dependent, and always moderated by technical skill and tactical intelligence.' Which of the following best describes what this conclusion implies for talent scouting in elite soccer?",
     options: [
-      'A) Taller is always better in soccer.',
-      'B) There is no correlation between height and performance.',
-      'C) Optimal physical traits vary based on position and role.',
-      'D) Only short players can be professional athletes.'
+      "A) Height should not be measured or considered in talent identification, since it has been shown to have no reliable relationship with soccer performance.",
+      "B) Scouts should evaluate physical attributes only in relation to the specific positional demands of the role being recruited for, and should not treat a single trait such as height as a universal indicator of potential.",
+      "C) Shorter players should be systematically preferred over taller players, since the article implies that agility and low centre of gravity are more relevant than aerial ability.",
+      "D) Technical skill alone determines performance at the elite level, making physical characteristics entirely irrelevant to recruitment decisions."
     ],
-    answer: 'C) Optimal physical traits vary based on position and role.',
-    method: 'The article\'s central argument is that the value of height in soccer is entirely position-dependent — beneficial for goalkeepers and defenders, less relevant or even disadvantageous for attackers and wide midfielders. Option A overstates the value of height. Option B understates the relevance of physical traits. Option D is not argued and contradicts the evidence of elite teams featuring varied body types.'
+    answer: "B) Scouts should evaluate physical attributes only in relation to the specific positional demands of the role being recruited for, and should not treat a single trait such as height as a universal indicator of potential.",
+    method: "The article's conclusion is position-specificity: height benefits some roles (goalkeeper, central defender) and is irrelevant or disadvantageous in others (wide midfield, attacking positions). The implication for scouting is that physical attributes must be evaluated relative to role requirements, not as universal measures of quality. Option A goes too far — the article says height is relevant for some positions, not that it should be ignored entirely. Option C overcorrects in the opposite direction; the article does not argue short players should be systematically preferred. Option D dismisses physical characteristics entirely, which the article contradicts by explaining how height is functionally important for aerial contests in defensive and goalkeeping roles."
   },
   // ── Set L53: Community Poster — Mulberry Creek ────────────────────────────
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
-    question: 'What is the purpose of this poster?',
+    question: "A reader argues: 'This poster is calling on MetroCorp to abandon the MetroLink freeway project altogether.' Is this an accurate reading of the poster's argument?",
     options: [
-      'A) To persuade MetroCorp not to go ahead with building the freeway.',
-      'B) To persuade people that the MetroLink freeway should not be built.',
-      'C) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
-      'D) To convince people that the problem with trucks in suburban areas is that they are noisy, polluting and dangerous.'
+      "A) Yes — the poster's title 'Stop the MetroLink Freeway' makes clear that residents want the entire project cancelled.",
+      "B) No — the poster specifically targets the location of the freeway entrance, calling for it to be moved, not for the freeway itself to be stopped.",
+      "C) Yes — the poster explicitly states that no freeway should be built in the Mulberry Creek area under any circumstances.",
+      "D) No — the poster is directed at the local council, not at MetroCorp, so it is asking a different authority to halt the project."
     ],
-    answer: 'C) To highlight the problems with the freeway entrance location and to persuade people to write to MetroCorp.',
-    method: "The poster's primary goal is to advocate for a change in the freeway's placement ('move the new freeway entrance') by directing residents to contact MetroCorp ('Have your say!! Email MetroCorp...'). Options A and B are too broad — the poster does not oppose the freeway itself, only the entrance location. Option D focuses on truck problems generally, not the poster's specific call to action."
+    answer: "B) No — the poster specifically targets the location of the freeway entrance, calling for it to be moved, not for the freeway itself to be stopped.",
+    method: "The poster's key demand is to 'move the new freeway entrance,' and its call to action directs residents to write to MetroCorp with this specific ask. It does not oppose the freeway as a whole. Option A misreads the poster's scope — the title addresses the entrance, not the entire project. Option C also overstates the position, adding a geographical 'under any circumstances' restriction not present in the poster. Option D is factually incorrect about who the audience is — the poster does direct residents to contact MetroCorp."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
-    question: 'Why are the Friends of Mulberry Creek involved in this issue?',
+    question: "The poster states that the current freeway plans would 'dig up the Mulberry Creek Reserve, destroying 30 years of regeneration work.' What does this specific detail add to the poster's persuasive strategy?",
     options: [
-      'A) They are concerned about the safety of park users.',
-      'B) They are concerned about truck noise affecting park users.',
-      'C) They are concerned about the environmental effects of trucks.',
-      'D) They are concerned that the park they look after will be ruined.'
+      "A) It demonstrates that MetroCorp's engineers have failed to conduct an adequate environmental impact assessment.",
+      "B) It quantifies the loss in terms of accumulated effort, making the destruction feel more concrete and irreversible than a generic environmental objection would.",
+      "C) It establishes that the Friends of Mulberry Creek have legal ownership of the Reserve and the right to veto development.",
+      "D) It proves that the freeway entrance location is more expensive than alternative sites because it involves clearing established vegetation."
     ],
-    answer: 'D) They are concerned that the park they look after will be ruined.',
-    method: "The poster states the freeway plans will 'dig up the Mulberry Creek Reserve, destroying 30 years of regeneration work.' As a group dedicated to protecting the park, their involvement is rooted in preventing this destruction — not noise, general safety, or broader environmental effects of trucks."
+    answer: "B) It quantifies the loss in terms of accumulated effort, making the destruction feel more concrete and irreversible than a generic environmental objection would.",
+    method: "The '30 years of regeneration work' figure transforms an abstract objection ('it will damage the environment') into a concrete, emotionally resonant claim — three decades of community effort, erased. This is a persuasive technique: specificity makes the loss feel real and irreversible. Option A goes beyond the poster's claims; no failure of impact assessment is alleged. Option C introduces legal ownership, which the poster does not raise. Option D draws an economic inference about cost comparison not made in the poster."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
-    question: "The poster uses the term 'cost-cutting'. Which phrase could be used instead of 'cost-cutting' without changing the meaning?",
+    question: "The poster accuses MetroCorp of 'cost-cutting' as a reason for placing the freeway entrance in its current location. What does this accusation imply about MetroCorp's decision-making process?",
     options: [
-      'A) Saving time.',
-      'B) Saving space.',
-      'C) Saving money.',
-      'D) Saving materials.'
+      "A) MetroCorp made a technical error in its engineering calculations that led to the entrance being placed in the wrong location.",
+      "B) MetroCorp chose the current location because it was cheaper, even though better locations that would not affect the park exist.",
+      "C) MetroCorp is trying to reduce construction time rather than construction costs.",
+      "D) MetroCorp consulted community members but ultimately chose to ignore their feedback in favour of the lowest-cost option."
     ],
-    answer: 'C) Saving money.',
-    method: "'Cost-cutting' is a business term specifically referring to reducing expenditure. 'Saving money' is a direct synonym. In the context of the poster, it suggests MetroCorp is choosing a cheaper route at the expense of the community. Options A, B and D refer to other types of savings unrelated to cost."
+    answer: "B) MetroCorp chose the current location because it was cheaper, even though better locations that would not affect the park exist.",
+    method: "'Cost-cutting' specifically refers to reducing financial expenditure. The accusation implies that a cheaper but community-harmful location was preferred over a more expensive but less damaging alternative. This frames the company's choice as prioritising profit over community welfare. Option A introduces a technical error, which is a different explanation from financial prioritisation. Option C substitutes time for money — 'cost-cutting' refers to expenditure, not speed. Option D adds a consultation stage not mentioned in the poster."
   },
   { group: 'L53', type: 'true_false_matrix', category: 'Community Poster', context: ctxL53,
     matrixLabels: ['Yes', 'No'],
@@ -7225,15 +7225,15 @@ const literacyQuestions = [
     method: "Park ruined — Yes: confirmed by the point about Mulberry Creek Reserve being dug up, destroying 30 years of regeneration work.\nStreets closed — No: while the poster complains about trucks on streets, it makes no claim that streets will be closed during construction.\nDangerous loads — Yes: confirmed by the point about a raised road carrying dangerous goods over homes."
   },
   { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
-    question: "'Let's work together to make our suburb safer, healthier and truck free.' Which group of people does this suggest the poster is aimed at?",
+    question: "The poster ends with: 'Let's work together to make our suburb safer, healthier and truck free.' The use of 'our suburb' rather than 'the suburb' or 'this suburb' is significant because it:",
     options: [
-      'A) Truck drivers.',
-      'B) Local residents.',
-      'C) The government.',
-      'D) Managers at MetroCorp.'
+      "A) Implies that only long-term residents, rather than recent arrivals, have a legitimate stake in the outcome.",
+      "B) Creates a sense of shared ownership and collective identity, positioning the reader as a co-stakeholder whose neighbourhood is being affected, not a passive bystander.",
+      "C) Limits the poster's audience to homeowners, since renters do not technically own a share of the suburb.",
+      "D) Signals that the poster was written by local council members who have official responsibility for the suburb's management."
     ],
-    answer: 'B) Local residents.',
-    method: "The phrase 'our suburb' establishes a shared connection with people living in the immediate area. The goal of the poster is to mobilise these residents to take action. Truck drivers, government officials and MetroCorp managers would not identify with 'our suburb' in this context."
+    answer: "B) Creates a sense of shared ownership and collective identity, positioning the reader as a co-stakeholder whose neighbourhood is being affected, not a passive bystander.",
+    method: "The possessive 'our' is an inclusive rhetorical device: it draws the reader into a shared community identity, making the freeway entrance feel like a threat to something the reader personally owns and values. This increases the likelihood of engagement and action. Option A introduces a tenure distinction ('long-term residents') not present in the poster. Option C introduces an ownership/rental distinction also absent. Option D misreads authorship signals from the pronoun choice — 'our' is used to include the reader, not to identify who wrote the poster."
   },
 
   // ── Set L54: News Article — Processed Meat and Cancer ─────────────────────
@@ -7250,82 +7250,82 @@ const literacyQuestions = [
     method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Not stated: The article discusses types of meat and amounts consumed, but says nothing about cooking methods as a factor.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
   },
   { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: 'Which sentence best describes the information presented in the article?',
+    question: "The article places processed meat and tobacco in the same Group 1 carcinogen category. A reader concludes: 'This means eating a ham sandwich is as dangerous as smoking a cigarette.' Is this conclusion supported by the article?",
     options: [
-      'A) Eating processed meat causes cancer in the same way as smoking cigarettes.',
-      'B) There is a small chance of developing cancer from eating processed meat that increases if more meat is eaten.',
-      'C) Red meat and processed meat are equally likely to cause colorectal cancer.',
-      'D) Eating any amount of processed meat daily significantly increases your cancer risk.',
+      "A) Yes — Group 1 status means both products carry identical health risks.",
+      "B) No — the Group 1 classification indicates the strength of scientific evidence linking processed meat to cancer, not that it causes cancer at the same rate or severity as tobacco.",
+      "C) Yes — Kurt Straif explicitly states that the cancer risk from processed meat is equivalent to the risk from smoking.",
+      "D) No — the article only classifies processed meat as Group 2, which indicates a probable rather than confirmed carcinogen."
     ],
-    answer: 'B) There is a small chance of developing cancer from eating processed meat that increases if more meat is eaten.',
-    method: "This aligns with Kurt Straif's quote: while the risk of developing colorectal cancer from eating processed meat is small, 'this risk increases with the amount of meat consumed.' Options A and D overstate the risk. Option C is not supported — the article treats red and processed meat differently."
+    answer: "B) No — the Group 1 classification indicates the strength of scientific evidence linking processed meat to cancer, not that it causes cancer at the same rate or severity as tobacco.",
+    method: "The article quotes Kurt Straif: 'the risk of developing colorectal cancer from eating processed meat is small, but this risk increases with the amount of meat consumed.' He distinguishes between the strength of evidence (Group 1 = confirmed cause) and the magnitude of risk (tobacco causes far more cancer deaths per person than processed meat). The classification is about certainty of causation, not equivalence of harm. Option A conflates category with degree of risk. Option C misattributes a claim Straif does not make — he explicitly says the risk is 'small.' Option D is a factual error; the article confirms processed meat is classified as Group 1."
   },
   { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: 'The news report uses quotes. Which of the following is NOT a reason why quotes were included in this news report?',
+    question: "The article quotes the Meat Industry Council saying there is 'no causal link between red meat and cancer.' What function does including this quote serve in a news report about WHO findings?",
     options: [
-      'A) To provide evidence from expert sources.',
-      'B) To back up the opinion of the writer.',
-      'C) To present differing perspectives from different groups.',
-      'D) To give authority to the claims made in the article.',
+      "A) It undermines the WHO's findings by presenting industry evidence that contradicts the scientific consensus.",
+      "B) It represents the writer's personal view that the WHO has overstated the cancer risk.",
+      "C) It presents a competing perspective from an interested party, allowing readers to identify the basis of the industry's objection and weigh it against the WHO's position.",
+      "D) It confirms that the WHO's report is contested by scientists who are not affiliated with the meat industry."
     ],
-    answer: 'B) To back up the opinion of the writer.',
-    method: "A news report should remain objective — the writer's personal opinion should not feature. Quotes from the WHO provide expert evidence (A and D), and quotes from the Meat Industry Council present a contrasting perspective (C). Backing up the writer's own opinion is not a valid journalistic use of quotes and would compromise the report's objectivity."
+    answer: "C) It presents a competing perspective from an interested party, allowing readers to identify the basis of the industry's objection and weigh it against the WHO's position.",
+    method: "News reporting includes the views of affected parties to demonstrate balance and allow readers to engage with the debate. The Meat Industry Council is an explicitly interested party — its commercial stake in the outcome is visible to readers, who can factor this into how they weigh the objection. Option A overstates the quote's function; the article does not frame the industry's objection as undermining WHO findings, and the WHO's classification stands in the article. Option B would compromise journalistic objectivity — the writer's opinion should not feature. Option D mischaracterises the industry council as a body of independent scientists."
   },
   { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: 'On which topic do WHO experts and the Meat Industry Council disagree?',
+    question: "Kurt Straif is quoted saying: 'Given the large number of people around the world that eat processed meat, the global impact on cancer incidence is of public health importance.' What reasoning does this sentence use to explain why a small individual risk is still significant?",
     options: [
-      'A) Whether processed meat should be banned.',
-      'B) Whether red meat can cause cancer.',
-      'C) Whether processed meat is more dangerous than cigarettes.',
-      'D) Whether red meat has any nutritional value.',
+      "A) Because small risks accumulate in the same individual over a lifetime, eventually reaching a dangerous threshold.",
+      "B) Because a small risk multiplied across a large population produces a large absolute number of people affected, making it a collective concern even if each individual's risk is modest.",
+      "C) Because the cancer caused by processed meat is more difficult to treat than other forms of cancer, increasing the burden on health systems.",
+      "D) Because low-income populations disproportionately consume processed meat, creating an inequitable distribution of health risk."
     ],
-    answer: 'B) Whether red meat can cause cancer.',
-    method: "The article explicitly highlights this conflict: WHO says red meat is 'likely to cause the disease,' while the Meat Industry Council states 'there is no causal link between red meat and cancer.' The other options are not debated between the two parties in the article."
+    answer: "B) Because a small risk multiplied across a large population produces a large absolute number of people affected, making it a collective concern even if each individual's risk is modest.",
+    method: "Straif's reasoning is explicitly epidemiological: a small per-person risk becomes a large public health burden when the exposed population is enormous. The article's own estimate of 34,000 cancer deaths per year attributable to processed meat diets illustrates this — even if the individual probability is low, the scale of consumption makes the aggregate impact significant. Option A describes a different mechanism (dose accumulation over time in the same person), which may be true but is not what this sentence argues. Option C introduces treatment difficulty, which is not mentioned in the article. Option D raises an inequality dimension also not discussed in the article."
   },
   { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: 'If the risk of developing colorectal cancer from eating processed meat is small, what is the importance of the study?',
+    question: "The article distinguishes between red meat (classified as a 'probable' carcinogen) and processed meat (classified as a confirmed Group 1 carcinogen). What is the most accurate explanation of this difference?",
     options: [
-      'A) The risk of colorectal cancer from processed meat is higher than previously thought.',
-      'B) Processed meat is now classified as equally dangerous as smoking and alcohol.',
-      'C) A large number of people in the world who eat processed meat are affected.',
-      'D) The study proves that all processed meat should be removed from supermarkets.',
+      "A) Red meat is safer to eat than processed meat because it contains fewer chemical additives.",
+      "B) The difference in classification reflects the strength of available evidence — the link between processed meat and cancer is confirmed by research, while the link for red meat is supported but not yet conclusively established.",
+      "C) Red meat has been shown to cause a wider range of cancers than processed meat, making it more dangerous despite its lower classification.",
+      "D) Processed meat receives a higher classification because it is consumed in larger quantities globally than red meat."
     ],
-    answer: 'C) A large number of people in the world who eat processed meat are affected.',
-    method: "The article addresses this directly: 'Given the large number of people around the world that eat processed meat,' Straif said the 'global impact on cancer incidence is of public health importance.' Even a small individual risk becomes significant when multiplied across billions of people. Options A, B and D are not supported by the article."
+    answer: "B) The difference in classification reflects the strength of available evidence — the link between processed meat and cancer is confirmed by research, while the link for red meat is supported but not yet conclusively established.",
+    method: "The article explains that WHO classified processed meat as Group 1 (definite carcinogen) and red meat as Group 2A (probable carcinogen). This reflects different levels of evidential certainty, not necessarily different levels of harm. Option A may be factually plausible in reality but is not the article's stated reason for the classification difference — the article grounds the distinction in evidence strength, not additive content. Option C inverts the logic: a higher classification does not mean more cancer types. Option D introduces consumption volume as an explanation for classification, which is not how IARC classifications work; they are based on evidence strength, not usage levels."
   },
   // ── Set L55: Email — Bilvington Bushfire Preparedness ────────────────────
   { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
-    question: 'What is the purpose of this email?',
+    question: "A resident reads the email and concludes: 'This email is telling me what to do if a bushfire breaks out near my home.' Is this an accurate reading of the email's purpose?",
     options: [
-      'A) To inform people about the risks of bushfires.',
-      'B) To inform people about what to do in case of a bushfire.',
-      'C) To tell people when to evacuate their homes during a bushfire.',
-      'D) To encourage people to prepare their properties against bushfires.'
+      "A) Yes — the email's primary concern is instructing residents on emergency evacuation procedures to follow during a fire.",
+      "B) No — the email is focused on actions residents should take before fire season begins to prepare their properties, not on emergency response during an active fire.",
+      "C) Yes — the email covers both preparation and emergency response equally, so the reader's interpretation captures half of the email's purpose.",
+      "D) No — the email's purpose is limited to informing residents about the general risks of bushfires in the region, not instructing them to take specific action."
     ],
-    answer: 'D) To encourage people to prepare their properties against bushfires.',
-    method: "The email is a call to action urging residents to prepare their properties before fire season. It does not simply inform about risks (A) or general bushfire procedures (B), and it does not tell people when to evacuate (C). The emphasis throughout is on preparation steps residents should take now."
+    answer: "B) No — the email is focused on actions residents should take before fire season begins to prepare their properties, not on emergency response during an active fire.",
+    method: "The email is a preparedness communication, not an emergency response guide. Its emphasis is on property preparation steps to be completed before fire season — actions like clearing vegetation, storing flammable liquids, and positioning trees. It does not outline emergency evacuation procedures (Option A). Option C incorrectly claims the email balances preparation and emergency response equally. Option D reduces the email to risk information, when it is explicitly a call to action directed at specific preparatory tasks."
   },
   { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
-    question: 'According to the email, why is it important for people in Bilvington to act now?',
+    question: "The email is sent by local council and directed to Bilvington residents specifically. What feature of Bilvington's location makes targeted preparation advice for this community particularly relevant?",
     options: [
-      'A) Lawns grow faster at this time of the year.',
-      'B) The time of the year when bushfires occur is approaching.',
-      'C) There have been a number of bushfires in the area recently.',
-      'D) Peoples\' gardens may be overgrown at this time of the year.'
+      "A) Bilvington's narrow streets make it difficult for fire trucks to navigate during an active bushfire.",
+      "B) Bilvington is surrounded by dense bushland, which significantly increases residents' exposure to bushfire risk compared with urban areas.",
+      "C) Bilvington has experienced more bushfires in recent years than any comparable town in the region.",
+      "D) Bilvington's older housing stock was built without modern fire-resistant materials, making properties more vulnerable."
     ],
-    answer: 'B) The time of the year when bushfires occur is approaching.',
-    method: "The email refers to the coming fire season, indicating that bushfire season is approaching and action must be taken beforehand. There is no mention of recent fires in the area (C), and while lawn maintenance is recommended, the urgency is driven by the season — not growth rates (A) or garden condition (D)."
+    answer: "B) Bilvington is surrounded by dense bushland, which significantly increases residents' exposure to bushfire risk compared with urban areas.",
+    method: "The email explicitly states that Bilvington is surrounded by dense bushland, which is the specific geographic risk factor that makes the preparation advice directly relevant to this community. Option A introduces road access for fire trucks, which the email does not mention. Option C claims a recent fire history not referenced in the email. Option D introduces building material age as a risk factor also not discussed in the email."
   },
   { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
-    question: 'Why is it particularly important for Bilvington residents to follow the advice in the email?',
+    question: "The email advises residents that mature trees can be 'strategically placed' to help protect their property. A resident interprets this to mean they should plant new trees as far away from the house as possible. Is this interpretation correct?",
     options: [
-      'A) The town has thick vegetation around it.',
-      'B) The town is hard for fire crews to access.',
-      'C) There have been a large number of bushfires near the town.',
-      'D) Most houses in the town are surrounded by flammable materials.'
+      "A) Yes — distance from the house is the defining feature of strategic placement, as any tree close to a house is a fire risk.",
+      "B) No — 'strategically placed' means positioned in a deliberate location to provide specific benefits such as acting as a firebreak or providing shelter, not simply maximising distance.",
+      "C) Yes — the email's advice about mature trees is consistent with the general principle that all vegetation near a house increases fire risk.",
+      "D) No — the email recommends removing all trees near the property rather than positioning new ones strategically."
     ],
-    answer: 'A) The town has thick vegetation around it.',
-    method: "The email states that Bilvington is surrounded by dense bushland, making the vegetation around the town the key risk factor that makes preparation especially important. The email does not mention access difficulties for fire crews (B), recent fires (C), or a general problem with flammable materials around houses (D)."
+    answer: "B) No — 'strategically placed' means positioned in a deliberate location to provide specific benefits such as acting as a firebreak or providing shelter, not simply maximising distance.",
+    method: "'Strategically' means positioned to achieve a specific purpose, not simply placed at maximum distance. The email explains that mature trees can provide shelter and act as a firebreak when placed correctly — implying purposeful positioning relative to the property and fire direction, not arbitrary removal of nearby vegetation. Option A conflates strategic placement with maximum distance, losing the purposeful element. Option C applies a blanket 'all vegetation is dangerous' rule the email does not endorse — it specifically recommends strategically placed mature trees as protective. Option D contradicts the email's actual advice, which endorses correctly positioned mature trees."
   },
   { group: 'L55', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
     matrixLabels: ['Yes', 'No'],
@@ -7352,37 +7352,37 @@ const literacyQuestions = [
 
   // ── Set L56: Newsletter — Winter Storm Preparedness ───────────────────────
   { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
-    question: 'What is the purpose of this newsletter?',
+    question: "The newsletter is structured under three headings: NOW / PREPARE, DURING / SURVIVE, and AFTER / BE SAFE. A resident who has just survived a storm asks: 'Can I use my generator indoors to stay warm until power is restored?' What does the newsletter say?",
     options: [
-      'A) To inform people of the risks of storms.',
-      'B) To inform people on how to protect their property during a severe storm.',
-      'C) To let people know how to keep warm during a storm.',
-      'D) To inform people on how to prepare for a winter storm.'
+      "A) Yes — generators are safe to use indoors during power outages provided the room is well-ventilated.",
+      "B) No — the newsletter explicitly states that generators must never be used indoors under any circumstances, including during power outages.",
+      "C) Yes — but only if the power outage has lasted more than 24 hours and all other heating options have been exhausted.",
+      "D) No — but this restriction applies only during the storm itself; after the storm has passed, generator use indoors becomes permissible."
     ],
-    answer: 'D) To inform people on how to prepare for a winter storm.',
-    method: "The opening heading of the text states the purpose directly: 'How To Prepare For A Winter Storm.' The newsletter covers preparation before, during and after a storm — not just property protection (B) or keeping warm (C), and it is broader than informing about risks alone (A)."
+    answer: "B) No — the newsletter explicitly states that generators must never be used indoors under any circumstances, including during power outages.",
+    method: "Under 'DURING / SURVIVE,' the newsletter states: 'Never use a generator, camp stove, charcoal grill, or gasoline or propane heater indoors.' There is no exception — not for ventilation (Option A), not for extended outages (Option C), and the restriction is not limited to the storm period itself (Option D). The reason given is that these items 'can start accidental fires, cause electric shock, and/or cause deadly carbon monoxide poisoning' — risks that persist regardless of whether the storm has passed."
   },
   { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
-    question: 'According to the newsletter, why is it important for people to properly prepare for a storm?',
+    question: "The newsletter states that preparation requires 'a focus on preparedness, advanced planning, and knowing what to do in the event of a storm.' What outcome does the newsletter say this focus makes possible?",
     options: [
-      'A) To help minimise the risk of destruction to their property.',
-      'B) As winter is the time of year when there are the most powerful storms.',
-      'C) Winter storms can cause a lot of destruction.',
-      'D) To help protect home occupants.'
+      "A) Residents who follow the advice will be able to live normally during the storm without any disruption to their routine.",
+      "B) Residents who prepare will have no reason to worry about storm damage to their property.",
+      "C) The ability to maintain stability or recover quickly following a storm.",
+      "D) Residents will be able to restore their own power supply without waiting for utility workers."
     ],
-    answer: 'D) To help protect home occupants.',
-    method: "The newsletter states: 'This newsletter is intended to help protect yourself before, during, and after a storm.' The focus is on protecting people, not property (A). Options B and C may be true but are not stated as reasons for preparation in the text."
+    answer: "C) The ability to maintain stability or recover quickly following a storm.",
+    method: "The newsletter directly states: 'The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do.' This is a qualified outcome — not a guarantee of normal life (Option A), freedom from worry (Option B), or self-sufficiency in power restoration (Option D). The newsletter also explicitly advises residents to 'allow line workers to restore your power,' directly contradicting Option D."
   },
   { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
-    question: 'What can people do if they followed the advice from the newsletter?',
+    question: "The newsletter advises: 'Dress in layers, and pile a few extra blankets and sweaters together so you can find them easily if the heat goes off.' What assumption does this advice reveal about conditions during a winter storm?",
     options: [
-      'A) Able to live life normally during the period of the storm.',
-      'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
-      'C) Not have to worry about possible effects from a storm.',
-      'D) Increase their chances they will come through unscathed.'
+      "A) Home heating systems are unreliable even in mild winter weather and should not be relied upon as the sole heat source.",
+      "B) The possibility of losing home heating during a storm is a realistic risk that residents should plan for in advance, rather than wait until the heating fails.",
+      "C) Layering clothing is more effective at preventing hypothermia than using blankets, so residents should prioritise clothing over bedding.",
+      "D) The newsletter assumes all residents live in older homes without central heating and are therefore likely to experience cold conditions during storms."
     ],
-    answer: 'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
-    method: "The newsletter states: 'The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do.' Options A, C and D overstate the outcome — the newsletter does not promise normal life, no worry, or coming through unscathed."
+    answer: "B) The possibility of losing home heating during a storm is a realistic risk that residents should plan for in advance, rather than wait until the heating fails.",
+    method: "The advice to prepare blankets and clothing in advance — 'so you can find them easily if the heat goes off' — assumes that heating failure is a plausible storm consequence that residents should anticipate before it occurs. This is preparedness thinking: identify the likely problem and organise resources in advance. Option A overstates the claim; the newsletter is not suggesting heating is unreliable generally, only that storms can disrupt it. Option C introduces a hierarchy between clothing and blankets not stated in the newsletter. Option D invents an assumption about housing type not present in the text."
   },
   { group: 'L56', type: 'true_false_matrix', category: 'Newsletter', context: ctxL56,
     matrixLabels: ['Yes', 'No'],
