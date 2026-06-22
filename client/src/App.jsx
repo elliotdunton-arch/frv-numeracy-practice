@@ -20,7 +20,7 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : '/api/questions'
+      let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : section === 'mechanical' ? '/api/mechanical-questions' : '/api/questions'
       if (section === 'literacy' && selectedTopics && selectedTopics.length > 0) {
         endpoint += '?categories=' + encodeURIComponent(selectedTopics.join(','))
       } else if (selectedTopics && selectedTopics.length > 0) {
@@ -30,7 +30,8 @@ export default function App() {
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
       // Literacy: server already returns complete groups (no mid-group cuts), use as-is
-      const selected = section === 'literacy' ? data : data.slice(0, customCount ?? 30)
+      // Mechanical: only 8 questions total, use all
+      const selected = (section === 'literacy' || section === 'mechanical') ? data : data.slice(0, customCount ?? 30)
       setQuestions(selected)
       setTotalTime(selected.length * 70)
       setAnswers({})

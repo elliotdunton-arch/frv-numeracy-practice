@@ -7564,6 +7564,82 @@ app.get('/api/abstract-questions', (req, res) => {
   res.json(customCount ? final.slice(0, customCount) : final)
 })
 
+const mechanicalQuestions = [
+  { group: 'M1', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/mech 01.png',
+    question: 'How many wheels are turning clockwise?',
+    options: ['A) 2', 'B) 4', 'C) 6', 'D) 8'],
+    answer: 'B) 4',
+    method: 'Wheels turning clockwise: Purple, Pink, Green, Red (4 total). Wheels turning anti-clockwise: Yellow, Light Blue, Grey, Dark Blue. The light blue and green wheels are fixed to the yellow and red wheels respectively, so they turn in the same direction as their paired wheel.'
+  },
+  { group: 'M2', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/mech 02.png',
+    question: 'Which of the belts is least likely to slip if each drive wheel is subjected to the same force?',
+    options: ['A) Belt A', 'B) Belt B', 'C) Belt C', 'D) All equal'],
+    answer: 'C) Belt C',
+    method: 'The greater the angle a belt wraps around the drive wheel, the greater the friction, reducing the likelihood of slipping. The cross belt in Option C wraps more than 180 degrees around each wheel, providing more friction than a standard open belt. Options A and B have smaller angles of wrap and therefore less friction.'
+  },
+  { group: 'M3', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/mech 03.png',
+    question: 'How much weight is needed to hold the 60 kg weight?',
+    options: ['A) 10 kg', 'B) 20 kg', 'C) 30 kg', 'D) 40 kg', 'E) 60 kg'],
+    answer: 'C) 30 kg',
+    method: 'This is a movable pulley system. Fixed pulleys change the direction of force but do not reduce the effort required. The mechanical advantage equals the number of rope sections supporting the movable pulley — in this case, 2 sections. Divide the load by the mechanical advantage: 60 kg ÷ 2 = 30 kg.'
+  },
+  { group: 'M4', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/mech 04.png',
+    question: 'Which rod will move up and down more as the cam rotates?',
+    options: ['A) Rod A', 'B) Rod B', 'C) Rod C', 'D) All equally'],
+    answer: 'A) Rod A',
+    method: "Rod A's pivot point is furthest from the centre of the cam, so the cam's rotation creates a larger arc at that contact point, forcing Rod A to travel a greater vertical distance. Rod B's pivot is near the cam's centre, resulting in minimal vertical movement as the cam rotates."
+  },
+  { group: 'M5', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/mech 05.png',
+    question: 'A bucket of water has a leak on its lower side. As the water leaves the bucket, what happens to the pressure of the water at the bottom of the bucket?',
+    options: ['A) Increases', 'B) Stays the same', 'C) Decreases', 'D) Cannot say'],
+    answer: 'C) Decreases',
+    method: 'Fluid pressure at the bottom of a container is determined by the height of the liquid column above it (P = ρgh). As water leaks out, the water level drops, reducing the height of the column above the bottom and therefore decreasing the pressure. The pressure does not stay constant because the depth is changing.'
+  },
+  { group: 'M6', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/mech 06.png',
+    question: 'If both balls X & Y are made from the same material, where would ball X have to be positioned to balance the beam?',
+    options: ['A) Position A', 'B) Position B', 'C) Position C', 'D) Position D'],
+    answer: 'C) Position C',
+    method: 'Ball X is approximately twice the volume of Ball Y. Since both are made from the same material, Ball X has roughly twice the mass. On a lever, a heavier object must be placed closer to the fulcrum to achieve balance. Position C places Ball X at the correct distance to counterbalance the lighter Ball Y at its greater distance from the fulcrum.'
+  },
+  { group: 'M7', type: 'multiple_choice', category: 'Electrical Circuits',
+    questionImage: '/images/mechanical reasoning/mech 07.png',
+    question: 'From the circuit below, what would happen if only Switch B & Switch D close?',
+    options: ['A) All bulbs shine', 'B) Bulbs C & E only', 'C) Bulbs D, E & F', 'D) Bulbs C, E & F', 'E) Bulbs A, B, E & F', 'F) No bulbs shine'],
+    answer: 'D) Bulbs C, E & F',
+    method: 'Only bulbs within a completed circuit path will illuminate. Closing switches B and D creates a closed path through that specific section of the circuit, completing the circuit for bulbs C, E, and F. All other switches remain open, leaving the rest of the circuit incomplete and their associated bulbs unlit.'
+  },
+  { group: 'M8', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/mech 08.png',
+    question: 'Gear A has 1/3 of the teeth of Gear B. How many times will Gear B rotate if Gear A rotates 6 full times?',
+    options: ['A) 2', 'B) 4', 'C) 6', 'D) 8', 'E) 12'],
+    answer: 'A) 2',
+    method: 'The gear ratio is determined by tooth count. Gear A has one-third the teeth of Gear B, so Gear A must rotate 3 times for every single rotation of Gear B (the smaller gear rotates faster). If Gear A rotates 6 times: 6 ÷ 3 = 2 rotations for Gear B.'
+  },
+]
+
+app.get('/api/mechanical-questions', (req, res) => {
+  const shuffled = [...mechanicalQuestions].sort(() => Math.random() - 0.5)
+  const final = shuffled.map((q, i) => ({
+    id: i + 1,
+    type: q.type,
+    category: q.category,
+    group: q.group,
+    question: q.question,
+    questionImage: q.questionImage || null,
+    options: q.options || null,
+    answer: q.answer,
+    method: q.method || null,
+  }))
+  const customCount = req.query.count ? parseInt(req.query.count) : null
+  res.json(customCount ? final.slice(0, customCount) : final)
+})
+
 // Serve built React app in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/dist')))

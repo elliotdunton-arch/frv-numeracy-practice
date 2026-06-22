@@ -46,6 +46,25 @@ const ABSTRACT_CATEGORIES = [
   }
 ]
 
+const MECHANICAL_CATEGORIES = [
+  {
+    name: 'Gears & Wheels',
+    items: ['Direction of rotation', 'Gear ratios and speed', 'Meshing gear systems']
+  },
+  {
+    name: 'Belts & Pulleys',
+    items: ['Mechanical advantage', 'Belt slip and friction', 'Pulley systems and load']
+  },
+  {
+    name: 'Forces & Pressure',
+    items: ['Levers and balance', 'Fluid pressure', 'Cams and displacement']
+  },
+  {
+    name: 'Electrical Circuits',
+    items: ['Series and parallel circuits', 'Switch logic', 'Identifying active bulbs']
+  },
+]
+
 const SECTION_CONTENT = {
   numeracy: {
     title: 'Numeracy Practice Test',
@@ -74,9 +93,17 @@ const SECTION_CONTENT = {
     categories: ABSTRACT_CATEGORIES,
     calcNote: false,
   },
+  mechanical: {
+    title: 'Mechanical Reasoning Practice Test',
+    desc: 'This practice test covers mechanical reasoning concepts relevant to the FRV aptitude assessment. Questions use diagrams to test understanding of gears, pulleys, levers, circuits, and fluid mechanics.',
+    formatChips: [{ cls: 'type-multiple_choice', label: 'Multiple Choice' }],
+    formatNote: 'Each question presents a mechanical diagram. Study the diagram carefully before selecting your answer.',
+    categories: MECHANICAL_CATEGORIES,
+    calcNote: false,
+  },
 }
 
-const SECTION_LABEL = { numeracy: 'Numeracy', literacy: 'Literacy', abstract: 'Abstract' }
+const SECTION_LABEL = { numeracy: 'Numeracy', literacy: 'Literacy', abstract: 'Abstract', mechanical: 'Mechanical' }
 
 function formatDate(isoDate) {
   const d = new Date(isoDate + 'T12:00:00')
@@ -385,6 +412,12 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             onClick={() => handleTabClick('abstract')}
           >
             Abstract (beta)
+          </button>
+          <button
+            className={`section-toggle-btn${activeTab === 'mechanical' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('mechanical')}
+          >
+            Mechanical (beta)
           </button>
           <button
             className={`section-toggle-btn stb-progress${activeTab === 'progress' ? ' stb-active' : ''}`}

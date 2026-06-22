@@ -87,17 +87,24 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const renderAnswerInputs = (q) => {
     if (q.type === 'multiple_choice') {
       return (
-        <div className="mc-options">
-          {(q.options || []).map(opt => (
-            <button
-              key={opt}
-              className={`mc-option${answers[q.id] === opt ? ' mc-selected' : ''}`}
-              onClick={() => handleAnswer(q.id, opt)}
-            >
-              {opt}
-            </button>
-          ))}
-        </div>
+        <>
+          {q.questionImage && (
+            <div className="img-question-wrap">
+              <img src={q.questionImage} alt="Question diagram" className="img-question-main" />
+            </div>
+          )}
+          <div className="mc-options">
+            {(q.options || []).map(opt => (
+              <button
+                key={opt}
+                className={`mc-option${answers[q.id] === opt ? ' mc-selected' : ''}`}
+                onClick={() => handleAnswer(q.id, opt)}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </>
       )
     }
     if (q.type === 'true_false_matrix') {
@@ -204,7 +211,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   return (
     <div className="quiz">
       <header className="quiz-header">
-        <h1 className="quiz-title">FRV {section === 'literacy' ? 'Literacy' : section === 'abstract' ? 'Abstract Reasoning' : 'Numeracy'} Test</h1>
+        <h1 className="quiz-title">FRV {section === 'literacy' ? 'Literacy' : section === 'abstract' ? 'Abstract Reasoning' : section === 'mechanical' ? 'Mechanical Reasoning' : 'Numeracy'} Test</h1>
         <div className="quiz-header-right">
           <button
             className={`btn-calc-toggle ${showCalc ? 'active' : ''}`}
