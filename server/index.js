@@ -5637,6 +5637,30 @@ const ctxL55 = {
   image: '/images/literacy/Literacy 03.png',
 }
 
+const ctxL56 = {
+  title: 'How To Prepare For A Winter Storm',
+  subtitle: 'Seasonal Newsletter',
+  paragraphs: [
+    'With winter arriving next month, along comes significant storms, which can bring extreme cold, freezing rain, ice, snow, high winds, or a combination of all of these conditions.',
+    'This newsletter is intended to help protect yourself before, during, and after a storm. Planning and preparing can make a big difference in safety and resiliency in the wake of a storm. The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do in the event of a storm.',
+    'NOW / PREPARE',
+    '• Stock emergency supplies, and install battery-powered or battery backed-up carbon monoxide detectors and smoke detectors.',
+    '• Identify a place nearby where you can safely warm up should you lose heat in your home.',
+    '• Prepare an outage kit that includes a battery-powered radio, flashlight with fresh batteries, a portable power bank for your mobile phone and bottled water.',
+    '• Keep a stock of canned food in your cupboard, along with a manual can opener.',
+    'DURING / SURVIVE',
+    '• Stay indoors and off the roads. If you must drive, keep emergency supplies in your car. Allow line workers to restore your power.',
+    '• Close off rooms to consolidate and retain heat.',
+    '• Dress in layers, and pile a few extra blankets and sweaters together so you can find them easily if the heat goes off.',
+    '• Never use a generator, camp stove, charcoal grill, or gasoline or propane heater indoors, as these items can start accidental fires, cause electric shock, and/or cause deadly carbon monoxide poisoning.',
+    '• Stay away from fallen or sagging power lines. They could be dangerous even if the power is out.',
+    'AFTER / BE SAFE',
+    '• Only drive if necessary. Remove snow and ice from your tailpipe before starting your car, and check regularly if idling. Clean all snow and ice from your car before driving.',
+    '• Dress in warm clothing, stay dry, prevent prolonged exposure to cold and wind, and avoid overexertion clearing/shovelling snow. Overexertion can lead to a medical emergency.',
+    '• Monitor local news and alerts for emergency information and instructions.',
+  ]
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -7353,6 +7377,52 @@ const literacyQuestions = [
     ],
     answer: 'C) Planted in a position that will help protect the property.',
     method: "'Strategically' means positioned intentionally to achieve a specific purpose. The email explains that mature trees can provide shelter and act as a firebreak when correctly positioned relative to the property. Option B is too simple — distance alone is not the point. Options A and D relate to maintenance, not positioning for protection."
+  },
+
+  // ── Set L56: Newsletter — Winter Storm Preparedness ───────────────────────
+  { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
+    question: 'What is the purpose of this newsletter?',
+    options: [
+      'A) To inform people of the risks of storms.',
+      'B) To inform people on how to protect their property during a severe storm.',
+      'C) To let people know how to keep warm during a storm.',
+      'D) To inform people on how to prepare for a winter storm.'
+    ],
+    answer: 'D) To inform people on how to prepare for a winter storm.',
+    method: "The opening heading of the text states the purpose directly: 'How To Prepare For A Winter Storm.' The newsletter covers preparation before, during and after a storm — not just property protection (B) or keeping warm (C), and it is broader than informing about risks alone (A)."
+  },
+  { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
+    question: 'According to the newsletter, why is it important for people to properly prepare for a storm?',
+    options: [
+      'A) To help minimise the risk of destruction to their property.',
+      'B) As winter is the time of year when there are the most powerful storms.',
+      'C) Winter storms can cause a lot of destruction.',
+      'D) To help protect home occupants.'
+    ],
+    answer: 'D) To help protect home occupants.',
+    method: "The newsletter states: 'This newsletter is intended to help protect yourself before, during, and after a storm.' The focus is on protecting people, not property (A). Options B and C may be true but are not stated as reasons for preparation in the text."
+  },
+  { group: 'L56', type: 'multiple_choice', category: 'Newsletter', context: ctxL56,
+    question: 'What can people do if they followed the advice from the newsletter?',
+    options: [
+      'A) Able to live life normally during the period of the storm.',
+      'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
+      'C) Not have to worry about possible effects from a storm.',
+      'D) Increase their chances they will come through unscathed.'
+    ],
+    answer: 'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
+    method: "The newsletter states: 'The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do.' Options A, C and D overstate the outcome — the newsletter does not promise normal life, no worry, or coming through unscathed."
+  },
+  { group: 'L56', type: 'true_false_matrix', category: 'Newsletter', context: ctxL56,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following advice does the newsletter provide for people to action?',
+    options: [
+      'Close off rooms to keep in the heat.',
+      'Only use a generator inside if it\'s an emergency.',
+      'Keep clearing snow from your house.',
+    ],
+    answer: 'Yes,No,No',
+    method: "Close off rooms — Yes: under 'During / Survive' the newsletter states 'Close off rooms to consolidate and retain heat.'\nGenerator indoors in an emergency — No: the newsletter states 'Never use a generator... indoors' — there is no exception for emergencies.\nKeep clearing snow from house — No: the newsletter advises to 'avoid overexertion clearing/shovelling snow' — it does not instruct people to keep clearing snow."
   },
 ]
 
