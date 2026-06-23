@@ -23,17 +23,22 @@ export default function App() {
       let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : section === 'mechanical' ? '/api/mechanical-questions' : '/api/questions'
       if (section === 'literacy' && selectedTopics && selectedTopics.length > 0) {
         endpoint += '?categories=' + encodeURIComponent(selectedTopics.join(','))
+      } else if (section === 'mechanical' && selectedTopics && selectedTopics.length > 0) {
+        endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
       } else if (selectedTopics && selectedTopics.length > 0) {
         endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
       }
       const res = await fetch(endpoint)
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
-      // Literacy: server already returns complete groups (no mid-group cuts), use as-is
-      // Mechanical: only 8 questions total, use all
-      const selected = (section === 'literacy' || section === 'mechanical') ? data : data.slice(0, customCount ?? 30)
+      const MECH_FULL = 32
+      const selected = section === 'literacy'
+        ? data
+        : section === 'mechanical'
+          ? (customCount ? data.slice(0, customCount) : data.slice(0, MECH_FULL))
+          : data.slice(0, customCount ?? 30)
       setQuestions(selected)
-      setTotalTime(selected.length * 70)
+      setTotalTime(section === 'mechanical' ? Math.round(selected.length * 37.5) : selected.length * 70)
       setAnswers({})
       setStartTime(Date.now())
       setEndTime(null)
@@ -60,7 +65,7 @@ export default function App() {
 
   const retryIncorrect = (incorrectQuestions) => {
     setQuestions(incorrectQuestions)
-    setTotalTime(incorrectQuestions.length * 70)
+    setTotalTime(section === 'mechanical' ? Math.round(incorrectQuestions.length * 37.5) : incorrectQuestions.length * 70)
     setAnswers({})
     setStartTime(Date.now())
     setEndTime(null)

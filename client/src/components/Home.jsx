@@ -332,10 +332,15 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [selectedCategories, setSelectedCategories] = useState(new Set())
   const [strategyOpen, setStrategyOpen] = useState(false)
   const [formulaOpen, setFormulaOpen] = useState(false)
+  const [mechSetsOpen, setMechSetsOpen] = useState(false)
+  const [selectedMechSets, setSelectedMechSets] = useState(new Set())
+  const [mechSetList, setMechSetList] = useState([])
+  const [mechGuideOpen, setMechGuideOpen] = useState(false)
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
     fetch('/api/literacy-topics').then(r => r.json()).then(setCategoryList).catch(() => {})
+    fetch('/api/mechanical-sets').then(r => r.json()).then(setMechSetList).catch(() => {})
   }, [])
 
   const handleTabClick = (tab) => {
@@ -367,14 +372,29 @@ export default function Home({ onStart, loading, error, section, onSectionChange
     .filter(c => selectedCategories.has(c.name))
     .reduce((s, c) => s + c.questionCount, 0)
 
-  const presets = [5, 10, 20, 30]
+  const totalSelectedMechQs = mechSetList
+    .filter(s => selectedMechSets.has(s.name))
+    .reduce((s, c) => s + c.questionCount, 0)
+
+  const toggleMechSet = (name) => {
+    setSelectedMechSets(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
+
+  const isMech = section === 'mechanical'
+  const maxCustomCount = isMech ? 40 : 30
+  const secsPerQ = isMech ? 37.5 : 70
+  const presets = isMech ? [5, 10, 20, 32] : [5, 10, 20, 30]
 
   const handleCountInput = (val) => {
     const n = parseInt(val)
-    if (!isNaN(n)) setCustomCount(Math.min(30, Math.max(1, n)))
+    if (!isNaN(n)) setCustomCount(Math.min(maxCustomCount, Math.max(1, n)))
   }
 
-  const customTotalSecs = customCount * 70
+  const customTotalSecs = Math.round(customCount * secsPerQ)
   const customMins = Math.floor(customTotalSecs / 60)
   const customSecs = customTotalSecs % 60
   const customTimeDisplay = `${customMins}:${String(customSecs).padStart(2, '0')}`
@@ -417,7 +437,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             className={`section-toggle-btn${activeTab === 'mechanical' ? ' stb-active' : ''}`}
             onClick={() => handleTabClick('mechanical')}
           >
-            Mechanical (beta)
+            Mechanical
           </button>
           <button
             className={`section-toggle-btn stb-progress${activeTab === 'progress' ? ' stb-active' : ''}`}
@@ -450,13 +470,13 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
         <div className="info-row">
           <div className="info-box">
-            <span className="info-num">{mode === 'full' ? 30 : customCount}</span>
+            <span className="info-num">{mode === 'full' ? (isMech ? 32 : 30) : customCount}</span>
             <span className="info-label">Questions</span>
           </div>
           <div className="info-divider" />
           <div className="info-box">
             <span className={`info-num ${mode === 'custom' ? 'info-num-time' : ''}`}>
-              {mode === 'full' ? '35' : customTimeDisplay}
+              {mode === 'full' ? (isMech ? '20' : '35') : customTimeDisplay}
             </span>
             <span className="info-label">{mode === 'full' ? 'Minutes' : 'Min : Sec'}</span>
           </div>
@@ -485,12 +505,12 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               <input
                 type="number"
                 min="1"
-                max="30"
+                max={maxCustomCount}
                 value={customCount}
                 onChange={e => handleCountInput(e.target.value)}
                 className="count-input"
               />
-              <span className="count-input-hint">questions (1–30) — or pick a preset above</span>
+              <span className="count-input-hint">questions (1–{maxCustomCount}) — or pick a preset above</span>
             </div>
           </div>
         )}
@@ -538,6 +558,51 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                     <button
                       className="btn-start"
                       onClick={() => onStart(null, [...selectedCategories])}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'mechanical' && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${mechSetsOpen ? ' tft-open' : ''}`}
+              onClick={() => { setMechSetsOpen(o => !o); setSelectedMechSets(new Set()) }}
+            >
+              <span className="tft-icon">{mechSetsOpen ? '▾' : '▸'}</span>
+              Practice by Set
+            </button>
+
+            {mechSetsOpen && mechSetList.length > 0 && (
+              <div className="topic-panel">
+                <div className="topic-list">
+                  {mechSetList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedMechSets.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedMechSets.has(name)}
+                        onChange={() => toggleMechSet(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedMechSets.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedMechSets.size} set{selectedMechSets.size !== 1 ? 's' : ''} · {totalSelectedMechQs} questions available
+                    </span>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedMechSets])}
                       disabled={loading}
                     >
                       {loading ? 'Loading…' : 'Start Focused Practice'}
@@ -812,6 +877,121 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                     <li><strong>The Zero Check:</strong> Count zeros carefully in volume conversions. 1 m³ = 1,000,000 cm³, not 1,000.</li>
                     <li><strong>Fraction → Decimal:</strong> If stuck on a division problem, convert to a decimal immediately — it's faster in a timed environment.</li>
                     <li><strong>Estimation:</strong> Short on time? Estimate to eliminate two obviously wrong answers and improve your guessing odds.</li>
+                  </ul>
+                </div>
+
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'mechanical' && (
+          <div className="strategy-guide">
+            <button
+              className={`strategy-guide-toggle${mechGuideOpen ? ' sgt-open' : ''}`}
+              onClick={() => setMechGuideOpen(o => !o)}
+            >
+              <span className="tft-icon">{mechGuideOpen ? '▾' : '▸'}</span>
+              Mechanical Reasoning Guide
+            </button>
+
+            {mechGuideOpen && (
+              <div className="strategy-guide-body">
+
+                <div className="sg-section">
+                  <div className="sg-heading">1. Gears — Direction of Rotation</div>
+                  <ul className="sg-list">
+                    <li><strong>Meshing gears</strong> always rotate in <em>opposite</em> directions.</li>
+                    <li><strong>Belt-connected gears (open belt)</strong> rotate in the <em>same</em> direction.</li>
+                    <li><strong>Belt-connected gears (crossed belt)</strong> rotate in <em>opposite</em> directions.</li>
+                    <li>Trace each connection in order — every mesh or crossed belt reverses direction.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">2. Gears — Speed &amp; Ratios</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Gear ratio</span><span className="fl-formula">Teeth on driven ÷ Teeth on driver</span></li>
+                    <li><span className="fl-name">Speed of driven</span><span className="fl-formula">Driver speed × (Driver teeth ÷ Driven teeth)</span></li>
+                  </ul>
+                  <ul className="sg-list">
+                    <li><strong>Smaller gear = faster rotation.</strong> A gear with half the teeth turns twice as fast.</li>
+                    <li>For size-based questions: diameter ratio works the same as tooth ratio.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">3. Pulleys &amp; Mechanical Advantage</div>
+                  <ul className="sg-list">
+                    <li><strong>Fixed pulley:</strong> changes direction of force only — no mechanical advantage.</li>
+                    <li><strong>Movable pulley:</strong> each rope section supporting the load shares the weight.</li>
+                    <li><strong>Effort required</strong> = Load ÷ Number of rope sections supporting the movable pulley.</li>
+                    <li>Example: 2 rope sections supporting a 60 kg load → effort = 30 kg.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">4. Belts — Slip &amp; Friction</div>
+                  <ul className="sg-list">
+                    <li>The greater the <strong>angle of wrap</strong> around the drive wheel, the greater the friction.</li>
+                    <li>A <strong>cross belt</strong> wraps more than 180° — highest friction, least likely to slip.</li>
+                    <li>A standard open belt has a smaller angle of wrap and slips more easily under load.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">5. Levers &amp; Linkages</div>
+                  <ul className="sg-list">
+                    <li>A lever with a <strong>fixed pivot</strong> reverses direction across the fulcrum — one side up, other side down.</li>
+                    <li>A <strong>non-fixed pivot arm</strong> swings in an arc — the hook maintains a constant radius from the pivot.</li>
+                    <li>Pushing or pulling a handle <em>towards</em> the pivot causes the far end to move <em>away</em>, and vice versa.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">6. Cams &amp; Cranks</div>
+                  <ul className="sg-list">
+                    <li><strong>Number of punches per rotation</strong> = number of lobes on the cam.</li>
+                    <li>A <strong>crank-slider</strong> converts continuous rotation into <em>to-and-fro</em> (reciprocating) motion.</li>
+                    <li>A <strong>slot mechanism</strong> (Scotch yoke) creates to-and-fro motion with <em>pauses</em> at the extremes.</li>
+                    <li>If a connecting rod can only push (not pull), the output will move in one direction then stop — not oscillate.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">7. Conveyor Belt Fault Finding</div>
+                  <ul className="sg-list">
+                    <li>Identify which floors <em>work</em> and which <em>don't</em>.</li>
+                    <li>The broken belt is the one connecting the <strong>last working floor</strong> to the <strong>first non-working floor</strong>.</li>
+                    <li>If the motor is faulty, <em>no</em> floors work. If only some are out, the motor is fine.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">8. Springs &amp; Forces</div>
+                  <ul className="sg-list">
+                    <li>A block between two opposing springs moves <strong>toward the stronger spring's anchor point</strong>.</li>
+                    <li>If spring Z is 3× stronger than X, the block moves toward the end anchored by Z.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">9. Fluid Pressure</div>
+                  <ul className="sg-list formula-list">
+                    <li><span className="fl-name">Pressure at bottom</span><span className="fl-formula">P = ρ × g × h</span></li>
+                  </ul>
+                  <ul className="sg-list">
+                    <li>Pressure depends on the <strong>height (depth) of liquid</strong> above the point — not the volume.</li>
+                    <li>As water level drops, pressure at the bottom <em>decreases</em>.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">10. Electrical Circuits</div>
+                  <ul className="sg-list">
+                    <li>A bulb only lights if it is in a <strong>complete (closed) circuit path</strong>.</li>
+                    <li>An open switch breaks the circuit — any bulb depending on that path will not light.</li>
+                    <li>Trace from the power source through each switch: only follow paths where all switches are closed.</li>
                   </ul>
                 </div>
 
