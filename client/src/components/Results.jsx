@@ -275,7 +275,14 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                         {workingOpen ? 'Hide working' : 'Show working'}
                       </button>
                       {workingOpen && (
-                        <pre className="working-content">{q.method}</pre>
+                        <>
+                          {q.questionImage && (
+                            <div style={{ textAlign: 'center', marginTop: 12 }}>
+                              <img src={q.questionImage} alt="Question diagram" className="review-question-img" style={{ maxHeight: 280 }} />
+                            </div>
+                          )}
+                          <pre className="working-content">{q.method}</pre>
+                        </>
                       )}
                     </div>
                   )}
