@@ -1779,7 +1779,7 @@ const questions = [
   {
     group: 'A', type: 'number_input', category: 'Number and Algebra',
     context: ctx1,
-    question: "What is the difference in gross pay between Sarah's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Sarah's highest and lowest earning days?",
     answer: '55.25'
   },
   {
@@ -1799,7 +1799,7 @@ const questions = [
   {
     group: 'B', type: 'number_input', category: 'Number and Algebra',
     context: ctx2,
-    question: "What is the difference in gross pay between Marcus's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Marcus's highest and lowest earning days?",
     answer: '127.48'
   },
   {
@@ -1819,7 +1819,7 @@ const questions = [
   {
     group: 'C', type: 'number_input', category: 'Number and Algebra',
     context: ctx3,
-    question: "What is the difference in gross pay between Anika's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Anika's highest and lowest earning days?",
     answer: '87.75'
   },
   {
@@ -1839,7 +1839,7 @@ const questions = [
   {
     group: 'D', type: 'number_input', category: 'Number and Algebra',
     context: ctx4,
-    question: "What is the difference in gross pay between Daniel's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Daniel's highest and lowest earning days?",
     answer: '165.36'
   },
   {
@@ -1859,7 +1859,7 @@ const questions = [
   {
     group: 'E', type: 'number_input', category: 'Number and Algebra',
     context: ctx5,
-    question: "What is the difference in gross pay between Lena's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Lena's highest and lowest earning days?",
     answer: '126.79'
   },
   {
@@ -1879,7 +1879,7 @@ const questions = [
   {
     group: 'F', type: 'number_input', category: 'Number and Algebra',
     context: ctx6,
-    question: "What is the difference in gross pay between Omar's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Omar's highest and lowest earning days?",
     answer: '275.40'
   },
   {
@@ -1899,7 +1899,7 @@ const questions = [
   {
     group: 'G', type: 'number_input', category: 'Number and Algebra',
     context: ctx7,
-    question: "What is the difference in gross pay between Claire's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Claire's highest and lowest earning days?",
     answer: '208.03'
   },
   {
@@ -1919,7 +1919,7 @@ const questions = [
   {
     group: 'H', type: 'number_input', category: 'Number and Algebra',
     context: ctx8,
-    question: "What is the difference in gross pay between Ben's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Ben's highest and lowest earning days?",
     answer: '434.25'
   },
   {
@@ -1939,7 +1939,7 @@ const questions = [
   {
     group: 'I', type: 'number_input', category: 'Number and Algebra',
     context: ctx9,
-    question: "What is the difference in gross pay between Nina's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Nina's highest and lowest earning days?",
     answer: '222.60'
   },
   {
@@ -1959,7 +1959,7 @@ const questions = [
   {
     group: 'J', type: 'number_input', category: 'Number and Algebra',
     context: ctx10,
-    question: "What is the difference in gross pay between Adrian's highest and lowest earning days?\n(Enter the dollar amount only)",
+    question: "What is the difference in gross pay between Adrian's highest and lowest earning days?",
     answer: '286.66'
   },
   {
@@ -1996,7 +1996,7 @@ const questions = [
   {
     group: 'L', type: 'number_input', category: 'Number and Algebra',
     context: ctxK2,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Triton?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Triton?',
     answer: '10300'
   },
   {
@@ -2018,13 +2018,13 @@ const questions = [
   {
     group: 'M', type: 'number_input', category: 'Number and Algebra',
     context: ctxK3,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Pajero?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Pajero?',
     answer: '13000'
   },
   {
     group: 'M', type: 'number_input', category: 'Number and Algebra',
     context: ctxK3,
-    question: 'What would be the total fuel saving provided by the Isuzu D-Max over 6 years?\n(Enter the dollar amount only)',
+    question: 'What would be the total fuel saving provided by the Isuzu D-Max over 6 years?',
     answer: '20400'
   },
   {
@@ -2040,7 +2040,7 @@ const questions = [
   {
     group: 'N', type: 'number_input', category: 'Number and Algebra',
     context: ctxK4,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Pajero Sport?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mitsubishi Pajero Sport?',
     answer: '16000'
   },
   {
@@ -2061,13 +2061,13 @@ const questions = [
   {
     group: 'O', type: 'number_input', category: 'Number and Algebra',
     context: ctxK5,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Holden Trailblazer?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Holden Trailblazer?',
     answer: '13750'
   },
   {
     group: 'O', type: 'number_input', category: 'Number and Algebra',
     context: ctxK5,
-    question: 'Calculate the net cost of the Nissan Pathfinder after 5 years of fuel savings.\n(Enter the dollar amount only)',
+    question: 'Calculate the net cost of the Nissan Pathfinder after 5 years of fuel savings.',
     answer: '36500'
   },
   {
@@ -2083,7 +2083,7 @@ const questions = [
   {
     group: 'P', type: 'number_input', category: 'Number and Algebra',
     context: ctxK6,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Ford Transit?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Ford Transit?',
     answer: '16000'
   },
   {
@@ -2105,13 +2105,13 @@ const questions = [
   {
     group: 'Q', type: 'number_input', category: 'Number and Algebra',
     context: ctxK7,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Ford Ranger XLT?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Ford Ranger XLT?',
     answer: '5000'
   },
   {
     group: 'Q', type: 'number_input', category: 'Number and Algebra',
     context: ctxK7,
-    question: 'How much more in annual fuel savings would the Toyota HiLux 4WD provide compared to the Ford Ranger XLT?\n(Enter the dollar amount only)',
+    question: 'How much more in annual fuel savings would the Toyota HiLux 4WD provide compared to the Ford Ranger XLT?',
     answer: '700'
   },
   {
@@ -2127,7 +2127,7 @@ const questions = [
   {
     group: 'R', type: 'number_input', category: 'Number and Algebra',
     context: ctxK8,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Hyundai Santa Fe?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Hyundai Santa Fe?',
     answer: '1000'
   },
   {
@@ -2149,13 +2149,13 @@ const questions = [
   {
     group: 'S', type: 'number_input', category: 'Number and Algebra',
     context: ctxK9,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Toyota Fortuner Crusade?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Toyota Fortuner Crusade?',
     answer: '22300'
   },
   {
     group: 'S', type: 'number_input', category: 'Number and Algebra',
     context: ctxK9,
-    question: 'Over 10 years, how much more in total fuel savings would the Toyota LandCruiser 200 provide compared to the Mitsubishi Pajero Exceed?\n(Enter the dollar amount only)',
+    question: 'Over 10 years, how much more in total fuel savings would the Toyota LandCruiser 200 provide compared to the Mitsubishi Pajero Exceed?',
     answer: '14000'
   },
   {
@@ -2171,13 +2171,13 @@ const questions = [
   {
     group: 'T', type: 'number_input', category: 'Number and Algebra',
     context: ctxK10,
-    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mercedes-Benz Vito?\n(Enter the dollar amount only)',
+    question: 'Calculate the total available funding from all sources shown above. How much additional money does the station need to purchase the Mercedes-Benz Vito?',
     answer: '22500'
   },
   {
     group: 'T', type: 'number_input', category: 'Number and Algebra',
     context: ctxK10,
-    question: 'Calculate the net cost of the Toyota HiAce LWB after 8 years of fuel savings.\n(Enter the dollar amount only)',
+    question: 'Calculate the net cost of the Toyota HiAce LWB after 8 years of fuel savings.',
     answer: '33200'
   },
   {
@@ -2705,7 +2705,7 @@ const questions = [
     group: 'AZ', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
     context: ctxT2a,
     question: 'What is the average one-way travel time taken across these 6 students? Give your answer in hours and minutes.',
-    answer: '51'
+    answer: '52'
   },
   {
     group: 'AZ', type: 'number_input', inputType: 'time_hm', category: 'Number and Algebra',
@@ -4595,7 +4595,7 @@ const methods = {
     `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal route:  15 km ÷ 30 km/h = 0.5 h = 30 min\n  Detour route:  15 km ÷ 20 km/h = 0.75 h = 45 min\n  Extra time needed: 45 − 30 = 15 min earlier`,
   ],
   AZ: [
-    `Convert all durations to minutes, then find the mean:\n  Participant 1 (Regional Train): 1 hr 40 min = 100 min\n  Participant 2 (Bus):            50 min\n  Participant 3 (Carpool):        1 hr 10 min = 70 min\n  Participant 4 (Bicycle):        30 min\n  Participant 5 (Metro):          45 min\n  Participant 6 (Walking):        15 min\nTotal: 100 + 50 + 70 + 30 + 45 + 15 = 310 min\nAverage: 310 ÷ 6 = 51.67 → 51 min`,
+    `Convert all durations to minutes, then find the mean:\n  Participant 1 (Regional Train): 1 hr 40 min = 100 min\n  Participant 2 (Bus):            50 min\n  Participant 3 (Carpool):        1 hr 10 min = 70 min\n  Participant 4 (Bicycle):        30 min\n  Participant 5 (Metro):          45 min\n  Participant 6 (Walking):        15 min\nTotal: 100 + 50 + 70 + 30 + 45 + 15 = 310 min\nAverage: 310 ÷ 6 = 51.67 → 52 min (rounded to nearest minute)`,
     `Time = Distance ÷ Speed  (then × 60 to convert hours → minutes)\n\n  Normal (100 km/h):     60 km ÷ 100 km/h = 0.6 h = 36 min\n  Heavy rain (75 km/h):  60 km ÷ 75 km/h = 0.8 h = 48 min\n  Extra time: 48 − 36 = 12 min`,
   ],
   BA: [
