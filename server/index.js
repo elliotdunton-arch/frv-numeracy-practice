@@ -7627,15 +7627,15 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q01.png',
     question: 'Wheels W and X are 6cm across. Wheels Y and Z are 3cm across. When W makes one turn, Z will make:',
     options: ['A) one complete turn', 'B) two complete turns', 'C) three complete turns', 'D) four complete turns'],
-    answer: 'B) two complete turns',
-    method: 'Trace the chain: W (6cm) drives X (6cm) at 1:1 — one turn each. X (6cm) then drives Y (3cm) at 2:1 — Y makes 2 turns per turn of X. Y (3cm) drives Z (3cm) at 1:1. Net result: 1 turn of W → 2 turns of Z.'
+    answer: 'D) four complete turns',
+    method: 'This is a compound gear train with two 2:1 stages. W (6cm) drives the first small wheel (3cm) at 2:1 — 2 turns per W turn. That small wheel is paired on the same shaft as a larger wheel which then drives Z (3cm) at another 2:1. The ratios multiply: 2 × 2 = 4. One turn of W → four turns of Z.'
   },
   { group: 'MQ02', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q02.png',
     question: 'If handle A is pushed upwards in the direction of the arrow:',
     options: ['A) end C will move down and end B will move up', 'B) end C will move up and end B will move down', 'C) end B will move up and end C will move up', 'D) end B will move down and end C will move down'],
-    answer: 'A) end C will move down and end B will move up',
-    method: 'Pushing A up rotates the connecting lever about its fixed pivot. A lever reverses direction across the fulcrum — as one side rises, the other falls. End B rises while end C is pushed down.'
+    answer: 'B) end C will move up and end B will move down',
+    method: 'Pushing handle A upward transmits force through the linkage. The lever arrangement means end C moves up while end B moves down — the two ends move in opposite vertical directions as A is pushed.'
   },
   { group: 'MQ03', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q03.png',
@@ -7648,22 +7648,22 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q04.png',
     question: 'If wheel A turns anticlockwise as indicated, D will:',
     options: ['A) turn anticlockwise', 'B) turn clockwise', 'C) turn to and fro', 'D) jam the mechanism'],
-    answer: 'C) turn to and fro',
-    method: 'The mechanism between A and D includes an intermediate element (such as a crank or eccentric) that converts continuous rotation into oscillating motion. D does not rotate fully in one direction but swings back and forth as A turns.'
+    answer: 'D) jam the mechanism',
+    method: 'When wheel A turns anticlockwise, the geometry of the connecting mechanism forces D into a position where it cannot move — the linkage locks up and the mechanism jams rather than converting the rotation into useful motion.'
   },
   { group: 'MQ05', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q05.png',
     question: 'If the cord is pulled to the left, how will A and B move?',
     options: ['A) A goes up and B to the right', 'B) A goes down and B to the right', 'C) A goes down and B to the left', 'D) A goes up and B to the left'],
-    answer: 'D) A goes up and B to the left',
-    method: 'Pulling the cord left redirects tension through the pulley system. The routing of the cord means A is lifted upward while B is also pulled to the left — both move in the direction dictated by the cord path over each pulley.'
+    answer: 'B) A goes down and B to the right',
+    method: 'Trace the cord path: pulling left feeds cord through the pulley system in a specific direction. Following the routing, block A descends while block B is drawn to the right — each block moves in the direction determined by how the cord wraps around its wheel.'
   },
   { group: 'MQ06', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q06.png',
     question: 'If handle H is pulled down, how will the hook at the end of non-fixed pivot L move?',
     options: ['A) straight up and closer to L', 'B) right only and remain same distance from L', 'C) left but remain same distance from L', 'D) right, then left and closer to L'],
-    answer: 'D) right, then left and closer to L',
-    method: 'Pulling H down drives the linkage through its range of motion. The non-fixed pivot L swings in an arc — moving right as the lever extends, then back left as it compresses — and the geometry of the linkage causes the hook to end up closer to L throughout the movement.'
+    answer: 'C) left but remain same distance from L',
+    method: 'Pulling H down drives the lever so the hook at L swings to the left. Since the hook is on a rigid arm pivoting around a fixed radius from L, it maintains the same distance from L — it moves in an arc leftward while the radial distance stays constant.'
   },
   { group: 'MQ07', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q07.png',
@@ -7676,8 +7676,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q08.png',
     question: 'Wheel Z drives wheel Y. A connecting rod attached to wheel Y moves in a slot. Will pivot P move:',
     options: ['A) to and fro with pauses', 'B) to the right and jam', 'C) to the left and jam', 'D) to and fro continuously'],
-    answer: 'A) to and fro with pauses',
-    method: 'The connecting rod in a slot creates a Scotch yoke or slotted-crank mechanism. As wheel Y rotates, the rod drives P back and forth — but the slot geometry causes P to momentarily slow and pause at the extremes of travel before reversing direction, unlike a simple crank that moves continuously.'
+    answer: 'D) to and fro continuously',
+    method: 'As wheel Y rotates continuously, the connecting rod in the slot drives pivot P back and forth without pause. The wheel\'s constant rotation is converted directly into smooth reciprocating motion in P — it moves to and fro continuously with no stopping at the extremes.'
   },
   { group: 'MQ09', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q09.png',
@@ -7697,85 +7697,85 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q11.png',
     question: 'If handle X is pulled down, W (hook) will:',
     options: ['A) remain in its position', 'B) move right and further away from Y', 'C) move left and closer to Y', 'D) move left and further away from Z'],
-    answer: 'C) move left and closer to Y',
-    method: 'The linkage from X drives W through a pivot arrangement. Pulling X down causes W to arc to the left and the geometry brings it closer to reference point Y — similar to a pivoting arm that sweeps inward as it rotates.'
+    answer: 'D) move left and further away from Z',
+    method: 'Pulling handle X down drives W through the lever linkage, causing W (hook) to swing to the left. As W arcs outward through its range of travel, it moves further away from reference point Z — the arm extends away from Z as it rotates left.'
   },
   { group: 'MQ12', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q12.png',
     question: 'If handle A is pulled down, B will move:',
     options: ['A) up and closer to pivot Y', 'B) down and further away from pivot Y', 'C) up and remain the same distance from Y', 'D) down and further away from X'],
-    answer: 'A) up and closer to pivot Y',
-    method: 'A lever pivoting at Y reverses the direction of force across the fulcrum — pulling A down raises B. Because B moves in an arc around Y, it also swings closer to Y as it rises, reducing the radial distance to the pivot point.'
+    answer: 'B) down and further away from pivot Y',
+    method: 'Pulling handle A down drives the linkage so that B also moves downward. As B descends through its arc of motion, the geometry takes it further away from pivot Y — the arm extends outward as B moves down.'
   },
   { group: 'MQ13', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q13.png',
     question: 'If wheels X and Y move in the direction of the arrows, A will:',
     options: ['A) move to the right first and then to the left in pauses', 'B) move to the left first and then to the right continuously', 'C) not move (jam)', 'D) move to the right first and then to the left continuously'],
-    answer: 'D) move to the right first and then to the left continuously',
-    method: 'Wheels X and Y both drive rod A through a crank or cam arrangement. Given the direction of rotation, A is initially pushed right. As the wheels continue rotating, the linkage pulls A back to the left. The motion is continuous because both wheels turn without obstruction.'
+    answer: 'C) not move (jam)',
+    method: 'Wheels X and Y are meshed with opposing forces — their teeth interlock such that each wheel is trying to push A in a conflicting direction simultaneously. Because both wheels act on A at the same time with opposite forces, the mechanism locks up and A cannot move at all.'
   },
   { group: 'MQ14', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q14.png',
     question: 'If the belt travels anticlockwise, how many wheels turn clockwise?',
     options: ['A) one', 'B) two', 'C) three', 'D) four'],
-    answer: 'C) three',
-    method: 'A belt running anticlockwise drives wheels it contacts in the anticlockwise direction on the outer surface. However, any wheel that has its inner surface in contact with the belt, or is driven by a crossed belt section, will turn clockwise. Tracing the belt path through the system yields three wheels rotating clockwise.'
+    answer: 'B) two',
+    method: 'Trace the belt path anticlockwise through all wheels. Wheels contacted on their outer surface by an anticlockwise belt turn anticlockwise; any wheel where the belt contacts the inner surface or crosses runs clockwise. Following the full path, exactly two wheels end up turning clockwise.'
   },
   { group: 'MQ15', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q15.png',
     question: 'Wheels B and C have pins in slots in wheel A. A will:',
     options: ['A) turn anticlockwise continuously', 'B) turn clockwise continuously', 'C) turn to and fro', 'D) not operate (opposing forces)'],
-    answer: 'C) turn to and fro',
-    method: 'B and C each have a pin that slides in a slot in wheel A. As B and C rotate in their respective directions, they alternately push A one way then the other through the pin-slot contact. Since neither B nor C can drive A fully in one direction without the other opposing it, A oscillates back and forth.'
+    answer: 'D) not operate (opposing forces)',
+    method: 'Wheels B and C both have pins engaging slots in wheel A, and they turn in opposite directions. Because B and C apply opposing forces to A simultaneously through their pins, neither can drive A — the forces cancel out and the mechanism cannot operate.'
   },
   { group: 'MQ16', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q16.png',
     question: 'Spring Z is 3 times stronger than spring X. Towards which point will block A move?',
     options: ['A) X', 'B) Y', 'C) P', 'D) Q'],
     answer: 'B) Y',
-    method: 'Block A is pulled toward whichever spring exerts more force. Spring Z (3× stronger than X) exerts more force in its direction. Block A will be pulled toward Y — the end anchored by the stronger spring Z — because its force overcomes the weaker spring X.'
+    method: 'Equal rotations of each screw move the block upward and to the left equally — the motion is independent of spring strength. The lower screw will require more force to turn (because spring Z is 3× stronger), but both screws move the block the same distance per turn. Block A therefore moves toward Y.'
   },
   { group: 'MQ17', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q17.png',
     question: 'If wheel A turns as shown, which is true?',
     options: ['A) D, C, B all turn in the same direction', 'B) D and C turn in opposite directions', 'C) A and B turn in the same direction', 'D) A and B turn in opposite directions'],
-    answer: 'D) A and B turn in opposite directions',
-    method: 'Each time a gear meshes with another, the direction of rotation reverses. Tracing the gear chain from A: each meshed pair is an opposite-direction transfer. A and B are an even or odd number of meshes apart such that they turn in opposite directions, while the intermediate gears alternate accordingly.'
+    answer: 'C) A and B turn in the same direction',
+    method: 'Each meshed gear pair reverses direction. Tracing from A through the intermediate gears to B: the number of mesh reversals between A and B results in an even total — so A and B end up turning in the same direction. The gears between them alternate direction but A and B share the same rotation.'
   },
   { group: 'MQ18', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q18.png',
     question: 'If the cord is pulled until each block passes its first wheel, which is true?',
     options: ['A) X right/down, Y right/up/left', 'B) X left/up, Y left/diagonally right', 'C) X right/down, Y right/up', 'D) X left/up, Y left/right'],
-    answer: 'C) X right/down, Y right/up',
-    method: 'Following the cord path over each pulley: pulling the cord drives block X to the right and downward as it passes its wheel, while the cord routing causes block Y to be pulled to the right and upward. The direction changes at each wheel according to the cord angle.'
+    answer: 'A) X right/down, Y right/up/left',
+    method: 'Follow each block along the cord path. Pulling the cord draws X to the right then downward as it passes its first wheel. Block Y is pulled to the right, then up, then left as it passes its wheel — the cord wraps around Y\'s pulley and redirects Y\'s path to the left after passing over the top.'
   },
   { group: 'MQ19', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q19.png',
     question: 'If Z is turned clockwise, then:',
     options: ['A) X and Y both clockwise', 'B) X clockwise, Y anticlockwise', 'C) X and Y both anticlockwise', 'D) X anticlockwise, Y clockwise'],
-    answer: 'B) X clockwise, Y anticlockwise',
-    method: 'Z drives X directly — they mesh externally, so X turns in the opposite direction to Z. Wait — Z clockwise → X anticlockwise. Actually, re-reading: answer is B (X clockwise, Y anticlockwise). This means Z connects to X via a belt or internal arrangement giving same direction, then X meshes with Y reversing to anticlockwise. Follow the specific linkage shown: Z → X (same direction via belt/internal gear) → Y (reversed by meshing).'
+    answer: 'A) X and Y both clockwise',
+    method: 'Z turns clockwise and drives both X and Y through the mechanism shown. The arrangement — whether via belt, internal gearing, or the specific linkage — results in both X and Y turning clockwise in the same direction as Z.'
   },
   { group: 'MQ20', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q20.png',
     question: 'If handle J is pulled up, how will M (hook) move?',
     options: ['A) straight out to left, further from K', 'B) up to left, further from L', 'C) down to left, further from L', 'D) down and to left, same distance from L'],
-    answer: 'D) down and to left, same distance from L',
-    method: 'Pulling J up drives the linkage so that M arcs downward and to the left. Since M is fixed to a rigid arm pivoting around L, it maintains a constant radius from L throughout the movement — the hook moves down-left while staying equidistant from the pivot L.'
+    answer: 'C) down to left, further from L',
+    method: 'Pulling handle J up drives the linkage, causing hook M to move down and to the left. As M travels through its arc, the geometry of the linkage takes it further away from pivot point L — the arm extends outward as it swings down-left.'
   },
   { group: 'MQ21', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q21.png',
     question: 'When A and C turn clockwise, rods X and Y will:',
     options: ['A) slide in opposite directions', 'B) jam the mechanism', 'C) both slide to the right', 'D) both slide to the left'],
-    answer: 'C) both slide to the right',
-    method: 'Cranks A and C both rotate clockwise simultaneously. Each crank drives its respective rod via a pin-slot or connecting rod arrangement. With both cranks turning clockwise, the geometry pushes both rods X and Y in the same direction — to the right at this point in the rotation cycle.'
+    answer: 'A) slide in opposite directions',
+    method: 'Gears A and C turn clockwise and are connected to rods X and Y respectively. Because A and C drive their rods from opposite sides of the mechanism, the rods are pushed in opposite directions — when one slides one way, the other slides the other way.'
   },
   { group: 'MQ22', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q22.png',
     question: 'If the handle is pulled to the right, T will move:',
     options: ['A) to the right, same distance from R', 'B) closer to the handle, further from R', 'C) to the left and closer to R', 'D) closer to the handle, same distance from R'],
-    answer: 'C) to the left and closer to R',
-    method: 'Pulling the handle right drives a lever or linkage that reverses T\'s direction. T moves to the left (opposite the handle) and the geometry of the pivot brings T closer to reference point R as it swings through its arc.'
+    answer: 'D) closer to the handle, same distance from R',
+    method: 'Pulling the handle right draws T toward the handle through the linkage. T moves closer to the handle\'s direction. Since T is on a rigid arm pivoting at a fixed radius from R, it stays the same distance from R throughout its arc — it moves toward the handle while remaining equidistant from R.'
   },
   { group: 'MQ23', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q23.png',
@@ -7795,43 +7795,43 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q25.png',
     question: 'When S turns anticlockwise, it drives T and U:',
     options: ['A) both clockwise to and fro', 'B) both anticlockwise continuously', 'C) both anticlockwise to and fro', 'D) T clockwise and U anticlockwise, to and fro'],
-    answer: 'C) both anticlockwise to and fro',
-    method: 'S drives T and U through a mechanism (such as a crank or cam) that converts continuous rotation into oscillating motion. Both T and U swing anticlockwise — matching the input direction of S — but only back and forth rather than completing full rotations, because the linkage geometry limits their range of travel.'
+    answer: 'D) T clockwise and U anticlockwise, to and fro',
+    method: 'S turns anticlockwise and drives T and U through a crank or cam mechanism that converts rotation into oscillating motion. T is driven clockwise and U anticlockwise — they swing in opposite directions — and both move to and fro rather than completing full rotations because the linkage limits their range of travel.'
   },
   { group: 'MQ26', set: 'Set 02', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech Q26.png',
     question: 'When handle S is pulled to the right, T will:',
     options: ['A) remain in its present position', 'B) move closer to V and U', 'C) move closer to V, same distance from U', 'D) move further from S and closer to U'],
-    answer: 'B) move closer to V and U',
-    method: 'Pulling S to the right drives a linkage that draws T inward. The mechanism geometry means T moves simultaneously closer to both reference points V and U — it does not simply move along one axis but converges toward both as the linkage compresses.'
+    answer: 'C) move closer to V, same distance from U',
+    method: 'Pulling handle S to the right drives T through the linkage so it moves closer to reference point V. Since T is on a pivoting arm at a fixed radius from U, it maintains the same distance from U throughout the movement — closer to V but unchanged distance from U.'
   },
   { group: 'MQ27', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q27.png',
     question: 'When the motor drives wheels L, K and M, which is true?',
     options: ['A) M and L turn clockwise, K turns anticlockwise', 'B) will not work (L and M opposing)', 'C) will not work (L and K opposing)', 'D) M and K turn clockwise, L turns anticlockwise'],
-    answer: 'C) will not work (L and K opposing)',
-    method: 'When the motor drives the gear arrangement, the directions assigned to L and K create a conflict — both are forced to turn in incompatible directions at their mesh point. This opposing force locks the mechanism, preventing any rotation, so the system will not operate.'
+    answer: 'B) will not work (L and M opposing)',
+    method: 'When the motor drives wheels L, K and M, the directions imposed on L and M create a conflict — they are forced to turn in incompatible directions at their point of contact. These opposing forces lock the mechanism and prevent it from operating.'
   },
   { group: 'MQ28', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q28.png',
     question: 'When wheel A turns clockwise, how will B move?',
     options: ['A) mechanism jams', 'B) anticlockwise intermittently', 'C) to and fro', 'D) anticlockwise continuously'],
-    answer: 'C) to and fro',
-    method: 'Wheel A drives B through a crank-pin or eccentric arrangement rather than direct gear meshing. As A rotates clockwise continuously, the connecting element pushes and pulls B in alternating directions — B oscillates back and forth (to and fro) rather than rotating fully.'
+    answer: 'B) anticlockwise intermittently',
+    method: 'Wheel A has a pin near its edge that engages a slot in wheel B. As A rotates clockwise, the pin enters and drives B anticlockwise — but only during the portion of A\'s rotation where the pin is engaged. When the pin exits the slot, B stops. This produces intermittent anticlockwise motion in B.'
   },
   { group: 'MQ29', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q29.png',
     question: 'Which statement is true?',
     options: ['A) will not work (J/K opposing)', 'B) all turn anticlockwise except M and L', 'C) J, K, L turn anticlockwise, M turns clockwise', 'D) only L turns clockwise'],
-    answer: 'C) J, K, L turn anticlockwise, M turns clockwise',
-    method: 'Tracing the gear/belt train from the drive source: J, K and L are driven in sequence, all turning anticlockwise. M meshes with the last gear in the chain from the opposite side, reversing direction — so M alone turns clockwise while the rest of the train turns anticlockwise.'
+    answer: 'B) all turn anticlockwise except M and L',
+    method: 'Wheels J and L turn as shown by the arrows. Tracing the gear train: most wheels are driven anticlockwise, but M and L are the exceptions — their positions in the chain and the direction of the arrows result in M and L turning clockwise while all other wheels turn anticlockwise.'
   },
   { group: 'MQ30', set: 'Set 02', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech Q30.png',
     question: 'To make the lower shaft turn the fastest, around which pair should a belt be attached?',
     options: ['A) Same speed regardless', 'B) Pair A', 'C) Pair B', 'D) Pair C'],
-    answer: 'D) Pair C',
-    method: 'Belt speed ratios depend on the size difference between the driving and driven pulleys. To maximise the speed of the lower shaft, attach the belt to the smallest pulley on the upper shaft and the largest on the lower shaft — or the pair that gives the greatest size differential. Pair C provides the largest ratio, resulting in the fastest lower shaft rotation.'
+    answer: 'B) Pair A',
+    method: 'To maximise the lower shaft speed, attach the belt to the pair where the upper wheel is largest relative to the lower wheel — this gives the highest speed multiplication. Pair A provides this configuration. The ratio of revolutions across pairs A, B and C is approximately 3:2:1, so pair A makes the lower shaft spin fastest.'
   },
   { group: 'MQ31', set: 'Set 02', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech Q31.png',
@@ -7844,8 +7844,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech Q32.png',
     question: 'For each rotation of cam A, punch P will:',
     options: ['A) do nothing (jam)', 'B) punch three times', 'C) punch once', 'D) punch right through once'],
-    answer: 'C) punch once',
-    method: 'The number of times a punch operates per cam rotation equals the number of lobes on the cam. Cam A has one lobe — one raised section that lifts and releases the punch mechanism. For each full rotation of the cam, the lobe contacts the follower once, driving P to punch exactly once.'
+    answer: 'B) punch three times',
+    method: 'Cam A is three-sided (triangular), so it lifts the cam follower three times per full revolution — once for each side. The cam follower is shown in its lowest position where the punch is just touching the plate, so it operates the punch three times per rotation but cannot punch through the plate.'
   },
 ]
 
