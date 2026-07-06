@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { getUsername, setUsername as storeUsername, saveResult } from '../utils/resultStorage'
+import { getUsername, setUsername as storeUsername, saveResult, addToRevision, removeFromRevision, getRevision } from '../utils/resultStorage'
 
 function formatHM(totalMins) {
   const h = Math.floor(totalMins / 60)
@@ -41,6 +41,9 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   const [expandedWorking, setExpandedWorking] = useState({})
   const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
   const [nameInput, setNameInput] = useState('')
+  const [revisionSet, setRevisionSet] = useState(() => new Set(getRevision().map(i => i.question.id)))
+  const [commentOpen, setCommentOpen] = useState(new Set())
+  const [commentDraft, setCommentDraft] = useState({})
 
   const score = questions.filter(q => isCorrect(q, answers[q.id])).length
   const incorrectQuestions = questions.filter(q => !isCorrect(q, answers[q.id]))
@@ -286,6 +289,56 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                       )}
                     </div>
                   )}
+                  <div className="revision-save-row">
+                    {revisionSet.has(q.id) ? (
+                      <span className="revision-saved-badge">
+                        ✓ Saved to Revision
+                        <button
+                          className="revision-remove-inline"
+                          onClick={() => {
+                            removeFromRevision(q.id)
+                            setRevisionSet(prev => { const n = new Set(prev); n.delete(q.id); return n })
+                          }}
+                        >
+                          Remove
+                        </button>
+                      </span>
+                    ) : (
+                      <>
+                        <button
+                          className={`btn-save-revision${commentOpen.has(q.id) ? ' bsr-open' : ''}`}
+                          onClick={() => setCommentOpen(prev => {
+                            const n = new Set(prev)
+                            n.has(q.id) ? n.delete(q.id) : n.add(q.id)
+                            return n
+                          })}
+                        >
+                          {commentOpen.has(q.id) ? '✕ Cancel' : '📌 Save to Revision'}
+                        </button>
+                        {commentOpen.has(q.id) && (
+                          <div className="revision-comment-box">
+                            <textarea
+                              className="revision-comment-input"
+                              placeholder="Add a note (optional) — e.g. where you went wrong, extra context…"
+                              value={commentDraft[q.id] || ''}
+                              onChange={e => setCommentDraft(prev => ({ ...prev, [q.id]: e.target.value }))}
+                              rows={3}
+                            />
+                            <button
+                              className="btn-revision-confirm"
+                              onClick={() => {
+                                addToRevision(q, commentDraft[q.id] || '')
+                                setRevisionSet(prev => new Set([...prev, q.id]))
+                                setCommentOpen(prev => { const n = new Set(prev); n.delete(q.id); return n })
+                              }}
+                            >
+                              Save to Revision
+                            </button>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
                 </div>
               )
             })}

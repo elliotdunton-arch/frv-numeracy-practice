@@ -1,5 +1,6 @@
 import { useState, useEffect, Fragment } from 'react'
 import { getUsername, setUsername, getResultsForUser, getKnownUsers, deleteResult } from '../utils/resultStorage'
+import Revision from './Revision'
 
 const NUMERACY_CATEGORIES = [
   {
@@ -345,7 +346,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
-    if (tab !== 'progress') onSectionChange(tab)
+    if (tab !== 'progress' && tab !== 'revision') onSectionChange(tab)
   }
 
   const toggleTopic = (name) => {
@@ -404,8 +405,8 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   }
 
   const content = SECTION_CONTENT[section] || SECTION_CONTENT.numeracy
-  const heroTitle = activeTab === 'progress' ? 'Progress Log' : content.title
-  const heroSub = activeTab === 'progress' ? 'Track your test results over time' : 'Aptitude Assessment — Recruitment Preparation'
+  const heroTitle = activeTab === 'progress' ? 'Progress Log' : activeTab === 'revision' ? 'Revision' : content.title
+  const heroSub = activeTab === 'progress' ? 'Track your test results over time' : activeTab === 'revision' ? 'Questions saved for review' : 'Aptitude Assessment — Recruitment Preparation'
 
   return (
     <div className="home">
@@ -440,6 +441,12 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             Mechanical
           </button>
           <button
+            className={`section-toggle-btn stb-revision${activeTab === 'revision' ? ' stb-active' : ''}`}
+            onClick={() => handleTabClick('revision')}
+          >
+            Revision
+          </button>
+          <button
             className={`section-toggle-btn stb-progress${activeTab === 'progress' ? ' stb-active' : ''}`}
             onClick={() => handleTabClick('progress')}
           >
@@ -450,7 +457,9 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
       {activeTab === 'progress' && <ProgressLog />}
 
-      {activeTab !== 'progress' && <div className="home-card">
+      {activeTab === 'revision' && <Revision />}
+
+      {activeTab !== 'progress' && activeTab !== 'revision' && <div className="home-card">
         <p className="card-desc">{content.desc}</p>
 
         <div className="mode-selector">
@@ -1079,5 +1088,6 @@ export default function Home({ onStart, loading, error, section, onSectionChange
         </button>
       </div>}
     </div>
+
   )
 }
