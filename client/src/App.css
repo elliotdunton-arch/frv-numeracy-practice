@@ -2641,13 +2641,9 @@ body {
   transform: translateY(-1px);
 }
 
-/* ── Revision tab button ──────────────────────────────────── */
-.stb-revision { border-color: #7c3aed !important; }
-.stb-revision.stb-active {
-  background: #7c3aed !important;
-  color: #fff !important;
-  border-color: #7c3aed !important;
-}
+/* ── Revision mode button ────────────────────────────────── */
+.mode-btn-revision { border-color: rgba(124,58,237,0.4) !important; color: #a78bfa !important; }
+.mode-btn-revision.mode-active { background: #7c3aed !important; color: #fff !important; border-color: #7c3aed !important; }
 
 /* ── Revision save row (Results page) ────────────────────── */
 .revision-save-row {
@@ -2765,14 +2761,18 @@ body {
 }
 
 .revision-item {
-  background: var(--card);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 16px 18px;
   margin-bottom: 14px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
-.revision-item:hover { border-color: rgba(124,58,237,0.3); }
+.revision-item:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.1);
+}
 
 .revision-item-top {
   display: flex;
@@ -2792,8 +2792,8 @@ body {
 }
 
 .revision-item-cat {
-  background: rgba(255,255,255,0.07);
-  color: var(--gray-400);
+  background: #f1f5f9;
+  color: #64748b;
   font-size: 0.75rem;
   padding: 2px 8px;
   border-radius: 4px;
@@ -2808,7 +2808,7 @@ body {
 }
 
 .revision-item-date {
-  color: var(--gray-400);
+  color: #94a3b8;
   font-size: 0.75rem;
   margin-left: auto;
 }
@@ -2820,8 +2820,8 @@ body {
 
 .btn-revision-expand {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--gray-400);
+  border: 1px solid #cbd5e1;
+  color: #64748b;
   padding: 4px 10px;
   border-radius: 5px;
   font-size: 0.78rem;
@@ -2829,8 +2829,8 @@ body {
   transition: border-color 0.2s, color 0.2s;
 }
 .btn-revision-expand:hover {
-  border-color: rgba(255,255,255,0.25);
-  color: var(--text);
+  border-color: #7c3aed;
+  color: #7c3aed;
 }
 
 .btn-revision-remove {
@@ -2851,7 +2851,7 @@ body {
 
 .revision-item-question {
   font-size: 0.95rem;
-  color: var(--text);
+  color: #1e293b;
   margin: 0 0 8px 0;
   line-height: 1.5;
 }
@@ -2859,7 +2859,7 @@ body {
 .revision-item-body {
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid #e2e8f0;
 }
 
 .revision-item-image {
@@ -2882,26 +2882,26 @@ body {
 }
 .revision-answer-label {
   font-size: 0.78rem;
-  color: var(--gray-400);
+  color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   flex-shrink: 0;
 }
 .revision-answer-value {
-  font-weight: 600;
-  color: #4ade80;
+  font-weight: 700;
+  color: #16a34a;
   font-size: 0.9rem;
 }
 
 .revision-item-method {
-  background: rgba(0,0,0,0.25);
+  background: #f8fafc;
   border-left: 3px solid var(--orange);
   border-radius: 0 8px 8px 0;
   padding: 12px 14px;
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: 0.8rem;
   line-height: 1.7;
-  color: var(--text);
+  color: #334155;
   white-space: pre-wrap;
   overflow-x: auto;
   margin: 0;
@@ -2910,7 +2910,7 @@ body {
 .revision-comment-section {
   margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid #f1f5f9;
 }
 
 .revision-comment-display {
@@ -2923,10 +2923,10 @@ body {
 .revision-saved-comment {
   flex: 1;
   font-size: 0.85rem;
-  color: var(--text);
+  color: #374151;
   line-height: 1.5;
   margin: 0;
-  background: rgba(124,58,237,0.08);
+  background: #f5f3ff;
   border-left: 3px solid #7c3aed;
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
@@ -2934,13 +2934,13 @@ body {
 
 .revision-comment-label {
   font-weight: 600;
-  color: #a78bfa;
+  color: #7c3aed;
 }
 
 .btn-edit-note {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.1);
-  color: var(--gray-400);
+  border: 1px solid #cbd5e1;
+  color: #64748b;
   padding: 4px 12px;
   border-radius: 5px;
   font-size: 0.78rem;
@@ -2951,7 +2951,7 @@ body {
 }
 .btn-edit-note:hover {
   border-color: #7c3aed;
-  color: #a78bfa;
+  color: #7c3aed;
 }
 
 .revision-edit-comment {

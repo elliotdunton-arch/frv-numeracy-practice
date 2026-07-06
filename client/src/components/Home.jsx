@@ -346,7 +346,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
-    if (tab !== 'progress' && tab !== 'revision') onSectionChange(tab)
+    if (tab !== 'progress') onSectionChange(tab)
   }
 
   const toggleTopic = (name) => {
@@ -405,8 +405,8 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   }
 
   const content = SECTION_CONTENT[section] || SECTION_CONTENT.numeracy
-  const heroTitle = activeTab === 'progress' ? 'Progress Log' : activeTab === 'revision' ? 'Revision' : content.title
-  const heroSub = activeTab === 'progress' ? 'Track your test results over time' : activeTab === 'revision' ? 'Questions saved for review' : 'Aptitude Assessment — Recruitment Preparation'
+  const heroTitle = activeTab === 'progress' ? 'Progress Log' : content.title
+  const heroSub = activeTab === 'progress' ? 'Track your test results over time' : 'Aptitude Assessment — Recruitment Preparation'
 
   return (
     <div className="home">
@@ -441,12 +441,6 @@ export default function Home({ onStart, loading, error, section, onSectionChange
             Mechanical
           </button>
           <button
-            className={`section-toggle-btn stb-revision${activeTab === 'revision' ? ' stb-active' : ''}`}
-            onClick={() => handleTabClick('revision')}
-          >
-            Revision
-          </button>
-          <button
             className={`section-toggle-btn stb-progress${activeTab === 'progress' ? ' stb-active' : ''}`}
             onClick={() => handleTabClick('progress')}
           >
@@ -457,9 +451,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
 
       {activeTab === 'progress' && <ProgressLog />}
 
-      {activeTab === 'revision' && <Revision />}
-
-      {activeTab !== 'progress' && activeTab !== 'revision' && <div className="home-card">
+      {activeTab !== 'progress' && <div className="home-card">
         <p className="card-desc">{content.desc}</p>
 
         <div className="mode-selector">
@@ -475,9 +467,17 @@ export default function Home({ onStart, loading, error, section, onSectionChange
           >
             Custom Practice
           </button>
+          <button
+            className={`mode-btn mode-btn-revision ${mode === 'revision' ? 'mode-active' : ''}`}
+            onClick={() => setMode('revision')}
+          >
+            Revision
+          </button>
         </div>
 
-        <div className="info-row">
+        {mode === 'revision' && <Revision section={section} />}
+
+        {mode !== 'revision' && <><div className="info-row">
           <div className="info-box">
             <span className="info-num">{mode === 'full' ? (isMech ? 32 : 30) : customCount}</span>
             <span className="info-label">Questions</span>
@@ -1086,8 +1086,8 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               ? 'Start Test'
               : `Start Practice — ${customCount} Question${customCount !== 1 ? 's' : ''}`}
         </button>
-      </div>}
-    </div>
-
+      </>}
+    </div>}
+  </div>
   )
 }

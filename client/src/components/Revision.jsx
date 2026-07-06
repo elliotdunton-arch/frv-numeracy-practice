@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { getRevision, removeFromRevision, updateRevisionComment } from '../utils/resultStorage'
 
 function formatDate(iso) {
@@ -6,12 +6,23 @@ function formatDate(iso) {
   return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
-export default function Revision() {
-  const [items, setItems] = useState(() => getRevision())
+export default function Revision({ section }) {
+  const [items, setItems] = useState(() => {
+    const all = getRevision()
+    return section ? all.filter(i => i.section === section) : all
+  })
   const [expanded, setExpanded] = useState(new Set())
   const [editOpen, setEditOpen] = useState(new Set())
   const [editDraft, setEditDraft] = useState({})
   const [pendingRemove, setPendingRemove] = useState(null)
+
+  useEffect(() => {
+    const all = getRevision()
+    setItems(section ? all.filter(i => i.section === section) : all)
+    setExpanded(new Set())
+    setEditOpen(new Set())
+    setPendingRemove(null)
+  }, [section])
 
   const toggleExpand = (id) => {
     setExpanded(prev => { const n = new Set(prev); n.has(id) ? n.delete(id) : n.add(id); return n })

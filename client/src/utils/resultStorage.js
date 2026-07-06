@@ -47,10 +47,10 @@ export function getRevision() {
   }
 }
 
-export function addToRevision(question, comment = '') {
+export function addToRevision(question, comment = '', section = '') {
   const items = getRevision()
   const idx = items.findIndex(i => i.question.id === question.id)
-  const entry = { savedId: Date.now(), savedDate: new Date().toISOString(), comment, question }
+  const entry = { savedId: Date.now(), savedDate: new Date().toISOString(), comment, section, question }
   if (idx >= 0) {
     items[idx] = entry
   } else {

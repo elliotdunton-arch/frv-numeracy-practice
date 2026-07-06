@@ -327,7 +327,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                             <button
                               className="btn-revision-confirm"
                               onClick={() => {
-                                addToRevision(q, commentDraft[q.id] || '')
+                                addToRevision(q, commentDraft[q.id] || '', section)
                                 setRevisionSet(prev => new Set([...prev, q.id]))
                                 setCommentOpen(prev => { const n = new Set(prev); n.delete(q.id); return n })
                               }}
