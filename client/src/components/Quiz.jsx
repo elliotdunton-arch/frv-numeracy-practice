@@ -84,27 +84,23 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
 
   if (!current) return null
 
+  const hasSplitImage = current.type === 'multiple_choice' && !!current.questionImage
+
   const renderAnswerInputs = (q) => {
     if (q.type === 'multiple_choice') {
       return (
-        <>
-          {q.questionImage && (
-            <div className="img-question-wrap">
-              <img src={q.questionImage} alt="Question diagram" className="img-question-main" />
-            </div>
-          )}
-          <div className="mc-options">
-            {(q.options || []).map(opt => (
-              <button
-                key={opt}
-                className={`mc-option${answers[q.id] === opt ? ' mc-selected' : ''}`}
-                onClick={() => handleAnswer(q.id, opt)}
-              >
-                {opt}
-              </button>
-            ))}
-          </div>
-        </>
+        <div className="mc-radio-list">
+          {(q.options || []).map(opt => (
+            <button
+              key={opt}
+              className={`mc-radio-opt${answers[q.id] === opt ? ' mro-selected' : ''}`}
+              onClick={() => handleAnswer(q.id, opt)}
+            >
+              <span className="mro-circle" />
+              <span className="mro-text">{opt}</span>
+            </button>
+          ))}
+        </div>
       )
     }
     if (q.type === 'true_false_matrix') {
@@ -270,97 +266,124 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       </div>
 
       {/* Question */}
-      <div className={`quiz-main${current.context ? ' quiz-main--wide' : ''}`}>
-        <div className="question-card">
-          <div className="question-meta">
-            <span className="q-counter">Question {currentIndex + 1} of {questions.length}</span>
-          </div>
-
-          {current.context ? (
-            <div className="question-layout-split">
-              <div className="context-panel">
-                <div className="context-block">
-                  {current.context.title && (
-                    <div className="context-title">{current.context.title}</div>
-                  )}
-                  {current.context.subtitle && (
-                    <div className="context-subtitle">{current.context.subtitle}</div>
-                  )}
-                  {current.context.image && (
-                    <img src={current.context.image} alt="Question context" className="context-image" />
-                  )}
-                  {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
-                    <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
-                      {para}
-                    </p>
-                  ))}
-                  {current.context.tables && current.context.tables.map((tbl, ti) => (
-                    <div key={ti} className="context-table-wrap">
-                      {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
-                      <table className="context-table">
-                        <thead>
-                          <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
-                        </thead>
-                        <tbody>
-                          {tbl.rows.map((row, ri) => (
-                            <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  ))}
-                  {current.context.extraParagraphs && current.context.extraParagraphs.map((para, pi) => (
-                    <p key={pi} className="context-paragraph">{para}</p>
-                  ))}
-                  {current.context.note && (
-                    <div className="context-note">{current.context.note}</div>
-                  )}
-                </div>
-              </div>
-              <div className="answer-panel">
-                <p className="question-text">{current.question}</p>
-                {current.context.formulaHint && (
-                  <>
-                    <button
-                      className="hint-btn"
-                      onClick={() => setShowHint(h => ({ ...h, [current.id]: !h[current.id] }))}
-                    >
-                      💡 {showHint[current.id] ? 'Hide formula' : 'Show formula'}
-                    </button>
-                    {showHint[current.id] && (
-                      <div className="hint-panel">
-                        <pre className="hint-content">{current.context.formulaHint}</pre>
-                      </div>
-                    )}
-                  </>
-                )}
-                {renderAnswerInputs(current)}
+      <div className={`quiz-main${(current.context || hasSplitImage) ? ' quiz-main--wide' : ''}`}>
+        {hasSplitImage ? (
+          <div className="quiz-img-split">
+            <div className="qis-left">
+              <img src={current.questionImage} alt="Question diagram" className="qis-img" />
+            </div>
+            <div className="qis-right">
+              <span className="q-counter qis-counter">Question {currentIndex + 1} of {questions.length}</span>
+              <p className="question-text qis-question">{current.question}</p>
+              <div className="mc-radio-list">
+                {(current.options || []).map(opt => (
+                  <button
+                    key={opt}
+                    className={`mc-radio-opt${answers[current.id] === opt ? ' mro-selected' : ''}`}
+                    onClick={() => handleAnswer(current.id, opt)}
+                  >
+                    <span className="mro-circle" />
+                    <span className="mro-text">{opt}</span>
+                  </button>
+                ))}
               </div>
             </div>
-          ) : (
-            <>
-              <p className="question-text">{current.question}</p>
-              {renderAnswerInputs(current)}
-            </>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="question-card">
+            <div className="question-meta">
+              <span className="q-counter">Question {currentIndex + 1} of {questions.length}</span>
+            </div>
 
-        <div className="q-nav-controls">
+            {current.context ? (
+              <div className="question-layout-split">
+                <div className="context-panel">
+                  <div className="context-block">
+                    {current.context.title && (
+                      <div className="context-title">{current.context.title}</div>
+                    )}
+                    {current.context.subtitle && (
+                      <div className="context-subtitle">{current.context.subtitle}</div>
+                    )}
+                    {current.context.image && (
+                      <img src={current.context.image} alt="Question context" className="context-image" />
+                    )}
+                    {current.context.images && current.context.images.map((src, ii) => (
+                      <img key={ii} src={src} alt={`Question context ${ii + 1}`} className="context-image" />
+                    ))}
+                    {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
+                      <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
+                        {para}
+                      </p>
+                    ))}
+                    {current.context.tables && current.context.tables.map((tbl, ti) => (
+                      <div key={ti} className="context-table-wrap">
+                        {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
+                        <table className="context-table">
+                          <thead>
+                            <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
+                          </thead>
+                          <tbody>
+                            {tbl.rows.map((row, ri) => (
+                              <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    ))}
+                    {current.context.extraParagraphs && current.context.extraParagraphs.map((para, pi) => (
+                      <p key={pi} className="context-paragraph">{para}</p>
+                    ))}
+                    {current.context.note && (
+                      <div className="context-note">{current.context.note}</div>
+                    )}
+                  </div>
+                </div>
+                <div className="answer-panel">
+                  <p className="question-text">{current.question}</p>
+                  {current.context.formulaHint && (
+                    <>
+                      <button
+                        className="hint-btn"
+                        onClick={() => setShowHint(h => ({ ...h, [current.id]: !h[current.id] }))}
+                      >
+                        💡 {showHint[current.id] ? 'Hide formula' : 'Show formula'}
+                      </button>
+                      {showHint[current.id] && (
+                        <div className="hint-panel">
+                          <pre className="hint-content">{current.context.formulaHint}</pre>
+                        </div>
+                      )}
+                    </>
+                  )}
+                  {renderAnswerInputs(current)}
+                </div>
+              </div>
+            ) : (
+              <>
+                <p className="question-text">{current.question}</p>
+                {renderAnswerInputs(current)}
+              </>
+            )}
+          </div>
+        )}
+
+        <div className="quiz-bottom-nav">
           <button
-            className="btn-nav"
+            className="btn-nav-back"
             onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
             disabled={currentIndex === 0}
           >
-            ← Previous
+            ← Back
           </button>
           <button
-            className={`btn-bookmark-nav ${bookmarks.has(current.id) ? 'bk-active' : ''}`}
+            className={`btn-nav-bookmark${bookmarks.has(current.id) ? ' bnb-active' : ''}`}
             onClick={() => toggleBookmark(current.id)}
           >
             {bookmarks.has(current.id) ? '★ Bookmarked' : '☆ Bookmark'}
           </button>
           <button
-            className="btn-nav"
+            className="btn-nav-next"
             onClick={() => setCurrentIndex(i => Math.min(questions.length - 1, i + 1))}
             disabled={currentIndex === questions.length - 1}
           >

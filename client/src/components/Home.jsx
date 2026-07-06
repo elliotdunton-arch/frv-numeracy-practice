@@ -337,11 +337,15 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [selectedMechSets, setSelectedMechSets] = useState(new Set())
   const [mechSetList, setMechSetList] = useState([])
   const [mechGuideOpen, setMechGuideOpen] = useState(false)
+  const [litSetsOpen, setLitSetsOpen] = useState(false)
+  const [selectedLitSets, setSelectedLitSets] = useState(new Set())
+  const [litSetList, setLitSetList] = useState([])
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
     fetch('/api/literacy-topics').then(r => r.json()).then(setCategoryList).catch(() => {})
     fetch('/api/mechanical-sets').then(r => r.json()).then(setMechSetList).catch(() => {})
+    fetch('/api/literacy-sets').then(r => r.json()).then(setLitSetList).catch(() => {})
   }, [])
 
   const handleTabClick = (tab) => {
@@ -377,8 +381,20 @@ export default function Home({ onStart, loading, error, section, onSectionChange
     .filter(s => selectedMechSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
 
+  const totalSelectedLitSetQs = litSetList
+    .filter(s => selectedLitSets.has(s.name))
+    .reduce((s, c) => s + c.questionCount, 0)
+
   const toggleMechSet = (name) => {
     setSelectedMechSets(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
+
+  const toggleLitSet = (name) => {
+    setSelectedLitSets(prev => {
       const next = new Set(prev)
       if (next.has(name)) next.delete(name); else next.add(name)
       return next
@@ -521,6 +537,51 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               />
               <span className="count-input-hint">questions (1–{maxCustomCount}) — or pick a preset above</span>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'literacy' && litSetList.length > 0 && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${litSetsOpen ? ' tft-open' : ''}`}
+              onClick={() => { setLitSetsOpen(o => !o); setSelectedLitSets(new Set()) }}
+            >
+              <span className="tft-icon">{litSetsOpen ? '▾' : '▸'}</span>
+              Practice by Set
+            </button>
+
+            {litSetsOpen && litSetList.length > 0 && (
+              <div className="topic-panel">
+                <div className="topic-list">
+                  {litSetList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedLitSets.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedLitSets.has(name)}
+                        onChange={() => toggleLitSet(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedLitSets.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedLitSets.size} set{selectedLitSets.size !== 1 ? 's' : ''} · {totalSelectedLitSetQs} questions available
+                    </span>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedLitSets], 'sets')}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 

@@ -5688,6 +5688,99 @@ const ctxL56 = {
   ]
 }
 
+const ctxAP6 = {
+  image: '/images/literacy/ACER Paid 06.png',
+}
+
+const ctxAP5 = {
+  images: [
+    '/images/literacy/ACER Paid 05a.png',
+    '/images/literacy/ACER Paid 05b.png',
+  ],
+}
+
+const ctxAP4 = {
+  image: '/images/literacy/ACER Paid 04.png',
+}
+
+const ctxAP3 = {
+  image: '/images/literacy/ACER Paid 03.png',
+}
+
+const ctxAP2 = {
+  image: '/images/literacy/ACER Paid 02.png',
+}
+
+const ctxAP1 = {
+  image: '/images/literacy/ACER Paid 01.png',
+}
+
+const ctxFP6 = {
+  image: '/images/literacy/FRV Practice 06.png',
+}
+
+const ctxFP5 = {
+  title: 'Why the debate around Australia Day gets more heated every year',
+  subtitle: 'Source: CNN, January 2019',
+  paragraphs: [
+    "As Australians deal with a record-breaking heatwave, environmental devastation and a sixth prime minister in just over a decade, the annual fierce debate over the country's national day might be the thing that pushes many of them over the edge.",
+    "Australia Day is held on the same date Britain's First Fleet sailed into Sydney Harbor in 1788, beginning the European colonization which led to the modern nation of Australia.",
+    "Not everyone sees it as a reason to celebrate. Aboriginal and Torres Strait Islander people see the date as the beginning of the deliberate destruction of their people and culture as colonists took lands they deemed \"uninhabited\" despite large indigenous populations living there.",
+    "Many Australians refer to January 26 as \"Invasion Day.\"",
+    "The controversy has led to a growing push to change the date of the country's national celebration to another day without the historical baggage. Few former British colonies celebrate their national day on the actual day of colonization.",
+    "But a group of conservative politicians led by Prime Minister Scott Morrison have pushed back hard, saying they will protect Australia Day and ensure it is respected.",
+    "\"I'm not just going to not change it, I'm going to ensure it doesn't get eroded ... That's our historical day and we need to work together, to come together on that day to ensure that we can make it an important day for all Australians,\" Morrison said.",
+    "Polls suggest a majority of Australians agree — a 2017 survey found 54% of Australians supported keeping the date on January 26, while just 26% wanted it moved.",
+    "But the movement to change the date has become increasingly mainstream, with more than 100,000 people marching across the country to protest \"Invasion Day\" in 2018. Similar numbers are expected to march this year.",
+    "A small number of local councils have already tried moving the celebration — which is also the date new citizens receive their Australian citizenship — from January 26, out of respect for the wishes of Aboriginal and Torres Strait Islander people.",
+    "On January 17, television host Brooke Boney made an impassioned appeal that went viral across the country. \"This is the best country in the world no doubt, but I can't separate January 26 from the fact that my brothers are more likely to go to jail than they are to go to school, or that my little sisters and my mum are more likely to be beaten and raped than anyone else's sisters and mum. And that started from that day. So for me it's a difficult day and I don't want to celebrate it. But any other day of the year I'll tie an Australian flag around my neck and I'll run through the streets.\"",
+    "Tom Calma, co-chair of the advocacy group Reconciliation Australia, said there needed to be more education for people to understand why the date should be changed. \"Don't make it that day ... Make it any other day when it's not coinciding and we're happy to celebrate as Australians,\" he told CNN.",
+    "Two weeks before Australia Day 2019, Prime Minister Morrison announced potential measures which would ban councils from holding citizenship ceremonies on any day other than January 26. Other suggestions by Morrison included enforcing dress codes at citizenship ceremonies — an idea which was widely criticized.",
+    "Aboriginal and Torres Strait Islander activist Calma said he felt the conservative Morrison government was rushing to make changes to Australia Day before it likely loses power at a national election due to take place before May.",
+    "\"We encourage discussion, meaningful and respectful discussion, of the issues and opportunity for all Australians to become better informed about what the issues are, why January 26 is offensive to many Aboriginal and Torres Strait Islanders,\" he said.",
+    "Calma believes the movement to change the date is gaining momentum: \"We see the big marches and the protests ... If you just have a look it's not Aboriginal and Torres Strait Islander people only, it's also the majority are Australians. For us, that's a real true sign of reconciliation.\"",
+  ],
+}
+
+const ctxFP4 = {
+  title: 'Social Media Post — Australian Republic Movement',
+  image: '/images/literacy/FRV Practice 04.png',
+}
+
+const ctxFP3 = {
+  title: 'Accommodation Listing',
+  image: '/images/literacy/FRV Practice 03.png',
+}
+
+const ctxFP2 = {
+  title: 'Website — Hamilton Fun Run',
+  image: '/images/literacy/FRV Practice 02.png',
+}
+
+const ctxFP1 = {
+  title: 'Email — Gillmont Pharmacy: Hay Fever Season',
+  image: '/images/literacy/FRV Practice 01.png',
+}
+
+const ctxFP7 = {
+  title: 'How To Prepare For A Winter Storm',
+  subtitle: 'Seasonal Newsletter',
+  image: '/images/literacy/FRV Practice 07.png',
+}
+
+const ctxPN1 = {
+  title: 'Product Information — Earthplus Gardening Supplies',
+  image: '/images/literacy/Practice Now Q01.png',
+}
+
+const ctxPN2 = {
+  title: 'News Article — Sugar Tax on Sugary Drinks',
+  images: [
+    '/images/literacy/Practice Now Q2a.png',
+    '/images/literacy/Practice Now Q2b.png',
+  ],
+}
+
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
   { group: 'L4', type: 'multiple_choice', category: 'Workplace Policy', context: ctxL4,
@@ -6655,7 +6748,7 @@ const literacyQuestions = [
   },
 
   // ── Set 18 (Persuasive): Pet Overbreeding ──────────────────────────────────
-  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+  { group: 'L28', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
     question: "The passage opens: 'Australia euthanises more than 200,000 cats and dogs annually. These are not animals that lived full lives and died of natural causes.' Why does the author add this clarification?",
     options: [
       "A) To distinguish between healthy animals euthanised due to overpopulation and those euthanised for medical reasons — only the latter are the article's concern.",
@@ -6666,7 +6759,7 @@ const literacyQuestions = [
     answer: "B) To pre-emptively close off an interpretation of euthanasia as a natural or compassionate endpoint, framing it instead as a preventable outcome of systemic failure.",
     method: "By specifying that these are 'healthy, adoptable animals' — not animals at end of life — the author removes any comfort the word 'euthanasia' might suggest and forces the reader to confront the deaths as avoidable. This framing immediately establishes the moral urgency. Option A inverts the article's concern — medical euthanasia is not discussed, and the 200,000 figure refers to the adoptable animals. Option C introduces a global comparison not in the text. Option D misidentifies the rhetorical target — the author is not primarily blaming individual breeders in the opening."
   },
-  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+  { group: 'L28', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
     question: "The passage describes the Victorian Government's current regulations as 'a necessary starting point, yet they remain insufficient.' What does this phrasing reveal about the author's position on government action?",
     options: [
       "A) The author believes government regulation has been counterproductive and should be replaced entirely by consumer-led change.",
@@ -6677,7 +6770,7 @@ const literacyQuestions = [
     answer: "B) The author acknowledges the regulations as meaningful but argues they fall short of what is needed to resolve the crisis.",
     method: "'Necessary starting point' concedes genuine value; 'insufficient' signals that more is required. This is a measured critique — not a rejection of regulation but a demand for stronger regulation. Option A misreads the passage — the author calls regulation 'necessary,' not counterproductive. Option C introduces a licensed/unlicensed distinction the passage does not draw. Option D reverses the article's structure — the author calls for action on 'two fronts,' giving consumer behaviour equal weight."
   },
-  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+  { group: 'L28', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
     question: "The author calculates that ten breeding females can produce between 50 and 160 animals annually from a single operation. How does this calculation function as an argument?",
     options: [
       "A) It demonstrates that the government has undercounted the total number of animals entering the adoption market each year.",
@@ -6688,7 +6781,7 @@ const literacyQuestions = [
     answer: "B) It shows that the legal cap of ten females, despite appearing modest, actually enables industrial-scale production that exacerbates the oversupply problem.",
     method: "The calculation is a rhetorical device to expose the gap between the appearance of the regulation (a 'reasonable cap') and its practical effect (up to 160 animals annually from one operation). The author's point is that the number sounds small but behaves like industrial production at scale. Option A misreads the calculation's purpose — it is directed at the regulatory limit, not an official count. Option C overstates the causal link. Option D introduces an alternative threshold not proposed by the author."
   },
-  { group: 'L28', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
+  { group: 'L28', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Animal Ethics', context: ctxL28,
     question: "The passage states: 'The goal is not to eliminate the breeding industry — it is to reduce Australia's annual euthanasia rate to zero.' What does this distinction reveal about the author's position?",
     options: [
       "A) The author is unwilling to advocate for strong regulatory reform because eliminating the industry entirely would be economically damaging.",
@@ -6699,7 +6792,7 @@ const literacyQuestions = [
     answer: "B) The author is proposing a targeted outcome — zero euthanasia — without requiring the abolition of breeding, suggesting reform and coexistence are compatible.",
     method: "The author explicitly disavows elimination of the industry while maintaining an ambitious euthanasia goal. This means the argument is about scale and behaviour, not existence — reduced breeding limits, mandatory microchipping, and consumer adoption would achieve the target without banning breeding. Option A mischaracterises the author's advocacy as reluctant. Option C contradicts the article's core claim that overbreeding causes the euthanasia crisis. Option D speculates about rhetorical strategy with no textual support."
   },
-  { group: 'L28', type: 'true_false_matrix', category: 'Animal Ethics', context: ctxL28,
+  { group: 'L28', set: 'Practice Now Questions', type: 'true_false_matrix', category: 'Animal Ethics', context: ctxL28,
     question: 'Based on the passage, are the following statements about the overbreeding crisis true or false?',
     options: [
       'The author believes that the Victorian Government\'s current legislative efforts have fully resolved the overbreeding crisis.',
@@ -7180,7 +7273,7 @@ const literacyQuestions = [
     method: "The article's conclusion is position-specificity: height benefits some roles (goalkeeper, central defender) and is irrelevant or disadvantageous in others (wide midfield, attacking positions). The implication for scouting is that physical attributes must be evaluated relative to role requirements, not as universal measures of quality. Option A goes too far — the article says height is relevant for some positions, not that it should be ignored entirely. Option C overcorrects in the opposite direction; the article does not argue short players should be systematically preferred. Option D dismisses physical characteristics entirely, which the article contradicts by explaining how height is functionally important for aerial contests in defensive and goalkeeping roles."
   },
   // ── Set L53: Community Poster — Mulberry Creek ────────────────────────────
-  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+  { group: 'L53', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "A reader argues: 'This poster is calling on MetroCorp to abandon the MetroLink freeway project altogether.' Is this an accurate reading of the poster's argument?",
     options: [
       "A) Yes — the poster's title 'Stop the MetroLink Freeway' makes clear that residents want the entire project cancelled.",
@@ -7191,7 +7284,7 @@ const literacyQuestions = [
     answer: "B) No — the poster specifically targets the location of the freeway entrance, calling for it to be moved, not for the freeway itself to be stopped.",
     method: "The poster's key demand is to 'move the new freeway entrance,' and its call to action directs residents to write to MetroCorp with this specific ask. It does not oppose the freeway as a whole. Option A misreads the poster's scope — the title addresses the entrance, not the entire project. Option C also overstates the position, adding a geographical 'under any circumstances' restriction not present in the poster. Option D is factually incorrect about who the audience is — the poster does direct residents to contact MetroCorp."
   },
-  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+  { group: 'L53', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "The poster states that the current freeway plans would 'dig up the Mulberry Creek Reserve, destroying 30 years of regeneration work.' What does this specific detail add to the poster's persuasive strategy?",
     options: [
       "A) It demonstrates that MetroCorp's engineers have failed to conduct an adequate environmental impact assessment.",
@@ -7202,7 +7295,7 @@ const literacyQuestions = [
     answer: "B) It quantifies the loss in terms of accumulated effort, making the destruction feel more concrete and irreversible than a generic environmental objection would.",
     method: "The '30 years of regeneration work' figure transforms an abstract objection ('it will damage the environment') into a concrete, emotionally resonant claim — three decades of community effort, erased. This is a persuasive technique: specificity makes the loss feel real and irreversible. Option A goes beyond the poster's claims; no failure of impact assessment is alleged. Option C introduces legal ownership, which the poster does not raise. Option D draws an economic inference about cost comparison not made in the poster."
   },
-  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+  { group: 'L53', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "The poster accuses MetroCorp of 'cost-cutting' as a reason for placing the freeway entrance in its current location. What does this accusation imply about MetroCorp's decision-making process?",
     options: [
       "A) MetroCorp made a technical error in its engineering calculations that led to the entrance being placed in the wrong location.",
@@ -7213,7 +7306,7 @@ const literacyQuestions = [
     answer: "B) MetroCorp chose the current location because it was cheaper, even though better locations that would not affect the park exist.",
     method: "'Cost-cutting' specifically refers to reducing financial expenditure. The accusation implies that a cheaper but community-harmful location was preferred over a more expensive but less damaging alternative. This frames the company's choice as prioritising profit over community welfare. Option A introduces a technical error, which is a different explanation from financial prioritisation. Option C substitutes time for money — 'cost-cutting' refers to expenditure, not speed. Option D adds a consultation stage not mentioned in the poster."
   },
-  { group: 'L53', type: 'true_false_matrix', category: 'Community Poster', context: ctxL53,
+  { group: 'L53', set: 'ACER Practice Free', type: 'true_false_matrix', category: 'Community Poster', context: ctxL53,
     matrixLabels: ['Yes', 'No'],
     question: 'Does this poster use the following arguments for moving the freeway entrance?',
     options: [
@@ -7224,7 +7317,7 @@ const literacyQuestions = [
     answer: 'Yes,No,Yes',
     method: "Park ruined — Yes: confirmed by the point about Mulberry Creek Reserve being dug up, destroying 30 years of regeneration work.\nStreets closed — No: while the poster complains about trucks on streets, it makes no claim that streets will be closed during construction.\nDangerous loads — Yes: confirmed by the point about a raised road carrying dangerous goods over homes."
   },
-  { group: 'L53', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
+  { group: 'L53', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Community Poster', context: ctxL53,
     question: "The poster ends with: 'Let's work together to make our suburb safer, healthier and truck free.' The use of 'our suburb' rather than 'the suburb' or 'this suburb' is significant because it:",
     options: [
       "A) Implies that only long-term residents, rather than recent arrivals, have a legitimate stake in the outcome.",
@@ -7237,7 +7330,7 @@ const literacyQuestions = [
   },
 
   // ── Set L54: News Article — Processed Meat and Cancer ─────────────────────
-  { group: 'L54', type: 'true_false_matrix', category: 'News Article', context: ctxL54,
+  { group: 'L54', set: 'ACER Practice Free', type: 'true_false_matrix', category: 'News Article', context: ctxL54,
     matrixLabels: ['Yes', 'No', 'Not stated'],
     question: 'Are the following statements Yes, No or Not stated based on the article?',
     options: [
@@ -7249,7 +7342,7 @@ const literacyQuestions = [
     answer: 'Yes,Not stated,No,Yes',
     method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Not stated: The article discusses types of meat and amounts consumed, but says nothing about cooking methods as a factor.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
   },
-  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+  { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "The article places processed meat and tobacco in the same Group 1 carcinogen category. A reader concludes: 'This means eating a ham sandwich is as dangerous as smoking a cigarette.' Is this conclusion supported by the article?",
     options: [
       "A) Yes — Group 1 status means both products carry identical health risks.",
@@ -7260,7 +7353,7 @@ const literacyQuestions = [
     answer: "B) No — the Group 1 classification indicates the strength of scientific evidence linking processed meat to cancer, not that it causes cancer at the same rate or severity as tobacco.",
     method: "The article quotes Kurt Straif: 'the risk of developing colorectal cancer from eating processed meat is small, but this risk increases with the amount of meat consumed.' He distinguishes between the strength of evidence (Group 1 = confirmed cause) and the magnitude of risk (tobacco causes far more cancer deaths per person than processed meat). The classification is about certainty of causation, not equivalence of harm. Option A conflates category with degree of risk. Option C misattributes a claim Straif does not make — he explicitly says the risk is 'small.' Option D is a factual error; the article confirms processed meat is classified as Group 1."
   },
-  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+  { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "The article quotes the Meat Industry Council saying there is 'no causal link between red meat and cancer.' What function does including this quote serve in a news report about WHO findings?",
     options: [
       "A) It undermines the WHO's findings by presenting industry evidence that contradicts the scientific consensus.",
@@ -7271,7 +7364,7 @@ const literacyQuestions = [
     answer: "C) It presents a competing perspective from an interested party, allowing readers to identify the basis of the industry's objection and weigh it against the WHO's position.",
     method: "News reporting includes the views of affected parties to demonstrate balance and allow readers to engage with the debate. The Meat Industry Council is an explicitly interested party — its commercial stake in the outcome is visible to readers, who can factor this into how they weigh the objection. Option A overstates the quote's function; the article does not frame the industry's objection as undermining WHO findings, and the WHO's classification stands in the article. Option B would compromise journalistic objectivity — the writer's opinion should not feature. Option D mischaracterises the industry council as a body of independent scientists."
   },
-  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+  { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "Kurt Straif is quoted saying: 'Given the large number of people around the world that eat processed meat, the global impact on cancer incidence is of public health importance.' What reasoning does this sentence use to explain why a small individual risk is still significant?",
     options: [
       "A) Because small risks accumulate in the same individual over a lifetime, eventually reaching a dangerous threshold.",
@@ -7282,7 +7375,7 @@ const literacyQuestions = [
     answer: "B) Because a small risk multiplied across a large population produces a large absolute number of people affected, making it a collective concern even if each individual's risk is modest.",
     method: "Straif's reasoning is explicitly epidemiological: a small per-person risk becomes a large public health burden when the exposed population is enormous. The article's own estimate of 34,000 cancer deaths per year attributable to processed meat diets illustrates this — even if the individual probability is low, the scale of consumption makes the aggregate impact significant. Option A describes a different mechanism (dose accumulation over time in the same person), which may be true but is not what this sentence argues. Option C introduces treatment difficulty, which is not mentioned in the article. Option D raises an inequality dimension also not discussed in the article."
   },
-  { group: 'L54', type: 'multiple_choice', category: 'News Article', context: ctxL54,
+  { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "The article distinguishes between red meat (classified as a 'probable' carcinogen) and processed meat (classified as a confirmed Group 1 carcinogen). What is the most accurate explanation of this difference?",
     options: [
       "A) Red meat is safer to eat than processed meat because it contains fewer chemical additives.",
@@ -7294,7 +7387,7 @@ const literacyQuestions = [
     method: "The article explains that WHO classified processed meat as Group 1 (definite carcinogen) and red meat as Group 2A (probable carcinogen). This reflects different levels of evidential certainty, not necessarily different levels of harm. Option A may be factually plausible in reality but is not the article's stated reason for the classification difference — the article grounds the distinction in evidence strength, not additive content. Option C inverts the logic: a higher classification does not mean more cancer types. Option D introduces consumption volume as an explanation for classification, which is not how IARC classifications work; they are based on evidence strength, not usage levels."
   },
   // ── Set L55: Email — Bilvington Bushfire Preparedness ────────────────────
-  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "A resident reads the email and concludes: 'This email is telling me what to do if a bushfire breaks out near my home.' Is this an accurate reading of the email's purpose?",
     options: [
       "A) Yes — the email's primary concern is instructing residents on emergency evacuation procedures to follow during a fire.",
@@ -7305,7 +7398,7 @@ const literacyQuestions = [
     answer: "B) No — the email is focused on actions residents should take before fire season begins to prepare their properties, not on emergency response during an active fire.",
     method: "The email is a preparedness communication, not an emergency response guide. Its emphasis is on property preparation steps to be completed before fire season — actions like clearing vegetation, storing flammable liquids, and positioning trees. It does not outline emergency evacuation procedures (Option A). Option C incorrectly claims the email balances preparation and emergency response equally. Option D reduces the email to risk information, when it is explicitly a call to action directed at specific preparatory tasks."
   },
-  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "The email is sent by local council and directed to Bilvington residents specifically. What feature of Bilvington's location makes targeted preparation advice for this community particularly relevant?",
     options: [
       "A) Bilvington's narrow streets make it difficult for fire trucks to navigate during an active bushfire.",
@@ -7316,7 +7409,7 @@ const literacyQuestions = [
     answer: "B) Bilvington is surrounded by dense bushland, which significantly increases residents' exposure to bushfire risk compared with urban areas.",
     method: "The email explicitly states that Bilvington is surrounded by dense bushland, which is the specific geographic risk factor that makes the preparation advice directly relevant to this community. Option A introduces road access for fire trucks, which the email does not mention. Option C claims a recent fire history not referenced in the email. Option D introduces building material age as a risk factor also not discussed in the email."
   },
-  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "The email advises residents that mature trees can be 'strategically placed' to help protect their property. A resident interprets this to mean they should plant new trees as far away from the house as possible. Is this interpretation correct?",
     options: [
       "A) Yes — distance from the house is the defining feature of strategic placement, as any tree close to a house is a fire risk.",
@@ -7327,7 +7420,7 @@ const literacyQuestions = [
     answer: "B) No — 'strategically placed' means positioned in a deliberate location to provide specific benefits such as acting as a firebreak or providing shelter, not simply maximising distance.",
     method: "'Strategically' means positioned to achieve a specific purpose, not simply placed at maximum distance. The email explains that mature trees can provide shelter and act as a firebreak when placed correctly — implying purposeful positioning relative to the property and fire direction, not arbitrary removal of nearby vegetation. Option A conflates strategic placement with maximum distance, losing the purposeful element. Option C applies a blanket 'all vegetation is dangerous' rule the email does not endorse — it specifically recommends strategically placed mature trees as protective. Option D contradicts the email's actual advice, which endorses correctly positioned mature trees."
   },
-  { group: 'L55', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
     matrixLabels: ['Yes', 'No'],
     question: 'Which of the following actions does the email encourage people to carry out?',
     options: [
@@ -7338,7 +7431,7 @@ const literacyQuestions = [
     answer: 'Yes,No,Yes',
     method: "Regularly cut grass — Yes: the email advises keeping grass mown short around the property.\nEnsure a hose nearby — No: having a hose close to the property is not mentioned as a specific action in the email.\nStore petrol away from house — Yes: the email advises storing flammable liquids (such as petrol) in a shed away from the house."
   },
-  { group: 'L55', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "When referring to mature trees, what does the email mean by 'strategically placed'?",
     options: [
       'A) Only old trees kept.',
@@ -7395,6 +7488,860 @@ const literacyQuestions = [
     answer: 'Yes,No,No',
     method: "Close off rooms — Yes: under 'During / Survive' the newsletter states 'Close off rooms to consolidate and retain heat.'\nGenerator indoors in an emergency — No: the newsletter states 'Never use a generator... indoors' — there is no exception for emergencies.\nKeep clearing snow from house — No: the newsletter advises to 'avoid overexertion clearing/shovelling snow' — it does not instruct people to keep clearing snow."
   },
+
+  // ── Practice Now — Eggplant / Earthplus Gardening Supplies ────────────────
+  { group: 'PN1', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Product Information', context: ctxPN1,
+    question: 'What is the main purpose of this text?',
+    options: [
+      'A) To persuade people to grow eggplants.',
+      'B) To provide tips on how to grow eggplants.',
+      'C) To persuade people to buy Earthplus products.',
+      'D) To inform people about how eggplants are grown.',
+    ],
+    answer: 'C) To persuade people to buy Earthplus products.',
+    method: "Questions about the purpose of the text ask you to think about the text as a whole and why it was written. While this text does provide some information about how eggplants are grown and tips on how to grow eggplants, its main purpose is to sell a product. The banner of the web page shows that the website is managed by 'Earthplus Gardening Supplies'. The text also includes 'PurpleKnight' and various other products capitalised and in bold — this is done to advertise these items and persuade the reader to buy Earthplus products.",
+  },
+  { group: 'PN1', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Product Information', context: ctxPN1,
+    question: 'The state that is likely to be the largest grower of eggplants is:',
+    options: [
+      'A) Victoria',
+      'B) Queensland',
+      'C) South Australia',
+      'D) New South Wales',
+    ],
+    answer: 'B) Queensland',
+    method: "With inference questions, the answer is implied but not specifically stated — you must use reasoning. The diagram under 'When to plant' shows the times of the year that eggplants can be planted in different areas of Australia. In the north of Australia, eggplants can be planted all year round. We can infer that areas with year-round growing produce more eggplants. Of the choices given, Queensland is the only state in the area where eggplants can be grown all year round, making it the most likely largest grower.",
+  },
+  { group: 'PN1', set: 'Practice Now Questions', type: 'true_false_matrix', category: 'Product Information', context: ctxPN1,
+    matrixLabels: ['Yes', 'No'],
+    question: "According to this text, which of the following statements are true? Tick 'yes' or 'no' for each statement.",
+    options: [
+      'The eggplant will reach its full size in 10 weeks.',
+      'In Tasmania it is best to sow eggplants in spring.',
+      'Eggplants need less water when they start to grow fruit.',
+      'Eggplants need months of continuous warm to hot weather.',
+    ],
+    answer: 'No,Yes,No,Yes',
+    method: "Statement 1 — No: The growth chart shows that the eggplant reaches maturity in 14–16 weeks, not 10 weeks.\nStatement 2 — Yes: The 'When to plant' diagram shows Tasmania is in the area marked 'Spring', so spring is the best time to sow.\nStatement 3 — No: The text states eggplants require a moderate amount of water which needs to be increased (not decreased) when they begin to grow fruit.\nStatement 4 — Yes: The text states eggplants grow best in warm to hot conditions over 5–6 months. Periods of cool weather will hinder growth.",
+  },
+  { group: 'PN1', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Product Information', context: ctxPN1,
+    question: "In the growing diagram, which phrase could be used instead of 'germination'?",
+    options: [
+      'A) Seedlings appear',
+      'B) Ready for harvest',
+      'C) Ready to transplant',
+      'D) Seedlings to be thinned out',
+    ],
+    answer: 'A) Seedlings appear',
+    method: "Vocabulary-in-context questions ask you to find the meaning of a word or phrase by looking at the words and pictures around it. In this case, 'germination' is part of a growing diagram. The picture next to 'Germination' shows a seedling, suggesting that germination is when seedlings appear. The other options — harvest, transplant, and thinning out — would show different plant stages (full-sized fruit, replanting equipment, or multiple seedlings), none of which match the single seedling image shown.",
+  },
+  { group: 'PN1', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Product Information', context: ctxPN1,
+    question: "Why are the words 'PurpleKnight' and 'Earthplus' capitalised and in bold?",
+    options: [
+      'A) To emphasise that they are important.',
+      'B) To make the text appear more interesting.',
+      'C) To inform people about different brand names.',
+      'D) To encourage the reader to buy those products.',
+    ],
+    answer: 'D) To encourage the reader to buy those products.',
+    method: "Author technique questions ask you to consider why the author has included certain details or presented material in a particular way. In this text, the writer is trying to influence the reader to take notice of particular products. By capitalising and bolding the product names, the writer is advertising those products to persuade the reader to buy them. Option A is too vague — emphasis alone does not explain the commercial intent. Option B suggests a stylistic choice with no purpose, which is unlikely in an informational/commercial text. Option C describes what bolding does (identifies brand names) but not why — the reason is to drive purchasing behaviour.",
+  },
+
+  // ── Practice Now — News Article: Sugar Tax ───────────────────────────────
+  { group: 'PN2', set: 'Practice Now Questions', type: 'multiple_choice', category: 'News Article', context: ctxPN2,
+    question: 'Which of the following best describes what this article is about?',
+    options: [
+      'A) An explanation of how a tax on sugary drinks would work in Australia.',
+      'B) An opinion in favour of introducing a tax on sugary drinks in Australia.',
+      'C) Results of a study into the health issues around sugary drinks in Australia.',
+      'D) A report on opinions about introducing a tax on sugary drinks in Australia.',
+    ],
+    answer: 'D) A report on opinions about introducing a tax on sugary drinks in Australia.',
+    method: "The text is a newspaper report, which presents facts or opinions from other sources rather than a personal opinion. Option A is wrong — the report does not explain how the tax would work. Option B is wrong — newspaper reports do not express a personal opinion; the writer's own view is not provided. Option C is wrong — health statistics are given for context but the main focus is not a study; it is opinions about introducing a tax. Option D is correct — the main focus is the opinions of health organisations and the Australian Beverages Council on introducing a tax on sugary drinks.",
+  },
+  { group: 'PN2', set: 'Practice Now Questions', type: 'multiple_choice', category: 'News Article', context: ctxPN2,
+    question: "On the graph, why would 'grams of sugar per 100 ml' be a better way of comparing drinks than 'grams of sugar per serve'?",
+    options: [
+      'A) There are different serving sizes.',
+      'B) People often drink small amounts.',
+      'C) Smaller amounts are more accurate.',
+      'D) Smaller amounts are easier to interpret.',
+    ],
+    answer: 'A) There are different serving sizes.',
+    method: "The graph shows three different serving sizes (375 ml, 500 ml and 600 ml) — the cans or bottles come in different sizes, indicated by the symbols *, ~ and ^. Because serving sizes differ, comparing grams of sugar per serve does not allow accurate comparison across drinks. Using grams per 100 ml standardises the measurement so all drinks are compared on the same basis. Option B introduces a claim about how much people drink that is not in the text. Options C and D are vague and do not identify the actual reason — the key issue is that serving sizes vary.",
+  },
+  { group: 'PN2', set: 'Practice Now Questions', type: 'true_false_matrix', category: 'News Article', context: ctxPN2,
+    matrixLabels: ['True', 'False'],
+    question: "According to the article, which of the following statements are 'true' or 'false'?",
+    options: [
+      'In Australia, the most added sugar is consumed through sugary drinks.',
+      'Nearly half of Australian children drink sugary drinks daily.',
+      'Australia will introduce a sugar tax in 2018.',
+      'Lemon soft drink has the highest concentration of sugar.',
+    ],
+    answer: 'True,True,False,True',
+    method: "Statement 1 — True: The article states that 'sugary drinks such as soft drinks, sports and energy drinks are the largest source of added sugars in the Australian diet' according to the Australian Health Survey.\nStatement 2 — True: The article states that '47 per cent of children consumed sugary drinks (including energy drinks) every day'. 47 per cent is nearly half.\nStatement 3 — False: The article explains that the sugar tax will be introduced in the UK, not Australia.\nStatement 4 — True: The graph shows that Lemon soft drink has 12.1 grams of sugar per 100 ml, which is the highest concentration. Other drinks may have larger amounts per serve but different serving sizes make per-serve comparison unreliable.",
+  },
+  { group: 'PN2', set: 'Practice Now Questions', type: 'multiple_choice', category: 'News Article', context: ctxPN2,
+    question: "What does Jane Martin mean when she uses the phrase 'directly impacts demand'?",
+    options: [
+      'A) It makes people buy fewer sugary drinks.',
+      'B) It makes people want more sugary drinks.',
+      'C) It makes people support a tax on sugary drinks.',
+      'D) It makes people aware of the effects of sugary drinks.',
+    ],
+    answer: 'A) It makes people buy fewer sugary drinks.',
+    method: "Jane Martin, Executive Manager of the Obesity Policy Coalition, said: 'Evidence from other countries that have implemented similar taxes shows that consumers are sensitive to the price of sugary drinks and this directly impacts demand — it is a very powerful policy tool.' She is saying that raising the price will reduce how much people buy — consumers are sensitive to price increases and will buy less. Substituting option A: '...consumers are sensitive to the price of sugary drinks and this makes people buy fewer sugary drinks — it is a very powerful policy tool.' This fits the meaning. Options B, C and D do not match — Martin is talking about purchasing behaviour (demand), not desire, support, or awareness.",
+  },
+  { group: 'PN2', set: 'Practice Now Questions', type: 'multiple_choice', category: 'News Article', context: ctxPN2,
+    question: "Which of the following statements is NOT a reason why Geoff Parker's opinion was included in the news report?",
+    options: [
+      'A) To present a differing opinion.',
+      'B) To support the writer\'s opinion.',
+      'C) To provide a balanced look at the issue.',
+      'D) To present the views of an organisation affected by the issue.',
+    ],
+    answer: 'B) To support the writer\'s opinion.',
+    method: "News reports present facts and opinions from different sources — the writer does not express their own personal opinion. Therefore 'to support the writer's opinion' cannot be a reason for including any quote. Options A, C and D are all valid reasons: Geoff Parker's view differs from the other opinions presented (A), which provides balance (C), and he speaks on behalf of the Australian Beverages Council — an organisation directly affected by a sugary drinks tax (D). Because B is the only option that cannot be a genuine reason, it is the correct answer.",
+  },
+
+  // ── FRV Practice #1 — Q04: Australian Republic Movement Social Media ──────
+  { group: 'FP4', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Social Media', context: ctxFP4,
+    question: "Which of the following points is NOT used by the Australian Republic Movement to argue for the Australian Head of State to be an Australian?",
+    options: [
+      'A) Australia has its own unique culture different to the UK.',
+      'B) Our Head of State should be an Australian citizen.',
+      'C) The government would save money if our Head of State was an Australian.',
+      'D) It is improper that a foreigner is our Head of State.',
+    ],
+    answer: 'C) The government would save money if our Head of State was an Australian.',
+    method: "The ARM's arguments focus on national identity, sovereignty, and the principle that an Australian citizen should represent Australia. Cost savings are not a standard argument used by the ARM — they argue on the basis of identity and democratic principle, not financial benefit. Options A, B and D all reflect the ARM's stated position on cultural distinctiveness, citizenship, and the impropriety of a foreign head of state.",
+  },
+  { group: 'FP4', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Social Media', context: ctxFP4,
+    matrixLabels: ['Yes', 'No'],
+    question: "In the comments, which of the following points were made regarding the ARM's comment about Prince Charles?",
+    options: [
+      "Making fun of Prince Charles is immature.",
+      "How does this relate to the main purpose of the ARM?",
+      "Australians need to smarten up over choosing a local Head of State.",
+      "I don't see any conflict of interest between our Head of State and the nation.",
+    ],
+    answer: 'Yes,Yes,No,Yes',
+    method: "Making fun of Prince Charles is immature — Yes: a commenter criticised the ARM's remark about Prince Charles as immature.\nHow does this relate to the main purpose of the ARM? — Yes: a commenter questioned the relevance of the Prince Charles comment to the ARM's core mission.\nAustralians need to smarten up — No: this specific point was not made in the comments.\nNo conflict of interest — Yes: a commenter expressed the view that there is no conflict of interest between the current head of state and the nation.",
+  },
+  { group: 'FP4', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Social Media', context: ctxFP4,
+    question: "Which sentence best describes Graham Muse's opinion?",
+    options: [
+      'A) Cricket is not something the Head of State should focus on.',
+      'B) The Head of State should put our nation first in everything we do.',
+      'C) Trade is obviously more important to the Head of State.',
+      "D) Sport isn't the problem here. Rather it's people's opinions on what's important.",
+    ],
+    answer: "D) Sport isn't the problem here. Rather it's people's opinions on what's important.",
+    method: "Graham Muse's comment distinguishes between the subject matter (sport/cricket) and the underlying issue of priorities and values. He is not criticising sport itself but pointing to differing opinions on what matters nationally. Option A focuses only on cricket. Option B is a general statement not reflective of his nuanced point. Option C about trade is not what Muse argues.",
+  },
+  { group: 'FP4', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Social Media', context: ctxFP4,
+    question: "Which sentence best describes Sonya Harding's opinion?",
+    options: [
+      'A) I am going to cancel my membership over such a comment.',
+      'B) Significant topics like this one should not be shared on social media.',
+      'C) This sort of comment aligns with the mission of the ARM.',
+      'D) Such a comment may put off possible supporters.',
+    ],
+    answer: 'D) Such a comment may put off possible supporters.',
+    method: "Sonya Harding's concern is that the ARM's comment about Prince Charles could alienate potential supporters and be counterproductive to the movement's goals. She is not cancelling her membership (A) or objecting to social media use (B). She does not believe the comment aligns with the ARM's mission (C) — rather, she sees it as a strategic risk.",
+  },
+  { group: 'FP4', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Social Media', context: ctxFP4,
+    question: 'What is the purpose of the Australian Republic Movement?',
+    options: [
+      'A) To sign up as many volunteers as possible to promote the campaign\'s goals.',
+      'B) To change the laws of Australia so no foreigners can be the Head of State.',
+      'C) To have a nationwide vote on whether our Head of State should be an Australian.',
+      'D) To enforce the Government to address the issue of the Australian flag.',
+    ],
+    answer: 'C) To have a nationwide vote on whether our Head of State should be an Australian.',
+    method: "The ARM's stated purpose is to achieve a republic through a democratic process — specifically a national vote (plebiscite or referendum) to let Australians decide whether to have an Australian as Head of State. Option A describes a recruitment activity, not the organisation's purpose. Option B overstates the approach — the ARM seeks a democratic vote, not a direct change to law by another means. Option D introduces the Australian flag, which is not the ARM's focus.",
+  },
+
+  // ── FRV Practice #1 — Q05: Australia Day Date Debate Article ────────────
+  { group: 'FP5', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Opinion Article', context: ctxFP5,
+    question: 'What is the purpose of the article?',
+    options: [
+      'A) To instruct people.',
+      'B) To persuade people.',
+      'C) To provide a description.',
+      'D) To provide an explanation.',
+    ],
+    answer: 'D) To provide an explanation.',
+    method: "The article presents arguments from multiple perspectives — those who want the date changed and those who oppose it — without clearly arguing for a single position. This makes its purpose explanatory rather than persuasive. It informs readers of the debate surrounding Australia Day without instructing or simply describing.",
+  },
+  { group: 'FP5', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Opinion Article', context: ctxFP5,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following points were made in the article?',
+    options: [
+      "Many people associate Australia Day as 'Invasion Day'.",
+      "Prime Minister Scott Morrison is willing to talk about changing the date.",
+      "Impose dress standards at citizen ceremonies.",
+      "Indigenous people are against moving the date.",
+    ],
+    answer: 'Yes,No,Yes,No',
+    method: "Many people call it 'Invasion Day' — Yes: this is explicitly stated in the article.\nMorrison willing to talk about changing the date — No: Morrison was opposed to changing the date and proposed alternatives, not open discussion about a date change.\nImpose dress standards at citizen ceremonies — Yes: this was one of Morrison's counter-proposals to address concerns about Australia Day.\nIndigenous people are against moving the date — No: the article indicates that many Indigenous Australians support moving the date (hence the 'Invasion Day' movement).",
+  },
+  { group: 'FP5', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Opinion Article', context: ctxFP5,
+    question: "What does the author mean by 'lands they deemed uninhabited'?",
+    options: [
+      'A) The British only settled on land they deemed to be habitable.',
+      'B) Colonists took over land they presumed had no Indigenous people.',
+      'C) The British actively moved Indigenous people off their land so it could be settled.',
+      'D) Colonists settled on land that had little Indigenous presence.',
+    ],
+    answer: 'B) Colonists took over land they presumed had no Indigenous people.',
+    method: "'Deemed uninhabited' reflects the doctrine of terra nullius — the legal fiction that Australia was 'empty' land with no prior ownership. This meant colonists treated the land as belonging to no one, disregarding the existing Indigenous population. Option A refers to habitability (suitability for living), not ownership. Option C describes active displacement, which is a separate process. Option D implies partial presence, whereas the article refers to land considered to have no Indigenous population at all.",
+  },
+  { group: 'FP5', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Opinion Article', context: ctxFP5,
+    question: "What does activist Calma think about the Government's proposals?",
+    options: [
+      'A) Believes more discussion is needed on the subject.',
+      'B) Is focusing on Australia Day to avoid public attention on other controversial topics.',
+      'C) Believes Australia Day should be moved to any other day.',
+      'D) Is trying to sweep in changes due to an expected, close election coming shortly.',
+    ],
+    answer: 'A) Believes more discussion is needed on the subject.',
+    method: "Calma's position, as presented in the article, is that the Government's proposals do not go far enough and that a broader, more inclusive national conversation is needed before any decisions are made. Options B and D attribute political motivations to Calma that are not supported by the article. Option C misrepresents his stance — he has not publicly stated that any date would do, but rather that the process of discussion and consultation matters.",
+  },
+  { group: 'FP5', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Opinion Article', context: ctxFP5,
+    question: 'Which point is NOT used by those who want the date changed?',
+    options: [
+      'A) More education is needed on why the date should be changed.',
+      'B) Most former British colonies do not have their national day on the same day as being colonised.',
+      "C) We should work together to make the current date an important day for all Australians.",
+      'D) Over a quarter of Australians support moving the date.',
+    ],
+    answer: "C) We should work together to make the current date an important day for all Australians.",
+    method: "Option C is an argument made by those who OPPOSE changing the date — it proposes making January 26 more inclusive rather than moving it. Those who want to change the date argue that the date itself carries too much pain to be reframed. Options A, B and D are all arguments that have been used by those seeking a date change: public education, precedent from other former colonies, and polling data showing support for moving the date.",
+  },
+
+  // ── FRV Practice #1 — Q06: Health: Sleep ─────────────────────────────────
+  { group: 'FP6', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Health Article', context: ctxFP6,
+    question: 'Which phrase best describes what this article is about?',
+    options: [
+      'A) Instructions on how to improve your sleep.',
+      'B) Summary of the science behind sleep.',
+      'C) Information on the importance of getting a good night\'s sleep.',
+      'D) Information about sleep and its effects on health.',
+    ],
+    answer: 'D) Information about sleep and its effects on health.',
+    method: "The article covers multiple aspects of sleep: why it is important for health and well-being, recommended amounts by age, signs of sleep deficiency, and tips to improve sleep. Option A is too narrow — improvement tips are only one section. Option B is incorrect as the article does not summarise scientific research. Option C focuses only on importance, missing the broader scope. Option D best captures the full content of the article.",
+  },
+  { group: 'FP6', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Health Article', context: ctxFP6,
+    question: "Which phrase best describes 'chronic health problems'?",
+    options: [
+      'A) Continual issues related with your health.',
+      'B) Health concerns that are ceasing.',
+      'C) Complications occurring with the body.',
+      'D) Experiencing occasional health issues.',
+    ],
+    answer: 'A) Continual issues related with your health.',
+    method: "'Chronic' means persistent or long-lasting — the opposite of temporary or occasional. Option A correctly captures this meaning. Option B ('ceasing') is the opposite of chronic. Option C is too vague and does not convey the ongoing nature. Option D ('occasional') directly contradicts the meaning of chronic.",
+  },
+  { group: 'FP6', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Health Article', context: ctxFP6,
+    question: "Which word could replace 'deficient' in the fourth paragraph without changing the meaning of the sentence?",
+    options: [
+      'A) Sufficient.',
+      'B) Inadequate.',
+      'C) Deprived.',
+      'D) Wanting.',
+    ],
+    answer: 'C) Deprived.',
+    method: "The sentence reads: 'You might be sleep deficient if you often feel like you could doze off...' 'Sleep deprived' is the standard equivalent phrase meaning you are not getting enough sleep, making C the best replacement. Option A ('sufficient') means the opposite. Option B ('inadequate') means not good enough but is not used in this context. Option D ('wanting') is an archaic usage meaning lacking — technically correct but not the natural modern equivalent.",
+  },
+  { group: 'FP6', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Health Article', context: ctxFP6,
+    question: 'Which of the side effects from a lack of sleep is NOT listed?',
+    options: [
+      'A) Harms your social life.',
+      'B) Decreases work productivity.',
+      'C) Lowers your libido.',
+      'D) Slows down physical response times.',
+    ],
+    answer: 'C) Lowers your libido.',
+    method: "The article states that sleep deficiency can affect how well you 'think, react, work, learn, and get along with others.' This covers: slowed reactions (D), reduced work performance (B), and social difficulties (A). Libido (sex drive) is never mentioned anywhere in the article, making C the correct answer.",
+  },
+  { group: 'FP6', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Health Article', context: ctxFP6,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the points below must you do to improve your sleep? Tick Yes or No for each point.',
+    options: [
+      "Have a constant wake up time during the week and sleep in during the weekends.",
+      "Unwind before going to bed.",
+      "Ensure naps are kept under 30 minutes.",
+      "Keep electronic devices out of the bedroom.",
+    ],
+    answer: 'No,Yes,Yes,Yes',
+    method: "Have a constant wake up time and sleep in on weekends — No: the article says to wake up at the same time every day, EVEN ON WEEKENDS. Sleeping in on weekends contradicts this advice.\nUnwind before going to bed — Yes: the article advises finding ways to relax before bedtime each night.\nEnsure naps are kept under 30 minutes — Yes: the article says to avoid long naps (over 30 minutes), implying naps should stay under 30 minutes.\nKeep electronic devices out of the bedroom — Yes: the article specifically advises avoiding cell phones, computers, and televisions in the bedroom.",
+  },
+
+  // ── FRV Practice #1 — Q03: Accommodation Listing ─────────────────────────
+  { group: 'FP3', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxFP3,
+    question: 'Who is this accommodation most suitable for?',
+    options: [
+      'A) Small group or a couple wanting a place in the city.',
+      'B) Up to three people requiring quiet accommodation.',
+      'C) Anyone who wants a safe and secure place in the heart of the city.',
+      'D) Small number of people, particularly music lovers.',
+    ],
+    answer: 'D) Small number of people, particularly music lovers.',
+    method: "The listing specifies a maximum occupancy suited to a small number of guests and highlights proximity to music venues or entertainment as a feature, making it particularly appealing to music lovers. Option A is too broad — there is no specific mention of it being for couples or small groups alone. Option B introduces a requirement for quiet that is not the listing's primary selling point. Option C is generic and could apply to any city accommodation.",
+  },
+  { group: 'FP3', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Accommodation Listing', context: ctxFP3,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following features are provided to convince people to book the listing?',
+    options: [
+      'Neat and tidy.',
+      'Recently refurbished.',
+      'Full-sized kitchen.',
+    ],
+    answer: 'Yes,Yes,No',
+    method: "Neat and tidy — Yes: the listing mentions the well-kept condition of the property as a selling point.\nRecently refurbished — Yes: the listing highlights recent refurbishment to assure guests of modern, quality facilities.\nFull-sized kitchen — No: the listing does not promote a full-sized kitchen; a smaller kitchen or kitchenette is provided.",
+  },
+  { group: 'FP3', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxFP3,
+    question: "What does the phrase 'contemporary artefacts' mean?",
+    options: [
+      'A) Modern objects.',
+      'B) Newly made rugs.',
+      'C) Old antiques.',
+      'D) Latest wall designs.',
+    ],
+    answer: 'A) Modern objects.',
+    method: "'Contemporary' means modern or current, and 'artefacts' refers to objects or items, typically decorative. Together, 'contemporary artefacts' means modern decorative objects. Option B and D are too specific — rugs and wall designs are just one type of object. Option C is the opposite — antiques are old, whereas 'contemporary' means modern.",
+  },
+  { group: 'FP3', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxFP3,
+    question: 'Which phrase best describes the listing?',
+    options: [
+      'A) Quirky accommodation close to the docks.',
+      'B) A bright and quiet space.',
+      'C) An apartment close to the heart of the city.',
+      'D) The ideal place for book lovers.',
+    ],
+    answer: 'C) An apartment close to the heart of the city.',
+    method: "The listing is an inner-city apartment emphasising its central location. Option A introduces docks, which are not mentioned. Option B focuses on brightness and quiet, which may be features but do not capture the overall description. Option D introduces book lovers, which is not a theme of this listing.",
+  },
+  { group: 'FP3', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxFP3,
+    question: 'Which of the following regarding the accommodation is true?',
+    options: [
+      'A) It is cheaper to stay during the week.',
+      'B) Public transport is not close by.',
+      'C) Close to a major bus stop.',
+      'D) Lift access is available to the room.',
+    ],
+    answer: 'C) Close to a major bus stop.',
+    method: "The listing states that the accommodation is close to a major bus stop, making it convenient for guests using public transport. Option B directly contradicts this. Option A introduces a pricing difference between weekdays and weekends that is not mentioned in the listing. Option D states that lift access is available, which is not supported by the listing.",
+  },
+
+  // ── FRV Practice #1 — Q02: Hamilton Fun Run Website ──────────────────────
+  { group: 'FP2', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Website', context: ctxFP2,
+    question: 'Which statement accurately describes the Hamilton Fun Run?',
+    options: [
+      'A) A fun and supportive run best suited for adults.',
+      'B) A supportive yet challenging running event.',
+      'C) A great day out for family and friends.',
+      'D) A glory-filled day of running for everyone.',
+    ],
+    answer: 'C) A great day out for family and friends.',
+    method: "The Hamilton Fun Run is promoted as a community event welcoming participants of all ages and abilities, making it a family and social occasion. Option A limits the audience to adults, which contradicts the inclusive nature of a fun run. Option B emphasises challenge, which is not the primary focus of the promotion. Option D uses vague, hyperbolic language ('glory-filled') that does not reflect the promotional text.",
+  },
+  { group: 'FP2', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Website', context: ctxFP2,
+    question: 'Which area are the show bags closest to?',
+    options: [
+      'A) Information.',
+      'B) Stage.',
+      'C) Toilets.',
+      'D) Hydration.',
+    ],
+    answer: 'A) Information.',
+    method: "According to the event map, the show bags are located closest to the Information area. Show bags at community events are typically positioned near registration or information points so participants can collect them on arrival.",
+  },
+  { group: 'FP2', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Website', context: ctxFP2,
+    question: 'Which navigation tab would you click on to find out more info on different run distances?',
+    options: [
+      'A) Home.',
+      'B) Event Info.',
+      'C) About.',
+      'D) Contact.',
+    ],
+    answer: 'B) Event Info.',
+    method: "'Event Info' is the most logical tab for details about the run distances, as it covers the specifics of the event itself. 'Home' provides a general overview. 'About' typically covers background on the organisation. 'Contact' is for enquiries only.",
+  },
+  { group: 'FP2', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Website', context: ctxFP2,
+    question: 'Which phrase best describes "Festival Hub"?',
+    options: [
+      'A) Recovery area.',
+      'B) Location of stalls.',
+      'C) Food & drink area.',
+      'D) Entertainment area.',
+    ],
+    answer: 'D) Entertainment area.',
+    method: "The 'Festival Hub' is described as the central entertainment and activity zone at the event. While it may include stalls and food, the defining characteristic of a 'festival hub' is entertainment and activities. Options B and C capture only partial elements. Option A (recovery area) is not associated with a festival hub.",
+  },
+  { group: 'FP2', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Website', context: ctxFP2,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which features does the fun run use to promote itself?',
+    options: [
+      'Enjoyable morning run.',
+      'Distances for all ages and abilities.',
+      'Eateries available.',
+      'A challenging course.',
+    ],
+    answer: 'Yes,Yes,Yes,No',
+    method: "Enjoyable morning run — Yes: the event is promoted as a fun, positive morning experience.\nDistances for all ages and abilities — Yes: multiple distance options are highlighted to appeal to all fitness levels.\nEateries available — Yes: the Festival Hub includes food and drink options.\nA challenging course — No: the fun run is promoted as accessible and inclusive rather than as a physically demanding challenge.",
+  },
+
+  // ── FRV Practice #1 — Q01: Gillmont Pharmacy Hay Fever Email ─────────────
+  { group: 'FP1', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxFP1,
+    question: 'What is the purpose of this email?',
+    options: [
+      'A) To inform residents that hay fever season has arrived.',
+      'B) To provide tips on reducing the effects of hay fever.',
+      'C) To promote products from the pharmacy.',
+      'D) To inform and offer products to residents to reduce the effects of hay fever.',
+    ],
+    answer: 'D) To inform and offer products to residents to reduce the effects of hay fever.',
+    method: "The email serves a dual purpose — it informs residents about hay fever in the Gillmont area and recommends products from Gillmont Pharmacy. Option A is too narrow (informing about hay fever season is only part of the purpose). Option B covers the tips but omits the product promotion aspect. Option C captures the commercial element but ignores the informational content. Option D correctly combines both purposes.",
+  },
+  { group: 'FP1', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxFP1,
+    question: 'According to the newsletter, why is it important for sufferers to minimise the effects of hay fever?',
+    options: [
+      'A) As approximately 1 in 5 people suffer from hay fever each year.',
+      'B) Gillmont is widely regarded as a hotspot for pollen, which causes hay fever.',
+      'C) Hay fever can reduce the quality of life for sufferers.',
+      'D) So Gillmont Pharmacy can sell more medicines boosting their profits.',
+    ],
+    answer: 'C) Hay fever can reduce the quality of life for sufferers.',
+    method: "The newsletter explains that minimising hay fever is important because it affects the quality of life of sufferers. Option A explains how common hay fever is, not why minimising it matters. Option B explains why Gillmont is particularly affected, not the reason to act. Option D is not stated in the newsletter — the pharmacy's commercial interests are not given as a reason.",
+  },
+  { group: 'FP1', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxFP1,
+    question: 'Why does the Gillmont area have a higher amount of pollen in the air?',
+    options: [
+      'A) The area has high numbers of birch trees, known for producing pollen.',
+      'B) There are large pastoral areas, where grass is renowned for producing hay fever.',
+      'C) Residents of Gillmont are known for having gardens full of flowers.',
+      'D) The area is known for being windy and thunderstorms are common.',
+    ],
+    answer: 'B) There are large pastoral areas, where grass is renowned for producing hay fever.',
+    method: "The email explains that the Gillmont area has large pastoral areas where grasses are a major source of pollen. Option A introduces birch trees, which are not mentioned in the email. Option C attributes the pollen to residents' gardens, which is not the reason given. Option D mentions wind and thunderstorms — while wind can spread pollen, the email identifies the pastoral grasslands as the source of elevated pollen levels.",
+  },
+  { group: 'FP1', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Email / Letter', context: ctxFP1,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following tips does the newsletter provide if hay fever symptoms flare up?',
+    options: [
+      'Keep pets outside.',
+      'Bring fresh flowers into your house.',
+      'Stay inside if it\'s windy.',
+    ],
+    answer: 'Yes,No,Yes',
+    method: "Keep pets outside — Yes: pets that go outdoors carry pollen on their fur and can bring it inside, worsening symptoms.\nBring fresh flowers inside — No: fresh flowers introduce pollen into the home and would aggravate hay fever symptoms; the newsletter advises against this.\nStay inside if windy — Yes: wind disperses pollen widely, so staying indoors on windy days reduces exposure.",
+  },
+  { group: 'FP1', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxFP1,
+    question: 'When referring to the garden, what does the newsletter mean by "low-allergen garden"?',
+    options: [
+      'A) Only have small plants and trees.',
+      'B) Ensure your garden doesn\'t have too much lawn.',
+      'C) Water your garden regularly to ensure pollen numbers are kept low.',
+      'D) Only plant a garden that has low-producing pollen vegetation.',
+    ],
+    answer: 'D) Only plant a garden that has low-producing pollen vegetation.',
+    method: "A 'low-allergen garden' refers to choosing plants that produce minimal pollen, thereby reducing the allergen load for hay fever sufferers. Option A relates to plant size, not pollen production. Option B addresses lawn coverage but does not capture the full meaning of low-allergen planting. Option C introduces watering as a pollen-reduction strategy, which is not mentioned in the newsletter.",
+  },
+
+  // ── FRV Practice #1 — Q07: Winter Storm Newsletter ────────────────────────
+  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+    question: 'What is the purpose of this newsletter?',
+    options: [
+      'A) To inform people of the risks of storms.',
+      'B) To inform people on how to protect their property during a severe storm.',
+      'C) To let people know how to keep warm during a storm.',
+      'D) To inform people on how to prepare for a winter storm.',
+    ],
+    answer: 'D) To inform people on how to prepare for a winter storm.',
+    method: "The opening subheading of the text states the purpose of the newsletter directly: 'How To Prepare For A Winter Storm'. Option A is too narrow — while risks are implied, informing about risks is not the stated purpose. Option B focuses on property, but the newsletter is about protecting yourself and your household more broadly. Option C is too specific — keeping warm is one tip among many.",
+  },
+  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+    question: 'According to the newsletter, why is it important for people to properly prepare for a storm?',
+    options: [
+      'A) To help minimise the risk of destruction to their property.',
+      'B) As winter is the time of year when there are the most powerful storms.',
+      'C) Winter storms can cause a lot of destruction.',
+      'D) To help protect home occupants.',
+    ],
+    answer: 'D) To help protect home occupants.',
+    method: "The newsletter states: 'This newsletter is intended to help protect yourself before, during, and after a storm.' It also lists ways members can protect their home and the people in it. Option A focuses only on property, not people. Option B introduces a claim about storm power that is not made in the newsletter. Option C states that storms cause destruction but does not explain why preparation matters — the reason given in the text is to protect people.",
+  },
+  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+    question: 'What can people do if they followed the advice from the newsletter?',
+    options: [
+      'A) Able to live life normally during the period of the storm.',
+      'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
+      'C) Not have to worry about possible effects from a storm.',
+      'D) Increase their chances they will come through unscathed.',
+    ],
+    answer: 'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
+    method: "The newsletter states: 'The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do in the event of a storm.' This directly matches option B. Options A and C overstate the outcome — the newsletter does not promise normal life or zero impact. Option D ('unscathed') implies no harm at all, which is stronger than the newsletter's more measured language about maintaining stability or recovering quickly.",
+  },
+  { group: 'FP7', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Newsletter', context: ctxFP7,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following advice does the newsletter provide for people to action?',
+    options: [
+      'Close off rooms to keep in the heat.',
+      'Only use a generator inside if it\'s an emergency.',
+      'Keep clearing snow from your house.',
+    ],
+    answer: 'Yes,No,No',
+    method: "Close off rooms — Yes: under 'During / Survive' the newsletter states 'Close off rooms to consolidate and retain heat.'\nGenerator indoors in an emergency — No: the newsletter states 'Never use a generator... indoors' — there is no exception for emergencies.\nKeep clearing snow from house — No: the newsletter advises to 'avoid overexertion clearing/shovelling snow' — it does not instruct people to keep clearing snow.",
+  },
+
+  // ── ACER Practice Paid — Q01: Bilvington Bushfire Ready Group Newsletter ──
+  { group: 'AP1', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Newsletter', context: ctxAP1,
+    question: 'What is the purpose of this email?',
+    options: [
+      'A) To inform people about the risks of bushfires.',
+      'B) To inform people about what to do in case of a bushfire.',
+      'C) To tell people when to evacuate their homes during a bushfire.',
+      'D) To encourage people to prepare their properties against bushfires.',
+    ],
+    answer: 'D) To encourage people to prepare their properties against bushfires.',
+    method: "The newsletter provides a numbered list of specific actions homeowners can take to protect their properties before bushfire season — using trees as shields, removing flammable items, mowing lawns, storing flammable liquids, clearing vegetation, and managing the garden. This makes its purpose action-oriented and preparatory, not simply informational. Option A (risks) and B (what to do during a fire) are too narrow, and C (evacuation timing) is not addressed at all.",
+  },
+  { group: 'AP1', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Newsletter', context: ctxAP1,
+    question: "When referring to mature trees, what does the email mean by 'strategically placed'?",
+    options: [
+      'A) Only old trees kept.',
+      'B) Planted far away from the property.',
+      'C) Planted in a position that will help protect the property.',
+      'D) Maintained so that there are no overhanging branches.',
+    ],
+    answer: 'C) Planted in a position that will help protect the property.',
+    method: "The newsletter states: 'If mature trees are strategically placed, they can help shield against radiant heat and embers.' The word 'strategically' refers to deliberate positioning to maximise the protective benefit. Option A misreads 'mature' as only meaning 'old' and ignores placement. Option B contradicts the idea — trees need to be near the house to shield it. Option D relates to a separate piece of advice about overhanging branches and is a maintenance action, not a placement strategy.",
+  },
+  { group: 'AP1', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Newsletter', context: ctxAP1,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following actions does the email encourage people to carry out? Click Yes or No for each action.',
+    options: [
+      'Regularly cut grass surrounding the house.',
+      'Ensure there is a hose close to the property.',
+      'Ensure that petrol is not stored near the house.',
+    ],
+    answer: 'Yes,No,Yes',
+    method: "Regularly cut grass — Yes: the newsletter advises mowing lawns and keeping grass under 10 cm, as long grass allows fire to spread rapidly.\nEnsure there is a hose close to the property — No: the newsletter does not mention hoses or any firefighting equipment at all.\nEnsure petrol is not stored near the house — Yes: petrol is a flammable liquid, and the newsletter explicitly advises storing flammable liquids in a shed away from the house, ideally in flame-proof containers.",
+  },
+  { group: 'AP1', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Newsletter', context: ctxAP1,
+    question: 'Why is it particularly important for Bilvington residents to follow the advice in the email?',
+    options: [
+      'A) The town has thick vegetation around it.',
+      'B) The town is hard for fire crews to access.',
+      'C) There have been a large number of bushfires near the town.',
+      'D) Most houses in the town are surrounded by flammable materials.',
+    ],
+    answer: 'A) The town has thick vegetation around it.',
+    method: "The newsletter states: 'our town is located amongst dense bush and is considered a high risk zone.' Dense bush means thick surrounding vegetation, which is exactly what makes the fire risk elevated. Option B (access for fire crews) is not mentioned. Option C (previous bushfires) is not stated. Option D (flammable materials around houses) may be true for some properties but is not given as the reason — the dense bush surrounding the whole town is the specific risk factor named.",
+  },
+  { group: 'AP1', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Newsletter', context: ctxAP1,
+    question: 'According to the email, why is it important for people in Bilvington to act now?',
+    options: [
+      'A) Lawns grow faster at this time of the year.',
+      'B) The time of the year when bushfires occur is approaching.',
+      'C) There have been a number of bushfires in the area recently.',
+      'D) Peoples\' gardens may be overgrown at this time of the year.',
+    ],
+    answer: 'B) The time of the year when bushfires occur is approaching.',
+    method: "The newsletter opens with: 'It is already October and the fire season begins next month.' This directly explains the urgency — residents must act before the fire season arrives. Option A (lawn growth speed) is not mentioned. Option C (recent fires) is not stated — the newsletter is preventative, not reactive. Option D (overgrown gardens) is not given as a reason for urgency, even though garden management is one of the recommended actions.",
+  },
+
+  // ── ACER Practice Paid — Q02: Correa Shopping Centre Website ──────────────
+  { group: 'AP2', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Website', context: ctxAP2,
+    question: 'Which menu tab would you click on to find out the names of the shops in the Correa shopping centre?',
+    options: [
+      'A) HOME',
+      'B) STORES',
+      'C) LOCATION',
+      'D) MORE INFORMATION',
+    ],
+    answer: 'B) STORES',
+    method: "The STORES tab is the logical place to find a list of individual shop names within the centre. HOME would display general information about the centre. LOCATION would show how to get there. MORE INFORMATION might provide background details but would not specifically list the individual shops by name.",
+  },
+  { group: 'AP2', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Website', context: ctxAP2,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which features does Correa promote to try to stand out from other shopping centres? Click Yes or No for each feature.',
+    options: [
+      'Easy to park.',
+      'Discount clothes.',
+      'Open late every night.',
+      'Art and music in the shopping centre.',
+    ],
+    answer: 'Yes,No,No,Yes',
+    method: "Easy to park — Yes: the website highlights over 2,000 parking spaces with the line 'you'll never have to stress!'\nDiscount clothes — No: while the centre has fashion outlets, discounts or reduced prices are never mentioned.\nOpen late every night — No: the centre is only open until 9 pm on Thursday and Friday — other days it closes between 5 pm and 6 pm, so it is not open late every night.\nArt and music in the shopping centre — Yes: the 'A cultural shopping experience' section specifically promotes artwork from local sculptors and painters, live music and theatre in its pop-up performance space.",
+  },
+  { group: 'AP2', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Website', context: ctxAP2,
+    question: "Which phrase describing the shopping centre means 'unusual group of'?",
+    options: [
+      'A) pocket-sized',
+      'B) retail complex',
+      'C) unique collection',
+      'D) boutique shopping',
+    ],
+    answer: 'C) unique collection',
+    method: "'Unique' means unusual or one-of-a-kind, and 'collection' means a group of things. Together, 'unique collection' means an unusual group of (shops, brands or items). 'Pocket-sized' refers to something being small. 'Retail complex' simply describes a shopping facility. 'Boutique shopping' suggests a specialised or high-end experience but does not carry the meaning of 'unusual group of'.",
+  },
+  { group: 'AP2', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Website', context: ctxAP2,
+    question: 'Which statement best describes the Correa shopping centre?',
+    options: [
+      'A) A small shopping centre located in the city.',
+      'B) A large shopping centre open only on weekdays.',
+      'C) A small shopping centre located close to the city.',
+      'D) A large shopping centre that is open late every night.',
+    ],
+    answer: 'C) A small shopping centre located close to the city.',
+    method: "The website describes Correa as a 'pocket-sized retail complex located in Correa, just 15 minutes from the city.' This confirms it is small (pocket-sized) and near but not in the city. Option A is incorrect because it says 'in the city.' Option B is wrong on both counts — it is described as pocket-sized (not large) and is open on weekends. Option D is incorrect as the centre is not large and does not open late every night.",
+  },
+  { group: 'AP2', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Website', context: ctxAP2,
+    question: 'Which carpark is the stage closest to?',
+    options: [
+      'A) Red',
+      'B) Green',
+      'C) Yellow',
+      'D) Orange',
+    ],
+    answer: 'A) Red',
+    method: "The map on the website shows the Stage in the bottom-right corner of the shopping centre, directly adjacent to the Red carpark. The Cinema is between the Stage and the Red carpark, and both are clearly in the bottom-right section of the map. The Green carpark is top-left, Yellow is bottom-left, and Orange is top-right — all further from the Stage than Red.",
+  },
+
+  // ── ACER Practice Paid — Q03: Home Stays Down Under — Bramblewood Apartment ─
+  { group: 'AP3', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxAP3,
+    question: 'Which of the following statements about the accommodation costs is true?',
+    options: [
+      'A) There is a security deposit.',
+      'B) It costs more to use the internet.',
+      'C) It costs more to have a second person.',
+      'D) The rate is cheaper if guests stay for a week.',
+    ],
+    answer: 'D) The rate is cheaper if guests stay for a week.',
+    method: "The listing shows a weekly discount of 8% and a monthly discount of 13%, confirming that longer stays attract a reduced rate. There is no mention of a security deposit (A). WiFi is listed as a free amenity (B). There is no mention of an additional charge for a second guest (C) — the listing simply states it accommodates 2 guests.",
+  },
+  { group: 'AP3', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxAP3,
+    question: 'Which phrase best describes Bramblewood?',
+    options: [
+      'A) A quiet suburb away from the city.',
+      'B) A suburb with a world famous sporting precinct.',
+      'C) A suburb noted for its unconventional atmosphere.',
+      'D) A suburb surrounded by greenery, flowers and birds.',
+    ],
+    answer: 'C) A suburb noted for its unconventional atmosphere.',
+    method: "The listing describes Bramblewood as having 'a busy bohemian vibe' and being 'one of the city\'s hippest suburbs', renowned for its galleries, boutique shops, cool bars, coffee shops and street art. 'Bohemian' and 'hippest' both indicate an unconventional, artistic character. Option A is wrong — it is described as part of the vibrant city, not away from it. Option B is inaccurate — the sporting precinct is three train stations away, not in Bramblewood itself. Option D describes the apartment's balcony, not the suburb.",
+  },
+  { group: 'AP3', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxAP3,
+    question: "What is meant by the phrase 'a private retreat'?",
+    options: [
+      'A) A place far from the city.',
+      'B) A dark place with no noise.',
+      'C) A relaxing area amongst nature.',
+      'D) A quiet space away from people.',
+    ],
+    answer: 'D) A quiet space away from people.',
+    method: "'Private' means away from others, and 'retreat' means a place of withdrawal or refuge. The listing supports this with 'a pocket of peace and quiet amongst the vibrant energy of the city' — the apartment offers seclusion despite being in a busy urban area. Option A is incorrect as the apartment is in the city, not far from it. Option B introduces 'dark' which is not suggested anywhere. Option C implies nature surroundings, but the phrase in context refers to social seclusion, not a natural setting.",
+  },
+  { group: 'AP3', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Accommodation Listing', context: ctxAP3,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of these features does the listing include to persuade people to book the accommodation? Click Yes or No for each feature.',
+    options: [
+      'Bright and roomy.',
+      'Meals can be cooked.',
+      'It is close to public transport.',
+    ],
+    answer: 'Yes,Yes,Yes',
+    method: "Bright and roomy — Yes: the listing describes the apartment as 'spacious, light filled' and 'very light, clean and spacious with a lovely atmosphere.'\nMeals can be cooked — Yes: the amenities list a Kitchen, and the description states 'the kitchen is fully equipped with appliances and utensils.'\nClose to public transport — Yes: the listing states 'public transport at your doorstep', making this a clear selling point.",
+  },
+  { group: 'AP3', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Accommodation Listing', context: ctxAP3,
+    question: 'Who is this accommodation suitable for?',
+    options: [
+      'A) A large family looking for a place with lots of space.',
+      'B) A single person or couple looking for a place in the city.',
+      'C) A couple looking for a place with undercover parking.',
+      'D) A single person or couple looking for a ground floor apartment.',
+    ],
+    answer: 'B) A single person or couple looking for a place in the city.',
+    method: "The listing is for 2 guests with 1 bedroom and 1 bed — suited to a single person or couple, not a large family (A). The apartment is described as an 'inner city apartment' in the listing title, confirming city location. Option C is eliminated because the listing explicitly states 'unfortunately no off street parking available.' Option D is incorrect as the apartment is on the second floor, not the ground floor.",
+  },
+
+  // ── ACER Practice Paid — Q04: Australian Political Debate — New Flag ───────
+  { group: 'AP4', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Social Media', context: ctxAP4,
+    question: 'Why does the New Australian flag group think that the Union Jack should NOT be on the flag?',
+    options: [
+      'A) It is a combination of the crosses of England, Scotland and Ireland.',
+      'B) Soldiers in both world wars did not fight under the flag with the Union Jack.',
+      'C) It doesn\'t represent the variety of backgrounds and beliefs of people in Australia.',
+      'D) There are not many people with English, Scottish or Irish backgrounds in Australia.',
+    ],
+    answer: 'C) It doesn\'t represent the variety of backgrounds and beliefs of people in Australia.',
+    method: "The post argues that the Union Jack only represents British heritage and asks: 'What about the Vietnamese, Buddhists, Indian Hindus and Indonesian Muslims? They are just as much a part of our rich Australian identity.' This makes the core reason that the Union Jack excludes the many non-British backgrounds in Australia. Option A merely describes what the Union Jack is. Option B is raised later in a reply comment, not as part of the original argument against the Union Jack. Option D is not stated — the post does not claim British-heritage Australians are few.",
+  },
+  { group: 'AP4', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Social Media', context: ctxAP4,
+    question: "Which sentence best describes Alistair Thomas' opinion?",
+    options: [
+      'A) He agrees with both Tori Peterson and the New Australian flag group.',
+      'B) He disagrees with both Tori Peterson and the New Australian flag group.',
+      'C) He agrees with Tori Peterson but disagrees with the New Australian flag group.',
+      'D) He disagrees with Tori Peterson but agrees with the New Australian flag group.',
+    ],
+    answer: 'B) He disagrees with both Tori Peterson and the New Australian flag group.',
+    method: "Alistair Thomas says: 'I don\'t like for a flag, they die for what a flag represents' — this directly counters Tori Peterson\'s argument that changing the flag disrespects soldiers\' sacrifices. He then argues that the flag represents values of equality, political freedom and rule of law adopted from Britain, and that discarding the flag means discarding those values — which opposes the New Australian flag group\'s push for a new flag. Therefore he disagrees with both.",
+  },
+  { group: 'AP4', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Social Media', context: ctxAP4,
+    question: "Which sentence best describes Donia Markovski's opinion?",
+    options: [
+      'A) A new flag will help Australia reach its full potential.',
+      'B) A new flag will improve the way Australians see themselves.',
+      'C) A new flag will improve how the rest of the world sees Australia.',
+      'D) A new flag will help Australia break away from its British history.',
+    ],
+    answer: 'D) A new flag will help Australia break away from its British history.',
+    method: "Donia Markovski's comment is: 'It\'s time we create our own identity and cast off our imperial shackles.' The phrase 'cast off our imperial shackles' directly means breaking free from the legacy of British imperial rule. While options A, B and C could be implied benefits, none are stated — her comment is specifically about shedding the British/colonial past, not about potential or global perception.",
+  },
+  { group: 'AP4', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Social Media', context: ctxAP4,
+    matrixLabels: ['Yes', 'No'],
+    question: 'In the comments, which of the following arguments are made for keeping the flag? Click Yes or No for each.',
+    options: [
+      'The flag is already well known in other countries.',
+      'The current flag was chosen in a democratic way.',
+      'The funds required to change the flag are better spent on public services.',
+      'The flag should recognise the principles that have been inherited from Britain.',
+    ],
+    answer: 'No,No,Yes,Yes',
+    method: "The flag is well known in other countries — No: this is never raised as an argument for keeping it; in fact the original post notes the flag is confused with other nations\' flags.\nThe flag was chosen democratically — No: this argument is not made in the comments; the New Australian flag group actually notes it was only legally recognised in 1954.\nFunds better spent on public services — Yes: Kim Salazar writes 'Spend the money on schools and hospitals instead', arguing against the cost of changing the flag.\nFlag should recognise British principles — Yes: Alistair Thomas argues the flag represents values of equality, political freedom and rule of law inherited from Britain.",
+  },
+  { group: 'AP4', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Social Media', context: ctxAP4,
+    question: 'In the first post by the New Australian flag group, which of the following strategies is NOT used to argue that Australia needs a new flag?',
+    options: [
+      'A) Comparing Australia to a person who has grown up.',
+      'B) Emphasising the widespread support for a new flag.',
+      'C) Highlighting that some groups of people are excluded.',
+      'D) Referencing a negative comment by a prominent celebrity.',
+    ],
+    answer: 'B) Emphasising the widespread support for a new flag.',
+    method: "The post uses comparison to a growing child (A): 'We are no longer a child of the Commonwealth.' It highlights excluded groups (C): asking 'What about the Vietnamese, Buddhists, Indian Hindus and Indonesian Muslims?' It references Jerry Seinfeld\'s critical remark (D) to illustrate how the world sees Australia\'s flag. However, the post never cites polling data, petition numbers, or any evidence of widespread existing support — it asks readers to show support by liking the post, which is the opposite of claiming support already exists. Option B is therefore the strategy NOT used.",
+  },
+
+  // ── ACER Practice Paid — Q05: The Conversation — Thinking Through (Popular) Film ─
+  { group: 'AP5', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Opinion Article', context: ctxAP5,
+    question: 'What is the author trying to achieve in this article?',
+    options: [
+      'A) To instruct people.',
+      'B) To persuade people.',
+      'C) To provide a description.',
+      'D) To provide an explanation.',
+    ],
+    answer: 'B) To persuade people.',
+    method: "The article argues throughout that studying popular film is a worthwhile, serious academic pursuit. The author anticipates and challenges objections ('But it\'s just entertainment'), builds a multi-layered case for film\'s complexity and power, and uses strong language ('dangerous', 'vital principles') to win the reader over. This is persuasive writing. It does not instruct (give directions), provide a neutral description, or simply explain how something works.",
+  },
+  { group: 'AP5', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Opinion Article', context: ctxAP5,
+    question: 'The author sees film as a powerful art-form. Which one of the following statements is NOT a reason he gives for this?',
+    options: [
+      'A) Film can tap into our emotions to sell us a message.',
+      'B) Film exerts considerable influence on how we see the world.',
+      'C) Film is the form that can best help us question the nature of art.',
+      'D) Film explores topics that people find it hard to talk about in everyday life.',
+    ],
+    answer: 'D) Film explores topics that people find it hard to talk about in everyday life.',
+    method: "The article explicitly states that films can create an affective state and sell a message (A), and that popular films exert considerable influence on how we construct our worlds (B). Cinema is described as the art form closest to embodying the vital principles of life (C — questioning art\'s nature). However, the claim that film covers topics people find hard to discuss in everyday life (D) is never made — this is not a reason the author gives for film\'s power.",
+  },
+  { group: 'AP5', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Opinion Article', context: ctxAP5,
+    question: "'In the same way that guns demand to be shot, films demand to be viewed' (paragraph 18). Why does the author use guns as a comparison to film?",
+    options: [
+      'A) To highlight the violence that is present in many films.',
+      'B) To use a dangerous image to show the strong influence of film.',
+      'C) To show that people can misuse films as often happens with guns.',
+      'D) To highlight the increasing influence of technology on the film industry.',
+    ],
+    answer: 'B) To use a dangerous image to show the strong influence of film.',
+    method: "The comparison is not about violence in films (A) or misuse (C) — it is about the compelling, irresistible pull that both objects exert. Just as a loaded gun demands to be fired, a film demands to be watched. Choosing a gun — a powerful and potentially dangerous object — amplifies the idea that film\'s influence is equally potent and unavoidable. Technology (D) is not referenced in this comparison.",
+  },
+  { group: 'AP5', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Opinion Article', context: ctxAP5,
+    question: "In the fifth paragraph, the author draws attention to the 'stunning colours and symmetries of microscopic organisms'. What point is the author trying to make?",
+    options: [
+      'A) Films can be enchanting and miraculous like living creatures.',
+      'B) Intensive analysis can take away from the mystery of things.',
+      'C) The value of some things can only be seen by examining them closely.',
+      'D) It is important to examine things completely, down to their most tiny details.',
+    ],
+    answer: 'C) The value of some things can only be seen by examining them closely.',
+    method: "The article states: 'The stunning colours and symmetries of microscopic organisms only become evident when sought out through analysis.' The microscopic example illustrates that hidden beauty and value exist in things that appear ordinary or unremarkable until you look closely. This supports the argument that popular film, often dismissed as 'just entertainment', reveals its depth only when studied carefully. Option B is the opposite of the author\'s point. Option D focuses on thoroughness rather than the key idea of revelation through close examination.",
+  },
+  { group: 'AP5', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Opinion Article', context: ctxAP5,
+    matrixLabels: ['Yes', 'No'],
+    question: 'Which of the following reasons does the author give for studying popular film? Click Yes or No for each.',
+    options: [
+      'It is a beautiful art-form.',
+      'It shows how we see ourselves.',
+      'It is one of the most complex art-forms.',
+      'It has the ability to strongly influence people.',
+    ],
+    answer: 'No,Yes,Yes,Yes',
+    method: "It is a beautiful art-form — No: the article says beauty is revealed through study, but beauty is not itself given as a reason to study film. The reasons given are its complexity, influence and cultural significance.\nIt shows how we see ourselves — Yes: 'Popular films both reveal society\'s dreams and self-envisionings and shape individual perceptions of the world.'\nIt is one of the most complex art-forms — Yes: the article describes cinema as involving 'the most complex relationships and processes' and as the art form that includes all other art forms.\nIt has the ability to strongly influence people — Yes: 'Popular films (and television), furthermore, exert considerable influence on the way we think about and construct our worlds.'",
+  },
+
+  // ── ACER Practice Paid — Q06: Know Your Body — Cardiovascular Fitness ──────
+  { group: 'AP6', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Health Article', context: ctxAP6,
+    question: 'Which phrase best describes what this article is about?',
+    options: [
+      'A) Advice on how to improve cardiovascular endurance.',
+      'B) Explanation of the five components of physical fitness.',
+      'C) Explanation of cardiovascular endurance and what exercise can achieve.',
+      'D) Explanation of cardiovascular endurance and the dangers of not exercising.',
+    ],
+    answer: 'C) Explanation of cardiovascular endurance and what exercise can achieve.',
+    method: "The article defines cardiovascular endurance and then uses graphs to demonstrate the significant differences exercise training produces in athletes compared to nonathletes. Option A is too narrow — the article is not primarily about giving improvement advice. Option B is incorrect as the five components are only briefly mentioned in the introduction; the focus is cardiovascular endurance specifically. Option D is wrong because the article does not discuss dangers of inactivity — it focuses on the positive effects of exercise.",
+  },
+  { group: 'AP6', set: 'ACER Practice Paid', type: 'true_false_matrix', category: 'Health Article', context: ctxAP6,
+    matrixLabels: ['True', 'False'],
+    question: 'According to the article, which of the following is true for athletes in comparison to nonathletes?',
+    options: [
+      'More oxygen reaches their muscles.',
+      'Their hearts pump more blood per minute.',
+      'Their heart rate increases more with exercise.',
+      'Their cardiac output allows them to exercise for longer.',
+    ],
+    answer: 'True,True,False,True',
+    method: "More oxygen reaches their muscles — True: athletes have higher cardiac output, which means more blood (and therefore oxygen) is pumped to the muscles.\nHearts pump more blood per minute — True: the cardiac output graph shows athletes achieve significantly higher output at maximum effort.\nHeart rate increases more with exercise — False: the heart rate graph shows athletes have a lower resting heart rate and a similar (or slightly lower) maximum heart rate than nonathletes, meaning the increase in heart rate is actually less dramatic for athletes.\nCardiac output allows longer exercise — True: greater cardiac output delivers more oxygen to muscles, enabling athletes to sustain exercise for longer.",
+  },
+  { group: 'AP6', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Health Article', context: ctxAP6,
+    question: 'According to the article, which of the following is NOT an indication of cardiovascular fitness?',
+    options: [
+      'A) Increased cardiac output.',
+      'B) Decreased resting heart rate.',
+      'C) Increased maximum heart rate.',
+      'D) Increased maximum stroke volume.',
+    ],
+    answer: 'C) Increased maximum heart rate.',
+    method: "The graphs show that fit athletes have higher cardiac output (A), lower resting heart rates (B), and greater maximum stroke volume (D) compared to nonathletes — all indicators of cardiovascular fitness. However, maximum heart rate does not increase with fitness training; the graphs show athletes achieve similar or slightly lower maximum heart rates than nonathletes. A fit heart achieves greater output through higher stroke volume, not by beating faster at maximum effort. Increased maximum heart rate is therefore not a sign of improved cardiovascular fitness.",
+  },
+  { group: 'AP6', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Health Article', context: ctxAP6,
+    question: "In the first paragraph, which word could be used instead of 'optimal' without changing the meaning of the sentence?",
+    options: [
+      'A) Abundant.',
+      'B) Chief.',
+      'C) Main.',
+      'D) Prime.',
+    ],
+    answer: 'D) Prime.',
+    method: "'Optimal' means the best or most favourable condition. 'Prime' also means of the highest quality or most favourable — making it the closest synonym. 'Abundant' means plentiful or in large quantity, which is unrelated to quality. 'Chief' and 'main' mean primary or most important in rank, but do not carry the same meaning as 'best possible condition' the way 'optimal' and 'prime' do.",
+  },
+  { group: 'AP6', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Health Article', context: ctxAP6,
+    question: 'Which phrase means cardiovascular endurance?',
+    options: [
+      'A) Ability of the heart to perform well.',
+      'B) Ability of the heart to recover quickly.',
+      'C) Ability of the heart to perform over extended periods.',
+      'D) Ability of the heart and lungs to keep going over a long time.',
+    ],
+    answer: 'C) Ability of the heart to perform over extended periods.',
+    method: "The article defines cardiovascular endurance as 'the body\'s ability to utilise oxygen so that muscles can perform over extended periods.' Option C directly matches this — the key phrase is 'perform over extended periods.' Option A is too vague ('perform well' does not capture duration). Option B introduces recovery, which is not part of the definition. Option D includes both heart and lungs and says 'keep going over a long time' — while close, this paraphrase is less precise than C, which uses the exact language of the definition ('perform over extended periods').",
+  },
 ]
 
 app.get('/api/literacy-topics', (req, res) => {
@@ -7409,11 +8356,22 @@ app.get('/api/literacy-topics', (req, res) => {
   res.json(result)
 })
 
+app.get('/api/literacy-sets', (req, res) => {
+  const counts = {}
+  literacyQuestions.forEach(q => {
+    if (q.set) counts[q.set] = (counts[q.set] || 0) + 1
+  })
+  res.json(Object.entries(counts).map(([name, questionCount]) => ({ name, questionCount })))
+})
+
 app.get('/api/literacy-questions', (req, res) => {
-  const { count, categories } = req.query
+  const { count, categories, sets } = req.query
   const TARGET = count ? parseInt(count) : 30
   let pool = literacyQuestions
-  if (categories) {
+  if (sets) {
+    const setsFilter = new Set(sets.split(',').map(s => s.trim()))
+    pool = literacyQuestions.filter(q => q.set && setsFilter.has(q.set))
+  } else if (categories) {
     const cats = new Set(categories.split(',').map(c => c.trim()))
     pool = literacyQuestions.filter(q => cats.has(q.category))
   } else {
@@ -7442,6 +8400,7 @@ app.get('/api/literacy-questions', (req, res) => {
     type: q.type,
     category: q.category,
     group: q.group,
+    set: q.set || null,
     context: q.context || null,
     question: q.question,
     options: q.options || null,

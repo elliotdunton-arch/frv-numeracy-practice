@@ -16,13 +16,14 @@ export default function App() {
   const [totalTime, setTotalTime] = useState(35 * 60)
   const [pausedMs, setPausedMs] = useState(0)
 
-  const startTest = async (customCount = null, selectedTopics = null) => {
+  const startTest = async (customCount = null, selectedTopics = null, filterType = null) => {
     setLoading(true)
     setError(null)
     try {
       let endpoint = section === 'literacy' ? '/api/literacy-questions' : section === 'abstract' ? '/api/abstract-questions' : section === 'mechanical' ? '/api/mechanical-questions' : '/api/questions'
       if (section === 'literacy' && selectedTopics && selectedTopics.length > 0) {
-        endpoint += '?categories=' + encodeURIComponent(selectedTopics.join(','))
+        const param = filterType === 'sets' ? 'sets' : 'categories'
+        endpoint += `?${param}=` + encodeURIComponent(selectedTopics.join(','))
       } else if (section === 'mechanical' && selectedTopics && selectedTopics.length > 0) {
         endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
       } else if (selectedTopics && selectedTopics.length > 0) {
