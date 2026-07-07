@@ -9268,6 +9268,263 @@ const mechanicalQuestions = [
     answer: 'A) wheel X',
     method: 'Both ropes are pulled down the same distance in the same time, so the linear rope speed is identical for both wheels. For a given linear rope speed, a smaller wheel must rotate through a greater angle per unit time than a larger wheel (arc length = radius × angle). Wheel X is the smaller wheel, so it rotates fastest.'
   },
+
+  // ACER Practice Paid: APP01–APP32
+  { group: 'APP01', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 01.png',
+    question: 'Gear P makes one complete rotation. How many rotations do gears R and S make?',
+    options: ['A) Both gears make exactly one rotation.', 'B) R makes exactly one rotation; S makes more than one rotation.', 'C) R makes more than one rotation; S makes exactly one rotation.', 'D) R makes exactly one rotation; S makes less than one rotation.'],
+    answer: 'B) R makes exactly one rotation; S makes more than one rotation.',
+    method: 'Gear R is the same size as P and meshes directly with it, so R makes exactly one rotation for every rotation of P. Gear S is smaller than R and meshes with R; a smaller driven gear must rotate more times to match the tooth movement of a larger driving gear, so S makes more than one rotation.'
+  },
+
+  { group: 'APP02', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 02.png',
+    question: 'How do the speeds of gears R and S compare to the speed of gear P?',
+    options: ['A) Both turn at the same speed as P.', 'B) R turns at the same speed as P; S turns faster.', 'C) R turns at the same speed as P; S turns slower.', 'D) R turns slower than P; S turns at the same speed.'],
+    answer: 'B) R turns at the same speed as P; S turns faster.',
+    method: 'R is the same size as P and meshes directly with it, so R turns at the same speed. S is smaller than R and is driven by it; a smaller gear driven by a larger one must turn faster to keep up with the meshing teeth.'
+  },
+
+  { group: 'APP03', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 03.png',
+    question: 'Gear T turns clockwise. How does gear S turn?',
+    options: ['A) clockwise, continuously', 'B) clockwise, with pauses', 'C) anticlockwise, continuously', 'D) anticlockwise, with pauses'],
+    answer: 'B) clockwise, with pauses',
+    method: 'This is an intermittent (Geneva-style) mechanism. Gear T\'s pin engages gear S\'s slots one at a time, advancing S in steps. Between engagements the pin is in the locking arc and S is held stationary. When T turns continuously clockwise, S turns clockwise but only moves during each engagement — advancing in steps with pauses in between.'
+  },
+
+  { group: 'APP04', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 04.png',
+    question: 'The gear wheel turns clockwise. In which directions do the horizontal and vertical racks move?',
+    options: ['A) The horizontal rack moves right; the vertical rack moves down.', 'B) The horizontal rack moves right; the vertical rack moves up.', 'C) The horizontal rack moves left; the vertical rack moves down.', 'D) The horizontal rack moves left; the vertical rack moves up.'],
+    answer: 'D) The horizontal rack moves left; the vertical rack moves up.',
+    method: 'A clockwise-turning gear drives the rack it meshes with in the direction the gear teeth move at the contact point. For the horizontal rack (meshing along the top of the gear), the teeth move left — so the rack moves left. For the vertical rack (meshing on the right side of the gear), the teeth move upward — so the rack moves up.'
+  },
+
+  { group: 'APP05', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 05.png',
+    question: 'In which directions do the sections of belt at X and Y move?',
+    options: ['A) X moves up; Y moves right.', 'B) X moves up; Y moves left.', 'C) X moves down; Y moves right.', 'D) X moves down; Y moves left.'],
+    answer: 'B) X moves up; Y moves left.',
+    method: 'The belt forms a continuous loop around the pulleys. Tracing the direction of travel from the driving wheel, section X travels upward and section Y travels to the left.'
+  },
+
+  { group: 'APP06', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 06.png',
+    question: 'In which direction(s) do wheels P and Q turn?',
+    options: ['A) Both wheels turn clockwise.', 'B) Both wheels turn anticlockwise.', 'C) P turns clockwise; Q turns anticlockwise.', 'D) P turns anticlockwise; Q turns clockwise.'],
+    answer: 'C) P turns clockwise; Q turns anticlockwise.',
+    method: 'P and Q are connected by a crossed belt, which reverses the direction of rotation. P turns clockwise while Q, driven by the crossed belt, turns anticlockwise.'
+  },
+
+  { group: 'APP07', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 07.png',
+    question: 'In which direction(s) do wheels M and N turn?',
+    options: ['A) Both wheels turn clockwise.', 'B) Both wheels turn anticlockwise.', 'C) M turns clockwise; N turns anticlockwise.', 'D) M turns anticlockwise; N turns clockwise.'],
+    answer: 'D) M turns anticlockwise; N turns clockwise.',
+    method: 'M and N are connected by a crossed belt, which reverses the direction of rotation between the two wheels. M turns anticlockwise and N turns clockwise.'
+  },
+
+  { group: 'APP08', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 08.png',
+    question: 'Which one of the following changes would result in the belts moving faster?',
+    options: ['A) adding a wheel at X', 'B) making wheel T larger', 'C) making wheel S larger', 'D) making wheel S smaller'],
+    answer: 'B) making wheel T larger',
+    method: 'Wheel T is the drive wheel. Making it larger increases the circumferential speed of the belt for the same rotational speed — a larger wheel moves more belt per revolution. This drives the entire belt system faster.'
+  },
+
+  { group: 'APP09', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 09.png',
+    question: 'The tool shown can be used to force doors open. The tool is made in different lengths. In which of the following situations will it be easiest to force the door open?',
+    options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
+    answer: 'A) (see diagram)',
+    method: 'The tool acts as a lever. The greater the distance between the applied force and the fulcrum (pivot point), the greater the mechanical advantage and the less force required. Situation A positions the tool to give the greatest effective lever arm, making it easiest to force the door open.'
+  },
+
+  { group: 'APP10', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 10.png',
+    question: 'A block rests on a flat surface. The block can rotate in either direction around a fixed pivot. One or more pegs can be placed against the block to prevent it from rotating. Which of the following shows the fewest pegs needed to prevent the block from rotating in either direction?',
+    options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
+    answer: 'A) (see diagram)',
+    method: 'To prevent rotation in both directions, at least one peg must block clockwise rotation and at least one must block anticlockwise rotation. The minimum is two pegs, placed on opposite sides of the block\'s corners. Option A shows this optimal two-peg configuration.'
+  },
+
+  { group: 'APP11', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 11.png',
+    question: 'Three water tanks of the same height but different shapes have identical taps at the same height from the bottom. All tanks are full of water and on the same level surface. Suppose the taps are opened fully. From which tank would the water travel furthest?',
+    options: ['A) tank A', 'B) tank B', 'C) tank C', 'D) Water would travel the same distance from each tank.'],
+    answer: 'D) Water would travel the same distance from each tank.',
+    method: 'The distance water travels from a tap depends on the pressure at the tap, which is determined by the height of water above the tap (hydrostatic pressure = ρgh). Since all tanks are the same height and the taps are at the same height from the bottom, the pressure is identical for all three. Tank shape does not affect this, so water travels the same distance from each.'
+  },
+
+  { group: 'APP12', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 12.png',
+    question: 'Three water tanks of the same height but different shapes have identical taps at the same height from the bottom. All tanks are full of water and on the same level surface. Suppose the taps are opened fully. From which tank would the water have the slowest speed?',
+    options: ['A) tank A', 'B) tank B', 'C) tank C', 'D) The speed of the water from each tank would be the same.'],
+    answer: 'D) The speed of the water from each tank would be the same.',
+    method: 'Water speed at the tap is given by Torricelli\'s theorem: v = √(2gh), where h is the height of water above the tap. Since all three tanks are the same height and the taps are at the same height, h is identical. Tank shape is irrelevant — the exit speed is the same for all three.'
+  },
+
+  { group: 'APP13', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 13.png',
+    question: 'Handle H is pulled clockwise. In which direction does X move?',
+    options: ['A) left and up', 'B) left and down', 'C) right and up', 'D) right and down'],
+    answer: 'D) right and down',
+    method: 'When handle H is pulled clockwise, the winch drum winds the rope, pulling the attachment point. The geometry of the linkage means X moves to the right and downward.'
+  },
+
+  { group: 'APP14', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 14.png',
+    question: 'Handle H is pulled anticlockwise. In which direction does Y move?',
+    options: ['A) left and up', 'B) left and down', 'C) right and up', 'D) right and down'],
+    answer: 'C) right and up',
+    method: 'When handle H is pulled anticlockwise, the drum unwinds in the opposite direction. The linkage geometry causes Y to move to the right and upward.'
+  },
+
+  { group: 'APP15', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 15.png',
+    question: 'Handle H is pulled anticlockwise. In which direction does Z move?',
+    options: ['A) left and up', 'B) left and down', 'C) right and up', 'D) right and down'],
+    answer: 'B) left and down',
+    method: 'When handle H is pulled anticlockwise, the linkage geometry for Z — positioned differently from X and Y — causes it to move to the left and downward.'
+  },
+
+  { group: 'APP16', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 16.png',
+    question: 'A heavy metal ball is attached to a rope. The ball is released from position R and swings through positions S and T to position U. At which position does the swinging ball move fastest?',
+    options: ['A) position S', 'B) position T', 'C) position U', 'D) The ball moves at the same speed at all positions.'],
+    answer: 'B) position T',
+    method: 'A pendulum converts gravitational potential energy to kinetic energy as it swings downward. At the lowest point of its arc (position T), all potential energy has been converted to kinetic energy, making this the point of maximum speed. At R and U (the highest points), the ball momentarily has maximum potential energy and minimum speed.'
+  },
+
+  { group: 'APP17', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 17.png',
+    question: 'At which of the positions shown should a 20 kg block be placed to balance the beam?',
+    options: ['A) position A', 'B) position B', 'C) position C', 'D) position D'],
+    answer: 'C) position C',
+    method: 'For the beam to balance, the torques on each side of the pivot must be equal (torque = weight × distance from pivot). Using the known weights and distances shown in the diagram, placing the 20 kg block at position C creates the torque needed to balance the existing load on the other side.'
+  },
+
+  { group: 'APP18', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 18.png',
+    question: 'Three pulley systems A, B and C are shown, each holding an identical weight. A force is applied to each system to hold the weights in their current positions. Which pulley system needs the least amount of applied force to hold the weight? (Ignore the weight of the pulleys and ropes.)',
+    options: ['A) pulley system A', 'B) pulley system B', 'C) pulley system C', 'D) Each pulley system needs the same amount of applied force.'],
+    answer: 'A) pulley system A',
+    method: 'The mechanical advantage of a pulley system equals the number of rope sections supporting the movable pulley. More rope sections mean less force is required per section to support the weight. System A has the most rope sections (greatest mechanical advantage), so it requires the least applied force.'
+  },
+
+  { group: 'APP19', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 19.png',
+    question: 'This system consists of a gear wheel, a fixed gear rack and four plungers in fixed sleeves. The gear wheel turns clockwise. In which directions do the plungers move?',
+    options: ['A) W and X move up; Y and Z move down.', 'B) W and Y move down; X and Z move up.', 'C) W and Y move up; X and Z move down.', 'D) W and Z move down; X and Y move up.'],
+    answer: 'D) W and Z move down; X and Y move up.',
+    method: 'When the gear turns clockwise on the fixed rack, it rolls to the right. The four diagonal arms connecting the gear centre to the plungers push based on the arm angles: W (upper-left) and Z (lower-right) are pushed downward, while X (upper-right) and Y (lower-left) are pushed upward.'
+  },
+
+  { group: 'APP20', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 20.png',
+    question: 'Rod T moves to the right and down. In which directions do sleeves R and S move?',
+    options: ['A) R moves up; S moves left.', 'B) R moves up; S moves right.', 'C) R moves down; S moves left.', 'D) R moves down; S moves right.'],
+    answer: 'B) R moves up; S moves right.',
+    method: 'The linkage mechanism connects rod T to sleeves R and S through pivoting joints. When T moves right and down, the geometry of the linkage causes sleeve R to move upward and sleeve S to move to the right.'
+  },
+
+  { group: 'APP21', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 21.png',
+    question: 'This system includes a water tank, a float and an indicator connected by a pulley mechanism. The different water levels are marked with signs (W, X, Y, Z from top to bottom). Which signs show the water level when the tank is empty and when three-quarters full?',
+    options: ['A) Empty: sign W; Three-quarters full: sign X', 'B) Empty: sign W; Three-quarters full: sign Y', 'C) Empty: sign Z; Three-quarters full: sign X', 'D) Empty: sign Z; Three-quarters full: sign Y'],
+    answer: 'B) Empty: sign W; Three-quarters full: sign Y',
+    method: 'The float and indicator are connected by the pulley, reversing the relationship between water level and indicator position. When the tank is empty the float sinks, pulling the indicator up to sign W (top). At three-quarters full the float is above the midpoint, moving the indicator downward past sign X to sign Y.'
+  },
+
+  { group: 'APP22', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 22.png',
+    question: 'This system includes a water tank, a float and an indicator connected by a pulley mechanism. As the tank fills with water, in which direction(s) do pulley wheels P and Q turn?',
+    options: ['A) Both P and Q turn clockwise.', 'B) P turns clockwise and Q turns anticlockwise.', 'C) P turns anticlockwise and Q turns clockwise.', 'D) Both P and Q turn anticlockwise.'],
+    answer: 'A) Both P and Q turn clockwise.',
+    method: 'As the tank fills, the float rises, pulling the rope upward on the float side. The rope runs over pulley P then across to pulley Q. Both P and Q are on the same belt loop and rotate in the same direction — clockwise — as the rising float pulls the rope through the system.'
+  },
+
+  { group: 'APP23', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 23.png',
+    question: 'Each of the four rods rests on a wheel with a fixed pivot. When the wheels turn, which rod moves up the greatest distance?',
+    options: ['A) rod A', 'B) rod B', 'C) rod C', 'D) rod D'],
+    answer: 'D) rod D',
+    method: 'Each rod is lifted by a cam (eccentric wheel). The distance a rod moves up equals the difference between the cam\'s maximum and minimum radius at the contact point. Rod D\'s cam has the greatest eccentricity — the largest difference between its nearest and furthest points from the pivot — so it lifts rod D the greatest distance.'
+  },
+
+  { group: 'APP24', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 24.png',
+    question: 'Wheel S is turned anticlockwise. In which directions do wheel T and gear R turn?',
+    options: ['A) T turns clockwise; R turns clockwise.', 'B) T turns clockwise; R turns anticlockwise.', 'C) T turns anticlockwise; R turns clockwise.', 'D) T turns anticlockwise; R turns anticlockwise.'],
+    answer: 'D) T turns anticlockwise; R turns anticlockwise.',
+    method: 'S is connected to T by a direct (uncrossed) belt, so T turns in the same direction as S — anticlockwise. T is then connected to gear R by a direct belt, so R also turns anticlockwise.'
+  },
+
+  { group: 'APP25', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 25.png',
+    question: 'Three flexible rubber diaphragms sit inside a sealed oil-filled system. The plunger is pulled upwards. Which of the following best shows the expected changes in the shape of the diaphragms?',
+    options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
+    answer: 'C) (see diagram)',
+    method: 'When the plunger is pulled upward, it reduces pressure in the sealed oil-filled system. The lower pressure causes the flexible diaphragms to bow inward (flex toward the oil). Option C correctly shows all three diaphragms deflecting inward in response to the reduced pressure.'
+  },
+
+  { group: 'APP26', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 26.png',
+    question: 'The figure shows a tree pruning cutter on the end of an aluminium pole. For the cutting jaws to close, it is necessary to',
+    options: ['A) reduce the tension on the rope to decrease the tension in the spring.', 'B) reduce the tension on the rope so the top cutting jaw moves down.', 'C) pull the rope to decrease the tension in the spring.', 'D) pull the rope so that pulley 1 moves down.'],
+    answer: 'D) pull the rope so that pulley 1 moves down.',
+    method: 'The rope runs through the pulley system connecting the handle to the cutting mechanism. Pulling the rope causes pulley 1 (attached to the lower cutting jaw) to move downward, which closes the cutting jaws against the upper jaw. Pulling increases rope tension — it does not decrease it.'
+  },
+
+  { group: 'APP27', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 27.png',
+    question: 'The figure shows a tree pruning cutter on the end of an aluminium pole. When the rope is pulled, the',
+    options: ['A) lower cutting jaw moves upward.', 'B) upper cutting jaw moves downward.', 'C) spring pulls the cutting jaws together.', 'D) distance between pulley 1 and pulley 2 increases.'],
+    answer: 'A) lower cutting jaw moves upward.',
+    method: 'Pulling the rope runs it through pulleys 1 and 2, creating a mechanical advantage that lifts the lower cutting jaw upward toward the fixed upper jaw. The upper jaw does not move — only the lower jaw closes upward to make the cut.'
+  },
+
+  { group: 'APP28', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 28.png',
+    question: 'The figure shows a tree pruning cutter on the end of an aluminium pole. The purpose of the spring is to',
+    options: ['A) increase the force applied by the cutting jaws.', 'B) return the cutting jaws to the closed position when the rope is released.', 'C) return the cutting jaws to the open position when the rope is released.', 'D) add tension to the rope to give the user greater feel for the cutting effect.'],
+    answer: 'C) return the cutting jaws to the open position when the rope is released.',
+    method: 'The spring acts as a return mechanism. When the operator releases the rope, the spring extends and pushes the lower cutting jaw back down to the open position, ready for the next cut. Without the spring, the operator would need to manually reopen the jaws.'
+  },
+
+  { group: 'APP29', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 29.png',
+    question: 'The figure shows a series of interacting seesaws. The white arrows indicate possible forces (X and Z are pushes, W and Y are pulls). Which of these forces will cause the end of the right-most seesaw to move upwards as indicated by the dotted arrow?',
+    options: ['A) none of them', 'B) X and Y only', 'C) W, X and Y only', 'D) all of them'],
+    answer: 'C) W, X and Y only',
+    method: 'Tracing each force through the chain of seesaws: forces W (pull), X (push), and Y (pull) each propagate through the linkage to push the end of the right-most seesaw upward. Force Z (push) causes the chain to transmit the opposite effect, moving that end downward instead.'
+  },
+
+  { group: 'APP30', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 30.png',
+    question: 'Oil is contained inside this sealed system with a small plunger and a larger plunger. The small plunger is pushed downwards by a further 1 cm. How will the larger plunger move?',
+    options: ['A) downwards by exactly 1 cm', 'B) upwards by exactly 1 cm', 'C) downwards by more than 1 cm', 'D) upwards by less than 1 cm'],
+    answer: 'D) upwards by less than 1 cm',
+    method: 'This is a hydraulic system. Pushing the small plunger down displaces a volume of oil equal to (small area × 1 cm). This oil pushes the larger plunger upward. Since the larger plunger has a greater cross-sectional area, the same volume of oil moves it a smaller distance: displacement = (small area / large area) × 1 cm, which is less than 1 cm. The direction is upward.'
+  },
+
+  { group: 'APP31', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 31.png',
+    question: 'Gear rack R moves to the right, and gear rack S moves to the left at the same speed. In which direction (if any) does the gear wheel move?',
+    options: ['A) right only', 'B) left only', 'C) right and then left', 'D) It remains in the same position while turning.'],
+    answer: 'D) It remains in the same position while turning.',
+    method: 'When two racks on opposite sides of a gear move in opposite directions at equal speeds, each rack drives the gear to rotate in the same rotational direction but the equal and opposite translational forces cancel out. The gear\'s centre remains stationary — it spins in place without moving left or right.'
+  },
+
+  { group: 'APP32', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 32.png',
+    question: 'The wheel turns anticlockwise for one complete rotation. Compared to point A, point B travels',
+    options: ['A) a greater distance and takes more time to complete the rotation.', 'B) a greater distance and takes the same time to complete the rotation.', 'C) the same distance and takes more time to complete the rotation.', 'D) less distance and takes the same time to complete the rotation.'],
+    answer: 'B) a greater distance and takes the same time to complete the rotation.',
+    method: 'All points on a rigid wheel complete one full revolution in the same time. However, a point further from the centre (B) traces a larger circle: distance = 2πr. Since r_B > r_A, point B travels a greater distance than A in the same time — meaning B moves faster, but the rotation time is identical for both points.'
+  },
 ]
 
 app.get('/api/mechanical-sets', (req, res) => {
