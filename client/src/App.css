@@ -2167,6 +2167,30 @@ body {
   padding: 10px 20px;
   font-size: 0.9rem;
 }
+.btn-start-secondary {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.3px;
+}
+.btn-start-secondary:hover:not(:disabled) {
+  background: #fff7ed;
+  transform: translateY(-1px);
+}
+.btn-start-secondary:active:not(:disabled) { transform: translateY(0); }
+.btn-start-secondary:disabled { opacity: 0.6; cursor: not-allowed; }
+.topic-start-row .btn-start-secondary {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
 
 /* ══════════════════════════════════════
    RECORD RESULT

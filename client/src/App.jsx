@@ -16,7 +16,7 @@ export default function App() {
   const [totalTime, setTotalTime] = useState(35 * 60)
   const [pausedMs, setPausedMs] = useState(0)
 
-  const startTest = async (customCount = null, selectedTopics = null, filterType = null) => {
+  const startTest = async (customCount = null, selectedTopics = null, filterType = null, ordered = false) => {
     setLoading(true)
     setError(null)
     try {
@@ -24,6 +24,7 @@ export default function App() {
       if (section === 'literacy' && selectedTopics && selectedTopics.length > 0) {
         const param = filterType === 'sets' ? 'sets' : 'categories'
         endpoint += `?${param}=` + encodeURIComponent(selectedTopics.join(','))
+        if (ordered) endpoint += '&ordered=true'
       } else if (section === 'mechanical' && selectedTopics && selectedTopics.length > 0) {
         endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
       } else if (selectedTopics && selectedTopics.length > 0) {

@@ -7387,7 +7387,7 @@ const literacyQuestions = [
     method: "The article explains that WHO classified processed meat as Group 1 (definite carcinogen) and red meat as Group 2A (probable carcinogen). This reflects different levels of evidential certainty, not necessarily different levels of harm. Option A may be factually plausible in reality but is not the article's stated reason for the classification difference — the article grounds the distinction in evidence strength, not additive content. Option C inverts the logic: a higher classification does not mean more cancer types. Option D introduces consumption volume as an explanation for classification, which is not how IARC classifications work; they are based on evidence strength, not usage levels."
   },
   // ── Set L55: Email — Bilvington Bushfire Preparedness ────────────────────
-  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "A resident reads the email and concludes: 'This email is telling me what to do if a bushfire breaks out near my home.' Is this an accurate reading of the email's purpose?",
     options: [
       "A) Yes — the email's primary concern is instructing residents on emergency evacuation procedures to follow during a fire.",
@@ -7398,7 +7398,7 @@ const literacyQuestions = [
     answer: "B) No — the email is focused on actions residents should take before fire season begins to prepare their properties, not on emergency response during an active fire.",
     method: "The email is a preparedness communication, not an emergency response guide. Its emphasis is on property preparation steps to be completed before fire season — actions like clearing vegetation, storing flammable liquids, and positioning trees. It does not outline emergency evacuation procedures (Option A). Option C incorrectly claims the email balances preparation and emergency response equally. Option D reduces the email to risk information, when it is explicitly a call to action directed at specific preparatory tasks."
   },
-  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "The email is sent by local council and directed to Bilvington residents specifically. What feature of Bilvington's location makes targeted preparation advice for this community particularly relevant?",
     options: [
       "A) Bilvington's narrow streets make it difficult for fire trucks to navigate during an active bushfire.",
@@ -7409,7 +7409,7 @@ const literacyQuestions = [
     answer: "B) Bilvington is surrounded by dense bushland, which significantly increases residents' exposure to bushfire risk compared with urban areas.",
     method: "The email explicitly states that Bilvington is surrounded by dense bushland, which is the specific geographic risk factor that makes the preparation advice directly relevant to this community. Option A introduces road access for fire trucks, which the email does not mention. Option C claims a recent fire history not referenced in the email. Option D introduces building material age as a risk factor also not discussed in the email."
   },
-  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "The email advises residents that mature trees can be 'strategically placed' to help protect their property. A resident interprets this to mean they should plant new trees as far away from the house as possible. Is this interpretation correct?",
     options: [
       "A) Yes — distance from the house is the defining feature of strategic placement, as any tree close to a house is a fire risk.",
@@ -7420,7 +7420,7 @@ const literacyQuestions = [
     answer: "B) No — 'strategically placed' means positioned in a deliberate location to provide specific benefits such as acting as a firebreak or providing shelter, not simply maximising distance.",
     method: "'Strategically' means positioned to achieve a specific purpose, not simply placed at maximum distance. The email explains that mature trees can provide shelter and act as a firebreak when placed correctly — implying purposeful positioning relative to the property and fire direction, not arbitrary removal of nearby vegetation. Option A conflates strategic placement with maximum distance, losing the purposeful element. Option C applies a blanket 'all vegetation is dangerous' rule the email does not endorse — it specifically recommends strategically placed mature trees as protective. Option D contradicts the email's actual advice, which endorses correctly positioned mature trees."
   },
-  { group: 'L55', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice Free', type: 'true_false_matrix', category: 'Email / Letter', context: ctxL55,
     matrixLabels: ['Yes', 'No'],
     question: 'Which of the following actions does the email encourage people to carry out?',
     options: [
@@ -7431,7 +7431,7 @@ const literacyQuestions = [
     answer: 'Yes,No,Yes',
     method: "Regularly cut grass — Yes: the email advises keeping grass mown short around the property.\nEnsure a hose nearby — No: having a hose close to the property is not mentioned as a specific action in the email.\nStore petrol away from house — Yes: the email advises storing flammable liquids (such as petrol) in a shed away from the house."
   },
-  { group: 'L55', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
+  { group: 'L55', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
     question: "When referring to mature trees, what does the email mean by 'strategically placed'?",
     options: [
       'A) Only old trees kept.',
@@ -7952,7 +7952,7 @@ const literacyQuestions = [
   },
 
   // ── FRV Practice #1 — Q07: Winter Storm Newsletter ────────────────────────
-  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+  { group: 'FP7', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
     question: 'What is the purpose of this newsletter?',
     options: [
       'A) To inform people of the risks of storms.',
@@ -7963,7 +7963,7 @@ const literacyQuestions = [
     answer: 'D) To inform people on how to prepare for a winter storm.',
     method: "The opening subheading of the text states the purpose of the newsletter directly: 'How To Prepare For A Winter Storm'. Option A is too narrow — while risks are implied, informing about risks is not the stated purpose. Option B focuses on property, but the newsletter is about protecting yourself and your household more broadly. Option C is too specific — keeping warm is one tip among many.",
   },
-  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+  { group: 'FP7', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
     question: 'According to the newsletter, why is it important for people to properly prepare for a storm?',
     options: [
       'A) To help minimise the risk of destruction to their property.',
@@ -7974,7 +7974,7 @@ const literacyQuestions = [
     answer: 'D) To help protect home occupants.',
     method: "The newsletter states: 'This newsletter is intended to help protect yourself before, during, and after a storm.' It also lists ways members can protect their home and the people in it. Option A focuses only on property, not people. Option B introduces a claim about storm power that is not made in the newsletter. Option C states that storms cause destruction but does not explain why preparation matters — the reason given in the text is to protect people.",
   },
-  { group: 'FP7', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
+  { group: 'FP7', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Newsletter', context: ctxFP7,
     question: 'What can people do if they followed the advice from the newsletter?',
     options: [
       'A) Able to live life normally during the period of the storm.',
@@ -7985,7 +7985,7 @@ const literacyQuestions = [
     answer: 'B) Increase their chances of remaining stable or quickly recovering from the effects of a storm.',
     method: "The newsletter states: 'The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do in the event of a storm.' This directly matches option B. Options A and C overstate the outcome — the newsletter does not promise normal life or zero impact. Option D ('unscathed') implies no harm at all, which is stronger than the newsletter's more measured language about maintaining stability or recovering quickly.",
   },
-  { group: 'FP7', set: 'FRV Practice #1', type: 'true_false_matrix', category: 'Newsletter', context: ctxFP7,
+  { group: 'FP7', set: 'FRV Practice Free', type: 'true_false_matrix', category: 'Newsletter', context: ctxFP7,
     matrixLabels: ['Yes', 'No'],
     question: 'Which of the following advice does the newsletter provide for people to action?',
     options: [
@@ -8365,7 +8365,7 @@ app.get('/api/literacy-sets', (req, res) => {
 })
 
 app.get('/api/literacy-questions', (req, res) => {
-  const { count, categories, sets } = req.query
+  const { count, categories, sets, ordered } = req.query
   const TARGET = count ? parseInt(count) : 30
   let pool = literacyQuestions
   if (sets) {
@@ -8381,18 +8381,23 @@ app.get('/api/literacy-questions', (req, res) => {
     literacyQuestions.forEach(q => { groupSizes[q.group] = (groupSizes[q.group] || 0) + 1 })
     pool = literacyQuestions.filter(q => groupSizes[q.group] >= 2)
   }
-  const shuffled = shuffleByGroup(pool)
 
-  // Take complete groups — never cut mid-group
-  const taken = []
-  let i = 0
-  while (i < shuffled.length) {
-    const grp = shuffled[i].group
-    let j = i
-    while (j < shuffled.length && shuffled[j].group === grp) j++
-    taken.push(...shuffled.slice(i, j))
-    i = j
-    if (taken.length >= TARGET) break
+  let taken
+  if (ordered === 'true') {
+    taken = [...pool].sort((a, b) => a.group.localeCompare(b.group, undefined, { numeric: true }))
+  } else {
+    const shuffled = shuffleByGroup(pool)
+    // Take complete groups — never cut mid-group
+    taken = []
+    let i = 0
+    while (i < shuffled.length) {
+      const grp = shuffled[i].group
+      let j = i
+      while (j < shuffled.length && shuffled[j].group === grp) j++
+      taken.push(...shuffled.slice(i, j))
+      i = j
+      if (taken.length >= TARGET) break
+    }
   }
 
   const final = taken.map((q, idx) => ({

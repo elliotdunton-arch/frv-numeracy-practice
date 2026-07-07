@@ -572,11 +572,18 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                       {selectedLitSets.size} set{selectedLitSets.size !== 1 ? 's' : ''} · {totalSelectedLitSetQs} questions available
                     </span>
                     <button
+                      className="btn-start-secondary"
+                      onClick={() => onStart(null, [...selectedLitSets], 'sets', true)}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start In Order'}
+                    </button>
+                    <button
                       className="btn-start"
                       onClick={() => onStart(null, [...selectedLitSets], 'sets')}
                       disabled={loading}
                     >
-                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                      {loading ? 'Loading…' : 'Start (Random)'}
                     </button>
                   </div>
                 )}
