@@ -678,12 +678,28 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                       {selectedMechSets.size} set{selectedMechSets.size !== 1 ? 's' : ''} · {totalSelectedMechQs} questions available
                     </span>
                     <button
-                      className="btn-start"
-                      onClick={() => onStart(null, [...selectedMechSets])}
+                      className="btn-start-secondary"
+                      onClick={() => onStart(null, [...selectedMechSets], 'sets', true)}
                       disabled={loading}
                     >
-                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                      {loading ? 'Loading…' : 'Start In Order'}
                     </button>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedMechSets], 'sets')}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start (Random)'}
+                    </button>
+                    {totalSelectedMechQs < 32 && (
+                      <button
+                        className="btn-start-secondary"
+                        onClick={() => onStart(null, [...selectedMechSets], 'sets', true, true)}
+                        disabled={loading}
+                      >
+                        {loading ? 'Loading…' : 'Full Test — Set First'}
+                      </button>
+                    )}
                   </div>
                 )}
               </div>

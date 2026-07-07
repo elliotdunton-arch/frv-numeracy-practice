@@ -39,6 +39,7 @@ function formatUserTimeHM(str) {
 
 export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, onRetryIncorrect, pausedMs = 0 }) {
   const [expandedWorking, setExpandedWorking] = useState({})
+  const [contextOpen, setContextOpen] = useState({})
   const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
   const [nameInput, setNameInput] = useState('')
   const [revisionSet, setRevisionSet] = useState(() => new Set(getRevision().map(i => i.question.id)))
@@ -66,6 +67,37 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   const toggleWorking = (id) => {
     setExpandedWorking(prev => ({ ...prev, [id]: !prev[id] }))
   }
+
+  const toggleContext = (id) => {
+    setContextOpen(prev => ({ ...prev, [id]: !prev[id] }))
+  }
+
+  const renderContextBlock = (ctx) => (
+    <div className="context-block review-context-block">
+      {ctx.title && <div className="context-title">{ctx.title}</div>}
+      {ctx.subtitle && <div className="context-subtitle">{ctx.subtitle}</div>}
+      {ctx.image && <img src={ctx.image} alt="Question context" className="context-image" />}
+      {ctx.images && ctx.images.map((src, ii) => (
+        <img key={ii} src={src} alt={`Context ${ii + 1}`} className="context-image" />
+      ))}
+      {ctx.paragraphs && ctx.paragraphs.map((para, pi) => (
+        <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>{para}</p>
+      ))}
+      {ctx.tables && ctx.tables.map((tbl, ti) => (
+        <div key={ti} className="context-table-wrap">
+          {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
+          <table className="context-table">
+            <thead><tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr></thead>
+            <tbody>{tbl.rows.map((row, ri) => <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>)}</tbody>
+          </table>
+        </div>
+      ))}
+      {ctx.extraParagraphs && ctx.extraParagraphs.map((para, pi) => (
+        <p key={pi} className="context-paragraph">{para}</p>
+      ))}
+      {ctx.note && <div className="context-note">{ctx.note}</div>}
+    </div>
+  )
 
   const doSave = (username) => {
     saveResult({
@@ -208,6 +240,18 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                       {correct ? '✓' : '✗'}
                     </span>
                   </div>
+                  {q.context && (
+                    <div className="working-section">
+                      <button
+                        className={`working-toggle ${contextOpen[q.id] ? 'working-toggle-open' : ''}`}
+                        onClick={() => toggleContext(q.id)}
+                      >
+                        <span className="working-toggle-icon">{contextOpen[q.id] ? '▾' : '▸'}</span>
+                        {contextOpen[q.id] ? 'Hide passage' : 'Show passage'}
+                      </button>
+                      {contextOpen[q.id] && renderContextBlock(q.context)}
+                    </div>
+                  )}
                   <p className="review-question">{q.question}</p>
                   {q.type === 'true_false_matrix' ? (
                     <div className="tfm-review">

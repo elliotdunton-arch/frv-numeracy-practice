@@ -8953,6 +8953,321 @@ const mechanicalQuestions = [
     answer: 'B) with a weak spring, gear X can turn anticlockwise',
     method: 'Pin P stops lever L from being pushed down, so Y cannot turn anticlockwise and X cannot turn clockwise. With a weak spring, gear Y can push lever L upward as Y turns clockwise — the spring gives way, allowing the lever to lift. This frees Y to turn clockwise and X to turn anticlockwise.'
   },
+
+  // FRV Practice #1: MFP01–MFP25
+  { group: 'MFP01', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_01.png',
+    question: 'What force is required to lift the weight?',
+    options: ['A) 6kgs', 'B) 9kgs', 'C) 18kgs', 'D) 36kgs'],
+    answer: 'B) 9kgs',
+    method: 'This is a combined pulley system. The far left pulley is movable; the top 2 pulleys are fixed. Fixed pulleys change direction only — they provide no mechanical advantage. Count the rope sections around the movable pulley: there are 2, giving a mechanical advantage of 2. Divide the weight: 18 ÷ 2 = 9kgs.'
+  },
+  { group: 'MFP02', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_02.png',
+    question: 'Gear A turns clockwise 10 times. How many times does Gear B turn?',
+    options: ['A) 10 turns clockwise', 'B) 10 turns anti-clockwise', 'C) 5 turns clockwise', 'D) 5 turns anti-clockwise'],
+    answer: 'B) 10 turns anti-clockwise',
+    method: 'Every adjacent gear turns the opposite direction to the one before it — so the 2nd and 4th gears turn anti-clockwise. Because gears A and B are the same size, they turn at the same speed. Gear B (the 4th gear) turns 10 times anti-clockwise.'
+  },
+  { group: 'MFP03', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Volumes & Shapes',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_03.png',
+    question: 'Which shape has the highest surface area?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'A) A',
+    method: 'A cube (A) with side 1 has a surface area of 6. A cylinder (C) with diameter 1 and height 1 has a surface area of approximately 4.71. A triangular prism (B) with equivalent dimensions has approximately 3.87. The cube has the greatest surface area.'
+  },
+  { group: 'MFP04', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_04.png',
+    question: 'What distance on the right side of the yellow triangle is required to balance the weights?',
+    options: ['A) 12m', 'B) 24m', 'C) 32m', 'D) 48m'],
+    answer: 'B) 24m',
+    method: 'Use torque balance — force × distance must be equal on both sides of the fulcrum. Left side: 12 × 8 = 96. Right side: 4 × ? = 96, so ? = 24m.'
+  },
+  { group: 'MFP05', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_05.png',
+    question: 'At which point is the basketball moving the fastest?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'A) A',
+    method: 'In projectile motion, speed is highest at the lowest point — the initial throw at point A. Speed decreases as the ball rises against gravity. At the peak (point C) vertical velocity is zero and overall speed is lowest. Speed increases again as the ball falls.'
+  },
+  { group: 'MFP06', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_06.jpg',
+    question: '2 balls with the same mass are rolling towards each other. After they collide, what will happen to the larger ball?',
+    options: ['A) It will stop', 'B) It will roll backwards', 'C) It will roll forwards', 'D) We don\'t know'],
+    answer: 'D) We don\'t know',
+    method: 'Without knowing the speeds of the balls or whether the collision is elastic or inelastic, the outcome cannot be determined. Force = Mass × Acceleration — whichever ball has a sufficiently larger force will continue forwards after the collision.'
+  },
+  { group: 'MFP07', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_07.png',
+    question: 'A cylinder full of water has 3 outlets, A, B & C, with water coming out of each outlet. Which outlet has the most amount of pressure?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'C) C',
+    method: 'Pressure increases with depth. Outlet C is at the bottom where the weight of water above it is greatest — water exits furthest from C, confirming it has the highest pressure.'
+  },
+  { group: 'MFP08', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_08.jpg',
+    question: 'Which flagpole would be the most stable in high winds?',
+    options: ['A) A', 'B) B', 'C) C'],
+    answer: 'A) A',
+    method: 'A wider base decreases the bending stress a pole faces from wind. Flagpole A has the widest base, giving it the greatest resistance to lateral wind forces.'
+  },
+  { group: 'MFP09', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_09.png',
+    question: 'Which beam requires the least amount of force to lift the blue box?',
+    options: ['A) A', 'B) B', 'C) Both the same', 'D) Cannot be determined'],
+    answer: 'B) B',
+    method: 'When the weight is closer to the fulcrum, the fulcrum supports more of the load, requiring less effort to lift. In beam B, the blue box is positioned closer to the fulcrum than in beam A, so less force is needed.'
+  },
+  { group: 'MFP10', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_10.png',
+    question: 'How many wheels are turning anti-clockwise?',
+    options: ['A) 2', 'B) 6', 'C) 8', 'D) 4'],
+    answer: 'B) 6',
+    method: 'A direct belt means both pulleys turn the same direction; a crossed belt means opposite directions. Wheels turning clockwise: Yellow, Grey (2). Wheels turning anti-clockwise: Green, Red, Blue, Brown, Purple, Orange — a total of 6.'
+  },
+  { group: 'MFP11', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Springs',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_11.png',
+    question: 'A force of 8kg compresses two springs in series for a total of 20cm (shown in A). How far would spring B compress if the springs are in parallel?',
+    options: ['A) 20cm', 'B) 10cm', 'C) 15cm', 'D) 5cm'],
+    answer: 'D) 5cm',
+    method: 'In series, each spring compresses 10cm individually. In parallel, the 8kg load is shared equally — 4kg per spring. Since compression is proportional to force, each spring compresses half as much: 10 ÷ 2 = 5cm. Both springs compress the same amount in parallel.'
+  },
+  { group: 'MFP12', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_12.png',
+    question: 'To hit the red bullseye, which direction marked with an X should you aim?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'D) D',
+    method: 'Two forces act on the arrow: gravity (pushing it down) and wind (pushing it to the left). To compensate, you must aim up and to the right of the target. Position D accounts for both forces simultaneously.'
+  },
+  { group: 'MFP13', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_13.png',
+    question: 'Which way will the boat turn in the water?',
+    options: ['A) A', 'B) B', 'C) C', 'D) None of the above'],
+    answer: 'A) A',
+    method: 'When the rudder turns, the force pushes the stern (back) of the boat to the left (port side). This causes the bow (front) to swing to the right (starboard), rotating the boat clockwise when viewed from above — matching direction A.'
+  },
+  { group: 'MFP14', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_14.png',
+    question: 'Which pulley system would require the most amount of force to move the 10kg object?',
+    options: ['A) A', 'B) B', 'C) The same', 'D) Cannot tell'],
+    answer: 'B) B',
+    method: 'Pulley A has a movable pulley providing a mechanical advantage of 2, halving the required effort to 5kg. Pulley B uses only fixed pulleys which change direction but provide no mechanical advantage — requiring the full 10kg of force.'
+  },
+  { group: 'MFP15', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_15.jpg',
+    question: 'If the plate on the far right is rotating counter-clockwise, which ball will move first and in what direction?',
+    options: ['A) A will move to the left', 'B) A will move to the right', 'C) B will move to the left', 'D) B will move to the right'],
+    answer: 'D) B will move to the right',
+    method: 'The counter-clockwise rotation of the far-right plate transmits force through the seesaw chain. The sequence of lever pivots causes ball B to be displaced first, moving to the right.'
+  },
+  { group: 'MFP16', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_16.png',
+    question: 'Which object and which slide would generate the highest final velocity assuming the slide\'s surface has no friction?',
+    options: ['A) Object A and Slide A', 'B) Object A and Slide B', 'C) Object B and Slide A', 'D) Object B and Slide B', 'E) Both the same'],
+    answer: 'E) Both the same',
+    method: 'Final velocity depends only on the height of the slide and gravity (constant for both). The slide angle affects the rate of acceleration but not the final speed. Mass cancels out in the energy equation. With no friction, all objects reach the same final velocity regardless of mass or angle.'
+  },
+  { group: 'MFP17', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_17.png',
+    question: 'Four different water pipes have different outlets. If water is going through each pipe at the same flow rate, which pipe would have water discharging at the highest velocity?',
+    options: ['A) Pipes A & D', 'B) Pipes B & C', 'C) Pipes A & B', 'D) Pipes C & D', 'E) All the same'],
+    answer: 'B) Pipes B & C',
+    method: 'At the same flow rate, water must move faster through a smaller outlet. Pipes B and C have the smallest outlet diameters, forcing water through at the highest velocity. The pipe angle does not affect exit velocity — only the outlet size matters.'
+  },
+  { group: 'MFP18', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Electricity & Magnetism',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_18.png',
+    question: 'If magnets 1, 2, 3 are attracted to each other, what configuration do magnets 2 & 3 need to be?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'A) A',
+    method: 'Magnets attract when opposite poles are adjacent. Magnet 1 is [N|S] so its right face (S) must face N of magnet 2: magnet 2 = [N|S]. Magnet 2\'s right face (S) must then face N of magnet 3: magnet 3 = [N|S]. This matches configuration A.'
+  },
+  { group: 'MFP19', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Light & Optics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_19.png',
+    question: 'A person sees a fish from the shore. Which letter shows the actual location of the fish?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) Cannot tell'],
+    answer: 'D) D',
+    method: 'Refraction bends light as it travels from water (denser) into air (less dense). The observer\'s brain traces light in a straight line, making the fish appear shallower and closer to shore than it really is. The actual fish is deeper and further from the observer — position D.'
+  },
+  { group: 'MFP20', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_20.png',
+    question: 'Gears C & D are joined together, the same as gears E & F. Gears A & B are not joined. If gear A is turning clockwise, how many of the other gears are also turning clockwise?',
+    options: ['A) 0', 'B) 1', 'C) 2', 'D) 3', 'E) 4', 'F) 5'],
+    answer: 'C) 2',
+    method: 'Worm gears turn opposite to the worm wheels they drive. A (CW) → F (CCW); E is joined to F so E (CCW). E (CCW) → D (CW); C is joined to D so C (CW). C (CW) → B (CCW). Gears turning clockwise besides A: C and D = 2.'
+  },
+  { group: 'MFP21', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_21.jpg',
+    question: 'Which cog would rotate the least amount of times in 30 minutes?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) All the same'],
+    answer: 'A) A',
+    method: 'Cog A is the largest, so the belt must travel the greatest circumference to complete one full revolution of A. This means A takes the longest per rotation and therefore completes the fewest rotations in any given time period.'
+  },
+  { group: 'MFP22', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_22.jpg',
+    question: 'Which wire would need the most force to pull over the tower?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) All the same'],
+    answer: 'B) B',
+    method: 'The pivot point is at the base of the tower. Like a lever, force applied further from the pivot requires less effort to topple the structure. Wire B is closest to the base (nearest the pivot), giving the least mechanical advantage — it requires the most force. Wire D, being highest, requires the least.'
+  },
+  { group: 'MFP23', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_23.png',
+    question: 'A chain lock is attached to a door shown in red with a total length of 5cm. Which location (A, B, C, D) should the hook loop be installed to allow the door to open slightly?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'B) B',
+    method: 'The chain is 5cm long. At position A (5cm away) or D (5cm away), the door opens fully — the lock is ineffective. At C (7cm away), the chain cannot reach at all. At B (3cm), the chain extends partially, allowing the door to open slightly as intended.'
+  },
+  { group: 'MFP24', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Electricity & Magnetism',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_24.png',
+    question: 'Which two switches should be closed to light up bulbs A and C only?',
+    options: ['A) Switches A & B only', 'B) Switches B & D only', 'C) Switches A & C only', 'D) Switches D & E only', 'E) Switches A & D only'],
+    answer: 'E) Switches A & D only',
+    method: 'Closing switch A brings current to bulb A. To light bulb C without lighting bulb B, current must bypass bulb B and route through switch D to complete the circuit to bulb C only.'
+  },
+  { group: 'MFP25', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice #1_25.jpg',
+    question: 'Which of the below objects would be the most unstable from a force moving to the right?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) E'],
+    answer: 'C) C',
+    method: 'Object C has a large proportion of its weight on the right-hand side of its base. The rightward force combined with gravity acting on this off-centre mass will cause C to topple first.'
+  },
+
+  // ACER Practice Free: AFP01–AFP10
+  { group: 'AFP01', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 01.png',
+    question: 'This belt and wheel system is driven by wheel X, which rotates clockwise. How many other wheels rotate at the same speed as X (revolutions per minute)?',
+    options: ['A) One', 'B) Two', 'C) Three', 'D) Four'],
+    answer: 'D) Four',
+    method: 'All five pulleys are the same size. Belt type (direct or crossed) affects rotation direction but not speed — same-size pulleys always turn at the same RPM regardless of belt configuration. All four other wheels rotate at the same speed as X.'
+  },
+
+  { group: 'AFP02', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 02.png',
+    question: 'Gear P turns clockwise. In which direction(s) do gears Q and R turn?',
+    options: ['A) Both gears turn clockwise.', 'B) Both gears turn anticlockwise.', 'C) Q turns clockwise; R turns anticlockwise.', 'D) Q turns anticlockwise; R turns clockwise.'],
+    answer: 'D) Q turns anticlockwise; R turns clockwise.',
+    method: 'Each meshing gear reverses direction from the one before it. P (CW) → Q (ACW) → R (CW). Tracing the chain: Q is anticlockwise and R is clockwise.'
+  },
+
+  { group: 'AFP03', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 03.png',
+    question: 'The bottle opener in the figure is shown partly cut open. The handle is turned to drive the corkscrew into the cork of the bottle, which would be placed below. If the arms of the opener were moved upwards from the position shown, sections X and Y would…',
+    options: ['A) X and Y would both turn clockwise.', 'B) X and Y would both turn anticlockwise.', 'C) X would turn clockwise and Y would turn anticlockwise.', 'D) X would turn anticlockwise and Y would turn clockwise.'],
+    answer: 'C) X would turn clockwise and Y would turn anticlockwise.',
+    method: 'Gears X and Y are on opposite sides of the central ridged shaft. When the arms move upward, both gears travel upward along the shaft. Because they engage the rack from opposite sides, X (left) rotates clockwise and Y (right) rotates anticlockwise.'
+  },
+
+  { group: 'AFP04', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 04.png',
+    question: 'Which of the following requires the most force (indicated by the arrow) to lift the front of the car off the ground?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'B) B',
+    method: 'The rock acts as a fulcrum. The force required depends on the angle and position of the rope. In scenario B, the rope angle and point of force application gives the least mechanical advantage, requiring the most force to lift the front of the car.'
+  },
+
+  { group: 'AFP05', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 05.png',
+    question: 'Differently shaped objects are placed in four different liquids. Objects of the same shape are identical in size and material. Which liquid is most dense?',
+    options: ['A) Liquid A', 'B) Liquid B', 'C) Liquid C', 'D) Liquid D'],
+    answer: 'B) Liquid B',
+    method: 'The denser a liquid, the higher an object floats (less submerged). Comparing identical objects across all four liquids, the sphere floats with the greatest proportion above the surface in liquid B, indicating liquid B provides the most buoyancy and is therefore the most dense.'
+  },
+
+  { group: 'AFP06', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 06.png',
+    question: 'The pawl attached to fixed shaft P can move between positions I and II around pivot Q and engage teeth on the gear wheel. For this device, the gear wheel…',
+    options: ['A) can turn anticlockwise only when the pawl is in position I.', 'B) can turn anticlockwise only when the pawl is in position II.', 'C) can turn clockwise or anticlockwise when the pawl is in either position I or II.', 'D) cannot turn clockwise or anticlockwise with the pawl in either position I or II.'],
+    answer: 'A) can turn anticlockwise only when the pawl is in position I.',
+    method: 'A ratchet pawl allows rotation in only one direction — the sloped face lets gear teeth slide past in one direction, while the flat face blocks the other. With the pawl in position I, the gear can rotate anticlockwise freely but is locked against clockwise rotation.'
+  },
+
+  { group: 'AFP07', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 07.png',
+    question: 'A heavy spotlight can be moved along a strong rod into four different positions (I, II, III and IV). The spotlight weighs much more than the rod. The rod is attached to a fixed vertical pole by a rope and a pivot. Which of the positions of the spotlight will put the greatest tension on the rope?',
+    options: ['A) II', 'B) III', 'C) IV', 'D) II, III and IV equally'],
+    answer: 'B) III',
+    method: 'The rod acts as a lever with the pivot at the pole. Rope tension is proportional to torque about the pivot — torque equals the spotlight\'s weight multiplied by its distance from the pivot. Position III places the spotlight at the greatest effective lever arm from the pivot, maximising the torque and therefore the rope tension.'
+  },
+
+  { group: 'AFP08', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 08.png',
+    question: 'A heavy spotlight can be moved along a strong rod into four different positions (I, II, III and IV). The spotlight weighs much more than the rod. The rod is attached to a fixed vertical pole by a rope and a pivot. Which position(s) of the spotlight will make the rope tight and keep the rod horizontal?',
+    options: ['A) I, II, III and IV', 'B) II, III and IV only', 'C) III only', 'D) III and IV only'],
+    answer: 'B) II, III and IV only',
+    method: 'For the rope to be taut, the rod must try to rotate in the direction that pulls the rope. The rope is attached to the right side of the pole. When the spotlight is in positions II, III or IV (to the right of the pivot), its weight creates a downward torque on the right side of the rod, pulling the rope tight. In position I (to the left of the pivot), the spotlight\'s weight would rotate the rod the opposite way, making the rope go slack.'
+  },
+
+  { group: 'AFP09', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 09.png',
+    question: 'Three identical water tanks are at different elevations on a hill. All contain the same amount of water. A fire truck is refilled from the three water tanks at the same time, using identical water hoses. Which tank becomes empty first?',
+    options: ['A) Tank A', 'B) Tank B', 'C) Tank C', 'D) All tanks become empty at the same time.'],
+    answer: 'C) Tank C',
+    method: 'Water flows by gravity through the hoses. The greater the height difference between a tank and the truck, the higher the hydrostatic pressure and the faster the flow rate. Tank C is at the highest elevation, so it delivers water the fastest and therefore empties first.'
+  },
+
+  { group: 'AFP10', set: 'ACER Practice Free', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/ACER Practice Free Mech 10.png',
+    question: 'In this system, the wheel can only rotate around its fixed pivot point, and the arm can move only horizontally. The wheel is turned clockwise. In which directions do X and Y move?',
+    options: ['A) X moves left; Y moves down and right.', 'B) X moves left; Y moves up and left.', 'C) X moves right; Y moves down and right.', 'D) X moves right; Y moves up and left.'],
+    answer: 'B) X moves left; Y moves up and left.',
+    method: 'The wheel rotating clockwise drives the pin in a clockwise circle. The pin sits in the vertical slot of the T-piece, which constrains horizontal motion only. From the pin\'s starting position, clockwise rotation moves the pin\'s horizontal component to the left, pushing the arm (and point X) left. With X moving left, the V-shaped linkage changes angle, causing joint Y to swing up and to the left.'
+  },
+
+  // Practice Now Questions: MPN01–MPN07
+  { group: 'MPN01', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 01.png',
+    question: 'Wheels I, II and III are connected with a belt. If wheel II rotates in a clockwise direction, in which direction will wheel I rotate?',
+    options: ['A) It will stay still.', 'B) clockwise', 'C) anticlockwise', 'D) first clockwise, then anticlockwise'],
+    answer: 'C) anticlockwise',
+    method: 'Wheels I and II are connected by a crossed belt (the belt forms an X between them). A crossed belt reverses the direction of rotation relative to a direct belt. Since wheel II rotates clockwise, the crossed belt causes wheel I to rotate anticlockwise.'
+  },
+
+  { group: 'MPN02', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 02.png',
+    question: 'When handle X is moved to the left, in which direction will end Y initially move?',
+    options: ['A) It is not possible to tell from the information provided.', 'B) right', 'C) left', 'D) It will stay still.'],
+    answer: 'B) right',
+    method: 'The cross-shaped mechanism rotates around its central pivot. X is on the lower arm and Y is on the upper arm — they are on opposite sides of the pivot. When X moves left, the mechanism rotates, and Y (on the opposite arm) moves in the opposite direction: right.'
+  },
+
+  { group: 'MPN03', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 03.png',
+    question: 'When handle X is moved one centimetre to the right, end Y will move',
+    options: ['A) less than one centimetre to the left.', 'B) less than one centimetre to the right.', 'C) more than one centimetre to the left.', 'D) more than one centimetre to the right.'],
+    answer: 'C) more than one centimetre to the left.',
+    method: 'The cross-shaped mechanism rotates around its central pivot. X is on the shorter arm (closer to the pivot) and Y is on the longer arm (further from the pivot). When X moves right, the mechanism rotates and Y moves in the opposite direction (left). Because Y is further from the pivot than X, it sweeps through a greater arc — moving more than 1 cm to the left.'
+  },
+
+  { group: 'MPN04', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 04.png',
+    question: 'Wheel A is attached to jointed bar Z with a peg, which acts as a non-fixed pivot. When handle X is moved to the right, wheel A will',
+    options: ['A) not move.', 'B) rotate clockwise then anticlockwise.', 'C) rotate clockwise.', 'D) rotate anticlockwise.'],
+    answer: 'D) rotate anticlockwise.',
+    method: 'When handle X moves right, the cross mechanism rotates. Jointed bar Z transmits this motion to the peg on wheel A\'s rim. The peg being pushed in the resulting direction causes wheel A to rotate anticlockwise.'
+  },
+
+  { group: 'MPN05', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 05.png',
+    question: 'Wheels I, II and III are connected with a drive belt. When wheel I rotates, the belt rotates wheels II and III. Which wheel rotates the fastest?',
+    options: ['A) wheel I', 'B) wheel II', 'C) wheel III', 'D) All the wheels rotate at the same speed.'],
+    answer: 'B) wheel II',
+    method: 'In a belt drive, all sections of the belt travel at the same linear speed. A smaller wheel has a smaller circumference, so it must complete more full rotations to keep pace with the belt. Wheel II is the smallest of the three, so it rotates the fastest.'
+  },
+
+  { group: 'MPN06', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 06.png',
+    question: 'Lengths of rope are hung around the small wheel X and the large wheel Y. Weights B and D are pulled down the same distance, as indicated in the diagram. Which of weights A and C will move up the furthest?',
+    options: ['A) weight A', 'B) weight C', 'C) Weights A and C will move up the same distance.', 'D) It is not possible to tell from the information provided.'],
+    answer: 'C) Weights A and C will move up the same distance.',
+    method: 'A rope is inextensible — when one side of a wheel\'s rope is pulled down by distance d, the rope on the other side rises by exactly distance d, regardless of wheel size. Since B and D are both pulled down the same distance, A and C both rise by that same distance.'
+  },
+
+  { group: 'MPN07', set: 'Practice Now Questions', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech Practice Now 07.png',
+    question: 'Lengths of rope are hung around the small wheel X and the large wheel Y. Weights B and D are pulled down the same distance and the same amount of time, as indicated in the diagram. Which of wheels X and Y will rotate the fastest?',
+    options: ['A) wheel X', 'B) wheel Y', 'C) Wheels X and Y will rotate at the same speed.', 'D) It is not possible to tell from the information provided.'],
+    answer: 'A) wheel X',
+    method: 'Both ropes are pulled down the same distance in the same time, so the linear rope speed is identical for both wheels. For a given linear rope speed, a smaller wheel must rotate through a greater angle per unit time than a larger wheel (arc length = radius × angle). Wheel X is the smaller wheel, so it rotates fastest.'
+  },
 ]
 
 app.get('/api/mechanical-sets', (req, res) => {
@@ -8962,10 +9277,26 @@ app.get('/api/mechanical-sets', (req, res) => {
 })
 
 app.get('/api/mechanical-questions', (req, res) => {
-  const setsFilter = req.query.sets ? req.query.sets.split(',') : null
+  const { sets, ordered, fill } = req.query
+  const setsFilter = sets ? sets.split(',') : null
   const pool = setsFilter ? mechanicalQuestions.filter(q => setsFilter.includes(q.set)) : mechanicalQuestions
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
-  const final = shuffled.map((q, i) => ({
+  let result = ordered === 'true'
+    ? [...pool].sort((a, b) => a.group.localeCompare(b.group, undefined, { numeric: true }))
+    : [...pool].sort(() => Math.random() - 0.5)
+  if (fill === 'true' && setsFilter) {
+    const FULL = 32
+    const needed = FULL - result.length
+    if (needed > 0) {
+      const filler = mechanicalQuestions
+        .filter(q => !setsFilter.includes(q.set))
+        .sort(() => Math.random() - 0.5)
+        .slice(0, needed)
+      result = [...result, ...filler]
+    } else {
+      result = result.slice(0, FULL)
+    }
+  }
+  const final = result.map((q, i) => ({
     id: i + 1,
     type: q.type,
     category: q.category,

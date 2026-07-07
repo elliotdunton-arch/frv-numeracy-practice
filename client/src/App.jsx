@@ -16,7 +16,7 @@ export default function App() {
   const [totalTime, setTotalTime] = useState(35 * 60)
   const [pausedMs, setPausedMs] = useState(0)
 
-  const startTest = async (customCount = null, selectedTopics = null, filterType = null, ordered = false) => {
+  const startTest = async (customCount = null, selectedTopics = null, filterType = null, ordered = false, fill = false) => {
     setLoading(true)
     setError(null)
     try {
@@ -27,6 +27,8 @@ export default function App() {
         if (ordered) endpoint += '&ordered=true'
       } else if (section === 'mechanical' && selectedTopics && selectedTopics.length > 0) {
         endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
+        if (ordered) endpoint += '&ordered=true'
+        if (fill) endpoint += '&fill=true'
       } else if (selectedTopics && selectedTopics.length > 0) {
         endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
       }

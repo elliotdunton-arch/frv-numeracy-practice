@@ -1772,6 +1772,12 @@ body {
   line-height: 1;
 }
 
+.review-context-block,
+.revision-context-block {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .working-content {
   margin-top: 10px;
   padding: 14px 16px;

@@ -95,6 +95,32 @@ export default function Revision({ section }) {
 
             {isExpanded && (
               <div className="revision-item-body">
+                {q.context && (
+                  <div className="context-block revision-context-block">
+                    {q.context.title && <div className="context-title">{q.context.title}</div>}
+                    {q.context.subtitle && <div className="context-subtitle">{q.context.subtitle}</div>}
+                    {q.context.image && <img src={q.context.image} alt="Question context" className="context-image" />}
+                    {q.context.images && q.context.images.map((src, ii) => (
+                      <img key={ii} src={src} alt={`Context ${ii + 1}`} className="context-image" />
+                    ))}
+                    {q.context.paragraphs && q.context.paragraphs.map((para, pi) => (
+                      <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>{para}</p>
+                    ))}
+                    {q.context.tables && q.context.tables.map((tbl, ti) => (
+                      <div key={ti} className="context-table-wrap">
+                        {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
+                        <table className="context-table">
+                          <thead><tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr></thead>
+                          <tbody>{tbl.rows.map((row, ri) => <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell}</td>)}</tr>)}</tbody>
+                        </table>
+                      </div>
+                    ))}
+                    {q.context.extraParagraphs && q.context.extraParagraphs.map((para, pi) => (
+                      <p key={pi} className="context-paragraph">{para}</p>
+                    ))}
+                    {q.context.note && <div className="context-note">{q.context.note}</div>}
+                  </div>
+                )}
                 {q.questionImage && (
                   <div className="revision-item-image">
                     <img src={q.questionImage} alt="Question diagram" />
