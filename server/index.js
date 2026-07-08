@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -10743,6 +10745,74 @@ app.get('/api/mechanical-questions', (req, res) => {
   }))
   const customCount = req.query.count ? parseInt(req.query.count) : null
   res.json(customCount ? final.slice(0, customCount) : final)
+})
+
+// ── AI Summary ───────────────────────────────────────────────────────────────
+app.post('/api/ai-summary', async (req, res) => {
+  const { score, total, pct, section, breakdown, timeExpired } = req.body
+
+  if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'your_api_key_here') {
+    return res.status(503).json({ error: 'AI summary unavailable — API key not configured.' })
+  }
+
+  const sectionLabel = { numeracy: 'Numeracy', literacy: 'Literacy', abstract: 'Abstract Reasoning', mechanical: 'Mechanical Reasoning' }[section] || section
+  const passed = pct >= 70
+
+  const breakdownText = (breakdown || [])
+    .map(({ cat, correct, total: t }) => `  • ${cat}: ${correct}/${t} (${Math.round((correct / t) * 100)}%)`)
+    .join('\n')
+
+  const prompt = `You are a supportive study coach helping someone prepare for the Firefighter Recruitment Victoria (FRV) aptitude test.
+
+A candidate just completed a ${sectionLabel} practice test. Here are their results:
+- Score: ${score}/${total} (${pct}%)
+- Result: ${passed ? 'PASS' : 'FAIL'} (pass mark is 70%)
+${timeExpired ? '- Note: The test timer expired before they submitted\n' : ''}
+Category breakdown:
+${breakdownText || '  (no breakdown available)'}
+
+Write a personalised performance summary. Structure it exactly like this (use these headings):
+
+**Well done for completing the test!** [1–2 warm, encouraging sentences acknowledging the effort and ${passed ? 'passing result' : 'the attempt, emphasising that practice is how improvement happens'}.]
+
+**Strengths**
+[Bullet points for categories where they scored 70% or above. Be specific and affirming. If none, skip this section.]
+
+**Areas to Improve**
+[Bullet points for categories where they scored below 70%. For each one, give a concrete, actionable tip relevant to the FRV ${sectionLabel} test — not generic advice.]
+
+**Focus for Next Time**
+[2–3 sentences. Prioritise the single most impactful thing to work on, and encourage them. Keep it direct and motivating.]
+
+Keep the total response under 280 words. Do not use the word "candidate". Write as if speaking directly to the person.`
+
+  try {
+    const client = new Anthropic()
+
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+    res.setHeader('Transfer-Encoding', 'chunked')
+    res.setHeader('Cache-Control', 'no-cache')
+
+    const stream = await client.messages.stream({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 500,
+      messages: [{ role: 'user', content: prompt }],
+    })
+
+    for await (const event of stream) {
+      if (event.type === 'content_block_delta' && event.delta?.type === 'text_delta') {
+        res.write(event.delta.text)
+      }
+    }
+    res.end()
+  } catch (err) {
+    console.error('AI summary error:', err.message)
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'Failed to generate summary.' })
+    } else {
+      res.end()
+    }
+  }
 })
 
 // Serve built React app in production

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { getUsername, setUsername as storeUsername, saveResult, addToRevision, removeFromRevision, getRevision } from '../utils/resultStorage'
 import DraggableImage from './DraggableImage'
 
@@ -47,6 +47,9 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   const [commentOpen, setCommentOpen] = useState(new Set())
   const [commentDraft, setCommentDraft] = useState({})
   const [lightboxSrc, setLightboxSrc] = useState(null)
+  const [aiSummary, setAiSummary] = useState('')
+  const [aiStatus, setAiStatus] = useState('loading') // 'loading' | 'done' | 'error'
+  const aiAbortRef = useRef(null)
 
   const score = questions.filter(q => isCorrect(q, answers[q.id])).length
   const incorrectQuestions = questions.filter(q => !isCorrect(q, answers[q.id]))
@@ -65,6 +68,46 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
     const correct = qs.filter(q => isCorrect(q, answers[q.id])).length
     return { cat, correct, total: qs.length }
   })
+
+  useEffect(() => {
+    const ctrl = new AbortController()
+    aiAbortRef.current = ctrl
+
+    const fetchSummary = async () => {
+      try {
+        const res = await fetch('/api/ai-summary', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          signal: ctrl.signal,
+          body: JSON.stringify({ score, total, pct, section, breakdown, timeExpired }),
+        })
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}))
+          setAiSummary(err.error || 'Could not generate summary.')
+          setAiStatus('error')
+          return
+        }
+        const reader = res.body.getReader()
+        const decoder = new TextDecoder()
+        let text = ''
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          text += decoder.decode(value, { stream: true })
+          setAiSummary(text)
+        }
+        setAiStatus('done')
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          setAiSummary('Could not connect to the server.')
+          setAiStatus('error')
+        }
+      }
+    }
+
+    fetchSummary()
+    return () => ctrl.abort()
+  }, [])
 
   const toggleWorking = (id) => {
     setExpandedWorking(prev => ({ ...prev, [id]: !prev[id] }))
@@ -157,6 +200,28 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
               Time: {String(elMin).padStart(2, '0')}:{String(elSec).padStart(2, '0')}
             </div>
             <div className="score-note">Pass mark: 70%</div>
+          </div>
+        </div>
+
+        {/* AI Summary */}
+        <div className={`ai-summary-card ${aiStatus === 'error' ? 'ai-summary-error' : ''}`}>
+          <div className="ai-summary-header">
+            <span className="ai-summary-icon">✦</span>
+            <span className="ai-summary-title">AI Performance Summary</span>
+            {aiStatus === 'loading' && <span className="ai-summary-spinner" />}
+          </div>
+          <div className="ai-summary-body">
+            {aiSummary
+              ? aiSummary.split('\n').map((line, i) => {
+                  if (!line.trim()) return <div key={i} className="ai-para-gap" />
+                  const bold = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                  if (line.startsWith('• ') || line.startsWith('- ')) {
+                    return <li key={i} className="ai-bullet" dangerouslySetInnerHTML={{ __html: bold.replace(/^[•\-]\s*/, '') }} />
+                  }
+                  return <p key={i} className="ai-para" dangerouslySetInnerHTML={{ __html: bold }} />
+                })
+              : <p className="ai-para ai-loading-text">Generating your summary…</p>
+            }
           </div>
         </div>
 
