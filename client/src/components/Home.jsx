@@ -332,6 +332,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [categoryList, setCategoryList] = useState([])
   const [selectedCategories, setSelectedCategories] = useState(new Set())
   const [strategyOpen, setStrategyOpen] = useState(false)
+  const [logicLoopsOpen, setLogicLoopsOpen] = useState(false)
   const [formulaOpen, setFormulaOpen] = useState(false)
   const [mechSetsOpen, setMechSetsOpen] = useState(false)
   const [selectedMechSets, setSelectedMechSets] = useState(new Set())
@@ -1144,6 +1145,61 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                   <div className="sg-heading">5. Review Routine (Post-Practice)</div>
                   <ul className="sg-list">
                     <li><strong>Analyse the "Why."</strong> If you get a question wrong, don't just note the correct answer — identify why the distractor was tempting. Was it a "half-truth" (correct in the beginning, wrong in the conclusion)? Did it use a common stereotype?</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="strategy-guide">
+            <button
+              className={`strategy-guide-toggle${logicLoopsOpen ? ' sgt-open' : ''}`}
+              onClick={() => setLogicLoopsOpen(o => !o)}
+            >
+              <span className="tft-icon">{logicLoopsOpen ? '▾' : '▸'}</span>
+              Advanced Elimination: Logic Loops
+            </button>
+
+            {logicLoopsOpen && (
+              <div className="strategy-guide-body">
+                <div className="sg-section">
+                  <div className="sg-heading">1. The "Purpose" Loop</div>
+                  <ul className="sg-list">
+                    <li><strong>The Problem:</strong> You are stuck between the "actual" purpose and an option that seems "good," but is just a byproduct of the text.</li>
+                    <li><strong>The Strategy:</strong> Always look for the Call to Action or the Main Claim.</li>
+                    <li><strong>The Elimination:</strong> If an option is true based on the text but doesn't explain why the author wrote it, eliminate it.</li>
+                    <li><strong>Example:</strong> If the text is a petition about trucks, "the trucks are noisy" might be a fact in the text, but the purpose of the text is to get people to email the council. The fact supports the purpose, but it is not the purpose itself.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">2. The "Inference" Loop</div>
+                  <ul className="sg-list">
+                    <li><strong>The Problem:</strong> You find yourself "reading between the lines" too much, or conversely, being too literal and missing the point.</li>
+                    <li><strong>The Strategy:</strong> Use the "Tight-Leash" Rule.</li>
+                    <li><strong>The Elimination:</strong> An inference must be true if the text is true. If you have to say "well, it's probably true, but not necessarily," eliminate that option immediately.</li>
+                    <li><strong>Example:</strong> If the text says "the budget was cut, leading to fewer staff," the inference "the quality of service dropped" might be probable, but "the department is now smaller" is necessarily true. Stick to the necessary truth.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">3. The "Summary" Loop</div>
+                  <ul className="sg-list">
+                    <li><strong>The Problem:</strong> You have two options that both summarise the text accurately, but one is "more" correct.</li>
+                    <li><strong>The Strategy:</strong> Check for Scope.</li>
+                    <li><strong>The Elimination:</strong> Look for the option that covers the entire text, not just one paragraph or one supporting detail.</li>
+                    <li><strong>Example:</strong> If the text discusses the history of a building, its current decay, and a plan for renovation, the summary "The building is falling down" is too narrow. "The building's historical status makes its current decay and proposed renovation a complex public issue" is correct because it captures the scope of all three parts.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">Final Test-Day Checklist for Elimination</div>
+                  <p className="sg-intro">Whenever you are down to your last two options and feel the loop starting:</p>
+                  <ul className="sg-list">
+                    <li><strong>Stop.</strong> Do not re-read the whole passage.</li>
+                    <li><strong>Ask:</strong> "What is the one specific word or phrase in the text that makes this option wrong?"</li>
+                    <li><strong>Search:</strong> Look for the "Over-Extender" trigger (e.g., <em>always/never</em>), the "Factually Absent" claim, or the "Contextually Mismatched" relationship.</li>
+                    <li><strong>Decide:</strong> Usually, one of the two options will have a "fatal flaw" — a single word that contradicts the text — once you stop looking for the "right" answer and start hunting for the "wrong" word.</li>
                   </ul>
                 </div>
               </div>

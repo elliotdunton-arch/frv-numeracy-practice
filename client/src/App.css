@@ -2759,6 +2759,11 @@ body {
 .sg-list li strong {
   color: var(--text-primary);
 }
+.sg-intro {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
 
 /* ── Formula list (name + formula two-column) ───────────── */
 .formula-list li {
