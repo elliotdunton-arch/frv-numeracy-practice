@@ -45,6 +45,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   const [revisionSet, setRevisionSet] = useState(() => new Set(getRevision().map(i => i.question.id)))
   const [commentOpen, setCommentOpen] = useState(new Set())
   const [commentDraft, setCommentDraft] = useState({})
+  const [lightboxSrc, setLightboxSrc] = useState(null)
 
   const score = questions.filter(q => isCorrect(q, answers[q.id])).length
   const incorrectQuestions = questions.filter(q => !isCorrect(q, answers[q.id]))
@@ -76,9 +77,9 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
     <div className="context-block review-context-block">
       {ctx.title && <div className="context-title">{ctx.title}</div>}
       {ctx.subtitle && <div className="context-subtitle">{ctx.subtitle}</div>}
-      {ctx.image && <img src={ctx.image} alt="Question context" className="context-image" />}
+      {ctx.image && <img src={ctx.image} alt="Question context" className="context-image" onClick={() => setLightboxSrc(ctx.image)} />}
       {ctx.images && ctx.images.map((src, ii) => (
-        <img key={ii} src={src} alt={`Context ${ii + 1}`} className="context-image" />
+        <img key={ii} src={src} alt={`Context ${ii + 1}`} className="context-image" onClick={() => setLightboxSrc(src)} />
       ))}
       {ctx.paragraphs && ctx.paragraphs.map((para, pi) => (
         <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>{para}</p>
@@ -131,6 +132,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
   }
 
   return (
+    <>
     <div className="results-page">
       <div className="results-container">
         <div className="results-heading">
@@ -303,6 +305,22 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                       </span>
                       <span className="ans-correct">Correct: {formatHM(parseFloat(q.answer))}</span>
                     </div>
+                  ) : q.options && q.options.length > 0 ? (
+                    <div className="review-options-list">
+                      {q.options.map((opt, i) => {
+                        const isCorrect = opt === q.answer
+                        const isSelected = opt === userAns
+                        const cls = isCorrect ? 'review-option--correct' : isSelected ? 'review-option--wrong-pick' : ''
+                        return (
+                          <div key={i} className={`review-option ${cls}`}>
+                            <span className="review-option-icon">
+                              {isCorrect ? '✓' : isSelected ? '✗' : ''}
+                            </span>
+                            {opt}
+                          </div>
+                        )
+                      })}
+                    </div>
                   ) : !correct && (
                     <div className="review-answers">
                       <span className="ans-wrong">
@@ -394,5 +412,13 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
 
       </div>
     </div>
+
+    {lightboxSrc && (
+      <div className="lightbox-overlay" onClick={() => setLightboxSrc(null)}>
+        <button className="lightbox-close" onClick={() => setLightboxSrc(null)}>✕</button>
+        <img src={lightboxSrc} alt="Enlarged passage" className="lightbox-img" onClick={e => e.stopPropagation()} />
+      </div>
+    )}
+    </>
   )
 }

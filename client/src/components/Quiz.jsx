@@ -10,6 +10,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const [showCalc, setShowCalc] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [showHint, setShowHint] = useState({})
+  const [lightboxSrc, setLightboxSrc] = useState(null)
 
   const answersRef = useRef({})
   const ribbonRef  = useRef(null)
@@ -309,10 +310,10 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
                       <div className="context-subtitle">{current.context.subtitle}</div>
                     )}
                     {current.context.image && (
-                      <img src={current.context.image} alt="Question context" className="context-image" />
+                      <img src={current.context.image} alt="Question context" className="context-image" onClick={() => setLightboxSrc(current.context.image)} />
                     )}
                     {current.context.images && current.context.images.map((src, ii) => (
-                      <img key={ii} src={src} alt={`Question context ${ii + 1}`} className="context-image" />
+                      <img key={ii} src={src} alt={`Question context ${ii + 1}`} className="context-image" onClick={() => setLightboxSrc(src)} />
                     ))}
                     {current.context.paragraphs && current.context.paragraphs.map((para, pi) => (
                       <p key={pi} className={`context-paragraph${para.startsWith('•') ? ' context-bullet' : ''}`}>
@@ -404,6 +405,13 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
             <p className="pause-subtitle">Your progress is saved. The timer has stopped.</p>
             <button className="btn-resume" onClick={handlePause}>▶ Resume Test</button>
           </div>
+        </div>
+      )}
+
+      {lightboxSrc && (
+        <div className="lightbox-overlay" onClick={() => setLightboxSrc(null)}>
+          <button className="lightbox-close" onClick={() => setLightboxSrc(null)}>✕</button>
+          <img src={lightboxSrc} alt="Enlarged passage" className="lightbox-img" onClick={e => e.stopPropagation()} />
         </div>
       )}
 
