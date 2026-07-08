@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const Anthropic = require('@anthropic-ai/sdk');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -10764,7 +10764,7 @@ app.post('/api/questions-by-ids', (req, res) => {
 app.post('/api/ai-summary', async (req, res) => {
   const { score, total, pct, section, breakdown, timeExpired } = req.body
 
-  if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'your_api_key_here') {
+  if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === 'your_api_key_here') {
     return res.status(503).json({ error: 'AI summary unavailable — API key not configured.' })
   }
 
@@ -10800,22 +10800,16 @@ Write a personalised performance summary. Structure it exactly like this (use th
 Keep the total response under 280 words. Do not use the word "candidate". Write as if speaking directly to the person.`
 
   try {
-    const client = new Anthropic()
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
 
     res.setHeader('Content-Type', 'text/plain; charset=utf-8')
     res.setHeader('Transfer-Encoding', 'chunked')
     res.setHeader('Cache-Control', 'no-cache')
 
-    const stream = await client.messages.stream({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 500,
-      messages: [{ role: 'user', content: prompt }],
-    })
-
-    for await (const event of stream) {
-      if (event.type === 'content_block_delta' && event.delta?.type === 'text_delta') {
-        res.write(event.delta.text)
-      }
+    const result = await model.generateContentStream(prompt)
+    for await (const chunk of result.stream) {
+      res.write(chunk.text())
     }
     res.end()
   } catch (err) {
