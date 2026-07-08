@@ -5472,8 +5472,6 @@ const ctxL37 = {
 }
 
 const ctxL38 = {
-  title: 'What drives women to have a freebirth?',
-  subtitle: 'Health & Society — The Conversation',
   paragraphs: [
     'Freebirth — giving birth at home without any medical professional present — is a distinct practice from a midwife-attended homebirth. The distinction matters, because understanding why women choose freebirth requires setting aside the assumption that it reflects ignorance or a lack of options. Research consistently finds that the women who make this choice are disproportionately well-educated, predominantly white, and have typically given birth before: around 77 per cent of freebirth choosers have had at least one previous birth experience.',
     'Previous birth is also, for many women, the key driver. Women who felt unheard during a clinical birth, who experienced interventions they did not consent to, or who were subjected to pressure and coercion, often describe a fundamental breakdown of trust in the medical system. For some, freebirth represented the only way to retain meaningful control over their own experience. Others were unable to access a homebirth midwife, were told a homebirth carried too much risk, or could not afford the cost of private midwifery care.',
@@ -5484,8 +5482,6 @@ const ctxL38 = {
 }
 
 const ctxL39 = {
-  title: 'More than chatbots: Why business AI agents are the next battleground',
-  subtitle: 'Technology & Business — The Conversation',
   paragraphs: [
     'The chatbot became the public face of artificial intelligence in business: a text interface that answers questions, handles simple customer service queries, and occasionally frustrates users who encounter its limits. But the next wave of AI tools is substantially more capable. AI agents differ from chatbots not just in degree but in kind — they can plan sequences of actions, make decisions, and complete multi-step tasks autonomously, drawing on external databases, software systems, and real-world tools without requiring human input at each stage.',
     'The practical difference is best illustrated with an example. A chatbot can tell a customer that their order is delayed. An AI agent can check the order status, identify the source of the delay, contact the relevant supplier, arrange a new delivery window, notify the customer of the updated timeline, and update the company\'s logistics dashboard — all as a single autonomous process. The shift is from conversation to action, from information to execution.',
@@ -5496,8 +5492,6 @@ const ctxL39 = {
 }
 
 const ctxL40 = {
-  title: 'The maths behind having a sustainable wardrobe',
-  subtitle: 'Environment & Lifestyle — The Conversation',
   paragraphs: [
     'The mathematics of a sustainable wardrobe are simpler than the fashion industry often makes them appear. At the core is a straightforward formula: the environmental cost of producing a garment, divided by the number of times it is worn. The result — a cost per use — is the variable that matters most, and it is one that most conversations about sustainable fashion manage to avoid.',
     'Consider what happens when you own 23 dresses. If each one is worn once a week, it would take nearly 31 years to wear every dress 70 times. If the same wardrobe is spread across five wears a week, the timeline compresses to around six and a half years. The dresses have not changed — but the sustainability calculation has shifted dramatically, simply based on how often each item is actually used.',
@@ -5508,8 +5502,6 @@ const ctxL40 = {
 }
 
 const ctxL41 = {
-  title: 'Healthy soil can protect land from soaring heat',
-  subtitle: 'Climate & Environment — The Conversation',
   paragraphs: [
     'Soil is not merely the medium in which plants grow — it is also a thermal buffer. Healthy soil, rich in organic matter, retains moisture efficiently, and that moisture performs a crucial service: it moderates surface temperatures through evaporative cooling. In the same way that sweating cools a human body, water evaporating from soil cools the land above it. Where soil is healthy, ground temperatures during heatwaves can be substantially lower than on adjacent degraded land.',
     'Researchers have introduced the concept of a "thermal gap" to describe the difference between what a soil\'s natural heat-buffering capacity could be and what it is currently delivering. In southeastern and central Australia, that gap has widened considerably. Decades of intensive agriculture, land clearing, and urban expansion have stripped soil of organic matter, leaving it drier, more compacted, and far less able to protect the plants growing in it from temperature extremes.',
@@ -5520,8 +5512,6 @@ const ctxL41 = {
 }
 
 const ctxL42 = {
-  title: 'Halving the fuel tax was a bad idea: there\'s a fairer alternative',
-  subtitle: 'Economic Policy — The Conversation',
   paragraphs: [
     'Cutting fuel excise is one of the most reliably popular moves available to a government under cost-of-living pressure. Drivers notice it immediately at the pump, and the political returns are swift. But popularity and good policy are not the same thing. Australia\'s three-month halving of the fuel excise cost the federal budget approximately 2.55 billion dollars in foregone revenue — and the distributional consequences of that choice are worth examining closely.',
     'The central problem is that fuel tax cuts are a blunt instrument. The benefit flows to everyone who drives, regardless of their financial situation. Higher-income households, who on average drive more kilometres and own more vehicles, receive a larger absolute benefit from the cut than lower-income households. Households without a petrol vehicle, or those who travel short distances, gain very little. The policy is, in effect, regressive: it delivers more to those who need it less.',
@@ -5532,8 +5522,6 @@ const ctxL42 = {
 }
 
 const ctxL43 = {
-  title: 'Labor\'s JobSeeker reforms are a welcome step but fall short of a radical rebuild',
-  subtitle: 'Social Policy — The Conversation',
   paragraphs: [
     'Australia\'s employment services system has long been criticised for treating unemployed people as problems to be managed rather than individuals with varying and complex needs. The government\'s minister responsible, Amanda Rishworth, acknowledged as much when announcing a package of reforms, describing the current system as "ill-equipped to respond" to what unemployed people actually require. Approximately one million Australians access unemployment payments including JobSeeker, and most interact with the services connected to those payments.',
     'The centrepiece of the announced changes is a move away from a single, uniform approach to service delivery. Rather than treating all recipients identically, the reformed system will stream people into one of three service categories based on their individual circumstances, with different levels of support and different mutual obligation requirements attached to each. The government described this as a "once-in-a-generation" reform, echoing language used in its own commissioned review of employment services.',
@@ -5544,8 +5532,6 @@ const ctxL43 = {
 }
 
 const ctxL44 = {
-  title: 'Worried about your job? Proven ways to ease job insecurity',
-  subtitle: 'Workplace Psychology — The Conversation',
   paragraphs: [
     'Job insecurity is not the same as losing a job. It is the sustained fear that one might — the perception that one\'s position is precarious, or that working conditions might deteriorate. Researchers have found that this kind of chronic uncertainty can be as psychologically damaging as unemployment itself, contributing to anxiety, disrupted sleep, difficulty concentrating, and in more serious cases, depression. The damage occurs regardless of whether the feared event ever materialises.',
     'A meta-analysis drawing on three decades of data from 39 countries found that social support — from family members, friends, colleagues, and direct managers — is one of the most reliable buffers against the psychological effects of job insecurity. People who feel supported in their working and personal lives experience the same objective uncertainty with meaningfully less distress than those who face it in isolation.',
@@ -5556,8 +5542,6 @@ const ctxL44 = {
 }
 
 const ctxL45 = {
-  title: 'Forever renting: Lessons from New York, California and Europe',
-  subtitle: 'Housing Policy — The Conversation',
   paragraphs: [
     'For a growing number of Australians, renting is no longer a phase — it is a permanent condition. Whether because of housing prices, income constraints, or shifting life circumstances, many people who anticipated eventual homeownership are now accepting that it may not arrive. Yet Australia\'s policy framework continues to treat renting as a transitional failure state rather than a legitimate long-term housing arrangement. The cultural assumption that owning is always better continues to shape both legislation and social attitudes.',
     'This approach is not universal. In Vienna, approximately half of all residents live in subsidised housing — whether city-built social housing or co-operative dwellings — with rent subsidies available to further improve affordability. The result is a rental market in which long-term security is the norm rather than the exception. Residents raise families, age in place, and build community ties without the precariousness that characterises renting in Australian cities.',
@@ -5568,8 +5552,6 @@ const ctxL45 = {
 }
 
 const ctxL46 = {
-  title: 'Three hours of free power: is Australia\'s scheme fair?',
-  subtitle: 'Energy Policy — The Conversation',
   paragraphs: [
     'The federal government\'s Solar Sharer Offer promises households with smart meters three free hours of electricity per day — from 11am to 2pm in New South Wales and southeast Queensland, and 12pm to 3pm in South Australia, with Victoria\'s rollout scheduled for October. The policy is framed as a cost-of-living measure, but its underlying logic is about grid management: rooftop solar panels generate excess electricity during the middle of the day, and the free window is designed to encourage households to shift their energy use into that period, reducing stress on the network.',
     'For households well-positioned to take advantage of it, the offer can be genuinely useful. Running a dishwasher, heating a pool, charging an electric vehicle, or running the air-conditioning during the free window costs nothing during those hours. For fully electrified homes with smart appliances and flexible daytime routines, the savings can be meaningful.',
@@ -5580,8 +5562,6 @@ const ctxL46 = {
 }
 
 const ctxL47 = {
-  title: 'Trees and greenery can cool cities, but only the right type',
-  subtitle: 'Urban Environment — The Conversation',
   paragraphs: [
     'The urban heat island effect — the tendency of cities to be measurably hotter than surrounding rural areas — is one of the most well-documented consequences of dense development. Concrete, asphalt, and buildings absorb and retain heat; vegetation cools through shade and the evaporation of water through leaves. Research has found that urban greenery, in the right conditions, can reduce local temperatures by as much as 18 degrees Celsius compared to unshaded surfaces. The potential is significant.',
     'But a closer look at the research introduces important nuance. Studies conducted across cities with different climates found that layered vegetation — trees combined with shrubs and ground cover underneath — often produced greater cooling than trees planted alone. The combination of canopy shade with understorey plants that retain moisture and reduce reflected heat from the ground is more effective than the sum of its parts.',
@@ -5592,8 +5572,6 @@ const ctxL47 = {
 }
 
 const ctxL48 = {
-  title: 'Heatwaves: Older people less likely to follow safety advice',
-  subtitle: 'Public Health — The Conversation',
   paragraphs: [
     'Heatwaves kill more Australians than any other natural disaster, and older adults bear a disproportionate share of those deaths. The physiological reasons are well understood: older bodies regulate heat less efficiently, are more likely to be affected by medications that impair temperature control, and are more prone to dehydration. And yet, public health researchers have repeatedly found that older people are less likely to follow heat safety advice than younger adults — a paradox that sits at the centre of heatwave mortality.',
     'The awareness gap is larger than many expect. Studies have found that around 30 per cent of people did not see a heat alert even after one was issued — with exposure particularly low among older adults, lower-income households, and those with less formal education. But the more troubling finding is what happens among people who do see the warnings: approximately 41 per cent failed to take protective action even after receiving an alert.',
@@ -5604,8 +5582,6 @@ const ctxL48 = {
 }
 
 const ctxL49 = {
-  title: 'Sydney\'s urban development and the \'food bowl\'',
-  subtitle: 'Urban Planning & Agriculture — The Conversation',
   paragraphs: [
     'In the early twentieth century, the St George region was known as Sydney\'s salad bowl — an area of fertile market gardens supplying fresh produce to a city that relied heavily on food grown at its own edges. By the mid-twentieth century, agriculture was the most spatially dominant land use across greater Sydney. Today, the city\'s five million residents depend almost entirely on food transported from elsewhere, and the peri-urban farms that once formed Sydney\'s productive hinterland have been largely eliminated.',
     'The remaining agricultural land around Western Sydney still contributes approximately one billion dollars to the regional economy each year, with significant flow-on effects for employment and related industries. But that land is under intensifying pressure. Western Sydney\'s population is projected to grow from 2.4 million in 2016 to around 4.1 million by 2041, and housing development to accommodate that growth is being pushed directly into the region where farming continues.',
@@ -5616,8 +5592,6 @@ const ctxL49 = {
 }
 
 const ctxL50 = {
-  title: 'El Niño declared: What it means for Australia',
-  subtitle: 'Climate Science — The Conversation',
   paragraphs: [
     'An El Niño declaration is a statement about the ocean, not the weather. It means that sea surface temperatures in the tropical Pacific have warmed significantly above their long-term average — a shift in ocean conditions with well-documented downstream effects on rainfall and temperature patterns across the globe. What it does not mean is that any specific drought, heatwave, or fire season is guaranteed to follow. It is a probabilistic signal, not a forecast.',
     'For Australia, the historical record of El Niño years points toward a consistent set of tendencies. Maximum temperatures across the country tend to run warmer than average, particularly during winter and spring. Eastern and southern Australia typically experience drier-than-average conditions over those same seasons. In tropical regions, El Niño can delay the onset of the monsoon and reduce the chance of tropical cyclones forming.',
@@ -5628,8 +5602,6 @@ const ctxL50 = {
 }
 
 const ctxL51 = {
-  title: 'Why the heatwave in India and Pakistan is so dangerous',
-  subtitle: 'Climate & Public Health — The Conversation',
   paragraphs: [
     'When extreme heat strikes India and Pakistan, the temperature reported in news coverage is only part of the story. The number on the thermometer measures air temperature — but the threat to human life is shaped by the combination of heat and humidity. In humid conditions, the body\'s primary cooling mechanism breaks down. Sweating works by evaporating moisture from the skin, transferring heat away from the body. When the surrounding air is already saturated with water vapour, that evaporation cannot occur, and the body\'s ability to shed heat collapses.',
     'Scientists measure this combined effect using wet-bulb temperature: a single figure that captures what heat and humidity together mean for a human body. At a wet-bulb temperature of 35 degrees Celsius, a healthy adult at rest — doing nothing, in the shade — cannot survive for more than a few hours. That threshold can be reached at temperatures well below what might seem dangerous in a dry climate: 35 degrees at 90 per cent humidity is physiologically equivalent to 45 degrees at 30 per cent humidity.',
@@ -5640,8 +5612,6 @@ const ctxL51 = {
 }
 
 const ctxL52 = {
-  title: 'World Cup: What is the right height for a soccer player?',
-  subtitle: 'Sports Science — The Conversation',
   paragraphs: [
     'The question of ideal physical attributes in elite sport is more complex than it first appears. In soccer, height is neither universally advantageous nor irrelevant — its value depends almost entirely on the player\'s position and role on the field. Goalkeepers and central defenders benefit significantly from height for aerial contests, while forwards and midfielders rely more on agility, low centre of gravity, and explosive acceleration, attributes that do not favour taller players.',
     'Sports scientists analysing World Cup squads have found that elite teams typically contain a deliberate mix of body types — with shorter, nimble players dominating wide and attacking midfield roles, and taller, physically imposing players in central defensive and goalkeeping positions.',
@@ -5650,23 +5620,18 @@ const ctxL52 = {
 }
 
 const ctxL53 = {
-  title: 'Community Poster — Mulberry Creek Freeway Entrance',
   image: '/images/literacy/Literacy 01.png',
 }
 
 const ctxL54 = {
-  title: 'News Article — Processed Meat and Cancer Risk',
   image: '/images/literacy/Literacy 02.png',
 }
 
 const ctxL55 = {
-  title: 'Email — Bilvington Bushfire Preparedness',
   image: '/images/literacy/Literacy 03.png',
 }
 
 const ctxL56 = {
-  title: 'How To Prepare For A Winter Storm',
-  subtitle: 'Seasonal Newsletter',
   paragraphs: [
     'With winter arriving next month, along comes significant storms, which can bring extreme cold, freezing rain, ice, snow, high winds, or a combination of all of these conditions.',
     'This newsletter is intended to help protect yourself before, during, and after a storm. Planning and preparing can make a big difference in safety and resiliency in the wake of a storm. The ability to maintain or quickly recover following a storm requires a focus on preparedness, advanced planning, and knowing what to do in the event of a storm.',
@@ -5720,8 +5685,6 @@ const ctxFP6 = {
 }
 
 const ctxFP5 = {
-  title: 'Why the debate around Australia Day gets more heated every year',
-  subtitle: 'Source: CNN, January 2019',
   paragraphs: [
     "As Australians deal with a record-breaking heatwave, environmental devastation and a sixth prime minister in just over a decade, the annual fierce debate over the country's national day might be the thing that pushes many of them over the edge.",
     "Australia Day is held on the same date Britain's First Fleet sailed into Sydney Harbor in 1788, beginning the European colonization which led to the modern nation of Australia.",
@@ -5743,38 +5706,30 @@ const ctxFP5 = {
 }
 
 const ctxFP4 = {
-  title: 'Social Media Post — Australian Republic Movement',
   image: '/images/literacy/FRV Practice 04.png',
 }
 
 const ctxFP3 = {
-  title: 'Accommodation Listing',
   image: '/images/literacy/FRV Practice 03.png',
 }
 
 const ctxFP2 = {
-  title: 'Website — Hamilton Fun Run',
   image: '/images/literacy/FRV Practice 02.png',
 }
 
 const ctxFP1 = {
-  title: 'Email — Gillmont Pharmacy: Hay Fever Season',
   image: '/images/literacy/FRV Practice 01.png',
 }
 
 const ctxFP7 = {
-  title: 'How To Prepare For A Winter Storm',
-  subtitle: 'Seasonal Newsletter',
   image: '/images/literacy/FRV Practice 07.png',
 }
 
 const ctxPN1 = {
-  title: 'Product Information — Earthplus Gardening Supplies',
   image: '/images/literacy/Practice Now Q01.png',
 }
 
 const ctxPN2 = {
-  title: 'News Article — Sugar Tax on Sugary Drinks',
   images: [
     '/images/literacy/Practice Now Q2a.png',
     '/images/literacy/Practice Now Q2b.png',
@@ -5783,27 +5738,21 @@ const ctxPN2 = {
 
 // ── FRV Practice #2 contexts ──────────────────────────────────────────────────
 const ctxFRP2_Q1 = {
-  title: 'Email — Jetton Workplace Safety Guidelines',
   image: '/images/literacy/FRV Practice Test 02_Q01.png',
 }
 const ctxFRP2_Q2 = {
-  title: 'Website — Apple Orchard Market',
   image: '/images/literacy/FRV Practice Test 02_Q02.png',
 }
 const ctxFRP2_Q3 = {
-  title: 'Accommodation Listing — Sail & Stay Experience',
   image: '/images/literacy/FRV Practice Test 02_Q03.png',
 }
 const ctxFRP2_Q4 = {
-  title: 'Social Media — Pro Life Australia',
   image: '/images/literacy/FRV Practice Test 02_Q04.png',
 }
 const ctxFRP2_Q5 = {
-  title: 'Opinion Article — School Uniforms',
   image: '/images/literacy/FRV Practice Test 02_Q05.png',
 }
 const ctxFRP2_Q6 = {
-  title: 'Health Article — Your Health: Meditation',
   image: '/images/literacy/FRV Practice Test 02_Q06.png',
 }
 
