@@ -326,6 +326,9 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                           {q.questionImage && (
                             <div style={{ textAlign: 'center', marginTop: 12 }}>
                               <img src={q.questionImage} alt="Question diagram" className="review-question-img" style={{ maxHeight: 280 }} />
+                              {q.questionImage2 && (
+                                <img src={q.questionImage2} alt="Answer options diagram" className="review-question-img" style={{ maxHeight: 280, marginTop: 8 }} />
+                              )}
                             </div>
                           )}
                           <pre className="working-content">{q.method}</pre>

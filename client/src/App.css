@@ -723,6 +723,16 @@ body {
   object-fit: contain;
 }
 
+.qis-left--dual {
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.qis-img--dual {
+  max-height: 210px;
+}
+
 .qis-right {
   flex: 1;
   background: white;

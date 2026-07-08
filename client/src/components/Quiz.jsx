@@ -269,8 +269,11 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       <div className={`quiz-main${(current.context || hasSplitImage) ? ' quiz-main--wide' : ''}`}>
         {hasSplitImage ? (
           <div className="quiz-img-split">
-            <div className="qis-left">
-              <img src={current.questionImage} alt="Question diagram" className="qis-img" />
+            <div className={`qis-left${current.questionImage2 ? ' qis-left--dual' : ''}`}>
+              <img src={current.questionImage} alt="Question diagram" className={`qis-img${current.questionImage2 ? ' qis-img--dual' : ''}`} />
+              {current.questionImage2 && (
+                <img src={current.questionImage2} alt="Answer options diagram" className="qis-img qis-img--dual" />
+              )}
             </div>
             <div className="qis-right">
               <span className="q-counter qis-counter">Question {currentIndex + 1} of {questions.length}</span>

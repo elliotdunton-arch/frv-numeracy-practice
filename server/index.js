@@ -9335,7 +9335,8 @@ const mechanicalQuestions = [
   },
 
   { group: 'APP09', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
-    questionImage: '/images/mechanical reasoning/ACER Mech Paid 09.png',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 09a.png',
+    questionImage2: '/images/mechanical reasoning/ACER Mech Paid 09b.png',
     question: 'The tool shown can be used to force doors open. The tool is made in different lengths. In which of the following situations will it be easiest to force the door open?',
     options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
     answer: 'A) (see diagram)',
@@ -9343,7 +9344,8 @@ const mechanicalQuestions = [
   },
 
   { group: 'APP10', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Motion & Forces',
-    questionImage: '/images/mechanical reasoning/ACER Mech Paid 10.png',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 10a.png',
+    questionImage2: '/images/mechanical reasoning/ACER Mech Paid 10b.png',
     question: 'A block rests on a flat surface. The block can rotate in either direction around a fixed pivot. One or more pegs can be placed against the block to prevent it from rotating. Which of the following shows the fewest pegs needed to prevent the block from rotating in either direction?',
     options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
     answer: 'A) (see diagram)',
@@ -9463,7 +9465,8 @@ const mechanicalQuestions = [
   },
 
   { group: 'APP25', set: 'ACER Practice Paid', type: 'multiple_choice', category: 'Fluid Mechanics',
-    questionImage: '/images/mechanical reasoning/ACER Mech Paid 25.png',
+    questionImage: '/images/mechanical reasoning/ACER Mech Paid 25a.png',
+    questionImage2: '/images/mechanical reasoning/ACER Mech Paid 25b.png',
     question: 'Three flexible rubber diaphragms sit inside a sealed oil-filled system. The plunger is pulled upwards. Which of the following best shows the expected changes in the shape of the diaphragms?',
     options: ['A) (see diagram)', 'B) (see diagram)', 'C) (see diagram)', 'D) (see diagram)'],
     answer: 'C) (see diagram)',
