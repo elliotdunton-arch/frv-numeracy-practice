@@ -4398,6 +4398,58 @@ const questions = [
     answer: 'B) 60'
   },
 
+  // ── Part-to-Whole Ratios: FN, FO, FP, FQ, FR ─────────────────────────────────
+  {
+    group: 'FN', type: 'number_input', category: 'Number and Algebra',
+    question: 'Water Filtration: A filter cleans 7 litres of water for every 10 litres that pass through it. If 150 litres pass through the filter, how many litres are cleaned?',
+    answer: '105'
+  },
+  {
+    group: 'FN', type: 'number_input', category: 'Number and Algebra',
+    question: 'Battery Efficiency: A charging station identifies 2 faulty units for every 9 units tested. Out of 180 units tested, how many are faulty?',
+    answer: '40'
+  },
+  {
+    group: 'FO', type: 'number_input', category: 'Number and Algebra',
+    question: 'Safety Inspections: An inspector approves 5 safety harnesses for every 6 inspected. If 120 harnesses are inspected, how many are approved?',
+    answer: '100'
+  },
+  {
+    group: 'FO', type: 'number_input', category: 'Number and Algebra',
+    question: 'Emergency Response: A station dispatches a crew within target time on 3 out of every 5 calls. If they receive 85 calls, how many were dispatched within target time?',
+    answer: '51'
+  },
+  {
+    group: 'FP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Vehicle Maintenance: A mechanic replaces the oil filter in 4 out of every 7 vehicles serviced. If 98 vehicles are serviced, how many oil filters are replaced?',
+    answer: '56'
+  },
+  {
+    group: 'FP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Training Completion: 8 out of every 15 recruits pass the physical test on the first attempt. If there are 120 recruits, how many pass on the first attempt?',
+    answer: '64'
+  },
+  {
+    group: 'FQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Supply Inventory: For every 20 medical masks in a box, 3 are found to be damaged. If a shipment contains 140 masks, how many are damaged?',
+    answer: '21'
+  },
+  {
+    group: 'FQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Fuel Consumption: An engine saves 1 litre of fuel for every 12 litres used. If the engine uses 156 litres, how many litres are saved?',
+    answer: '13'
+  },
+  {
+    group: 'FR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Pump Output: A pump discharges 9 cubic metres of water for every 11 cubic metres that flow into the intake. If 220 cubic metres flow in, how many are discharged?',
+    answer: '180'
+  },
+  {
+    group: 'FR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Hazard Identification: A sensor detects 3 hazards for every 13 areas scanned. If 169 areas are scanned, how many hazards are detected?',
+    answer: '39'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -4465,6 +4517,7 @@ const units = {
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
   FI: ['g', 'g'], FJ: ['g', 'scoops'], FK: ['kg', 'g'], FL: ['g', 'g'], FM: ['g', 'g'],
+  FN: ['L', null], FO: [null, null], FP: [null, null], FQ: [null, 'L'], FR: ['m³', null],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -5134,6 +5187,26 @@ const methods = {
     `750 g of Muffins requires 300 g of flour.\n3.75 kg = 3750 g of Muffins:\n  3750 ÷ 750 = 5 batches\n  5 × 300 g = 1500 g flour needed`,
     `750 g of Cake requires 350 g of flour.\n1.5 kg = 1500 g of Cake:\n  1500 ÷ 750 = 2 batches\n  2 × 350 g = 700 g flour needed\n\nJohn has 1200 g (1.2 kg).\n1200 g − 700 g = 500 g remaining.`,
   ],
+  FN: [
+    `Ratio: 7 cleaned for every 10 that pass through.\n\nFind the multiplier: 150 ÷ 10 = 15\nCleaned = 7 × 15 = 105 litres\n\nCheck: 105 < 150 ✓`,
+    `Ratio: 2 faulty for every 9 tested.\n\nFind the multiplier: 180 ÷ 9 = 20\nFaulty = 2 × 20 = 40 units\n\nCheck: 40 < 180 ✓`,
+  ],
+  FO: [
+    `Ratio: 5 approved for every 6 inspected.\n\nFind the multiplier: 120 ÷ 6 = 20\nApproved = 5 × 20 = 100 harnesses\n\nCheck: 100 < 120 ✓`,
+    `Ratio: 3 on-time for every 5 calls.\n\nFind the multiplier: 85 ÷ 5 = 17\nOn-time dispatches = 3 × 17 = 51 calls\n\nCheck: 51 < 85 ✓`,
+  ],
+  FP: [
+    `Ratio: 4 oil filter replacements for every 7 vehicles.\n\nFind the multiplier: 98 ÷ 7 = 14\nFilters replaced = 4 × 14 = 56\n\nCheck: 56 < 98 ✓`,
+    `Ratio: 8 pass for every 15 recruits.\n\nFind the multiplier: 120 ÷ 15 = 8\nPass = 8 × 8 = 64 recruits\n\nCheck: 64 < 120 ✓`,
+  ],
+  FQ: [
+    `Ratio: 3 damaged for every 20 masks.\n\nFind the multiplier: 140 ÷ 20 = 7\nDamaged = 3 × 7 = 21 masks\n\nCheck: 21 < 140 ✓`,
+    `Ratio: 1 litre saved for every 12 used.\n\nFind the multiplier: 156 ÷ 12 = 13\nSaved = 1 × 13 = 13 litres\n\nCheck: 13 < 156 ✓`,
+  ],
+  FR: [
+    `Ratio: 9 discharged for every 11 that flow in.\n\nFind the multiplier: 220 ÷ 11 = 20\nDischarged = 9 × 20 = 180 m³\n\nCheck: 180 < 220 ✓`,
+    `Ratio: 3 hazards detected for every 13 areas scanned.\n\nFind the multiplier: 169 ÷ 13 = 13\nDetected = 3 × 13 = 39 hazards\n\nCheck: 39 < 169 ✓`,
+  ],
   FF: [
     `Solve for one part first:\nTotal parts = 5 + 3 = 8\n48 ÷ 8 = 6 per part\n\nMen   = 5 × 6 = 30\nWomen = 3 × 6 = 18\n\nDifference = 30 − 18 = 12`,
   ],
@@ -5217,6 +5290,7 @@ const TOPIC_GROUPS = {
   'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD','FE'],
   'Ratios & Proportions':    ['FF','FG','FH'],
   'Baked Goods':             ['FI','FJ','FK','FL','FM'],
+  'Part-to-Whole Ratios':   ['FN','FO','FP','FQ','FR'],
 }
 
 app.get('/api/topics', (req, res) => {
