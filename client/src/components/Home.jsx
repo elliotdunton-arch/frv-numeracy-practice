@@ -1096,6 +1096,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
         )}
 
         {activeTab === 'literacy' && (
+          <>
           <div className="strategy-guide">
             <button
               className={`strategy-guide-toggle${strategyOpen ? ' sgt-open' : ''}`}
@@ -1255,6 +1256,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
               </div>
             )}
           </div>
+          </>
         )}
 
         <div className="instructions-section">
