@@ -8682,7 +8682,7 @@ app.get('/api/literacy-sets', (req, res) => {
   literacyQuestions.forEach(q => {
     if (q.set) counts[q.set] = (counts[q.set] || 0) + 1
   })
-  res.json(Object.entries(counts).map(([name, questionCount]) => ({ name, questionCount })))
+  res.json(Object.entries(counts).sort().map(([name, questionCount]) => ({ name, questionCount })))
 })
 
 app.get('/api/literacy-questions', (req, res) => {
