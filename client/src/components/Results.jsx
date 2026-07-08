@@ -208,7 +208,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
         <div className={`ai-summary-card ${aiStatus === 'error' ? 'ai-summary-error' : ''}`}>
           <div className="ai-summary-header">
             <span className="ai-summary-icon">✦</span>
-            <span className="ai-summary-title">AI Performance Summary</span>
+            <span className="ai-summary-title">Performance Summary</span>
             {aiStatus === 'loading' && <span className="ai-summary-spinner" />}
           </div>
           <div className="ai-summary-body">
