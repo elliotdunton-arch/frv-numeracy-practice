@@ -9564,6 +9564,7 @@ app.get('/api/mechanical-questions', (req, res) => {
     set: q.set,
     question: q.question,
     questionImage: q.questionImage || null,
+    questionImage2: q.questionImage2 || null,
     options: q.options || null,
     answer: q.answer,
     method: q.method || null,
