@@ -1765,6 +1765,22 @@ const ctxSD = {
   note: 'The Australian health guideline recommends no more than 4 standard drinks on any single occasion.'
 }
 
+// ── Baked Goods context ───────────────────────────────────────────────────────
+
+const ctxBakedGoods = {
+  subtitle: 'Use the table below to answer each question.',
+  tables: [{
+    heading: 'Flour required per 750 g of baked good',
+    headers: ['Baked Good', 'Flour per 750 g'],
+    rows: [
+      ['Cookies',  '200 g'],
+      ['Cupcakes', '250 g'],
+      ['Muffins',  '300 g'],
+      ['Cake',     '350 g'],
+    ]
+  }]
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -4300,6 +4316,68 @@ const questions = [
     answer: '35'
   },
 
+  // ── Baked Goods: FI, FJ, FK, FL, FM ─────────────────────────────────────────
+  {
+    group: 'FI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John has a measuring cup with 400 g of flour. How much extra flour does he need to make 1.5 kg of Cookies?',
+    answer: '0'
+  },
+  {
+    group: 'FI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John has a bag containing 1200 g of flour. How much flour will be left after he makes 2.25 kg of Muffins?',
+    answer: '300'
+  },
+  {
+    group: 'FJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John needs to make 3 kg of Cake. He currently has 1000 g of flour. How much extra flour does he need?',
+    answer: '400'
+  },
+  {
+    group: 'FJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John is making 1.5 kg of Cupcakes. Each scoop holds 150 g of flour. How many full scoops does he need to measure out the required amount of flour?',
+    answer: '4'
+  },
+  {
+    group: 'FK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John has 500 g of flour. How many kg of Muffins can he make? (Round to 2 decimal places)',
+    answer: '1.25'
+  },
+  {
+    group: 'FK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John needs to make 3 kg of Cookies. He has 900 g of flour. How much flour is remaining after making the cookies?',
+    answer: '100'
+  },
+  {
+    group: 'FL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John needs to make 750 g of Cake and 750 g of Muffins. How much total flour does he need?',
+    answer: '650'
+  },
+  {
+    group: 'FL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John has 1000 g of flour. He makes 2.25 kg of Cookies. How much flour is left?',
+    answer: '400'
+  },
+  {
+    group: 'FM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'How many grams of flour are needed to make 3.75 kg of Muffins?',
+    answer: '1500'
+  },
+  {
+    group: 'FM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakedGoods,
+    question: 'John has 1.2 kg of flour. He makes 1.5 kg of Cake. How much flour is remaining?',
+    answer: '500'
+  },
+
   // ── Ratios & Proportions: FF, FG, FH ─────────────────────────────────────────
   {
     group: 'FF', type: 'multiple_choice', category: 'Number and Algebra',
@@ -4386,6 +4464,7 @@ const units = {
   EL: ['m³', null],
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
+  FI: ['g', 'g'], FJ: ['g', 'scoops'], FK: ['kg', 'g'], FL: ['g', 'g'], FM: ['g', 'g'],
 }
 
 // ── Working methods keyed by group, [Q1 method, Q2 method] ───────────────────
@@ -5035,6 +5114,26 @@ const methods = {
     `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($399.00 × 0.50)\n  = $1,698.00 + $199.50\n  = $1,897.50`,
     `Weekly payment = Total ÷ 52\n  = $1,897.50 ÷ 52\n  = $36.490…\n  = $36.49 (rounded to 2 decimal places)`,
   ],
+  FI: [
+    `750 g of Cookies requires 200 g of flour.\n1.5 kg = 1500 g of Cookies:\n  1500 ÷ 750 = 2 batches\n  2 × 200 g = 400 g flour needed\n\nJohn has 400 g.\n400 g − 400 g = 0 g extra needed.`,
+    `750 g of Muffins requires 300 g of flour.\n2.25 kg = 2250 g of Muffins:\n  2250 ÷ 750 = 3 batches\n  3 × 300 g = 900 g flour needed\n\nJohn has 1200 g.\n1200 g − 900 g = 300 g remaining.`,
+  ],
+  FJ: [
+    `750 g of Cake requires 350 g of flour.\n3 kg = 3000 g of Cake:\n  3000 ÷ 750 = 4 batches\n  4 × 350 g = 1400 g flour needed\n\nJohn has 1000 g.\n1400 g − 1000 g = 400 g extra needed.`,
+    `750 g of Cupcakes requires 250 g of flour.\n1.5 kg = 1500 g of Cupcakes:\n  1500 ÷ 750 = 2 batches\n  2 × 250 g = 500 g flour needed\n\nEach scoop holds 150 g.\n500 ÷ 150 = 3.33… → round up to 4 full scoops.`,
+  ],
+  FK: [
+    `750 g of Muffins requires 300 g of flour.\nJohn has 500 g:\n  500 ÷ 300 = 1.667 batches\n  1.667 × 750 g = 1250 g of Muffins\n\n1250 g = 1.25 kg`,
+    `750 g of Cookies requires 200 g of flour.\n3 kg = 3000 g of Cookies:\n  3000 ÷ 750 = 4 batches\n  4 × 200 g = 800 g flour needed\n\nJohn has 900 g.\n900 g − 800 g = 100 g remaining.`,
+  ],
+  FL: [
+    `Cake  (750 g) → 350 g flour\nMuffins (750 g) → 300 g flour\n\nTotal = 350 + 300 = 650 g`,
+    `750 g of Cookies requires 200 g of flour.\n2.25 kg = 2250 g of Cookies:\n  2250 ÷ 750 = 3 batches\n  3 × 200 g = 600 g flour needed\n\nJohn has 1000 g.\n1000 g − 600 g = 400 g remaining.`,
+  ],
+  FM: [
+    `750 g of Muffins requires 300 g of flour.\n3.75 kg = 3750 g of Muffins:\n  3750 ÷ 750 = 5 batches\n  5 × 300 g = 1500 g flour needed`,
+    `750 g of Cake requires 350 g of flour.\n1.5 kg = 1500 g of Cake:\n  1500 ÷ 750 = 2 batches\n  2 × 350 g = 700 g flour needed\n\nJohn has 1200 g (1.2 kg).\n1200 g − 700 g = 500 g remaining.`,
+  ],
   FF: [
     `Solve for one part first:\nTotal parts = 5 + 3 = 8\n48 ÷ 8 = 6 per part\n\nMen   = 5 × 6 = 30\nWomen = 3 × 6 = 18\n\nDifference = 30 − 18 = 12`,
   ],
@@ -5117,6 +5216,7 @@ const TOPIC_GROUPS = {
   'Tech Bundle Sales':        ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
   'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD','FE'],
   'Ratios & Proportions':    ['FF','FG','FH'],
+  'Baked Goods':             ['FI','FJ','FK','FL','FM'],
 }
 
 app.get('/api/topics', (req, res) => {
