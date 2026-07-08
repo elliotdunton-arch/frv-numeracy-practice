@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { getUsername, setUsername as storeUsername, saveResult, addToRevision, removeFromRevision, getRevision } from '../utils/resultStorage'
+import DraggableImage from './DraggableImage'
 
 function formatHM(totalMins) {
   const h = Math.floor(totalMins / 60)
@@ -37,7 +38,7 @@ function formatUserTimeHM(str) {
   return formatHM(h * 60 + m)
 }
 
-export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, onRetryIncorrect, pausedMs = 0 }) {
+export default function Results({ questions, answers, startTime, endTime, timeExpired, section, onRestart, onRetryIncorrect, pausedMs = 0, bookmarks = new Set() }) {
   const [expandedWorking, setExpandedWorking] = useState({})
   const [contextOpen, setContextOpen] = useState({})
   const [recordState, setRecordState] = useState('idle') // 'idle' | 'name-needed' | 'saved'
@@ -225,6 +226,79 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
             ))}
           </div>
         </div>
+
+        {bookmarks.size > 0 && (
+          <div className="section-card section-card--bookmarks">
+            <h2>Bookmarked Questions</h2>
+            <div className="review-list">
+              {questions
+                .map((q, i) => ({ q, i }))
+                .filter(({ q }) => bookmarks.has(q.id))
+                .map(({ q, i }) => {
+                  const userAns = answers[q.id]
+                  const correct = isCorrect(q, userAns)
+                  const workingOpen = !!expandedWorking[q.id]
+                  return (
+                    <div key={q.id} className={`review-item review-item--bookmarked ${correct ? 'review-correct' : 'review-wrong'}`}>
+                      <div className="review-top">
+                        <span className="review-num">Q{i + 1}</span>
+                        <span className="bookmark-pill">★ Bookmarked</span>
+                        <span className="review-cat-pill">{q.category}</span>
+                        <span className={`review-tick ${correct ? 'tick-correct' : 'tick-wrong'}`}>
+                          {correct ? '✓' : '✗'}
+                        </span>
+                      </div>
+                      {q.context && (
+                        <div className="working-section">
+                          <button
+                            className={`working-toggle ${contextOpen[q.id] ? 'working-toggle-open' : ''}`}
+                            onClick={() => toggleContext(q.id)}
+                          >
+                            <span className="working-toggle-icon">{contextOpen[q.id] ? '▾' : '▸'}</span>
+                            {contextOpen[q.id] ? 'Hide passage' : 'Show passage'}
+                          </button>
+                          {contextOpen[q.id] && renderContextBlock(q.context)}
+                        </div>
+                      )}
+                      <p className="review-question">{q.question}</p>
+                      {q.options && q.options.length > 0 ? (
+                        <div className="review-options-list">
+                          {q.options.map((opt, oi) => {
+                            const isAns = opt === q.answer
+                            const isSel = opt === userAns
+                            const cls = isAns ? 'review-option--correct' : isSel ? 'review-option--wrong-pick' : ''
+                            return (
+                              <div key={oi} className={`review-option ${cls}`}>
+                                <span className="review-option-icon">{isAns ? '✓' : isSel ? '✗' : ''}</span>
+                                {opt}
+                              </div>
+                            )
+                          })}
+                        </div>
+                      ) : !correct && (
+                        <div className="review-answers">
+                          <span className="ans-wrong">{userAns ? `Your answer: ${userAns}` : 'Not answered'}</span>
+                          <span className="ans-correct">Correct: {q.answer}</span>
+                        </div>
+                      )}
+                      {q.method && (
+                        <div className="working-section">
+                          <button
+                            className={`working-toggle ${workingOpen ? 'working-toggle-open' : ''}`}
+                            onClick={() => toggleWorking(q.id)}
+                          >
+                            <span className="working-toggle-icon">{workingOpen ? '▾' : '▸'}</span>
+                            {workingOpen ? 'Hide working' : 'Show working'}
+                          </button>
+                          {workingOpen && <pre className="working-content">{q.method}</pre>}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+            </div>
+          </div>
+        )}
 
         <div className="section-card">
           <h2>Question Review</h2>
@@ -414,10 +488,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
     </div>
 
     {lightboxSrc && (
-      <div className="lightbox-overlay" onClick={() => setLightboxSrc(null)}>
-        <button className="lightbox-close" onClick={() => setLightboxSrc(null)}>✕</button>
-        <img src={lightboxSrc} alt="Enlarged passage" className="lightbox-img" onClick={e => e.stopPropagation()} />
-      </div>
+      <DraggableImage src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
     )}
     </>
   )

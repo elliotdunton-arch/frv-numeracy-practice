@@ -117,6 +117,42 @@ function formatTime(secs) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
+const CHART = { vw: 460, vh: 110, pl: 34, pr: 12, pt: 10, pb: 22 }
+CHART.iw = CHART.vw - CHART.pl - CHART.pr
+CHART.ih = CHART.vh - CHART.pt - CHART.pb
+
+function TrendChart({ data }) {
+  const { vw, vh, pl, pr, pt, iw, ih } = CHART
+  const xOf = i => pl + (data.length > 1 ? (i / (data.length - 1)) * iw : iw / 2)
+  const yOf = pct => pt + ih - (pct / 100) * ih
+  const pts = data.map((r, i) => `${xOf(i).toFixed(1)},${yOf(r.pct).toFixed(1)}`).join(' ')
+
+  return (
+    <svg viewBox={`0 0 ${vw} ${vh}`} className="pg-chart-svg" preserveAspectRatio="none">
+      {/* faint grid at 25 / 50 / 75 / 100 */}
+      {[25, 50, 75, 100].map(p => (
+        <line key={p} x1={pl} y1={yOf(p)} x2={vw - pr} y2={yOf(p)} stroke="#e5e7eb" strokeWidth="0.5" />
+      ))}
+      {/* 70% pass-mark line */}
+      <line x1={pl} y1={yOf(70)} x2={vw - pr} y2={yOf(70)} stroke="#f97316" strokeWidth="1" strokeDasharray="4 3" />
+      {/* Y-axis labels */}
+      {[0, 50, 100].map(p => (
+        <text key={p} x={pl - 5} y={yOf(p) + 3.5} textAnchor="end" fontSize="8" fill="#9ca3af">{p}%</text>
+      ))}
+      <text x={pl - 5} y={yOf(70) + 3.5} textAnchor="end" fontSize="8" fill="#f97316">70%</text>
+      {/* Connecting line */}
+      {data.length > 1 && (
+        <polyline points={pts} fill="none" stroke="#1e3a5f" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" />
+      )}
+      {/* Data points */}
+      {data.map((r, i) => (
+        <circle key={r.id} cx={xOf(i)} cy={yOf(r.pct)} r="4.5"
+          fill={r.pct >= 70 ? '#22c55e' : '#ef4444'} stroke="white" strokeWidth="1.5" />
+      ))}
+    </svg>
+  )
+}
+
 function ProgressLog() {
   const [currentUser, setCurrentUser] = useState(() => getUsername())
   const [results, setResults] = useState(() => currentUser ? getResultsForUser(currentUser) : [])
@@ -124,6 +160,7 @@ function ProgressLog() {
   const [newNameInput, setNewNameInput] = useState('')
   const [expanded, setExpanded] = useState(new Set())
   const [pendingDelete, setPendingDelete] = useState(null) // id awaiting confirmation
+  const [sectionFilter, setSectionFilter] = useState('all')
 
   const knownUsers = getKnownUsers()
 
@@ -170,6 +207,34 @@ function ProgressLog() {
   const avgPct = results.length
     ? Math.round(results.reduce((s, r) => s + r.pct, 0) / results.length)
     : null
+
+  // Stats strip
+  const totalQs = results.reduce((s, r) => s + (r.total || 0), 0)
+  let streak = 0
+  for (let i = results.length - 1; i >= 0; i--) {
+    if (results[i].pct >= 70) streak++
+    else break
+  }
+  const improvement = results.length >= 2
+    ? results[results.length - 1].pct - results[0].pct
+    : null
+
+  // Trend chart
+  const sectionsPresent = ['all', ...[...new Set(results.map(r => r.section))]]
+  const chartData = sectionFilter === 'all' ? results : results.filter(r => r.section === sectionFilter)
+
+  // Topic weakness — aggregate category breakdown across all results
+  const catMap = {}
+  results.forEach(r => {
+    ;(r.breakdown || []).forEach(({ cat, correct, total: t }) => {
+      if (!catMap[cat]) catMap[cat] = { correct: 0, total: 0 }
+      catMap[cat].correct += correct
+      catMap[cat].total += t
+    })
+  })
+  const weaknesses = Object.entries(catMap)
+    .map(([cat, { correct, total }]) => ({ cat, pct: Math.round((correct / total) * 100) }))
+    .sort((a, b) => a.pct - b.pct)
 
   return (
     <div className="progress-log" onClick={e => { if (!e.target.closest('.pl-delete-btn')) cancelDelete() }}>
@@ -224,12 +289,92 @@ function ProgressLog() {
             <p className="progress-empty">No results recorded yet. Take a test and click <strong>Record Result</strong> to start tracking your progress.</p>
           ) : (
             <>
+              {/* ── Stats strip ── */}
+              <div className="pg-stats-strip">
+                <div className="pg-stat">
+                  <span className="pg-stat-val">{results.length}</span>
+                  <span className="pg-stat-label">tests taken</span>
+                </div>
+                <div className="pg-stat">
+                  <span className="pg-stat-val">{avgPct}%</span>
+                  <span className="pg-stat-label">average score</span>
+                </div>
+                <div className="pg-stat">
+                  <span className="pg-stat-val">{Math.max(...results.map(r => r.pct))}%</span>
+                  <span className="pg-stat-label">personal best</span>
+                </div>
+                <div className="pg-stat">
+                  <span className={`pg-stat-val${streak > 0 ? ' pg-stat-streak' : ''}`}>{streak}</span>
+                  <span className="pg-stat-label">pass streak</span>
+                </div>
+                <div className="pg-stat">
+                  <span className="pg-stat-val">{totalQs.toLocaleString()}</span>
+                  <span className="pg-stat-label">questions attempted</span>
+                </div>
+                <div className="pg-stat">
+                  {improvement !== null ? (
+                    <span className={`pg-stat-val ${improvement > 0 ? 'pg-stat-up' : improvement < 0 ? 'pg-stat-down' : ''}`}>
+                      {improvement > 0 ? '+' : ''}{improvement}%
+                    </span>
+                  ) : (
+                    <span className="pg-stat-val pg-stat-muted">—</span>
+                  )}
+                  <span className="pg-stat-label">vs first attempt</span>
+                </div>
+              </div>
+
+              {/* ── Trend chart ── */}
+              <div className="pg-chart-wrap">
+                <div className="pg-chart-header">
+                  <span className="pg-chart-title">Score Trend</span>
+                  {sectionsPresent.length > 2 && (
+                    <div className="pg-section-tabs">
+                      {sectionsPresent.map(s => (
+                        <button
+                          key={s}
+                          className={`pg-section-tab${sectionFilter === s ? ' pst-active' : ''}`}
+                          onClick={() => setSectionFilter(s)}
+                        >
+                          {s === 'all' ? 'All' : SECTION_LABEL[s] || s}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                {chartData.length === 0 ? (
+                  <p className="pg-chart-empty">No results for this section.</p>
+                ) : (
+                  <TrendChart data={chartData} />
+                )}
+                <div className="pg-chart-legend">
+                  <span className="pgcl-pass">● Pass</span>
+                  <span className="pgcl-fail">● Fail</span>
+                  <span className="pgcl-line">— — 70% pass mark</span>
+                </div>
+              </div>
+
+              {/* ── Topic weakness ── */}
+              {weaknesses.length > 0 && (
+                <div className="pg-weakness-wrap">
+                  <div className="pg-weakness-title">Topic Averages <span className="pg-weakness-sub">(worst first)</span></div>
+                  {weaknesses.map(({ cat, pct: p }) => (
+                    <div key={cat} className="pg-wk-row">
+                      <span className="pg-wk-cat">{cat}</span>
+                      <div className="pg-wk-track">
+                        <div
+                          className={`pg-wk-bar ${p >= 80 ? 'pgwk-good' : p >= 60 ? 'pgwk-mid' : 'pgwk-poor'}`}
+                          style={{ width: `${p}%` }}
+                        />
+                        <div className="pg-wk-passline" />
+                      </div>
+                      <span className={`pg-wk-pct ${p >= 80 ? 'pgwk-good' : p >= 60 ? 'pgwk-mid' : 'pgwk-poor'}`}>{p}%</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="progress-summary">
                 <span className="ps-stat"><strong>{results.length}</strong> test{results.length !== 1 ? 's' : ''} recorded</span>
-                <span className="ps-divider">·</span>
-                <span className="ps-stat">Average: <strong>{avgPct}%</strong></span>
-                <span className="ps-divider">·</span>
-                <span className="ps-stat">Best: <strong>{Math.max(...results.map(r => r.pct))}%</strong></span>
               </div>
               <div className="progress-table-wrap">
                 <table className="progress-table">

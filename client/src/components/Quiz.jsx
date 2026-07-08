@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import Timer from './Timer'
 import Calculator from './Calculator'
+import DraggableImage from './DraggableImage'
 
 export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -13,6 +14,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   const [lightboxSrc, setLightboxSrc] = useState(null)
 
   const answersRef = useRef({})
+  const bookmarksRef = useRef(new Set())
   const ribbonRef  = useRef(null)
   const pauseStartRef = useRef(null)
   const totalPausedMsRef = useRef(0)
@@ -35,6 +37,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
     setBookmarks(prev => {
       const next = new Set(prev)
       next.has(questionId) ? next.delete(questionId) : next.add(questionId)
+      bookmarksRef.current = next
       return next
     })
   }
@@ -51,10 +54,10 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
   }
 
   const handleExpire = useCallback(() => {
-    onSubmit(answersRef.current, true, totalPausedMsRef.current)
+    onSubmit(answersRef.current, true, totalPausedMsRef.current, bookmarksRef.current)
   }, [onSubmit])
 
-  const confirmSubmit = () => onSubmit(answersRef.current, false, totalPausedMsRef.current)
+  const confirmSubmit = () => onSubmit(answersRef.current, false, totalPausedMsRef.current, bookmarksRef.current)
 
   const isAnswered = (q) => {
     const v = answers[q.id]
@@ -409,10 +412,7 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
       )}
 
       {lightboxSrc && (
-        <div className="lightbox-overlay" onClick={() => setLightboxSrc(null)}>
-          <button className="lightbox-close" onClick={() => setLightboxSrc(null)}>✕</button>
-          <img src={lightboxSrc} alt="Enlarged passage" className="lightbox-img" onClick={e => e.stopPropagation()} />
-        </div>
+        <DraggableImage src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
       )}
 
       {showConfirm && (

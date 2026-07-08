@@ -9990,8 +9990,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_09.png',
     question: 'Which beam requires the least amount of force to lift the blue box?',
     options: ['A) A', 'B) B', 'C) Both the same', 'D) Cannot be determined'],
-    answer: 'B) B',
-    method: 'When the weight is closer to the fulcrum, the fulcrum supports more of the load, requiring less effort to lift. In beam B, the blue box is positioned closer to the fulcrum than in beam A, so less force is needed.'
+    answer: 'A) A',
+    method: 'Beam A requires the least force. The greater the effort arm length (distance from fulcrum to the point of effort), the less force is needed to lift the load. Beam A provides a greater mechanical advantage than Beam B.'
   },
   { group: 'MFP10', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Belts & Pulleys',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_10.png',

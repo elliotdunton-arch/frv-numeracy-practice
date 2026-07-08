@@ -15,6 +15,7 @@ export default function App() {
   const [error, setError] = useState(null)
   const [totalTime, setTotalTime] = useState(35 * 60)
   const [pausedMs, setPausedMs] = useState(0)
+  const [bookmarks, setBookmarks] = useState(new Set())
 
   const startTest = async (customCount = null, selectedTopics = null, filterType = null, ordered = false, fill = false) => {
     setLoading(true)
@@ -55,8 +56,9 @@ export default function App() {
     }
   }
 
-  const submitTest = (userAnswers, expired = false, pausedMillis = 0) => {
+  const submitTest = (userAnswers, expired = false, pausedMillis = 0, bmarks = new Set()) => {
     setAnswers(userAnswers)
+    setBookmarks(bmarks)
     setEndTime(Date.now())
     setTimeExpired(expired)
     setPausedMs(pausedMillis)
@@ -64,6 +66,7 @@ export default function App() {
   }
 
   const restartTest = () => {
+    setBookmarks(new Set())
     setScreen('home')
   }
 
@@ -107,6 +110,7 @@ export default function App() {
           onRestart={restartTest}
           onRetryIncorrect={retryIncorrect}
           pausedMs={pausedMs}
+          bookmarks={bookmarks}
         />
       )}
     </div>

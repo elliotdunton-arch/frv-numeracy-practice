@@ -608,14 +608,14 @@ body {
   color: white;
 }
 
-/* Bookmarked: amber — overrides answered */
+/* Bookmarked: purple — overrides answered */
 .ribbon-btn.rb-bookmarked {
-  background: #f59e0b;
-  border-color: #d97706;
+  background: #7c3aed;
+  border-color: #6d28d9;
   color: white;
 }
 
-/* Answered + bookmarked: navy with amber corner star */
+/* Answered + bookmarked: navy with purple corner star */
 .ribbon-btn.rb-answered.rb-bookmarked {
   background: var(--navy);
   border-color: var(--navy);
@@ -637,7 +637,7 @@ body {
   top: -5px;
   right: -4px;
   font-size: 0.6rem;
-  color: #f59e0b;
+  color: #7c3aed;
   text-shadow: 0 0 2px white;
   line-height: 1;
 }
@@ -1045,6 +1045,64 @@ body {
   opacity: 0.8;
 }
 .lightbox-close:hover { opacity: 1; }
+
+/* ── Draggable passage panel ── */
+.drag-img-panel {
+  position: fixed;
+  z-index: 9000;
+  width: 480px;
+  max-width: calc(100vw - 40px);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.drag-img-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  background: var(--navy);
+  color: white;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.drag-img-header:active { cursor: grabbing; }
+
+.drag-img-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+.drag-img-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 0 2px;
+}
+
+.drag-img-close:hover { opacity: 1; }
+
+.drag-img-body {
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+.drag-img-img {
+  width: 100%;
+  display: block;
+}
 
 /* ── Review all-options list ── */
 .review-options-list {
@@ -1592,6 +1650,27 @@ body {
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 18px;
+}
+
+.section-card--bookmarks {
+  border: 2px solid #7c3aed;
+}
+
+.section-card--bookmarks h2 {
+  color: #7c3aed;
+}
+
+.review-item--bookmarked {
+  border-left-color: #7c3aed !important;
+}
+
+.bookmark-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #ede9fe;
+  color: #7c3aed;
+  border-radius: 999px;
+  padding: 2px 8px;
 }
 
 /* Breakdown */
@@ -2397,17 +2476,187 @@ body {
 
 .progress-new-name-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
+/* ── Stats strip ── */
+.pg-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pg-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  border-right: 1px solid var(--gray-200);
+  gap: 3px;
+}
+.pg-stat:nth-child(3n) { border-right: none; }
+
+.pg-stat-val {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.pg-stat-label {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pg-stat-streak { color: #f97316; }
+.pg-stat-up     { color: #16a34a; }
+.pg-stat-down   { color: #dc2626; }
+.pg-stat-muted  { color: var(--gray-400); font-size: 1.1rem; }
+
+/* ── Trend chart ── */
+.pg-chart-wrap {
+  padding: 16px 22px 10px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pg-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pg-chart-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pg-section-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.pg-section-tab {
+  font-size: 0.72rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--gray-300);
+  background: white;
+  color: var(--gray-600);
+  cursor: pointer;
+}
+.pg-section-tab.pst-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+}
+
+.pg-chart-svg {
+  width: 100%;
+  display: block;
+}
+
+.pg-chart-empty {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pg-chart-legend {
+  display: flex;
+  gap: 14px;
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  margin-top: 6px;
+  justify-content: flex-end;
+}
+.pgcl-pass { color: #22c55e; }
+.pgcl-fail { color: #ef4444; }
+.pgcl-line { color: #f97316; }
+
+/* ── Topic weakness ── */
+.pg-weakness-wrap {
+  padding: 14px 22px 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pg-weakness-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.pg-weakness-sub {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--gray-400);
+  font-size: 0.75rem;
+}
+
+.pg-wk-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 36px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.pg-wk-cat {
+  font-size: 0.78rem;
+  color: var(--gray-700);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pg-wk-track {
+  position: relative;
+  height: 8px;
+  background: var(--gray-100);
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.pg-wk-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.pgwk-good { background: #22c55e; }
+.pgwk-mid  { background: #f59e0b; }
+.pgwk-poor { background: #ef4444; }
+
+.pg-wk-passline {
+  position: absolute;
+  left: 70%;
+  top: -3px;
+  bottom: -3px;
+  width: 1.5px;
+  background: #f97316;
+  border-radius: 1px;
+}
+
+.pg-wk-pct {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ── Summary / table (kept slim now stats strip exists) ── */
 .progress-summary {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 22px;
-  font-size: 0.88rem;
-  color: var(--gray-600);
+  padding: 10px 22px;
+  font-size: 0.82rem;
+  color: var(--gray-500);
   border-bottom: 1px solid var(--gray-200);
-  flex-wrap: wrap;
 }
-.ps-stat strong { color: var(--gray-800); }
+.ps-stat strong { color: var(--gray-700); }
 .ps-divider { color: var(--gray-300); }
 
 .progress-table-wrap { overflow-x: auto; }
