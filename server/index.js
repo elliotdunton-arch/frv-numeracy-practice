@@ -1771,12 +1771,12 @@ const ctxBakery = {
   subtitle: 'Use the data table below to answer each question.',
   tables: [{
     heading: 'Bakery — Cost & Profit Data (per unit)',
-    headers: ['Product', 'Sale Price', 'Labour', 'Ingredients', 'Other', 'Total Cost', 'Profit/Unit', 'Volume'],
+    headers: ['Product', 'Sale Price', 'Labour', 'Ingredients', 'Other', 'Volume'],
     rows: [
-      ['Sourdough', '$5.50', '$1.20', '$0.80', '$0.30', '$2.30', '$3.20', '200'],
-      ['Croissant',  '$4.20', '$1.10', '$0.90', '$0.20', '$2.20', '$2.00', '400'],
-      ['Danish',     '$3.80', '$0.90', '$0.70', '$0.15', '$1.75', '$2.05', '300'],
-      ['Baguette',   '$3.20', '$0.60', '$0.50', '$0.10', '$1.20', '$2.00', '500'],
+      ['Sourdough', '$5.50', '$1.20', '$0.80', '$0.30', '200'],
+      ['Croissant',  '$4.20', '$1.10', '$0.90', '$0.20', '400'],
+      ['Danish',     '$3.80', '$0.90', '$0.70', '$0.15', '300'],
+      ['Baguette',   '$3.20', '$0.60', '$0.50', '$0.10', '500'],
     ]
   }]
 }
