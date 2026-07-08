@@ -215,9 +215,20 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
             {aiSummary
               ? aiSummary.split('\n').map((line, i) => {
                   if (!line.trim()) return <div key={i} className="ai-para-gap" />
-                  const bold = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                  if (line.startsWith('• ') || line.startsWith('- ')) {
-                    return <li key={i} className="ai-bullet" dangerouslySetInnerHTML={{ __html: bold.replace(/^[•\-]\s*/, '') }} />
+                  // Strip LaTeX math: $\text{X}$ → X, \times → ×, \div → ÷, etc.
+                  const stripped = line.replace(/\$([^$]+)\$/g, (_, inner) =>
+                    inner
+                      .replace(/\\text\{([^}]+)\}/g, '$1')
+                      .replace(/\\times/g, '×')
+                      .replace(/\\div/g, '÷')
+                      .replace(/\\cdot/g, '·')
+                      .replace(/\\approx/g, '≈')
+                      .replace(/\\[a-zA-Z]+\{([^}]*)\}/g, '$1')
+                      .replace(/\\/g, '')
+                  )
+                  const bold = stripped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                  if (/^[*•\-]\s/.test(stripped)) {
+                    return <li key={i} className="ai-bullet" dangerouslySetInnerHTML={{ __html: bold.replace(/^[*•\-]\s*/, '') }} />
                   }
                   return <p key={i} className="ai-para" dangerouslySetInnerHTML={{ __html: bold }} />
                 })
