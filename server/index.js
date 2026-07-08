@@ -4300,6 +4300,26 @@ const questions = [
     answer: '35'
   },
 
+  // ── Ratios & Proportions: FF, FG, FH ─────────────────────────────────────────
+  {
+    group: 'FF', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A volunteer crew consists of 5 men for every 3 women. If there are 48 people in total, how many more men are there than women?',
+    options: ['A) 6', 'B) 12', 'C) 18', 'D) 24'],
+    answer: 'B) 12'
+  },
+  {
+    group: 'FG', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A concentrated fire-retardant solution is mixed with water in a ratio of 2:15. How many litres of concentrate are required to produce 119 litres of total solution?',
+    options: ['A) 7 L', 'B) 10 L', 'C) 14 L', 'D) 17 L'],
+    answer: 'C) 14 L'
+  },
+  {
+    group: 'FH', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'In a warehouse, the ratio of heavy-duty hoses to standard hoses is 4:9. If there are 75 more standard hoses than heavy-duty hoses, how many heavy-duty hoses are there?',
+    options: ['A) 45', 'B) 60', 'C) 75', 'D) 100'],
+    answer: 'B) 60'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -5015,6 +5035,15 @@ const methods = {
     `Bundle total = Laptop sale price + (Watch price × 50%)\n  = $1,698.00 + ($399.00 × 0.50)\n  = $1,698.00 + $199.50\n  = $1,897.50`,
     `Weekly payment = Total ÷ 52\n  = $1,897.50 ÷ 52\n  = $36.490…\n  = $36.49 (rounded to 2 decimal places)`,
   ],
+  FF: [
+    `Solve for one part first:\nTotal parts = 5 + 3 = 8\n48 ÷ 8 = 6 per part\n\nMen   = 5 × 6 = 30\nWomen = 3 × 6 = 18\n\nDifference = 30 − 18 = 12`,
+  ],
+  FG: [
+    `Solve for one part first:\nTotal ratio parts = 2 + 15 = 17\n119 ÷ 17 = 7 per part\n\nConcentrate = 2 × 7 = 14 litres`,
+  ],
+  FH: [
+    `Solve for one part first:\nDifference in ratio parts = 9 − 4 = 5\n75 ÷ 5 = 15 per part\n\nHeavy-duty hoses = 4 × 15 = 60`,
+  ],
 }
 
 // ── Group-aware shuffle ───────────────────────────────────────────────────────
@@ -5087,6 +5116,7 @@ const TOPIC_GROUPS = {
   'Unit Conversions':         ['EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL'],
   'Tech Bundle Sales':        ['EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
   'Map & Scale Reading':      ['EW','EX','EY','EZ','FA','FB','FC','FD','FE'],
+  'Ratios & Proportions':    ['FF','FG','FH'],
 }
 
 app.get('/api/topics', (req, res) => {
@@ -5755,6 +5785,20 @@ const ctxFRP2_Q5 = {
 const ctxFRP2_Q6 = {
   image: '/images/literacy/FRV Practice Test 02_Q06.png',
 }
+
+// ── Reasoning & Interpretation contexts ──────────────────────────────────────
+const ctxRI_01 = { paragraphs: [
+  'The council\'s new policy requires all emergency vehicle operators to undergo biannual refresher training. While some veterans argue this is redundant given their decades of field experience, the council maintains that evolving technology in fire suppression equipment necessitates standardized, periodic competency checks.'
+]}
+const ctxRI_02 = { paragraphs: [
+  'Despite the influx of funding, the department\'s response time has not significantly improved. Critics point to the outdated dispatch software as the primary bottleneck, arguing that even with more personnel, the administrative lag remains unaddressed.'
+]}
+const ctxRI_03 = { paragraphs: [
+  'Strict adherence to safety protocols is often cited as the hallmark of an efficient team. However, excessive bureaucratic oversight can paradoxically stifle the split-second decision-making required in high-pressure emergency scenarios.'
+]}
+const ctxRI_04 = { paragraphs: [
+  'The transition to electric rescue vehicles is being driven by carbon reduction targets. While the initial costs are significantly higher than diesel counterparts, the long-term operational savings on fuel and maintenance are projected to offset the investment within seven years.'
+]}
 
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
@@ -8663,6 +8707,52 @@ const literacyQuestions = [
     answer: 'No,Yes,Yes,No',
     method: "Women meditate less than men — No: the statistics show 'there\'s a greater number of women who meditate than men.'\nExercise for the brain — Yes: 'We like to think of meditation as exercise for the brain' is explicitly stated.\nYounger people less likely — Yes: 'Adults aged 45–64 are the most likely to use meditation,' meaning younger people are less likely.\nConcentrated meditation more beneficial — No: the article presents both types objectively with no comparison of benefit levels.",
   },
+
+  // ── Reasoning & Interpretation: RI_01–RI_04 ──────────────────────────────────
+  { group: 'RI_01', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_01,
+    question: 'What is the primary reason the council insists on the biannual refresher training?',
+    options: [
+      'A) To satisfy union requirements for veteran operators.',
+      'B) To ensure operators remain competent with new fire suppression technology.',
+      'C) To address veteran complaints about the lack of recognition for field experience.',
+      'D) To reduce the overall cost of emergency response operations.',
+    ],
+    answer: 'B) To ensure operators remain competent with new fire suppression technology.',
+    method: "The council explicitly cites 'evolving technology in fire suppression equipment' as the reason for 'standardized, periodic competency checks.' Veteran experience is acknowledged but the council argues technology change overrides it. Options A, C, and D are not mentioned in the text.",
+  },
+  { group: 'RI_02', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_02,
+    question: 'Which of the following is the most logical conclusion based on the passage?',
+    options: [
+      'A) Increased funding alone will eventually solve the response time problem.',
+      'B) The dispatch software is not actually the main bottleneck.',
+      'C) Increasing personnel alone is insufficient to solve the response time issue.',
+      'D) The department should reduce staffing levels to cut administrative overhead.',
+    ],
+    answer: 'C) Increasing personnel alone is insufficient to solve the response time issue.',
+    method: "The passage states that 'even with more personnel, the administrative lag remains unaddressed' — meaning adding staff without fixing the dispatch software does not solve the problem. Option A is contradicted by the text. Option B is the opposite of what critics argue. Option D is not mentioned.",
+  },
+  { group: 'RI_03', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_03,
+    question: 'What is the author suggesting about safety protocols in emergency scenarios?',
+    options: [
+      'A) Safety protocols should be suspended entirely in high-pressure scenarios.',
+      'B) Veterans should be exempt from safety protocol requirements.',
+      'C) Safety protocols must be balanced with the need for operational flexibility.',
+      'D) Bureaucratic oversight always improves the efficiency of emergency teams.',
+    ],
+    answer: 'C) Safety protocols must be balanced with the need for operational flexibility.',
+    method: "The passage presents both sides: strict protocols are valued ('hallmark of an efficient team'), but 'excessive bureaucratic oversight can paradoxically stifle' quick decision-making. The word 'paradoxically' signals the author sees an inherent tension — implying balance is needed. Options A and B overstate the argument; Option D contradicts the passage's caution about 'excessive' oversight.",
+  },
+  { group: 'RI_04', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_04,
+    question: 'Which statement is best supported by the passage?',
+    options: [
+      'A) Electric rescue vehicles are immediately more cost-effective than diesel vehicles.',
+      'B) The transition to electric vehicles is driven entirely by long-term financial benefits.',
+      'C) The vehicles are expected to become cost-neutral within a specific timeframe.',
+      'D) Maintenance costs for electric vehicles are higher than for diesel vehicles.',
+    ],
+    answer: 'C) The vehicles are expected to become cost-neutral within a specific timeframe.',
+    method: "The passage states that 'long-term operational savings on fuel and maintenance are projected to offset the investment within seven years' — meaning costs are expected to balance out at a specific point in time, making C the best answer. Option A is contradicted by 'initial costs are significantly higher.' Option B is wrong — the primary driver is 'carbon reduction targets.' Option D is contradicted by the savings claim.",
+  },
 ]
 
 app.get('/api/literacy-topics', (req, res) => {
@@ -10025,6 +10115,26 @@ const mechanicalQuestions = [
     options: ['A) AB', 'B) BC', 'C) CA', 'D) All the same'],
     answer: 'B) BC',
     method: 'Removing pins B and C leaves only pin A. The plate then rotates freely around the green pivot, swinging up as far as pin A allows — achieving the greatest arc distance. Removing any other combination leaves a closer-set pin that limits the swing to a shorter distance.'
+  },
+
+  // ── Theory Questions: MTHY_01–MTHY_03 ────────────────────────────────────────
+  { group: 'MTHY_01', set: 'Theory Questions', type: 'multiple_choice', category: 'Gears & Wheels',
+    question: 'A gear train has 5 gears in a sequence (A to E). If Gear A rotates clockwise, in which direction does Gear E rotate?',
+    options: ['A) Clockwise', 'B) Counter-clockwise', 'C) It depends on the gear sizes', 'D) Cannot be determined'],
+    answer: 'A) Clockwise',
+    method: 'Each mesh point in a gear sequence reverses the direction of rotation. With 5 gears there are 4 mesh points (an even number of reversals), so the last gear rotates in the same direction as the first. Rule: odd number of gears in a sequence → same direction as the first gear.'
+  },
+  { group: 'MTHY_02', set: 'Theory Questions', type: 'multiple_choice', category: 'Belts & Pulleys',
+    question: 'Two pulleys are connected by a crossed belt. If the driving pulley turns clockwise, what is the direction of rotation of the driven pulley?',
+    options: ['A) Clockwise', 'B) Counter-clockwise', 'C) The same as the driving pulley', 'D) It depends on pulley size'],
+    answer: 'B) Counter-clockwise',
+    method: 'A crossed (X-shaped) belt reverses the direction of rotation between the two pulleys — the belt twists so that the top of the driven pulley is pushed in the opposite direction to the driving pulley. An open (flat, uncrossed) belt keeps both pulleys rotating in the same direction.'
+  },
+  { group: 'MTHY_03', set: 'Theory Questions', type: 'multiple_choice', category: 'Structures',
+    question: 'A ladder is leaning against a wall at a 60-degree angle. If the bottom of the ladder is moved 1 metre further from the wall, what happens to the height of the top of the ladder on the wall?',
+    options: ['A) It increases', 'B) It decreases', 'C) It stays the same', 'D) It depends on the ladder length'],
+    answer: 'B) It decreases',
+    method: 'The ladder is a fixed length (hypotenuse). By Pythagoras: height² + base² = length². Increasing the base distance decreases height² — so the top of the ladder slides down the wall. The longer the base, the lower the height.'
   },
 ]
 
