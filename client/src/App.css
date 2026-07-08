@@ -2769,6 +2769,21 @@ body {
 
 /* expand + delete controls */
 .pl-expand-cell, .pl-delete-cell { width: 32px; text-align: center; }
+.pl-resit-cell { width: 56px; text-align: center; }
+
+.pl-resit-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #7c3aed;
+  background: #ede9fe;
+  border: 1px solid #c4b5fd;
+  border-radius: 5px;
+  padding: 3px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s;
+}
+.pl-resit-btn:hover { background: #7c3aed; color: white; }
 
 .pl-expand-btn {
   background: none;

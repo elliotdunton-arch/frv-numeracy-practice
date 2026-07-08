@@ -10747,6 +10747,19 @@ app.get('/api/mechanical-questions', (req, res) => {
   res.json(customCount ? final.slice(0, customCount) : final)
 })
 
+// ── Questions by IDs (resit same test) ───────────────────────────────────────
+app.post('/api/questions-by-ids', (req, res) => {
+  const { ids } = req.body
+  if (!Array.isArray(ids) || ids.length === 0) {
+    return res.status(400).json({ error: 'ids array required' })
+  }
+  const idSet = new Set(ids)
+  const ordered = ids
+    .map(id => questions.find(q => q.id === id))
+    .filter(Boolean)
+  res.json(ordered)
+})
+
 // ── AI Summary ───────────────────────────────────────────────────────────────
 app.post('/api/ai-summary', async (req, res) => {
   const { score, total, pct, section, breakdown, timeExpired } = req.body

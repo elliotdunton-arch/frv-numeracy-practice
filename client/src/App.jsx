@@ -80,11 +80,40 @@ export default function App() {
     setScreen('quiz')
   }
 
+  const resitTest = async (questionIds, sec) => {
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/questions-by-ids', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: questionIds }),
+      })
+      if (!res.ok) throw new Error('Failed to load questions')
+      const qs = await res.json()
+      if (qs.length === 0) throw new Error('No questions found')
+      setSection(sec)
+      setQuestions(qs)
+      setTotalTime(sec === 'mechanical' ? Math.round(qs.length * 37.5) : qs.length * 70)
+      setAnswers({})
+      setBookmarks(new Set())
+      setStartTime(Date.now())
+      setEndTime(null)
+      setTimeExpired(false)
+      setScreen('quiz')
+    } catch (err) {
+      setError('Could not load the previous test. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="app">
       {screen === 'home' && (
         <Home
           onStart={startTest}
+          onResit={resitTest}
           loading={loading}
           error={error}
           section={section}

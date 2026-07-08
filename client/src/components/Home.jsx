@@ -153,7 +153,7 @@ function TrendChart({ data }) {
   )
 }
 
-function ProgressLog() {
+function ProgressLog({ onResit }) {
   const [currentUser, setCurrentUser] = useState(() => getUsername())
   const [results, setResults] = useState(() => currentUser ? getResultsForUser(currentUser) : [])
   const [switchMode, setSwitchMode] = useState(false)
@@ -387,6 +387,7 @@ function ProgressLog() {
                       <th>%</th>
                       <th>Time</th>
                       <th></th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -415,6 +416,17 @@ function ProgressLog() {
                             </span>
                           </td>
                           <td>{formatTime(r.timeSecs)}</td>
+                          <td className="pl-resit-cell">
+                            {r.questionIds && r.questionIds.length > 0 && (
+                              <button
+                                className="pl-resit-btn"
+                                onClick={e => { e.stopPropagation(); onResit(r.questionIds, r.section) }}
+                                title="Resit this exact test"
+                              >
+                                Resit
+                              </button>
+                            )}
+                          </td>
                           <td className="pl-delete-cell">
                             <button
                               className={`pl-delete-btn${pendingDelete === r.id ? ' pl-delete-confirm' : ''}`}
@@ -427,7 +439,7 @@ function ProgressLog() {
                         </tr>
                         {expanded.has(r.id) && (
                           <tr className="pl-breakdown-row">
-                            <td colSpan="7">
+                            <td colSpan="8">
                               <div className="pl-breakdown">
                                 {r.breakdown && r.breakdown.length > 0 ? (
                                   r.breakdown.map(({ cat, correct, total: t }) => (
@@ -466,7 +478,7 @@ function ProgressLog() {
   )
 }
 
-export default function Home({ onStart, loading, error, section, onSectionChange }) {
+export default function Home({ onStart, onResit, loading, error, section, onSectionChange }) {
   const [activeTab, setActiveTab] = useState(section) // 'numeracy' | 'literacy' | 'abstract' | 'progress'
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
@@ -612,7 +624,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
         </div>
       </div>
 
-      {activeTab === 'progress' && <ProgressLog />}
+      {activeTab === 'progress' && <ProgressLog onResit={onResit} />}
 
       {activeTab !== 'progress' && <div className="home-card">
         <p className="card-desc">{content.desc}</p>

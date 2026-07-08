@@ -155,6 +155,7 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
       pct,
       timeSecs: elapsed,
       breakdown: breakdown.map(({ cat, correct, total: t }) => ({ cat, correct, total: t })),
+      questionIds: questions.map(q => q.id),
     })
     setRecordState('saved')
   }
