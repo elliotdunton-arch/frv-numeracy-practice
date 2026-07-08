@@ -1797,6 +1797,23 @@ const ctxBakedGoods = {
   }]
 }
 
+// ── Financial Data Analysis context (shared across GH–GQ) ────────────────────
+const finCtx = {
+  title: 'Company Financial Data',
+  tables: [{
+    headers: ['Company', '2018 Net Profit ($M)', '2019 Net Profit ($M)', 'Equity 2019 ($M)'],
+    rows: [
+      ['Aero',     '45',  '52',  '300'],
+      ['BioTech',  '88',  '82',  '450'],
+      ['Core',     '120', '145', '800'],
+      ['DataSync', '210', '205', '600'],
+      ['Eco',      '35',  '48',  '200'],
+      ['Flow',     '95',  '70',  '400'],
+    ]
+  }],
+  formulaHint: 'ROE (%) = (Net Profit ÷ Shareholders Equity) × 100'
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -1814,12 +1831,6 @@ const questions = [
     question: "What is the difference in gross pay between Sarah's highest and lowest earning days?",
     answer: '55.25'
   },
-  {
-    group: 'A', type: 'number_input', category: 'Number and Algebra',
-    context: ctx1,
-    question: "If Sarah's weekday rate increases by 2.5%, what is her new hourly rate?\n(Round to 2 decimal places)",
-    answer: '56.63'
-  },
 
   // ── Set 2: Marcus Reid — weekday $63.75, sat $95.63, sun $127.50 ─────────
   {
@@ -1833,12 +1844,6 @@ const questions = [
     context: ctx2,
     question: "What is the difference in gross pay between Marcus's highest and lowest earning days?",
     answer: '127.48'
-  },
-  {
-    group: 'B', type: 'number_input', category: 'Number and Algebra',
-    context: ctx2,
-    question: "If Marcus's weekday rate decreases by 1.5%, what is his new hourly rate?\n(Round to 2 decimal places)",
-    answer: '62.79'
   },
 
   // ── Set 3: Anika Johansson — weekday $58.50, sat $87.75, sun $117.00 ─────
@@ -1854,12 +1859,6 @@ const questions = [
     question: "What is the difference in gross pay between Anika's highest and lowest earning days?",
     answer: '87.75'
   },
-  {
-    group: 'C', type: 'number_input', category: 'Number and Algebra',
-    context: ctx3,
-    question: "If Anika's weekday rate increases by 3.2%, what is her new hourly rate?\n(Round to 2 decimal places)",
-    answer: '60.37'
-  },
 
   // ── Set 4: Daniel Reyes — weekday $66.15, sat $99.23, sun $132.30 ─────────
   {
@@ -1873,12 +1872,6 @@ const questions = [
     context: ctx4,
     question: "What is the difference in gross pay between Daniel's highest and lowest earning days?",
     answer: '165.36'
-  },
-  {
-    group: 'D', type: 'number_input', category: 'Number and Algebra',
-    context: ctx4,
-    question: "If Daniel's weekday rate increases by 4.2%, what is his new hourly rate?\n(Round to 2 decimal places)",
-    answer: '68.93'
   },
 
   // ── Set 5: Lena Petrov — weekday $72.45, sat $108.68, sun $144.90 ─────────
@@ -1894,12 +1887,6 @@ const questions = [
     question: "What is the difference in gross pay between Lena's highest and lowest earning days?",
     answer: '126.79'
   },
-  {
-    group: 'E', type: 'number_input', category: 'Number and Algebra',
-    context: ctx5,
-    question: "If Lena's weekday rate decreases by 2%, what is her new hourly rate?\n(Round to 2 decimal places)",
-    answer: '71.00'
-  },
 
   // ── Set 6: Omar Hassan — weekday $64.80, sat $97.20, sun $129.60 ──────────
   {
@@ -1913,12 +1900,6 @@ const questions = [
     context: ctx6,
     question: "What is the difference in gross pay between Omar's highest and lowest earning days?",
     answer: '275.40'
-  },
-  {
-    group: 'F', type: 'number_input', category: 'Number and Algebra',
-    context: ctx6,
-    question: "If Omar's weekday rate increases by 5%, what is his new hourly rate?\n(Round to 2 decimal places)",
-    answer: '68.04'
   },
 
   // ── Set 7: Claire Thompson — weekday $69.35, sat $104.03, sun $138.70 ─────
@@ -1934,12 +1915,6 @@ const questions = [
     question: "What is the difference in gross pay between Claire's highest and lowest earning days?",
     answer: '208.03'
   },
-  {
-    group: 'G', type: 'number_input', category: 'Number and Algebra',
-    context: ctx7,
-    question: "If the Saturday rate decreases by 3%, what is the new Saturday hourly rate?\n(Round to 2 decimal places)",
-    answer: '100.91'
-  },
 
   // ── Set 8: Ben Fitzgerald — weekday $57.90, sat $86.85, sun $115.80 ────────
   {
@@ -1953,12 +1928,6 @@ const questions = [
     context: ctx8,
     question: "What is the difference in gross pay between Ben's highest and lowest earning days?",
     answer: '434.25'
-  },
-  {
-    group: 'H', type: 'number_input', category: 'Number and Algebra',
-    context: ctx8,
-    question: "If Ben's weekday rate increases by 1.8%, what is his new hourly rate?\n(Round to 2 decimal places)",
-    answer: '58.94'
   },
 
   // ── Set 9: Nina Vasquez — weekday $74.20, sat $111.30, sun $148.40 ─────────
@@ -1974,12 +1943,6 @@ const questions = [
     question: "What is the difference in gross pay between Nina's highest and lowest earning days?",
     answer: '222.60'
   },
-  {
-    group: 'I', type: 'number_input', category: 'Number and Algebra',
-    context: ctx9,
-    question: "If Nina's weekday rate increases by 2.2%, what is her new hourly rate?\n(Round to 2 decimal places)",
-    answer: '75.83'
-  },
 
   // ── Set 10: Adrian Kowalczyk — weekday $67.45, sat $101.18, sun $134.90 ────
   {
@@ -1993,12 +1956,6 @@ const questions = [
     context: ctx10,
     question: "What is the difference in gross pay between Adrian's highest and lowest earning days?",
     answer: '286.66'
-  },
-  {
-    group: 'J', type: 'number_input', category: 'Number and Algebra',
-    context: ctx10,
-    question: "If Adrian's weekday rate increases by 3.5%, what is his new hourly rate?\n(Round to 2 decimal places)",
-    answer: '69.81'
   },
 
   // ── Set K: Station Alpha ─────────────────────────────────────────────────────
@@ -4476,6 +4433,252 @@ const questions = [
     answer: '1320'
   },
 
+  // ── Sequential Deductions: GC, GD, GE, GF, GG ───────────────────────────────
+  {
+    group: 'GC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Equipment Budget: A department has $2,000 for equipment. They spend 20% on safety gear, then 10% of the remaining budget on software. How much is left?',
+    answer: '1440'
+  },
+  {
+    group: 'GC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Cargo Weight: A transport truck carries 800 kg of goods. It drops off 25% at the first stop, then 40% of the remaining load at the second stop. How much cargo remains?',
+    answer: '360'
+  },
+  {
+    group: 'GD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Battery Drain: A device battery at 100% capacity loses 30% during heavy use, then loses 20% of the remaining charge during standby. What is the final charge percentage?',
+    answer: '56'
+  },
+  {
+    group: 'GD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Reservoir Levels: A reservoir holds 5,000 litres. It loses 10% to evaporation, then 5% of the remaining water is used for irrigation. How much water is left?',
+    answer: '4275'
+  },
+  {
+    group: 'GE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Recruitment Pipeline: 400 applicants apply for a job. 15% are rejected immediately. Of those remaining, 50% are rejected after the first interview. How many applicants are left?',
+    answer: '170'
+  },
+  {
+    group: 'GE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Warehouse Stock: A warehouse stocks 1,200 units. 20% are sold in week one. In week two, 25% of the remaining stock is sold. How many units remain?',
+    answer: '720'
+  },
+  {
+    group: 'GF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Fuel Consumption: A fleet starts with 600 litres of fuel. They use 10% on the first leg, then 20% of the remaining fuel on the second leg. How much fuel is left?',
+    answer: '432'
+  },
+  {
+    group: 'GF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Salary Allocation: A worker earns $1,000. They save 30%, then spend 20% of the remainder on rent. How much money is left?',
+    answer: '560'
+  },
+  {
+    group: 'GG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Material Waste: A fabric roll is 40 metres long. 10% is used for a project, then 5% of the remaining fabric is lost to cutting errors. How much fabric is left?',
+    answer: '34.2'
+  },
+  {
+    group: 'GG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Investment Drawdown: An account holds $5,000. It drops 5% due to market fees, then drops a further 10% of the remaining balance due to a withdrawal. How much remains?',
+    answer: '4275'
+  },
+
+  // ── Financial Data Analysis: GH, GI, GJ, GK, GL, GM, GN, GO, GP, GQ ────────
+  {
+    group: 'GH', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had the largest net profit decrease from 2018 to 2019?',
+    options: ['A) BioTech', 'B) DataSync', 'C) Flow', 'D) Eco'],
+    answer: 'C) Flow',
+    method: 'Calculate each change: Aero +7, BioTech −6, Core +25, DataSync −5, Eco +13, Flow −25.\nFlow had the largest decrease: 95 − 70 = 25.'
+  },
+  {
+    group: 'GH', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for Aero in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '17',
+    method: 'ROE = (52 ÷ 300) × 100 = 17.3% → 17%'
+  },
+  {
+    group: 'GI', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had the largest net profit increase from 2018 to 2019?',
+    options: ['A) Aero', 'B) Eco', 'C) Core', 'D) Flow'],
+    answer: 'C) Core',
+    method: 'Calculate each increase: Aero +7, Core +25, Eco +13. Decreases: BioTech −6, DataSync −5, Flow −25.\nCore had the largest increase: 145 − 120 = 25.'
+  },
+  {
+    group: 'GI', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for BioTech in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '18',
+    method: 'ROE = (82 ÷ 450) × 100 = 18.2% → 18%'
+  },
+  {
+    group: 'GJ', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company experienced a net profit decrease of exactly 6?',
+    options: ['A) Aero', 'B) BioTech', 'C) DataSync', 'D) Flow'],
+    answer: 'B) BioTech',
+    method: 'BioTech: 88 − 82 = 6. The other decreases are DataSync (5) and Flow (25), not 6.'
+  },
+  {
+    group: 'GJ', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for Core in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '18',
+    method: 'ROE = (145 ÷ 800) × 100 = 18.1% → 18%'
+  },
+  {
+    group: 'GK', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had the smallest net profit change (increase or decrease) from 2018 to 2019?',
+    options: ['A) Aero', 'B) BioTech', 'C) DataSync', 'D) Eco'],
+    answer: 'C) DataSync',
+    method: 'Absolute changes: Aero 7, BioTech 6, DataSync 5, Eco 13, Flow 25.\nDataSync had the smallest change: |210 − 205| = 5.'
+  },
+  {
+    group: 'GK', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for DataSync in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '34',
+    method: 'ROE = (205 ÷ 600) × 100 = 34.2% → 34%'
+  },
+  {
+    group: 'GL', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which group of companies each had a net profit increase of more than 5 from 2018 to 2019?',
+    options: ['A) Aero, BioTech, Eco', 'B) Aero, Core, Eco', 'C) Core, Eco, Flow', 'D) Aero, Core, DataSync'],
+    answer: 'B) Aero, Core, Eco',
+    method: 'Increases: Aero +7, Core +25, Eco +13 — all exceed 5.\nDecreases: BioTech −6, DataSync −5, Flow −25 — none qualify.\nA is wrong (BioTech decreased). C includes Flow (decreased). D includes DataSync (decreased).'
+  },
+  {
+    group: 'GL', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for Eco in 2019?',
+    unit: '%', answer: '24',
+    method: 'ROE = (48 ÷ 200) × 100 = 24.0% → 24%'
+  },
+  {
+    group: 'GM', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had a net profit decrease of more than 20 from 2018 to 2019?',
+    options: ['A) BioTech', 'B) DataSync', 'C) Core', 'D) Flow'],
+    answer: 'D) Flow',
+    method: 'Decreases: BioTech −6, DataSync −5, Flow −25.\nOnly Flow exceeded 20: 95 − 70 = 25.'
+  },
+  {
+    group: 'GM', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'Using the ROE formula, what was the ROE (%) for Flow in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '18',
+    method: 'ROE = (70 ÷ 400) × 100 = 17.5% → 18%'
+  },
+  {
+    group: 'GN', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which group of companies all saw a decrease in net profit from 2018 to 2019?',
+    options: ['A) BioTech, Flow, Eco', 'B) DataSync, Flow, Core', 'C) BioTech, DataSync, Flow', 'D) Aero, BioTech, Flow'],
+    answer: 'C) BioTech, DataSync, Flow',
+    method: 'BioTech: 88→82 (−6), DataSync: 210→205 (−5), Flow: 95→70 (−25). All three decreased.\nAero, Core, and Eco all increased.'
+  },
+  {
+    group: 'GN', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'If Aero increased its 2019 net profit by 20%, what would its new ROE (%) be? Round to the nearest whole number.',
+    unit: '%', answer: '21',
+    method: 'New profit = 52 × 1.20 = 62.4\nROE = (62.4 ÷ 300) × 100 = 20.8% → 21%'
+  },
+  {
+    group: 'GO', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had the highest net profit in 2018?',
+    options: ['A) Core', 'B) DataSync', 'C) Flow', 'D) BioTech'],
+    answer: 'B) DataSync',
+    method: '2018 profits: Aero 45, BioTech 88, Core 120, DataSync 210, Eco 35, Flow 95.\nDataSync at 210 was the highest.'
+  },
+  {
+    group: 'GO', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: "If Eco's 2019 net profit increased to 55, what would its new ROE (%) be? Round to the nearest whole number.",
+    unit: '%', answer: '28',
+    method: 'ROE = (55 ÷ 200) × 100 = 27.5% → 28%'
+  },
+  {
+    group: 'GP', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Which company had the lowest net profit in 2019?',
+    options: ['A) Aero', 'B) Flow', 'C) Eco', 'D) BioTech'],
+    answer: 'C) Eco',
+    method: '2019 profits: Aero 52, BioTech 82, Core 145, DataSync 205, Eco 48, Flow 70.\nEco at 48 was the lowest.'
+  },
+  {
+    group: 'GP', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: "If Core's shareholders equity was 1,000 instead of 800, what would its 2019 ROE (%) be? Round to the nearest whole number.",
+    unit: '%', answer: '15',
+    method: 'ROE = (145 ÷ 1000) × 100 = 14.5% → 15%'
+  },
+  {
+    group: 'GQ', context: finCtx, type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Which company's 2019 net profit is closest to its 2018 net profit?",
+    options: ['A) Aero', 'B) BioTech', 'C) DataSync', 'D) Eco'],
+    answer: 'C) DataSync',
+    method: 'Absolute changes: Aero 7, BioTech 6, Core 25, DataSync 5, Eco 13, Flow 25.\nDataSync had the smallest change of 5 (210 → 205).'
+  },
+  {
+    group: 'GQ', context: finCtx, type: 'number_input', category: 'Number and Algebra',
+    question: 'What is the average ROE (%) of Aero and Eco combined in 2019? Round to the nearest whole number.',
+    unit: '%', answer: '21',
+    method: 'Aero ROE = (52 ÷ 300) × 100 = 17.3%\nEco ROE = (48 ÷ 200) × 100 = 24.0%\nAverage = (17.3 + 24.0) ÷ 2 = 20.65% → 21%'
+  },
+
+  // ── Ratio & Distribution: GR, GS, GT, GU, GV ────────────────────────────────
+  {
+    group: 'GR', type: 'number_input', category: 'Number and Algebra',
+    question: 'The Heavy Load: Two trucks deliver a total of 420 tonnes of gravel. Truck A carries 2.5 times as much as Truck B. How many tonnes does Truck B carry?',
+    unit: 'tonnes', answer: '120',
+    method: 'Let x = Truck B\nTruck A = 2.5x\nx + 2.5x = 420\n3.5x = 420\nx = 120 tonnes'
+  },
+  {
+    group: 'GR', type: 'number_input', category: 'Number and Algebra',
+    question: 'The Relay Race: Three runners cover 60 km in total. The second runner covers twice the distance of the first, and the third covers three times the distance of the first. How far does the first runner travel?',
+    unit: 'km', answer: '10',
+    method: 'Let x = first runner\nSecond = 2x, Third = 3x\nx + 2x + 3x = 60\n6x = 60\nx = 10 km'
+  },
+  {
+    group: 'GS', type: 'number_input', category: 'Number and Algebra',
+    question: 'The Pipe Leak: A tank loses 240 litres through two leaks. The large leak loses 5 times as much as the small leak. How many litres are lost through the large leak?',
+    unit: 'L', answer: '200',
+    method: 'Let x = small leak\nLarge = 5x\nx + 5x = 240\n6x = 240 → x = 40\nLarge = 5 × 40 = 200 L'
+  },
+  {
+    group: 'GS', type: 'number_input', category: 'Number and Algebra',
+    question: 'Warehouse Inventory: A warehouse holds 540 items split between electronics, clothing, and tools. There are 4 times as many clothes as electronics, and the tools count equals the electronics count. How many clothing items are there?',
+    answer: '360',
+    method: 'Let x = electronics\nTools = x, Clothes = 4x\nx + x + 4x = 540\n6x = 540 → x = 90\nClothes = 4 × 90 = 360'
+  },
+  {
+    group: 'GT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Fuel Efficiency: Two cars consume 90 litres of fuel combined. Car A consumes 0.5 times as much as Car B. How much fuel does Car B consume?',
+    unit: 'L', answer: '60',
+    method: 'Let x = Car B\nCar A = 0.5x\nx + 0.5x = 90\n1.5x = 90\nx = 60 L'
+  },
+  {
+    group: 'GT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Construction Hours: Two contractors work a combined 110 hours on a project. One works 1.75 times longer than the other. How many hours did the person on the longer shift work?',
+    unit: 'hrs', answer: '70',
+    method: 'Let x = shorter shift\nLonger = 1.75x\nx + 1.75x = 110\n2.75x = 110 → x = 40\nLonger = 1.75 × 40 = 70 hrs'
+  },
+  {
+    group: 'GU', type: 'number_input', category: 'Number and Algebra',
+    question: 'Orchard Harvest: Two trees produce 340 apples. The older tree produces 1.125 times as many as the younger tree. How many apples does the younger tree produce?',
+    answer: '160',
+    method: 'Let x = younger tree\nOlder = 1.125x\nx + 1.125x = 340\n2.125x = 340\nx = 160 apples'
+  },
+  {
+    group: 'GU', type: 'number_input', category: 'Number and Algebra',
+    question: 'The Painting Project: Two painters log 80 hours combined on a mural. Painter A works for 3/5 of the time Painter B works. How many hours does Painter B work?',
+    unit: 'hrs', answer: '50',
+    method: 'Let x = Painter B\nPainter A = (3/5)x = 0.6x\nx + 0.6x = 80\n1.6x = 80\nx = 50 hrs'
+  },
+  {
+    group: 'GV', type: 'number_input', category: 'Number and Algebra',
+    question: 'Electrical Circuit: Two resistors dissipate 130 watts in total. Resistor A dissipates 2.25 times as much as Resistor B. What is the wattage of Resistor B?',
+    unit: 'W', answer: '40',
+    method: 'Let x = Resistor B\nResistor A = 2.25x\nx + 2.25x = 130\n3.25x = 130\nx = 40 W'
+  },
+  {
+    group: 'GV', type: 'number_input', category: 'Number and Algebra',
+    question: 'Shared Commission: Two salespeople share a $7,500 commission. The senior salesperson earns 4 times as much as the junior. How much does the junior salesperson earn?',
+    unit: '$', answer: '1500',
+    method: 'Let x = junior commission\nSenior = 4x\nx + 4x = 7500\n5x = 7500\nx = $1,500'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -5475,6 +5678,9 @@ const TOPIC_GROUPS = {
   'Part-to-Whole Ratios':   ['FN','FO','FP','FQ','FR'],
   'Bakery Profit & Loss':   ['FS','FT','FU','FV','FW'],
   'Successive % Changes':   ['FX','FY','FZ','GA','GB'],
+  'Sequential Deductions':    ['GC','GD','GE','GF','GG'],
+  'Financial Data Analysis': ['GH','GI','GJ','GK','GL','GM','GN','GO','GP','GQ'],
+  'Ratio & Distribution':   ['GR','GS','GT','GU','GV'],
 }
 
 app.get('/api/topics', (req, res) => {
