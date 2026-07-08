@@ -4476,6 +4476,68 @@ const questions = [
     answer: '1320'
   },
 
+  // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
+  {
+    group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Property Values: A house price increased by 15% in the first year and by 20% in the second year. What is the overall percentage increase?',
+    options: ['A) 35%', 'B) 38%', 'C) 40%', 'D) 42%'],
+    answer: 'B) 38%'
+  },
+  {
+    group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Retail Stock: An item's price dropped by 10% in a sale, then by another 10% in a clearance event. What is the total percentage decrease from the original price?",
+    options: ['A) 18%', 'B) 19%', 'C) 20%', 'D) 21%'],
+    answer: 'B) 19%'
+  },
+  {
+    group: 'FY', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Manufacturing Output: A factory increased production by 25% in 2024, but production fell by 20% in 2025 due to equipment failure. What is the net change in production?',
+    options: ['A) 0% — no net change', 'B) 5% increase', 'C) 5% decrease', 'D) 10% decrease'],
+    answer: 'A) 0% — no net change'
+  },
+  {
+    group: 'FY', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Tech Subscription: A subscription fee rose by 50% in the first year and by another 50% in the second year. What is the total percentage increase over two years?',
+    options: ['A) 100%', 'B) 115%', 'C) 125%', 'D) 150%'],
+    answer: 'C) 125%'
+  },
+  {
+    group: 'FZ', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Currency Fluctuation: A currency gained 30% against the dollar in six months, then lost 30% over the next six months. What is the final net change?',
+    options: ['A) 0% — no net change', 'B) 9% increase', 'C) 9% decrease', 'D) 18% decrease'],
+    answer: 'C) 9% decrease'
+  },
+  {
+    group: 'FZ', type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Population Growth: A town's population grew by 12% in the first year and by 15% in the second year. What is the overall percentage growth?",
+    options: ['A) 27%', 'B) 27.5%', 'C) 28.8%', 'D) 29%'],
+    answer: 'C) 28.8%'
+  },
+  {
+    group: 'GA', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Investment Return: An investment fund grew by 40% in year one, but then lost 25% in year two. What is the final percentage change?',
+    options: ['A) 5% decrease', 'B) 0% — no net change', 'C) 5% increase', 'D) 15% increase'],
+    answer: 'C) 5% increase'
+  },
+  {
+    group: 'GA', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Fuel Efficiency: An engine design improved fuel efficiency by 8% in version two, and by another 8% in version three. What is the total improvement percentage?',
+    options: ['A) 15%', 'B) 16%', 'C) 16.64%', 'D) 17%'],
+    answer: 'C) 16.64%'
+  },
+  {
+    group: 'GB', type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Business Revenue: A company's revenue fell by 40% in a recession, but recovered by 40% the following year. What was the net percentage change from the original revenue?",
+    options: ['A) 0% — no net change', 'B) 10% decrease', 'C) 16% decrease', 'D) 24% decrease'],
+    answer: 'C) 16% decrease'
+  },
+  {
+    group: 'GB', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Energy Consumption: A building reduced its energy consumption by 20% through LED installation, and a further 20% through better insulation. What is the total percentage reduction?',
+    options: ['A) 32%', 'B) 36%', 'C) 40%', 'D) 44%'],
+    answer: 'B) 36%'
+  },
+
   // ── Part-to-Whole Ratios: FN, FO, FP, FQ, FR ─────────────────────────────────
   {
     group: 'FN', type: 'number_input', category: 'Number and Algebra',
@@ -4595,6 +4657,7 @@ const units = {
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
   FI: ['g', 'g'], FJ: ['g', 'scoops'], FK: ['kg', 'g'], FL: ['g', 'g'], FM: ['g', 'g'],
+  FX: [null, null], FY: [null, null], FZ: [null, null], GA: [null, null], GB: [null, null],
   FS: ['$', '$'], FT: ['$', '$'], FU: ['$', '$'], FV: ['$', '$'], FW: ['$', '$'],
   FN: ['L', null], FO: [null, null], FP: [null, null], FQ: [null, 'L'], FR: ['m³', null],
 }
@@ -5266,6 +5329,26 @@ const methods = {
     `750 g of Muffins requires 300 g of flour.\n3.75 kg = 3750 g of Muffins:\n  3750 ÷ 750 = 5 batches\n  5 × 300 g = 1500 g flour needed`,
     `750 g of Cake requires 350 g of flour.\n1.5 kg = 1500 g of Cake:\n  1500 ÷ 750 = 2 batches\n  2 × 350 g = 700 g flour needed\n\nJohn has 1200 g (1.2 kg).\n1200 g − 700 g = 500 g remaining.`,
   ],
+  FX: [
+    `Multiplier method:\n  Year 1: +15% → ×1.15\n  Year 2: +20% → ×1.20\n\n1.15 × 1.20 = 1.38 → 38% increase\n\nCommon mistake: 15 + 20 = 35% — this ignores compounding.`,
+    `Multiplier method:\n  Drop 1: −10% → ×0.90\n  Drop 2: −10% → ×0.90\n\n0.90 × 0.90 = 0.81 → 100% − 81% = 19% decrease\n\nCommon mistake: 10 + 10 = 20% — the second 10% applies to the already-reduced price.`,
+  ],
+  FY: [
+    `Multiplier method:\n  +25% → ×1.25\n  −20% → ×0.80\n\n1.25 × 0.80 = 1.00 → 0% net change\n\nThe 20% fall applies to the higher 125% base, exactly cancelling the gain.`,
+    `Multiplier method:\n  Year 1: +50% → ×1.50\n  Year 2: +50% → ×1.50\n\n1.50 × 1.50 = 2.25 → 125% increase\n\nCommon mistake: 50 + 50 = 100% — the second 50% is on the already-higher price.`,
+  ],
+  FZ: [
+    `Multiplier method:\n  +30% → ×1.30\n  −30% → ×0.70\n\n1.30 × 0.70 = 0.91 → 100% − 91% = 9% decrease\n\nKey insight: equal gains and losses of the same % do NOT cancel out.`,
+    `Multiplier method:\n  +12% → ×1.12\n  +15% → ×1.15\n\n1.12 × 1.15 = 1.288 → 28.8% growth\n\nCommon mistake: 12 + 15 = 27%.`,
+  ],
+  GA: [
+    `Multiplier method:\n  +40% → ×1.40\n  −25% → ×0.75\n\n1.40 × 0.75 = 1.05 → 5% increase\n\nCommon mistake: 40 − 25 = 15% — the 25% loss is of the higher post-gain value.`,
+    `Multiplier method:\n  +8% → ×1.08 (version 2)\n  +8% → ×1.08 (version 3)\n\n1.08 × 1.08 = 1.1664 → 16.64% total improvement\n\nCommon mistake: 8 + 8 = 16%.`,
+  ],
+  GB: [
+    `Multiplier method:\n  −40% → ×0.60\n  +40% → ×1.40\n\n0.60 × 1.40 = 0.84 → 100% − 84% = 16% decrease\n\nKey insight: the 40% recovery applies to the lower base, so it cannot fully restore the original.`,
+    `Multiplier method:\n  −20% → ×0.80 (LED)\n  −20% → ×0.80 (insulation)\n\n0.80 × 0.80 = 0.64 → 100% − 64% = 36% total reduction\n\nCommon mistake: 20 + 20 = 40%.`,
+  ],
   FS: [
     `Sourdough ingredient drops from $0.80 to $0.60 (−$0.20).\nNew unit cost = $1.20 + $0.60 + $0.30 = $2.10\nNew profit per unit = $5.50 − $2.10 = $3.40\n\nNew volume = 200 × 1.5 = 300 units\nTotal profit = $3.40 × 300 = $1,020`,
     `Labour: $1.10 − $0.15 = $0.95\nIngredients: $0.90 + $0.05 = $0.95\nNew unit cost = $0.95 + $0.95 + $0.20 = $2.10\nNew profit per unit = $4.20 − $2.10 = $2.10`,
@@ -5391,6 +5474,7 @@ const TOPIC_GROUPS = {
   'Baked Goods':             ['FI','FJ','FK','FL','FM'],
   'Part-to-Whole Ratios':   ['FN','FO','FP','FQ','FR'],
   'Bakery Profit & Loss':   ['FS','FT','FU','FV','FW'],
+  'Successive % Changes':   ['FX','FY','FZ','GA','GB'],
 }
 
 app.get('/api/topics', (req, res) => {
