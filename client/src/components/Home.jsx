@@ -333,6 +333,7 @@ export default function Home({ onStart, loading, error, section, onSectionChange
   const [selectedCategories, setSelectedCategories] = useState(new Set())
   const [strategyOpen, setStrategyOpen] = useState(false)
   const [logicLoopsOpen, setLogicLoopsOpen] = useState(false)
+  const [elimMethodOpen, setElimMethodOpen] = useState(false)
   const [formulaOpen, setFormulaOpen] = useState(false)
   const [mechSetsOpen, setMechSetsOpen] = useState(false)
   const [selectedMechSets, setSelectedMechSets] = useState(new Set())
@@ -1200,6 +1201,55 @@ export default function Home({ onStart, loading, error, section, onSectionChange
                     <li><strong>Ask:</strong> "What is the one specific word or phrase in the text that makes this option wrong?"</li>
                     <li><strong>Search:</strong> Look for the "Over-Extender" trigger (e.g., <em>always/never</em>), the "Factually Absent" claim, or the "Contextually Mismatched" relationship.</li>
                     <li><strong>Decide:</strong> Usually, one of the two options will have a "fatal flaw" — a single word that contradicts the text — once you stop looking for the "right" answer and start hunting for the "wrong" word.</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="strategy-guide">
+            <button
+              className={`strategy-guide-toggle${elimMethodOpen ? ' sgt-open' : ''}`}
+              onClick={() => setElimMethodOpen(o => !o)}
+            >
+              <span className="tft-icon">{elimMethodOpen ? '▾' : '▸'}</span>
+              Systematic Elimination Method
+            </button>
+
+            {elimMethodOpen && (
+              <div className="strategy-guide-body">
+                <div className="sg-section">
+                  <div className="sg-heading">1. The "Pre-Read" Filter</div>
+                  <ul className="sg-list">
+                    <li>Before reading the paragraph, read the question and all four answer options. This creates a "search query" in your brain, ensuring you are scanning the text for specific evidence rather than passively absorbing information.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">2. The Three-Category Elimination</div>
+                  <p className="sg-intro">When evaluating the four answer options, immediately sort them into these three categories:</p>
+                  <ul className="sg-list">
+                    <li><strong>Category 1 — "Factually Absent" (Eliminate First):</strong> These options discuss concepts not in the text at all. If an option mentions an idea, reason, or conclusion that cannot be mapped to a specific sentence or phrase, cross it out immediately.</li>
+                    <li><strong>Category 2 — "Over-Extender" (Eliminate Second):</strong> These options use absolute language (<em>always, never, definitely, entirely</em>) that the text does not support. Even if an option sounds "kind of" right, the absolute nature of the claim makes it incorrect. Eliminate any option that makes a broader claim than the text allows.</li>
+                    <li><strong>Category 3 — "Contextually Mismatched" (The Final Choice):</strong> These options use words from the text but twist the logical relationship between them (e.g., confusing cause and effect, or misattributing a quote). Check the "Evidence Chain" — if the text says "A causes B" but the option says "B causes A," it is a distractor.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">3. Applying the "Evidence Chain"</div>
+                  <p className="sg-intro">Use this step-by-step to confirm your final answer is the strongest:</p>
+                  <ul className="sg-list">
+                    <li><strong>Locate the anchor:</strong> Find the exact sentence in the text that addresses the question.</li>
+                    <li><strong>Verify the logic:</strong> Does your chosen answer directly paraphrase the evidence? If you have to assume outside knowledge to make the answer work, it is likely the wrong choice.</li>
+                    <li><strong>Cross-check:</strong> If two options seem correct, choose the one that is narrower and more directly supported by the text. Avoid any option that requires "leaps" in logic.</li>
+                  </ul>
+                </div>
+
+                <div className="sg-section">
+                  <div className="sg-heading">4. The "Not a Reason" Question</div>
+                  <ul className="sg-list">
+                    <li><strong>Identify the goal:</strong> If the question asks for a reason for a quote in a news report, look for authoritative and neutral purposes (providing facts, source attribution).</li>
+                    <li><strong>Identify the Bias Trigger:</strong> Any option implying the reporter is expressing a personal opinion, favouring one side, or trying to sway the reader is usually the "not a reason" answer — it contradicts the professional standard of journalistic neutrality.</li>
                   </ul>
                 </div>
               </div>
