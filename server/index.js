@@ -1765,6 +1765,22 @@ const ctxSD = {
   note: 'The Australian health guideline recommends no more than 4 standard drinks on any single occasion.'
 }
 
+// ── Bakery Profit & Loss context ─────────────────────────────────────────────
+
+const ctxBakery = {
+  subtitle: 'Use the data table below to answer each question.',
+  tables: [{
+    heading: 'Bakery — Cost & Profit Data (per unit)',
+    headers: ['Product', 'Sale Price', 'Labour', 'Ingredients', 'Other', 'Total Cost', 'Profit/Unit', 'Volume'],
+    rows: [
+      ['Sourdough', '$5.50', '$1.20', '$0.80', '$0.30', '$2.30', '$3.20', '200'],
+      ['Croissant',  '$4.20', '$1.10', '$0.90', '$0.20', '$2.20', '$2.00', '400'],
+      ['Danish',     '$3.80', '$0.90', '$0.70', '$0.15', '$1.75', '$2.05', '300'],
+      ['Baguette',   '$3.20', '$0.60', '$0.50', '$0.10', '$1.20', '$2.00', '500'],
+    ]
+  }]
+}
+
 // ── Baked Goods context ───────────────────────────────────────────────────────
 
 const ctxBakedGoods = {
@@ -4398,6 +4414,68 @@ const questions = [
     answer: 'B) 60'
   },
 
+  // ── Bakery Profit & Loss: FS, FT, FU, FV, FW ────────────────────────────────
+  {
+    group: 'FS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Sourdough Scaling: Ingredient costs for Sourdough drop by 20 cents. Production volume increases by 50% (new total: 300 units). What is the new total profit?',
+    answer: '1020'
+  },
+  {
+    group: 'FS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Croissant Efficiency: Labour costs for Croissants drop by 15 cents due to a new machine, but ingredient costs rise by 5 cents. What is the new profit per unit?',
+    answer: '2.10'
+  },
+  {
+    group: 'FT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Danish Volume Shift: Other costs for Danish rise by 10 cents. The bakery sells only 80% of its total production (240 units). What is the total profit?',
+    answer: '468'
+  },
+  {
+    group: 'FT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Baguette Price War: The Baguette sale price drops to $2.80. If ingredient costs also drop by 10 cents, what is the new profit per unit?',
+    answer: '1.70'
+  },
+  {
+    group: 'FU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Sourdough & Danish Bundle: Sourdough ingredient costs drop by 10 cents and Danish ingredient costs drop by 10 cents. If you sell 100 of each, what is the total combined profit?',
+    answer: '545'
+  },
+  {
+    group: 'FU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Croissant Labour Spike: Due to holiday rates, labour costs for Croissants increase by 30 cents. If ingredient costs drop by 10 cents, what is the new total profit for 400 units?',
+    answer: '720'
+  },
+  {
+    group: 'FV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Baguette Volume Surge: Baguette total production doubles to 1,000 units. Ingredient costs drop by 5 cents. What is the new total profit?',
+    answer: '2050'
+  },
+  {
+    group: 'FV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'The "Everything" Drop: Ingredient costs for all products drop by 10 cents. Calculate the total profit for 200 Sourdough loaves using the new cost.',
+    answer: '660'
+  },
+  {
+    group: 'FW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Danish Labour Optimization: Labour costs for Danish drop by 20 cents. Sale price drops to $3.50. What is the new total profit for 300 units?',
+    answer: '585'
+  },
+  {
+    group: 'FW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxBakery,
+    question: 'Mixed Batch Profit: Croissant production increases to 500 units and Sourdough production decreases to 100 units. Using original costs, what is the total profit for both combined?',
+    answer: '1320'
+  },
+
   // ── Part-to-Whole Ratios: FN, FO, FP, FQ, FR ─────────────────────────────────
   {
     group: 'FN', type: 'number_input', category: 'Number and Algebra',
@@ -4517,6 +4595,7 @@ const units = {
   EM: ['$', '$', '$'], EN: ['$', '$', '$'], EO: ['$', '$', '$'], EP: ['$', '$', '$'], EQ: ['$', '$', '$'],
   ER: ['$', '$', '$'], ES: ['$', '$', '$'], ET: ['$', '$', '$'], EU: ['$', '$', '$'], EV: ['$', '$', '$'],
   FI: ['g', 'g'], FJ: ['g', 'scoops'], FK: ['kg', 'g'], FL: ['g', 'g'], FM: ['g', 'g'],
+  FS: ['$', '$'], FT: ['$', '$'], FU: ['$', '$'], FV: ['$', '$'], FW: ['$', '$'],
   FN: ['L', null], FO: [null, null], FP: [null, null], FQ: [null, 'L'], FR: ['m³', null],
 }
 
@@ -5187,6 +5266,26 @@ const methods = {
     `750 g of Muffins requires 300 g of flour.\n3.75 kg = 3750 g of Muffins:\n  3750 ÷ 750 = 5 batches\n  5 × 300 g = 1500 g flour needed`,
     `750 g of Cake requires 350 g of flour.\n1.5 kg = 1500 g of Cake:\n  1500 ÷ 750 = 2 batches\n  2 × 350 g = 700 g flour needed\n\nJohn has 1200 g (1.2 kg).\n1200 g − 700 g = 500 g remaining.`,
   ],
+  FS: [
+    `Sourdough ingredient drops from $0.80 to $0.60 (−$0.20).\nNew unit cost = $1.20 + $0.60 + $0.30 = $2.10\nNew profit per unit = $5.50 − $2.10 = $3.40\n\nNew volume = 200 × 1.5 = 300 units\nTotal profit = $3.40 × 300 = $1,020`,
+    `Labour: $1.10 − $0.15 = $0.95\nIngredients: $0.90 + $0.05 = $0.95\nNew unit cost = $0.95 + $0.95 + $0.20 = $2.10\nNew profit per unit = $4.20 − $2.10 = $2.10`,
+  ],
+  FT: [
+    `Other costs rise from $0.15 to $0.25 (+$0.10).\nNew unit cost = $0.90 + $0.70 + $0.25 = $1.85\nNew profit per unit = $3.80 − $1.85 = $1.95\n\n80% of 300 = 240 units\nTotal profit = $1.95 × 240 = $468`,
+    `New sale price = $2.80\nIngredient drops from $0.50 to $0.40 (−$0.10).\nNew unit cost = $0.60 + $0.40 + $0.10 = $1.10\nNew profit per unit = $2.80 − $1.10 = $1.70`,
+  ],
+  FU: [
+    `Sourdough: ingredient $0.80 − $0.10 = $0.70 → cost $2.20 → profit $3.30\n100 × $3.30 = $330\n\nDanish: ingredient $0.70 − $0.10 = $0.60 → cost $1.65 → profit $2.15\n100 × $2.15 = $215\n\nTotal = $330 + $215 = $545`,
+    `Labour: $1.10 + $0.30 = $1.40\nIngredients: $0.90 − $0.10 = $0.80\nNew unit cost = $1.40 + $0.80 + $0.20 = $2.40\nNew profit per unit = $4.20 − $2.40 = $1.80\n\nTotal = $1.80 × 400 = $720`,
+  ],
+  FV: [
+    `Ingredient drops from $0.50 to $0.45 (−$0.05).\nNew unit cost = $0.60 + $0.45 + $0.10 = $1.15\nNew profit per unit = $3.20 − $1.15 = $2.05\n\nNew volume = 500 × 2 = 1,000 units\nTotal profit = $2.05 × 1,000 = $2,050`,
+    `Sourdough ingredient drops from $0.80 to $0.70 (−$0.10).\nNew unit cost = $1.20 + $0.70 + $0.30 = $2.20\nNew profit per unit = $5.50 − $2.20 = $3.30\n\nTotal = $3.30 × 200 = $660`,
+  ],
+  FW: [
+    `Labour drops from $0.90 to $0.70 (−$0.20).\nNew unit cost = $0.70 + $0.70 + $0.15 = $1.55\nNew profit per unit = $3.50 − $1.55 = $1.95\n\nTotal = $1.95 × 300 = $585`,
+    `Croissant: $4.20 − $2.20 = $2.00 profit/unit × 500 = $1,000\nSourdough: $5.50 − $2.30 = $3.20 profit/unit × 100 = $320\n\nTotal = $1,000 + $320 = $1,320`,
+  ],
   FN: [
     `Ratio: 7 cleaned for every 10 that pass through.\n\nFind the multiplier: 150 ÷ 10 = 15\nCleaned = 7 × 15 = 105 litres\n\nCheck: 105 < 150 ✓`,
     `Ratio: 2 faulty for every 9 tested.\n\nFind the multiplier: 180 ÷ 9 = 20\nFaulty = 2 × 20 = 40 units\n\nCheck: 40 < 180 ✓`,
@@ -5291,6 +5390,7 @@ const TOPIC_GROUPS = {
   'Ratios & Proportions':    ['FF','FG','FH'],
   'Baked Goods':             ['FI','FJ','FK','FL','FM'],
   'Part-to-Whole Ratios':   ['FN','FO','FP','FQ','FR'],
+  'Bakery Profit & Loss':   ['FS','FT','FU','FV','FW'],
 }
 
 app.get('/api/topics', (req, res) => {
