@@ -1818,32 +1818,36 @@ const finCtx = {
 
 const ctxFood = {
   title: 'Food Processing Plant',
+  subtitle: 'A food processing plant runs continuous packing shifts across five product lines. Use the shift duration and minutes-to-pack to calculate output, then account for defects and production costs to find profit.',
   tables: [{
-    headers: ['Product', 'Mins to Pack', 'Defect Rate', 'Unit Price'],
+    heading: 'Packing Line Data (per unit)',
+    headers: ['Product', 'Mins to Pack', 'Defect Rate', 'Prod. Cost', 'Sale Price'],
     rows: [
-      ['Chips',    '4',  '6%',  '$5'],
-      ['Snacks',   '5',  '10%', '$8'],
-      ['Biscuits', '9',  '4%',  '$12'],
-      ['Cakes',    '20', '2%',  '$25'],
-      ['Drinks',   '3',  '12%', '$4'],
+      ['Chips',    '4',  '6%',  '$3',  '$5'],
+      ['Snacks',   '5',  '10%', '$5',  '$8'],
+      ['Biscuits', '9',  '4%',  '$7',  '$12'],
+      ['Cakes',    '20', '2%',  '$15', '$25'],
+      ['Drinks',   '3',  '12%', '$2',  '$4'],
     ]
   }],
-  formulaHint: 'Steps: (1) Shift hours × 60 ÷ mins to pack = units produced. (2) Units × defect rate = defects (round to nearest whole number). (3) (Units − defects) × unit price = revenue.'
+  formulaHint: 'Steps: (1) Shift hrs × 60 ÷ mins to pack = units produced. (2) ceil(units × defect rate) = defects. (3) Profit = (units sold × sale price) − (units produced × prod. cost).'
 }
 
 const ctxIndustrial = {
   title: 'Industrial Manufacturing',
+  subtitle: 'A factory produces five industrial components on shift-based production lines. Each shift runs a single component type — use the shift duration and minutes-to-produce to calculate output, then apply defect rate and production costs to find profit.',
   tables: [{
-    headers: ['Product', 'Mins to Make', 'Defect Rate', 'Unit Price'],
+    heading: 'Production Line Data (per unit)',
+    headers: ['Component', 'Mins to Produce', 'Defect Rate', 'Prod. Cost', 'Sale Price'],
     rows: [
-      ['A', '8',  '5%',  '$40'],
-      ['B', '12', '8%',  '$65'],
-      ['C', '10', '12%', '$50'],
-      ['D', '15', '4%',  '$80'],
-      ['E', '6',  '15%', '$30'],
+      ['Valve',   '8',  '5%',  '$25', '$40'],
+      ['Bearing', '12', '8%',  '$42', '$65'],
+      ['Gasket',  '10', '12%', '$32', '$50'],
+      ['Housing', '15', '4%',  '$52', '$80'],
+      ['Bracket', '6',  '15%', '$18', '$30'],
     ]
   }],
-  formulaHint: 'Steps: (1) Shift hours × 60 ÷ mins to make = units produced. (2) Units × defect rate = defects (round to nearest whole number). (3) (Units − defects) × unit price = revenue.'
+  formulaHint: 'Units = floor(shift mins ÷ mins to produce). Defects = ceil(units × defect rate). Profit = (units sold × sale price) − (units produced × prod. cost).'
 }
 
 // ── Share Portfolio contexts (Dataset 1) ─────────────────────────────────────
@@ -1931,17 +1935,18 @@ const ctxRealEstate = {
 
 const ctxOffice = {
   title: 'Office Equipment Manufacturing',
+  subtitle: 'A workshop assembles five types of office furniture across timed shifts. Use shift duration and assembly time to calculate output, then apply defect rate and production costs to find profit.',
   tables: [{
-    headers: ['Item', 'Time to Assemble', 'Defect Rate', 'Unit Price'],
+    headers: ['Item', 'Time to Assemble', 'Defect Rate', 'Prod. Cost', 'Sale Price'],
     rows: [
-      ['Desk',  '20 mins', '4%',  '$150'],
-      ['Chair', '12 mins', '8%',  '$85'],
-      ['Lamp',  '8 mins',  '12%', '$45'],
-      ['Shelf', '15 mins', '6%',  '$95'],
-      ['Table', '25 mins', '3%',  '$220'],
+      ['Desk',  '20 mins', '4%',  '$90',  '$150'],
+      ['Chair', '12 mins', '8%',  '$52',  '$85'],
+      ['Lamp',  '8 mins',  '12%', '$28',  '$45'],
+      ['Shelf', '15 mins', '6%',  '$58',  '$95'],
+      ['Table', '25 mins', '3%',  '$132', '$220'],
     ]
   }],
-  formulaHint: 'Production: Units = floor(shift_mins ÷ assembly_time). Defects = ceil(units × defect rate). Revenue = (units − defects) × price.'
+  formulaHint: 'Units = floor(shift mins ÷ assembly time). Defects = ceil(units × defect rate). Profit = (units sold × sale price) − (units produced × prod. cost).'
 }
 
 const ctxMarathon = {
@@ -2530,8 +2535,9 @@ const questions = [
   {
     group: 'AF', type: 'number_input', category: 'Statistics and Probability',
     context: ctxGPG2,
-    question: 'Using your answer to Question A, calculate the dollar difference in average weekly earnings between men and women in the mining industry.',
-    answer: '550'
+    question: 'Using your answer to Question A, calculate the total annual dollar difference in earnings between men and women in the mining industry (based on 52 working weeks).',
+    answer: '28600',
+    method: 'Weekly difference: $2,500 − $1,950 = $550\nAnnual: $550 × 52 = $28,600'
   },
 
   // ── Set AG: Finance — women's weekly, annual pay gap ─────────────────────
@@ -2621,8 +2627,9 @@ const questions = [
   {
     group: 'AL', type: 'number_input', category: 'Statistics and Probability',
     context: ctxGPG8,
-    question: 'Using your answer to Question A, calculate the weekly dollar difference in earnings between men and women in this industry.',
-    answer: '432'
+    question: 'Using your answer to Question A, calculate the total annual dollar difference in earnings between men and women in this industry (based on 52 working weeks).',
+    answer: '22464',
+    method: 'Weekly difference: $1,800 − $1,368 = $432\nAnnual: $432 × 52 = $22,464'
   },
 
   // ── Set AM: State table MC (same change) + WA reverse ────────────────────
@@ -3849,7 +3856,7 @@ const questions = [
   {
     group: 'DV', type: 'multiple_choice', category: 'Number and Algebra',
     context: ctxDV,
-    question: 'If maintenance improves efficiency by 15% (reducing consumption to 8.5 L/100 km), what is the percentage decrease in total monthly fuel expenditure?',
+    question: 'Following a maintenance programme, fuel consumption drops to 8.5 L/100 km. What is the percentage decrease in total monthly fuel expenditure?',
     options: ['10% decrease', '12% decrease', '15% decrease', '20% decrease'],
     answer: '15% decrease'
   },
@@ -3954,7 +3961,7 @@ const questions = [
   {
     group: 'ED', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxUnit,
-    question: 'How many 250 mL bottles can be filled from 4.5 L?',
+    question: 'How many 250 mL bottles can be filled from this volume?',
     answer: '18'
   },
   {
@@ -3990,7 +3997,7 @@ const questions = [
   {
     group: 'EG', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxUnit,
-    question: 'Convert 1,200,000 cm³ to Litres.',
+    question: 'How many Litres does this storage box hold?',
     answer: '1200'
   },
   {
@@ -4002,7 +4009,7 @@ const questions = [
   {
     group: 'EH', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxUnit,
-    question: 'How many minutes does it take to fill 800 L at a rate of 40,000 mL per minute?',
+    question: 'At a fill rate of 40,000 mL per minute, how many minutes does it take to fill this volume?',
     answer: '20'
   },
   {
@@ -4407,62 +4414,72 @@ const questions = [
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7 L/min) vs Steadyflow (10 L/min). How many litres are saved in one 10-minute shower?',
-    answer: '30'
+    question: 'Spraysaver (7 L/min) vs Steadyflow (10 L/min). If each person showers once daily for 90 days, how many litres are saved in total?',
+    answer: '2700',
+    method: 'Saving per shower: (10 − 7) × 10 = 30 L\nTotal: 30 × 90 = 2,700 L'
   },
   {
     group: 'DJ', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (6 L/min) vs Steadyflow (9 L/min). How many litres are saved in one 8-minute shower?',
-    answer: '24'
+    question: 'Spraysaver (6 L/min) vs Steadyflow (9 L/min). If each person showers once daily for 180 days, how many litres are saved in total?',
+    answer: '4320',
+    method: 'Saving per shower: (9 − 6) × 8 = 24 L\nTotal: 24 × 180 = 4,320 L'
   },
   {
     group: 'DK', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7.5 L/min) vs Steadyflow (12 L/min). How many litres are saved in one 12-minute shower?',
-    answer: '54'
+    question: 'Spraysaver (7.5 L/min) vs Steadyflow (12 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    answer: '19710',
+    method: 'Saving per shower: (12 − 7.5) × 12 = 54 L\nTotal: 54 × 365 = 19,710 L'
   },
   {
     group: 'DL', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (5 L/min) vs Steadyflow (8 L/min). How many litres are saved in one 5-minute shower?',
-    answer: '15'
+    question: 'Spraysaver (5 L/min) vs Steadyflow (8 L/min). If each person showers once daily for 30 days, how many litres are saved in total?',
+    answer: '450',
+    method: 'Saving per shower: (8 − 5) × 5 = 15 L\nTotal: 15 × 30 = 450 L'
   },
   {
     group: 'DM', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (8 L/min) vs Steadyflow (15 L/min). How many litres are saved in one 20-minute shower?',
-    answer: '140'
+    question: 'Spraysaver (8 L/min) vs Steadyflow (15 L/min). If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
+    answer: '25200',
+    method: 'Saving per shower: (15 − 8) × 20 = 140 L\nTotal: 140 × 180 = 25,200 L'
   },
   {
     group: 'DN', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (6 L/min) vs Steadyflow (10 L/min). How many litres are saved in one 6-minute shower?',
-    answer: '24'
+    question: 'Spraysaver (6 L/min) vs Steadyflow (10 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    answer: '8760',
+    method: 'Saving per shower: (10 − 6) × 6 = 24 L\nTotal: 24 × 365 = 8,760 L'
   },
   {
     group: 'DO', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7 L/min) vs Steadyflow (11 L/min). How many litres are saved in one 15-minute shower?',
-    answer: '60'
+    question: 'Spraysaver (7 L/min) vs Steadyflow (11 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    answer: '21900',
+    method: 'Saving per shower: (11 − 7) × 15 = 60 L\nTotal: 60 × 365 = 21,900 L'
   },
   {
     group: 'DP', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (9 L/min) vs Steadyflow (14 L/min). How many litres are saved in one 4-minute shower?',
-    answer: '20'
+    question: 'Spraysaver (9 L/min) vs Steadyflow (14 L/min). If each person showers once daily for 90 days, how many litres are saved in total?',
+    answer: '1800',
+    method: 'Saving per shower: (14 − 9) × 4 = 20 L\nTotal: 20 × 90 = 1,800 L'
   },
   {
     group: 'DQ', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (5 L/min) vs Steadyflow (9 L/min). How many litres are saved in one 30-minute shower?',
-    answer: '120'
+    question: 'Spraysaver (5 L/min) vs Steadyflow (9 L/min). If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
+    answer: '21600',
+    method: 'Saving per shower: (9 − 5) × 30 = 120 L\nTotal: 120 × 180 = 21,600 L'
   },
   {
     group: 'DR', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (8 L/min) vs Steadyflow (13 L/min). How many litres are saved in one 7-minute shower?',
-    answer: '35'
+    question: 'Spraysaver (8 L/min) vs Steadyflow (13 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    answer: '12775',
+    method: 'Saving per shower: (13 − 8) × 7 = 35 L\nTotal: 35 × 365 = 12,775 L'
   },
 
   // ── Baked Goods: FI, FJ, FK, FL, FM ─────────────────────────────────────────
@@ -4551,7 +4568,7 @@ const questions = [
   {
     group: 'FS', type: 'number_input', category: 'Number and Algebra',
     context: ctxBakery,
-    question: 'Sourdough Scaling: Ingredient costs for Sourdough drop by 20 cents. Production volume increases by 50% (new total: 300 units). What is the new total profit?',
+    question: 'Sourdough Scaling: Ingredient costs for Sourdough drop by 20 cents. Production volume increases by 50%. What is the new total profit?',
     answer: '1020'
   },
   {
@@ -4563,7 +4580,7 @@ const questions = [
   {
     group: 'FT', type: 'number_input', category: 'Number and Algebra',
     context: ctxBakery,
-    question: 'Danish Volume Shift: Other costs for Danish rise by 10 cents. The bakery sells only 80% of its total production (240 units). What is the total profit?',
+    question: 'Danish Volume Shift: Other costs for Danish rise by 10 cents. The bakery sells only 80% of its total production. What is the total profit?',
     answer: '468'
   },
   {
@@ -4587,7 +4604,7 @@ const questions = [
   {
     group: 'FV', type: 'number_input', category: 'Number and Algebra',
     context: ctxBakery,
-    question: 'Baguette Volume Surge: Baguette total production doubles to 1,000 units. Ingredient costs drop by 5 cents. What is the new total profit?',
+    question: 'Baguette Volume Surge: Baguette total production doubles. Ingredient costs drop by 5 cents. What is the new total profit?',
     answer: '2050'
   },
   {
@@ -4859,144 +4876,144 @@ const questions = [
   {
     group: 'GW', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Chips — 8-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '565',
-    method: '8 × 60 = 480 min ÷ 4 min = 120 units\n120 × 6% = 7.2 → 7 defects\n120 − 7 = 113 units sold\n113 × $5 = $565'
+    question: 'Chips — 8-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '200',
+    method: '480 ÷ 4 = 120 units\nceil(120 × 6%) = ceil(7.2) = 8 defects → 112 sold\nRevenue: 112 × $5 = $560\nProd. cost: 120 × $3 = $360\nProfit: $560 − $360 = $200'
   },
   {
     group: 'GW', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Snacks — 6-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '520',
-    method: '6 × 60 = 360 min ÷ 5 min = 72 units\n72 × 10% = 7.2 → 7 defects\n72 − 7 = 65 units sold\n65 × $8 = $520'
+    question: 'Snacks — 6-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '152',
+    method: '360 ÷ 5 = 72 units\nceil(72 × 10%) = ceil(7.2) = 8 defects → 64 sold\nRevenue: 64 × $8 = $512\nProd. cost: 72 × $5 = $360\nProfit: $512 − $360 = $152'
   },
   {
     group: 'GX', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Biscuits — 12-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '924',
-    method: '12 × 60 = 720 min ÷ 9 min = 80 units\n80 × 4% = 3.2 → 3 defects\n80 − 3 = 77 units sold\n77 × $12 = $924'
+    question: 'Biscuits — 12-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '352',
+    method: '720 ÷ 9 = 80 units\nceil(80 × 4%) = ceil(3.2) = 4 defects → 76 sold\nRevenue: 76 × $12 = $912\nProd. cost: 80 × $7 = $560\nProfit: $912 − $560 = $352'
   },
   {
     group: 'GX', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Cakes — 10-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '725',
-    method: '10 × 60 = 600 min ÷ 20 min = 30 units\n30 × 2% = 0.6 → 1 defect\n30 − 1 = 29 units sold\n29 × $25 = $725'
+    question: 'Cakes — 10-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '275',
+    method: '600 ÷ 20 = 30 units\nceil(30 × 2%) = ceil(0.6) = 1 defect → 29 sold\nRevenue: 29 × $25 = $725\nProd. cost: 30 × $15 = $450\nProfit: $725 − $450 = $275'
   },
   {
     group: 'GY', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Drinks — 4-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '280',
-    method: '4 × 60 = 240 min ÷ 3 min = 80 units\n80 × 12% = 9.6 → 10 defects\n80 − 10 = 70 units sold\n70 × $4 = $280'
+    question: 'Drinks — 4-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '120',
+    method: '240 ÷ 3 = 80 units\nceil(80 × 12%) = ceil(9.6) = 10 defects → 70 sold\nRevenue: 70 × $4 = $280\nProd. cost: 80 × $2 = $160\nProfit: $280 − $160 = $120'
   },
   {
     group: 'GY', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Chips — 10-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '705',
-    method: '10 × 60 = 600 min ÷ 4 min = 150 units\n150 × 6% = 9.0 → 9 defects\n150 − 9 = 141 units sold\n141 × $5 = $705'
+    question: 'Chips — 10-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '255',
+    method: '600 ÷ 4 = 150 units\nceil(150 × 6%) = ceil(9.0) = 9 defects → 141 sold\nRevenue: 141 × $5 = $705\nProd. cost: 150 × $3 = $450\nProfit: $705 − $450 = $255'
   },
   {
     group: 'GZ', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Snacks — 8-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '688',
-    method: '8 × 60 = 480 min ÷ 5 min = 96 units\n96 × 10% = 9.6 → 10 defects\n96 − 10 = 86 units sold\n86 × $8 = $688'
+    question: 'Snacks — 8-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '208',
+    method: '480 ÷ 5 = 96 units\nceil(96 × 10%) = ceil(9.6) = 10 defects → 86 sold\nRevenue: 86 × $8 = $688\nProd. cost: 96 × $5 = $480\nProfit: $688 − $480 = $208'
   },
   {
     group: 'GZ', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Biscuits — 6-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '456',
-    method: '6 × 60 = 360 min ÷ 9 min = 40 units\n40 × 4% = 1.6 → 2 defects\n40 − 2 = 38 units sold\n38 × $12 = $456'
+    question: 'Biscuits — 6-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '176',
+    method: '360 ÷ 9 = 40 units\nceil(40 × 4%) = ceil(1.6) = 2 defects → 38 sold\nRevenue: 38 × $12 = $456\nProd. cost: 40 × $7 = $280\nProfit: $456 − $280 = $176'
   },
   {
     group: 'HA', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Cakes — 8-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '600',
-    method: '8 × 60 = 480 min ÷ 20 min = 24 units\n24 × 2% = 0.48 → 0 defects\n24 − 0 = 24 units sold\n24 × $25 = $600'
+    question: 'Cakes — 8-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '215',
+    method: '480 ÷ 20 = 24 units\nceil(24 × 2%) = ceil(0.48) = 1 defect → 23 sold\nRevenue: 23 × $25 = $575\nProd. cost: 24 × $15 = $360\nProfit: $575 − $360 = $215'
   },
   {
     group: 'HA', type: 'number_input', category: 'Number and Algebra',
     context: ctxFood,
-    question: 'Drinks — 12-hour shift: How much revenue is made from all non-defective units?',
-    unit: '$', answer: '844',
-    method: '12 × 60 = 720 min ÷ 3 min = 240 units\n240 × 12% = 28.8 → 29 defects\n240 − 29 = 211 units sold\n211 × $4 = $844'
+    question: 'Drinks — 12-hour shift: What is the total profit after accounting for production costs and defective units? (Round defects up.)',
+    unit: '$', answer: '364',
+    method: '720 ÷ 3 = 240 units\nceil(240 × 12%) = ceil(28.8) = 29 defects → 211 sold\nRevenue: 211 × $4 = $844\nProd. cost: 240 × $2 = $480\nProfit: $844 − $480 = $364'
   },
 
   // ── Industrial Manufacturing: HB, HC, HD, HE, HF ─────────────────────────────
   {
     group: 'HB', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product A — 8-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '2280',
-    method: '8 × 60 = 480 min ÷ 8 min = 60 units\n60 × 5% = 3.0 → 3 defects\n60 − 3 = 57 units sold\n57 × $40 = $2,280'
+    question: 'A production line runs an 8-hour shift manufacturing Valves. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '780',
+    method: 'floor(480 ÷ 8) = 60 Valves\nceil(60 × 5%) = ceil(3.0) = 3 defects → 57 sold\nRevenue: 57 × $40 = $2,280\nProd. cost: 60 × $25 = $1,500\nProfit: $2,280 − $1,500 = $780'
   },
   {
     group: 'HB', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product B — 10-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '2990',
-    method: '10 × 60 = 600 min ÷ 12 min = 50 units\n50 × 8% = 4.0 → 4 defects\n50 − 4 = 46 units sold\n46 × $65 = $2,990'
+    question: 'A production line runs a 10-hour shift manufacturing Bearings. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '890',
+    method: 'floor(600 ÷ 12) = 50 Bearings\nceil(50 × 8%) = ceil(4.0) = 4 defects → 46 sold\nRevenue: 46 × $65 = $2,990\nProd. cost: 50 × $42 = $2,100\nProfit: $2,990 − $2,100 = $890'
   },
   {
     group: 'HC', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product C — 12-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '3150',
-    method: '12 × 60 = 720 min ÷ 10 min = 72 units\n72 × 12% = 8.64 → 9 defects\n72 − 9 = 63 units sold\n63 × $50 = $3,150'
+    question: 'A production line runs a 12-hour shift manufacturing Gaskets. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '846',
+    method: 'floor(720 ÷ 10) = 72 Gaskets\nceil(72 × 12%) = ceil(8.64) = 9 defects → 63 sold\nRevenue: 63 × $50 = $3,150\nProd. cost: 72 × $32 = $2,304\nProfit: $3,150 − $2,304 = $846'
   },
   {
     group: 'HC', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product D — 6-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '1840',
-    method: '6 × 60 = 360 min ÷ 15 min = 24 units\n24 × 4% = 0.96 → 1 defect\n24 − 1 = 23 units sold\n23 × $80 = $1,840'
+    question: 'The factory has a $10,000 production budget, spending $2,000 per component type. What is the maximum total number of components that can be produced across all five types? (Round down per type.)',
+    unit: 'units', answer: '338',
+    method: 'Valves:   $2,000 ÷ $25 = 80\nBearings: $2,000 ÷ $42 = 47.6 → 47\nGaskets:  $2,000 ÷ $32 = 62.5 → 62\nHousings: $2,000 ÷ $52 = 38.5 → 38\nBrackets: $2,000 ÷ $18 = 111.1 → 111\nTotal: 80 + 47 + 62 + 38 + 111 = 338 units'
   },
   {
     group: 'HD', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product E — 8-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '2040',
-    method: '8 × 60 = 480 min ÷ 6 min = 80 units\n80 × 15% = 12.0 → 12 defects\n80 − 12 = 68 units sold\n68 × $30 = $2,040'
+    question: 'With a $6,000 production budget split equally across all 5 component types ($1,200 each), what is the difference between the number of Brackets and the number of Housings that can be produced? (Round down per type.)',
+    unit: 'units', answer: '43',
+    method: 'Brackets: $1,200 ÷ $18 = 66.7 → 66\nHousings: $1,200 ÷ $52 = 23.1 → 23\nDifference: 66 − 23 = 43 units'
   },
   {
     group: 'HD', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product A — 10-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '2840',
-    method: '10 × 60 = 600 min ÷ 8 min = 75 units\n75 × 5% = 3.75 → 4 defects\n75 − 4 = 71 units sold\n71 × $40 = $2,840'
+    question: 'The price of a Bearing has increased by 20% to reach its current price of $65. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '54.17',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $65 ÷ 1.20 = $54.17'
   },
   {
     group: 'HE', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product B — 6-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '1820',
-    method: '6 × 60 = 360 min ÷ 12 min = 30 units\n30 × 8% = 2.4 → 2 defects\n30 − 2 = 28 units sold\n28 × $65 = $1,820'
+    question: 'A new CNC machine eliminates all defects when manufacturing Housings. In a 10-hour shift, how much more profit is generated compared to the old 4% defect rate? (Round defects up.)',
+    unit: '$', answer: '160',
+    method: 'floor(600 ÷ 15) = 40 Housings; prod. cost: 40 × $52 = $2,080 (same either way)\nOld (4%): ceil(1.6) = 2 defects → 38 × $80 = $3,040; profit = $960\nNew (0%): 40 × $80 = $3,200; profit = $1,120\nExtra profit: $1,120 − $960 = $160'
   },
   {
     group: 'HE', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product C — 8-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '2100',
-    method: '8 × 60 = 480 min ÷ 10 min = 48 units\n48 × 12% = 5.76 → 6 defects\n48 − 6 = 42 units sold\n42 × $50 = $2,100'
+    question: 'A quality control batch contains 15 Valves and 20 Gaskets. Of these, 2 Valves and 3 Gaskets are rejected as defective. What is the total profit from this batch?',
+    unit: '$', answer: '355',
+    method: 'Valves: 13 × $40 − 15 × $25 = $520 − $375 = $145\nGaskets: 17 × $50 − 20 × $32 = $850 − $640 = $210\nTotal profit: $145 + $210 = $355'
   },
   {
     group: 'HF', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product D — 10-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '3040',
-    method: '10 × 60 = 600 min ÷ 15 min = 40 units\n40 × 4% = 1.6 → 2 defects\n40 − 2 = 38 units sold\n38 × $80 = $3,040'
+    question: 'A factory runs a 10-hour shift — the first 4 hours producing Bearings, then the remaining 6 hours producing Brackets. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '780',
+    method: 'Bearings (4h): floor(240÷12)=20; ceil(1.6)=2 def; 18×$65=$1,170; cost 20×$42=$840; profit $330\nBrackets (6h): floor(360÷6)=60; ceil(9.0)=9 def; 51×$30=$1,530; cost 60×$18=$1,080; profit $450\nTotal profit: $330 + $450 = $780'
   },
   {
     group: 'HF', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndustrial,
-    question: 'Product E — 12-hour shift: What is the total revenue from non-defective units?',
-    unit: '$', answer: '3060',
-    method: '12 × 60 = 720 min ÷ 6 min = 120 units\n120 × 15% = 18.0 → 18 defects\n120 − 18 = 102 units sold\n102 × $30 = $3,060'
+    question: 'A production line runs a 12-hour shift manufacturing Brackets. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '900',
+    method: 'floor(720 ÷ 6) = 120 Brackets\nceil(120 × 15%) = ceil(18.0) = 18 defects → 102 sold\nRevenue: 102 × $30 = $3,060\nProd. cost: 120 × $18 = $2,160\nProfit: $3,060 − $2,160 = $900'
   },
 
   // ── Flight Data Analysis: HG, HH, HI, HJ, HK ────────────────────────────────
@@ -5075,70 +5092,70 @@ const questions = [
   {
     group: 'HL', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Tokyo to LA: Add the 45-minute safety buffer to the baseline flight time. What average speed is required to cover the 8,800 km in the total duration?',
+    question: 'Tokyo to LA: Add the 45-minute safety buffer to the baseline flight time. What average speed (km/h, round to nearest whole number) is required to cover this route in the total duration?',
     unit: 'km/h', answer: '782',
     method: 'Baseline: 10h 30m = 10.5h\nBuffer: 45 min = 0.75h\nTotal time: 10.5 + 0.75 = 11.25h\nSpeed: 8,800 ÷ 11.25 = 782 km/h'
   },
   {
     group: 'HL', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'London to Dubai: Add the 30-minute safety buffer to the baseline flight time. What average speed is required to cover the 5,500 km in the total duration?',
+    question: 'London to Dubai: Add the 30-minute safety buffer to the baseline flight time. What average speed (km/h, round to nearest whole number) is required to cover this route in the total duration?',
     unit: 'km/h', answer: '710',
     method: 'Baseline: 7h 15m = 7.25h\nBuffer: 30 min = 0.5h\nTotal time: 7.25 + 0.5 = 7.75h\nSpeed: 5,500 ÷ 7.75 = 710 km/h'
   },
   {
     group: 'HM', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'NY to Berlin: Add the 40-minute safety buffer to the baseline flight time. What average speed is required to cover the 6,400 km in the total duration?',
+    question: 'NY to Berlin: Add the 40-minute safety buffer to the baseline flight time. What average speed (km/h, round to nearest whole number) is required to cover this route in the total duration?',
     unit: 'km/h', answer: '711',
     method: 'Baseline: 8h 20m = 8.333h\nBuffer: 40 min = 0.667h\nTotal time: 8.333 + 0.667 = 9.0h\nSpeed: 6,400 ÷ 9.0 = 711 km/h'
   },
   {
     group: 'HM', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Sydney to SF: The total flight duration includes the 60-minute safety buffer. What average speed is required to cover the 12,000 km in the total duration?',
+    question: 'Sydney to SF: The total flight duration includes the 60-minute safety buffer. What average speed (km/h, round to nearest whole number) is required to cover this route in the total duration?',
     unit: 'km/h', answer: '766',
     method: 'Baseline: 14h 40m = 14.667h\nBuffer: 60 min = 1.0h\nTotal time: 14.667 + 1.0 = 15.667h\nSpeed: 12,000 ÷ 15.667 = 766 km/h'
   },
   {
     group: 'HN', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Paris to Delhi: Add the 35-minute safety buffer to the baseline flight time. What average speed is required to cover the 6,600 km in the total duration?',
+    question: 'Paris to Delhi: Add the 35-minute safety buffer to the baseline flight time. What average speed (km/h, round to nearest whole number) is required to cover this route in the total duration?',
     unit: 'km/h', answer: '707',
     method: 'Baseline: 8h 45m = 8.75h\nBuffer: 35 min = 0.583h\nTotal time: 8.75 + 0.583 = 9.333h\nSpeed: 6,600 ÷ 9.333 = 707 km/h'
   },
   {
     group: 'HN', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Tokyo to LA: The flight faces a 20-minute delay on top of the 45-minute safety buffer. What is the new average speed required for the 8,800 km journey?',
+    question: 'Tokyo to LA: The flight faces a 20-minute delay on top of the 45-minute safety buffer. What is the new average speed required for this route (km/h, round to nearest whole number)?',
     unit: 'km/h', answer: '760',
     method: 'Baseline: 10h 30m = 10.5h\nBuffer: 45 min = 0.75h\nDelay: 20 min = 0.333h\nTotal time: 10.5 + 0.75 + 0.333 = 11.583h\nSpeed: 8,800 ÷ 11.583 = 760 km/h'
   },
   {
     group: 'HO', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'London to Dubai: The flight faces a 15-minute delay on top of the 30-minute safety buffer. What is the new average speed required for the 5,500 km journey?',
+    question: 'London to Dubai: The flight faces a 15-minute delay on top of the 30-minute safety buffer. What is the new average speed required for this route (km/h, round to nearest whole number)?',
     unit: 'km/h', answer: '688',
     method: 'Baseline: 7h 15m = 7.25h\nBuffer: 30 min = 0.5h\nDelay: 15 min = 0.25h\nTotal time: 7.25 + 0.5 + 0.25 = 8.0h\nSpeed: 5,500 ÷ 8.0 = 688 km/h'
   },
   {
     group: 'HO', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'NY to Berlin: The safety buffer applies, but the flight arrives 20 minutes early. What is the average speed for the 6,400 km journey?',
+    question: 'NY to Berlin: The safety buffer applies, but the flight arrives 20 minutes early. What is the average speed for this route (km/h, round to nearest whole number)?',
     unit: 'km/h', answer: '738',
     method: 'Baseline: 8h 20m = 8.333h\nBuffer: 40 min = 0.667h\nEarly: −20 min = −0.333h\nTotal time: 8.333 + 0.667 − 0.333 = 8.667h\nSpeed: 6,400 ÷ 8.667 = 738 km/h'
   },
   {
     group: 'HP', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Sydney to SF: The safety buffer applies and the flight encounters 30 minutes of turbulence (added time). What is the new average speed for the 12,000 km journey?',
+    question: 'Sydney to SF: The safety buffer applies and the flight encounters 30 minutes of turbulence (added time). What is the new average speed for this route (km/h, round to nearest whole number)?',
     unit: 'km/h', answer: '742',
     method: 'Baseline: 14h 40m = 14.667h\nBuffer: 60 min = 1.0h\nTurbulence: 30 min = 0.5h\nTotal time: 14.667 + 1.0 + 0.5 = 16.167h\nSpeed: 12,000 ÷ 16.167 = 742 km/h'
   },
   {
     group: 'HP', type: 'number_input', category: 'Number and Algebra',
     context: ctxCargo,
-    question: 'Paris to Delhi: The safety buffer applies. The pilot maintains 750 km/h for the 6,600 km journey. How many minutes ahead of the total scheduled duration does the plane arrive?',
+    question: 'Paris to Delhi: The safety buffer applies. The pilot maintains 750 km/h. How many minutes ahead of the total scheduled duration does the plane arrive?',
     unit: 'min', answer: '32',
     method: 'Scheduled total: 8h 45m + 35 min = 8.75 + 0.583 = 9.333h\nActual time at 750 km/h: 6,600 ÷ 750 = 8.8h\nTime saved: 9.333 − 8.8 = 0.533h × 60 = 32 min'
   },
@@ -5219,37 +5236,37 @@ const questions = [
   {
     group: 'HV', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'An employee works an 8-hour shift exclusively manufacturing Desks. How much revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
-    unit: '$', answer: '3450',
-    method: '8 × 60 = 480 min ÷ 20 = 24 Desks\nceil(24 × 4%) = ceil(0.96) = 1 defect\n24 − 1 = 23 sold × $150 = $3,450'
+    question: 'An employee works an 8-hour shift exclusively manufacturing Desks. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '1290',
+    method: '480 ÷ 20 = 24 Desks\nceil(24 × 4%) = ceil(0.96) = 1 defect → 23 sold\nRevenue: 23 × $150 = $3,450\nProd. cost: 24 × $90 = $2,160\nProfit: $3,450 − $2,160 = $1,290'
   },
   {
     group: 'HV', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'A team works a 10-hour shift producing Chairs. How much total revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
-    unit: '$', answer: '3910',
-    method: '10 × 60 = 600 min ÷ 12 = 50 Chairs\nceil(50 × 8%) = ceil(4.0) = 4 defects\n50 − 4 = 46 sold × $85 = $3,910'
+    question: 'A team works a 10-hour shift producing Chairs. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '1310',
+    method: '600 ÷ 12 = 50 Chairs\nceil(50 × 8%) = ceil(4.0) = 4 defects → 46 sold\nRevenue: 46 × $85 = $3,910\nProd. cost: 50 × $52 = $2,600\nProfit: $3,910 − $2,600 = $1,310'
   },
   {
     group: 'HW', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'A team works a 6-hour shift producing Lamps. How much total revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
-    unit: '$', answer: '1755',
-    method: '6 × 60 = 360 min ÷ 8 = 45 Lamps\nceil(45 × 12%) = ceil(5.4) = 6 defects\n45 − 6 = 39 sold × $45 = $1,755'
+    question: 'A team works a 6-hour shift producing Lamps. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '495',
+    method: '360 ÷ 8 = 45 Lamps\nceil(45 × 12%) = ceil(5.4) = 6 defects → 39 sold\nRevenue: 39 × $45 = $1,755\nProd. cost: 45 × $28 = $1,260\nProfit: $1,755 − $1,260 = $495'
   },
   {
     group: 'HW', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'A company has a $5,000 budget and spends $1,000 on each of the 5 items. What is the total number of items purchased across all categories? (Round down to nearest whole number per item.)',
-    unit: 'items', answer: '53',
-    method: '$1,000 ÷ $150 = 6.67 → 6 Desks\n$1,000 ÷ $85 = 11.76 → 11 Chairs\n$1,000 ÷ $45 = 22.22 → 22 Lamps\n$1,000 ÷ $95 = 10.53 → 10 Shelves\n$1,000 ÷ $220 = 4.55 → 4 Tables\nTotal: 6 + 11 + 22 + 10 + 4 = 53 items'
+    question: 'A workshop has a $5,000 production budget, spending $1,000 per item type. How many units of each type can be produced? What is the total number of items across all 5 types? (Round down per type.)',
+    unit: 'items', answer: '89',
+    method: '$1,000 ÷ $90 = 11.1 → 11 Desks\n$1,000 ÷ $52 = 19.2 → 19 Chairs\n$1,000 ÷ $28 = 35.7 → 35 Lamps\n$1,000 ÷ $58 = 17.2 → 17 Shelves\n$1,000 ÷ $132 = 7.6 → 7 Tables\nTotal: 11 + 19 + 35 + 17 + 7 = 89 items'
   },
   {
     group: 'HX', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'A company spends $10,000 split equally across the 5 items ($2,000 each). What is the difference in quantity between the number of Lamps and the number of Tables purchased?',
-    unit: 'items', answer: '35',
-    method: '$10,000 ÷ 5 = $2,000 per item\nLamps: $2,000 ÷ $45 = 44.44 → 44\nTables: $2,000 ÷ $220 = 9.09 → 9\nDifference: 44 − 9 = 35 items'
+    question: 'A workshop has a $10,000 production budget split equally ($2,000 per type). What is the difference between the number of Lamps and the number of Tables that can be produced? (Round down per type.)',
+    unit: 'items', answer: '56',
+    method: 'Lamps: $2,000 ÷ $28 = 71.4 → 71\nTables: $2,000 ÷ $132 = 15.2 → 15\nDifference: 71 − 15 = 56 items'
   },
   {
     group: 'HX', type: 'number_input', category: 'Number and Algebra',
@@ -5268,23 +5285,23 @@ const questions = [
   {
     group: 'HY', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'An employee producing Tables in an 8-hour shift reduces their defect rate from 3% to 0% due to a new machine. How much extra revenue is generated per shift compared to the old 3% defect rate? (Round defects up.)',
+    question: 'An employee producing Tables in an 8-hour shift reduces their defect rate from 3% to 0% due to a new machine. How much extra profit is generated per shift compared to the old 3% defect rate? (Round defects up.)',
     unit: '$', answer: '220',
-    method: '8 × 60 = 480 min ÷ 25 = 19 Tables\nOld (3%): ceil(19 × 3%) = ceil(0.57) = 1 defect → 18 sold × $220 = $3,960\nNew (0%): 0 defects → 19 sold × $220 = $4,180\nExtra revenue: $4,180 − $3,960 = $220'
+    method: '480 ÷ 25 = 19 Tables; prod. cost: 19 × $132 = $2,508 (same either way)\nOld (3%): ceil(0.57) = 1 defect → 18 × $220 = $3,960; profit = $1,452\nNew (0%): 19 × $220 = $4,180; profit = $1,672\nExtra profit: $1,672 − $1,452 = $220'
   },
   {
     group: 'HZ', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'You produce 10 Chairs and 10 Shelves. 1 Chair and 1 Shelf are defective and cannot be sold. What is your total revenue from the remaining units?',
-    unit: '$', answer: '1620',
-    method: 'Chairs sold: 10 − 1 = 9 × $85 = $765\nShelves sold: 10 − 1 = 9 × $95 = $855\nTotal: $765 + $855 = $1,620'
+    question: 'You produce 10 Chairs and 10 Shelves. 1 Chair and 1 Shelf are defective and cannot be sold. What is your total profit from this batch?',
+    unit: '$', answer: '520',
+    method: 'Chairs: 9 × $85 − 10 × $52 = $765 − $520 = $245\nShelves: 9 × $95 − 10 × $58 = $855 − $580 = $275\nTotal profit: $245 + $275 = $520'
   },
   {
     group: 'HZ', type: 'number_input', category: 'Number and Algebra',
     context: ctxOffice,
-    question: 'A workshop runs for 12 hours — Chairs for the first 6 hours, then Shelves for the second 6 hours. How much total revenue is made after accounting for defective units? (Round defects up.)',
-    unit: '$', answer: '4385',
-    method: 'Chairs (6h): 360 ÷ 12 = 30; ceil(30 × 8%) = ceil(2.4) = 3 defects; 27 × $85 = $2,295\nShelves (6h): 360 ÷ 15 = 24; ceil(24 × 6%) = ceil(1.44) = 2 defects; 22 × $95 = $2,090\nTotal: $2,295 + $2,090 = $4,385'
+    question: 'A workshop runs for 12 hours — Chairs for the first 6 hours, then Shelves for the second 6 hours. What is the total profit after production costs and defects? (Round defects up.)',
+    unit: '$', answer: '1433',
+    method: 'Chairs (6h): 360÷12=30; ceil(2.4)=3 def; 27×$85=$2,295; cost 30×$52=$1,560; profit $735\nShelves (6h): 360÷15=24; ceil(1.44)=2 def; 22×$95=$2,090; cost 24×$58=$1,392; profit $698\nTotal profit: $735 + $698 = $1,433'
   },
 
   // ── Share Portfolios Set 1: IA, IB, IC, ID, IE ───────────────────────────────
@@ -5298,9 +5315,9 @@ const questions = [
   {
     group: 'IA', type: 'number_input', category: 'Number and Algebra',
     context: ctxVanguard,
-    question: 'The share price for VAP increased by 15% to reach its current price of $120.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '105',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $120.40 ÷ 1.15 = $104.70 → $105'
+    question: 'The share price for VAP increased by 15% to reach its current price of $120.40. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '104.70',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $120.40 ÷ 1.15 = $104.70'
   },
   {
     group: 'IB', type: 'number_input', category: 'Number and Algebra',
@@ -5312,9 +5329,9 @@ const questions = [
   {
     group: 'IB', type: 'number_input', category: 'Number and Algebra',
     context: ctxManaged,
-    question: 'The share price for ABI increased by 25% to reach its current price of $62.85. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '50',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $62.85 ÷ 1.25 = $50.28 → $50'
+    question: 'The share price for ABI increased by 25% to reach its current price of $62.85. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '50.28',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $62.85 ÷ 1.25 = $50.28'
   },
   {
     group: 'IC', type: 'number_input', category: 'Number and Algebra',
@@ -5326,9 +5343,9 @@ const questions = [
   {
     group: 'IC', type: 'number_input', category: 'Number and Algebra',
     context: ctxGlobalInfra,
-    question: 'The share price for PRP increased by 20% to reach its current price of $98.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '82',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.20 ÷ 1.20 = $81.83 → $82'
+    question: 'The share price for PRP increased by 20% to reach its current price of $98.20. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '81.83',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.20 ÷ 1.20 = $81.83'
   },
   {
     group: 'ID', type: 'number_input', category: 'Number and Algebra',
@@ -5340,9 +5357,9 @@ const questions = [
   {
     group: 'ID', type: 'number_input', category: 'Number and Algebra',
     context: ctxIndexDiv,
-    question: 'The share price for MED increased by 30% to reach its current price of $64.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '49',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $64.20 ÷ 1.30 = $49.38 → $49'
+    question: 'The share price for MED increased by 30% to reach its current price of $64.20. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '49.38',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $64.20 ÷ 1.30 = $49.38'
   },
   {
     group: 'IE', type: 'number_input', category: 'Number and Algebra',
@@ -5354,9 +5371,9 @@ const questions = [
   {
     group: 'IE', type: 'number_input', category: 'Number and Algebra',
     context: ctxEmerging,
-    question: 'The share price for EMG increased by 10% to reach its current price of $33.50. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '30',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $33.50 ÷ 1.10 = $30.45 → $30'
+    question: 'The share price for EMG increased by 10% to reach its current price of $33.50. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '30.45',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $33.50 ÷ 1.10 = $30.45'
   },
 
   // ── Share Portfolios Set 2: IF, IG, IH, II, IJ ───────────────────────────────
@@ -5370,9 +5387,9 @@ const questions = [
   {
     group: 'IF', type: 'number_input', category: 'Number and Algebra',
     context: ctxTechDiv,
-    question: 'The share price for SFT increased by 15% to reach its current price of $72.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '63',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $72.20 ÷ 1.15 = $62.78 → $63'
+    question: 'The share price for SFT increased by 15% to reach its current price of $72.20. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '62.78',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $72.20 ÷ 1.15 = $62.78'
   },
   {
     group: 'IG', type: 'number_input', category: 'Number and Algebra',
@@ -5384,9 +5401,9 @@ const questions = [
   {
     group: 'IG', type: 'number_input', category: 'Number and Algebra',
     context: ctxEnergyFund,
-    question: 'The share price for OIL increased by 25% to reach its current price of $98.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '79',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.40 ÷ 1.25 = $78.72 → $79'
+    question: 'The share price for OIL increased by 25% to reach its current price of $98.40. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '78.72',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.40 ÷ 1.25 = $78.72'
   },
   {
     group: 'IH', type: 'number_input', category: 'Number and Algebra',
@@ -5398,9 +5415,9 @@ const questions = [
   {
     group: 'IH', type: 'number_input', category: 'Number and Algebra',
     context: ctxHealthcare,
-    question: 'The share price for HLC increased by 40% to reach its current price of $66.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '47',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $66.40 ÷ 1.40 = $47.43 → $47'
+    question: 'The share price for HLC increased by 40% to reach its current price of $66.40. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '47.43',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $66.40 ÷ 1.40 = $47.43'
   },
   {
     group: 'II', type: 'number_input', category: 'Number and Algebra',
@@ -5412,9 +5429,9 @@ const questions = [
   {
     group: 'II', type: 'number_input', category: 'Number and Algebra',
     context: ctxConsumer,
-    question: 'The share price for FOD increased by 10% to reach its current price of $38.90. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '35',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $38.90 ÷ 1.10 = $35.36 → $35'
+    question: 'The share price for FOD increased by 10% to reach its current price of $38.90. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '35.36',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $38.90 ÷ 1.10 = $35.36'
   },
   {
     group: 'IJ', type: 'number_input', category: 'Number and Algebra',
@@ -5426,9 +5443,9 @@ const questions = [
   {
     group: 'IJ', type: 'number_input', category: 'Number and Algebra',
     context: ctxRealEstate,
-    question: 'The share price for RES increased by 20% to reach its current price of $78.50. What was the original price before the increase? (Round to the nearest whole dollar.)',
-    unit: '$', answer: '65',
-    method: 'Original = Current ÷ (1 + rate)\nOriginal = $78.50 ÷ 1.20 = $65.42 → $65'
+    question: 'The share price for RES increased by 20% to reach its current price of $78.50. What was the original price before the increase? (Round to 2 decimal places.)',
+    unit: '$', answer: '65.42',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $78.50 ÷ 1.20 = $65.42'
   },
 
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
@@ -6364,11 +6381,33 @@ function shuffle(arr) {
   }
 }
 
+// ── Broad shuffle themes (15 buckets → round 1 ≈ 30q → all themes per test) ──
+// TOPIC_GROUPS (below) stays fine-grained for focused-practice filtering.
+// SHUFFLE_THEMES merges related topics so the round-robin distributes evenly.
+const SHUFFLE_THEMES = {
+  'Crew Timesheets':    ['A','B','C','D','E','F','G','H','I','J'],
+  'Fleet Vehicles':     ['K','L','M','N','O','P','Q','R','S','T'],
+  'Measurement':        ['U','V','W','BI','BJ','BK','BL','BM','X','Y','Z','AA','AB','AC','AD','CR','CS'],
+  'Wage & Employment':  ['AE','AF','AG','AH','AI','AJ','AK','AL','AM','AN'],
+  'Retail':             ['AO','AP','AQ','AR','AS','AT','AU','AV','AW','AX'],
+  'Travel & Maps':      ['AY','AZ','BA','BB','BC','BD','BE','BF','BG','BH','EW','EX','EY','EZ','FA','FB','FC','FD','FE'],
+  'Construction':       ['BN','BO','BP','BQ','BR','BS','BT','BU','BV','BW'],
+  'Property & Finance': ['BX','BY','BZ','CA','CB','CC','CD','CE','CF','CG','CH','CI','CJ','CK','CL','CM','CN','CO','CP','CQ'],
+  'Health & Lifestyle': ['CT','CU','CV','CW','CX','CY','CZ','DA','DB','DC','DD','DE','DF','DG','DH','DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR'],
+  'Business & Tech':    ['DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB','EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL','EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV'],
+  'Numbers & Ratios':   ['FF','FG','FH','FI','FJ','FK','FL','FM','FN','FO','FP','FQ','FR','FS','FT','FU','FV','FW','FX','FY','FZ','GA','GB','GC','GD','GE','GF','GG','GR','GS','GT','GU','GV'],
+  'Financial Analysis': ['GH','GI','GJ','GK','GL','GM','GN','GO','GP','GQ'],
+  'Manufacturing':      ['GW','GX','GY','GZ','HA','HB','HC','HD','HE','HF','HV','HW','HX','HY','HZ'],
+  'Logistics':          ['HG','HH','HI','HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS','HT','HU'],
+  'Share Portfolios':   ['IA','IB','IC','ID','IE','IF','IG','IH','II','IJ'],
+}
+
 function shuffleByGroup(qs) {
-  // Build reverse lookup: group code → TOPIC_GROUPS category name
-  const groupToTopic = {}
-  for (const [topicName, groupCodes] of Object.entries(TOPIC_GROUPS)) {
-    for (const code of groupCodes) groupToTopic[code] = topicName
+  // Build reverse lookup: group code → broad SHUFFLE_THEMES name.
+  // Falls back to context title (literacy articles) or the group code itself.
+  const groupToTheme = {}
+  for (const [themeName, groupCodes] of Object.entries(SHUFFLE_THEMES)) {
+    for (const code of groupCodes) groupToTheme[code] = themeName
   }
 
   // Build one array-of-questions per group code
@@ -6378,22 +6417,21 @@ function shuffleByGroup(qs) {
     groupMap[q.group].push(q)
   })
 
-  // Bucket groups by topic category (TOPIC_GROUPS name when registered,
-  // otherwise fall back to context title — covers literacy articles)
+  // Bucket groups by broad theme
   const themeMap = {}
   Object.entries(groupMap).forEach(([code, grpQs]) => {
-    const key = groupToTopic[code] ?? grpQs[0].context?.title ?? code
+    const key = groupToTheme[code] ?? grpQs[0].context?.title ?? code
     if (!themeMap[key]) themeMap[key] = []
     themeMap[key].push(grpQs)
   })
 
-  // Shuffle groups within each topic bucket, then shuffle bucket order
+  // Shuffle groups within each theme bucket, then shuffle bucket order
   const themes = Object.values(themeMap)
   themes.forEach(t => shuffle(t))
   shuffle(themes)
 
-  // Round-robin across topic buckets: one group per bucket per round
-  // This ensures a 30-question test cycles through all categories before repeating
+  // Round-robin across theme buckets: one group per bucket per round.
+  // With 15 themes × ~2q/group, round 1 ≈ 30q → all themes represented every test.
   const result = []
   const maxRounds = Math.max(...themes.map(t => t.length))
   for (let round = 0; round < maxRounds; round++) {
@@ -11744,17 +11782,25 @@ Keep the total response under 280 words. Do not use the word "candidate". Write 
 
   try {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-    const model = genAI.getGenerativeModel({ model: 'gemini-flash-latest' })
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
 
     res.setHeader('Content-Type', 'text/plain; charset=utf-8')
     res.setHeader('Transfer-Encoding', 'chunked')
     res.setHeader('Cache-Control', 'no-cache')
 
-    const result = await model.generateContentStream(prompt)
-    for await (const chunk of result.stream) {
-      res.write(chunk.text())
+    try {
+      const result = await model.generateContentStream(prompt)
+      for await (const chunk of result.stream) {
+        res.write(chunk.text())
+      }
+      res.end()
+    } catch (streamErr) {
+      // Streaming failed (e.g. 503) — fall back to non-streaming
+      if (res.headersSent) { res.end(); return }
+      const result = await model.generateContent(prompt)
+      res.write(result.response.text())
+      res.end()
     }
-    res.end()
   } catch (err) {
     console.error('AI summary error:', err.message)
     if (!res.headersSent) {
