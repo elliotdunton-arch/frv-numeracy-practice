@@ -1816,6 +1816,180 @@ const finCtx = {
   formulaHint: 'ROE (%) = (Net Profit ÷ Shareholders Equity) × 100'
 }
 
+const ctxFood = {
+  title: 'Food Processing Plant',
+  tables: [{
+    headers: ['Product', 'Mins to Pack', 'Defect Rate', 'Unit Price'],
+    rows: [
+      ['Chips',    '4',  '6%',  '$5'],
+      ['Snacks',   '5',  '10%', '$8'],
+      ['Biscuits', '9',  '4%',  '$12'],
+      ['Cakes',    '20', '2%',  '$25'],
+      ['Drinks',   '3',  '12%', '$4'],
+    ]
+  }],
+  formulaHint: 'Steps: (1) Shift hours × 60 ÷ mins to pack = units produced. (2) Units × defect rate = defects (round to nearest whole number). (3) (Units − defects) × unit price = revenue.'
+}
+
+const ctxIndustrial = {
+  title: 'Industrial Manufacturing',
+  tables: [{
+    headers: ['Product', 'Mins to Make', 'Defect Rate', 'Unit Price'],
+    rows: [
+      ['A', '8',  '5%',  '$40'],
+      ['B', '12', '8%',  '$65'],
+      ['C', '10', '12%', '$50'],
+      ['D', '15', '4%',  '$80'],
+      ['E', '6',  '15%', '$30'],
+    ]
+  }],
+  formulaHint: 'Steps: (1) Shift hours × 60 ÷ mins to make = units produced. (2) Units × defect rate = defects (round to nearest whole number). (3) (Units − defects) × unit price = revenue.'
+}
+
+// ── Share Portfolio contexts (Dataset 1) ─────────────────────────────────────
+const ctxVanguard = {
+  title: 'Vanguard Growth Options',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['VGS','$92.50','1.80%'],['VGE','$45.20','3.10%'],['VAP','$120.40','4.25%'],['VIS','$55.80','2.50%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxManaged = {
+  title: 'Managed Equity Funds',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['GTE','$145.20','1.45%'],['ABI','$62.85','3.50%'],['EGR','$48.50','2.10%'],['SRT','$112.40','4.80%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxGlobalInfra = {
+  title: 'Global Infrastructure Options',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['INX','$210.00','5.20%'],['MIN','$38.75','6.10%'],['BNK','$75.60','4.40%'],['PRP','$98.20','3.90%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxIndexDiv = {
+  title: 'Index Diversification',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['GLB','$150.00','1.20%'],['SML','$28.40','0.90%'],['TEC','$88.50','1.10%'],['MED','$64.20','2.80%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxEmerging = {
+  title: 'Emerging Market Options',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['EMG','$33.50','4.10%'],['ASI','$52.90','2.20%'],['EUR','$77.40','3.30%'],['LAT','$41.60','5.50%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+// ── Share Portfolio contexts (Dataset 2) ─────────────────────────────────────
+const ctxTechDiv = {
+  title: 'Tech Diversification',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['TCH','$185.50','1.10%'],['SFT','$72.20','2.40%'],['NET','$44.90','0.80%'],['DTA','$115.60','3.20%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxEnergyFund = {
+  title: 'Energy & Resource Funds',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['OIL','$98.40','5.10%'],['GAS','$32.10','4.60%'],['GLD','$210.50','1.20%'],['SLV','$25.80','0.90%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxHealthcare = {
+  title: 'Healthcare & Pharma Funds',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['PHR','$135.20','2.80%'],['HLC','$66.40','1.50%'],['GEN','$42.80','0.50%'],['SUR','$158.90','2.10%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxConsumer = {
+  title: 'Consumer Goods',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['RET','$54.20','3.50%'],['FOD','$38.90','4.20%'],['BEV','$112.50','2.80%'],['CLO','$29.40','1.90%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+const ctxRealEstate = {
+  title: 'Real Estate & Property',
+  tables: [{
+    headers: ['Share Code', 'Price Per Share', 'Dividend Yield (per year)'],
+    rows: [['RES','$78.50','4.80%'],['COM','$142.20','5.10%'],['IND','$65.80','3.90%'],['LND','$198.40','2.50%']]
+  }],
+  formulaHint: 'Allocation: Shares = floor(budget per type ÷ share price). Reverse %: Original = Current ÷ (1 + increase rate).'
+}
+
+const ctxOffice = {
+  title: 'Office Equipment Manufacturing',
+  tables: [{
+    headers: ['Item', 'Time to Assemble', 'Defect Rate', 'Unit Price'],
+    rows: [
+      ['Desk',  '20 mins', '4%',  '$150'],
+      ['Chair', '12 mins', '8%',  '$85'],
+      ['Lamp',  '8 mins',  '12%', '$45'],
+      ['Shelf', '15 mins', '6%',  '$95'],
+      ['Table', '25 mins', '3%',  '$220'],
+    ]
+  }],
+  formulaHint: 'Production: Units = floor(shift_mins ÷ assembly_time). Defects = ceil(units × defect rate). Revenue = (units − defects) × price.'
+}
+
+const ctxMarathon = {
+  title: 'Marathon Logistics',
+  tables: [{
+    headers: ['Runner', 'Finishing Time'],
+    rows: [
+      ['Ryan',    '2h 30m'],
+      ['Sandy',   '4h 06m'],
+      ['Katrina', '3h 16m'],
+      ['Sammy',   '3h 38m'],
+      ['Dom',     '5h 02m'],
+      ['Erica',   '2h 48m'],
+    ]
+  }],
+  formulaHint: 'Convert each time to minutes (hours × 60 + minutes). Sum the group. Divide by the number of runners. Round UP using ceil. Convert back: hours = ⌊result ÷ 60⌋, minutes = result mod 60.'
+}
+
+const ctxCargo = {
+  title: 'Global Cargo Logistics',
+  tables: [{
+    headers: ['Route', 'Distance (km)', 'Baseline Flight', 'Safety Buffer'],
+    rows: [
+      ['Tokyo to LA',    '8,800',  '10h 30m', '45 min'],
+      ['London to Dubai','5,500',  '7h 15m',  '30 min'],
+      ['NY to Berlin',   '6,400',  '8h 20m',  '40 min'],
+      ['Sydney to SF',   '12,000', '14h 40m', '60 min'],
+      ['Paris to Delhi', '6,600',  '8h 45m',  '35 min'],
+    ]
+  }],
+  formulaHint: 'Total Time = Baseline + Safety Buffer (± any delay or early arrival). Convert all times to decimal hours. Speed = Distance ÷ Total Time.'
+}
+
+const ctxFlight = {
+  title: 'Flight Data',
+  tables: [{
+    headers: ['Flight Route', 'Distance (km)', 'Baseline Flight Time'],
+    rows: [
+      ['Melbourne to Sydney',  '900',   '1h 30m'],
+      ['Brisbane to Perth',    '3,600', '4h 45m'],
+      ['Adelaide to Auckland', '3,200', '4h 20m'],
+      ['Darwin to Singapore',  '3,300', '4h 40m'],
+      ['Hobart to Cairns',     '2,800', '3h 45m'],
+    ]
+  }],
+  formulaHint: 'Convert baseline time to decimal hours (e.g. 1h 30m = 1.5h). Convert delay to decimal hours. New Time = Baseline ± Delay. New Speed = Distance ÷ New Time.'
+}
+
 // ── Questions — 10 sets of 2 (20 total) ──────────────────────────────────────
 
 const questions = [
@@ -4681,6 +4855,582 @@ const questions = [
     method: 'Let x = junior commission\nSenior = 4x\nx + 4x = 7500\n5x = 7500\nx = $1,500'
   },
 
+  // ── Food Processing Plant: GW, GX, GY, GZ, HA ───────────────────────────────
+  {
+    group: 'GW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Chips — 8-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '565',
+    method: '8 × 60 = 480 min ÷ 4 min = 120 units\n120 × 6% = 7.2 → 7 defects\n120 − 7 = 113 units sold\n113 × $5 = $565'
+  },
+  {
+    group: 'GW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Snacks — 6-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '520',
+    method: '6 × 60 = 360 min ÷ 5 min = 72 units\n72 × 10% = 7.2 → 7 defects\n72 − 7 = 65 units sold\n65 × $8 = $520'
+  },
+  {
+    group: 'GX', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Biscuits — 12-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '924',
+    method: '12 × 60 = 720 min ÷ 9 min = 80 units\n80 × 4% = 3.2 → 3 defects\n80 − 3 = 77 units sold\n77 × $12 = $924'
+  },
+  {
+    group: 'GX', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Cakes — 10-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '725',
+    method: '10 × 60 = 600 min ÷ 20 min = 30 units\n30 × 2% = 0.6 → 1 defect\n30 − 1 = 29 units sold\n29 × $25 = $725'
+  },
+  {
+    group: 'GY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Drinks — 4-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '280',
+    method: '4 × 60 = 240 min ÷ 3 min = 80 units\n80 × 12% = 9.6 → 10 defects\n80 − 10 = 70 units sold\n70 × $4 = $280'
+  },
+  {
+    group: 'GY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Chips — 10-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '705',
+    method: '10 × 60 = 600 min ÷ 4 min = 150 units\n150 × 6% = 9.0 → 9 defects\n150 − 9 = 141 units sold\n141 × $5 = $705'
+  },
+  {
+    group: 'GZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Snacks — 8-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '688',
+    method: '8 × 60 = 480 min ÷ 5 min = 96 units\n96 × 10% = 9.6 → 10 defects\n96 − 10 = 86 units sold\n86 × $8 = $688'
+  },
+  {
+    group: 'GZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Biscuits — 6-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '456',
+    method: '6 × 60 = 360 min ÷ 9 min = 40 units\n40 × 4% = 1.6 → 2 defects\n40 − 2 = 38 units sold\n38 × $12 = $456'
+  },
+  {
+    group: 'HA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Cakes — 8-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '600',
+    method: '8 × 60 = 480 min ÷ 20 min = 24 units\n24 × 2% = 0.48 → 0 defects\n24 − 0 = 24 units sold\n24 × $25 = $600'
+  },
+  {
+    group: 'HA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFood,
+    question: 'Drinks — 12-hour shift: How much revenue is made from all non-defective units?',
+    unit: '$', answer: '844',
+    method: '12 × 60 = 720 min ÷ 3 min = 240 units\n240 × 12% = 28.8 → 29 defects\n240 − 29 = 211 units sold\n211 × $4 = $844'
+  },
+
+  // ── Industrial Manufacturing: HB, HC, HD, HE, HF ─────────────────────────────
+  {
+    group: 'HB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product A — 8-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '2280',
+    method: '8 × 60 = 480 min ÷ 8 min = 60 units\n60 × 5% = 3.0 → 3 defects\n60 − 3 = 57 units sold\n57 × $40 = $2,280'
+  },
+  {
+    group: 'HB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product B — 10-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '2990',
+    method: '10 × 60 = 600 min ÷ 12 min = 50 units\n50 × 8% = 4.0 → 4 defects\n50 − 4 = 46 units sold\n46 × $65 = $2,990'
+  },
+  {
+    group: 'HC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product C — 12-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '3150',
+    method: '12 × 60 = 720 min ÷ 10 min = 72 units\n72 × 12% = 8.64 → 9 defects\n72 − 9 = 63 units sold\n63 × $50 = $3,150'
+  },
+  {
+    group: 'HC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product D — 6-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '1840',
+    method: '6 × 60 = 360 min ÷ 15 min = 24 units\n24 × 4% = 0.96 → 1 defect\n24 − 1 = 23 units sold\n23 × $80 = $1,840'
+  },
+  {
+    group: 'HD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product E — 8-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '2040',
+    method: '8 × 60 = 480 min ÷ 6 min = 80 units\n80 × 15% = 12.0 → 12 defects\n80 − 12 = 68 units sold\n68 × $30 = $2,040'
+  },
+  {
+    group: 'HD', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product A — 10-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '2840',
+    method: '10 × 60 = 600 min ÷ 8 min = 75 units\n75 × 5% = 3.75 → 4 defects\n75 − 4 = 71 units sold\n71 × $40 = $2,840'
+  },
+  {
+    group: 'HE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product B — 6-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '1820',
+    method: '6 × 60 = 360 min ÷ 12 min = 30 units\n30 × 8% = 2.4 → 2 defects\n30 − 2 = 28 units sold\n28 × $65 = $1,820'
+  },
+  {
+    group: 'HE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product C — 8-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '2100',
+    method: '8 × 60 = 480 min ÷ 10 min = 48 units\n48 × 12% = 5.76 → 6 defects\n48 − 6 = 42 units sold\n42 × $50 = $2,100'
+  },
+  {
+    group: 'HF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product D — 10-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '3040',
+    method: '10 × 60 = 600 min ÷ 15 min = 40 units\n40 × 4% = 1.6 → 2 defects\n40 − 2 = 38 units sold\n38 × $80 = $3,040'
+  },
+  {
+    group: 'HF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndustrial,
+    question: 'Product E — 12-hour shift: What is the total revenue from non-defective units?',
+    unit: '$', answer: '3060',
+    method: '12 × 60 = 720 min ÷ 6 min = 120 units\n120 × 15% = 18.0 → 18 defects\n120 − 18 = 102 units sold\n102 × $30 = $3,060'
+  },
+
+  // ── Flight Data Analysis: HG, HH, HI, HJ, HK ────────────────────────────────
+  {
+    group: 'HG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Melbourne to Sydney: The return flight faces a 15-minute delay due to air traffic. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '514',
+    method: 'Baseline: 1h 30m = 1.5h\nDelay: 15 min = 0.25h\nNew time: 1.5 + 0.25 = 1.75h\nNew speed: 900 ÷ 1.75 = 514 km/h'
+  },
+  {
+    group: 'HG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Brisbane to Perth: The return flight faces a 30-minute delay due to headwinds. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '686',
+    method: 'Baseline: 4h 45m = 4.75h\nDelay: 30 min = 0.5h\nNew time: 4.75 + 0.5 = 5.25h\nNew speed: 3,600 ÷ 5.25 = 686 km/h'
+  },
+  {
+    group: 'HH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Adelaide to Auckland: The return flight faces a 25-minute delay due to boarding issues. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '674',
+    method: 'Baseline: 4h 20m = 4.333h\nDelay: 25 min = 0.417h\nNew time: 4.333 + 0.417 = 4.75h\nNew speed: 3,200 ÷ 4.75 = 674 km/h'
+  },
+  {
+    group: 'HH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Darwin to Singapore: The return flight faces a 45-minute delay due to weather. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '609',
+    method: 'Baseline: 4h 40m = 4.667h\nDelay: 45 min = 0.75h\nNew time: 4.667 + 0.75 = 5.417h\nNew speed: 3,300 ÷ 5.417 = 609 km/h'
+  },
+  {
+    group: 'HI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Hobart to Cairns: The return flight faces a 20-minute delay due to a mechanical check. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '686',
+    method: 'Baseline: 3h 45m = 3.75h\nDelay: 20 min = 0.333h\nNew time: 3.75 + 0.333 = 4.083h\nNew speed: 2,800 ÷ 4.083 = 686 km/h'
+  },
+  {
+    group: 'HI', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Melbourne to Sydney: The pilot maintains the baseline speed but encounters a 10-minute holding pattern. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '540',
+    method: 'Baseline: 1h 30m = 1.5h\nDelay: 10 min = 0.167h\nNew time: 1.5 + 0.167 = 1.667h\nNew speed: 900 ÷ 1.667 = 540 km/h'
+  },
+  {
+    group: 'HJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Brisbane to Perth: Due to heavy turbulence, the return speed is capped at 650 km/h. How many minutes longer than the baseline flight time (4h 45m) is this return trip?',
+    unit: 'min', answer: '47',
+    method: 'Return time: 3,600 ÷ 650 = 5.538h = 332 min\nBaseline: 4h 45m = 285 min\nDifference: 332 − 285 = 47 min'
+  },
+  {
+    group: 'HJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Adelaide to Auckland: A major storm adds a 1-hour delay to the return flight. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '600',
+    method: 'Baseline: 4h 20m = 4.333h\nDelay: 1h = 1.0h\nNew time: 4.333 + 1.0 = 5.333h\nNew speed: 3,200 ÷ 5.333 = 600 km/h'
+  },
+  {
+    group: 'HK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Darwin to Singapore: Favourable conditions mean the flight arrives 15 minutes early. What is the new average speed for the return trip?',
+    unit: 'km/h', answer: '747',
+    method: 'Baseline: 4h 40m = 4.667h\nEarly: 15 min = 0.25h\nNew time: 4.667 − 0.25 = 4.417h\nNew speed: 3,300 ÷ 4.417 = 747 km/h'
+  },
+  {
+    group: 'HK', type: 'number_input', category: 'Number and Algebra',
+    context: ctxFlight,
+    question: 'Hobart to Cairns: A fuel stop adds 50 minutes to the return trip. What is the new average speed based on the baseline flight time?',
+    unit: 'km/h', answer: '611',
+    method: 'Baseline: 3h 45m = 3.75h\nDelay: 50 min = 0.833h\nNew time: 3.75 + 0.833 = 4.583h\nNew speed: 2,800 ÷ 4.583 = 611 km/h'
+  },
+
+  // ── Global Cargo Logistics: HL, HM, HN, HO, HP ──────────────────────────────
+  {
+    group: 'HL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Tokyo to LA: Add the 45-minute safety buffer to the baseline flight time. What average speed is required to cover the 8,800 km in the total duration?',
+    unit: 'km/h', answer: '782',
+    method: 'Baseline: 10h 30m = 10.5h\nBuffer: 45 min = 0.75h\nTotal time: 10.5 + 0.75 = 11.25h\nSpeed: 8,800 ÷ 11.25 = 782 km/h'
+  },
+  {
+    group: 'HL', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'London to Dubai: Add the 30-minute safety buffer to the baseline flight time. What average speed is required to cover the 5,500 km in the total duration?',
+    unit: 'km/h', answer: '710',
+    method: 'Baseline: 7h 15m = 7.25h\nBuffer: 30 min = 0.5h\nTotal time: 7.25 + 0.5 = 7.75h\nSpeed: 5,500 ÷ 7.75 = 710 km/h'
+  },
+  {
+    group: 'HM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'NY to Berlin: Add the 40-minute safety buffer to the baseline flight time. What average speed is required to cover the 6,400 km in the total duration?',
+    unit: 'km/h', answer: '711',
+    method: 'Baseline: 8h 20m = 8.333h\nBuffer: 40 min = 0.667h\nTotal time: 8.333 + 0.667 = 9.0h\nSpeed: 6,400 ÷ 9.0 = 711 km/h'
+  },
+  {
+    group: 'HM', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Sydney to SF: The total flight duration includes the 60-minute safety buffer. What average speed is required to cover the 12,000 km in the total duration?',
+    unit: 'km/h', answer: '766',
+    method: 'Baseline: 14h 40m = 14.667h\nBuffer: 60 min = 1.0h\nTotal time: 14.667 + 1.0 = 15.667h\nSpeed: 12,000 ÷ 15.667 = 766 km/h'
+  },
+  {
+    group: 'HN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Paris to Delhi: Add the 35-minute safety buffer to the baseline flight time. What average speed is required to cover the 6,600 km in the total duration?',
+    unit: 'km/h', answer: '707',
+    method: 'Baseline: 8h 45m = 8.75h\nBuffer: 35 min = 0.583h\nTotal time: 8.75 + 0.583 = 9.333h\nSpeed: 6,600 ÷ 9.333 = 707 km/h'
+  },
+  {
+    group: 'HN', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Tokyo to LA: The flight faces a 20-minute delay on top of the 45-minute safety buffer. What is the new average speed required for the 8,800 km journey?',
+    unit: 'km/h', answer: '760',
+    method: 'Baseline: 10h 30m = 10.5h\nBuffer: 45 min = 0.75h\nDelay: 20 min = 0.333h\nTotal time: 10.5 + 0.75 + 0.333 = 11.583h\nSpeed: 8,800 ÷ 11.583 = 760 km/h'
+  },
+  {
+    group: 'HO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'London to Dubai: The flight faces a 15-minute delay on top of the 30-minute safety buffer. What is the new average speed required for the 5,500 km journey?',
+    unit: 'km/h', answer: '688',
+    method: 'Baseline: 7h 15m = 7.25h\nBuffer: 30 min = 0.5h\nDelay: 15 min = 0.25h\nTotal time: 7.25 + 0.5 + 0.25 = 8.0h\nSpeed: 5,500 ÷ 8.0 = 688 km/h'
+  },
+  {
+    group: 'HO', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'NY to Berlin: The safety buffer applies, but the flight arrives 20 minutes early. What is the average speed for the 6,400 km journey?',
+    unit: 'km/h', answer: '738',
+    method: 'Baseline: 8h 20m = 8.333h\nBuffer: 40 min = 0.667h\nEarly: −20 min = −0.333h\nTotal time: 8.333 + 0.667 − 0.333 = 8.667h\nSpeed: 6,400 ÷ 8.667 = 738 km/h'
+  },
+  {
+    group: 'HP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Sydney to SF: The safety buffer applies and the flight encounters 30 minutes of turbulence (added time). What is the new average speed for the 12,000 km journey?',
+    unit: 'km/h', answer: '742',
+    method: 'Baseline: 14h 40m = 14.667h\nBuffer: 60 min = 1.0h\nTurbulence: 30 min = 0.5h\nTotal time: 14.667 + 1.0 + 0.5 = 16.167h\nSpeed: 12,000 ÷ 16.167 = 742 km/h'
+  },
+  {
+    group: 'HP', type: 'number_input', category: 'Number and Algebra',
+    context: ctxCargo,
+    question: 'Paris to Delhi: The safety buffer applies. The pilot maintains 750 km/h for the 6,600 km journey. How many minutes ahead of the total scheduled duration does the plane arrive?',
+    unit: 'min', answer: '32',
+    method: 'Scheduled total: 8h 45m + 35 min = 8.75 + 0.583 = 9.333h\nActual time at 750 km/h: 6,600 ÷ 750 = 8.8h\nTime saved: 9.333 − 8.8 = 0.533h × 60 = 32 min'
+  },
+
+  // ── Marathon Logistics: HQ, HR, HS, HT, HU ───────────────────────────────────
+  {
+    group: 'HQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group A — All Runners: What is the average finishing time for all six runners? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '214',
+    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,280 min\n1,280 ÷ 6 = 213.33 → ceil = 214 min (= 3h 34m)'
+  },
+  {
+    group: 'HQ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group B — The Fast Runners: What is the average finishing time for Ryan, Katrina, and Erica? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '172',
+    method: 'Ryan 150 + Katrina 196 + Erica 168 = 514 min\n514 ÷ 3 = 171.33 → ceil = 172 min (= 2h 52m)'
+  },
+  {
+    group: 'HR', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group C — The Slow Runners: What is the average finishing time for Sandy, Sammy, and Dom? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '256',
+    method: 'Sandy 246 + Sammy 218 + Dom 302 = 766 min\n766 ÷ 3 = 255.33 → ceil = 256 min (= 4h 16m)'
+  },
+  {
+    group: 'HR', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group D — Brand Group: What is the average finishing time for Ryan (Asics), Sandy (Nike), and Erica (Nike)? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '188',
+    method: 'Ryan 150 + Sandy 246 + Erica 168 = 564 min\n564 ÷ 3 = 188.00 → ceil = 188 min (= 3h 08m)'
+  },
+  {
+    group: 'HS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group E — Removing the Slowest: What is the average finishing time for all runners except Dom? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '196',
+    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Erica 168 = 978 min\n978 ÷ 5 = 195.60 → ceil = 196 min (= 3h 16m)'
+  },
+  {
+    group: 'HS', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group F — Removing the Fastest: What is the average finishing time for all runners except Ryan? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '226',
+    method: 'Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,130 min\n1,130 ÷ 5 = 226.00 → ceil = 226 min (= 3h 46m)'
+  },
+  {
+    group: 'HT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group G — The Middle Pack: What is the average finishing time for Katrina, Sammy, and Erica? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '194',
+    method: 'Katrina 196 + Sammy 218 + Erica 168 = 582 min\n582 ÷ 3 = 194.00 → ceil = 194 min (= 3h 14m)'
+  },
+  {
+    group: 'HT', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group H — The Outliers: What is the average finishing time of the fastest runner (Ryan) and the slowest runner (Dom)? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '226',
+    method: 'Ryan 150 + Dom 302 = 452 min\n452 ÷ 2 = 226.00 → ceil = 226 min (= 3h 46m)'
+  },
+  {
+    group: 'HU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group I — The "Under 4 Hours" Club: What is the average finishing time for all runners who finished in under 4 hours (Ryan, Katrina, Sammy, Erica)? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '183',
+    method: 'Ryan 150 + Katrina 196 + Sammy 218 + Erica 168 = 732 min\n732 ÷ 4 = 183.00 → ceil = 183 min (= 3h 03m)'
+  },
+  {
+    group: 'HU', type: 'number_input', category: 'Number and Algebra',
+    context: ctxMarathon,
+    question: 'Group J — The "Over 4 Hours" Club: What is the average finishing time for all runners who finished over 4 hours (Sandy, Dom)? Give your answer in minutes (round up to the nearest minute).',
+    unit: 'min', answer: '274',
+    method: 'Sandy 246 + Dom 302 = 548 min\n548 ÷ 2 = 274.00 → ceil = 274 min (= 4h 34m)'
+  },
+
+  // ── Office Equipment Manufacturing: HV, HW, HX, HY, HZ ──────────────────────
+  {
+    group: 'HV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'An employee works an 8-hour shift exclusively manufacturing Desks. How much revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
+    unit: '$', answer: '3450',
+    method: '8 × 60 = 480 min ÷ 20 = 24 Desks\nceil(24 × 4%) = ceil(0.96) = 1 defect\n24 − 1 = 23 sold × $150 = $3,450'
+  },
+  {
+    group: 'HV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A team works a 10-hour shift producing Chairs. How much total revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
+    unit: '$', answer: '3910',
+    method: '10 × 60 = 600 min ÷ 12 = 50 Chairs\nceil(50 × 8%) = ceil(4.0) = 4 defects\n50 − 4 = 46 sold × $85 = $3,910'
+  },
+  {
+    group: 'HW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A team works a 6-hour shift producing Lamps. How much total revenue is generated from all non-defective units? (Round defects up to the nearest whole number.)',
+    unit: '$', answer: '1755',
+    method: '6 × 60 = 360 min ÷ 8 = 45 Lamps\nceil(45 × 12%) = ceil(5.4) = 6 defects\n45 − 6 = 39 sold × $45 = $1,755'
+  },
+  {
+    group: 'HW', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A company has a $5,000 budget and spends $1,000 on each of the 5 items. What is the total number of items purchased across all categories? (Round down to nearest whole number per item.)',
+    unit: 'items', answer: '53',
+    method: '$1,000 ÷ $150 = 6.67 → 6 Desks\n$1,000 ÷ $85 = 11.76 → 11 Chairs\n$1,000 ÷ $45 = 22.22 → 22 Lamps\n$1,000 ÷ $95 = 10.53 → 10 Shelves\n$1,000 ÷ $220 = 4.55 → 4 Tables\nTotal: 6 + 11 + 22 + 10 + 4 = 53 items'
+  },
+  {
+    group: 'HX', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A company spends $10,000 split equally across the 5 items ($2,000 each). What is the difference in quantity between the number of Lamps and the number of Tables purchased?',
+    unit: 'items', answer: '35',
+    method: '$10,000 ÷ 5 = $2,000 per item\nLamps: $2,000 ÷ $45 = 44.44 → 44\nTables: $2,000 ÷ $220 = 9.09 → 9\nDifference: 44 − 9 = 35 items'
+  },
+  {
+    group: 'HX', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A Shelf\'s price has increased by 15% to reach its current wholesale price of $95. What was the original price before the increase? (Round to the nearest dollar.)',
+    unit: '$', answer: '83',
+    method: 'Original = Current ÷ (1 + increase rate)\nOriginal = $95 ÷ 1.15 = $82.61 → $83'
+  },
+  {
+    group: 'HY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A Desk\'s price has decreased by 12% to reach its current price of $150. What was the original price before the decrease? (Round to the nearest dollar.)',
+    unit: '$', answer: '170',
+    method: 'Original = Current ÷ (1 − decrease rate)\nOriginal = $150 ÷ 0.88 = $170.45 → $170'
+  },
+  {
+    group: 'HY', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'An employee producing Tables in an 8-hour shift reduces their defect rate from 3% to 0% due to a new machine. How much extra revenue is generated per shift compared to the old 3% defect rate? (Round defects up.)',
+    unit: '$', answer: '220',
+    method: '8 × 60 = 480 min ÷ 25 = 19 Tables\nOld (3%): ceil(19 × 3%) = ceil(0.57) = 1 defect → 18 sold × $220 = $3,960\nNew (0%): 0 defects → 19 sold × $220 = $4,180\nExtra revenue: $4,180 − $3,960 = $220'
+  },
+  {
+    group: 'HZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'You produce 10 Chairs and 10 Shelves. 1 Chair and 1 Shelf are defective and cannot be sold. What is your total revenue from the remaining units?',
+    unit: '$', answer: '1620',
+    method: 'Chairs sold: 10 − 1 = 9 × $85 = $765\nShelves sold: 10 − 1 = 9 × $95 = $855\nTotal: $765 + $855 = $1,620'
+  },
+  {
+    group: 'HZ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxOffice,
+    question: 'A workshop runs for 12 hours — Chairs for the first 6 hours, then Shelves for the second 6 hours. How much total revenue is made after accounting for defective units? (Round defects up.)',
+    unit: '$', answer: '4385',
+    method: 'Chairs (6h): 360 ÷ 12 = 30; ceil(30 × 8%) = ceil(2.4) = 3 defects; 27 × $85 = $2,295\nShelves (6h): 360 ÷ 15 = 24; ceil(24 × 6%) = ceil(1.44) = 2 defects; 22 × $95 = $2,090\nTotal: $2,295 + $2,090 = $4,385'
+  },
+
+  // ── Share Portfolios Set 1: IA, IB, IC, ID, IE ───────────────────────────────
+  {
+    group: 'IA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxVanguard,
+    question: 'You have $20,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '294',
+    method: '$20,000 ÷ 4 = $5,000 per type\nVGS: $5,000 ÷ $92.50 = 54.05 → 54\nVGE: $5,000 ÷ $45.20 = 110.62 → 110\nVAP: $5,000 ÷ $120.40 = 41.53 → 41\nVIS: $5,000 ÷ $55.80 = 89.61 → 89\nTotal: 54 + 110 + 41 + 89 = 294 shares'
+  },
+  {
+    group: 'IA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxVanguard,
+    question: 'The share price for VAP increased by 15% to reach its current price of $120.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '105',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $120.40 ÷ 1.15 = $104.70 → $105'
+  },
+  {
+    group: 'IB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxManaged,
+    question: 'You have $12,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '154',
+    method: '$12,000 ÷ 4 = $3,000 per type\nGTE: $3,000 ÷ $145.20 = 20.66 → 20\nABI: $3,000 ÷ $62.85 = 47.73 → 47\nEGR: $3,000 ÷ $48.50 = 61.86 → 61\nSRT: $3,000 ÷ $112.40 = 26.69 → 26\nTotal: 20 + 47 + 61 + 26 = 154 shares'
+  },
+  {
+    group: 'IB', type: 'number_input', category: 'Number and Algebra',
+    context: ctxManaged,
+    question: 'The share price for ABI increased by 25% to reach its current price of $62.85. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '50',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $62.85 ÷ 1.25 = $50.28 → $50'
+  },
+  {
+    group: 'IC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGlobalInfra,
+    question: 'You have $30,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '403',
+    method: '$30,000 ÷ 4 = $7,500 per type\nINX: $7,500 ÷ $210.00 = 35.71 → 35\nMIN: $7,500 ÷ $38.75 = 193.55 → 193\nBNK: $7,500 ÷ $75.60 = 99.21 → 99\nPRP: $7,500 ÷ $98.20 = 76.38 → 76\nTotal: 35 + 193 + 99 + 76 = 403 shares'
+  },
+  {
+    group: 'IC', type: 'number_input', category: 'Number and Algebra',
+    context: ctxGlobalInfra,
+    question: 'The share price for PRP increased by 20% to reach its current price of $98.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '82',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.20 ÷ 1.20 = $81.83 → $82'
+  },
+  {
+    group: 'ID', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndexDiv,
+    question: 'You have $40,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '685',
+    method: '$40,000 ÷ 4 = $10,000 per type\nGLB: $10,000 ÷ $150.00 = 66.67 → 66\nSML: $10,000 ÷ $28.40 = 352.11 → 352\nTEC: $10,000 ÷ $88.50 = 112.99 → 112\nMED: $10,000 ÷ $64.20 = 155.76 → 155\nTotal: 66 + 352 + 112 + 155 = 685 shares'
+  },
+  {
+    group: 'ID', type: 'number_input', category: 'Number and Algebra',
+    context: ctxIndexDiv,
+    question: 'The share price for MED increased by 30% to reach its current price of $64.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '49',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $64.20 ÷ 1.30 = $49.38 → $49'
+  },
+  {
+    group: 'IE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEmerging,
+    question: 'You have $25,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '534',
+    method: '$25,000 ÷ 4 = $6,250 per type\nEMG: $6,250 ÷ $33.50 = 186.57 → 186\nASI: $6,250 ÷ $52.90 = 118.15 → 118\nEUR: $6,250 ÷ $77.40 = 80.75 → 80\nLAT: $6,250 ÷ $41.60 = 150.24 → 150\nTotal: 186 + 118 + 80 + 150 = 534 shares'
+  },
+  {
+    group: 'IE', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEmerging,
+    question: 'The share price for EMG increased by 10% to reach its current price of $33.50. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '30',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $33.50 ÷ 1.10 = $30.45 → $30'
+  },
+
+  // ── Share Portfolios Set 2: IF, IG, IH, II, IJ ───────────────────────────────
+  {
+    group: 'IF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTechDiv,
+    question: 'You have $20,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '249',
+    method: '$20,000 ÷ 4 = $5,000 per type\nTCH: $5,000 ÷ $185.50 = 26.95 → 26\nSFT: $5,000 ÷ $72.20 = 69.25 → 69\nNET: $5,000 ÷ $44.90 = 111.36 → 111\nDTA: $5,000 ÷ $115.60 = 43.25 → 43\nTotal: 26 + 69 + 111 + 43 = 249 shares'
+  },
+  {
+    group: 'IF', type: 'number_input', category: 'Number and Algebra',
+    context: ctxTechDiv,
+    question: 'The share price for SFT increased by 15% to reach its current price of $72.20. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '63',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $72.20 ÷ 1.15 = $62.78 → $63'
+  },
+  {
+    group: 'IG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEnergyFund,
+    question: 'You have $15,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '316',
+    method: '$15,000 ÷ 4 = $3,750 per type\nOIL: $3,750 ÷ $98.40 = 38.11 → 38\nGAS: $3,750 ÷ $32.10 = 116.82 → 116\nGLD: $3,750 ÷ $210.50 = 17.82 → 17\nSLV: $3,750 ÷ $25.80 = 145.35 → 145\nTotal: 38 + 116 + 17 + 145 = 316 shares'
+  },
+  {
+    group: 'IG', type: 'number_input', category: 'Number and Algebra',
+    context: ctxEnergyFund,
+    question: 'The share price for OIL increased by 25% to reach its current price of $98.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '79',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $98.40 ÷ 1.25 = $78.72 → $79'
+  },
+  {
+    group: 'IH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxHealthcare,
+    question: 'You have $25,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '325',
+    method: '$25,000 ÷ 4 = $6,250 per type\nPHR: $6,250 ÷ $135.20 = 46.23 → 46\nHLC: $6,250 ÷ $66.40 = 94.13 → 94\nGEN: $6,250 ÷ $42.80 = 146.03 → 146\nSUR: $6,250 ÷ $158.90 = 39.33 → 39\nTotal: 46 + 94 + 146 + 39 = 325 shares'
+  },
+  {
+    group: 'IH', type: 'number_input', category: 'Number and Algebra',
+    context: ctxHealthcare,
+    question: 'The share price for HLC increased by 40% to reach its current price of $66.40. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '47',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $66.40 ÷ 1.40 = $47.43 → $47'
+  },
+  {
+    group: 'II', type: 'number_input', category: 'Number and Algebra',
+    context: ctxConsumer,
+    question: 'You have $10,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '217',
+    method: '$10,000 ÷ 4 = $2,500 per type\nRET: $2,500 ÷ $54.20 = 46.13 → 46\nFOD: $2,500 ÷ $38.90 = 64.27 → 64\nBEV: $2,500 ÷ $112.50 = 22.22 → 22\nCLO: $2,500 ÷ $29.40 = 85.03 → 85\nTotal: 46 + 64 + 22 + 85 = 217 shares'
+  },
+  {
+    group: 'II', type: 'number_input', category: 'Number and Algebra',
+    context: ctxConsumer,
+    question: 'The share price for FOD increased by 10% to reach its current price of $38.90. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '35',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $38.90 ÷ 1.10 = $35.36 → $35'
+  },
+  {
+    group: 'IJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxRealEstate,
+    question: 'You have $35,000 to invest, spending one quarter on each share type. How many shares do you own in total across all four codes? (Round down per share type.)',
+    unit: 'shares', answer: '348',
+    method: '$35,000 ÷ 4 = $8,750 per type\nRES: $8,750 ÷ $78.50 = 111.46 → 111\nCOM: $8,750 ÷ $142.20 = 61.53 → 61\nIND: $8,750 ÷ $65.80 = 132.98 → 132\nLND: $8,750 ÷ $198.40 = 44.10 → 44\nTotal: 111 + 61 + 132 + 44 = 348 shares'
+  },
+  {
+    group: 'IJ', type: 'number_input', category: 'Number and Algebra',
+    context: ctxRealEstate,
+    question: 'The share price for RES increased by 20% to reach its current price of $78.50. What was the original price before the increase? (Round to the nearest whole dollar.)',
+    unit: '$', answer: '65',
+    method: 'Original = Current ÷ (1 + rate)\nOriginal = $78.50 ÷ 1.20 = $65.42 → $65'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -5683,6 +6433,14 @@ const TOPIC_GROUPS = {
   'Sequential Deductions':    ['GC','GD','GE','GF','GG'],
   'Financial Data Analysis': ['GH','GI','GJ','GK','GL','GM','GN','GO','GP','GQ'],
   'Ratio & Distribution':   ['GR','GS','GT','GU','GV'],
+  'Food Processing Plant':  ['GW','GX','GY','GZ','HA'],
+  'Industrial Manufacturing': ['HB','HC','HD','HE','HF'],
+  'Flight Data Analysis':     ['HG','HH','HI','HJ','HK'],
+  'Global Cargo Logistics':   ['HL','HM','HN','HO','HP'],
+  'Marathon Logistics':       ['HQ','HR','HS','HT','HU'],
+  'Office Equipment Mfg':    ['HV','HW','HX','HY','HZ'],
+  'Share Portfolios (Set 1)': ['IA','IB','IC','ID','IE'],
+  'Share Portfolios (Set 2)': ['IF','IG','IH','II','IJ'],
 }
 
 app.get('/api/topics', (req, res) => {
@@ -10683,6 +11441,190 @@ const mechanicalQuestions = [
     method: 'Removing pins B and C leaves only pin A. The plate then rotates freely around the green pivot, swinging up as far as pin A allows — achieving the greatest arc distance. Removing any other combination leaves a closer-set pin that limits the swing to a shorter distance.'
   },
 
+  // ── FRV Practice #3 — Q01–Q25 ────────────────────────────────────────────────
+  { group: 'MFP3_01', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_01.png',
+    question: 'If gear A is turning clockwise at a constant speed of 10 rpm, what direction and how fast is gear B turning?',
+    options: ['A) Anti-clockwise at 10 rpm', 'B) Clockwise at 10 rpm', 'C) Clockwise at 5 rpm', 'D) Anti-clockwise at 5 rpm'],
+    answer: 'A) Anti-clockwise at 10 rpm',
+    method: 'Every second gear turns the opposite direction to the one before it. Gear A is clockwise → B is anti-clockwise → C is clockwise → gear B is anti-clockwise. Because all gears are the same size, they all turn at the same speed of 10 rpm.'
+  },
+  { group: 'MFP3_02', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_02.png',
+    question: 'How many gears are turning anti-clockwise?',
+    options: ['A) 2', 'B) 3', 'C) 4', 'D) 5'],
+    answer: 'B) 3',
+    method: 'Gears turning clockwise: A, C, E, F, H (5 gears). Gears turning anti-clockwise: B, D, G (3 gears). The direction alternates at each mesh point in the chain.'
+  },
+  { group: 'MFP3_03', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Optics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_03.png',
+    question: 'What would the rod look like if submerged in the water?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'A) A',
+    method: 'When a rod is placed in water, refraction causes it to appear bent at the water\'s surface. Only option A shows a natural bend at the waterline, which is the effect most commonly observed due to light bending as it passes between air and water.'
+  },
+  { group: 'MFP3_04', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_04.png',
+    question: 'Which chain is required to support the load?',
+    options: ['A) A', 'B) B', 'C) C', 'D) None'],
+    answer: 'A) A',
+    method: 'The blue load places a downward force on the grey beam, causing it to tilt clockwise around its pivot. Chain A, positioned to counteract this clockwise rotation, will pull down on the correct side of the beam to resist the tilt and support the load.'
+  },
+  { group: 'MFP3_05', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_05.png',
+    question: 'Which pipe outlet would have the most water pressure as the water leaves the pipe into open air?',
+    options: ['A) Pipe A', 'B) Pipe B', 'C) Pipe C', 'D) Pipe D', 'E) All the same'],
+    answer: 'E) All the same',
+    method: 'At the very exit of a pipe — where water transitions from inside the pipe to open air — the pressure equalises with surrounding atmospheric pressure. This holds true regardless of whether the pipe is straight, bent, or has a nozzle. All outlets are at the same pressure at the exit point.'
+  },
+  { group: 'MFP3_06', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_06.png',
+    question: 'Which brown pole has the most force upon it from the blue weight?',
+    options: ['A) A', 'B) B', 'C) C', 'D) They all have the same'],
+    answer: 'A) A',
+    method: 'Torque = Force × Distance from pivot. The closer a support is to the pivot point, the more force it must exert to counteract the torque from the weight. Pole A is closest to the pivot and therefore experiences the highest force.'
+  },
+  { group: 'MFP3_07', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_07.png',
+    question: 'Pipe A is half the diameter of pipe B. Which pipe has the water leaving at the highest speed?',
+    options: ['A) A', 'B) B', 'C) The same', 'D) Cannot tell'],
+    answer: 'C) The same',
+    method: 'Water speed at the pipe outlet depends on pressure in the tank, which is greatest at the bottom (P = ρgh). Because both outlet pipes are at the same depth, the pressure driving the flow is identical, so the water exits both pipes at the same speed. (Note: the narrower pipe A carries less volume per second, but not at higher speed.)'
+  },
+  { group: 'MFP3_08', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_08.png',
+    question: 'A truck is towing a car. If the truck is reversing and the driver turns the steering wheel clockwise, which direction does the car turn?',
+    options: ['A) Up and to the left', 'B) Down and to the left', 'C) Up and to the right', 'D) Down and to the right'],
+    answer: 'D) Down and to the right',
+    methodImage: '/images/mechanical reasoning/Mech_FRV Practice 3_08 answer.png',
+    method: 'When reversing with a towed vehicle, turning the steering wheel clockwise (to the right) causes the towed car to move in the same rightward direction. Both vehicles are moving backwards (down), so the car goes down and to the right.'
+  },
+  { group: 'MFP3_09', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_09.png',
+    question: 'To balance the grey beam, how heavy does the right blue box need to be?',
+    options: ['A) 5 kg', 'B) 10 kg', 'C) 15 kg', 'D) 20 kg'],
+    answer: 'B) 10 kg',
+    method: 'For balance: Force × Distance must be equal on both sides.\nLeft: 5 kg × 4 units = 20\nRight: ? × 2 units = 20\n? = 20 ÷ 2 = 10 kg'
+  },
+  { group: 'MFP3_10', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_10.png',
+    question: 'Which wheel would turn the quickest?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'A) A',
+    method: 'The smaller the diameter of a wheel, the faster it will turn when the same force is applied. Wheel A has the smallest diameter, so it turns the quickest.'
+  },
+  { group: 'MFP3_11', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_11.png',
+    question: 'Spring B has double the weight attached to it and stretches to 12 cm. How far would spring A stretch?',
+    options: ['A) 24 cm', 'B) 18 cm', 'C) 12 cm', 'D) 6 cm'],
+    answer: 'D) 6 cm',
+    method: 'Spring B has double the weight (force) and stretches 12 cm. Spring A has half the force. By Hooke\'s Law, extension is proportional to force: half the force = half the extension. 12 cm ÷ 2 = 6 cm.'
+  },
+  { group: 'MFP3_12', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_12.png',
+    question: 'Blocks are sliding down frictionless surfaces. The bigger the block, the heavier it is. Which block has the highest velocity at the end?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D'],
+    answer: 'C) C',
+    method: 'On a frictionless surface, all potential energy converts to kinetic energy (mgh = ½mv²). Mass cancels out, so velocity at the bottom depends only on the starting height (v = √(2gh)). Block C starts at the greatest height, so it reaches the highest velocity.'
+  },
+  { group: 'MFP3_13', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_13.png',
+    question: 'Which spanner would be the most difficult to use to tighten the blue nut?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'A) A',
+    method: 'Torque = Force × Distance from pivot. A shorter spanner provides less distance from the pivot (the nut centre), resulting in less torque for the same applied force. Spanner A is the shortest, so it produces the least torque and is the most difficult to tighten with.'
+  },
+  { group: 'MFP3_14', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_14.png',
+    question: 'If the blue weight is to be lifted by 5 metres, how far up would you have to pull the rope?',
+    options: ['A) 5 m', 'B) 10 m', 'C) 20 m', 'D) 30 m'],
+    answer: 'B) 10 m',
+    method: 'The system has one movable pulley and one fixed pulley. The movable pulley is supported by 2 sections of rope, giving a mechanical advantage of 2. The trade-off is that you must pull twice as much rope as the load is lifted: 5 m × 2 = 10 m of rope.'
+  },
+  { group: 'MFP3_15', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Fluid Mechanics',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_15.png',
+    question: 'A sealed container is filled with gas. The piston is moved down to halfway. What has happened to the pressure in the section with the gas?',
+    options: ['A) Halved', 'B) Stays the same', 'C) Doubled', 'D) Quadrupled'],
+    answer: 'C) Doubled',
+    method: "By Boyle's Law: pressure × volume = constant (at constant temperature). The volume is halved when the piston moves to halfway. Therefore pressure must double to keep the product constant: P₁V₁ = P₂V₂ → P₂ = P₁ × (V₁ ÷ ½V₁) = 2P₁."
+  },
+  { group: 'MFP3_16', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_16.png',
+    question: 'Two cogs are rotating as a result of the central rack moving in the direction of the arrow. What is happening to the two cogs?',
+    options: [
+      'A) Rotating same direction & the time to rotate a turn is the same',
+      'B) Rotating different directions & the time to rotate a turn is the same',
+      'C) Rotating same direction & the time to rotate a turn is different',
+      'D) Rotating different directions & the time to rotate a turn is different'
+    ],
+    answer: 'D) Rotating different directions & the time to rotate a turn is different',
+    method: 'The rack engages both cogs but from opposite sides, causing them to rotate in opposite directions (blue anti-clockwise, smaller cog clockwise). The smaller cog has fewer teeth, so it completes each full rotation faster than the larger blue cog — the time per revolution is different.'
+  },
+  { group: 'MFP3_17', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_17.png',
+    question: 'Which direction would you rotate the screw to raise the brown mechanism?',
+    options: ['A) Clockwise', 'B) Anti-clockwise', 'C) Either direction', 'D) Neither direction'],
+    answer: 'D) Neither direction',
+    method: 'Rotating the screw in either direction only moves the screw itself up or down through its housing. The brown mechanism is not attached to the screw in a way that transfers vertical motion — it remains stationary regardless of which direction the screw turns.'
+  },
+  { group: 'MFP3_18', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Motion & Forces',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_18.png',
+    question: 'Which ball would hit the ground first if they fell from the same height at the same time in a vacuum?',
+    options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
+    answer: 'D) All the same',
+    method: 'In a vacuum there is no air resistance, so gravity is the only force. Although the heavier ball has more gravitational force, it also has more inertia — these effects cancel exactly. All objects fall at the same acceleration (g ≈ 9.8 m/s²) regardless of mass, as demonstrated by Galileo.'
+  },
+  { group: 'MFP3_19', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Electrical Circuits',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_19.png',
+    question: 'If bulb C is removed, how many bulbs will shine in the circuit?',
+    options: ['A) 1', 'B) 2', 'C) 3', 'D) 4', 'E) None'],
+    answer: 'E) None',
+    method: 'The circuit is not closed — the switch to the left of the battery is open, so no current can flow regardless of whether bulb C is removed or not. None of the bulbs will shine. If the switch were closed and bulb C removed, 3 bulbs would shine.'
+  },
+  { group: 'MFP3_20', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_20.jpg',
+    question: 'In the mechanism below, how will the weights move?',
+    options: ['A) A will raise and B will lower', 'B) B will raise and A will lower', 'C) Both will raise', 'D) Both will lower', 'E) Both will balance'],
+    answer: 'E) Both will balance',
+    method: 'The weights are equal and there is no indication of an external force, friction, or initial displacement. With equal masses on a balanced system, the net torque is zero and the system remains in equilibrium — both weights stay in place.'
+  },
+  { group: 'MFP3_21', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Gears & Wheels',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_21.jpg',
+    question: 'Which block will move further with one revolution of the drive wheel?',
+    options: ['A) Orange Block', 'B) Green Block', 'C) Both move equally'],
+    answer: 'A) Orange Block',
+    method: 'Linear distance per revolution = 2π × radius. The yellow rod connected to the orange block has a greater radius than the rod connected to the green block. Even though both rotate at the same angular speed, the larger radius produces a greater linear distance per revolution. The orange block moves further.'
+  },
+  { group: 'MFP3_22', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_22.png',
+    question: 'At which point will the fulcrum need to be positioned for the beam to balance?',
+    options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) E'],
+    answer: 'A) A',
+    methodImage: '/images/mechanical reasoning/Mech_FRV Practice 3_22 answer.png',
+    method: 'For balance: torque must be equal on both sides (Weight × Distance = Weight × Distance).\n60 kg is 4× heavier than 15 kg, so the 15 kg weight must be 4× further from the fulcrum.\nPoint A gives 1 unit to the 60 kg weight and 4 units to the 15 kg weight: 60×1 = 15×4 = 60. ✓'
+  },
+  { group: 'MFP3_23', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Cams & Levers',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_23.jpg',
+    question: 'How will the blue link move when the handle is rotated as shown?',
+    options: ['A) A', 'B) B', 'C) C'],
+    answer: 'B) B',
+    method: "The handle's rotation lifts the blue link from the right side and lowers it from the left side. This produces the motion shown in option B — the link rocks in a see-saw fashion with the right side rising and the left side falling."
+  },
+  { group: 'MFP3_24', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Belts & Pulleys',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_24.jpg',
+    question: 'When the brake is applied, which point of the belt will most likely break (A or B)?',
+    options: ['A) A', 'B) B', 'C) Both the same'],
+    answer: 'A) A',
+    method: 'Both wheels turn counter-clockwise. When the brake is applied to the brake wheel, the drive wheel continues rotating, pulling the belt tight at point A. The belt is under high tension at A (being pulled into the drive wheel) and slack at B (being pushed away). The high tension side (A) is most likely to break.'
+  },
+  { group: 'MFP3_25', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Structures',
+    questionImage: '/images/mechanical reasoning/Mech_FRV Practice 3_25.png',
+    question: 'Which type of dam would be most suitable for a narrow canyon with weak side walls?',
+    options: ['A) A', 'B) B', 'C) Both the same'],
+    answer: 'A) A',
+    method: 'An arch dam (B) transfers water pressure sideways into the valley walls — this requires strong abutments. A gravity dam (A) resists water pressure primarily through its own weight and does not rely on abutment strength. For a narrow canyon with weak side walls, the gravity dam (A) is the safer choice.'
+  },
+
   // ── Theory Questions: MTHY_01–MTHY_03 ────────────────────────────────────────
   { group: 'MTHY_01', set: 'Theory Questions', type: 'multiple_choice', category: 'Gears & Wheels',
     question: 'A gear train has 5 gears in a sequence (A to E). If Gear A rotates clockwise, in which direction does Gear E rotate?',
@@ -10742,6 +11684,7 @@ app.get('/api/mechanical-questions', (req, res) => {
     options: q.options || null,
     answer: q.answer,
     method: q.method || null,
+    methodImage: q.methodImage || null,
   }))
   const customCount = req.query.count ? parseInt(req.query.count) : null
   res.json(customCount ? final.slice(0, customCount) : final)

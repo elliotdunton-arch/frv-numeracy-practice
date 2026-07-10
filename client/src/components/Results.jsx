@@ -367,7 +367,16 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                             <span className="working-toggle-icon">{workingOpen ? '▾' : '▸'}</span>
                             {workingOpen ? 'Hide working' : 'Show working'}
                           </button>
-                          {workingOpen && <pre className="working-content">{q.method}</pre>}
+                          {workingOpen && (
+                            <>
+                              <pre className="working-content">{q.method}</pre>
+                              {q.methodImage && (
+                                <div style={{ textAlign: 'center', marginTop: 12 }}>
+                                  <img src={q.methodImage} alt="Answer diagram" className="review-question-img" style={{ maxWidth: '100%', maxHeight: 320, borderRadius: 8 }} />
+                                </div>
+                              )}
+                            </>
+                          )}
                         </div>
                       )}
                     </div>
@@ -501,6 +510,11 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                             </div>
                           )}
                           <pre className="working-content">{q.method}</pre>
+                          {q.methodImage && (
+                            <div style={{ textAlign: 'center', marginTop: 12 }}>
+                              <img src={q.methodImage} alt="Answer diagram" className="review-question-img" style={{ maxWidth: '100%', maxHeight: 320, borderRadius: 8 }} />
+                            </div>
+                          )}
                         </>
                       )}
                     </div>
