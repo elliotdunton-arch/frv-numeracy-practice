@@ -5448,6 +5448,267 @@ const questions = [
     method: 'Original = Current ÷ (1 + rate)\nOriginal = $78.50 ÷ 1.20 = $65.42'
   },
 
+  // ── Weekly Sales: JA–JJ ──────────────────────────────────────────────────────
+  {
+    group: 'JA', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Coffee Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Latte (L): $5  ·  Espresso (E): $3  ·  Muffin (M): $4'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','L','E','M','L','E','M','L','E','M'], rows: [['Monday','1','2','3','0','1','4','0','0','2'],['Tuesday','2','0','2','1','2','1','0','1','3'],['Wednesday','0','3','1','2','0','2','1','2','1'],['Thursday','1','1','2','2','2','2','0','3','1'],['Friday','2','2','1','1','4','1','0','0','2'],['Saturday','3','2','0','2','2','2','1','2','0'],['Sunday','0','1','3','1','0','2','0','2','1']] }]
+    },
+    question: 'What is the total number of Lattes (L) sold during the week?',
+    unit: '', answer: '20',
+    method: 'Mon: 1+0+0=1 | Tue: 2+1+0=3 | Wed: 0+2+1=3\nThu: 1+2+0=3 | Fri: 2+1+0=3 | Sat: 3+2+1=6 | Sun: 0+1+0=1\nTotal: 1+3+3+3+3+6+1 = 20'
+  },
+  {
+    group: 'JA', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Coffee Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Latte (L): $5  ·  Espresso (E): $3  ·  Muffin (M): $4'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','L','E','M','L','E','M','L','E','M'], rows: [['Monday','1','2','3','0','1','4','0','0','2'],['Tuesday','2','0','2','1','2','1','0','1','3'],['Wednesday','0','3','1','2','0','2','1','2','1'],['Thursday','1','1','2','2','2','2','0','3','1'],['Friday','2','2','1','1','4','1','0','0','2'],['Saturday','3','2','0','2','2','2','1','2','0'],['Sunday','0','1','3','1','0','2','0','2','1']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 6L×$5 + 6E×$3 + 2M×$4 = $30+$18+$8 = $56\nThursday: 3L×$5 + 6E×$3 + 5M×$4 = $15+$18+$20 = $53\nSaturday ($56) is the highest.'
+  },
+
+  {
+    group: 'JB', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Bookstore',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Hardcover (H): $20  ·  Paperback (P): $10  ·  Magazine (M): $5'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','H','P','M','H','P','M','H','P','M'], rows: [['Monday','2','5','3','1','4','2','0','2','2'],['Tuesday','3','2','1','2','3','4','1','1','5'],['Wednesday','1','4','2','3','2','1','0','5','3'],['Thursday','4','1','0','2','4','2','1','2','4'],['Friday','5','3','1','3','5','2','2','2','1'],['Saturday','6','4','2','4','6','3','2','3','2'],['Sunday','2','2','4','1','3','2','0','1','5']] }]
+    },
+    question: 'What is the total number of Hardcovers (H) sold during the week?',
+    unit: '', answer: '45',
+    method: 'Mon: 2+1+0=3 | Tue: 3+2+1=6 | Wed: 1+3+0=4\nThu: 4+2+1=7 | Fri: 5+3+2=10 | Sat: 6+4+2=12 | Sun: 2+1+0=3\nTotal: 3+6+4+7+10+12+3 = 45'
+  },
+  {
+    group: 'JB', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Bookstore',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Hardcover (H): $20  ·  Paperback (P): $10  ·  Magazine (M): $5'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','H','P','M','H','P','M','H','P','M'], rows: [['Monday','2','5','3','1','4','2','0','2','2'],['Tuesday','3','2','1','2','3','4','1','1','5'],['Wednesday','1','4','2','3','2','1','0','5','3'],['Thursday','4','1','0','2','4','2','1','2','4'],['Friday','5','3','1','3','5','2','2','2','1'],['Saturday','6','4','2','4','6','3','2','3','2'],['Sunday','2','2','4','1','3','2','0','1','5']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 12H×$20 + 13P×$10 + 7M×$5 = $240+$130+$35 = $405\nFriday: 10H×$20 + 10P×$10 + 4M×$5 = $200+$100+$20 = $320\nSaturday ($405) is the highest.'
+  },
+
+  {
+    group: 'JC', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Florist',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Rose (R): $8  ·  Tulip (T): $5  ·  Lily (L): $6'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','R','T','L','R','T','L','R','T','L'], rows: [['Monday','4','2','1','3','3','2','1','2','2'],['Tuesday','2','5','3','2','4','1','0','1','4'],['Wednesday','3','1','2','4','2','3','2','3','1'],['Thursday','5','2','0','3','4','2','1','1','3'],['Friday','4','4','2','5','3','1','2','2','2'],['Saturday','7','3','1','6','5','2','3','2','1'],['Sunday','1','2','4','2','2','3','0','1','5']] }]
+    },
+    question: 'What is the total number of Roses (R) sold during the week?',
+    unit: '', answer: '60',
+    method: 'Mon: 4+3+1=8 | Tue: 2+2+0=4 | Wed: 3+4+2=9\nThu: 5+3+1=9 | Fri: 4+5+2=11 | Sat: 7+6+3=16 | Sun: 1+2+0=3\nTotal: 8+4+9+9+11+16+3 = 60'
+  },
+  {
+    group: 'JC', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Florist',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Rose (R): $8  ·  Tulip (T): $5  ·  Lily (L): $6'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','R','T','L','R','T','L','R','T','L'], rows: [['Monday','4','2','1','3','3','2','1','2','2'],['Tuesday','2','5','3','2','4','1','0','1','4'],['Wednesday','3','1','2','4','2','3','2','3','1'],['Thursday','5','2','0','3','4','2','1','1','3'],['Friday','4','4','2','5','3','1','2','2','2'],['Saturday','7','3','1','6','5','2','3','2','1'],['Sunday','1','2','4','2','2','3','0','1','5']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 16R×$8 + 10T×$5 + 4L×$6 = $128+$50+$24 = $202\nFriday: 11R×$8 + 9T×$5 + 5L×$6 = $88+$45+$30 = $163\nSaturday ($202) is the highest.'
+  },
+
+  {
+    group: 'JD', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Stationery Store',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Notebook (N): $4  ·  Pen (P): $2  ·  Folder (F): $3'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','N','P','F','N','P','F','N','P','F'], rows: [['Monday','10','5','2','5','8','3','2','4','4'],['Tuesday','8','6','3','7','5','2','3','6','1'],['Wednesday','12','4','1','6','9','2','1','5','3'],['Thursday','9','7','2','8','4','3','2','3','5'],['Friday','11','5','4','9','6','1','3','2','4'],['Saturday','15','8','2','10','10','3','5','4','2'],['Sunday','6','3','5','4','5','2','1','2','6']] }]
+    },
+    question: 'What is the total number of Notebooks (N) sold during the week?',
+    unit: '', answer: '137',
+    method: 'Mon: 10+5+2=17 | Tue: 8+7+3=18 | Wed: 12+6+1=19\nThu: 9+8+2=19 | Fri: 11+9+3=23 | Sat: 15+10+5=30 | Sun: 6+4+1=11\nTotal: 17+18+19+19+23+30+11 = 137'
+  },
+  {
+    group: 'JD', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Stationery Store',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Notebook (N): $4  ·  Pen (P): $2  ·  Folder (F): $3'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','N','P','F','N','P','F','N','P','F'], rows: [['Monday','10','5','2','5','8','3','2','4','4'],['Tuesday','8','6','3','7','5','2','3','6','1'],['Wednesday','12','4','1','6','9','2','1','5','3'],['Thursday','9','7','2','8','4','3','2','3','5'],['Friday','11','5','4','9','6','1','3','2','4'],['Saturday','15','8','2','10','10','3','5','4','2'],['Sunday','6','3','5','4','5','2','1','2','6']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 30N×$4 + 22P×$2 + 7F×$3 = $120+$44+$21 = $185\nFriday: 23N×$4 + 13P×$2 + 9F×$3 = $92+$26+$27 = $145\nSaturday ($185) is the highest.'
+  },
+
+  {
+    group: 'JE', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Pet Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Toy (T): $10  ·  Collar (C): $15  ·  Treat (X): $5'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','T','C','X','T','C','X','T','C','X'], rows: [['Monday','2','1','5','1','2','4','0','1','6'],['Tuesday','3','0','4','2','1','5','1','2','3'],['Wednesday','1','2','6','3','1','3','0','3','4'],['Thursday','4','1','2','2','2','4','1','0','5'],['Friday','3','2','3','4','1','5','2','1','2'],['Saturday','5','3','4','3','4','6','2','2','3'],['Sunday','1','1','8','2','0','5','0','1','4']] }]
+    },
+    question: 'What is the total number of Toys (T) sold during the week?',
+    unit: '', answer: '42',
+    method: 'Mon: 2+1+0=3 | Tue: 3+2+1=6 | Wed: 1+3+0=4\nThu: 4+2+1=7 | Fri: 3+4+2=9 | Sat: 5+3+2=10 | Sun: 1+2+0=3\nTotal: 3+6+4+7+9+10+3 = 42'
+  },
+  {
+    group: 'JE', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Pet Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Toy (T): $10  ·  Collar (C): $15  ·  Treat (X): $5'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','T','C','X','T','C','X','T','C','X'], rows: [['Monday','2','1','5','1','2','4','0','1','6'],['Tuesday','3','0','4','2','1','5','1','2','3'],['Wednesday','1','2','6','3','1','3','0','3','4'],['Thursday','4','1','2','2','2','4','1','0','5'],['Friday','3','2','3','4','1','5','2','1','2'],['Saturday','5','3','4','3','4','6','2','2','3'],['Sunday','1','1','8','2','0','5','0','1','4']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 10T×$10 + 9C×$15 + 13X×$5 = $100+$135+$65 = $300\nFriday: 9T×$10 + 4C×$15 + 10X×$5 = $90+$60+$50 = $200\nSaturday ($300) is the highest.'
+  },
+
+  {
+    group: 'JF', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Fruit Stand',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Apple (A): $1  ·  Banana (B): $1  ·  Orange (O): $2'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','A','B','O','A','B','O','A','B','O'], rows: [['Monday','10','20','5','8','15','6','5','10','4'],['Tuesday','12','18','4','9','12','7','6','8','5'],['Wednesday','15','22','3','10','14','5','4','9','6'],['Thursday','11','19','6','7','16','4','3','11','5'],['Friday','14','25','2','12','18','3','5','7','7'],['Saturday','20','30','8','15','20','10','8','12','6'],['Sunday','8','12','4','6','10','3','2','5','8']] }]
+    },
+    question: 'What is the total number of Apples (A) sold during the week?',
+    unit: '', answer: '190',
+    method: 'Mon: 10+8+5=23 | Tue: 12+9+6=27 | Wed: 15+10+4=29\nThu: 11+7+3=21 | Fri: 14+12+5=31 | Sat: 20+15+8=43 | Sun: 8+6+2=16\nTotal: 23+27+29+21+31+43+16 = 190'
+  },
+  {
+    group: 'JF', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Fruit Stand',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Apple (A): $1  ·  Banana (B): $1  ·  Orange (O): $2'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','A','B','O','A','B','O','A','B','O'], rows: [['Monday','10','20','5','8','15','6','5','10','4'],['Tuesday','12','18','4','9','12','7','6','8','5'],['Wednesday','15','22','3','10','14','5','4','9','6'],['Thursday','11','19','6','7','16','4','3','11','5'],['Friday','14','25','2','12','18','3','5','7','7'],['Saturday','20','30','8','15','20','10','8','12','6'],['Sunday','8','12','4','6','10','3','2','5','8']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 43A×$1 + 62B×$1 + 24O×$2 = $43+$62+$48 = $153\nFriday: 31A×$1 + 50B×$1 + 12O×$2 = $31+$50+$24 = $105\nSaturday ($153) is the highest.'
+  },
+
+  {
+    group: 'JG', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Bakery',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Baguette (B): $4  ·  Croissant (C): $3  ·  Donut (D): $2'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','B','C','D','B','C','D','B','C','D'], rows: [['Monday','5','10','15','4','8','12','2','5','10'],['Tuesday','6','9','14','5','7','11','1','4','8'],['Wednesday','7','12','10','6','10','9','3','6','7'],['Thursday','5','11','13','4','9','10','2','5','9'],['Friday','8','15','12','7','12','8','4','8','6'],['Saturday','10','20','15','8','14','10','5','10','8'],['Sunday','4','8','20','3','6','12','1','4','10']] }]
+    },
+    question: 'What is the total number of Baguettes (B) sold during the week?',
+    unit: '', answer: '100',
+    method: 'Mon: 5+4+2=11 | Tue: 6+5+1=12 | Wed: 7+6+3=16\nThu: 5+4+2=11 | Fri: 8+7+4=19 | Sat: 10+8+5=23 | Sun: 4+3+1=8\nTotal: 11+12+16+11+19+23+8 = 100'
+  },
+  {
+    group: 'JG', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Bakery',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Baguette (B): $4  ·  Croissant (C): $3  ·  Donut (D): $2'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','B','C','D','B','C','D','B','C','D'], rows: [['Monday','5','10','15','4','8','12','2','5','10'],['Tuesday','6','9','14','5','7','11','1','4','8'],['Wednesday','7','12','10','6','10','9','3','6','7'],['Thursday','5','11','13','4','9','10','2','5','9'],['Friday','8','15','12','7','12','8','4','8','6'],['Saturday','10','20','15','8','14','10','5','10','8'],['Sunday','4','8','20','3','6','12','1','4','10']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 23B×$4 + 44C×$3 + 33D×$2 = $92+$132+$66 = $290\nFriday: 19B×$4 + 35C×$3 + 26D×$2 = $76+$105+$52 = $233\nSaturday ($290) is the highest.'
+  },
+
+  {
+    group: 'JH', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Video Game Store',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Game (G): $60  ·  Controller (C): $40  ·  Poster (P): $10'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','G','C','P','G','C','P','G','C','P'], rows: [['Monday','2','1','5','1','2','4','0','0','6'],['Tuesday','3','0','3','2','1','5','1','1','4'],['Wednesday','1','2','4','3','0','3','0','2','5'],['Thursday','4','1','2','2','2','3','1','0','6'],['Friday','3','2','4','4','1','2','2','1','3'],['Saturday','5','3','3','3','4','4','2','2','2'],['Sunday','1','1','6','2','0','4','0','1','5']] }]
+    },
+    question: 'What is the total number of Games (G) sold during the week?',
+    unit: '', answer: '42',
+    method: 'Mon: 2+1+0=3 | Tue: 3+2+1=6 | Wed: 1+3+0=4\nThu: 4+2+1=7 | Fri: 3+4+2=9 | Sat: 5+3+2=10 | Sun: 1+2+0=3\nTotal: 3+6+4+7+9+10+3 = 42'
+  },
+  {
+    group: 'JH', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Video Game Store',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Game (G): $60  ·  Controller (C): $40  ·  Poster (P): $10'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','G','C','P','G','C','P','G','C','P'], rows: [['Monday','2','1','5','1','2','4','0','0','6'],['Tuesday','3','0','3','2','1','5','1','1','4'],['Wednesday','1','2','4','3','0','3','0','2','5'],['Thursday','4','1','2','2','2','3','1','0','6'],['Friday','3','2','4','4','1','2','2','1','3'],['Saturday','5','3','3','3','4','4','2','2','2'],['Sunday','1','1','6','2','0','4','0','1','5']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 10G×$60 + 9C×$40 + 9P×$10 = $600+$360+$90 = $1,050\nFriday: 9G×$60 + 4C×$40 + 9P×$10 = $540+$160+$90 = $790\nSaturday ($1,050) is the highest.'
+  },
+
+  {
+    group: 'JI', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Garden Centre',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Shovel (S): $15  ·  Pot (P): $10  ·  Seed Pack (X): $3'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','S','P','X','S','P','X','S','P','X'], rows: [['Monday','2','4','10','1','3','8','0','2','6'],['Tuesday','3','2','8','2','4','6','1','1','5'],['Wednesday','1','5','6','3','2','9','0','3','7'],['Thursday','4','3','4','2','4','5','1','0','8'],['Friday','3','4','5','4','2','7','2','1','4'],['Saturday','5','6','3','3','5','6','2','2','3'],['Sunday','1','2','12','2','0','8','0','1','7']] }]
+    },
+    question: 'What is the total number of Shovels (S) sold during the week?',
+    unit: '', answer: '42',
+    method: 'Mon: 2+1+0=3 | Tue: 3+2+1=6 | Wed: 1+3+0=4\nThu: 4+2+1=7 | Fri: 3+4+2=9 | Sat: 5+3+2=10 | Sun: 1+2+0=3\nTotal: 3+6+4+7+9+10+3 = 42'
+  },
+  {
+    group: 'JI', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Garden Centre',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Shovel (S): $15  ·  Pot (P): $10  ·  Seed Pack (X): $3'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','S','P','X','S','P','X','S','P','X'], rows: [['Monday','2','4','10','1','3','8','0','2','6'],['Tuesday','3','2','8','2','4','6','1','1','5'],['Wednesday','1','5','6','3','2','9','0','3','7'],['Thursday','4','3','4','2','4','5','1','0','8'],['Friday','3','4','5','4','2','7','2','1','4'],['Saturday','5','6','3','3','5','6','2','2','3'],['Sunday','1','2','12','2','0','8','0','1','7']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 10S×$15 + 13P×$10 + 12X×$3 = $150+$130+$36 = $316\nFriday: 9S×$15 + 7P×$10 + 16X×$3 = $135+$70+$48 = $253\nSaturday ($316) is the highest.'
+  },
+
+  {
+    group: 'JJ', type: 'number_input', category: 'Number and Algebra',
+    context: {
+      title: 'The Sports Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Ball (B): $20  ·  Bat (T): $30  ·  Glove (G): $40'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','B','T','G','B','T','G','B','T','G'], rows: [['Monday','5','2','1','4','1','2','3','0','1'],['Tuesday','6','3','0','5','2','1','2','1','2'],['Wednesday','4','4','1','3','3','2','1','2','3'],['Thursday','7','2','2','6','1','1','2','0','2'],['Friday','5','5','1','4','4','0','3','1','2'],['Saturday','8','6','2','7','5','1','4','2','3'],['Sunday','3','1','3','2','0','2','1','1','1']] }]
+    },
+    question: 'What is the total number of Balls (B) sold during the week?',
+    unit: '', answer: '85',
+    method: 'Mon: 5+4+3=12 | Tue: 6+5+2=13 | Wed: 4+3+1=8\nThu: 7+6+2=15 | Fri: 5+4+3=12 | Sat: 8+7+4=19 | Sun: 3+2+1=6\nTotal: 12+13+8+15+12+19+6 = 85'
+  },
+  {
+    group: 'JJ', type: 'multiple_choice', category: 'Number and Algebra',
+    context: {
+      title: 'The Sports Shop',
+      subtitle: 'Weekly Sales Report — 1–7 March',
+      paragraphs: ['Items for sale:  Ball (B): $20  ·  Bat (T): $30  ·  Glove (G): $40'],
+      tables: [{ headerGroups: [{label:'DAY',colspan:1},{label:'MORNING',colspan:3},{label:'AFTERNOON',colspan:3},{label:'EVENING',colspan:3}], subHeaders: ['','B','T','G','B','T','G','B','T','G'], rows: [['Monday','5','2','1','4','1','2','3','0','1'],['Tuesday','6','3','0','5','2','1','2','1','2'],['Wednesday','4','4','1','3','3','2','1','2','3'],['Thursday','7','2','2','6','1','1','2','0','2'],['Friday','5','5','1','4','4','0','3','1','2'],['Saturday','8','6','2','7','5','1','4','2','3'],['Sunday','3','1','3','2','0','2','1','1','1']] }]
+    },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday','B) Tuesday','C) Wednesday','D) Thursday','E) Friday','F) Saturday','G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Saturday: 19B×$20 + 13T×$30 + 6G×$40 = $380+$390+$240 = $1,010\nWednesday: 8B×$20 + 9T×$30 + 6G×$40 = $160+$270+$240 = $670\nSaturday ($1,010) is the highest.'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -6400,6 +6661,7 @@ const SHUFFLE_THEMES = {
   'Manufacturing':      ['GW','GX','GY','GZ','HA','HB','HC','HD','HE','HF','HV','HW','HX','HY','HZ'],
   'Logistics':          ['HG','HH','HI','HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS','HT','HU'],
   'Share Portfolios':   ['IA','IB','IC','ID','IE','IF','IG','IH','II','IJ'],
+  'Weekly Sales':       ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
 }
 
 function shuffleByGroup(qs) {
@@ -6479,6 +6741,7 @@ const TOPIC_GROUPS = {
   'Office Equipment Mfg':    ['HV','HW','HX','HY','HZ'],
   'Share Portfolios (Set 1)': ['IA','IB','IC','ID','IE'],
   'Share Portfolios (Set 2)': ['IF','IG','IH','II','IJ'],
+  'Weekly Sales':             ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
 }
 
 app.get('/api/topics', (req, res) => {

@@ -328,7 +328,14 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
                         {tbl.heading && <div className="context-table-heading">{tbl.heading}</div>}
                         <table className="context-table">
                           <thead>
-                            <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
+                            {tbl.headerGroups ? (
+                              <>
+                                <tr>{tbl.headerGroups.map((g, gi) => <th key={gi} colSpan={g.colspan}>{g.label}</th>)}</tr>
+                                {tbl.subHeaders && <tr>{tbl.subHeaders.map((h, hi) => <th key={hi}>{h}</th>)}</tr>}
+                              </>
+                            ) : (
+                              <tr>{tbl.headers.map((h, hi) => <th key={hi}>{h}</th>)}</tr>
+                            )}
                           </thead>
                           <tbody>
                             {tbl.rows.map((row, ri) => (
