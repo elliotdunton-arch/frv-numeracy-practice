@@ -1962,7 +1962,7 @@ const ctxMarathon = {
       ['Erica',   '2h 48m'],
     ]
   }],
-  formulaHint: 'Convert each time to minutes (hours × 60 + minutes). Sum the group. Divide by the number of runners. Round UP using ceil. Convert back: hours = ⌊result ÷ 60⌋, minutes = result mod 60.'
+  formulaHint: 'Convert each time to minutes (hours × 60 + minutes). Sum the group. Divide by the number of runners. Round DOWN to the nearest whole number. Convert back: hours = ⌊result ÷ 60⌋, minutes = result mod 60.'
 }
 
 const ctxCargo = {
@@ -5164,72 +5164,72 @@ const questions = [
   {
     group: 'HQ', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group A — All Runners: What is the average finishing time for all six runners? Give your answer in minutes (round up to the nearest minute).',
-    unit: 'min', answer: '214',
-    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,280 min\n1,280 ÷ 6 = 213.33 → ceil = 214 min (= 3h 34m)'
+    question: 'Group A — All Runners: What is the average finishing time for all six runners? Give your answer in minutes (round down to the nearest whole minute).',
+    unit: 'min', answer: '213',
+    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,280 min\n1,280 ÷ 6 = 213.33 → floor = 213 min (= 3h 33m)'
   },
   {
     group: 'HQ', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group B — The Fast Runners: What is the average finishing time for Ryan, Katrina, and Erica? Give your answer in minutes (round up to the nearest minute).',
-    unit: 'min', answer: '172',
-    method: 'Ryan 150 + Katrina 196 + Erica 168 = 514 min\n514 ÷ 3 = 171.33 → ceil = 172 min (= 2h 52m)'
+    question: 'Group B — The Fast Runners: What is the average finishing time for Ryan, Katrina, and Erica? Give your answer in minutes (round down to the nearest whole minute).',
+    unit: 'min', answer: '171',
+    method: 'Ryan 150 + Katrina 196 + Erica 168 = 514 min\n514 ÷ 3 = 171.33 → floor = 171 min (= 2h 51m)'
   },
   {
     group: 'HR', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group C — The Slow Runners: What is the average finishing time for Sandy, Sammy, and Dom? Give your answer in minutes (round up to the nearest minute).',
-    unit: 'min', answer: '256',
-    method: 'Sandy 246 + Sammy 218 + Dom 302 = 766 min\n766 ÷ 3 = 255.33 → ceil = 256 min (= 4h 16m)'
+    question: 'Group C — The Slow Runners: What is the average finishing time for Sandy, Sammy, and Dom? Give your answer in minutes (round down to the nearest whole minute).',
+    unit: 'min', answer: '255',
+    method: 'Sandy 246 + Sammy 218 + Dom 302 = 766 min\n766 ÷ 3 = 255.33 → floor = 255 min (= 4h 15m)'
   },
   {
     group: 'HR', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group D — Brand Group: What is the average finishing time for Ryan (Asics), Sandy (Nike), and Erica (Nike)? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group D — Brand Group: What is the average finishing time for Ryan (Asics), Sandy (Nike), and Erica (Nike)? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '188',
-    method: 'Ryan 150 + Sandy 246 + Erica 168 = 564 min\n564 ÷ 3 = 188.00 → ceil = 188 min (= 3h 08m)'
+    method: 'Ryan 150 + Sandy 246 + Erica 168 = 564 min\n564 ÷ 3 = 188.00 → floor = 188 min (= 3h 08m)'
   },
   {
     group: 'HS', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group E — Removing the Slowest: What is the average finishing time for all runners except Dom? Give your answer in minutes (round up to the nearest minute).',
-    unit: 'min', answer: '196',
-    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Erica 168 = 978 min\n978 ÷ 5 = 195.60 → ceil = 196 min (= 3h 16m)'
+    question: 'Group E — Removing the Slowest: What is the average finishing time for all runners except Dom? Give your answer in minutes (round down to the nearest whole minute).',
+    unit: 'min', answer: '195',
+    method: 'Ryan 150 + Sandy 246 + Katrina 196 + Sammy 218 + Erica 168 = 978 min\n978 ÷ 5 = 195.60 → floor = 195 min (= 3h 15m)'
   },
   {
     group: 'HS', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group F — Removing the Fastest: What is the average finishing time for all runners except Ryan? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group F — Removing the Fastest: What is the average finishing time for all runners except Ryan? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '226',
-    method: 'Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,130 min\n1,130 ÷ 5 = 226.00 → ceil = 226 min (= 3h 46m)'
+    method: 'Sandy 246 + Katrina 196 + Sammy 218 + Dom 302 + Erica 168 = 1,130 min\n1,130 ÷ 5 = 226.00 → floor = 226 min (= 3h 46m)'
   },
   {
     group: 'HT', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group G — The Middle Pack: What is the average finishing time for Katrina, Sammy, and Erica? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group G — The Middle Pack: What is the average finishing time for Katrina, Sammy, and Erica? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '194',
-    method: 'Katrina 196 + Sammy 218 + Erica 168 = 582 min\n582 ÷ 3 = 194.00 → ceil = 194 min (= 3h 14m)'
+    method: 'Katrina 196 + Sammy 218 + Erica 168 = 582 min\n582 ÷ 3 = 194.00 → floor = 194 min (= 3h 14m)'
   },
   {
     group: 'HT', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group H — The Outliers: What is the average finishing time of the fastest runner (Ryan) and the slowest runner (Dom)? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group H — The Outliers: What is the average finishing time of the fastest runner (Ryan) and the slowest runner (Dom)? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '226',
-    method: 'Ryan 150 + Dom 302 = 452 min\n452 ÷ 2 = 226.00 → ceil = 226 min (= 3h 46m)'
+    method: 'Ryan 150 + Dom 302 = 452 min\n452 ÷ 2 = 226.00 → floor = 226 min (= 3h 46m)'
   },
   {
     group: 'HU', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group I — The "Under 4 Hours" Club: What is the average finishing time for all runners who finished in under 4 hours (Ryan, Katrina, Sammy, Erica)? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group I — The "Under 4 Hours" Club: What is the average finishing time for all runners who finished in under 4 hours (Ryan, Katrina, Sammy, Erica)? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '183',
-    method: 'Ryan 150 + Katrina 196 + Sammy 218 + Erica 168 = 732 min\n732 ÷ 4 = 183.00 → ceil = 183 min (= 3h 03m)'
+    method: 'Ryan 150 + Katrina 196 + Sammy 218 + Erica 168 = 732 min\n732 ÷ 4 = 183.00 → floor = 183 min (= 3h 03m)'
   },
   {
     group: 'HU', type: 'number_input', category: 'Number and Algebra',
     context: ctxMarathon,
-    question: 'Group J — The "Over 4 Hours" Club: What is the average finishing time for all runners who finished over 4 hours (Sandy, Dom)? Give your answer in minutes (round up to the nearest minute).',
+    question: 'Group J — The "Over 4 Hours" Club: What is the average finishing time for all runners who finished over 4 hours (Sandy, Dom)? Give your answer in minutes (round down to the nearest whole minute).',
     unit: 'min', answer: '274',
-    method: 'Sandy 246 + Dom 302 = 548 min\n548 ÷ 2 = 274.00 → ceil = 274 min (= 4h 34m)'
+    method: 'Sandy 246 + Dom 302 = 548 min\n548 ÷ 2 = 274.00 → floor = 274 min (= 4h 34m)'
   },
 
   // ── Office Equipment Manufacturing: HV, HW, HX, HY, HZ ──────────────────────
