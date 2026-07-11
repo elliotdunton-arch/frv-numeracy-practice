@@ -7845,8 +7845,8 @@ app.get('/api/questions', (req, res) => {
   const final = shuffled.map((q) => {
     if (groupPos[q.group] === undefined) groupPos[q.group] = 0
     const pos = groupPos[q.group]++
-    const method = (methods[q.group] || [])[pos] || null
-    const unit   = (units[q.group]   || [])[pos] || null
+    const method = q.method || (methods[q.group] || [])[pos] || null
+    const unit   = q.unit   || (units[q.group]   || [])[pos] || null
     return {
       id: q._id,
       type: q.type,
