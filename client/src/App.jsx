@@ -30,6 +30,9 @@ export default function App() {
         endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
         if (ordered) endpoint += '&ordered=true'
         if (fill) endpoint += '&fill=true'
+      } else if (section === 'numeracy' && selectedTopics && selectedTopics.length > 0 && filterType === 'sets') {
+        endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
+        if (ordered) endpoint += '&ordered=true'
       } else if (selectedTopics && selectedTopics.length > 0) {
         endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
       }

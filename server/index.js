@@ -6860,6 +6860,234 @@ const questions = [
     answer: '39'
   },
 
+  // ── FRV Practice #2 ──────────────────────────────────────────────────────────
+  {
+    group: 'NFP2_01', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_01.png' },
+    question: 'Below is a spreadsheet of the weekly sales from a surf shop. What is the total number of short-boards sold during the week?',
+    answer: '19',
+    method: 'Add shortboards for each day:\nMon=2, Tue=1, Wed=1, Thu=5, Fri=3, Sat=5, Sun=2\nTotal = 19'
+  },
+  {
+    group: 'NFP2_01', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_01.png' },
+    question: 'Which day did the shop earn the most amount of money?',
+    options: ['A) Monday', 'B) Tuesday', 'C) Wednesday', 'D) Thursday', 'E) Friday', 'F) Saturday', 'G) Sunday'],
+    answer: 'F) Saturday',
+    method: 'Focus on high-value items (longboards). Thursday and Saturday sell the most longboards:\nThursday: 4×$650 + 5×$350 + 1×$75 = $4,425\nSaturday: 5×$650 + 5×$350 = $5,000\nSaturday earns the most.'
+  },
+  {
+    group: 'NFP2_03', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Ricky went shopping overseas and started off with $89. After spending $16 at a shop with a $20 note, he was short-changed 50%. How much money did Ricky have left after being short-changed?',
+    options: ['A) 69', 'B) 70', 'C) 71', 'D) 72', 'E) 73'],
+    answer: 'C) 71',
+    method: 'Correct change = $20 − $16 = $4\nShort-changed 50%: change given = 50% of $4 = $2\nRemaining = $89 − $16 − $2 = $71'
+  },
+  {
+    group: 'NFP2_04', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_04.jpg' },
+    question: 'What proportion of students in Marysville are at least 8 years of age and above in 2001? (round up or down to the nearest whole number)',
+    options: ['A) 64%', 'B) 67%', 'C) 75%', 'D) 79%', 'E) 81%'],
+    answer: 'D) 79%',
+    method: 'Total students in 2001: 29+17+26+31+35+78 = 216\nStudents aged 8 and above: 26+31+35+78 = 170\nProportion: (170÷216)×100 = 78.70% → rounded to 79%'
+  },
+  {
+    group: 'NFP2_05', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_05a.png', '/images/numeracy/Num_FRV Practice 2_05b.png'] },
+    question: 'The Return of Equity measures the profitability of a business in relation to the equity (net assets). The formula below shows how it is calculated. Below is a table of Net Profit (in millions) for different companies from 2018–2019. Which company had the largest net profit loss from 2018–2019?',
+    options: ['A) GBH', 'B) Shorers', 'C) SNS', 'D) Turbek', 'E) TruckSales', 'F) Fordge', 'G) ABN'],
+    answer: 'F) Fordge',
+    method: 'GBH, Shorers, Turbek, TruckSales and ABN all made a profit — rule them out.\nSNS: 170 − 166.5 = 3.5 million loss\nFordge: 6.5 − 2.9 = 3.6 million loss\nFordge had the largest net loss.'
+  },
+  {
+    group: 'NFP2_05', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_05a.png', '/images/numeracy/Num_FRV Practice 2_05b.png'] },
+    question: 'What was the ROE for Turbek in 2019 if their company\'s total shareholder equity was 480 million? (round up or down to nearest whole number)',
+    answer: '14',
+    unit: '%',
+    method: 'ROE = (Net Profit ÷ Shareholder Equity) × 100\n= (67 ÷ 480) × 100 = 13.96%\nRounded to 14%'
+  },
+  {
+    group: 'NFP2_07', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Michelle spent 15% from $300 on shopping. She continued to spend a further 25% of what remained. How much money did she have left from the original $300?',
+    options: ['A) $133.75', 'B) $90.00', 'C) $168.75', 'D) $225.00', 'E) $191.25'],
+    answer: 'E) $191.25',
+    method: 'First expense: 15% of $300 = $45 → remaining $255\nSecond expense: 25% of $255 = $63.75\nRemaining: $255 − $63.75 = $191.25'
+  },
+  {
+    group: 'NFP2_08', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'For every dog who has found a new home from the pound, 3 cats also find homes too. Out of a total of 56 cats and dogs who found homes, how many were cats?',
+    options: ['A) 40', 'B) 42', 'C) 44', 'D) 46', 'E) 38'],
+    answer: 'B) 42',
+    method: 'Ratio cats:dogs = 3:1\nTotal parts = 3+1 = 4\n56 ÷ 4 = 14 per part\nCats = 3 × 14 = 42'
+  },
+  {
+    group: 'NFP2_09', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_09a.png', '/images/numeracy/Num_FRV Practice 2_09b.png'] },
+    question: 'More people are switching to electric cars to cut down on emissions. The graph shows the amount of emissions (CO2e) per kilometre produced from the same electric car driven in different countries. Max lives in the UK and drives an electric car. What emissions does his car produce driving one kilometre?',
+    options: ['A) 204 CO2e', 'B) 186 CO2e'],
+    answer: 'B) 186 CO2e',
+    method: 'Read the UK bar from the chart: UK = 186 CO2e per km.'
+  },
+  {
+    group: 'NFP2_09', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_09a.png', '/images/numeracy/Num_FRV Practice 2_09b.png'] },
+    question: 'Toby lives in Australia. How many emissions would he produce if he drove a return trip from home to work in an electric car?',
+    options: ['A) < 40,000', 'B) 40,000 – 50,000', 'C) 50,000 – 60,000', 'D) 60,000+'],
+    answer: 'C) 50,000 – 60,000',
+    method: 'Australia CO2e per km = 288\nTrip to work = 87 km; return trip = 87×2 = 174 km\nTotal emissions: 288 × 174 = 50,112 CO2e → falls in 50,000–60,000'
+  },
+  {
+    group: 'NFP2_11', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_11.png' },
+    question: 'Grace is looking to invest some of her savings into the stock market. She is looking at four different stock options offered by Vanguard. Grace has $10,000 to invest and chooses to spend one quarter of her money on each type of share. How many shares would she own in total? (round down to nearest whole number)',
+    answer: '115',
+    method: 'Each quarter = $2,500\nVAS:  2500÷84.81 = 29 shares\nVTS:  2500÷234.60 = 10 shares\nVEU:  2500÷53.75 = 46 shares\nVGS:  2500÷81.21 = 30 shares\nTotal: 29+10+46+30 = 115'
+  },
+  {
+    group: 'NFP2_11', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_11.png' },
+    question: 'If the stock VEU had increased 25% to reach its current price, what was the original price before the increase? (round up or down to the nearest whole number)',
+    options: ['A) $67', 'B) $60', 'C) $40', 'D) $43', 'E) $56', 'F) $54'],
+    answer: 'D) $43',
+    method: 'Current price = $53.75 = original × 1.25\nOriginal = 53.75 ÷ 1.25 = $43'
+  },
+  {
+    group: 'NFP2_11', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_11.png' },
+    question: 'If Grace owned one of each share, which would yield the lowest dividend in dollars?',
+    options: ['A) VAS', 'B) VTS', 'C) VEU', 'D) VGS'],
+    answer: 'D) VGS',
+    method: 'Dividend = share price × dividend yield\nVAS: $84.81 × 4.15% = $3.52\nVTS: $234.60 × 2.02% = $4.74\nVEU: $53.75 × 2.75% = $1.48\nVGS: $81.21 × 1.48% = $1.20\nVGS has the lowest dividend.'
+  },
+  {
+    group: 'NFP2_14', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_14.png' },
+    question: 'How many people are religious in Australia?',
+    options: ['A) 10,530,000', 'B) 10,510,500', 'C) 16,439,500', 'D) 16,470,000', 'E) Not enough info'],
+    answer: 'C) 16,439,500',
+    method: '61% are religious\nTotal population = 26.95 million = 26,950,000\n61% of 26,950,000 = 0.61 × 26,950,000 = 16,439,500'
+  },
+  {
+    group: 'NFP2_15', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'You and a sibling go for a bike ride in the forest. Combined, you both cover a distance of 150 kilometres. You travel three times as far as your sibling. How far does your sibling travel?',
+    options: ['A) 35.5 km', 'B) 45.5 km', 'C) 30.5 km', 'D) 37.5 km', 'E) 50.5 km'],
+    answer: 'D) 37.5 km',
+    method: 'Let sibling\'s distance = x; your distance = 3x\nx + 3x = 150\n4x = 150\nx = 37.5 km'
+  },
+  {
+    group: 'NFP2_16', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_16.png' },
+    question: 'Erica has started to draw a floor plan for her new house. What is the total square metres (m²) of Bedrooms 1 & 2?',
+    options: ['A) 14.32 m²', 'B) 18 m²'],
+    answer: 'B) 18 m²',
+    method: 'Bedroom 1: 3.6 × 2.8 = 10.08 m²\nBedroom 2: 3.6 × 2.2 = 7.92 m²\nTotal: 10.08 + 7.92 = 18 m²'
+  },
+  {
+    group: 'NFP2_16', set: 'FRV Practice #2', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_16.png' },
+    question: 'The total floor space of her home is 86 m². Erica wants wooden floorboards throughout except for all three bedrooms, which are to be carpeted. The total floor space of all bedrooms is 22.8 m². A pack of floorboards covers 6.5 m². How many packs of floorboards will she need altogether? (round up to nearest whole number)',
+    answer: '10',
+    method: 'Floor area for boards = 86 − 22.8 = 63.2 m²\nPacks needed = 63.2 ÷ 6.5 = 9.72\nRounded up = 10 packs'
+  },
+  {
+    group: 'NFP2_18', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_18.png' },
+    question: 'Tom is looking to switch broadband plans and looks at two different offers. Would Tom save more money switching to INTE\'s 12-month plan compared to Connect\'s Unlimited plan?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'INTE 12 months: $93×12 = $1,116 − $200 bonus credit = $916\nConnect 12 months: $80×12 = $960\n$916 < $960 → True, INTE is cheaper.'
+  },
+  {
+    group: 'NFP2_18', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_18.png' },
+    question: 'If Tom already pays for Netflix, would it be cheaper for him to choose Connect\'s Unlimited plan over INTE\'s?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'INTE: $93×12 − $200 = $916\nConnect with Netflix discount: $80×12 = $960 − $120 = $840\n$840 < $916 → True, Connect is cheaper with Netflix.'
+  },
+  {
+    group: 'NFP2_18', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_18.png' },
+    question: 'Over 24 months, would it be cheaper to choose INTE\'s plan?',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'INTE 24 months: $93×24 − $200 = $2,032\nConnect 24 months: $80×24 = $1,920\n$1,920 < $2,032 → False, Connect is cheaper over 24 months.'
+  },
+  {
+    group: 'NFP2_18', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_18.png' },
+    question: 'Tom switches broadband for 18 months. He purchased INTE\'s 12-month plan and then changed to their monthly plan for 6 months where he needed an extra 4 GB of data per month. How much did he pay in total?',
+    answer: '1414',
+    unit: '$',
+    method: 'INTE 12-month plan: $93×12 − $200 = $916\nINTE monthly 6 months: $63×6 = $378\nExtra 4GB/month: 4×$5×6 = $120\nTotal: $916 + $378 + $120 = $1,414'
+  },
+  {
+    group: 'NFP2_22', set: 'FRV Practice #2', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_22.png' },
+    question: 'Leah is making a series of paper cones for her art project. She is using packets of paper that cover 50 cm² each. How many packets of paper will she need to cover the surface of one cone? (round up to nearest whole number)',
+    answer: '6',
+    method: 'Surface area of cone = πrl + πr²\n= (3.14×4×16) + (3.14×4²)\n= 200.96 + 50.24 = 251.2 cm²\nPackets: 251.2 ÷ 50 = 5.024 → rounded up = 6'
+  },
+  {
+    group: 'NFP2_22', set: 'FRV Practice #2', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_22.png' },
+    question: 'Leah decides to fill her cone with strips of paper. What is the total volume of two cones? (round up to nearest whole number)',
+    answer: '402',
+    method: 'Volume of 1 cone = ⅓ × π × r² × h\n= ⅓ × 3.14 × 16 × 12 = 200.96 cm³\nVolume of 2 cones: 200.96 × 2 = 401.92 → rounded up = 402 cm³'
+  },
+  {
+    group: 'NFP2_24', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A recycling facility recycles 4 tonnes of material for every 5 tonnes that come into the facility. How much material is recycled if 72 tonnes comes in?',
+    options: ['A) 40', 'B) 47.6', 'C) 50', 'D) 57.6', 'E) 60'],
+    answer: 'D) 57.6',
+    method: 'Ratio recycled:total = 4:5\n72 ÷ 5 = 14.4 per part\nRecycled = 4 × 14.4 = 57.6 tonnes'
+  },
+  {
+    group: 'NFP2_25', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A store reduces the price of a product by 20%, and customers now pay $160 for it. What was the original price of the product?',
+    options: ['A) $180', 'B) $190', 'C) $200', 'D) $210', 'E) $220'],
+    answer: 'C) $200',
+    method: 'After 20% reduction, price = 80% of original\n160 = 0.80 × original\nOriginal = 160 ÷ 0.80 = $200'
+  },
+  {
+    group: 'NFP2_26', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_26a.png', '/images/numeracy/Num_FRV Practice 2_26b.png'] },
+    question: 'Tony is going on holiday and has left guidelines to his apprentice baker, John, about how much sugar is to be used in their most popular baked goods. John has a measuring cup of sugar shown. How much extra sugar, in grams, does John need to make 1.5 kg of cupcakes?',
+    answer: '100',
+    unit: 'g',
+    method: 'John currently has 250 g of sugar in his measuring cup.\n750 g of cupcakes requires 175 g of sugar\n1.5 kg of cupcakes requires: 175 × 2 = 350 g\nExtra needed: 350 − 250 = 100 g'
+  },
+  {
+    group: 'NFP2_27', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 2_27a.png', '/images/numeracy/Num_FRV Practice 2_27b.png'] },
+    question: 'John is baking cakes for a wedding. He is using 3 kg of sugar in the cakes. How many kilograms of cakes can John make? (answer to 2 decimal places)',
+    answer: '8.18',
+    method: '3 kg sugar = 3,000 g\nIt takes 275 g of sugar to make 750 g of cake\nBatches = 3,000 ÷ 275 = 10.909\nTotal cake = 10.909 × 750 = 8,181 g = 8.18 kg'
+  },
+  {
+    group: 'NFP2_28', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_28.png' },
+    question: 'Below is a table of the finishing times for six runners who ran the Monblok marathon (42.2 km). What is the average time that the six runners took to finish the marathon? (Provide answer in minutes only and round down to nearest whole number)',
+    answer: '213',
+    method: 'Convert all times to minutes:\nRyan=150, Sandy=246, Katrina=196, Sammy=218, Dom=302, Erica=168\nTotal = 1,280 minutes\nAverage = 1,280 ÷ 6 = 213.33 → rounded down = 213'
+  },
+  {
+    group: 'NFP2_29', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 2_29.png' },
+    question: 'Cheaper ingredients sourced means the ingredient costs of bakery items have dropped by 15 cents per product. How much profit would the bakery make if it sold 400 donuts in one day, factoring in the price changes?',
+    options: ['A) $480', 'B) $500', 'C) $520', 'D) $540', 'E) $560'],
+    answer: 'D) $540',
+    method: 'Original ingredient cost per donut: $0.35\nNew ingredient cost: $0.35 − $0.15 = $0.20\nTotal cost (incl. other costs) = $0.65\nSelling price = $2.00\nProfit per donut = $2.00 − $0.65 = $1.35\nTotal profit: $1.35 × 400 = $540'
+  },
+  {
+    group: 'NFP2_30', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Shares in a company rose 20% in 2022 and then went up another 40% the following year. What is the overall increase as a percentage?',
+    options: ['A) 38%', 'B) 40%', 'C) 48%', 'D) 60%', 'E) 68%'],
+    answer: 'E) 68%',
+    method: 'Start with $100\nAfter 20% increase: $100 × 1.20 = $120\nAfter 40% increase: $120 × 1.40 = $168\nOverall increase: (168−100)/100 × 100 = 68%'
+  },
+
 ]
 
 // ── Units keyed by group, [Q1 unit, Q2 unit] — '$' renders as prefix ─────────
@@ -7717,6 +7945,12 @@ const SHUFFLE_THEMES = {
     'MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT',     // AFP2 Percentages Set 2
     'MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE' // AFP2 Percentages Set 3
   ],
+  'Numeracy: FRV Practice': [
+    'NFP2_01','NFP2_03','NFP2_04','NFP2_05','NFP2_07','NFP2_08',
+    'NFP2_09','NFP2_11','NFP2_14','NFP2_15','NFP2_16','NFP2_18',
+    'NFP2_22','NFP2_24','NFP2_25','NFP2_26','NFP2_27','NFP2_28',
+    'NFP2_29','NFP2_30'
+  ],
 }
 
 function shuffleByGroup(qs) {
@@ -7805,6 +8039,7 @@ const TOPIC_GROUPS = {
   'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
   'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
   'AFP2: Percentages':          ['MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ','MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT','MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE'],
+  'FRV Practice #2':            ['NFP2_01','NFP2_03','NFP2_04','NFP2_05','NFP2_07','NFP2_08','NFP2_09','NFP2_11','NFP2_14','NFP2_15','NFP2_16','NFP2_18','NFP2_22','NFP2_24','NFP2_25','NFP2_26','NFP2_27','NFP2_28','NFP2_29','NFP2_30'],
 }
 
 app.get('/api/topics', (req, res) => {
@@ -7816,18 +8051,29 @@ app.get('/api/topics', (req, res) => {
   res.json(result)
 })
 
+app.get('/api/numeracy-sets', (req, res) => {
+  const counts = {}
+  questions.forEach(q => {
+    if (q.set) counts[q.set] = (counts[q.set] || 0) + 1
+  })
+  res.json(Object.entries(counts).sort().map(([name, questionCount]) => ({ name, questionCount })))
+})
+
 app.get('/api/questions', (req, res) => {
-  const { topics } = req.query
+  const { topics, sets } = req.query
   let pool = questions
-  if (topics) {
+  if (sets) {
+    const setsFilter = new Set(sets.split(',').map(s => s.trim()))
+    pool = questions.filter(q => q.set && setsFilter.has(q.set))
+  } else if (topics) {
     const names = topics.split(',').map(t => t.trim())
     const allowed = new Set(names.flatMap(n => TOPIC_GROUPS[n] || []))
     pool = questions.filter(q => allowed.has(q.group))
   }
-  let shuffled = shuffleByGroup(pool)
+  let shuffled = sets ? [...pool].sort((a, b) => a.group.localeCompare(b.group, undefined, { numeric: true })) : shuffleByGroup(pool)
 
   // Guarantee at least one Crew Timesheet group appears in first 30 (full tests only)
-  if (!topics) {
+  if (!topics && !sets) {
     const tsGroups = new Set(TOPIC_GROUPS['Crew Timesheets'] || [])
     const hasTs = shuffled.slice(0, 30).some(q => tsGroups.has(q.group))
     if (!hasTs) {

@@ -499,12 +499,16 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
   const [litSetsOpen, setLitSetsOpen] = useState(false)
   const [selectedLitSets, setSelectedLitSets] = useState(new Set())
   const [litSetList, setLitSetList] = useState([])
+  const [numSetsOpen, setNumSetsOpen] = useState(false)
+  const [selectedNumSets, setSelectedNumSets] = useState(new Set())
+  const [numSetList, setNumSetList] = useState([])
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
     fetch('/api/literacy-topics').then(r => r.json()).then(setCategoryList).catch(() => {})
     fetch('/api/mechanical-sets').then(r => r.json()).then(setMechSetList).catch(() => {})
     fetch('/api/literacy-sets').then(r => r.json()).then(setLitSetList).catch(() => {})
+    fetch('/api/numeracy-sets').then(r => r.json()).then(setNumSetList).catch(() => {})
   }, [])
 
   const handleTabClick = (tab) => {
@@ -544,6 +548,10 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
     .filter(s => selectedLitSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
 
+  const totalSelectedNumSetQs = numSetList
+    .filter(s => selectedNumSets.has(s.name))
+    .reduce((s, c) => s + c.questionCount, 0)
+
   const toggleMechSet = (name) => {
     setSelectedMechSets(prev => {
       const next = new Set(prev)
@@ -554,6 +562,14 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
 
   const toggleLitSet = (name) => {
     setSelectedLitSets(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
+
+  const toggleNumSet = (name) => {
+    setSelectedNumSets(prev => {
       const next = new Set(prev)
       if (next.has(name)) next.delete(name); else next.add(name)
       return next
@@ -859,6 +875,58 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
                         {loading ? 'Loading…' : 'Full Test — Set First'}
                       </button>
                     )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'numeracy' && numSetList.length > 0 && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${numSetsOpen ? ' tft-open' : ''}`}
+              onClick={() => { setNumSetsOpen(o => !o); setSelectedNumSets(new Set()) }}
+            >
+              <span className="tft-icon">{numSetsOpen ? '▾' : '▸'}</span>
+              Practice by Set
+            </button>
+
+            {numSetsOpen && numSetList.length > 0 && (
+              <div className="topic-panel">
+                <div className="topic-list">
+                  {numSetList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedNumSets.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedNumSets.has(name)}
+                        onChange={() => toggleNumSet(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedNumSets.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedNumSets.size} set{selectedNumSets.size !== 1 ? 's' : ''} · {totalSelectedNumSetQs} questions available
+                    </span>
+                    <button
+                      className="btn-start-secondary"
+                      onClick={() => onStart(null, [...selectedNumSets], 'sets', true)}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start In Order'}
+                    </button>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedNumSets], 'sets')}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start (Random)'}
+                    </button>
                   </div>
                 )}
               </div>
