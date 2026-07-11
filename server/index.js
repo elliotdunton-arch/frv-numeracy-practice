@@ -13189,6 +13189,254 @@ const abstractQuestions = [
     method: 'There are 9 large squares with thick outlines.\nAs the thin diagonal black lines cross a large vertical grey line, their position shifts upwards slightly before continuing.\nAs the thin diagonal lines cross a large horizontal grey line, they continue without any shift.',
     methodImage: '/images/abstract/FRV Practice Abstract 01_Q30 answer.jpg'
   },
+  // ── Abstract FRV Practice #3 ──
+  {
+    group: 'ARP3_01', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which figure comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q01.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Grey section is moving left to right only on the top row.\nBlack section is moving diagonally in a \'figure of 8\' direction.\nCircle with thick outline moves diagonally from top left to bottom right only.\nCircle with thin outline moves clockwise and is covered by the thick outline circle when overlapping.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q01 answer.jpg'
+  },
+  {
+    group: 'ARP3_02', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q02.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Central pentagon shape is reflecting 180 degrees each time.\nAll grey shapes move position around central pentagon, anti-clockwise then clockwise, anti-clockwise, then clockwise etc.'
+  },
+  {
+    group: 'ARP3_03', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q03.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The line is moving clockwise, two places at a time.\nBlack circle, \'X\' and the diamond are moving anti-clockwise, one place at a time.\nC is not the answer as there is a grey square, when it should be a grey diamond.'
+  },
+  {
+    group: 'ARP3_04', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q04.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The entire figure is rotating 45 degrees, anti-clockwise each time.'
+  },
+  {
+    group: 'ARP3_05', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q05.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Star shape with grey circle is rotating 40 degrees clockwise each time.\nBlack shape is moving one position, along the outside of the star, clockwise each time.\nX is moving one position counter-clockwise along the inside of the star and is covered by the grey circle.'
+  },
+  {
+    group: 'ARP3_06', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q06.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The figure is rotating 45 degrees clockwise each time.\nThe grey section is moving one place anti-clockwise each time.\nThe black section starts from the circle and then moves out to the rectangles and moves one place clockwise each time.\nThe dots stay in the same position.\nThe \'T\' inside the circle is rotating 90 degrees each time, never pointing up.'
+  },
+  {
+    group: 'ARP3_07', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q07.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Pentagon shape is rotating 45 degrees each time clockwise.\nGrey half circle is swapping sides within the same circle.\nBlack half circle is swapping sides within the same circle.\nDots are staying on the inside of the pentagon shape and also moving ahead one circle clockwise each time.'
+  },
+  {
+    group: 'ARP3_08', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q08.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'Arrow rotating 45 degrees clockwise each time.\nShort black line rotates 45 degrees as well but swaps sides on the circle each time.\nLines within circle rotate reflect 180 degrees each time.'
+  },
+  {
+    group: 'ARP3_09', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q09.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: ''
+  },
+  {
+    group: 'ARP3_10', set: 'FRV Practice #3', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which figure comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q10.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'Each ring is moving two places towards the center of the circles each time.\nB is not the answer as the lines in the outside ring are facing the wrong direction.'
+  },
+  {
+    group: 'ARP3_11', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q11.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'Because A & B are in the same position, we can deduce these start and end the sequence. As such, whether the next shape starts clockwise or anti-clockwise, D will be in the middle of both.'
+  },
+  {
+    group: 'ARP3_12', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q12.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'C',
+    method: 'This is a tricky question. There are two lines to each figure and each is touching a different side of the square. The lines are each moving one place.\nD & E both have a line that touches the top of the square & a line that touches the right side of the square.\nBecause the lines in these 2 figures touch the same sides, they are the start and end of the sequence.\nAfter D & E, we need a figure where a line is touching the top or bottom and the other line is touching the right or left side (A & B).\nThis leaves C in the middle.'
+  },
+  {
+    group: 'ARP3_13', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q13.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'E',
+    method: 'The figure is rotating 45 degrees each time.\nWhether you start with figure A and rotate the figure anti-clockwise OR start with figure B and rotate the figure clockwise, the middle figure is E.'
+  },
+  {
+    group: 'ARP3_14', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q14.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'Grey section is moving two sections each time.\nCircle is moving one section each time and is covered by the grey section.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q14 answer.jpg'
+  },
+  {
+    group: 'ARP3_15', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q15.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'Grey section is moving one section each time.\nDotted circles moving one section each time and is covered by the grey section when overlapping.\nCentral diagonal direction changing 45 degrees each time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q15 answer.png'
+  },
+  {
+    group: 'ARP3_16', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q16.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'C',
+    method: 'When placed in order, two matching shapes are diagonally opposite to each other.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q16 answer.jpg'
+  },
+  {
+    group: 'ARP3_17', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q17.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'Grey is found in each of the 5 sections, so there is no middle of sequence based on this info as any position could be the middle.\nThe lines are found in the top and top-left position twice, so we can conclude the top-right position where the lines are found once is the middle position.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q17 answer.jpg'
+  },
+  {
+    group: 'ARP3_18', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q18.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'The number of grey circles is increasing from 1 to 5.'
+  },
+  {
+    group: 'ARP3_19', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q19.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'E',
+    method: 'The entire shape is reflecting 180 degrees each time except for the small V shape on top of the circle, which is rotating 45 degrees clockwise each time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q19 answer.jpg'
+  },
+  {
+    group: 'ARP3_20', set: 'FRV Practice #3', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q20.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'Correct order is determined by the black dot and upside down \'T\'.\nAs the grey section has 5 different positions, any one of them can be the starting point.',
+    methodImage: '/images/abstract/FRV Practice Abstract 03_Q20 answer.jpg'
+  },
+  {
+    group: 'ARP3_21', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q21.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'All the diamond colours are reflected upon the lines. The diamonds in A match all the diamonds around it.'
+  },
+  {
+    group: 'ARP3_22', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q22.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The figures in the 2nd column are reflected/mirrored from the 1st column.\nThe figures in the 3rd column are reflected again with changes such as colour in some of the shapes, however, this column doesn\'t affect obtaining the answer.'
+  },
+  {
+    group: 'ARP3_23', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q23.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Each number is increasing by 21 and alternating between grey & black.\nBoth dotted lines match up between all squares.\nA is not the answer as the lower black dotted line is too close to the grey dotted line.'
+  },
+  {
+    group: 'ARP3_24', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q24.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'On the pentagon, there are 5 shapes. Each of these shapes has a colour/line.\nThese colours/lines stay in the same position on the pentagon as the entire pentagon (including 5 small shapes) rotates 90 degrees clockwise.\nThe center arrow is black as per the change of colour in the central shape on the 2 rows above.\nB is not the answer as the lines in the diamond/square are around the wrong way.'
+  },
+  {
+    group: 'ARP3_25', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q25.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'The relationship between each figure is found across the rows only.\nIn the top row and bottom rows, the figure is rotating 45 degrees clockwise each time.\nIn the middle row, the figure is rotating 45 degrees counter-clockwise each time.'
+  },
+  {
+    group: 'ARP3_26', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q26.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'The entire sequence contains: 3 black crosses, 3 grey crosses, 3 black squares and 3 grey squares.'
+  },
+  {
+    group: 'ARP3_27', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q27.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'The figures along each the top two rows are rotating 90 degrees clockwise each time.\nOn the bottom row, the figures are rotating 90 degrees counter-clockwise.'
+  },
+  {
+    group: 'ARP3_28', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q28.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'B is ruled out as one of the lines is missing.\nC is ruled out as it has 7 shapes. The 2 figures on the bottom row only have 6.\nD is ruled out as, if you look at the 2 figures on the bottom row, there are two different star shapes. In D, there is only one.\nThe rule for the bottom row is: the number of 5-star shapes increases by 1 each time (1, 2, 3).'
+  },
+  {
+    group: 'ARP3_29', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q29.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The series of rectangles connected through all 9 figures.\nThe order of the rectangle patterns is (starting from top right square): diagonal lines, black, vertical lines, grey, horizontal lines and white. This pattern then repeats continuously.'
+  },
+  {
+    group: 'ARP3_30', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 03_Q30.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The rules are found from comparing the left side to the right side, with the grey pentagon shape at the bottom as the reflection/mirror point.\nThe left side has one black, one white, 3 horizontal lines and 2 vertical line shapes.\nThe right side will have one black, one white and 3/2 of either the dots or circles. This rules out C as it has a black shape in it.\nComparing each side, the coloured shapes are not sitting opposite each other — this rules out D.\nA is ruled out as there would be 4 dotted shapes.'
+  },
 ]
 
 abstractQuestions.forEach((q, i) => { q._id = `abs_${i}` })
