@@ -1981,6 +1981,43 @@ const ctxAFPSteps = {
   }]
 }
 
+const ctxAFPSubscription = {
+  title: 'StreamFlix — Subscription Plans',
+  tables: [
+    {
+      heading: 'Movie Plans',
+      headers: ['Plan', 'Cost'],
+      rows: [
+        ['Pay Per View',         '$4 per movie'],
+        ['Monthly Direct Debit', '$8 per month'],
+        ['6-Month Subscription', '$40 upfront'],
+        ['Yearly Package',       '$85 per year'],
+      ]
+    },
+    {
+      heading: 'Sports Add-on',
+      headers: ['Package', 'Cost'],
+      rows: [
+        ['Sports Package (12-month direct debit)', '$7 per month'],
+      ]
+    }
+  ],
+  note: 'Pay Per View can be purchased as an add-on with any subscription plan.'
+}
+
+const ctxRegistration = {
+  title: 'Motor Vehicle Registration Rates',
+  tables: [{
+    headers: ['Engine Capacity', 'Rate per cc'],
+    rows: [
+      ['1,001 – 1,600 cc', '15 cents'],
+      ['1,601 – 2,000 cc', '25 cents'],
+      ['2,001 – 2,600 cc', '35 cents'],
+    ]
+  }],
+  note: 'The rate for the engine\'s capacity bracket applies to the full cc count.'
+}
+
 const ctxCargo = {
   title: 'Global Cargo Logistics',
   tables: [{
@@ -6154,6 +6191,186 @@ const questions = [
     method: 'Loss: $450,000 − $400,000 = $50,000\n50,000 ÷ 450,000 × 100 ≈ 11.11%'
   },
 
+  // ── AFP: Applied Maths (Set 1) — Pages 1–2 ───────────────────────────────────
+  {
+    group: 'LI', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Front Yard: A front yard has dimensions of 4 m × 3 m. A landscaper charges $24 per square metre to plant grass. What will be the total cost to plant the front yard?',
+    unit: '$', answer: '288',
+    method: 'Area: 4 × 3 = 12 m²\nCost: 12 × $24 = $288'
+  },
+  {
+    group: 'LI', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Fish Tank Volume: A fish tank has dimensions 24 cm × 30 cm × 18 cm. Given that 1 cubic metre contains 1,000 litres, how many litres can the fish tank hold? (Convert all dimensions to metres first.)',
+    unit: 'litres', answer: '12.96',
+    method: 'Convert: 0.24 m × 0.30 m × 0.18 m = 0.01296 m³\n0.01296 × 1,000 = 12.96 litres'
+  },
+  {
+    group: 'LJ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Park Pavers: A square park with sides of 40 m has a 1 m wide walking path around it. The pavers are 20 cm × 20 cm. How many pavers are needed to pave the path?',
+    unit: 'pavers', answer: '4100',
+    method: 'Outer square: 42 × 42 = 1,764 m²\nInner park: 40 × 40 = 1,600 m²\nPath area: 164 m² = 1,640,000 cm²\nPaver area: 20 × 20 = 400 cm²\n1,640,000 ÷ 400 = 4,100 pavers'
+  },
+  {
+    group: 'LJ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Garden Bed: Ramirez built a garden bed with dimensions 3 m × 4 m × 0.4 m. He hired a trailer with a soil capacity of 0.8 m³. How many trailer loads will he need to fill the garden bed?',
+    unit: 'loads', answer: '6',
+    method: 'Garden bed volume: 3 × 4 × 0.4 = 4.8 m³\nLoads: 4.8 ÷ 0.8 = 6 loads'
+  },
+  {
+    group: 'LK', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — CD Density: A CD holds 700 megabytes and has a diameter of 12 cm. How many megabytes are stored per square centimetre? (Use Area = πr² and π = 3.14)',
+    options: ['A) 5.83 MB/cm²', 'B) 6.19 MB/cm²', 'C) 6.75 MB/cm²', 'D) 7.21 MB/cm²'],
+    answer: 'B) 6.19 MB/cm²',
+    method: 'Radius = 6 cm\nArea = 3.14 × 6² = 3.14 × 36 = 113.04 cm²\n700 ÷ 113.04 ≈ 6.19 MB/cm²'
+  },
+  {
+    group: 'LK', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Sweat Per Day: Our feet produce approximately 146 litres of sweat per year. Approximately how many millilitres of sweat do your feet produce each day?',
+    unit: 'ml', answer: '400',
+    method: '146 L = 146,000 ml\n146,000 ÷ 365 = 400 ml per day'
+  },
+  {
+    group: 'LL', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Nerve Impulses: Nerve impulses to and from the brain travel at 123 metres per second. Which is the closest estimate of the number of metres a nerve impulse travels in one hour?',
+    options: ['A) 430,000 m', 'B) 455,000 m', 'C) 555,000 m', 'D) 440,000 m'],
+    answer: 'D) 440,000 m',
+    method: '123 m/s × 3,600 s = 442,800 m\nClosest estimate: 440,000 m'
+  },
+  {
+    group: 'LL', type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Applied Maths — Typing Time: An author writes a short story of 5,460 words. His typing speed is 325 words per 5 minutes. How long will it take him to type the story?",
+    options: ['A) 1 hour 12 mins', 'B) 1 hour 18 mins', 'C) 1 hour 24 mins', 'D) 1 hour 30 mins'],
+    answer: 'C) 1 hour 24 mins',
+    method: 'Time = 5,460 ÷ 325 × 5 = 84 minutes\n84 min = 1 hour 24 mins'
+  },
+  {
+    group: 'LM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Ski Trip Savings: Sarah is saving for a two-week ski trip to Germany. Costs: return flights $4,000 · hotel $1,200 · food $800 · miscellaneous $560. If Sarah earns $160 per day, how many full days must she work to save enough?',
+    unit: 'days', answer: '41',
+    method: 'Total cost: $4,000 + $1,200 + $800 + $560 = $6,560\nDays: $6,560 ÷ $160 = 41 days'
+  },
+  {
+    group: 'LM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Milk Bottle: A 2-litre milk bottle is poured into big glasses (220 ml each) and small glasses (60 ml each). How much milk (in ml) is left after filling 5 big glasses and 4 small glasses?',
+    unit: 'ml', answer: '660',
+    method: 'Used: 5 × 220 + 4 × 60 = 1,100 + 240 = 1,340 ml\nRemaining: 2,000 − 1,340 = 660 ml'
+  },
+  {
+    group: 'LN', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxRegistration,
+    question: 'Applied Maths — Registration Cost: What is the registration cost for a motor car with an engine capacity of 2,400 cc?',
+    options: ['A) 35 cents', 'B) $228', 'C) $578', 'D) $840'],
+    answer: 'D) $840',
+    method: '2,400 cc falls in the 2,001–2,600 cc bracket → rate 35 cents/cc\n2,400 × $0.35 = $840'
+  },
+  {
+    group: 'LN', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Flight Duration: A plane leaves Sydney at 10:25 and arrives in Thailand at 22:48 (Sydney time). How long did the trip take?',
+    options: ['A) 11 hours 48 mins', 'B) 12 hours 12 mins', 'C) 12 hours 23 mins', 'D) 12 hours 45 mins'],
+    answer: 'C) 12 hours 23 mins',
+    method: 'From 10:25 to 22:48:\nHours: 22 − 10 = 12\nMinutes: 48 − 25 = 23\nTotal: 12 hours 23 mins'
+  },
+  {
+    group: 'LO', type: 'multiple_choice', category: 'Number and Algebra',
+    question: "Applied Maths — Patient Temperature: During the day, a patient's temperature was measured as 37.3 °C, 38.0 °C, 37.8 °C, and 38.5 °C. What was her average temperature?",
+    options: ['A) 37.8 °C', 'B) 37.9 °C', 'C) 38.0 °C', 'D) 38.2 °C'],
+    answer: 'B) 37.9 °C',
+    method: '(37.3 + 38.0 + 37.8 + 38.5) ÷ 4 = 151.6 ÷ 4 = 37.9 °C'
+  },
+  {
+    group: 'LO', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Packaging Volume: Boxes for packaging are cuboid-shaped (14 cm × 40 cm × 12 cm). A company offers a promotion with 20% extra volume. What is the new volume?',
+    options: ['A) 6,720 cm³', 'B) 7,344 cm³', 'C) 8,064 cm³', 'D) 8,400 cm³'],
+    answer: 'C) 8,064 cm³',
+    method: 'Original volume: 14 × 40 × 12 = 6,720 cm³\n+20%: 6,720 × 1.2 = 8,064 cm³'
+  },
+
+  // ── AFP: Applied Maths (Set 2) — Pages 3–5 ───────────────────────────────────
+  {
+    group: 'LP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Restaurant Courses: A restaurant served 220 meals. One-quarter of customers ate a two-course meal and the rest ate a three-course meal. How many courses did the chef prepare in total?',
+    unit: 'courses', answer: '605',
+    method: '2-course diners: 220 ÷ 4 = 55 → 55 × 2 = 110 courses\n3-course diners: 165 → 165 × 3 = 495 courses\nTotal: 110 + 495 = 605'
+  },
+  {
+    group: 'LP', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Currency Exchange: Exchange rates (A$1): US $0.75 · EU €0.60. You have $2,500 AUD and want to convert $1,600 to USD and the remainder to Euros. How much will you receive (whole dollars only)?',
+    options: ['A) 1,200 USD and 540 Euros', 'B) 1,200 USD and 900 Euros', 'C) 1,600 USD and 540 Euros', 'D) 1,000 USD and 600 Euros'],
+    answer: 'A) 1,200 USD and 540 Euros',
+    method: 'USD: $1,600 × 0.75 = 1,200 USD\nRemainder: $2,500 − $1,600 = $900 AUD\nEuros: $900 × 0.60 = 540 Euros'
+  },
+  {
+    group: 'LQ', type: 'number_input', category: 'Number and Algebra',
+    question: "Applied Maths — Diablo Players: There are 256 Year 7 students. Three-quarters own a PlayStation. Of those PlayStation owners, 37 play Grand Theft Auto, 6 play Fallout, and the rest play Diablo. How many students play Diablo?",
+    unit: 'students', answer: '149',
+    method: 'PlayStation owners: 256 × 3/4 = 192\nDiablo players: 192 − 37 − 6 = 149'
+  },
+  {
+    group: 'LQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Stamps: How many 75-cent stamps can you buy for $12?',
+    unit: 'stamps', answer: '16',
+    method: '$12 = 1,200 cents\n1,200 ÷ 75 = 16 stamps'
+  },
+  {
+    group: 'LR', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Map Distance: On a map, the distance between Geelong and Warrnambool is 15.6 cm. If 1 cm represents 9 km, what is the actual distance?',
+    options: ['A) 130.4 km', 'B) 136.0 km', 'C) 140.4 km', 'D) 152.0 km'],
+    answer: 'C) 140.4 km',
+    method: '15.6 cm × 9 km/cm = 140.4 km'
+  },
+  {
+    group: 'LR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Coin Bag: In 1988, the first $2 coin came into existence. It weighs 6.55 g. Coins are stored in bags of 400. How much does one bag weigh in kilograms?',
+    unit: 'kg', answer: '2.62',
+    method: '400 × 6.55 g = 2,620 g\n2,620 ÷ 1,000 = 2.62 kg'
+  },
+  {
+    group: 'LS', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Applied Maths — Samantha\'s Route: Samantha leaves home and rides 7 km west, then 4 km north, then 7 km east, then 3 km south. In which direction and how far must she ride to return home?',
+    options: ['A) 1 km north', 'B) 1 km south', 'C) 1 km east', 'D) 1 km west'],
+    answer: 'B) 1 km south',
+    method: 'East-West: 7 km west + 7 km east = 0 (cancel)\nNorth-South: 4 km north − 3 km south = 1 km north of home\nMust ride 1 km south to return'
+  },
+  {
+    group: 'LS', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Water Per Person: A deep-well pump pumps 12 million litres per day. If the water is shared equally among 15,000 residents, how many litres does each person receive per day?',
+    unit: 'litres', answer: '800',
+    method: '12,000,000 ÷ 15,000 = 800 litres per person'
+  },
+  {
+    group: 'LT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Aquifer Duration: An aquifer holds 30 million litres. If 400,000 litres are extracted each day (with no water added), for approximately how many days will the supply last?',
+    unit: 'days', answer: '75',
+    method: '30,000,000 ÷ 400,000 = 75 days'
+  },
+  {
+    group: 'LT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Angie Walks: It takes Angie exactly 3 hours to walk 9 km. How long would it take her to walk 57 km?',
+    unit: 'hours', answer: '19',
+    method: 'Speed: 9 ÷ 3 = 3 km/h\nTime: 57 ÷ 3 = 19 hours'
+  },
+  {
+    group: 'LU', type: 'number_input', category: 'Number and Algebra',
+    question: 'Applied Maths — Paper Thickness: A sketchbook contains 96 sheets of paper and is 12 mm thick. What is the thickness of each sheet of paper in mm?',
+    unit: 'mm', answer: '0.125',
+    method: '12 mm ÷ 96 = 0.125 mm per sheet'
+  },
+  {
+    group: 'LU', type: 'multiple_choice', category: 'Number and Algebra',
+    context: ctxAFPSubscription,
+    question: "Applied Maths — Subscription Plans: Tina watches an average of 2 movies per month.\nStatement 1: She would be better off getting the Yearly Package rather than Pay Per View.\nStatement 2: The 6-Month Subscription works out cheapest among the upfront and monthly direct debit plans over 12 months.\nWhich combination is correct?",
+    options: ['A) Both statements are True', 'B) Statement 1 True, Statement 2 False', 'C) Statement 1 False, Statement 2 True', 'D) Both statements are False'],
+    answer: 'A) Both statements are True',
+    method: 'Statement 1: PPV for 24 movies = 24 × $4 = $96. Yearly = $85. $85 < $96 → True\nStatement 2 over 12 months: Monthly DD = 12 × $8 = $96 | 6-Month × 2 = $80 | Yearly = $85\n6-Month ($80) is cheapest → True'
+  },
+  {
+    group: 'LV', type: 'number_input', category: 'Number and Algebra',
+    context: ctxAFPSubscription,
+    question: 'Applied Maths — Sports Package: Jason has a 12-month Sports Package on direct debit. He also watched 25 movies as Pay Per View during the first 3 months. How much did he pay in total over those 3 months?',
+    unit: '$', answer: '121',
+    method: 'Sports Package: 3 months × $7 = $21\nPay Per View: 25 × $4 = $100\nTotal: $21 + $100 = $121'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -7112,6 +7329,8 @@ const SHUFFLE_THEMES = {
   'AFP: Unitary Method': ['KG','KH','KI','KJ','KK','KL','KM','KN'],
   'AFP: Speed & Time':   ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
   'AFP: Percentages':    ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
+  'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
+  'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
 }
 
 function shuffleByGroup(qs) {
@@ -7197,6 +7416,8 @@ const TOPIC_GROUPS = {
   'AFP: Unitary Method':      ['KG','KH','KI','KJ','KK','KL','KM','KN'],
   'AFP: Speed & Time':        ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
   'AFP: Percentages':         ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
+  'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
+  'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
 }
 
 app.get('/api/topics', (req, res) => {
