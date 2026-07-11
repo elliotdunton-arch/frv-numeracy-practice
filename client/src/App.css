@@ -3519,8 +3519,27 @@ body {
 }
 
 .revision-comment-label {
+  display: block;
   font-weight: 600;
   color: #7c3aed;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.note-body { margin: 0; }
+.note-body .note-line  { margin: 0 0 4px; }
+.note-body .note-heading { margin: 6px 0 2px; font-weight: 700; }
+.note-body .note-gap   { height: 6px; }
+.note-body .note-list  { margin: 4px 0 4px 1.2em; padding: 0; }
+.note-body .note-list li { margin-bottom: 2px; }
+.note-body .note-code  {
+  font-family: ui-monospace, monospace;
+  font-size: 0.82em;
+  background: rgba(124,58,237,0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
 }
 
 .btn-edit-note {

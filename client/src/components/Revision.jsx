@@ -1,6 +1,58 @@
 import { useState, useEffect } from 'react'
 import { getRevision, removeFromRevision, updateRevisionComment } from '../utils/resultStorage'
 
+function applyInline(str) {
+  const tokens = str.split(/(\*\*[^*\n]+\*\*|\*[^*\n]+\*|`[^`\n]+`)/)
+  return tokens.map((tok, i) => {
+    if (tok.startsWith('**') && tok.endsWith('**')) return <strong key={i}>{tok.slice(2, -2)}</strong>
+    if (tok.startsWith('*') && tok.endsWith('*')) return <em key={i}>{tok.slice(1, -1)}</em>
+    if (tok.startsWith('`') && tok.endsWith('`')) return <code key={i} className="note-code">{tok.slice(1, -1)}</code>
+    return tok
+  })
+}
+
+function renderNote(text) {
+  if (!text) return null
+  const lines = text.split('\n')
+  const out = []
+  let listItems = []
+  let listType = null
+
+  const flushList = () => {
+    if (!listItems.length) return
+    const Tag = listType === 'ol' ? 'ol' : 'ul'
+    out.push(<Tag key={out.length} className="note-list">{listItems.map((t, i) => <li key={i}>{applyInline(t)}</li>)}</Tag>)
+    listItems = []
+    listType = null
+  }
+
+  for (const raw of lines) {
+    const line = raw.trimEnd()
+    const ul = line.match(/^[-*•]\s+(.+)/)
+    const ol = line.match(/^\d+[.)]\s+(.+)/)
+    const h  = line.match(/^#{1,3}\s+(.+)/)
+
+    if (ul) {
+      if (listType === 'ol') flushList()
+      listType = 'ul'; listItems.push(ul[1])
+    } else if (ol) {
+      if (listType === 'ul') flushList()
+      listType = 'ol'; listItems.push(ol[1])
+    } else {
+      flushList()
+      if (line.trim() === '') {
+        out.push(<div key={out.length} className="note-gap" />)
+      } else if (h) {
+        out.push(<p key={out.length} className="note-heading">{applyInline(h[1])}</p>)
+      } else {
+        out.push(<p key={out.length} className="note-line">{applyInline(line)}</p>)
+      }
+    }
+  }
+  flushList()
+  return out
+}
+
 function formatDate(iso) {
   const d = new Date(iso)
   return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
@@ -164,9 +216,10 @@ export default function Revision({ section }) {
               ) : (
                 <div className="revision-comment-display">
                   {item.comment ? (
-                    <p className="revision-saved-comment">
-                      <span className="revision-comment-label">Note: </span>{item.comment}
-                    </p>
+                    <div className="revision-saved-comment">
+                      <span className="revision-comment-label">Note</span>
+                      <div className="note-body">{renderNote(item.comment)}</div>
+                    </div>
                   ) : null}
                   <button className="btn-edit-note" onClick={() => openEdit(item)}>
                     {item.comment ? '✏ Edit note' : '+ Add note'}
