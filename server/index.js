@@ -12524,6 +12524,8 @@ const literacyQuestions = [
   },
 ]
 
+literacyQuestions.forEach((q, i) => { q._id = `lit_${i}` })
+
 app.get('/api/literacy-topics', (req, res) => {
   const categoryMap = {}
   literacyQuestions.forEach(q => {
@@ -15260,15 +15262,33 @@ app.get('/api/mechanical-questions', (req, res) => {
 
 // ── Questions by IDs (resit same test) ───────────────────────────────────────
 app.post('/api/questions-by-ids', (req, res) => {
-  const { ids } = req.body
+  const { ids, section } = req.body
   if (!Array.isArray(ids) || ids.length === 0) {
     return res.status(400).json({ error: 'ids array required' })
   }
-  const idSet = new Set(ids)
-  const ordered = ids
-    .map(id => questions.find(q => q.id === id))
-    .filter(Boolean)
-  res.json(ordered)
+  const allPools = { numeracy: questions, literacy: literacyQuestions, abstract: abstractQuestions, mechanical: mechanicalQuestions }
+  const pool = allPools[section] || [...questions, ...literacyQuestions, ...abstractQuestions, ...mechanicalQuestions]
+  const idSet = new Set(ids.map(String))
+  const byId = {}
+  pool.forEach(q => { byId[String(q._id)] = q })
+  const ordered = ids.map(id => byId[String(id)]).filter(Boolean)
+  const shaped = ordered.map(q => ({
+    id: q._id,
+    type: q.type,
+    inputType: q.inputType || null,
+    category: q.category,
+    group: q.group,
+    set: q.set || null,
+    context: q.context || null,
+    question: q.question,
+    questionImage: q.questionImage || null,
+    options: q.options || null,
+    answer: q.answer,
+    method: q.method || null,
+    methodImage: q.methodImage || null,
+    unit: q.unit || null,
+  }))
+  res.json(shaped)
 })
 
 // ── AI Summary ───────────────────────────────────────────────────────────────

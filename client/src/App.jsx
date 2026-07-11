@@ -93,7 +93,7 @@ export default function App() {
       const res = await fetch('/api/questions-by-ids', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ids: questionIds }),
+        body: JSON.stringify({ ids: questionIds, section: sec }),
       })
       if (!res.ok) throw new Error('Failed to load questions')
       const qs = await res.json()
