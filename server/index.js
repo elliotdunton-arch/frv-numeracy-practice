@@ -1965,6 +1965,22 @@ const ctxMarathon = {
   formulaHint: 'Convert each time to minutes (hours × 60 + minutes). Sum the group. Divide by the number of runners. Round DOWN to the nearest whole number. Convert back: hours = ⌊result ÷ 60⌋, minutes = result mod 60.'
 }
 
+const ctxAFPSteps = {
+  title: '10-Week Step Challenge',
+  subtitle: 'Participants log their cumulative steps. Goal: 500,000 steps by end of Week 10. Shay is sponsored $1 for every 1,000 steps walked.',
+  tables: [{
+    heading: 'Cumulative Steps — End of Week 6',
+    headers: ['Participant', 'Total Steps'],
+    rows: [
+      ['Gabrielle', '262,000'],
+      ['Shay',      '366,000'],
+      ['James',     '318,000'],
+      ['Priya',     '285,000'],
+      ['Tom',       '410,000'],
+    ]
+  }]
+}
+
 const ctxCargo = {
   title: 'Global Cargo Logistics',
   tables: [{
@@ -5709,6 +5725,435 @@ const questions = [
     method: 'Saturday: 19B×$20 + 13T×$30 + 6G×$40 = $380+$390+$240 = $1,010\nWednesday: 8B×$20 + 9T×$30 + 6G×$40 = $160+$270+$240 = $670\nSaturday ($1,010) is the highest.'
   },
 
+  // ── AFP: Step Challenge ──────────────────────────────────────────────────────
+  {
+    group: 'KA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxAFPSteps,
+    question: 'Gabrielle wants to reach a total of 500,000 steps by the end of Week 10. What is the average number of steps she will need to walk each day for the next 4 weeks (28 days) to reach her goal?',
+    unit: 'steps/day', answer: '8500',
+    method: 'Steps remaining: 500,000 − 262,000 = 238,000\nDays remaining: 4 × 7 = 28 days\n238,000 ÷ 28 = 8,500 steps per day'
+  },
+  {
+    group: 'KA', type: 'number_input', category: 'Number and Algebra',
+    context: ctxAFPSteps,
+    question: 'Shay is sponsored $1 for every 1,000 steps he walks during the challenge. If Shay maintains the same average steps per week as the first 6 weeks, how much will he have raised in total at the end of Week 10?',
+    unit: '$', answer: '610',
+    method: 'Average per week: 366,000 ÷ 6 = 61,000 steps/week\nTotal over 10 weeks: 61,000 × 10 = 610,000 steps\nSponsorship: 610,000 ÷ 1,000 = $610'
+  },
+
+  // ── AFP: Ratios ──────────────────────────────────────────────────────────────
+  {
+    group: 'KB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Tea: I make my tea with a ratio of 1.5 litres of water to 200 ml of milk. For a large party using 30 litres of water, how many litres of milk are needed?',
+    unit: 'litres', answer: '4',
+    method: 'Scale factor: 30,000 ml ÷ 1,500 ml = 20\nMilk: 200 ml × 20 = 4,000 ml = 4 litres'
+  },
+  {
+    group: 'KB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Fuel Injector: Fuel injector liquid is added at 250 ml per 10 litres of fuel. How much liquid (in ml) needs to be added to a full 45-litre tank?',
+    unit: 'ml', answer: '1125',
+    method: 'Rate: 250 ml per 10 L = 25 ml/L\n45 × 25 = 1,125 ml'
+  },
+  {
+    group: 'KC', type: 'number_input', category: 'Number and Algebra',
+    question: "Ratios — Shadow: A 180 cm man casts a shadow of 300 cm. How tall (in cm) is his son standing beside him if the son's shadow is only 120 cm?",
+    unit: 'cm', answer: '72',
+    method: 'Height-to-shadow ratio: 180 ÷ 300 = 0.6\nSon height = 0.6 × 120 = 72 cm'
+  },
+  {
+    group: 'KC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Gold Mine: In a gold mine, a 10-kilogram rock contains 8 grams of gold on average. How many kilograms of rock must be dug to obtain 1 kilogram (1,000 g) of gold?',
+    unit: 'kg', answer: '1250',
+    method: '8 g gold per 10 kg rock\n1 kg gold = 1,000 g → 1,000 ÷ 8 = 125 batches\n125 × 10 = 1,250 kg of rock'
+  },
+  {
+    group: 'KD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Schools: In Melbourne schools, for every 2 boys there are 3 girls. If there are 2,400 boys, how many girls are there?',
+    unit: 'girls', answer: '3600',
+    method: 'Ratio boys:girls = 2:3\nGirls = (3 ÷ 2) × 2,400 = 3,600'
+  },
+  {
+    group: 'KD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Pool Chlorine: Swimming pools add 65 ml of chlorine for every 50 litres of water. How much chlorine (in ml) would a 2-litre sample taken from that pool contain?',
+    unit: 'ml', answer: '2.6',
+    method: 'Rate: 65 ml per 50 L = 1.3 ml/L\n2 × 1.3 = 2.6 ml'
+  },
+  {
+    group: 'KE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Fertiliser: You need 350 ml of fertiliser to treat 20 litres of water. A fertiliser container holds 2.8 litres (2,800 ml). How many litres of water can the full container treat?',
+    unit: 'litres', answer: '160',
+    method: 'Rate: 350 ml per 20 L water\nSets in 2,800 ml: 2,800 ÷ 350 = 8\nWater: 8 × 20 = 160 litres'
+  },
+  {
+    group: 'KE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Cricket: A batsman takes a break after every 5 overs. If he has already taken 7 breaks, how many overs has he played in total?',
+    unit: 'overs', answer: '35',
+    method: '7 breaks × 5 overs per break = 35 overs'
+  },
+  {
+    group: 'KF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Mortar: In mortar, a quarter of a kilogram of cement is added to every 10 kilograms of sand. How much cement (in kg) is needed for 75 kilograms of sand?',
+    unit: 'kg', answer: '1.875',
+    method: '0.25 kg cement per 10 kg sand\n75 ÷ 10 = 7.5 sets\n7.5 × 0.25 = 1.875 kg'
+  },
+  {
+    group: 'KF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Ratios — Beer: A 375 ml can of beer contains 2 standard drinks. How many standard drinks are in a keg containing 15 litres of beer?',
+    unit: 'standard drinks', answer: '80',
+    method: '15 L = 15,000 ml\nCans: 15,000 ÷ 375 = 40 cans\nStandard drinks: 40 × 2 = 80'
+  },
+
+  // ── AFP: Unitary Method ──────────────────────────────────────────────────────
+  {
+    group: 'KG', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Pens', paragraphs: ['Shelly bought a dozen pens (12) for $144.'] },
+    question: 'What is the cost of 15 such pens?',
+    unit: '$', answer: '180',
+    method: 'Cost per pen: $144 ÷ 12 = $12\n15 × $12 = $180'
+  },
+  {
+    group: 'KG', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Pens', paragraphs: ['Shelly bought a dozen pens (12) for $144.'] },
+    question: 'How many pens can be bought for $84?',
+    unit: 'pens', answer: '7',
+    method: 'Cost per pen: $144 ÷ 12 = $12\n$84 ÷ $12 = 7 pens'
+  },
+  {
+    group: 'KH', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Onions', paragraphs: ['The cost of 12 kg of onions is $9.'] },
+    question: 'What will the cost of 9 kg of onions be?',
+    unit: '$', answer: '6.75',
+    method: 'Cost per kg: $9 ÷ 12 = $0.75\n9 × $0.75 = $6.75'
+  },
+  {
+    group: 'KH', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Onions', paragraphs: ['The cost of 12 kg of onions is $9.'] },
+    question: 'How many kg of onions can be bought for $60?',
+    unit: 'kg', answer: '80',
+    method: 'Cost per kg: $9 ÷ 12 = $0.75\n$60 ÷ $0.75 = 80 kg'
+  },
+  {
+    group: 'KI', type: 'number_input', category: 'Number and Algebra',
+    question: 'Unitary Method — Train: A train moves at a uniform speed of 68 km/h. How far (in km) will it travel in 15 minutes?',
+    unit: 'km', answer: '17',
+    method: '15 min = 15/60 = 0.25 hours\n68 × 0.25 = 17 km'
+  },
+  {
+    group: 'KI', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Daily Wages', paragraphs: ['A man is paid $770 for working 7 straight days on daily wages.'] },
+    question: 'If he works for 18 days, how much will he earn?',
+    unit: '$', answer: '1980',
+    method: 'Daily wage: $770 ÷ 7 = $110/day\n18 × $110 = $1,980'
+  },
+  {
+    group: 'KJ', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Daily Wages', paragraphs: ['A man is paid $770 for working 7 straight days on daily wages.'] },
+    question: 'How many days will he need to work to earn $6,600?',
+    unit: 'days', answer: '60',
+    method: 'Daily wage: $770 ÷ 7 = $110/day\n$6,600 ÷ $110 = 60 days'
+  },
+  {
+    group: 'KJ', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Bottles', paragraphs: ['In 8 hours, workers fill 960 bottles of cold drinks.'] },
+    question: 'How many bottles will be filled in 6 hours?',
+    unit: 'bottles', answer: '720',
+    method: 'Rate: 960 ÷ 8 = 120 bottles/hour\n6 × 120 = 720 bottles'
+  },
+  {
+    group: 'KK', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Bottles', paragraphs: ['In 8 hours, workers fill 960 bottles of cold drinks.'] },
+    question: 'How many hours are needed to fill 2,400 bottles?',
+    unit: 'hours', answer: '20',
+    method: 'Rate: 960 ÷ 8 = 120 bottles/hour\n2,400 ÷ 120 = 20 hours'
+  },
+  {
+    group: 'KK', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Books', paragraphs: ['The weight of 56 books is 7 kg.'] },
+    question: 'What is the total weight (in kg) of 90 such books?',
+    unit: 'kg', answer: '11.25',
+    method: 'Weight per book: 7 ÷ 56 = 0.125 kg\n90 × 0.125 = 11.25 kg'
+  },
+  {
+    group: 'KL', type: 'number_input', category: 'Number and Algebra',
+    context: { title: 'Unitary Method — Books', paragraphs: ['The weight of 56 books is 7 kg.'] },
+    question: 'How many such books weigh 7.5 kg in total?',
+    unit: 'books', answer: '60',
+    method: 'Weight per book: 7 ÷ 56 = 0.125 kg\n7.5 ÷ 0.125 = 60 books'
+  },
+  {
+    group: 'KL', type: 'number_input', category: 'Number and Algebra',
+    question: 'Unitary Method — Toys: The cost of 7 toys is $91. What will be the cost of 3 toys?',
+    unit: '$', answer: '39',
+    method: 'Cost per toy: $91 ÷ 7 = $13\n3 × $13 = $39'
+  },
+  {
+    group: 'KM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Unitary Method — Sauce: 8 bottles can contain 6 litres of tomato sauce. How many litres of sauce can 14 bottles contain?',
+    unit: 'litres', answer: '10.5',
+    method: 'Per bottle: 6 ÷ 8 = 0.75 L\n14 × 0.75 = 10.5 litres'
+  },
+  {
+    group: 'KM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Unitary Method — TVs: A TV factory produces 4,032 televisions in 7 days working 24 hours a day. How many TVs can it produce in 11 hours?',
+    unit: 'TVs', answer: '264',
+    method: 'Per day (24h): 4,032 ÷ 7 = 576 TVs/day\nPer hour: 576 ÷ 24 = 24 TVs/hour\n11 × 24 = 264 TVs'
+  },
+  {
+    group: 'KN', type: 'number_input', category: 'Number and Algebra',
+    question: 'Unitary Method — Salary: A small business has salary expenses of $1,610 per day for 7 workers. How much will it cost to pay only 5 workers for 3 days?',
+    unit: '$', answer: '3450',
+    method: 'Per worker per day: $1,610 ÷ 7 = $230\n5 workers × 3 days × $230 = $3,450'
+  },
+
+  // ── AFP: Speed, Distance & Time ──────────────────────────────────────────────
+  {
+    group: 'KO', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Ballarat to Melbourne: A train leaves Ballarat at 10:00 am and arrives in Melbourne at 11:15 am. The distance between the two stations is 115 km. Find the average speed in km/h.',
+    unit: 'km/h', answer: '92',
+    method: 'Time: 1 hour 15 min = 1.25 hours\nSpeed = 115 ÷ 1.25 = 92 km/h'
+  },
+  {
+    group: 'KO', type: 'number_input', category: 'Number and Algebra',
+    question: "Speed Distance Time — Chad's Journey: During a car journey, Chad travels at an average speed of 80 km/h for 3 hours 30 minutes. Find the distance travelled in km.",
+    unit: 'km', answer: '280',
+    method: '3h 30min = 3.5 hours\nDistance = 80 × 3.5 = 280 km'
+  },
+  {
+    group: 'KP', type: 'number_input', category: 'Number and Algebra',
+    question: "Speed Distance Time — Knievel's Ride: During a motorcycle ride, Knievel travels at an average speed of 78 km/h for 2 hours and 30 minutes. Find the distance travelled in km.",
+    unit: 'km', answer: '195',
+    method: '2h 30min = 2.5 hours\nDistance = 78 × 2.5 = 195 km'
+  },
+  {
+    group: 'KP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Train Speed: A train travels 350 km in 3 hours and 30 minutes. Find the speed in km/h.',
+    unit: 'km/h', answer: '100',
+    method: '3h 30min = 3.5 hours\nSpeed = 350 ÷ 3.5 = 100 km/h'
+  },
+  {
+    group: 'KQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Car Journey: A car travels 240 km at a speed of 48 km/h. Find the time taken in hours.',
+    unit: 'hours', answer: '5',
+    method: 'Time = Distance ÷ Speed\n240 ÷ 48 = 5 hours'
+  },
+  {
+    group: 'KQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Driver Speed: A driver took 2.5 hours to cover 240 km. What is the average speed in km/h?',
+    unit: 'km/h', answer: '96',
+    method: 'Speed = Distance ÷ Time\n240 ÷ 2.5 = 96 km/h'
+  },
+  {
+    group: 'KR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Mr Walker: Mr Walker walks at 9 km/h for 40 minutes. How far did he travel in km?',
+    unit: 'km', answer: '6',
+    method: '40 min = 40/60 = 2/3 hours\nDistance = 9 × 2/3 = 6 km'
+  },
+  {
+    group: 'KR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Average Speed: A car travels 110 km in 55 minutes. Find the average speed in km/h.',
+    unit: 'km/h', answer: '120',
+    method: '55 min = 55/60 hours\nSpeed = 110 ÷ (55/60) = 110 × 60/55 = 120 km/h'
+  },
+  {
+    group: 'KS', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Distance at 64 km/h: Find the distance travelled when the average speed is 64 km/h and the time taken is 5.25 hours.',
+    unit: 'km', answer: '336',
+    method: 'Distance = Speed × Time\n64 × 5.25 = 336 km'
+  },
+  {
+    group: 'KS', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Shanghai Marathon: A man runs the Shanghai Marathon at an average speed of 9 km/h. The route is 48 km. What was his finishing time?',
+    options: ['A) 4 hours 50 mins', 'B) 5 hours 00 mins', 'C) 5 hours 20 mins', 'D) 5 hours 40 mins'],
+    answer: 'C) 5 hours 20 mins',
+    method: 'Time = 48 ÷ 9 = 5.333... hours\n0.333 × 60 = 20 minutes\n→ 5 hours 20 minutes'
+  },
+  {
+    group: 'KT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Melbourne to Shepparton: A train leaves Melbourne at 12:00 pm and arrives in Shepparton at 3:30 pm. The distance is 252 km. Find the average speed in km/h.',
+    unit: 'km/h', answer: '72',
+    method: '3h 30min = 3.5 hours\nSpeed = 252 ÷ 3.5 = 72 km/h'
+  },
+  {
+    group: 'KT', type: 'number_input', category: 'Number and Algebra',
+    question: "Speed Distance Time — Trump's Journey: During a car journey, Trump travels at an average speed of 120 km/h for 3 hours 30 minutes. Find the distance travelled in km.",
+    unit: 'km', answer: '420',
+    method: '3h 30min = 3.5 hours\nDistance = 120 × 3.5 = 420 km'
+  },
+  {
+    group: 'KU', type: 'number_input', category: 'Number and Algebra',
+    question: "Speed Distance Time — Obama's Ride: During a motorcycle ride, Obama travels at an average speed of 84 km/h for 2 hours and 15 minutes. Find the distance travelled in km.",
+    unit: 'km', answer: '189',
+    method: '2h 15min = 2.25 hours\nDistance = 84 × 2.25 = 189 km'
+  },
+  {
+    group: 'KU', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Train Speed: A train travels 225 km in 3 hours. Find the speed in km/h.',
+    unit: 'km/h', answer: '75',
+    method: 'Speed = 225 ÷ 3 = 75 km/h'
+  },
+  {
+    group: 'KV', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Car Trip: A car travels 168 km at a speed of 48 km/h. Find the time taken.',
+    options: ['A) 2 hours 30 mins', 'B) 3 hours 00 mins', 'C) 3 hours 30 mins', 'D) 4 hours 00 mins'],
+    answer: 'C) 3 hours 30 mins',
+    method: 'Time = 168 ÷ 48 = 3.5 hours = 3 hours 30 mins'
+  },
+  {
+    group: 'KV', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Driver 200 km: A driver took 2.5 hours to cover 200 km. What is the average speed in km/h?',
+    unit: 'km/h', answer: '80',
+    method: 'Speed = 200 ÷ 2.5 = 80 km/h'
+  },
+  {
+    group: 'KW', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Roger Pedals: Roger pedals at 45 km/h for 20 minutes. How far did he travel in km?',
+    unit: 'km', answer: '15',
+    method: '20 min = 20/60 = 1/3 hours\nDistance = 45 × 1/3 = 15 km'
+  },
+  {
+    group: 'KW', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Average Speed: Find the average speed when a car travels 150 km in 2½ hours.',
+    unit: 'km/h', answer: '60',
+    method: 'Speed = 150 ÷ 2.5 = 60 km/h'
+  },
+  {
+    group: 'KX', type: 'number_input', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Distance at 70 km/h: Find the distance travelled when the average speed is 70 km/h and the time taken is 5½ hours.',
+    unit: 'km', answer: '385',
+    method: 'Distance = 70 × 5.5 = 385 km'
+  },
+  {
+    group: 'KX', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Speed Distance Time — Marathon 30 km: A man runs a 30 km marathon at an average speed of 8 km/h. What was his finishing time?',
+    options: ['A) 3 hours 00 mins', 'B) 3 hours 30 mins', 'C) 3 hours 45 mins', 'D) 4 hours 00 mins'],
+    answer: 'C) 3 hours 45 mins',
+    method: 'Time = 30 ÷ 8 = 3.75 hours\n0.75 × 60 = 45 minutes\n→ 3 hours 45 minutes'
+  },
+
+  // ── AFP: Percentages ─────────────────────────────────────────────────────────
+  {
+    group: 'KY', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Insurance Claims: Roger works for an insurance company and received 180 claims last month. If 15% were rejected, how many claims were rejected?',
+    unit: 'claims', answer: '27',
+    method: '15% of 180 = 0.15 × 180 = 27 claims'
+  },
+  {
+    group: 'KY', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Aptitude Exam: In an exam with 90 questions, Lauren missed 18 but got all others correct. What was her score as a percentage?',
+    unit: '%', answer: '80',
+    method: 'Correct: 90 − 18 = 72\nScore: 72/90 × 100 = 80%'
+  },
+  {
+    group: 'KZ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Sales Commission: Rob sells cars on an 8% commission basis. If he sold $150,000 worth of cars, how much did he receive in commission?',
+    unit: '$', answer: '12000',
+    method: '8% of $150,000 = 0.08 × 150,000 = $12,000'
+  },
+  {
+    group: 'KZ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Potato Shipment: A store sold 304 kg of potatoes, which was 76% of the original shipment (the rest was spoiled). How many kg were in the original shipment?',
+    unit: 'kg', answer: '400',
+    method: '304 = 76% of total\nTotal = 304 ÷ 0.76 = 400 kg'
+  },
+  {
+    group: 'LA', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Chimp Test: A chimp takes a 120-question multiple-choice test with 4 options per question and guesses randomly (25% chance each). How many correct answers can we expect?',
+    unit: 'correct answers', answer: '30',
+    method: '25% of 120 = 0.25 × 120 = 30 correct answers'
+  },
+  {
+    group: 'LA', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Percentages — Document Scaling: An A4 document is reduced to 80% of its original size when printing. The original was 20 cm × 30 cm. What are the new dimensions?',
+    options: ['A) 14 cm × 21 cm', 'B) 16 cm × 24 cm', 'C) 18 cm × 27 cm', 'D) 20 cm × 25 cm'],
+    answer: 'B) 16 cm × 24 cm',
+    method: '80% of 20 cm = 16 cm\n80% of 30 cm = 24 cm\nNew dimensions: 16 cm × 24 cm'
+  },
+  {
+    group: 'LB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Science Project: Rebecca scored 44 marks on her science project. If her percentage score was 80%, how many total marks were there?',
+    unit: 'marks', answer: '55',
+    method: '44 = 80% of total\nTotal = 44 ÷ 0.80 = 55 marks'
+  },
+  {
+    group: 'LB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Uber Tip: An Uber driver received a $3.25 tip on a total fare of $65. What percentage of the fare was received as a tip?',
+    unit: '%', answer: '5',
+    method: '3.25 ÷ 65 × 100 = 5%'
+  },
+  {
+    group: 'LC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Missed Calls: Barry had 165 incoming calls but only answered 132. What percentage of calls did he miss?',
+    unit: '%', answer: '20',
+    method: 'Missed: 165 − 132 = 33\n33 ÷ 165 × 100 = 20%'
+  },
+  {
+    group: 'LC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Tennis Serves: In a tennis match, Carla served correctly over the net 18 out of 30 times. What percentage of her serves did she NOT make correctly?',
+    unit: '%', answer: '40',
+    method: 'Incorrect: 30 − 18 = 12\n12 ÷ 30 × 100 = 40%'
+  },
+  {
+    group: 'LD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Retail Jacket: A retail store pays $80 wholesale for a jacket. What should he sell it for to make a 20% profit?',
+    unit: '$', answer: '96',
+    method: 'Profit: 20% of $80 = $16\nSale price: $80 + $16 = $96'
+  },
+  {
+    group: 'LD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Savings Rate: Ryan earns $3,600 a month and saves $180 a month. What percentage of his income does he save?',
+    unit: '%', answer: '5',
+    method: '180 ÷ 3,600 × 100 = 5%'
+  },
+  {
+    group: 'LE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Import Duty: Import duty on an imported car is 5%. If the duty paid was $1,800, what was the price of the car?',
+    unit: '$', answer: '36000',
+    method: '$1,800 = 5% of car price\nCar price = 1,800 ÷ 0.05 = $36,000'
+  },
+  {
+    group: 'LE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Commission Sales: John receives 8% commission per sale. If he earned $320 in commissions last week, what was his total sales amount?',
+    unit: '$', answer: '4000',
+    method: '$320 = 8% of total sales\nSales = 320 ÷ 0.08 = $4,000'
+  },
+  {
+    group: 'LF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Charity Goal: A charity raised $7,000 for a local program, which was only 35% of their goal. How much more do they need to raise to reach their target?',
+    unit: '$', answer: '13000',
+    method: 'Total goal = $7,000 ÷ 0.35 = $20,000\nRemaining = $20,000 − $7,000 = $13,000'
+  },
+  {
+    group: 'LF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Diesel Price Rise: The price of diesel went up from $1.20/L to $1.50/L overnight. What was the percentage increase?',
+    unit: '%', answer: '25',
+    method: 'Increase: $1.50 − $1.20 = $0.30\n0.30 ÷ 1.20 × 100 = 25%'
+  },
+  {
+    group: 'LG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Jeans Sale: A pair of jeans was on sale for $36, down from the original price of $60. What percentage discount was applied?',
+    unit: '%', answer: '40',
+    method: 'Discount: $60 − $36 = $24\n24 ÷ 60 × 100 = 40%'
+  },
+  {
+    group: 'LG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Airport Parking: Parking at Melbourne Airport for 3 hours or less increased from $12 to $16.80. What is the percentage increase?',
+    unit: '%', answer: '40',
+    method: 'Increase: $16.80 − $12 = $4.80\n4.80 ÷ 12 × 100 = 40%'
+  },
+  {
+    group: 'LH', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Population Growth: According to the census, the population of Newtown went from 25,000 in 2019 to 30,000 in 2020. By what percentage did the population increase?',
+    unit: '%', answer: '20',
+    method: 'Increase: 30,000 − 25,000 = 5,000\n5,000 ÷ 25,000 × 100 = 20%'
+  },
+  {
+    group: 'LH', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Percentages — Property Depreciation: A townhouse was purchased for $450,000 but due to increased crime is now valued at $400,000. What percentage did it depreciate?',
+    options: ['A) 8.89%', 'B) 11.11%', 'C) 12.5%', 'D) 20%'],
+    answer: 'B) 11.11%',
+    method: 'Loss: $450,000 − $400,000 = $50,000\n50,000 ÷ 450,000 × 100 ≈ 11.11%'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -6662,6 +7107,11 @@ const SHUFFLE_THEMES = {
   'Logistics':          ['HG','HH','HI','HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS','HT','HU'],
   'Share Portfolios':   ['IA','IB','IC','ID','IE','IF','IG','IH','II','IJ'],
   'Weekly Sales':       ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
+  'AFP: Step Challenge': ['KA'],
+  'AFP: Ratios':         ['KB','KC','KD','KE','KF'],
+  'AFP: Unitary Method': ['KG','KH','KI','KJ','KK','KL','KM','KN'],
+  'AFP: Speed & Time':   ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
+  'AFP: Percentages':    ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
 }
 
 function shuffleByGroup(qs) {
@@ -6742,6 +7192,11 @@ const TOPIC_GROUPS = {
   'Share Portfolios (Set 1)': ['IA','IB','IC','ID','IE'],
   'Share Portfolios (Set 2)': ['IF','IG','IH','II','IJ'],
   'Weekly Sales':             ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
+  'AFP: Step Challenge':      ['KA'],
+  'AFP: Ratios':              ['KB','KC','KD','KE','KF'],
+  'AFP: Unitary Method':      ['KG','KH','KI','KJ','KK','KL','KM','KN'],
+  'AFP: Speed & Time':        ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
+  'AFP: Percentages':         ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
 }
 
 app.get('/api/topics', (req, res) => {
