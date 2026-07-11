@@ -7679,6 +7679,9 @@ function shuffle(arr) {
   }
 }
 
+// Assign each question a stable permanent ID so revision saves are never overwritten
+questions.forEach((q, i) => { q._id = i })
+
 // ── Broad shuffle themes (15 buckets → round 1 ≈ 30q → all themes per test) ──
 // TOPIC_GROUPS (below) stays fine-grained for focused-practice filtering.
 // SHUFFLE_THEMES merges related topics so the round-robin distributes evenly.
@@ -7834,13 +7837,13 @@ app.get('/api/questions', (req, res) => {
   }
 
   const groupPos = {}
-  const final = shuffled.map((q, i) => {
+  const final = shuffled.map((q) => {
     if (groupPos[q.group] === undefined) groupPos[q.group] = 0
     const pos = groupPos[q.group]++
     const method = (methods[q.group] || [])[pos] || null
     const unit   = (units[q.group]   || [])[pos] || null
     return {
-      id: i + 1,
+      id: q._id,
       type: q.type,
       inputType: q.inputType || null,
       category: q.category,
@@ -11491,8 +11494,8 @@ app.get('/api/literacy-questions', (req, res) => {
     }
   }
 
-  const final = taken.map((q, idx) => ({
-    id: idx + 1,
+  const final = taken.map((q) => ({
+    id: q._id,
     type: q.type,
     category: q.category,
     group: q.group,
@@ -11602,10 +11605,12 @@ const abstractQuestions = [
   },
 ]
 
+abstractQuestions.forEach((q, i) => { q._id = `abs_${i}` })
+
 app.get('/api/abstract-questions', (req, res) => {
   const shuffled = [...abstractQuestions].sort(() => Math.random() - 0.5)
-  const final = shuffled.map((q, i) => ({
-    id: i + 1,
+  const final = shuffled.map((q) => ({
+    id: q._id,
     type: q.type,
     category: q.category,
     group: q.group,
@@ -13002,6 +13007,8 @@ const mechanicalQuestions = [
   },
 ]
 
+mechanicalQuestions.forEach((q, i) => { q._id = `mech_${i}` })
+
 app.get('/api/mechanical-sets', (req, res) => {
   const counts = {}
   mechanicalQuestions.forEach(q => { counts[q.set] = (counts[q.set] || 0) + 1 })
@@ -13028,8 +13035,8 @@ app.get('/api/mechanical-questions', (req, res) => {
       result = result.slice(0, FULL)
     }
   }
-  const final = result.map((q, i) => ({
-    id: i + 1,
+  const final = result.map((q) => ({
+    id: q._id,
     type: q.type,
     category: q.category,
     group: q.group,
