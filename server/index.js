@@ -6371,6 +6371,381 @@ const questions = [
     method: 'Sports Package: 3 months × $7 = $21\nPay Per View: 25 × $4 = $100\nTotal: $21 + $100 = $121'
   },
 
+  // ── AFP2: Percentages ────────────────────────────────────────────────────────
+  {
+    group: 'MA', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Pants Sale: A pair of pants costs $24. The cost was reduced by 8%. What is the new cost of the pants?',
+    unit: '$', answer: '22.08',
+    method: '8% of $24 = $1.92\nNew price: $24 − $1.92 = $22.08'
+  },
+  {
+    group: 'MA', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Basketball Points: Michael scored 260 points during his junior year. He scored 20% more points during his senior year. How many points did he score during his senior year?',
+    unit: 'points', answer: '312',
+    method: '20% of 260 = 52\n260 + 52 = 312 points'
+  },
+  {
+    group: 'MB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Real Estate Commission: Brian makes a 2.5% commission on each sale. In June he sold three houses for $153,000, $299,000, and $121,000. What was his total commission?',
+    unit: '$', answer: '14325',
+    method: 'Total sales: $153,000 + $299,000 + $121,000 = $573,000\nCommission: $573,000 × 2.5% = $14,325'
+  },
+  {
+    group: 'MB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Frying Pan Sale: Cory purchased a frying pan on sale for 30% off. She saved $3.75 with the sale. What was the original price of the frying pan?',
+    unit: '$', answer: '12.50',
+    method: '$3.75 = 30% of original price\nOriginal = $3.75 ÷ 0.30 = $12.50'
+  },
+  {
+    group: 'MC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Baseball Cards: Peter purchased 14 new baseball cards. These 14 cards represent 35% of his total collection. How many baseball cards does Peter now have?',
+    unit: 'cards', answer: '40',
+    method: '14 new cards = 35% of new total\nNew total = 14 ÷ 0.35 = 40 baseball cards'
+  },
+  {
+    group: 'MC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — History Pages: Joey has 30 pages to read for history class. He will take a break after reading 70% of the assigned pages. How many pages must he read before his break?',
+    unit: 'pages', answer: '21',
+    method: '70% of 30 = 0.70 × 30 = 21 pages'
+  },
+  {
+    group: 'MD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Julie\'s Shopping: Julie had $500. She spent 20% on clothes, then 25% of the remaining money on CDs. How much money did Julie spend in total?',
+    unit: '$', answer: '200',
+    method: 'On clothes: 20% of $500 = $100\nRemaining: $400\nOn CDs: 25% of $400 = $100\nTotal spent: $100 + $100 = $200'
+  },
+  {
+    group: 'MD', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Coat with Tax: Nick paid $68.25 for a coat including 5% sales tax. What was the original price of the coat before tax?',
+    unit: '$', answer: '65',
+    method: '$68.25 = original × 1.05\nOriginal = $68.25 ÷ 1.05 = $65.00'
+  },
+  {
+    group: 'ME', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Dow Jones: The Dow Jones Industrial Average fell 2% today. The Dow began the day at 8,800. What was the Dow at the end of the day?',
+    unit: '', answer: '8624',
+    method: '2% of 8,800 = 176\n8,800 − 176 = 8,624'
+  },
+  {
+    group: 'ME', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Population Decrease: The population of Hamden was 350,000 in 1990. By 2000 it had decreased to 329,000. What is the percentage decrease?',
+    unit: '%', answer: '6',
+    method: 'Decrease: 350,000 − 329,000 = 21,000\n21,000 ÷ 350,000 × 100 = 6%'
+  },
+  {
+    group: 'MF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Sales Tax: Connecticut state sales tax is 6%. Lucy purchases a picture frame that costs $10.50. What is the sales tax on this item?',
+    unit: '$', answer: '0.63',
+    method: '6% of $10.50 = 0.06 × $10.50 = $0.63'
+  },
+  {
+    group: 'MF', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Lunch Spending: Wendy brought $16 to the mall and spent $6 on lunch. What percentage of her money did she spend on lunch?',
+    unit: '%', answer: '37.5',
+    method: '$6 ÷ $16 × 100 = 37.5%'
+  },
+  {
+    group: 'MG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Insurance Commission: Donald sold $5,250 worth of new insurance policies. If he receives a 7% commission on new policies, how much did he earn in commissions?',
+    unit: '$', answer: '367.50',
+    method: '7% of $5,250 = 0.07 × $5,250 = $367.50'
+  },
+  {
+    group: 'MG', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Loan Interest: Kara borrowed $3,650 for one year at an annual interest rate of 16%. How much did Kara pay in interest?',
+    unit: '$', answer: '584',
+    method: '16% of $3,650 = 0.16 × $3,650 = $584'
+  },
+  {
+    group: 'MH', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Height Comparison: Rebecca is 12.5% taller than Debbie. Debbie is 64 inches tall. How tall is Rebecca?',
+    unit: 'inches', answer: '72',
+    method: '12.5% of 64 = 8 inches\nRebecca = 64 + 8 = 72 inches'
+  },
+  {
+    group: 'MH', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Car Commission: Kyra receives a 5% commission on every car she sells. She received a $1,325 commission on the last car sold. What was the cost of the car?',
+    unit: '$', answer: '26500',
+    method: '$1,325 = 5% of car cost\nCar cost = $1,325 ÷ 0.05 = $26,500'
+  },
+  {
+    group: 'MI', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Markdown Discount: An item that sold for $260 has been marked down to $208. What is the percentage discount?',
+    unit: '%', answer: '20',
+    method: 'Discount: $260 − $208 = $52\n$52 ÷ $260 × 100 = 20%'
+  },
+  {
+    group: 'MI', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — T-Shirts Sold: The football boosters club had 80 T-shirts made to sell at games. By mid-October they had only 12 left. What percentage of the shirts had been sold?',
+    unit: '%', answer: '85',
+    method: 'Sold: 80 − 12 = 68\n68 ÷ 80 × 100 = 85%'
+  },
+  {
+    group: 'MJ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Printer Sale: A printer that sells for $190 is on sale for 20% off. What is the sale price?',
+    unit: '$', answer: '152',
+    method: '20% of $190 = $38\nSale price: $190 − $38 = $152'
+  },
+  {
+    group: 'MJ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Percentage of a Number: What is 19% of 26?',
+    unit: '', answer: '4.94',
+    method: '19% of 26 = 0.19 × 26 = 4.94'
+  },
+  {
+    group: 'MK', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Total Teachers: There are 81 women teachers at Russell High. If 45% of all teachers are women, how many teachers are there in total?',
+    unit: 'teachers', answer: '180',
+    method: '81 = 45% of total\nTotal = 81 ÷ 0.45 = 180 teachers'
+  },
+  {
+    group: 'MK', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Tiered Commission: Kim earns 5% commission on sales up to $20,000 and 8.5% on any sales above $20,000. Her total commission for May was $3,975. What were her total sales for the month?',
+    unit: '$', answer: '55000',
+    method: 'Commission on first $20,000: 5% × $20,000 = $1,000\nRemaining commission: $3,975 − $1,000 = $2,975\nSales over $20,000: $2,975 ÷ 0.085 = $35,000\nTotal sales: $20,000 + $35,000 = $55,000'
+  },
+  {
+    group: 'ML', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — School Play: 64% of the 75 students in the school play are boys. How many boys are in the play?',
+    unit: 'boys', answer: '48',
+    method: '64% of 75 = 0.64 × 75 = 48 boys'
+  },
+  {
+    group: 'ML', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Shopping with Tax: Christie bought a scarf ($15.50) and gloves ($5.50), both on sale for 20% off. She paid 5% sales tax on her total purchase. How much did she spend?',
+    unit: '$', answer: '17.64',
+    method: 'Subtotal: $15.50 + $5.50 = $21.00\n20% off: $21.00 × 0.80 = $16.80\n5% tax: $16.80 × 1.05 = $17.64'
+  },
+  {
+    group: 'MM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Textbook Cost: Last year a maths textbook cost $54. This year the cost is 107% of what it was last year. What is this year\'s cost?',
+    unit: '$', answer: '57.78',
+    method: '$54 × 1.07 = $57.78'
+  },
+  {
+    group: 'MM', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Salary Raise: Larry earned $32,000 per year. He then received a 3.25% raise. What is Larry\'s new salary after the raise?',
+    unit: '$', answer: '33040',
+    method: 'Raise: 3.25% of $32,000 = $1,040\nNew salary: $32,000 + $1,040 = $33,040'
+  },
+  {
+    group: 'MN', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Successive Spending: Bill spent 50% of his savings on school supplies, then 50% of what was left on lunch. He had $6 remaining. How much did he have in savings at the beginning?',
+    unit: '$', answer: '24',
+    method: 'After two 50% deductions: savings × 0.5 × 0.5 = savings × 0.25 = $6\nSavings = $6 ÷ 0.25 = $24'
+  },
+  {
+    group: 'MN', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Coat Mark-up: A coat that costs $72 is marked up 22%. What is the new price of the coat?',
+    unit: '$', answer: '87.84',
+    method: '$72 × 1.22 = $87.84'
+  },
+  {
+    group: 'MO', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Weekly Savings: Kristen earns $550 each week after taxes. She deposits 10% in a savings account and 7% in a retirement fund. How much does she have left after these deductions?',
+    unit: '$', answer: '456.50',
+    method: 'Total deduction: 10% + 7% = 17%\n$550 × 0.17 = $93.50\n$550 − $93.50 = $456.50'
+  },
+  {
+    group: 'MO', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Customer Growth: Coastal Cable had 1,440,000 customers in January 2002. By end of 2002 they had 1,800,000 customers. What is the percentage increase?',
+    unit: '%', answer: '25',
+    method: 'Increase: 1,800,000 − 1,440,000 = 360,000\n360,000 ÷ 1,440,000 × 100 = 25%'
+  },
+  {
+    group: 'MP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Heating Oil Price: The price of heating oil rose from $1.10 per litre to $1.43 per litre. What is the percentage increase?',
+    unit: '%', answer: '30',
+    method: 'Increase: $1.43 − $1.10 = $0.33\n$0.33 ÷ $1.10 × 100 = 30%'
+  },
+  {
+    group: 'MP', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Sports Survey: 450 girls were surveyed about their favourite sport. 24% chose basketball, 13% chose ice hockey, and 41% chose softball. What percentage chose field hockey?',
+    unit: '%', answer: '22',
+    method: '24% + 13% + 41% = 78%\nField hockey: 100% − 78% = 22%'
+  },
+  {
+    group: 'MQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Baby Weights: 25% of babies weigh less than 6 lbs and 78% weigh less than 8.5 lbs. What percentage of babies weigh between 6 lbs and 8.5 lbs?',
+    unit: '%', answer: '53',
+    method: '78% − 25% = 53%'
+  },
+  {
+    group: 'MQ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Double Markdown: An $80 coat is marked down 20%, then marked down an additional 15% after it still does not sell. What is the final price?',
+    unit: '$', answer: '54.40',
+    method: 'After 20% off: $80 × 0.80 = $64\nAfter further 15% off: $64 × 0.85 = $54.40'
+  },
+  {
+    group: 'MR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Fraction to Percentage: 3/5 of the soda purchased at a football game was cola. What percentage of the soda was cola?',
+    unit: '%', answer: '60',
+    method: '3 ÷ 5 = 0.6 = 60%'
+  },
+  {
+    group: 'MR', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Favourite Colour Survey: In a survey of 700 people, 15% said red was their favourite colour. How many people said red?',
+    unit: 'people', answer: '105',
+    method: '15% of 700 = 0.15 × 700 = 105 people'
+  },
+  {
+    group: 'MS', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Students Walking: In a class of 20 students, 8 walk to school. What percentage of students walk to school?',
+    unit: '%', answer: '40',
+    method: '8 ÷ 20 × 100 = 40%'
+  },
+  {
+    group: 'MS', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Walkers with Rides: In Daniel\'s class of 24 students, 37.5% walk to school. One-third of those walkers got a ride from their parents today. How many walkers got a ride?',
+    unit: 'students', answer: '3',
+    method: 'Walkers: 37.5% of 24 = 9 students\nWith rides: 9 × 1/3 = 3 students'
+  },
+  {
+    group: 'MT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Sales Tax on Purchases: Lindsay bought a pocketbook for $45 and shoes for $55. The sales tax on her purchases was 6%. How much sales tax did she pay?',
+    unit: '$', answer: '6',
+    method: 'Total: $45 + $55 = $100\n6% of $100 = $6'
+  },
+  {
+    group: 'MT', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Tax on a Book: Wendy bought a book and paid $2.12 in sales tax. If the sales tax rate is 8%, what was the price of the book?',
+    unit: '$', answer: '26.50',
+    method: '$2.12 = 8% of book price\nBook price = $2.12 ÷ 0.08 = $26.50'
+  },
+  {
+    group: 'MU', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Restaurant Tip: Mr. Pelicas\'s dinner bill was $65.00. He would like to leave a 20% tip. How much should he leave?',
+    unit: '$', answer: '13',
+    method: '20% of $65 = 0.20 × $65 = $13'
+  },
+  {
+    group: 'MU', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Election Forecast: A survey found that 54% of people will vote for Larry Salva for mayor. If 23,500 people vote in the election, how many are expected to vote for Mr. Salva?',
+    unit: 'votes', answer: '12690',
+    method: '54% of 23,500 = 0.54 × 23,500 = 12,690'
+  },
+  {
+    group: 'MV', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Sale Price Percentage: Bikes are on sale for 30% off the original price. What percentage of the original price will a customer pay at the sale price?',
+    unit: '%', answer: '70',
+    method: '100% − 30% = 70% of original price'
+  },
+  {
+    group: 'MV', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Mittens Discount: A pair of mittens has been discounted 12.5%. The original price was $10. What is the new price?',
+    unit: '$', answer: '8.75',
+    method: '12.5% of $10 = $1.25\nNew price: $10 − $1.25 = $8.75'
+  },
+  {
+    group: 'MW', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Car Wash Fundraiser: A youth group is raising $1,500 at a car wash. So far they have raised $525. What percentage of their goal have they raised?',
+    unit: '%', answer: '35',
+    method: '$525 ÷ $1,500 × 100 = 35%'
+  },
+  {
+    group: 'MW', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Fundraiser Goal: The freshman class aims to raise $5,000. After the first two days they have raised 32% of their goal. How many dollars did they raise in those two days?',
+    unit: '$', answer: '1600',
+    method: '32% of $5,000 = 0.32 × $5,000 = $1,600'
+  },
+  {
+    group: 'MX', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Work Hours Survey: 1,152 out of 3,600 people surveyed said they work more than 40 hours per week. What percentage said they work more than 40 hours?',
+    unit: '%', answer: '32',
+    method: '1,152 ÷ 3,600 × 100 = 32%'
+  },
+  {
+    group: 'MX', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Height Growth: Peter was 60 inches tall on his 13th birthday. By age 15 his height had increased 15%. How tall was Peter when he turned 15?',
+    unit: 'inches', answer: '69',
+    method: '15% of 60 = 9 inches\n60 + 9 = 69 inches'
+  },
+  {
+    group: 'MY', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Successive Discounts: Laura paid $17 for jeans. The ticketed price was already 20% off the original, then an additional 15% off the ticketed price was applied. What was the original price of the jeans?',
+    unit: '$', answer: '25',
+    method: 'Ticketed price = original × 0.80\nFinal price = ticketed × 0.85 = original × 0.68\n$17 ÷ 0.68 = $25'
+  },
+  {
+    group: 'MY', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Tax on a Basket: The 5% sales tax on a basket was $0.70. What was the price of the basket?',
+    unit: '$', answer: '14',
+    method: '$0.70 = 5% of basket price\nBasket price = $0.70 ÷ 0.05 = $14'
+  },
+  {
+    group: 'MZ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Better Tip: Melisa added a 15% tip of $42 to the restaurant bill. Jennifer wants to leave a 20% tip instead. How much is a 20% tip?',
+    unit: '$', answer: '56',
+    method: 'Bill = $42 ÷ 0.15 = $280\n20% tip = $280 × 0.20 = $56'
+  },
+  {
+    group: 'MZ', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Snow Removal Budget: The snow removal budget is $130,000. They have already spent $100,000. What percentage of the budget has been spent? (Round to the nearest whole percent.)',
+    unit: '%', answer: '77',
+    method: '$100,000 ÷ $130,000 × 100 = 76.92% ≈ 77%'
+  },
+  {
+    group: 'NA', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — House Sale Commission: A real estate agent makes a 1.5% commission on her sales. What is her commission if she sells a $359,000 house?',
+    unit: '$', answer: '5385',
+    method: '1.5% of $359,000 = 0.015 × $359,000 = $5,385'
+  },
+  {
+    group: 'NA', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Import Mark-up: The manager of a specialty store marks up imported products 110%. If a vase from Italy costs him $35, what price will he put on it?',
+    unit: '$', answer: '73.50',
+    method: 'Mark-up: 110% of $35 = $38.50\nSell price: $35 + $38.50 = $73.50'
+  },
+  {
+    group: 'NB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Property Ownership: Michelle has $125,000 invested in a property worth $400,000. What percentage of the property does Michelle own?',
+    unit: '%', answer: '31.25',
+    method: '$125,000 ÷ $400,000 × 100 = 31.25%'
+  },
+  {
+    group: 'NB', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Take-home Pay: Kyra\'s weekly wages are $895. A Social Security tax of 7.51% and State Disability Insurance of 1.2% are deducted. What is her weekly take-home pay?',
+    unit: '$', answer: '817.05',
+    method: 'SS tax: 7.51% of $895 = $67.21\nDisability: 1.2% of $895 = $10.74\nTotal deductions: $77.95\nTake-home: $895 − $77.95 = $817.05'
+  },
+  {
+    group: 'NC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Early Payment Discount: Oscar\'s Oil gives customers a 5% discount if they pay within 10 days. The Stevens\' oil bill is $178. How much do they save by paying early?',
+    unit: '$', answer: '8.90',
+    method: '5% of $178 = 0.05 × $178 = $8.90'
+  },
+  {
+    group: 'NC', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Calorie Limit: Josephine is on an 1,800-calorie per day diet and limits fat intake to 30% of total calories. What is the maximum number of calories from fat she should consume per day?',
+    unit: 'calories', answer: '540',
+    method: '30% of 1,800 = 0.30 × 1,800 = 540 calories'
+  },
+  {
+    group: 'ND', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Tax Deduction: A family may deduct 24% of their childcare expenses from income tax owed. If childcare expenses were $1,345, how much can they deduct?',
+    unit: '$', answer: '322.80',
+    method: '24% of $1,345 = 0.24 × $1,345 = $322.80'
+  },
+  {
+    group: 'ND', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Factory Capacity: A factory working at 90% capacity ships 450 cars per week. How many cars can it ship per week at 100% capacity?',
+    unit: 'cars', answer: '500',
+    method: '450 = 90% of full capacity\nFull capacity = 450 ÷ 0.90 = 500 cars'
+  },
+  {
+    group: 'NE', type: 'number_input', category: 'Number and Algebra',
+    question: 'Percentages — Monthly Sales Increase: Sales increased by 0.5% last month. If the previous month\'s sales were $152,850, what were last month\'s sales?',
+    unit: '$', answer: '153614.25',
+    method: '$152,850 × 1.005 = $153,614.25'
+  },
+  {
+    group: 'NE', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Percentages — Wedding No-shows: Laura expects 230 people to attend her wedding but has been told approximately 5% typically don\'t show up. About how many people should she expect not to show?',
+    options: ['A) 10 people', 'B) 11 people', 'C) 12 people', 'D) 13 people'],
+    answer: 'C) 12 people',
+    method: '5% of 230 = 11.5 people\nRounded up: approximately 12 people'
+  },
+
   // ── Successive % Changes: FX, FY, FZ, GA, GB ────────────────────────────────
   {
     group: 'FX', type: 'multiple_choice', category: 'Number and Algebra',
@@ -7331,6 +7706,9 @@ const SHUFFLE_THEMES = {
   'AFP: Percentages':    ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
   'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
   'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
+  'AFP2: Percentages (Set 1)': ['MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ'],
+  'AFP2: Percentages (Set 2)': ['MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT'],
+  'AFP2: Percentages (Set 3)': ['MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE'],
 }
 
 function shuffleByGroup(qs) {
@@ -7418,6 +7796,7 @@ const TOPIC_GROUPS = {
   'AFP: Percentages':         ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
   'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
   'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
+  'AFP2: Percentages':          ['MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ','MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT','MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE'],
 }
 
 app.get('/api/topics', (req, res) => {
