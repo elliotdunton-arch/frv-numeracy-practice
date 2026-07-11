@@ -7703,15 +7703,20 @@ const SHUFFLE_THEMES = {
   'Share Portfolios':   ['IA','IB','IC','ID','IE','IF','IG','IH','II','IJ'],
   'Weekly Sales':       ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
   'AFP: Step Challenge': ['KA'],
-  'AFP: Ratios':         ['KB','KC','KD','KE','KF'],
-  'AFP: Unitary Method': ['KG','KH','KI','KJ','KK','KL','KM','KN'],
   'AFP: Speed & Time':   ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
-  'AFP: Percentages':    ['KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH'],
-  'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
-  'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
-  'AFP2: Percentages (Set 1)': ['MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ'],
-  'AFP2: Percentages (Set 2)': ['MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT'],
-  'AFP2: Percentages (Set 3)': ['MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE'],
+  // All AFP/AFP2 ratio, percentage, unitary & applied-maths groups merged into one
+  // bucket so the round-robin only pulls ONE group from this pool per round,
+  // preventing the test from being flooded with similar calculation questions.
+  'AFP & AFP2: Percentages & Ratios': [
+    'KB','KC','KD','KE','KF',                               // AFP Ratios
+    'KG','KH','KI','KJ','KK','KL','KM','KN',               // AFP Unitary Method
+    'KY','KZ','LA','LB','LC','LD','LE','LF','LG','LH',     // AFP Percentages
+    'LI','LJ','LK','LL','LM','LN','LO',                    // AFP Applied Maths Set 1
+    'LP','LQ','LR','LS','LT','LU','LV',                    // AFP Applied Maths Set 2
+    'MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ',     // AFP2 Percentages Set 1
+    'MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT',     // AFP2 Percentages Set 2
+    'MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE' // AFP2 Percentages Set 3
+  ],
 }
 
 function shuffleByGroup(qs) {
