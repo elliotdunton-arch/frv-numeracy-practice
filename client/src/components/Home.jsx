@@ -502,6 +502,9 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
   const [numSetsOpen, setNumSetsOpen] = useState(false)
   const [selectedNumSets, setSelectedNumSets] = useState(new Set())
   const [numSetList, setNumSetList] = useState([])
+  const [absSetsOpen, setAbsSetsOpen] = useState(false)
+  const [selectedAbsSets, setSelectedAbsSets] = useState(new Set())
+  const [absSetList, setAbsSetList] = useState([])
 
   useEffect(() => {
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
@@ -509,6 +512,7 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
     fetch('/api/mechanical-sets').then(r => r.json()).then(setMechSetList).catch(() => {})
     fetch('/api/literacy-sets').then(r => r.json()).then(setLitSetList).catch(() => {})
     fetch('/api/numeracy-sets').then(r => r.json()).then(setNumSetList).catch(() => {})
+    fetch('/api/abstract-sets').then(r => r.json()).then(setAbsSetList).catch(() => {})
   }, [])
 
   const handleTabClick = (tab) => {
@@ -552,6 +556,10 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
     .filter(s => selectedNumSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
 
+  const totalSelectedAbsSetQs = absSetList
+    .filter(s => selectedAbsSets.has(s.name))
+    .reduce((s, c) => s + c.questionCount, 0)
+
   const toggleMechSet = (name) => {
     setSelectedMechSets(prev => {
       const next = new Set(prev)
@@ -570,6 +578,14 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
 
   const toggleNumSet = (name) => {
     setSelectedNumSets(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
+
+  const toggleAbsSet = (name) => {
+    setSelectedAbsSets(prev => {
       const next = new Set(prev)
       if (next.has(name)) next.delete(name); else next.add(name)
       return next
@@ -623,7 +639,7 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
             className={`section-toggle-btn${activeTab === 'abstract' ? ' stb-active' : ''}`}
             onClick={() => handleTabClick('abstract')}
           >
-            Abstract (beta)
+            Abstract
           </button>
           <button
             className={`section-toggle-btn${activeTab === 'mechanical' ? ' stb-active' : ''}`}
@@ -923,6 +939,58 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
                     <button
                       className="btn-start"
                       onClick={() => onStart(null, [...selectedNumSets], 'sets')}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start (Random)'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'abstract' && absSetList.length > 0 && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${absSetsOpen ? ' tft-open' : ''}`}
+              onClick={() => { setAbsSetsOpen(o => !o); setSelectedAbsSets(new Set()) }}
+            >
+              <span className="tft-icon">{absSetsOpen ? '▾' : '▸'}</span>
+              Practice by Set
+            </button>
+
+            {absSetsOpen && absSetList.length > 0 && (
+              <div className="topic-panel">
+                <div className="topic-list">
+                  {absSetList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedAbsSets.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedAbsSets.has(name)}
+                        onChange={() => toggleAbsSet(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedAbsSets.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedAbsSets.size} set{selectedAbsSets.size !== 1 ? 's' : ''} · {totalSelectedAbsSetQs} questions available
+                    </span>
+                    <button
+                      className="btn-start-secondary"
+                      onClick={() => onStart(null, [...selectedAbsSets], 'sets', true)}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start In Order'}
+                    </button>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedAbsSets], 'sets')}
                       disabled={loading}
                     >
                       {loading ? 'Loading…' : 'Start (Random)'}

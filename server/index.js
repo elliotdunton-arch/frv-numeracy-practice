@@ -6860,6 +6860,228 @@ const questions = [
     answer: '39'
   },
 
+  // ── FRV Practice #1 ──────────────────────────────────────────────────────────
+  {
+    group: 'NFP1_01', set: 'FRV Practice #1', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_01.png' },
+    question: 'Tim is looking to make changes to his expenses in order to save more money.\n\nIf Tim implemented all of the changes shown above, how much money would he save per year?',
+    answer: '880',
+    method: '240 + 295 + 25 + 320 = 880'
+  },
+  {
+    group: 'NFP1_01', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_01.png' },
+    question: 'Which of the four changes provides the highest proportion of savings?',
+    options: ['A) Make own coffee instead of buying', 'B) Install more efficient heater', 'C) Install LEDs light globes', 'D) Change to pre-paid phone'],
+    answer: 'A) Make own coffee instead of buying',
+    method: 'Proportion = Savings / Initial investment × 100\nCoffee = (240 / 450) × 100 = 53%\nHeater = (295 / 2250) × 100 = 13%\nLEDs = (25 / 75) × 100 = 33%\nPhone = (320 / 650) × 100 = 49%\nHighest proportion: Coffee (A)'
+  },
+  {
+    group: 'NFP1_03', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_03.png' },
+    question: 'Monica is re-tiling her swimming pool.\n\nWhat is the total square metres (m²) of Side D of Monica\'s swimming pool? (answer to 2 decimal points)',
+    answer: '10.12',
+    method: 'Area = width × height\nHeight of pool = 2.2m, Side D width = 4.6m\n4.6 × 2.2 = 10.12m²'
+  },
+  {
+    group: 'NFP1_04', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    question: 'Monica is asked to re-tile the local swimming pool, which is 518 square metres (m²) in total. One box of tiles covers 14m² and each box contains 60 tiles.\n\nHow many tiles does Monica need to tile the pool?',
+    answer: '2220',
+    method: 'Total area = 518m²\n518 / 14 = 37 boxes\n37 × 60 = 2220 tiles'
+  },
+  {
+    group: 'NFP1_05', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_05.jpg' },
+    question: 'What proportion of students passed the geography test in 2016 if the pass mark was 60%?\n(round up or down to the nearest whole number)',
+    options: ['A) 64%', 'B) 32%', 'C) 48%', 'D) 24%', 'E) 34%'],
+    answer: 'B) 32%',
+    method: 'Total students in 2016: 4+4+18+7+5 = 38\nStudents scoring 60%+: 7+5 = 12\nProportion: (12/38) × 100 = 31.57%\nRounded = 32%'
+  },
+  {
+    group: 'NFP1_06', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { images: ['/images/numeracy/Num_FRV Practice 1_06a.jpg', '/images/numeracy/Num_FRV Practice 1_06b.jpg'] },
+    question: 'Ryan has purchased a new pool and needs to make sure it has the correct levels of chlorine.\n\nHow many extra litres of chlorine does Ryan need to ensure he has the right amount for his large-sized pool? (include decimal in answer)',
+    answer: '23.5',
+    method: 'Ryan currently has 6.5L of chlorine\nLarge-sized pool requires 30L\n30 - 6.5 = 23.5L'
+  },
+  {
+    group: 'NFP1_07', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { images: ['/images/numeracy/Num_FRV Practice 1_07a.jpg', '/images/numeracy/Num_FRV Practice 1_07b.png'] },
+    question: 'Jane works at the local swimming pool where the chlorine requirements are twice the amount of the largest residential pool. She has some left over 6L buckets full of chlorine.\n\nHow many extra litres of chlorine does Jane need for the local pool?',
+    answer: '42',
+    method: 'Jane has 8 full buckets × 6L = 48L\nLargest residential pool = 45L\nLocal pool = 45 × 2 = 90L\nExtra needed = 90 - 48 = 42L'
+  },
+  {
+    group: 'NFP1_08', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_08.png' },
+    question: 'Below is a spreadsheet of Sarah\'s hours she worked last week.\n\nWhat are the total number of paid hours Sarah worked during the week?',
+    options: ['A) 24', 'B) 24.5', 'C) 25', 'D) 25.5', 'E) 26', 'F) 26.5', 'G) 27', 'H) 27.5'],
+    answer: 'E) 26',
+    method: 'Mon: 7:30–12:30 = 5h, minus 30min lunch = 4.5h\nTue: 9:00–4:30 = 7.5h, minus 30min = 7h\nThu: 1:00–5:30 = 4.5h, minus 30min = 4h\nFri: 10:00–3:30 = 5.5h, minus 30min = 5h\nSun: 7:30–1:30 = 6h, minus 30min = 5.5h\nTotal = 4.5 + 7 + 4 + 5 + 5.5 = 26h'
+  },
+  {
+    group: 'NFP1_08', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_08.png' },
+    question: 'Which day did Sarah earn the most amount of money?',
+    options: ['A) Monday', 'B) Tuesday', 'C) Thursday', 'D) Friday', 'E) Sunday'],
+    answer: 'E) Sunday',
+    method: 'Weekday rate: $25/hr, Sunday rate: $34/hr\nTuesday (highest weekday hours): 7h × $25 = $175\nSunday: 5.5h × $34 = $187\nSunday earns the most'
+  },
+  {
+    group: 'NFP1_10', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'If a business increased its daily revenue by 40% to $1,600, what was their actual sales in dollars? (rounded up or down to nearest whole number)',
+    options: ['A) 64', 'B) 328', 'C) 640', 'D) 643', 'E) 1140', 'F) 1143', 'G) 1228'],
+    answer: 'F) 1143',
+    method: 'Let X = original revenue\nX + 0.4X = 1600\n1.4X = 1600\nX = 1600 / 1.4 = 1142.86\nRounded = 1143'
+  },
+  {
+    group: 'NFP1_11', set: 'FRV Practice #1', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_11.png' },
+    question: 'Victor is shopping for gardening pots and has come across two offers.\n\nHow much would it cost Victor to buy 2 pots from Pots Galore?',
+    answer: '37.5',
+    method: '1 pot at Pots Galore = $25\n2 pots = $25 × 2 = $50\nApply 25% discount: $50 × 25% = $12.50\n$50 - $12.50 = $37.50'
+  },
+  {
+    group: 'NFP1_11', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_11.png' },
+    question: 'Is it cheaper to buy 3 pots from Plant World compared to Pots Galore?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: '3 pots at Plant World: 3 × $19.95 = $59.85\n3 pots at Pots Galore:\n  2 pots with 25% off: $50 - $12.50 = $37.50\n  Add 3rd pot: $37.50 + $25 = $62.50\nPlant World ($59.85) < Pots Galore ($62.50) → TRUE'
+  },
+  {
+    group: 'NFP1_13', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Out of 36 books, a person has 14 more fiction books than non-fiction books.\n\nHow many fiction books does this person have?',
+    options: ['A) 20', 'B) 22', 'C) 24', 'D) 25', 'E) 26'],
+    answer: 'D) 25',
+    method: 'Let x = non-fiction books, fiction = x + 14\nx + (x + 14) = 36\n2x + 14 = 36\n2x = 22 → x = 11\nFiction = 11 + 14 = 25'
+  },
+  {
+    group: 'NFP1_14', set: 'FRV Practice #1', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_14.png' },
+    question: 'The graph below tracks the value of two different investment funds between the years 2000–2019.\n\nWhat was the highest value for VAS from 2000–2019?',
+    answer: '70000',
+    method: 'Each gridline = $2,000\nHighest VAS (solid line) value occurs in 2015\nValue = $70,000'
+  },
+  {
+    group: 'NFP1_14', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_14.png' },
+    question: 'True or False: VTS had greater overall returns compared to VAS from 2000–2019',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'VTS gains: 2019 ($64,000) - 2000 ($44,000) = $20,000\nVAS gains: 2019 ($58,000) - 2000 ($22,000) = $36,000\nVAS had larger gains → FALSE'
+  },
+  {
+    group: 'NFP1_14', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_14.png' },
+    question: 'True or False: The value of VAS decreased over 35% from 2008–2009',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'VAS in 2008 ≈ $54,000, VAS in 2009 ≈ $38,000\nDecrease = (54,000 - 38,000) / 54,000 × 100\n= 16,000 / 54,000 × 100 = 29.6%\n29.6% < 35% → FALSE'
+  },
+  {
+    group: 'NFP1_17', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A person is working three jobs to save for a holiday. At their first job, they earn $40,000 a year. At the second job, they earn 75% of what they earn at their first job per year. At the third job, they earn 20% of the second job per year.\n\nHow much money did the person earn from all 3 jobs after 6 months?',
+    options: ['A) $30,000', 'B) $38,000', 'C) $76,000', 'D) $78,000', 'E) $46,000'],
+    answer: 'B) $38,000',
+    method: 'First job = $40,000\nSecond job = $40,000 × 75% = $30,000\nThird job = $30,000 × 20% = $6,000\nTotal per year = $76,000\n6 months = $76,000 / 2 = $38,000'
+  },
+  {
+    group: 'NFP1_18', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A used car dealer buys import cars for $14,500 each and sells them for a 16% mark up. They spend $28,000 a month to run their business.\n\nHow much profit does the used car dealer make in a month if they import and sell 13 cars?',
+    options: ['A) 2320', 'B) 2160', 'C) 2460', 'D) 2360', 'E) 2220'],
+    answer: 'B) 2160',
+    method: 'Profit per car = $14,500 × 16% = $2,320\nProfit for 13 cars = $2,320 × 13 = $30,160\nMonthly profit after costs = $30,160 - $28,000 = $2,160'
+  },
+  {
+    group: 'NFP1_19', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_19.png' },
+    question: 'Alan uses his computer each day for an average of 4 hours. His computer is rated as 270 watts.\n\nHow many kWh does Alan\'s computer use a day on average? (answer to 2 decimal places)',
+    answer: '1.08',
+    method: 'kWh = Watts × Time (hours) / 1000\n= 270 × 4 / 1000\n= 1080 / 1000\n= 1.08 kWh'
+  },
+  {
+    group: 'NFP1_19', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_19.png' },
+    question: 'Alan is being charged 10 cents for every kWh used (electric rate = 0.1).\n\nHow much is Alan being charged to use his fridge for a month? (fridge kWh = 1.63) (round up or down to the nearest whole number)',
+    answer: '5',
+    method: 'Monthly kWh = 1.63 × 30 days = 48.9 kWh\nCost = 48.9 × 0.1 = $4.89\nRounded = $5'
+  },
+  {
+    group: 'NFP1_21', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Eric spent 20% from $400 on business expenses. He continued to spend a further 35%.\n\nHow much money did he have left from the original $400?',
+    options: ['A) 200', 'B) 208', 'C) 220', 'D) 248', 'E) 196'],
+    answer: 'B) 208',
+    method: 'First expense: 20% of $400 = $80\nRemaining: $400 - $80 = $320\nSecond expense: 35% of $320 = $112\nRemaining: $320 - $112 = $208'
+  },
+  {
+    group: 'NFP1_22', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_22.png' },
+    question: 'How many people are not religious in South Africa?',
+    options: ['A) 6,960,000', 'B) 6,964,800', 'C) 51,040,000', 'D) 51,075,200', 'E) Not enough info'],
+    answer: 'B) 6,964,800',
+    method: '12% are not religious\nTotal population = 58,040,000\n12% of 58,040,000 = 0.12 × 58,040,000 = 6,964,800'
+  },
+  {
+    group: 'NFP1_23', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_23.png' },
+    question: 'Sarah has been contracted to build a custom-sized plastic water tank.\n\nHow many square metres (m²) of plastic will Sarah need to build the water tank, including the outside and both ends? (answer to 1 decimal place)',
+    answer: '879.2',
+    method: 'Step 1 – Top & bottom circles:\n2 × π × r² = 2 × 3.14 × (5²) = 157m²\n\nStep 2 – Curved outside:\n2 × π × r × length = 2 × 3.14 × 5 × 23 = 722.2m²\n\nStep 3 – Total:\n157 + 722.2 = 879.2m²'
+  },
+  {
+    group: 'NFP1_23', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_23.png' },
+    question: 'What is the total volume of the water tank in cubic metres? (round up or down to nearest whole number)',
+    answer: '1806',
+    method: 'Radius = diameter / 2 = 10 / 2 = 5m\nVolume = π × r² × length\n= 3.14 × 25 × 23\n= 1806m³'
+  },
+  {
+    group: 'NFP1_25', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_25.png' },
+    question: 'Annie has inherited $100,000 which she intends to invest.\n\nIf Annie spends 60% of her inheritance and invests the rest, what is her expected return after 7 years?',
+    options: ['A) $40,000 - $50,000', 'B) $50,000 - $60,000', 'C) $60,000 - $70,000', 'D) $70,000 - $80,000', 'E) $80,000 - $90,000'],
+    answer: 'B) $50,000 - $60,000',
+    method: '$100,000 - 60% = $40,000 invested\nFrom chart: $40,000 after 7 years ≈ $54,000–$56,000\nAnswer range: $50,000–$60,000'
+  },
+  {
+    group: 'NFP1_25', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_25.png' },
+    question: 'True or False: The rates of return increased as more years pass',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'All lines in the chart increase over the years → TRUE'
+  },
+  {
+    group: 'NFP1_25', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_25.png' },
+    question: 'True or False: If Annie wanted the highest returns after 10 years, she should invest $80,000 from her inheritance straight away',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'She would achieve higher returns by investing all $100,000 from the start\n$80,000 is not the maximum available investment → FALSE'
+  },
+  {
+    group: 'NFP1_25', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_25.png' },
+    question: 'True or False: The difference in returns after 5 years from an initial investment of $60,000 compared to $80,000 is approximately $30,000',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'From chart: difference between $80,000 and $60,000 lines after 5 years ≈ $30,000 → TRUE'
+  },
+  {
+    group: 'NFP1_29', set: 'FRV Practice #1', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 1_29.png' },
+    question: 'The table below shows the total commuting times of six staff members travelling from home to work.\n\nWhat is the average time that the six employees took to travel to work? (Provide answer in minutes only)',
+    answer: '75',
+    method: 'Total time: 25 + 50 + 160 + 80 + 30 + 105 = 450 minutes\nAverage = 450 / 6 = 75 minutes'
+  },
+  {
+    group: 'NFP1_30', set: 'FRV Practice #1', type: 'number_input', category: 'Measurement',
+    question: 'Sonya cycles 30km to work each day. She usually cycles at an average speed of 40km/h. One day, she rides into heavy wind and her average speed is 20km/h.\n\nWhat is the difference in time between the two average speeds? (Provide answer in minutes only)',
+    answer: '45',
+    method: 'Normal day: Time = 30 / 40 = 0.75h = 45 minutes\nHeavy wind: Time = 30 / 20 = 1.5h = 90 minutes\nDifference = 90 - 45 = 45 minutes'
+  },
+
   // ── FRV Practice #2 ──────────────────────────────────────────────────────────
   {
     group: 'NFP2_01', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
@@ -7086,6 +7308,231 @@ const questions = [
     options: ['A) 38%', 'B) 40%', 'C) 48%', 'D) 60%', 'E) 68%'],
     answer: 'E) 68%',
     method: 'Start with $100\nAfter 20% increase: $100 × 1.20 = $120\nAfter 40% increase: $120 × 1.40 = $168\nOverall increase: (168−100)/100 × 100 = 68%'
+  },
+
+  // ── FRV Practice #3 ──────────────────────────────────────────────────────────
+  {
+    group: 'NFP3_01', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_01.png' },
+    question: 'Below is a table listing the manufacturer specifications of 5 different types of Solar Panels.\n\nHow much money did the manufacturer make if it sold all the Panel 1 Solar Panels excluding the defects over 12 hours?',
+    options: ['A) 3100', 'B) 3176', 'C) 3200', 'D) 3275', 'E) 3600'],
+    answer: 'D) 3275',
+    method: '12 hours = 720 minutes\n720 / 5 (min per panel) = 144 panels\n\nDefects: 9% × 144 = 12.96 → rounded up to 13\nPanels sold: 144 - 13 = 131\n\nRevenue: 131 × $25 = $3,275'
+  },
+  {
+    group: 'NFP3_02', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_02.png' },
+    question: 'Below is a chart showing the odds of different horses winning three separate races.\n\nAccording to the odds, which horse is expected to win Race 2?',
+    options: ['A) Firecracker\'s', 'B) Papa John\'s', 'C) J-Law\'s', 'D) Stonewashed', 'E) Bashful'],
+    answer: 'D) Stonewashed',
+    method: 'Shorter odds = higher chance of winning\nBest odds in Race 2: Stonewashed at 3-1\nAnswer: Stonewashed'
+  },
+  {
+    group: 'NFP3_02', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_02.png' },
+    question: 'According to the odds, which horse is expected to lose the most amount of races?',
+    options: ['A) Bashful', 'B) Firecracker\'s', 'C) Flight O\'', 'D) Long Wind', 'E) Colonels'],
+    answer: 'E) Colonels',
+    method: 'Longer odds = lower chance of winning = expected to lose most\nFlight O\' and Colonels have the worst odds\nColonels is expected to lose across 2 races → Colonels'
+  },
+  {
+    group: 'NFP3_04', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { images: ['/images/numeracy/Num_FRV Practice 3_04a.png', '/images/numeracy/Num_FRV Practice 3_04b.png'] },
+    question: 'Jun\'s job is to clean decks with the right ratio of cleaning product with water.\n\nJun has a 8L bucket with some Bioshield deck cleaning product already in it.\nHow many extra litres of cleaning solution does Jun need to make 157.5L?',
+    answer: '4',
+    method: '5L of Bioshield makes 105L total\nFor 157.5L: 157.5 / 105 = 1.5\nBioshield needed: 5 × 1.5 = 7.5L\nCurrent amount in bucket: 3.5L\nExtra needed: 7.5 - 3.5 = 4L'
+  },
+  {
+    group: 'NFP3_05', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { images: ['/images/numeracy/Num_FRV Practice 3_05a.png', '/images/numeracy/Num_FRV Practice 3_05b.png'] },
+    question: 'Jun has a 8L container of Rocket Cleaner. How much cleaning solution could he make from this container once added with water?',
+    answer: '288',
+    method: '2.5L of Rocket Cleaner makes 90L\nJun has 8L\n8 / 2.5 = 3.2\n3.2 × 90 = 288L'
+  },
+  {
+    group: 'NFP3_06', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_06.png' },
+    question: 'Jenny is looking for some new sunglasses and has come across two different ads.\n\nTrue or False: It would be cheaper to buy three pairs from the Eye House?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'Sunnyhut (3 pairs): (2 × $75) − 40% = $90, then +$75 = $165\nEyehouse (3 pairs): 3 × $49.95 = $149.85\n$149.85 < $165 → Eyehouse is cheaper → TRUE'
+  },
+  {
+    group: 'NFP3_06', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_06.png' },
+    question: 'True or False: It would be cheaper to buy four pairs from the Sunny-Hut?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'Eyehouse (4 pairs): 4 × $49.95 = $199.80\nSunnyhut (4 pairs): (4 × $75) − 40% = $300 − $120 = $180\n$180 < $199.80 → Sunnyhut is cheaper → TRUE'
+  },
+  {
+    group: 'NFP3_08', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_08.png' },
+    question: 'By what percentage did Dunlop Sedan tyre production rise between 2020 and 2021?\n(round up or down to the nearest whole number)',
+    options: ['A) 21%', 'B) 18%', 'C) 15%', 'D) 23%', 'E) 30%'],
+    answer: 'E) 30%',
+    method: 'Dunlop Sedan 2020 = 2.3 million, 2021 = 3.0 million\nIncrease = (3.0 - 2.3) / 2.3 × 100\n= 0.7 / 2.3 × 100 = 30.43%\nRounded = 30%'
+  },
+  {
+    group: 'NFP3_09', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_09.jpg' },
+    question: 'The table below shows different phone plans sold by the percentage of employees making up that sales team.\n\nHow many team members from team #3 were selling Silver Sales if there were 75 team members total in team #1?',
+    options: ['A) 5', 'B) 10', 'C) 15', 'D) 20', 'E) 25'],
+    answer: 'C) 15',
+    method: 'Team 1 = 75 people = 30% of total\nTotal employees = 75 / 0.30 = 250\n\nTeam 3 = 20% of 250 = 50 members\nSilver Sales in Team 3 = 30% × 50 = 15'
+  },
+  {
+    group: 'NFP3_10', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_10.png' },
+    question: 'Aqeel is looking to purchase a second hand car that is more economical to run.\n\nAqeel sells his old car for $1,500 and has $2,000 in savings.\nHow much money does he need to be able to purchase the Toyota Yaris?',
+    answer: '1495',
+    method: 'Toyota Yaris = $4,995\nFunds available: $1,500 + $2,000 = $3,500\nExtra needed: $4,995 - $3,500 = $1,495'
+  },
+  {
+    group: 'NFP3_10', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_10.png' },
+    question: 'If Aqeel purchases the Kia Rio, approximately how many years would the fuel savings take to cover the cost of the car?\n(round up or down to the nearest whole number)',
+    options: ['A) 9', 'B) 10', 'C) 11', 'D) 12', 'E) 13'],
+    answer: 'D) 12',
+    method: 'Kia Rio price = $4,200\nAnnual fuel savings = $365\n$4,200 / $365 = 11.5 years\nRounded up = 12 years'
+  },
+  {
+    group: 'NFP3_10', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_10.png' },
+    question: 'Which car would provide the lowest proportion of fuel savings?',
+    options: ['A) Toyota Yaris', 'B) Mazda 2', 'C) Hyundai Getz', 'D) Kia Rio'],
+    answer: 'B) Mazda 2',
+    method: 'Proportion = Annual savings / Car price × 100\nToyota = (495 / 4995) × 100 = 9.9%\nMazda 2 = (200 / 3600) × 100 = 5.6%\nHyundai = (370 / 6500) × 100 = 5.7%\nKia = (365 / 4200) × 100 = 8.7%\nLowest: Mazda 2 at 5.6%'
+  },
+  {
+    group: 'NFP3_13', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_13.png' },
+    question: 'Brian is planning to build a small hut made entirely from wood.\n\nWhat is the total square metres (m²) of all four walls? (answer to 2 decimal points)',
+    answer: '20.24',
+    method: 'Long walls: 3.2m × 2.2m = 7.04m², × 2 = 14.08m²\nShort walls: 1.4m × 2.2m = 3.08m², × 2 = 6.16m²\nTotal: 14.08 + 6.16 = 20.24m²'
+  },
+  {
+    group: 'NFP3_14', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    question: 'Brian wants to stain all of the wood in the hut. The total area to be stained is 140m². He will apply 2 coats of stain. The stain covers 8m² per litre. A tin of stain contains 6 litres.\n\nHow many tins of stain does he need altogether? (Round up or down to the nearest whole number.)',
+    answer: '6',
+    method: 'Total area with 2 coats: 140 × 2 = 280m²\nOne 6L tin covers: 6 × 8 = 48m²\n280 / 48 = 5.83\nRounded up = 6 tins'
+  },
+  {
+    group: 'NFP3_15', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A local library currently has 8,500 books in its collection. It plans to increase its collection by 12% over the next year. Additionally, due to a donation, the library will receive an extra 8% of its current books from another library\'s surplus.\n\nHow many books will the library have in total?',
+    options: ['A) 9180', 'B) 9520', 'C) 10580', 'D) 10281', 'E) 10200'],
+    answer: 'E) 10200',
+    method: 'Donation (8% of 8500): 8500 × 0.08 = 680 books\n12% increase: 8500 × 0.12 = 1020 books\nTotal: 8500 + 680 + 1020 = 10,200'
+  },
+  {
+    group: 'NFP3_16', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_16.png' },
+    question: 'The spinning wheel above is spun twice with both numbers added together for a total score.\n\nWhich of the totals below are most likely to occur?',
+    options: ['A) 4', 'B) 5', 'C) 7', 'D) 10', 'E) 12'],
+    answer: 'C) 7',
+    method: 'Count ways to make each total:\n7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 ways\nThis is the highest number of combinations\n7 is the most likely total'
+  },
+  {
+    group: 'NFP3_17', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_17.png' },
+    question: 'Meridith is comparing gas rates measured in millijoules (MJ) from two different companies.\n\nTrue or False: Blue Energy offers the cheaper price if a house uses 100MJ on a single summer\'s day?',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'ZAP summer: (1.95 × 100) + 70 = 265c\nBlue summer: (2.25 × 100) + 55 = 280c\nBlue (280c) > ZAP (265c) → Blue is NOT cheaper → FALSE'
+  },
+  {
+    group: 'NFP3_17', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_17.png' },
+    question: 'True or False: Zap Energy offers the cheaper price if a house uses 100MJ on a single winter\'s day?',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'ZAP winter: (2.05 × 100) + 70 = 275c\nBlue winter: (2.15 × 100) + 55 = 270c\nBlue (270c) < ZAP (275c) → ZAP is NOT cheaper → FALSE\n\nNote: the answer explanation shows 255c for ZAP — this is a typo; the correct value is 275c.'
+  },
+  {
+    group: 'NFP3_17', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_17.png' },
+    question: 'Meridith decided to switch her gas to Blue Energy. She uses on average 185MJ per day during summer.\n\nHow much can she expect to pay after 30 days? (answer in dollars and cents, round cents to nearest coin)',
+    answer: '131.20',
+    method: 'First 100MJ: 2.25 × 100 = 225c\nRemaining 85MJ: 1.85 × 85 = 157.25c\nService charge: 55c\nDay total: 225 + 157.25 + 55 = 437.25c\n30 days: 437.25 × 30 = 13,117.5c\nConvert: 13,117.5 / 100 = $131.175\nRounded = $131.20'
+  },
+  {
+    group: 'NFP3_20', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'A jeweller sold 26 pieces in July for a decrease of 20% compared to June.\n\nHow many pieces did the jeweller sell in June? (round up or down to the nearest whole number)',
+    options: ['A) 30', 'B) 31', 'C) 32', 'D) 33', 'E) 34', 'F) 35'],
+    answer: 'D) 33',
+    method: 'July = 80% of June (20% decrease)\n0.8 × June = 26\nJune = 26 / 0.8 = 32.5\nRounded up = 33'
+  },
+  {
+    group: 'NFP3_21', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_21.png' },
+    question: 'Ryan is making some shapes out of card board.\n\nWhat is the total volume of the triangular prism?',
+    answer: '75',
+    method: 'Volume of triangular prism = (base × height × length) / 2\n= (3 × 4 × 12.5) / 2\n= 150 / 2 = 75'
+  },
+  {
+    group: 'NFP3_21', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_21.png' },
+    question: 'Ryan has made some small boxes that measure 25cm³. He plans to place these inside a rectangle prism that has the same dimensions as the triangle prism.\n\nHow many small boxes can he fit inside the rectangle prism?',
+    answer: '6',
+    method: 'Volume of rectangle prism (same base dimensions):\n3 × 12.5 × 4 = 150cm³\n150 / 25 = 6 boxes'
+  },
+  {
+    group: 'NFP3_23', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_23.png' },
+    question: 'The graph below compares smoking and lung cancer rates between males and females in the UK from 1950.\n\nWhat percentage of males smoked in 1970?',
+    answer: '55',
+    method: 'Each gridline = 2.5%\n1970 male smokers = 55%'
+  },
+  {
+    group: 'NFP3_23', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_23.png' },
+    question: 'True or False: The smoking rates between females and males were approximately equal in 2002?',
+    options: ['A) True', 'B) False'],
+    answer: 'A) True',
+    method: 'The two lines (male and female smoking rates) intersect in the year 2002 → TRUE'
+  },
+  {
+    group: 'NFP3_23', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_23.png' },
+    question: 'True or False: Lung cancer rates for females increased by approximately 12.5% from 1972 to 2007',
+    options: ['A) True', 'B) False'],
+    answer: 'B) False',
+    method: 'Female lung cancer 1972 = 12.5%\nFemale lung cancer 2007 = 20%\nActual increase = 20% - 12.5% = 7.5%\n7.5% ≠ 12.5% → FALSE'
+  },
+  {
+    group: 'NFP3_26', set: 'FRV Practice #3', type: 'multiple_choice', category: 'Number and Algebra',
+    question: 'Disney currently has 1,740 programs and their total amount increased by 15%. If Netflix has 1/3 more programs than Disney, how many more programs will Netflix have compared to Disney?',
+    options: ['A) 667', 'B) 895', 'C) 670', 'D) 333', 'E) 580'],
+    answer: 'A) 667',
+    method: 'Disney after 15% increase: 1740 × 1.15 = 2,001\nNetflix (1/3 more): 2001 × 4/3 = 2,668\nDifference: 2,668 - 2,001 = 667'
+  },
+  {
+    group: 'NFP3_27', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 3_27a.png', '/images/numeracy/Num_FRV Practice 3_27b.png'] },
+    question: 'Below is a graph showing the median value of homes from different capital cities in Australia, and a table of interest rates from different banks.\n\nWhat is the median value of a home in Sydney?',
+    answer: '775000',
+    method: 'Each gridline = $10,000\nSydney median home value = $775,000'
+  },
+  {
+    group: 'NFP3_27', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { images: ['/images/numeracy/Num_FRV Practice 3_27a.png', '/images/numeracy/Num_FRV Practice 3_27b.png'] },
+    question: 'Ricky decides to buy a house at the median value in Hobart and has saved a 20% deposit.\n\nHow much interest would he pay for the first year from Bank #3?',
+    answer: '13350',
+    method: 'Hobart median = $445,000\n20% deposit: $445,000 × 0.20 = $89,000\nLoan amount: $445,000 - $89,000 = $356,000\nBank #3 interest rate = 3.75%\nYear 1 interest: $356,000 × 0.0375 = $13,350'
+  },
+  {
+    group: 'NFP3_29', set: 'FRV Practice #3', type: 'number_input', category: 'Tables & Graphs',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_29.png' },
+    question: 'Below is a table of flight times for a number of different destinations offered by airlines.\n\nWhat is the average time for all three Jetty flights? (Provide answer in minutes only)',
+    answer: '175',
+    method: 'JW213: 3h 35min = 215 min\nJW387: 3h 45min = 225 min\nJW116: 1h 25min = 85 min\nTotal: 215 + 225 + 85 = 525 min\nAverage: 525 / 3 = 175 min'
+  },
+  {
+    group: 'NFP3_29', set: 'FRV Practice #3', type: 'number_input', category: 'Measurement',
+    context: { image: '/images/numeracy/Num_FRV Practice 3_29.png' },
+    question: 'On the return flight from Wellington to Adelaide, flight AA899 takes 45 minutes longer. If the average cruise speed is 696km/hr to Wellington, what is the average cruise speed back to Adelaide? (Provide answer to the nearest km/hr.)',
+    answer: '621',
+    method: 'Distance = Speed × Time\n6h 10min = 6 + (10/60) = 6.167h\nDistance = 696 × 6.167 = 4,294 km\n\nReturn: 6h 10min + 45min = 6h 55min = 6 + (55/60) = 6.917h\nSpeed = 4,294 / 6.917 = 621 km/h'
   },
 
 ]
@@ -7946,10 +8393,18 @@ const SHUFFLE_THEMES = {
     'MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE' // AFP2 Percentages Set 3
   ],
   'Numeracy: FRV Practice': [
+    'NFP1_01','NFP1_03','NFP1_04','NFP1_05','NFP1_06','NFP1_07',
+    'NFP1_08','NFP1_10','NFP1_11','NFP1_13','NFP1_14','NFP1_17',
+    'NFP1_18','NFP1_19','NFP1_21','NFP1_22','NFP1_23','NFP1_25',
+    'NFP1_29','NFP1_30',
     'NFP2_01','NFP2_03','NFP2_04','NFP2_05','NFP2_07','NFP2_08',
     'NFP2_09','NFP2_11','NFP2_14','NFP2_15','NFP2_16','NFP2_18',
     'NFP2_22','NFP2_24','NFP2_25','NFP2_26','NFP2_27','NFP2_28',
-    'NFP2_29','NFP2_30'
+    'NFP2_29','NFP2_30',
+    'NFP3_01','NFP3_02','NFP3_04','NFP3_05','NFP3_06','NFP3_08',
+    'NFP3_09','NFP3_10','NFP3_13','NFP3_14','NFP3_15','NFP3_16',
+    'NFP3_17','NFP3_20','NFP3_21','NFP3_23','NFP3_26','NFP3_27',
+    'NFP3_29'
   ],
 }
 
@@ -8039,7 +8494,9 @@ const TOPIC_GROUPS = {
   'AFP: Applied Maths (Set 1)': ['LI','LJ','LK','LL','LM','LN','LO'],
   'AFP: Applied Maths (Set 2)': ['LP','LQ','LR','LS','LT','LU','LV'],
   'AFP2: Percentages':          ['MA','MB','MC','MD','ME','MF','MG','MH','MI','MJ','MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT','MU','MV','MW','MX','MY','MZ','NA','NB','NC','ND','NE'],
+  'FRV Practice #1':            ['NFP1_01','NFP1_03','NFP1_04','NFP1_05','NFP1_06','NFP1_07','NFP1_08','NFP1_10','NFP1_11','NFP1_13','NFP1_14','NFP1_17','NFP1_18','NFP1_19','NFP1_21','NFP1_22','NFP1_23','NFP1_25','NFP1_29','NFP1_30'],
   'FRV Practice #2':            ['NFP2_01','NFP2_03','NFP2_04','NFP2_05','NFP2_07','NFP2_08','NFP2_09','NFP2_11','NFP2_14','NFP2_15','NFP2_16','NFP2_18','NFP2_22','NFP2_24','NFP2_25','NFP2_26','NFP2_27','NFP2_28','NFP2_29','NFP2_30'],
+  'FRV Practice #3':            ['NFP3_01','NFP3_02','NFP3_04','NFP3_05','NFP3_06','NFP3_08','NFP3_09','NFP3_10','NFP3_13','NFP3_14','NFP3_15','NFP3_16','NFP3_17','NFP3_20','NFP3_21','NFP3_23','NFP3_26','NFP3_27','NFP3_29'],
 }
 
 app.get('/api/topics', (req, res) => {
@@ -12232,13 +12689,529 @@ const abstractQuestions = [
     answer: 'D',
     method: 'The interior of the sun\'s circle darkens progressively each step: white → very light grey → medium grey → dark grey → solid black. Option D shows the fully black (solid) interior, which is the next step in the sequence.'
   },
+
+  // ── FRV Abstract Practice #2 ─────────────────────────────────────────────
+  {
+    group: 'ARP2_01', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q01.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The square is moving clockwise one half step each time.\nThe triangle is moving diagonally from bottom left to top right and back again.\nThe star is moving clockwise staying in the centre position.\nIn the second figure, the square covers the star.\nThere are 3 shades of background colour from light to dark in order.'
+  },
+  {
+    group: 'ARP2_02', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q02.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'The figure is rotating 45 degrees clockwise each time.\nThe grey section is moving one place anti-clockwise each time.\nThe black section is moving one place clockwise each time, overlapping the grey section.\nThe dots are moving one place clockwise each time.\nThe \'T\' inside the circle is rotating 45 degrees clockwise each time.'
+  },
+  {
+    group: 'ARP2_03', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q03.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Each figure is rotating 90 degrees counter-clockwise each time.\nAs the figure rotates, the patterns/fill of each figure are moving across one place each time.'
+  },
+  {
+    group: 'ARP2_04', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q04.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'Star shape with black diamond is rotating 30 degrees anti-clockwise each time.\nGrey circle is moving one position along the inside of the star, anti-clockwise each time.'
+  },
+  {
+    group: 'ARP2_05', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q05.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Black section is moving clockwise and the grey section is moving anti-clockwise.\nBlack section covers grey section when overlapping.\nCircle with skinny outline moves clockwise and covers circle with thick outline when overlapping, which is moving anti-clockwise.'
+  },
+  {
+    group: 'ARP2_06', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q06.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Arrow rotating 40 degrees anti-clockwise each time.\nShort grey line rotates 40 degrees as well but swaps sides on the circle each time.\nLines within circle rotate 45 degrees anti-clockwise.'
+  },
+  {
+    group: 'ARP2_07', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q07.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Central pentagon shape is reflecting 180 degrees, rotating 90 degrees clockwise, reflecting 180 degrees and then rotating back to start position.\nAs central pentagon rotates, all grey shapes shift one position clockwise around the pentagon.\nThe grey triangle is always facing up.'
+  },
+  {
+    group: 'ARP2_08', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q08.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Pentagon shape is rotating 30 degrees each time anti-clockwise.\nGrey half circle is swapping sides within the same circle but also moving ahead one circle clockwise each time (overlapped by black in the 4th figure).\nBlack half circle is swapping sides within the same circle.\nDots are changing sides within each circle.'
+  },
+  {
+    group: 'ARP2_09', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q09.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: ''
+  },
+  {
+    group: 'ARP2_10', set: 'FRV Practice #2', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q10.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'The figure is rotating 45 degrees anti-clockwise each time.'
+  },
+  {
+    group: 'ARP2_11', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q11.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'The diagonal lines have a total of 5 positions. B is in the central position.'
+  },
+  {
+    group: 'ARP2_12', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q12.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'A and E begin and end the sequence. D is in the middle after rotating either clockwise or anti-clockwise.'
+  },
+  {
+    group: 'ARP2_13', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q13.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'Across the 5 figures, the cross is moving diagonally from top left to bottom right and back again.\nThe star is moving a half step around the figure each time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q13 answer.png'
+  },
+  {
+    group: 'ARP2_14', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q14.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'Correct order is shown in the answer image.\nGrey section is moving one section each time.\nCircle is moving one place each time and is covered by the grey section.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q14 answer.jpg'
+  },
+  {
+    group: 'ARP2_15', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q15.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'The entire shape is rotating clockwise 45 degrees each time.\nThe small vertical line (with circle at end) on the circle is moving into the circle every second rotation.\nCenter circle is changing colour from black to white every second time.\nEnd of arrow changes every second time (center line is removed).',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q15 answer.jpg'
+  },
+  {
+    group: 'ARP2_16', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q16.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'When placed in order, two matching shapes are diagonally opposite to each other.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q16 answer.jpg'
+  },
+  {
+    group: 'ARP2_17', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q17.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'C',
+    method: 'Black section is moving only along the top. It is in the top and top-left position twice, so the top-right position is in the centre.\nThe dots are located in each position once (and are hidden in A behind the black).\nBecause there is no middle position for the dots by themselves, the black section indicates the middle position.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q17 answer.png'
+  },
+  {
+    group: 'ARP2_18', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q18.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'The number of white squares is increasing from 1 to 5.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q18 answer.jpg'
+  },
+  {
+    group: 'ARP2_19', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q19.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'Correct order is determined by the grey section.\nThe upside-down \'T\' has 5 possible positions so the order cannot be determined from it as it could start from any of them.\nBlack dot is covered by the grey section when overlapping.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q19 answer.jpg'
+  },
+  {
+    group: 'ARP2_20', set: 'FRV Practice #2', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q20.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'Grey section is moving two sections each time.\nDotted circles moving one section each time.\nCentral diagonal direction changing 180 degrees each time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q20 answer.png'
+  },
+  {
+    group: 'ARP2_21', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q21.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'The top figure is the same as the bottom, rotated or reflected 180 degrees.\nThe shape on the bottom left is the same as the top right.\nThe missing figure is the top left shape rotated/reflected.'
+  },
+  {
+    group: 'ARP2_22', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q22.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'Total number of shapes — top row: 3, 6, 12. Middle row: 1, 5, 25. Bottom row: 4, 8, 16.\nC is ruled out because it has dots and not lines.'
+  },
+  {
+    group: 'ARP2_23', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q23.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'The sequence goes by rows, not columns.\nC and D can be ruled out because the grey tone is darker.\nB can be ruled out because it doesn\'t have wavy lines.'
+  },
+  {
+    group: 'ARP2_24', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q24.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'The top two rows have their own rules which don\'t affect the bottom row.\nOn the bottom row, the entire figure is rotating 90 degrees clockwise each time.\nThe colours and patterns within the inner 4 arrows shift upwards one place per rotation.'
+  },
+  {
+    group: 'ARP2_25', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q25.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The shapes within each figure are rotating.\nIn the centre row, they are rotating 90 degrees anti-clockwise.'
+  },
+  {
+    group: 'ARP2_26', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q26.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'There are 9 large squares with wider outlines.\nAs the diagonal black lines cross a large vertical grey line, their position shifts upwards slightly before continuing.\nAs the diagonal lines cross a large horizontal grey line, they continue without any shift.',
+    methodImage: '/images/abstract/FRV Practice Abstract 02_Q26 answer.jpg'
+  },
+  {
+    group: 'ARP2_27', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q27.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The entire sequence contains: 4 black crosses, 4 black squares and 4 grey squares.'
+  },
+  {
+    group: 'ARP2_28', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q28.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'Each number is increasing by 19.\nBoth dotted lines match up between all squares.\nGrey circle only appears on grey line.'
+  },
+  {
+    group: 'ARP2_29', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q29.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The series of rectangles is connected through all 9 figures.\nThe order of rectangle patterns is (starting from top-left square): grey, white, black, diagonal lines, vertical lines, white. This pattern repeats continuously.'
+  },
+  {
+    group: 'ARP2_30', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 02_Q30.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'Each figure is rotating 45 degrees anti-clockwise.'
+  },
+  // ── Abstract FRV Practice #1 ──
+  {
+    group: 'ARP1_01', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q01.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The vertical line in the first figure rotates 90 degrees clockwise each time.\nThe diagonal line in the first figure rotates 45 degrees clockwise each time.'
+  },
+  {
+    group: 'ARP1_02', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q02.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Square is moving clockwise a half-step each time.\nArrow is moving a half-step each time only along the bottom.\nCircle is moving clockwise, corner to corner and overlaps the square.'
+  },
+  {
+    group: 'ARP1_03', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q03.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The arrow shape with the square rotates 35 degrees anti-clockwise each time.\nThe short grey line rotates 35 degrees as well but swaps sides on the circle each time.\nD is not the answer as the arrow has rotated more than 35 degrees.'
+  },
+  {
+    group: 'ARP1_04', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q04.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The entire figure is rotating 45 degrees anti-clockwise each time.'
+  },
+  {
+    group: 'ARP1_05', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q05.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'Both black and grey sections are moving anti-clockwise one position each time.\nCircle with thick outline moves diagonally each time and overlaps the other circle.\nCircle with thin outline moves clockwise.'
+  },
+  {
+    group: 'ARP1_06', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q06.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: ''
+  },
+  {
+    group: 'ARP1_07', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q07.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'Star shape with grey diamond is rotating 45 degrees clockwise each time.\nBlack circle is moving one position, along the inside of the star, clockwise each time.'
+  },
+  {
+    group: 'ARP1_08', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q08.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The entire figure is rotating 30 degrees clockwise each time.\nA is not the answer as the small square and triangle have swapped positions.\nB is not the answer as the small square hasn\'t rotated.\nC is not the answer as the pentagon has rotated 90 degrees instead of 30.'
+  },
+  {
+    group: 'ARP1_09', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q09.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The figure is rotating 90 degrees anti-clockwise each time.\nThe grey section is moving two places clockwise each time.\nThe dots are moving one place anti-clockwise each time.\nThe \'T\' inside the circle is rotating 90 degrees each time anti-clockwise.'
+  },
+  {
+    group: 'ARP1_10', set: 'FRV Practice #1', type: 'image_mc', category: 'Next in Sequence',
+    question: 'Next in sequence: Which box comes next in the sequence below?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q10.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Pentagon shape is rotating 45 degrees each time anti-clockwise.\nGrey half circle is swapping sides within the same circle.\nLines are changing sides within each circle but also moving ahead one place anti-clockwise each time.'
+  },
+  {
+    group: 'ARP1_11', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q11.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'C',
+    method: 'With series like these, with 5 figures shown and two are the same, the rule is, you always start and end the sequence with these duplicated shapes.\nThe order is B, A, C, D, E or E, D, C, A, B.'
+  },
+  {
+    group: 'ARP1_12', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q12.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'Because figures C and E are the same, we start and end the sequence with them and then rotate the figure either clockwise or anti-clockwise.\nOrder is C, D, A, B, E.'
+  },
+  {
+    group: 'ARP1_13', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q13.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'The entire shape is rotating anti-clockwise 30 degrees each time.\nThe small vertical line on the circle is reflecting/swapping positions along the central circle every time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q13 answer.jpg'
+  },
+  {
+    group: 'ARP1_14', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q14.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'The black circle moves from the inside to the outside. The order is E, C, D, B, A.\nThere are no patterns to the grey circles and the locations of the circles.'
+  },
+  {
+    group: 'ARP1_15', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q15.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'E',
+    method: 'Grey section is moving one section each time.\nCircle is moving two places clockwise each time (or four places anti-clockwise) and is covered by the grey section.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q15 answer.jpg'
+  },
+  {
+    group: 'ARP1_16', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q16.png',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'D',
+    method: 'Grey section is moving one section anti-clockwise each time.\nDotted circles are moving one section anti-clockwise each time.\nCentral diagonal lines face same direction.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q16 answer.png'
+  },
+  {
+    group: 'ARP1_17', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q17.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'E',
+    method: 'When placed in order, two matching shapes are diagonally opposite to each other.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q17 answer.jpg'
+  },
+  {
+    group: 'ARP1_18', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q18.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'C',
+    method: 'The number of grey circles is increasing from 1 to 5.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q18 answer.jpg'
+  },
+  {
+    group: 'ARP1_19', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which figure comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q19.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'A',
+    method: 'The order is worked out by the position of the black circle as the grey section and upside down \'T\' has 5 possible positions, so any one of them can be the start point.\nHowever the black circle can only start at the bottom and its position is moving up to the top and then back down to the bottom one place at a time.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q19 answer.jpg'
+  },
+  {
+    group: 'ARP1_20', set: 'FRV Practice #1', type: 'image_mc', category: 'Middle of Sequence',
+    question: 'Middle of Sequence: Which box comes in the middle if the five shapes in the row are placed in logical order?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q20.jpg',
+    options: ['A', 'B', 'C', 'D', 'E'],
+    answer: 'B',
+    method: 'Grey section only has two positions, bottom left and top left. Because there are 3 bottom left and only two top left grey rectangles, we can assume that the bottom left will be the middle.\nLines move from top position, to bottom right, bottom left and back to top. We see the lines are at the top twice, bottom right twice and bottom left once. Because the lines are at bottom left once, and this aligns with the grey being bottom left, we can conclude B is the answer.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q20 answer.jpg'
+  },
+  {
+    group: 'ARP1_21', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q21.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'The pattern is found by looking at the vertical columns, not horizontal rows.\nFirst column pattern is: diamonds increases from 1, 5, 10.\nThe second column is: 0, 1, 5.\nThe third column is: ?, 10, 20.\nB is the answer because it fits the observed pattern: 0, 1, 5, 10, 20.'
+  },
+  {
+    group: 'ARP1_22', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q22.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'All arrows within each figure are rotating clockwise 90 degrees each time along each row.'
+  },
+  {
+    group: 'ARP1_23', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q23.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'B',
+    method: 'Each number is increasing by 17.\nBoth dotted lines match up between all squares.'
+  },
+  {
+    group: 'ARP1_24', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q24.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'For the circle figures, the order of patterns (white, grey, diagonal lines, horizontal lines and grey) are moving down one segment each time.'
+  },
+  {
+    group: 'ARP1_25', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q25.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'D',
+    method: 'The pattern here has nothing to do with the pentagon shapes and the coloured shapes within the pentagons. Rather, the pattern is based on what is happening in the background.\nThe background pattern across each row from left to right is: lines, dots, wave, blank.'
+  },
+  {
+    group: 'ARP1_26', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q26.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'Each shape is rotated 90 degrees anti-clockwise.\nB is not the answer because the line on the inside of the star is not the correct length.'
+  },
+  {
+    group: 'ARP1_27', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q27.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'All of the shapes in each of the figures on the bottom row are rotating clockwise 90 degrees.'
+  },
+  {
+    group: 'ARP1_28', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q28.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'C',
+    method: 'The entire sequence across all 9 squares contains: 3 black crosses, 3 black squares and 3 grey squares.'
+  },
+  {
+    group: 'ARP1_29', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q29.png',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'The series of rectangles connected through all 9 figures.\nThe order of the patterns on the rectangles is (starting from top left square): diagonal lines, grey, dots, black, and then white. This pattern repeats continuously.'
+  },
+  {
+    group: 'ARP1_30', set: 'FRV Practice #1', type: 'image_mc', category: 'Complete the Pattern',
+    question: 'Complete the pattern: Which figure on the right best fits the missing square?',
+    questionImage: '/images/abstract/FRV Practice Abstract 01_Q30.jpg',
+    options: ['A', 'B', 'C', 'D'],
+    answer: 'A',
+    method: 'There are 9 large squares with thick outlines.\nAs the thin diagonal black lines cross a large vertical grey line, their position shifts upwards slightly before continuing.\nAs the thin diagonal lines cross a large horizontal grey line, they continue without any shift.',
+    methodImage: '/images/abstract/FRV Practice Abstract 01_Q30 answer.jpg'
+  },
 ]
 
 abstractQuestions.forEach((q, i) => { q._id = `abs_${i}` })
 
+app.get('/api/abstract-sets', (req, res) => {
+  const counts = {}
+  abstractQuestions.forEach(q => {
+    if (q.set) counts[q.set] = (counts[q.set] || 0) + 1
+  })
+  res.json(Object.entries(counts).sort().map(([name, questionCount]) => ({ name, questionCount })))
+})
+
 app.get('/api/abstract-questions', (req, res) => {
-  const shuffled = [...abstractQuestions].sort(() => Math.random() - 0.5)
-  const final = shuffled.map((q) => ({
+  const { sets, ordered } = req.query
+  let pool = abstractQuestions
+  if (sets) {
+    const setsFilter = new Set(sets.split(',').map(s => s.trim()))
+    pool = abstractQuestions.filter(q => q.set && setsFilter.has(q.set))
+  }
+  const sorted = ordered === 'true'
+    ? [...pool]
+    : [...pool].sort(() => Math.random() - 0.5)
+  const final = sorted.map((q) => ({
     id: q._id,
     type: q.type,
     category: q.category,
@@ -12248,6 +13221,7 @@ app.get('/api/abstract-questions', (req, res) => {
     options: q.options || null,
     answer: q.answer,
     method: q.method || null,
+    methodImage: q.methodImage || null,
   }))
   const customCount = req.query.count ? parseInt(req.query.count) : null
   res.json(customCount ? final.slice(0, customCount) : final)

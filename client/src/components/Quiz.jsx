@@ -158,6 +158,29 @@ export default function Quiz({ questions, onSubmit, totalTime, section }) {
         </>
       )
     }
+    if (q.type === 'image_mc') {
+      return (
+        <>
+          {q.questionImage && (
+            <div className="img-question-wrap">
+              <img src={q.questionImage} alt="Pattern question" className="img-question-main" />
+            </div>
+          )}
+          <div className="mc-radio-list">
+            {(q.options || []).map(opt => (
+              <button
+                key={opt}
+                className={`mc-radio-opt${answers[q.id] === opt ? ' mro-selected' : ''}`}
+                onClick={() => handleAnswer(q.id, opt)}
+              >
+                <span className="mro-circle" />
+                <span className="mro-text">{opt}</span>
+              </button>
+            ))}
+          </div>
+        </>
+      )
+    }
     if (q.inputType === 'time_hm') {
       const stored = answers[q.id] || ':'
       const [hStr, mStr] = stored.split(':')

@@ -436,6 +436,25 @@ export default function Results({ questions, answers, startTime, endTime, timeEx
                         )
                       })}
                     </div>
+                  ) : q.type === 'image_mc' ? (
+                    <div>
+                      {q.questionImage && (
+                        <img src={q.questionImage} alt="Pattern" className="review-question-img" style={{ display: 'block', margin: '0 auto 12px', maxWidth: '100%' }} />
+                      )}
+                      <div className="review-options-list">
+                        {(q.options || []).map((opt, i) => {
+                          const isCorrect = opt === q.answer
+                          const isSelected = opt === userAns
+                          const cls = isCorrect ? 'review-option--correct' : isSelected ? 'review-option--wrong-pick' : ''
+                          return (
+                            <div key={i} className={`review-option ${cls}`}>
+                              <span className="review-option-icon">{isCorrect ? '✓' : isSelected ? '✗' : ''}</span>
+                              {opt}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
                   ) : q.type === 'image_choice' ? (
                     <div className="img-choice-review">
                       {q.questionImage && (
