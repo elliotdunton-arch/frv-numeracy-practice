@@ -6012,13 +6012,13 @@ const questions = [
   },
   {
     group: 'KT', type: 'number_input', category: 'Number and Algebra',
-    question: "Speed Distance Time — Trump's Journey: During a car journey, Trump travels at an average speed of 120 km/h for 3 hours 30 minutes. Find the distance travelled in km.",
+    question: "Speed Distance Time — Alex's Journey: During a car journey, Alex travels at an average speed of 120 km/h for 3 hours 30 minutes. Find the distance travelled in km.",
     unit: 'km', answer: '420',
     method: '3h 30min = 3.5 hours\nDistance = 120 × 3.5 = 420 km'
   },
   {
     group: 'KU', type: 'number_input', category: 'Number and Algebra',
-    question: "Speed Distance Time — Obama's Ride: During a motorcycle ride, Obama travels at an average speed of 84 km/h for 2 hours and 15 minutes. Find the distance travelled in km.",
+    question: 'Speed Distance Time — Motorcycle Ride: During a motorcycle ride, a rider travels at an average speed of 84 km/h for 2 hours and 15 minutes. Find the distance travelled in km.',
     unit: 'km', answer: '189',
     method: '2h 15min = 2.25 hours\nDistance = 84 × 2.25 = 189 km'
   },
@@ -6070,7 +6070,7 @@ const questions = [
   // ── AFP: Percentages ─────────────────────────────────────────────────────────
   {
     group: 'KY', type: 'number_input', category: 'Number and Algebra',
-    question: 'Percentages — Insurance Claims: Roger works for an insurance company and received 180 claims last month. If 15% were rejected, how many claims were rejected?',
+    question: 'Percentages — Insurance Claims: An insurance company processed 180 claims last month. If 15% of those claims were rejected, how many claims were rejected?',
     unit: 'claims', answer: '27',
     method: '15% of 180 = 0.15 × 180 = 27 claims'
   },
@@ -6131,7 +6131,7 @@ const questions = [
   },
   {
     group: 'LD', type: 'number_input', category: 'Number and Algebra',
-    question: 'Percentages — Retail Jacket: A retail store pays $80 wholesale for a jacket. What should he sell it for to make a 20% profit?',
+    question: 'Percentages — Retail Jacket: A retail store pays $80 wholesale for a jacket. What price should the store sell it for to make a 20% profit?',
     unit: '$', answer: '96',
     method: 'Profit: 20% of $80 = $16\nSale price: $80 + $16 = $96'
   },
