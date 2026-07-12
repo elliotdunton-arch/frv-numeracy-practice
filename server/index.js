@@ -14704,8 +14704,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_15.jpg',
     question: 'If the plate on the far right is rotating counter-clockwise, which ball will move first and in what direction?',
     options: ['A) A will move to the left', 'B) A will move to the right', 'C) B will move to the left', 'D) B will move to the right'],
-    answer: 'D) B will move to the right',
-    method: 'The counter-clockwise rotation of the far-right plate transmits force through the seesaw chain. The sequence of lever pivots causes ball B to be displaced first, moving to the right.'
+    answer: 'A) A will move to the left',
+    method: 'The counter-clockwise rotation of the far-right plate (turning upward on the right side) pushes the right end of the seesaw up, lifting ball A. As the seesaw tilts, ball A is launched to the left — it moves first, in the leftward direction.'
   },
   { group: 'MFP16', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Motion & Forces',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_16.png',
@@ -14732,8 +14732,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_19.png',
     question: 'A person sees a fish from the shore. Which letter shows the actual location of the fish?',
     options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) Cannot tell'],
-    answer: 'D) D',
-    method: 'Refraction bends light as it travels from water (denser) into air (less dense). The observer\'s brain traces light in a straight line, making the fish appear shallower and closer to shore than it really is. The actual fish is deeper and further from the observer — position D.'
+    answer: 'B) B',
+    method: 'Refraction bends light as it travels from water (denser) into air (less dense). The observer\'s brain traces the light ray in a straight line, making the fish appear shallower than it really is. The actual fish is deeper than the apparent image — position B.'
   },
   { group: 'MFP20', set: 'FRV Practice #1', type: 'multiple_choice', category: 'Gears & Wheels',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 1_20.png',
