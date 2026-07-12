@@ -15563,15 +15563,15 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 4_04.jpg',
     question: 'From which direction is the wind blowing?',
     options: ['A) North', 'B) North East', 'C) East', 'D) South East', 'E) South', 'F) South West', 'G) North West'],
-    answer: 'C) East',
-    method: 'A wind turbine (like a weather vane) rotates to face into the wind — pointing toward the direction the wind is coming from. The turbine in the diagram is facing east, so the wind is blowing from the east.'
+    answer: 'F) South West',
+    method: 'A wind turbine (like a weather vane) turns to face into the wind — pointing in the direction the wind is coming from. The turbine in the diagram is facing south west, so the wind is blowing from the south west.'
   },
   { group: 'MFP4_05', set: 'FRV Practice #4', type: 'multiple_choice', category: 'Fluid Mechanics',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 4_05.jpg',
     question: 'Six glasses are tilted at the same angle. How will the water behave?',
     options: ['A) A', 'B) B', 'C) C', 'D) D', 'E) E', 'F) F'],
-    answer: 'B) B',
-    method: 'Water always remains level due to gravity, regardless of how the glass is tilted. The water surface stays horizontally flat even though the glass is angled. Option B correctly shows a horizontal water surface in a tilted glass.'
+    answer: 'D) D',
+    method: 'Water always remains level due to gravity, regardless of how the glass is tilted. The water surface stays horizontally flat even though the glass is angled. Option D correctly shows a horizontal water surface in a tilted glass.'
   },
   { group: 'MFP4_06', set: 'FRV Practice #4', type: 'multiple_choice', category: 'Cams & Levers',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 4_06.png',
