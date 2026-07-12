@@ -15237,8 +15237,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 2_09.png',
     question: 'Which position of the ball would make it easiest to lift the wheelbarrow by the handles?',
     options: ['A) A', 'B) B', 'C) C', 'D) All the same'],
-    answer: 'A) A',
-    method: 'Lifting the wheelbarrow handles acts like a lever with the wheel as the fulcrum. The closer the load is to the fulcrum, the less effort is needed to lift it. Position A places the ball nearest the wheel, minimising the required lifting force.'
+    answer: 'B) B',
+    method: 'Lifting the wheelbarrow handles acts like a lever with the wheel as the fulcrum. The closer the load is to the fulcrum, the less effort is needed to lift it. Position B places the ball nearest the wheel, minimising the required lifting force.'
   },
   { group: 'MFP2_10', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Motion & Forces',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 2_10.png',
