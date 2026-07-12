@@ -15880,8 +15880,8 @@ const mechanicalQuestions = [
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 5_24.png',
     question: 'If cog A is turning clockwise at 20 rpms, what speed and which direction is cog B turning?',
     options: ['A) 10 rpms clockwise', 'B) 10 rpms anti-clockwise', 'C) 20 rpms clockwise', 'D) 20 rpms anti-clockwise'],
-    answer: 'D) 20 rpms anti-clockwise',
-    method: 'Because cog B is the same size as cog A, it will turn at the same speed (20 rpms). The smaller black intermediate cogs turn at half the speed as they are roughly half the size.\nEach cog turns in the opposite direction to the cog before it, so cog B turns anti-clockwise.'
+    answer: 'C) 20 rpms clockwise',
+    method: 'Because cog B is the same size as cog A, it will turn at the same speed (20 rpms). The smaller black intermediate cogs turn at half the speed as they are roughly half the size.\nThere are 3 small intermediate cogs between A and B, making B the 5th gear in the sequence. Each cog turns the opposite direction to the one before it: A (clockwise) → small (anti-clockwise) → small (clockwise) → small (anti-clockwise) → B (clockwise).'
   },
   { group: 'MFP5_25', set: 'FRV Practice #5', type: 'multiple_choice', category: 'Structures',
     questionImage: '/images/mechanical reasoning/Mech_FRV Practice 5_25.jpg',
