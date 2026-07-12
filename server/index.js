@@ -7144,11 +7144,11 @@ const questions = [
     method: 'Ratio cats:dogs = 3:1\nTotal parts = 3+1 = 4\n56 ÷ 4 = 14 per part\nCats = 3 × 14 = 42'
   },
   {
-    group: 'NFP2_09', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Tables & Graphs',
+    group: 'NFP2_09', set: 'FRV Practice #2', type: 'number_input', category: 'Tables & Graphs',
     context: { images: ['/images/numeracy/Num_FRV Practice 2_09a.png', '/images/numeracy/Num_FRV Practice 2_09b.png'] },
     question: 'More people are switching to electric cars to cut down on emissions. The graph shows the amount of emissions (CO2e) per kilometre produced from the same electric car driven in different countries. Max lives in the UK and drives an electric car. What emissions does his car produce driving one kilometre?',
-    options: ['A) 204 CO2e', 'B) 186 CO2e'],
-    answer: 'B) 186 CO2e',
+    answer: '186',
+    unit: 'CO2e',
     method: 'Read the UK bar from the chart: UK = 186 CO2e per km.'
   },
   {
@@ -7198,11 +7198,11 @@ const questions = [
     method: 'Let sibling\'s distance = x; your distance = 3x\nx + 3x = 150\n4x = 150\nx = 37.5 km'
   },
   {
-    group: 'NFP2_16', set: 'FRV Practice #2', type: 'multiple_choice', category: 'Measurement',
+    group: 'NFP2_16', set: 'FRV Practice #2', type: 'number_input', category: 'Measurement',
     context: { image: '/images/numeracy/Num_FRV Practice 2_16.png' },
     question: 'Erica has started to draw a floor plan for her new house. What is the total square metres (m²) of Bedrooms 1 & 2?',
-    options: ['A) 14.32 m²', 'B) 18 m²'],
-    answer: 'B) 18 m²',
+    answer: '18',
+    unit: 'm²',
     method: 'Bedroom 1: 3.6 × 2.8 = 10.08 m²\nBedroom 2: 3.6 × 2.2 = 7.92 m²\nTotal: 10.08 + 7.92 = 18 m²'
   },
   {
