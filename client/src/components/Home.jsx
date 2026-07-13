@@ -792,6 +792,15 @@ export default function Home({ onStart, onResit, onStartRevision, loading, error
                     >
                       {loading ? 'Loading…' : 'Start (Random)'}
                     </button>
+                    {totalSelectedLitSetQs < 30 && (
+                      <button
+                        className="btn-start-secondary"
+                        onClick={() => onStart(null, [...selectedLitSets], 'sets', true, true)}
+                        disabled={loading}
+                      >
+                        {loading ? 'Loading…' : 'Full Test — Set First'}
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
