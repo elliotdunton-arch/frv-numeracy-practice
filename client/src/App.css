@@ -3351,6 +3351,7 @@ body {
 }
 
 .btn-revision-start-test {
+  width: auto;
   font-size: 0.85rem;
   padding: 6px 14px;
   flex-shrink: 0;
