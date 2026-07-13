@@ -15920,10 +15920,27 @@ app.get('/api/mechanical-sets', (req, res) => {
   res.json(Object.entries(counts).sort().map(([name, questionCount]) => ({ name, questionCount })))
 })
 
+app.get('/api/mechanical-categories', (req, res) => {
+  const categoryMap = {}
+  mechanicalQuestions.forEach(q => {
+    if (!categoryMap[q.category]) categoryMap[q.category] = 0
+    categoryMap[q.category]++
+  })
+  const result = Object.entries(categoryMap)
+    .map(([name, questionCount]) => ({ name, questionCount }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+  res.json(result)
+})
+
 app.get('/api/mechanical-questions', (req, res) => {
-  const { sets, ordered, fill } = req.query
+  const { sets, categories, ordered, fill } = req.query
   const setsFilter = sets ? sets.split(',') : null
-  const pool = setsFilter ? mechanicalQuestions.filter(q => setsFilter.includes(q.set)) : mechanicalQuestions
+  const catsFilter = categories ? new Set(categories.split(',').map(c => c.trim())) : null
+  const pool = setsFilter
+    ? mechanicalQuestions.filter(q => setsFilter.includes(q.set))
+    : catsFilter
+      ? mechanicalQuestions.filter(q => catsFilter.has(q.category))
+      : mechanicalQuestions
   let result = ordered === 'true'
     ? [...pool].sort((a, b) => a.group.localeCompare(b.group, undefined, { numeric: true }))
     : [...pool].sort(() => Math.random() - 0.5)

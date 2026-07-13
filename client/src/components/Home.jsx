@@ -496,6 +496,9 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
   const [selectedMechSets, setSelectedMechSets] = useState(new Set())
   const [mechSetList, setMechSetList] = useState([])
   const [mechGuideOpen, setMechGuideOpen] = useState(false)
+  const [mechCategoriesOpen, setMechCategoriesOpen] = useState(false)
+  const [selectedMechCategories, setSelectedMechCategories] = useState(new Set())
+  const [mechCategoryList, setMechCategoryList] = useState([])
   const [litSetsOpen, setLitSetsOpen] = useState(false)
   const [selectedLitSets, setSelectedLitSets] = useState(new Set())
   const [litSetList, setLitSetList] = useState([])
@@ -510,6 +513,7 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
     fetch('/api/topics').then(r => r.json()).then(setTopicList).catch(() => {})
     fetch('/api/literacy-topics').then(r => r.json()).then(setCategoryList).catch(() => {})
     fetch('/api/mechanical-sets').then(r => r.json()).then(setMechSetList).catch(() => {})
+    fetch('/api/mechanical-categories').then(r => r.json()).then(setMechCategoryList).catch(() => {})
     fetch('/api/literacy-sets').then(r => r.json()).then(setLitSetList).catch(() => {})
     fetch('/api/numeracy-sets').then(r => r.json()).then(setNumSetList).catch(() => {})
     fetch('/api/abstract-sets').then(r => r.json()).then(setAbsSetList).catch(() => {})
@@ -548,6 +552,10 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
     .filter(s => selectedMechSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
 
+  const totalSelectedMechCatQs = mechCategoryList
+    .filter(c => selectedMechCategories.has(c.name))
+    .reduce((s, c) => s + c.questionCount, 0)
+
   const totalSelectedLitSetQs = litSetList
     .filter(s => selectedLitSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
@@ -559,6 +567,14 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
   const totalSelectedAbsSetQs = absSetList
     .filter(s => selectedAbsSets.has(s.name))
     .reduce((s, c) => s + c.questionCount, 0)
+
+  const toggleMechCategory = (name) => {
+    setSelectedMechCategories(prev => {
+      const next = new Set(prev)
+      if (next.has(name)) next.delete(name); else next.add(name)
+      return next
+    })
+  }
 
   const toggleMechSet = (name) => {
     setSelectedMechSets(prev => {
@@ -891,6 +907,60 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
                         {loading ? 'Loading…' : 'Full Test — Set First'}
                       </button>
                     )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'mechanical' && mechCategoryList.length > 0 && (
+          <div className="topic-focus">
+            <button
+              className={`topic-focus-toggle${mechCategoriesOpen ? ' tft-open' : ''}`}
+              onClick={() => { setMechCategoriesOpen(o => !o); setSelectedMechCategories(new Set()) }}
+            >
+              <span className="tft-icon">{mechCategoriesOpen ? '▾' : '▸'}</span>
+              Practice by Category
+            </button>
+
+            {mechCategoriesOpen && (
+              <div className="topic-panel">
+                <div className="topic-panel-actions">
+                  <button className="topic-action-btn" onClick={() => setSelectedMechCategories(new Set(mechCategoryList.map(c => c.name)))}>
+                    Select all
+                  </button>
+                  <button className="topic-action-btn" onClick={() => setSelectedMechCategories(new Set())}>
+                    Clear all
+                  </button>
+                </div>
+
+                <div className="topic-list">
+                  {mechCategoryList.map(({ name, questionCount }) => (
+                    <label key={name} className={`topic-item${selectedMechCategories.has(name) ? ' topic-checked' : ''}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedMechCategories.has(name)}
+                        onChange={() => toggleMechCategory(name)}
+                      />
+                      <span className="topic-name">{name}</span>
+                      <span className="topic-count">{questionCount} Qs</span>
+                    </label>
+                  ))}
+                </div>
+
+                {selectedMechCategories.size > 0 && (
+                  <div className="topic-start-row">
+                    <span className="topic-selected-info">
+                      {selectedMechCategories.size} categor{selectedMechCategories.size !== 1 ? 'ies' : 'y'} · {totalSelectedMechCatQs} questions available
+                    </span>
+                    <button
+                      className="btn-start"
+                      onClick={() => onStart(null, [...selectedMechCategories], 'categories')}
+                      disabled={loading}
+                    >
+                      {loading ? 'Loading…' : 'Start Focused Practice'}
+                    </button>
                   </div>
                 )}
               </div>

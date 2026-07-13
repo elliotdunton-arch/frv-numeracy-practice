@@ -27,7 +27,8 @@ export default function App() {
         endpoint += `?${param}=` + encodeURIComponent(selectedTopics.join(','))
         if (ordered) endpoint += '&ordered=true'
       } else if (section === 'mechanical' && selectedTopics && selectedTopics.length > 0) {
-        endpoint += '?sets=' + encodeURIComponent(selectedTopics.join(','))
+        const param = filterType === 'categories' ? 'categories' : 'sets'
+        endpoint += `?${param}=` + encodeURIComponent(selectedTopics.join(','))
         if (ordered) endpoint += '&ordered=true'
         if (fill) endpoint += '&fill=true'
       } else if (section === 'abstract' && selectedTopics && selectedTopics.length > 0 && filterType === 'sets') {
