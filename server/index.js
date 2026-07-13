@@ -10777,12 +10777,12 @@ const literacyQuestions = [
     question: 'Are the following statements Yes or No based on the article?',
     options: [
       'Eating 50 grams of ham every day can make you 18% more likely to get cancer.',
-      'Processed meat is classified in the same cancer risk category as tobacco.',
+      'The Australian Meat Industry Council disputes the link between red meat and cancer.',
       'Eating red meat definitely causes cancer.',
       'Over 30,000 people die every year from cancer linked to eating high levels of processed meat.',
     ],
     answer: 'Yes,Yes,No,Yes',
-    method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Yes: The article states that processed meat is classified as a Group 1 carcinogen — the same classification applied to tobacco smoke.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
+    method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Yes: The article quotes the Australian Meat Industry Council (AMIC) stating 'There is no causal link between red meat and cancer' — a direct dispute of the WHO findings.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
   },
   { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "The article places processed meat and tobacco in the same Group 1 carcinogen category. A reader concludes: 'This means eating a ham sandwich is as dangerous as smoking a cigarette.' Is this conclusion supported by the article?",
