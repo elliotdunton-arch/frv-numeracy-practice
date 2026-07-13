@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from 'react'
-import { getUsername, setUsername, getResultsForUser, getKnownUsers, deleteResult } from '../utils/resultStorage'
+import { getUsername, setUsername, getResultsForUser, getKnownUsers, deleteResult, getRevision } from '../utils/resultStorage'
 import Revision from './Revision'
 
 const NUMERACY_CATEGORIES = [
@@ -478,7 +478,7 @@ function ProgressLog({ onResit }) {
   )
 }
 
-export default function Home({ onStart, onResit, loading, error, section, onSectionChange }) {
+export default function Home({ onStart, onResit, onStartRevision, loading, error, section, onSectionChange }) {
   const [activeTab, setActiveTab] = useState(section) // 'numeracy' | 'literacy' | 'abstract' | 'progress'
   const [mode, setMode] = useState('full')
   const [customCount, setCustomCount] = useState(10)
@@ -698,7 +698,7 @@ export default function Home({ onStart, onResit, loading, error, section, onSect
           </button>
         </div>
 
-        {mode === 'revision' && <Revision section={section} />}
+        {mode === 'revision' && <Revision section={section} onStartTest={(qs) => onStartRevision(qs, section)} />}
 
         {mode !== 'revision' && <><div className="info-row">
           <div className="info-box">

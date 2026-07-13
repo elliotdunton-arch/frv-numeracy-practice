@@ -87,6 +87,20 @@ export default function App() {
     setScreen('quiz')
   }
 
+  const startRevisionTest = (questions, sec) => {
+    if (!questions || questions.length === 0) return
+    const shuffled = [...questions].sort(() => Math.random() - 0.5)
+    setSection(sec)
+    setQuestions(shuffled)
+    setTotalTime(sec === 'mechanical' ? Math.round(shuffled.length * 37.5) : shuffled.length * 70)
+    setAnswers({})
+    setBookmarks(new Set())
+    setStartTime(Date.now())
+    setEndTime(null)
+    setTimeExpired(false)
+    setScreen('quiz')
+  }
+
   const resitTest = async (questionIds, sec) => {
     setLoading(true)
     setError(null)
@@ -121,6 +135,7 @@ export default function App() {
         <Home
           onStart={startTest}
           onResit={resitTest}
+          onStartRevision={startRevisionTest}
           loading={loading}
           error={error}
           section={section}

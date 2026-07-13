@@ -58,7 +58,7 @@ function formatDate(iso) {
   return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
-export default function Revision({ section }) {
+export default function Revision({ section, onStartTest }) {
   const [items, setItems] = useState(() => {
     const all = getRevision()
     return section ? all.filter(i => i.section === section) : all
@@ -116,6 +116,14 @@ export default function Revision({ section }) {
     <div className="revision-list">
       <div className="revision-list-header">
         <span>{items.length} question{items.length !== 1 ? 's' : ''} saved for revision</span>
+        {onStartTest && (
+          <button
+            className="btn-start btn-revision-start-test"
+            onClick={() => onStartTest(items.map(i => i.question))}
+          >
+            Start Revision Test
+          </button>
+        )}
       </div>
       {items.map((item, idx) => {
         const q = item.question
