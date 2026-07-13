@@ -9209,19 +9209,7 @@ const ctxFRP3_Q5 = {
 }
 const ctxFRP3_Q6 = { image: '/images/literacy/FRV Practice Test 03_Q06.png' }
 
-// ── Reasoning & Interpretation contexts ──────────────────────────────────────
-const ctxRI_01 = { paragraphs: [
-  'The council\'s new policy requires all emergency vehicle operators to undergo biannual refresher training. While some veterans argue this is redundant given their decades of field experience, the council maintains that evolving technology in fire suppression equipment necessitates standardized, periodic competency checks.'
-]}
-const ctxRI_02 = { paragraphs: [
-  'Despite the influx of funding, the department\'s response time has not significantly improved. Critics point to the outdated dispatch software as the primary bottleneck, arguing that even with more personnel, the administrative lag remains unaddressed.'
-]}
-const ctxRI_03 = { paragraphs: [
-  'Strict adherence to safety protocols is often cited as the hallmark of an efficient team. However, excessive bureaucratic oversight can paradoxically stifle the split-second decision-making required in high-pressure emergency scenarios.'
-]}
-const ctxRI_04 = { paragraphs: [
-  'The transition to electric rescue vehicles is being driven by carbon reduction targets. While the initial costs are significantly higher than diesel counterparts, the long-term operational savings on fuel and maintenance are projected to offset the investment within seven years.'
-]}
+
 
 const literacyQuestions = [
   // ── Set 4: Corporate Directive / DFA Framework ─────────────────────────────
@@ -12475,52 +12463,6 @@ const literacyQuestions = [
     ],
     answer: 'Yes,No,No,No',
     method: 'Curb carbs — Yes: "You\'ll produce ketones if you are consuming very few carbs" and "you must significantly reduce your carb intake."\nHigh protein — No: the article says "you must restrict your protein intake" because excess protein converts to blood sugar, which disrupts ketosis.\nBoost blood sugar — No: ketosis requires the opposite — reducing blood sugar by cutting carbs. More blood sugar would take the body out of ketosis.\nWide sources of fat — No: while the article advises increasing fat intake, it does not specifically state that you must ensure wide (varied) sources of fat to induce ketosis.',
-  },
-
-  // ── Reasoning & Interpretation: RI_01–RI_04 ──────────────────────────────────
-  { group: 'RI_01', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_01,
-    question: 'What is the primary reason the council insists on the biannual refresher training?',
-    options: [
-      'A) To satisfy union requirements for veteran operators.',
-      'B) To ensure operators remain competent with new fire suppression technology.',
-      'C) To address veteran complaints about the lack of recognition for field experience.',
-      'D) To reduce the overall cost of emergency response operations.',
-    ],
-    answer: 'B) To ensure operators remain competent with new fire suppression technology.',
-    method: "The council explicitly cites 'evolving technology in fire suppression equipment' as the reason for 'standardized, periodic competency checks.' Veteran experience is acknowledged but the council argues technology change overrides it. Options A, C, and D are not mentioned in the text.",
-  },
-  { group: 'RI_02', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_02,
-    question: 'Which of the following is the most logical conclusion based on the passage?',
-    options: [
-      'A) Increased funding alone will eventually solve the response time problem.',
-      'B) The dispatch software is not actually the main bottleneck.',
-      'C) Increasing personnel alone is insufficient to solve the response time issue.',
-      'D) The department should reduce staffing levels to cut administrative overhead.',
-    ],
-    answer: 'C) Increasing personnel alone is insufficient to solve the response time issue.',
-    method: "The passage states that 'even with more personnel, the administrative lag remains unaddressed' — meaning adding staff without fixing the dispatch software does not solve the problem. Option A is contradicted by the text. Option B is the opposite of what critics argue. Option D is not mentioned.",
-  },
-  { group: 'RI_03', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_03,
-    question: 'What is the author suggesting about safety protocols in emergency scenarios?',
-    options: [
-      'A) Safety protocols should be suspended entirely in high-pressure scenarios.',
-      'B) Veterans should be exempt from safety protocol requirements.',
-      'C) Safety protocols must be balanced with the need for operational flexibility.',
-      'D) Bureaucratic oversight always improves the efficiency of emergency teams.',
-    ],
-    answer: 'C) Safety protocols must be balanced with the need for operational flexibility.',
-    method: "The passage presents both sides: strict protocols are valued ('hallmark of an efficient team'), but 'excessive bureaucratic oversight can paradoxically stifle' quick decision-making. The word 'paradoxically' signals the author sees an inherent tension — implying balance is needed. Options A and B overstate the argument; Option D contradicts the passage's caution about 'excessive' oversight.",
-  },
-  { group: 'RI_04', set: 'Reasoning & Interpretation', type: 'multiple_choice', category: 'Policy & Procedure', context: ctxRI_04,
-    question: 'Which statement is best supported by the passage?',
-    options: [
-      'A) Electric rescue vehicles are immediately more cost-effective than diesel vehicles.',
-      'B) The transition to electric vehicles is driven entirely by long-term financial benefits.',
-      'C) The vehicles are expected to become cost-neutral within a specific timeframe.',
-      'D) Maintenance costs for electric vehicles are higher than for diesel vehicles.',
-    ],
-    answer: 'C) The vehicles are expected to become cost-neutral within a specific timeframe.',
-    method: "The passage states that 'long-term operational savings on fuel and maintenance are projected to offset the investment within seven years' — meaning costs are expected to balance out at a specific point in time, making C the best answer. Option A is contradicted by 'initial costs are significantly higher.' Option B is wrong — the primary driver is 'carbon reduction targets.' Option D is contradicted by the savings claim.",
   },
 
   // ── Sample Test 03 ────────────────────────────────────────────────────────
