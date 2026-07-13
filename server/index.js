@@ -4467,70 +4467,70 @@ const questions = [
   {
     group: 'DI', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7 L/min) vs Steadyflow (10 L/min). If each person showers once daily for 90 days, how many litres are saved in total?',
+    question: 'Spraysaver (7 L/min) vs Steadyflow (10 L/min). Each shower lasts 10 minutes. If each person showers once daily for 90 days, how many litres are saved in total?',
     answer: '2700',
     method: 'Saving per shower: (10 − 7) × 10 = 30 L\nTotal: 30 × 90 = 2,700 L'
   },
   {
     group: 'DJ', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (6 L/min) vs Steadyflow (9 L/min). If each person showers once daily for 180 days, how many litres are saved in total?',
+    question: 'Spraysaver (6 L/min) vs Steadyflow (9 L/min). Each shower lasts 8 minutes. If each person showers once daily for 180 days, how many litres are saved in total?',
     answer: '4320',
     method: 'Saving per shower: (9 − 6) × 8 = 24 L\nTotal: 24 × 180 = 4,320 L'
   },
   {
     group: 'DK', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7.5 L/min) vs Steadyflow (12 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    question: 'Spraysaver (7.5 L/min) vs Steadyflow (12 L/min). Each shower lasts 12 minutes. If each person showers once daily for a full year (365 days), how many litres are saved in total?',
     answer: '19710',
     method: 'Saving per shower: (12 − 7.5) × 12 = 54 L\nTotal: 54 × 365 = 19,710 L'
   },
   {
     group: 'DL', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (5 L/min) vs Steadyflow (8 L/min). If each person showers once daily for 30 days, how many litres are saved in total?',
+    question: 'Spraysaver (5 L/min) vs Steadyflow (8 L/min). Each shower lasts 5 minutes. If each person showers once daily for 30 days, how many litres are saved in total?',
     answer: '450',
     method: 'Saving per shower: (8 − 5) × 5 = 15 L\nTotal: 15 × 30 = 450 L'
   },
   {
     group: 'DM', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (8 L/min) vs Steadyflow (15 L/min). If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
+    question: 'Spraysaver (8 L/min) vs Steadyflow (15 L/min). Each shower lasts 20 minutes. If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
     answer: '25200',
     method: 'Saving per shower: (15 − 8) × 20 = 140 L\nTotal: 140 × 180 = 25,200 L'
   },
   {
     group: 'DN', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (6 L/min) vs Steadyflow (10 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    question: 'Spraysaver (6 L/min) vs Steadyflow (10 L/min). Each shower lasts 6 minutes. If each person showers once daily for a full year (365 days), how many litres are saved in total?',
     answer: '8760',
     method: 'Saving per shower: (10 − 6) × 6 = 24 L\nTotal: 24 × 365 = 8,760 L'
   },
   {
     group: 'DO', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (7 L/min) vs Steadyflow (11 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    question: 'Spraysaver (7 L/min) vs Steadyflow (11 L/min). Each shower lasts 15 minutes. If each person showers once daily for a full year (365 days), how many litres are saved in total?',
     answer: '21900',
     method: 'Saving per shower: (11 − 7) × 15 = 60 L\nTotal: 60 × 365 = 21,900 L'
   },
   {
     group: 'DP', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (9 L/min) vs Steadyflow (14 L/min). If each person showers once daily for 90 days, how many litres are saved in total?',
+    question: 'Spraysaver (9 L/min) vs Steadyflow (14 L/min). Each shower lasts 4 minutes. If each person showers once daily for 90 days, how many litres are saved in total?',
     answer: '1800',
     method: 'Saving per shower: (14 − 9) × 4 = 20 L\nTotal: 20 × 90 = 1,800 L'
   },
   {
     group: 'DQ', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (5 L/min) vs Steadyflow (9 L/min). If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
+    question: 'Spraysaver (5 L/min) vs Steadyflow (9 L/min). Each shower lasts 30 minutes. If each person showers once daily for 6 months (180 days), how many litres are saved in total?',
     answer: '21600',
     method: 'Saving per shower: (9 − 5) × 30 = 120 L\nTotal: 120 × 180 = 21,600 L'
   },
   {
     group: 'DR', type: 'number_input', category: 'Measurement and Geometry',
     context: ctxShower,
-    question: 'Spraysaver (8 L/min) vs Steadyflow (13 L/min). If each person showers once daily for a full year (365 days), how many litres are saved in total?',
+    question: 'Spraysaver (8 L/min) vs Steadyflow (13 L/min). Each shower lasts 7 minutes. If each person showers once daily for a full year (365 days), how many litres are saved in total?',
     answer: '12775',
     method: 'Saving per shower: (13 − 8) × 7 = 35 L\nTotal: 35 × 365 = 12,775 L'
   },
@@ -8377,8 +8377,7 @@ const SHUFFLE_THEMES = {
   'Logistics':          ['HG','HH','HI','HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS','HT','HU'],
   'Share Portfolios':   ['IA','IB','IC','ID','IE','IF','IG','IH','II','IJ'],
   'Weekly Sales':       ['JA','JB','JC','JD','JE','JF','JG','JH','JI','JJ'],
-  'AFP: Step Challenge': ['KA'],
-  'AFP: Speed & Time':   ['KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
+  'AFP: Speed & Time':   ['KA','KO','KP','KQ','KR','KS','KT','KU','KV','KW','KX'],
   // All AFP/AFP2 ratio, percentage, unitary & applied-maths groups merged into one
   // bucket so the round-robin only pulls ONE group from this pool per round,
   // preventing the test from being flooded with similar calculation questions.

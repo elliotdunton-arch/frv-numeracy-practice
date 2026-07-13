@@ -40,7 +40,7 @@ export default function App() {
       } else if (selectedTopics && selectedTopics.length > 0) {
         endpoint += '?topics=' + encodeURIComponent(selectedTopics.join(','))
       }
-      const res = await fetch(endpoint)
+      const res = await fetch(endpoint, { cache: 'no-store' })
       if (!res.ok) throw new Error('Failed to load questions')
       const data = await res.json()
       const MECH_FULL = 32
