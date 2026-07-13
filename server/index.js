@@ -10785,15 +10785,15 @@ const literacyQuestions = [
     method: "Statement 1 — Yes: The text states 'each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%' and ham is listed as a processed meat.\nStatement 2 — Yes: The article quotes the Australian Meat Industry Council (AMIC) stating 'There is no causal link between red meat and cancer' — a direct dispute of the WHO findings.\nStatement 3 — No: The article says red meat is 'likely to cause the disease', and the Meat Industry Council states 'there is no causal link' — it is not presented as a definite fact.\nStatement 4 — Yes: The WHO estimates 'about 34,000 cancer deaths per year worldwide are attributable to diets high in processed meat.' 34,000 is over 30,000."
   },
   { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: "The article places processed meat and tobacco in the same Group 1 carcinogen category. A reader concludes: 'This means eating a ham sandwich is as dangerous as smoking a cigarette.' Is this conclusion supported by the article?",
+    question: "Kurt Straif is quoted saying 'the risk of developing colorectal cancer from eating processed meat is small.' A student concludes: 'This means eating processed meat in small amounts is safe.' Is this conclusion supported by the article?",
     options: [
-      "A) Yes — Group 1 status means both products carry identical health risks.",
-      "B) No — the Group 1 classification indicates the strength of scientific evidence linking processed meat to cancer, not that it causes cancer at the same rate or severity as tobacco.",
-      "C) Yes — Kurt Straif explicitly states that the cancer risk from processed meat is equivalent to the risk from smoking.",
-      "D) No — the article only classifies processed meat as Group 2, which indicates a probable rather than confirmed carcinogen."
+      "A) Yes — Straif confirms the risk is small, meaning regular small portions pose no meaningful health concern.",
+      "B) No — Straif immediately qualifies this by saying the risk increases with the amount consumed, and the WHO emphasises the global public health significance of even a small individual risk.",
+      "C) Yes — the article states that only daily consumption of 50 grams or more increases cancer risk, so smaller amounts are safe.",
+      "D) No — the article states that any amount of processed meat, however small, carries a significant and immediate cancer risk."
     ],
-    answer: "B) No — the Group 1 classification indicates the strength of scientific evidence linking processed meat to cancer, not that it causes cancer at the same rate or severity as tobacco.",
-    method: "The article quotes Kurt Straif: 'the risk of developing colorectal cancer from eating processed meat is small, but this risk increases with the amount of meat consumed.' He distinguishes between the strength of evidence (Group 1 = confirmed cause) and the magnitude of risk (tobacco causes far more cancer deaths per person than processed meat). The classification is about certainty of causation, not equivalence of harm. Option A conflates category with degree of risk. Option C misattributes a claim Straif does not make — he explicitly says the risk is 'small.' Option D is a factual error; the article confirms processed meat is classified as Group 1."
+    answer: "B) No — Straif immediately qualifies this by saying the risk increases with the amount consumed, and the WHO emphasises the global public health significance of even a small individual risk.",
+    method: "Straif's statement that the risk is 'small' is immediately followed by the qualification that 'this risk increases with the amount of meat consumed.' The article also emphasises that because so many people eat processed meat globally, the aggregate public health impact is significant. Option A ignores the qualifying second half of Straif's statement. Option C inverts the article's point — the 50g/18% figure shows a specific risk increase, not a safe threshold below it. Option D overstates the article; it presents a proportional risk, not an absolute one for any amount."
   },
   { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
     question: "The article quotes the Meat Industry Council saying there is 'no causal link between red meat and cancer.' What function does including this quote serve in a news report about WHO findings?",
@@ -10818,15 +10818,15 @@ const literacyQuestions = [
     method: "Straif's reasoning is explicitly epidemiological: a small per-person risk becomes a large public health burden when the exposed population is enormous. The article's own estimate of 34,000 cancer deaths per year attributable to processed meat diets illustrates this — even if the individual probability is low, the scale of consumption makes the aggregate impact significant. Option A describes a different mechanism (dose accumulation over time in the same person), which may be true but is not what this sentence argues. Option C introduces treatment difficulty, which is not mentioned in the article. Option D raises an inequality dimension also not discussed in the article."
   },
   { group: 'L54', set: 'ACER Practice Free', type: 'multiple_choice', category: 'News Article', context: ctxL54,
-    question: "The article distinguishes between red meat (classified as a 'probable' carcinogen) and processed meat (classified as a confirmed Group 1 carcinogen). What is the most accurate explanation of this difference?",
+    question: "The article says processed meat 'can cause cancer', while describing red meat as 'likely to cause the disease.' What does this difference in language suggest?",
     options: [
-      "A) Red meat is safer to eat than processed meat because it contains fewer chemical additives.",
-      "B) The difference in classification reflects the strength of available evidence — the link between processed meat and cancer is confirmed by research, while the link for red meat is supported but not yet conclusively established.",
-      "C) Red meat has been shown to cause a wider range of cancers than processed meat, making it more dangerous despite its lower classification.",
-      "D) Processed meat receives a higher classification because it is consumed in larger quantities globally than red meat."
+      "A) Red meat is considered safer because it is unprocessed and contains no chemical additives.",
+      "B) The scientific evidence linking processed meat to cancer is stronger and more conclusive than the evidence for red meat.",
+      "C) Red meat has only been found to cause cancer in certain countries, making it a probable risk rather than a confirmed one.",
+      "D) The WHO treats red meat as less dangerous because people consume less of it globally than processed meat."
     ],
-    answer: "B) The difference in classification reflects the strength of available evidence — the link between processed meat and cancer is confirmed by research, while the link for red meat is supported but not yet conclusively established.",
-    method: "The article explains that WHO classified processed meat as Group 1 (definite carcinogen) and red meat as Group 2A (probable carcinogen). This reflects different levels of evidential certainty, not necessarily different levels of harm. Option A may be factually plausible in reality but is not the article's stated reason for the classification difference — the article grounds the distinction in evidence strength, not additive content. Option C inverts the logic: a higher classification does not mean more cancer types. Option D introduces consumption volume as an explanation for classification, which is not how IARC classifications work; they are based on evidence strength, not usage levels."
+    answer: "B) The scientific evidence linking processed meat to cancer is stronger and more conclusive than the evidence for red meat.",
+    method: "The article uses definitive language ('can cause cancer') for processed meat and hedged language ('likely to cause the disease') for red meat. This reflects a difference in the strength of scientific evidence — the WHO found sufficient evidence to confirm that processed meat causes cancer, while the case for red meat, though significant, is not presented as conclusive. Option A may be a real-world explanation but is not what the article states. Option C introduces geographic variation not mentioned in the article. Option D conflates consumption levels with evidential certainty, which the article does not suggest."
   },
   // ── Set L55: Email — Bilvington Bushfire Preparedness ────────────────────
   { group: 'L55', set: 'FRV Practice Free', type: 'multiple_choice', category: 'Email / Letter', context: ctxL55,
