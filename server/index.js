@@ -16049,8 +16049,9 @@ Keep the total response under 280 words. Do not use the word "candidate". Write 
 
 // Serve built React app in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')))
+  app.use(express.static(path.join(__dirname, '../client/dist'), { index: false }))
   app.get('*', (req, res) => {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
     res.sendFile(path.join(__dirname, '../client/dist/index.html'))
   })
 }
