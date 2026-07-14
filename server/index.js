@@ -13543,8 +13543,8 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 02_Q22.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'B',
-    method: 'Total number of shapes — top row: 3, 6, 12. Middle row: 1, 5, 25. Bottom row: 4, 8, 16.\nC is ruled out because it has dots and not lines.'
+    answer: 'C',
+    method: 'Total number of shapes — top row: 3, 6, 12. Middle row: 1, 5, 25. Bottom row: 4, 8, 16.'
   },
   {
     group: 'ARP2_23', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
@@ -14049,7 +14049,7 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 03_Q23.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'C',
+    answer: 'D',
     method: 'Each number is increasing by 21 and alternating between grey & black.\nBoth dotted lines match up between all squares.\nA is not the answer as the lower black dotted line is too close to the grey dotted line.'
   },
   {
@@ -14081,7 +14081,7 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 03_Q27.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'A',
+    answer: 'C',
     method: 'The figures along each the top two rows are rotating 90 degrees clockwise each time.\nOn the bottom row, the figures are rotating 90 degrees counter-clockwise.'
   },
   {
