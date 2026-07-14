@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" fill="white"/>
+  <rect x="5" y="5" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <defs>
+    <g id="ca">
+      <polygon points="-28,-7 7,-7 7,-15 30,0 7,15 7,7 -28,7" fill="white" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="-5,-22 5,-22 5,6 12,6 0,22 -12,6 -5,6" fill="#1a1a1a"/>
+    </g>
+  </defs>
+  <!-- down + left (frame 4 position — wrong) -->
+  <use href="#ca" transform="translate(50,50) rotate(90)"/>
+</svg>

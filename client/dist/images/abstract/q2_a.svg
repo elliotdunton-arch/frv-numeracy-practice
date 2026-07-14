@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" fill="white"/>
+  <rect x="5" y="5" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <defs>
+    <polygon id="sp0" points="0,0 -5,-12 0,-33 5,-12"/>
+    <polygon id="sp1" points="0,0 5,-12 23,-23 12,-5"/>
+    <polygon id="sp2" points="0,0 12,-5 33,0 12,5"/>
+    <polygon id="sp3" points="0,0 12,5 23,23 5,12"/>
+    <polygon id="sp4" points="0,0 5,12 0,33 -5,12"/>
+    <polygon id="sp5" points="0,0 -5,12 -23,23 -12,5"/>
+    <polygon id="sp6" points="0,0 -12,5 -33,0 -12,-5"/>
+    <polygon id="sp7" points="0,0 -12,-5 -23,-23 -5,-12"/>
+  </defs>
+  <!-- petal S (south) black — CORRECT, next step (180°) -->
+  <g transform="translate(50,50)">
+    <use href="#sp0" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp1" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp2" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp3" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp5" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp6" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp7" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp4" fill="#1a1a1a"/>
+    <circle r="5" fill="#1a1a1a"/>
+  </g>
+</svg>

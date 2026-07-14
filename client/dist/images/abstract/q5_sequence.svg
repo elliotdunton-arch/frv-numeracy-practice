@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <rect width="560" height="120" fill="white"/>
+
+  <!-- Box 1: dot at outer ring, top-right -->
+  <rect x="5" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="50" cy="55" r="38" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="50" cy="55" r="25" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="50" cy="55" r="11" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="50" y1="17" x2="50" y2="93" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="12" y1="55" x2="88" y2="55" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="72" cy="33" r="5" fill="#1a1a1a"/>
+
+  <!-- Arrow 1 -->
+  <text x="104" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 2: dot at outer ring, bottom-left -->
+  <rect x="115" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="160" cy="55" r="38" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="160" cy="55" r="25" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="160" cy="55" r="11" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="160" y1="17" x2="160" y2="93" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="122" y1="55" x2="198" y2="55" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="138" cy="77" r="5" fill="#1a1a1a"/>
+
+  <!-- Arrow 2 -->
+  <text x="214" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 3: dot at middle ring, bottom -->
+  <rect x="225" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="270" cy="55" r="38" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="270" cy="55" r="25" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="270" cy="55" r="11" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="270" y1="17" x2="270" y2="93" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="232" y1="55" x2="308" y2="55" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="270" cy="73" r="5" fill="#1a1a1a"/>
+
+  <!-- Arrow 3 -->
+  <text x="324" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 4: dot at inner ring, top -->
+  <rect x="335" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="380" cy="55" r="38" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="380" cy="55" r="25" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="380" cy="55" r="11" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="380" y1="17" x2="380" y2="93" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="342" y1="55" x2="418" y2="55" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="380" cy="44" r="5" fill="#1a1a1a"/>
+
+  <!-- Arrow 4 -->
+  <text x="434" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Question mark -->
+  <text x="490" y="68" font-family="Arial" font-size="36" font-weight="bold" fill="#1a1a1a" text-anchor="middle">?</text>
+</svg>

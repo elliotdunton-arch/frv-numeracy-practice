@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <rect width="560" height="120" fill="white"/>
+  <defs>
+    <!-- 8-pointed star petals, centered at origin, outer r=33, inner r=13 -->
+    <!-- P0=N P1=NE P2=E P3=SE P4=S P5=SW P6=W P7=NW -->
+    <polygon id="sp0" points="0,0 -5,-12 0,-33 5,-12"/>
+    <polygon id="sp1" points="0,0 5,-12 23,-23 12,-5"/>
+    <polygon id="sp2" points="0,0 12,-5 33,0 12,5"/>
+    <polygon id="sp3" points="0,0 12,5 23,23 5,12"/>
+    <polygon id="sp4" points="0,0 5,12 0,33 -5,12"/>
+    <polygon id="sp5" points="0,0 -5,12 -23,23 -12,5"/>
+    <polygon id="sp6" points="0,0 -12,5 -33,0 -12,-5"/>
+    <polygon id="sp7" points="0,0 -12,-5 -23,-23 -5,-12"/>
+  </defs>
+
+  <!-- Box 1: petal N (north) black, rotate 0° -->
+  <rect x="5" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <g transform="translate(50,55)">
+    <use href="#sp1" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp2" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp3" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp4" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp5" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp6" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp7" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp0" fill="#1a1a1a"/>
+    <circle r="5" fill="#1a1a1a"/>
+  </g>
+
+  <text x="104" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 2: petal NE black, rotate 45° -->
+  <rect x="115" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <g transform="translate(160,55)">
+    <use href="#sp0" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp2" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp3" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp4" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp5" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp6" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp7" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp1" fill="#1a1a1a"/>
+    <circle r="5" fill="#1a1a1a"/>
+  </g>
+
+  <text x="214" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 3: petal E black, rotate 90° -->
+  <rect x="225" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <g transform="translate(270,55)">
+    <use href="#sp0" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp1" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp3" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp4" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp5" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp6" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp7" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp2" fill="#1a1a1a"/>
+    <circle r="5" fill="#1a1a1a"/>
+  </g>
+
+  <text x="324" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 4: petal SE black, rotate 135° -->
+  <rect x="335" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <g transform="translate(380,55)">
+    <use href="#sp0" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp1" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp2" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp4" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp5" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp6" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp7" fill="#d0d0d0" stroke="#999" stroke-width="0.5"/>
+    <use href="#sp3" fill="#1a1a1a"/>
+    <circle r="5" fill="#1a1a1a"/>
+  </g>
+
+  <text x="434" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <text x="490" y="68" font-family="Arial" font-size="36" font-weight="bold" fill="#1a1a1a" text-anchor="middle">?</text>
+</svg>

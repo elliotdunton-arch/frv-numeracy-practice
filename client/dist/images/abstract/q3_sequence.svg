@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <rect width="560" height="120" fill="white"/>
+  <defs>
+    <!-- cross-arrow group centred at origin: large hollow arrow pointing right, small solid arrow pointing down -->
+    <g id="ca">
+      <polygon points="-28,-7 7,-7 7,-15 30,0 7,15 7,7 -28,7" fill="white" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="-5,-22 5,-22 5,6 12,6 0,22 -12,6 -5,6" fill="#1a1a1a"/>
+    </g>
+  </defs>
+
+  <!-- Box 1: 0° (right + down) -->
+  <rect x="5" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <use href="#ca" transform="translate(50,55)"/>
+
+  <text x="104" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 2: -90° CCW (up + right) -->
+  <rect x="115" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <use href="#ca" transform="translate(160,55) rotate(-90)"/>
+
+  <text x="214" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 3: -180° (left + up) -->
+  <rect x="225" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <use href="#ca" transform="translate(270,55) rotate(180)"/>
+
+  <text x="324" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <!-- Box 4: -270° = 90° CW (down + left) -->
+  <rect x="335" y="10" width="90" height="90" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <use href="#ca" transform="translate(380,55) rotate(90)"/>
+
+  <text x="434" y="61" font-family="Arial" font-size="22" fill="#1a1a1a" text-anchor="middle">→</text>
+
+  <text x="490" y="68" font-family="Arial" font-size="36" font-weight="bold" fill="#1a1a1a" text-anchor="middle">?</text>
+</svg>

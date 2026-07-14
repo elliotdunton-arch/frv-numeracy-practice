@@ -3,8 +3,7 @@ node_modules/
 client/node_modules/
 server/node_modules/
 
-# Build output
-client/dist/
+# Build output — committed to git so Railway serves without a build step
 
 # Environment files
 .env
