@@ -96,7 +96,7 @@ export default function Revision({ section, onStartTest }) {
           fresh.forEach(q => { byId[String(q.id)] = q })
           const updated = stored.map(item => {
             const f = byId[String(item.question.id)]
-            if (!f) return item
+            if (!f || f.question !== item.question.question) return item
             return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
           })
           localStorage.setItem('frv_revision', JSON.stringify(updated))
