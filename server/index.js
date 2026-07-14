@@ -13939,7 +13939,7 @@ const abstractQuestions = [
     question: 'Next in sequence: Which figure comes next in the sequence below?',
     questionImage: '/images/abstract/FRV Practice Abstract 03_Q10.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'D',
+    answer: 'C',
     method: 'Each ring is moving two places towards the center of the circles each time.\nB is not the answer as the lines in the outside ring are facing the wrong direction.'
   },
   {
