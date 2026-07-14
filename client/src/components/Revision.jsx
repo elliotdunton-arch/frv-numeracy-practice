@@ -67,6 +67,7 @@ export default function Revision({ section, onStartTest }) {
   const [editOpen, setEditOpen] = useState(new Set())
   const [editDraft, setEditDraft] = useState({})
   const [pendingRemove, setPendingRemove] = useState(null)
+  const [refreshing, setRefreshing] = useState(true)
 
   useEffect(() => {
     const all = getRevision()
@@ -76,10 +77,11 @@ export default function Revision({ section, onStartTest }) {
     setPendingRemove(null)
   }, [section])
 
-  // On mount: silently refresh answer/method from server so corrected questions don't show stale answers
+  // On mount: refresh answer/method/options from server so corrected questions don't show stale answers.
+  // Keep refreshing=true until done so the Start Revision Test button is blocked.
   useEffect(() => {
     const stored = getRevision()
-    if (stored.length === 0) return
+    if (stored.length === 0) { setRefreshing(false); return }
     const ids = stored.map(i => i.question.id)
     fetch('/api/questions-by-ids', {
       method: 'POST',
@@ -89,18 +91,20 @@ export default function Revision({ section, onStartTest }) {
     })
       .then(r => r.ok ? r.json() : null)
       .then(fresh => {
-        if (!fresh) return
-        const byId = {}
-        fresh.forEach(q => { byId[String(q.id)] = q })
-        const updated = stored.map(item => {
-          const f = byId[String(item.question.id)]
-          if (!f) return item
-          return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
-        })
-        localStorage.setItem('frv_revision', JSON.stringify(updated))
-        setItems(section ? updated.filter(i => i.section === section) : updated)
+        if (fresh) {
+          const byId = {}
+          fresh.forEach(q => { byId[String(q.id)] = q })
+          const updated = stored.map(item => {
+            const f = byId[String(item.question.id)]
+            if (!f) return item
+            return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
+          })
+          localStorage.setItem('frv_revision', JSON.stringify(updated))
+          setItems(section ? updated.filter(i => i.section === section) : updated)
+        }
       })
       .catch(() => {})
+      .finally(() => setRefreshing(false))
   }, [])
 
   const toggleExpand = (id) => {
@@ -146,6 +150,7 @@ export default function Revision({ section, onStartTest }) {
         {onStartTest && (
           <button
             className="btn-start btn-revision-start-test"
+            disabled={refreshing}
             onClick={() => onStartTest(items.map(i => i.question))}
           >
             Start Revision Test
