@@ -76,6 +76,33 @@ export default function Revision({ section, onStartTest }) {
     setPendingRemove(null)
   }, [section])
 
+  // On mount: silently refresh answer/method from server so corrected questions don't show stale answers
+  useEffect(() => {
+    const stored = getRevision()
+    if (stored.length === 0) return
+    const ids = stored.map(i => i.question.id)
+    fetch('/api/questions-by-ids', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      cache: 'no-store',
+      body: JSON.stringify({ ids }),
+    })
+      .then(r => r.ok ? r.json() : null)
+      .then(fresh => {
+        if (!fresh) return
+        const byId = {}
+        fresh.forEach(q => { byId[String(q.id)] = q })
+        const updated = stored.map(item => {
+          const f = byId[String(item.question.id)]
+          if (!f) return item
+          return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
+        })
+        localStorage.setItem('frv_revision', JSON.stringify(updated))
+        setItems(section ? updated.filter(i => i.section === section) : updated)
+      })
+      .catch(() => {})
+  }, [])
+
   const toggleExpand = (id) => {
     setExpanded(prev => { const n = new Set(prev); n.has(id) ? n.delete(id) : n.add(id); return n })
   }
