@@ -68,6 +68,7 @@ export default function Revision({ section, onStartTest }) {
   const [editDraft, setEditDraft] = useState({})
   const [pendingRemove, setPendingRemove] = useState(null)
   const [refreshing, setRefreshing] = useState(true)
+  const [refreshDone, setRefreshDone] = useState(false)
 
   useEffect(() => {
     const all = getRevision()
@@ -77,11 +78,11 @@ export default function Revision({ section, onStartTest }) {
     setPendingRemove(null)
   }, [section])
 
-  // On mount: refresh answer/method/options from server so corrected questions don't show stale answers.
-  // Keep refreshing=true until done so the Start Revision Test button is blocked.
-  useEffect(() => {
+  const runRefresh = (currentSection) => {
     const stored = getRevision()
     if (stored.length === 0) { setRefreshing(false); return }
+    setRefreshing(true)
+    setRefreshDone(false)
     const ids = stored.map(i => i.question.id)
     fetch('/api/questions-by-ids', {
       method: 'POST',
@@ -100,12 +101,16 @@ export default function Revision({ section, onStartTest }) {
             return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
           })
           localStorage.setItem('frv_revision', JSON.stringify(updated))
-          setItems(section ? updated.filter(i => i.section === section) : updated)
+          setItems(currentSection ? updated.filter(i => i.section === currentSection) : updated)
+          setRefreshDone(true)
         }
       })
       .catch(() => {})
       .finally(() => setRefreshing(false))
-  }, [])
+  }
+
+  // Auto-refresh on mount
+  useEffect(() => { runRefresh(section) }, [])
 
   const toggleExpand = (id) => {
     setExpanded(prev => { const n = new Set(prev); n.has(id) ? n.delete(id) : n.add(id); return n })
@@ -147,15 +152,24 @@ export default function Revision({ section, onStartTest }) {
     <div className="revision-list">
       <div className="revision-list-header">
         <span>{items.length} question{items.length !== 1 ? 's' : ''} saved for revision</span>
-        {onStartTest && (
+        <div className="revision-header-actions">
           <button
-            className="btn-start btn-revision-start-test"
+            className="btn-revision-refresh"
             disabled={refreshing}
-            onClick={() => onStartTest(items.map(i => i.question))}
+            onClick={() => runRefresh(section)}
           >
-            Start Revision Test
+            {refreshing ? 'Updating…' : refreshDone ? 'Updated' : 'Update Answers'}
           </button>
-        )}
+          {onStartTest && (
+            <button
+              className="btn-start btn-revision-start-test"
+              disabled={refreshing}
+              onClick={() => onStartTest(items.map(i => i.question))}
+            >
+              Start Revision Test
+            </button>
+          )}
+        </div>
       </div>
       {items.map((item, idx) => {
         const q = item.question

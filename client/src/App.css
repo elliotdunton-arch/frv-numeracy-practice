@@ -3350,12 +3350,33 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.revision-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .btn-revision-start-test {
   width: auto;
   font-size: 0.85rem;
   padding: 6px 14px;
   flex-shrink: 0;
 }
+
+.btn-revision-refresh {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(124,58,237,0.4);
+  background: transparent;
+  color: #a78bfa;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.btn-revision-refresh:hover:not(:disabled) { background: rgba(124,58,237,0.15); }
+.btn-revision-refresh:disabled { opacity: 0.5; cursor: default; }
 
 .revision-item {
   background: #ffffff;
