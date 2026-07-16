@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
@@ -16051,12 +16052,14 @@ Keep the total response under 280 words. Do not use the word "candidate". Write 
   }
 })
 
-// Serve built React app in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist'), { index: false }))
+// Serve the built React app whenever a build exists (not gated on NODE_ENV,
+// so it works on any host/port without requiring NODE_ENV=production).
+const distDir = path.join(__dirname, '../client/dist')
+if (fs.existsSync(path.join(distDir, 'index.html'))) {
+  app.use(express.static(distDir, { index: false }))
   app.get('*', (req, res) => {
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+    res.sendFile(path.join(distDir, 'index.html'))
   })
 }
 
