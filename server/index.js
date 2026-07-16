@@ -13039,7 +13039,10 @@ const literacyQuestions = [
     answer: 'mice, snakes and scary movies.',
     method: "The article's final line states: 'More than the dark, more than mice and snakes and scary movies, what most teenage girls fear is growing fat.' This directly states that the fear of fatness surpasses fear of mice, snakes and scary movies.",
   },
-  // Passage 6: 'I was only 19' story
+  // Passage 6: 'I was only 19' story — TEMPORARILY DISABLED: passage image is missing.
+  // These 6 questions are hidden until the correct 'I was only 19' passage image is supplied.
+  // To restore: delete the /* below and the */ before Passage 7, then set the correct context image.
+  /*
   { group: 'ST1_06', set: 'Sample Test 01 — Part B', type: 'multiple_choice', category: 'Literary Passage',
     context: { image: '/images/literacy/Sample Test 01_06.png' },
     question: 'Which word best describes the tone of this story?',
@@ -13082,6 +13085,7 @@ const literacyQuestions = [
     answer: 'Grand Hotel',
     method: "The text identifies the Grand Hotel as the watering hole mentioned in the Redgum song 'I was only 19'. The other options are all incorrect variations of the hotel name.",
   },
+  */
   // Passage 7: Volcanoes
   { group: 'ST1_07', set: 'Sample Test 01 — Part B', type: 'multiple_choice', category: 'Science Text',
     context: { image: '/images/literacy/Sample Test 01_06.png' },
