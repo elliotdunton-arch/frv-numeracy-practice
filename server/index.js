@@ -14372,8 +14372,8 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 03_Q23.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'D',
-    method: 'Each number is increasing by 21 and alternating between grey & black.\nBoth dotted lines match up between all squares.\nA is not the answer as the lower black dotted line is too close to the grey dotted line.'
+    answer: 'C',
+    method: 'The numbers increase by 21 each step (36, 57, 78, 99, 120, 141, 162, 183, 204), so the missing value is 141 shown in black — which rules out the grey-numbered options B and D.\nThe black and grey dashed lines must continue smoothly with the surrounding squares. Option C is the one whose two dashed lines line up correctly; A has the right number but its dashed lines do not match up.'
   },
   {
     group: 'ARP3_24', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
@@ -14404,8 +14404,8 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 03_Q27.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'C',
-    method: 'The figures along each the top two rows are rotating 90 degrees clockwise each time.\nOn the bottom row, the figures are rotating 90 degrees counter-clockwise.'
+    answer: 'A',
+    method: 'Following the way the groups of arrows change across each row and column, the missing bottom-right cell is the arrangement shown in option A.'
   },
   {
     group: 'ARP3_28', set: 'FRV Practice #3', type: 'image_mc', category: 'Complete the Pattern',
