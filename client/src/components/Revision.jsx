@@ -83,22 +83,39 @@ export default function Revision({ section, onStartTest }) {
     if (stored.length === 0) { setRefreshing(false); return }
     setRefreshing(true)
     setRefreshDone(false)
-    const ids = stored.map(i => i.question.id)
-    fetch('/api/questions-by-ids', {
+    // Re-resolve each saved item by (section, group, question) rather than id.
+    // Older saved items used non-namespaced ids that could collide across
+    // sections (e.g. a mechanical item picking up a numeracy answer), so an
+    // id-based refresh could never heal them. The server returns results in the
+    // same order as the items we send, so we match back by index.
+    const payload = stored.map(i => ({
+      section: i.section || '',
+      group: i.question.group,
+      question: i.question.question,
+    }))
+    fetch('/api/refresh-revision', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       cache: 'no-store',
-      body: JSON.stringify({ ids }),
+      body: JSON.stringify({ items: payload }),
     })
       .then(r => r.ok ? r.json() : null)
       .then(fresh => {
-        if (fresh) {
-          const byId = {}
-          fresh.forEach(q => { byId[String(q.id)] = q })
-          const updated = stored.map(item => {
-            const f = byId[String(item.question.id)]
+        if (fresh && fresh.length === stored.length) {
+          const updated = stored.map((item, i) => {
+            const f = fresh[i]
             if (!f || f.question !== item.question.question) return item
-            return { ...item, question: { ...item.question, answer: f.answer, method: f.method ?? item.question.method, options: f.options ?? item.question.options } }
+            return {
+              ...item,
+              question: {
+                ...item.question,
+                id: f.id ?? item.question.id,
+                answer: f.answer,
+                method: f.method ?? item.question.method,
+                methodImage: f.methodImage ?? item.question.methodImage,
+                options: f.options ?? item.question.options,
+              },
+            }
           })
           localStorage.setItem('frv_revision', JSON.stringify(updated))
           setItems(currentSection ? updated.filter(i => i.section === currentSection) : updated)

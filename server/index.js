@@ -16300,6 +16300,39 @@ app.post('/api/questions-by-ids', (req, res) => {
   res.json(shaped)
 })
 
+// ── Refresh saved revision items (heal by section+group+text, not id) ─────────
+// Older saved items used non-namespaced ids that could collide across sections
+// (e.g. a mechanical item resolving to a numeracy answer). Re-resolve each item
+// against the authoritative data by (section, group, question) which is unique.
+app.post('/api/refresh-revision', (req, res) => {
+  const { items } = req.body
+  if (!Array.isArray(items)) {
+    return res.status(400).json({ error: 'items array required' })
+  }
+  const allPools = { numeracy: questions, literacy: literacyQuestions, abstract: abstractQuestions, mechanical: mechanicalQuestions }
+  const merged = [...questions, ...literacyQuestions, ...abstractQuestions, ...mechanicalQuestions]
+  const shaped = items.map(it => {
+    const pool = allPools[it.section] || merged
+    // Primary: same section, same group, same question text (globally unique).
+    let q = pool.find(x => x.group === it.group && x.question === it.question)
+    // Fallbacks: group+text or exact text across every section.
+    if (!q) q = merged.find(x => x.group === it.group && x.question === it.question)
+    if (!q) q = merged.find(x => x.question === it.question)
+    if (!q) return null
+    return {
+      id: q._id,
+      group: q.group,
+      question: q.question,
+      answer: q.answer,
+      method: q.method || null,
+      methodImage: q.methodImage || null,
+      options: q.options || null,
+      questionImage: q.questionImage || null,
+    }
+  })
+  res.json(shaped)
+})
+
 // ── AI Summary ───────────────────────────────────────────────────────────────
 app.post('/api/ai-summary', async (req, res) => {
   const { score, total, pct, section, breakdown, timeExpired } = req.body
