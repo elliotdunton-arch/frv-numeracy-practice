@@ -13866,8 +13866,8 @@ const abstractQuestions = [
     question: 'Complete the pattern: Which figure on the right best fits the missing square?',
     questionImage: '/images/abstract/FRV Practice Abstract 02_Q22.png',
     options: ['A', 'B', 'C', 'D'],
-    answer: 'C',
-    method: 'Total number of shapes — top row: 3, 6, 12. Middle row: 1, 5, 25. Bottom row: 4, 8, 16.'
+    answer: 'B',
+    method: 'Total number of shapes — top row: 3, 6, 12. Middle row: 1, 5, 25. Bottom row: 4, 8, 16.\nC is not the answer because it has dots and not lines.\nB is the answer.'
   },
   {
     group: 'ARP2_23', set: 'FRV Practice #2', type: 'image_mc', category: 'Complete the Pattern',
